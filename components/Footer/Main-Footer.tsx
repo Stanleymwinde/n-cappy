@@ -4,6 +4,7 @@ import {
   Heading,
   HeadingProps,
   IconProps,
+  Image,
   SimpleGrid,
   Stack,
   Text,
@@ -31,20 +32,35 @@ const Footer = () => {
         gap={8}
       >
         <Stack>
-          <CHeading>Nairobi Chapel Ngong Road</CHeading>
-          <Text>
-            We are committed to helping people grow D.E.E.P to reach W.I.D.E .
-          </Text>
+          <Image
+            boxSize="150px"
+            src="/images/logo.svg"
+            alt="N-Cappy Logo"
+            objectFit="contain"
+          />
         </Stack>
         <Stack>
-          <CHeading>Get In Touch</CHeading>
-          {contactData.call.map((item, i) => (
-            <FooterCard
-              key={i}
-              link={item.link}
-              label={item.label}
-              icon={item.icon}
-            />
+          <CHeading>Explore</CHeading>
+          {ExploreData.call.map((item, i) => (
+            <FooterCard key={i} link={item.link} label={item.label} />
+          ))}
+          <Flex align="center" gap={2}>
+            {/* <Socials /> */}
+          </Flex>
+        </Stack>
+        <Stack>
+          <CHeading>Helpful links</CHeading>
+          {HelpfulLinks.map((item, i) => (
+            <FooterCard key={i} link={item.link} label={item.label} />
+          ))}
+          <Flex align="center" gap={2}>
+            {/* <Socials /> */}
+          </Flex>
+        </Stack>
+        <Stack>
+          <CHeading>Our Services </CHeading>
+          {OurServices.map((item, i) => (
+            <FooterCard key={i} link={item.link} label={item.label} />
           ))}
           <Flex align="center" gap={2}>
             {/* <Socials /> */}
@@ -52,34 +68,28 @@ const Footer = () => {
         </Stack>
 
         <Stack>
-          <CHeading>Email</CHeading>
-          {contactData.email.map((item, i) => (
-            <FooterCard
-              key={i}
-              link={item.link}
-              label={item.label}
-              icon={item.icon}
-            />
+          <CHeading>Contact Us</CHeading>
+          {contactData.map((item, i) => (
+            <Flex
+              align="center"
+              gap={1}
+              lineHeight={"1.5"}
+              as="a"
+              textAlign={"left"}
+              _hover={{
+                textDecoration: "underline",
+                cursor: "pointer",
+              }}
+            >
+              <Box as={item.icon} color="primary" boxSize={5} />
+              <Text fontSize="md">{item.label}</Text>
+            </Flex>
           ))}
-        </Stack>
-        <Stack>
-          <CHeading>Quick Links</CHeading>
-          <Flex align="center" gap={2}>
+          <Flex pt={3} align="center" gap={2}>
             <Socials />
           </Flex>
         </Stack>
       </SimpleGrid>
-
-      <Box divideX="2px">
-        <Box>Item 1</Box>
-        <Box>Item 2</Box>
-      </Box>
-      <Flex py="1rem" mx={marginX} align="center" justify="center">
-        <Text>
-          © 2024 Nairobi Chapel Ngong Road. All rights reserved. Terms of
-          Service Privacy Policy
-        </Text>
-      </Flex>
     </Box>
   );
 };
@@ -96,19 +106,21 @@ const FooterCard = ({
   link,
 }: {
   label: string;
-  icon: (props: IconProps) => React.JSX.Element;
+  icon?: (props: IconProps) => React.JSX.Element;
   link?: string;
 }) => {
   return link ? (
     <Flex
       align="center"
       gap={1}
+      lineHeight={"1.5"}
       as="a"
+      textAlign={"left"}
       _hover={{
         textDecoration: "underline",
+        cursor: "pointer",
       }}
     >
-      <Box as={icon} color="primary" boxSize={5} />
       <Text fontSize="md">{label}</Text>
     </Flex>
   ) : (
@@ -131,25 +143,79 @@ const CHeading = ({ children, ...rest }: CHeadingProps) => (
   </Heading>
 );
 
-const contactData = {
+const contactData = [
+  {
+    icon: PhoneIcon,
+    label: "+254 709 902 700",
+    link: "tel:+2547709902700",
+  },
+
+  {
+    icon: MessageIcon,
+    label: "+254 709 902 700",
+    link: "tel:+2547709900700",
+  },
+
+  {
+    icon: MailIcon,
+    label: "info@nairobichapel.org",
+    link: "mailto:info@nairobichapel.org",
+  },
+];
+
+const ExploreData = {
   call: [
     {
-      icon: PhoneIcon,
-      label: "+254 725 650 737",
-      link: "tel:+254725650737",
+      label: "About Us",
+      link: "#",
     },
 
     {
-      icon: MessageIcon,
-      label: "+254 725 650 737",
-      link: "tel:+254725650737",
+      label: "Individual investment",
+      link: "#",
     },
-  ],
-  email: [
+
     {
-      icon: MailIcon,
-      label: "info@nairobichapel.org",
-      link: "mailto:info@nairobichapel.org",
+      label: "Institutional Investment",
+      link: "#",
+    },
+    {
+      label: "tools & resources",
+      link: "#",
     },
   ],
 };
+
+const HelpfulLinks = [
+  {
+    label: "Support",
+    link: "#",
+  },
+  {
+    label: "Privacy Policy",
+    link: "#",
+  },
+  {
+    label: "Terms & Condition",
+    link: "#",
+  },
+  {
+    label: "Sign In",
+    link: "#",
+  },
+];
+
+const OurServices = [
+  {
+    label: "Unit Trust Funds",
+    link: "#",
+  },
+  {
+    label: "Private Wealth Management",
+    link: "#",
+  },
+  {
+    label: "Institutional Investment Solutions",
+    link: "#",
+  },
+];

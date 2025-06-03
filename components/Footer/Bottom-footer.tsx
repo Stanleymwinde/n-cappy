@@ -4,7 +4,7 @@ import React from "react";
 
 const BottomFooter = () => {
   return (
-    <Box marginX={marginX}>
+    <Box marginX={marginX} py={5}>
       <Flex as="footer" justify={"space-between"}>
         <Box>
           <Text>

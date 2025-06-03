@@ -5,7 +5,7 @@ import BottomFooter from "./Bottom-footer";
 
 const Footer = () => {
   return (
-    <Box>
+    <Box divideY={"1px"} divideColor="blackAlpha.700">
       <MainFooter />
       <BottomFooter />
     </Box>

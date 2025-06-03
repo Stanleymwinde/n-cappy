@@ -9,7 +9,7 @@ const Socials = () => {
       {socials.map((item, i) => (
         <Link href={item.link} key={i} target="_blank">
           <Stack
-            p=".3rem"
+            p=".4rem"
             borderRadius="full"
             color="brand.black"
             bg="brand.white"
