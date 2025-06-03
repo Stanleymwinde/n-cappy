@@ -35,3 +35,10 @@ export const socials = [
     name: "Tiktok",
   },
 ];
+
+export const navItems = [
+  { label: "Individual", href: "/" },
+  { label: "Institutional", href: "/institutional" },
+  { label: "About Us", href: "/about-us" },
+  { label: "Tools & Resources", href: "/tools_and_resources" },
+];
