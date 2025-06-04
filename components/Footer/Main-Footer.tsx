@@ -71,6 +71,7 @@ const Footer = () => {
           <CHeading>Contact Us</CHeading>
           {contactData.map((item, i) => (
             <Flex
+              key={i}
               align="center"
               gap={1}
               lineHeight={"1.5"}
