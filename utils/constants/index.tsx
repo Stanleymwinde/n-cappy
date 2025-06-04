@@ -69,3 +69,34 @@ export const cardData = [
     image: "/images/gtr-1.jpg",
   },
 ];
+
+export const TestimonialData = [
+  {
+    name: "Coach Dexter",
+    role: "Long Term Investor",
+    image: "/images/gtr-1.jpg",
+    testimonial:
+      "The reason why I feel like I have stayed at Nabo Capital this long is because of safety. It's because I feel safe. And I feel at home.",
+  },
+  {
+    name: "Investor Jane",
+    role: "Short Term Investor",
+    image: "/images/gtr-2.jpg",
+    testimonial:
+      "Nabo Capital has transformed my investment journey. Their expertise and personalized approach have made all the difference.",
+  },
+  {
+    name: "Investor John",
+    role: "Institutional Investor",
+    image: "/images/gtr-3.jpg",
+    testimonial:
+      "As an institution, we trust Nabo Capital for their strategic insights and commitment to our financial goals.",
+  },
+  {
+    name: "Investor Sarah",
+    role: "Wealth Builder",
+    image: "/images/gtr-4.jpg",
+    testimonial:
+      "Nabo Capital has been instrumental in helping me build and preserve my wealth. Their team is exceptional.",
+  },
+];

@@ -6,7 +6,13 @@ import React from "react";
 
 const WhyforYou = () => {
   return (
-    <Box bg="#0a2234" color="white" height="70vh" overflow="hidden">
+    <Box
+      bg="#0a2234"
+      color="white"
+      height="70vh"
+      overflow="hidden"
+      maxH={"70vh"}
+    >
       <Grid
         templateColumns={{ base: "1fr", md: "1fr 1fr" }}
         gap={6}
