@@ -16,14 +16,14 @@ const MainNav = () => {
     return pathname.includes(nav) ? "primary" : "brand.white";
   }
   return (
-    <Flex mx={4} py="1rem" justify="space-between" align="center">
+    <Flex marginX={marginX} py="1rem" justify="space-between" align="center">
       <Flex align="center" gap={12} fontSize="md">
         <Link href="/">
           <Image
             priority
             src="/images/Logo.svg"
             alt="logo"
-            width={70}
+            width={60}
             height={70}
           />
         </Link>
