@@ -1,5 +1,5 @@
 import { Currency } from "@/components/common";
-import { Account } from "@/components/home";
+import { Account, Investing } from "@/components/home";
 import SwiperPage from "@/components/swiper";
 import { Heading } from "@chakra-ui/react";
 
@@ -9,6 +9,7 @@ export default function Home() {
       <SwiperPage />
       <Currency />
       <Account />
+      <Investing />
     </>
   );
 }
