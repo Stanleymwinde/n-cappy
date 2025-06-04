@@ -2,9 +2,10 @@
 import { marginX, navItems } from "@/utils/constants";
 import { Box, Button, Flex, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
-import MobileNav from "./mobile-nav";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import MobileNav from "./mobile-nav";
 
 const MainNav = () => {
   const pathname = usePathname();
@@ -17,7 +18,12 @@ const MainNav = () => {
   }
   return (
     <Flex marginX={marginX} py="1rem" justify="space-between" align="center">
-      <Flex align="center" gap={12} fontSize="md">
+      <Flex
+        align="center"
+        gap={12}
+        fontSize="md"
+        display={{ base: "none", md: "flex" }}
+      >
         <Link href="/">
           <Image
             priority
@@ -66,9 +72,9 @@ const MainNav = () => {
         </Link>
       </Flex>
 
-      {/* <Box hideFrom="md">
-        <MobileNav color="brand.white" />
-      </Box> */}
+      <Box hideFrom="md">
+        <MobileNav />
+      </Box>
     </Flex>
   );
 };
