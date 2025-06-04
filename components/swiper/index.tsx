@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Box, Button, Text } from "@chakra-ui/react";
 
 interface AutoplayTimeLeftParams {
   swiper: import("swiper").Swiper;
@@ -50,15 +51,53 @@ const SwiperPage = () => {
       onAutoplayTimeLeft={onAutoplayTimeLeft}
       className="mySwiper"
     >
-      <SwiperSlide>Smwinde is here</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-      <SwiperSlide>Slide 5</SwiperSlide>
-      <SwiperSlide>Slide 6</SwiperSlide>
-      <SwiperSlide>Slide 7</SwiperSlide>
-      <SwiperSlide>Slide 8</SwiperSlide>
-      <SwiperSlide>Slide 9</SwiperSlide>
+      {slider_images.map((image, index) => (
+        // Inside your map function (replacing <Box>...</Box>):
+
+        <SwiperSlide key={index}>
+          <Box
+            position="relative"
+            height="80vh"
+            width="100%"
+            backgroundImage={`url(${image.image})`}
+            backgroundSize="cover"
+            backgroundPosition="center"
+            display="flex"
+            alignItems="center"
+            justifyContent="flex-start"
+            px={{ base: 4, md: 20 }}
+          >
+            <Box maxW="lg" color="white">
+              <Text
+                fontSize={{ base: "3xl", md: "5xl" }}
+                fontWeight="bold"
+                lineHeight="short"
+              >
+                Make money <br />
+                while doing what <br />
+                you love
+              </Text>
+              <Text fontSize={{ base: "md", md: "xl" }} mt={6}>
+                Start Your Freedom Plan
+              </Text>
+              <Button
+                mt={6}
+                colorScheme="blackAlpha"
+                bg="blackAlpha.800"
+                color="white"
+                px={8}
+                py={6}
+                rounded="full"
+                fontWeight="bold"
+                _hover={{ bg: "blackAlpha.700" }}
+              >
+                Start Investing
+              </Button>
+            </Box>
+          </Box>
+        </SwiperSlide>
+      ))}
+
       <div className="autoplay-progress" slot="container-end">
         <svg viewBox="0 0 48 48" ref={progressCircle}>
           <circle cx="24" cy="24" r="20"></circle>
@@ -70,3 +109,21 @@ const SwiperPage = () => {
 };
 
 export default SwiperPage;
+
+const slider_images = [
+  {
+    image: "/images/gtr-1.jpg",
+    title: "GTR 1",
+    description: "This is a GTR 1 car",
+  },
+  {
+    image: "/images/gtr-2.jpg",
+    title: "GTR 2",
+    description: "This is a GTR 2 car",
+  },
+  {
+    image: "/images/gtr-3.jpg",
+    title: "GTR 3",
+    description: "This is a GTR 3 car",
+  },
+];

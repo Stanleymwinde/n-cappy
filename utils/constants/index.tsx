@@ -1,7 +1,7 @@
 import { FacebookIcon, InstagramIcon, XIcon, YoutubeIcon } from "../icons";
 import TiktokIcon from "../icons/TikTokIcon";
 
-export const marginX = { base: "3%", sm: "5%", md: "6%", lg: "8%" };
+export const marginX = { base: "3%", sm: "2%", md: "4%", lg: "6%" };
 
 export const socials = [
   {
