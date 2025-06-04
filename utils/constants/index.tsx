@@ -37,7 +37,7 @@ export const socials = [
 ];
 
 export const navItems = [
-  { label: "Individual", href: "/" },
+  { label: "Individual", href: "/individual" },
   { label: "Institutional", href: "/institutional" },
   { label: "About Us", href: "/about-us" },
   { label: "Tools & Resources", href: "/tools_and_resources" },
@@ -98,5 +98,57 @@ export const TestimonialData = [
     image: "/images/gtr-4.jpg",
     testimonial:
       "Nabo Capital has been instrumental in helping me build and preserve my wealth. Their team is exceptional.",
+  },
+];
+
+export const FinancialGoalsData = [
+  {
+    title: "Save Intentionally",
+    description:
+      "Whether you're building wealth, securing your future or planning for a milestone, intentional saving sets the foundation for financial freedom.",
+    points: [
+      "Competitive returns above inflation",
+      "Proffesional Fund Management",
+      "Diversified Low-Risk Portfolio",
+      "Withdraw funds when you need them",
+    ],
+    icon: "LuUser",
+  },
+  {
+    title: "Afford the Life I Want",
+    description:
+      "We’ll help you build a smart savings plan for education—without the stress",
+    points: [
+      "Competitive returns above inflation",
+      "Proffesional Fund Management",
+      "Diversified Low-Risk Portfolio",
+      "Withdraw funds when you need them",
+    ],
+    icon: "LuFolder",
+  },
+  {
+    title: "Travel the World",
+    description:
+      "Explore the world without financial worries. Save intentionally for unforgettable memories.",
+    points: [
+      "Competitive returns above inflation",
+      "Proffesional Fund Management",
+      "Diversified Low-Risk Portfolio",
+      "Withdraw funds when you need them",
+    ],
+
+    icon: "LuSquareCheck",
+  },
+  {
+    title: "Retire Comfortably",
+    description:
+      "Retire on your terms. Build a financial cushion that lets you enjoy life’s golden years with peace and pride.",
+    points: [
+      "Competitive returns above inflation",
+      "Proffesional Fund Management",
+      "Diversified Low-Risk Portfolio",
+      "Withdraw funds when you need them",
+    ],
+    icon: "LuSquareCheck",
   },
 ];

@@ -1,0 +1,4 @@
+export { default as Hero } from "./Hero";
+export { default as Rates } from "./Rates";
+export { default as FinancialGoals } from "./FinancialGoals";
+export { default as InvestmentSolutions } from "./InvestmentSolutions";
