@@ -1,7 +1,13 @@
 import { Currency } from "@/components/common";
-import { Account, Investing, Testimonials, WhyforYou } from "@/components/home";
+import {
+  Account,
+  CallToAction,
+  Investing,
+  Testimonials,
+  WhyforYou,
+} from "@/components/home";
+
 import SwiperPage from "@/components/swiper";
-import { Heading } from "@chakra-ui/react";
 
 export default function Home() {
   return (
@@ -12,6 +18,7 @@ export default function Home() {
       <Investing />
       <WhyforYou />
       <Testimonials />
+      <CallToAction />
     </>
   );
 }
