@@ -4,3 +4,4 @@ export { default as FinancialGoals } from "./FinancialGoals";
 export { default as InvestmentSolutions } from "./InvestmentSolutions";
 export { default as ConsultationTeam } from "./ConsultationTeam";
 export { default as Connect } from "./Connect";
+export { default as Faqs } from "./Faq's";

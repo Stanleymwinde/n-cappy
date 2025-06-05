@@ -175,3 +175,36 @@ export const teamMembers = [
     title: "Client Relations Manager",
   },
 ];
+
+export const FaqsData = [
+  {
+    value: "a",
+    title: "What is a Unit Trust?",
+    text: "A Unit Trust, also known as a mutual fund, is a pooled investment vehicle where investors' money is collectively managed by a professional fund manager..",
+  },
+  {
+    value: "b",
+    title: "What are the differences between the various funds?",
+    text: "You can start investing with Nabo Capital by visiting our website and signing up for an account. Our team will guide you through the process.",
+  },
+  {
+    value: "c",
+    title: "Is my money safe?",
+    text: "We offer a variety of investment products including mutual funds, ETFs, and personalized portfolio management services.",
+  },
+  {
+    value: "d",
+    title: "Can I top up my account?",
+    text: "You can contact our customer support team via email at",
+  },
+  {
+    value: "e",
+    title: "How do I withdraw my funds?",
+    text: "You can withdraw your funds by logging into your account and submitting a withdrawal request. The funds will be processed within 3-5 business days.",
+  },
+  {
+    value: "f",
+    title: "What are the fees associated with investing?",
+    text: "We charge a management fee based on the assets under management. There may also be transaction fees for buying or selling units in the fund.",
+  },
+];

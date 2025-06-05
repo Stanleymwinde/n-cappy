@@ -34,7 +34,7 @@ const Footer = () => {
         <Stack>
           <Image
             boxSize="150px"
-            src="/images/logo.svg"
+            src="/images/Logo.svg"
             alt="N-Cappy Logo"
             objectFit="contain"
           />

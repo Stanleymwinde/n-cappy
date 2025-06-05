@@ -1,0 +1,42 @@
+import { FaqsData, marginX } from "@/utils/constants";
+import { Accordion, Box, Heading, Span } from "@chakra-ui/react";
+import React from "react";
+
+const Faqs = () => {
+  return (
+    <Box marginX={marginX} py={9}>
+      <Heading
+        fontFamily={"poppins"}
+        fontSize="5xl"
+        fontWeight="bold"
+        mb={4}
+        textAlign={"center"}
+      >
+        Frequently Asked Questions
+      </Heading>
+      <Accordion.Root
+        collapsible
+        defaultValue={["a"]}
+        bg={"gray.300"}
+        p={6}
+        py={8}
+      >
+        {FaqsData.map((item, index) => (
+          <Box mb={4} key={index}>
+            <Accordion.Item value={item.value}>
+              <Accordion.ItemTrigger>
+                <Span flex="1">{item.title}</Span>
+                <Accordion.ItemIndicator />
+              </Accordion.ItemTrigger>
+              <Accordion.ItemContent>
+                <Accordion.ItemBody>{item.text}</Accordion.ItemBody>
+              </Accordion.ItemContent>
+            </Accordion.Item>
+          </Box>
+        ))}
+      </Accordion.Root>
+    </Box>
+  );
+};
+
+export default Faqs;
