@@ -170,7 +170,7 @@ export const teamMembers = [
     title: "Financial Analyst",
   },
   {
-    image: "/images/gtr-4.jpg",
+    image: "/images/gtr-1.jpg",
     name: "Bob Brown",
     title: "Client Relations Manager",
   },

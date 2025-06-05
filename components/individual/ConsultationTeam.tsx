@@ -1,6 +1,16 @@
 import { marginX, teamMembers } from "@/utils/constants";
-import { Box, Button, Heading, Text, VStack } from "@chakra-ui/react";
-import { Card, CardBody } from "@chakra-ui/react";
+import { InstagramIcon, LinkedInIcon } from "@/utils/icons";
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Icon,
+  Image,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
+import { Card } from "@chakra-ui/react";
 import React from "react";
 
 const ConsultationTeam = () => {
@@ -16,29 +26,32 @@ const ConsultationTeam = () => {
         Ask.Choose.Build your path
       </Heading>
       <Button bg={"#02b5df"}>Schedule a Consultation</Button>
-      <Box>
-        <Card.Root maxW="md" boxShadow="lg" borderRadius="lg">
-          <CardBody>
-            <VStack gap={4} align="stretch">
-              {teamMembers.map((member, index) => (
-                <Box
-                  key={index}
-                  py={2}
-                  borderBottom={
-                    index !== teamMembers.length - 1 ? "1px solid" : "none"
-                  }
-                  borderColor="gray.100"
-                >
-                  <Heading size="md">{member.name}</Heading>
-                  <Text fontSize="sm" color="gray.600">
-                    {member.title}
-                  </Text>
+      <Flex gap={4} mt={8} justifyContent="center" wrap="wrap">
+        {teamMembers.map((member, i) => (
+          <Card.Root maxW="16rem" overflow="hidden" key={i}>
+            <Image
+              src={member.image}
+              width="100%"
+              height="300px"
+              objectFit="cover"
+              alt="Green double couch with wooden legs"
+              borderRadius="md"
+              boxShadow="md"
+            />
+            <Card.Body gap="2">
+              <Card.Title>{member.name}</Card.Title>
+              <Card.Description>
+                <Text fontSize="sm" color="gray.600">
+                  {member.title}
+                </Text>
+                <Box display="flex" justifyContent="flex-end" mt={2}>
+                  <LinkedInIcon boxSize={7} color={"blue.600"} />
                 </Box>
-              ))}
-            </VStack>
-          </CardBody>
-        </Card.Root>
-      </Box>
+              </Card.Description>
+            </Card.Body>
+          </Card.Root>
+        ))}
+      </Flex>
     </Box>
   );
 };
