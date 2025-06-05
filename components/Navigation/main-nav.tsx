@@ -17,7 +17,7 @@ const MainNav = () => {
     return pathname.includes(nav) ? "primary" : "brand.white";
   }
   return (
-    <Flex marginX={marginX} py="1rem" justify="space-between" align="center">
+    <Flex marginX={marginX} py={2} justify="space-between" align="center">
       <Flex
         align="center"
         gap={12}

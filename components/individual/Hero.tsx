@@ -1,4 +1,3 @@
-import { marginX } from "@/utils/constants";
 import { Box, Button, Text } from "@chakra-ui/react";
 import React from "react";
 

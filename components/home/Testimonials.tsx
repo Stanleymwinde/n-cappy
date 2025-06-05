@@ -21,7 +21,7 @@ const Testimonials = () => {
         my={8}
         py={4}
       >
-        What Our Invesstors Have to Say ...
+        What Our Investors Have to Say ...
       </Heading>
       <Text fontSize="xl" textAlign="center" mb={8}>
         Hear from investors who have trusted us with their global investment

@@ -57,7 +57,7 @@ const SwiperPage = () => {
         <SwiperSlide key={index}>
           <Box
             position="relative"
-            height="80vh"
+            height="85vh"
             width="100%"
             backgroundImage={`url(${image.image})`}
             backgroundSize="cover"
@@ -112,18 +112,23 @@ export default SwiperPage;
 
 const slider_images = [
   {
-    image: "/images/gtr-1.jpg",
-    title: "GTR 1",
-    description: "This is a GTR 1 car",
+    image: "/images/slide-1.png",
+    title: "Make Money While doing what you love",
+    description: "Start Your Freedom Plan",
   },
   {
-    image: "/images/gtr-2.jpg",
-    title: "GTR 2",
-    description: "This is a GTR 2 car",
+    image: "/images/slide-2.png",
+    title: "Make Money While doing what you love",
+    description: "Explore What's Possible",
   },
   {
-    image: "/images/gtr-3.jpg",
-    title: "GTR 3",
-    description: "This is a GTR 3 car",
+    image: "/images/slide-3.png",
+    title: "Make Money While doing what you love",
+    description: "Go Global with Nabo",
+  },
+  {
+    image: "/images/slide-4.png",
+    title: "Make Money While doing what you love",
+    description: "Clock Out, We've got you",
   },
 ];
