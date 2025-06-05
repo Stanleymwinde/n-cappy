@@ -1,4 +1,5 @@
 import {
+  Connect,
   ConsultationTeam,
   FinancialGoals,
   Hero,
@@ -15,6 +16,7 @@ const page = () => {
       <FinancialGoals />
       <InvestmentSolutions />
       <ConsultationTeam />
+      <Connect />
     </>
   );
 };
