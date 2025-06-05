@@ -1,16 +1,16 @@
-import { Heading } from "@chakra-ui/react";
+import Hero from "@/components/common/Hero";
+
 import React from "react";
 
 const page = () => {
   return (
-    <Heading
-      textAlign="center"
-      fontSize={{ base: "2xl", md: "6xl" }}
-      mb={4}
-      fontFamily={"Poppins"}
-    >
-      Hello Smwinde
-    </Heading>
+    <>
+      <Hero
+        title="Proudly Kenyan.Globally Connected"
+        subtitle="Build Resilience, Expand Regionally and gow with confidence"
+        imageUrl="/images/Global-pagehero.png"
+      />
+    </>
   );
 };
 
