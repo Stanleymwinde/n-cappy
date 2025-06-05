@@ -95,7 +95,7 @@ export const TestimonialData = [
   {
     name: "Investor Sarah",
     role: "Wealth Builder",
-    image: "/images/gtr-4.jpg",
+    image: "/images/gtr-1.jpg",
     testimonial:
       "Nabo Capital has been instrumental in helping me build and preserve my wealth. Their team is exceptional.",
   },
