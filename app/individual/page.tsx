@@ -1,3 +1,4 @@
+import { CallToAction } from "@/components/home";
 import {
   Connect,
   ConsultationTeam,
@@ -19,6 +20,7 @@ const page = () => {
       <ConsultationTeam />
       <Connect />
       <Faqs />
+      <CallToAction />
     </>
   );
 };
