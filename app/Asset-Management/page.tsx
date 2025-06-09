@@ -1,4 +1,4 @@
-import { Solutions } from "@/components/Asset-mgt";
+import { CoreStrategy, Solutions } from "@/components/Asset-mgt";
 import { Currency } from "@/components/common";
 import Hero from "@/components/common/Hero";
 import React from "react";
@@ -14,6 +14,7 @@ const page = () => {
       />
       <Currency />
       <Solutions />
+      <CoreStrategy />
     </>
   );
 };

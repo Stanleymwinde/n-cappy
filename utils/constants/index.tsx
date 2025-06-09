@@ -153,6 +153,36 @@ export const FinancialGoalsData = [
   },
 ];
 
+export const CoreStrategiessData = [
+  {
+    title: "Equity Strategy",
+    subtitle: "Sustainable Capital Growth Across Market Cycles",
+    description: [
+      "Our equity strategy focuses on identifying quality companies with sustainable competitive advantages and strong growth potential. We employ a disciplined investment process that combines fundamental analysis with valuation discipline to deliver consistent alpha across market cycles.",
+    ],
+    pdf: "/pdfs/Equity-Strategy.pdf",
+    icon: "LuUser",
+  },
+  {
+    title: "Balanced Strategy",
+    subtitle: "Sustainable Capital Growth Across Market Cycles",
+    description: [
+      "Our equity strategy focuses on identifying quality companies with sustainable competitive advantages and strong growth potential. We employ a disciplined investment process that combines fundamental analysis with valuation discipline to deliver consistent alpha across market cycles.",
+    ],
+    pdf: "/pdfs/Equity-Strategy.pdf",
+    icon: "LuFolder",
+  },
+  {
+    title: "Fixed Income Strategy",
+    subtitle: "Sustainable Capital Growth Across Market Cycles",
+    description: [
+      "Our equity strategy focuses on identifying quality companies with sustainable competitive advantages and strong growth potential. We employ a disciplined investment process that combines fundamental analysis with valuation discipline to deliver consistent alpha across market cycles.",
+    ],
+    pdf: "/pdfs/Equity-Strategy.pdf",
+    icon: "LuSquareCheck",
+  },
+];
+
 export const teamMembers = [
   {
     image: "/images/gtr-1.jpg",
