@@ -1,5 +1,6 @@
 import { Currency } from "@/components/common";
 import Hero from "@/components/common/Hero";
+import { CallToAction } from "@/components/home";
 import { Faqs } from "@/components/individual";
 import {
   ExploreSolutions,
@@ -22,6 +23,7 @@ const page = () => {
       <Team />
       <PartnerWithUs />
       <Faqs />
+      <CallToAction />
     </>
   );
 };
