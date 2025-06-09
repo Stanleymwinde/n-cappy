@@ -4,7 +4,7 @@ import React from "react";
 
 const Faqs = () => {
   return (
-    <Box marginX={marginX} py={9}>
+    <Box marginX={marginX} py={10}>
       <Heading
         fontFamily={"poppins"}
         fontSize="5xl"

@@ -1,0 +1,77 @@
+import { institutionalMembers, marginX } from "@/utils/constants";
+import { LinkedInIcon } from "@/utils/icons";
+import {
+  Box,
+  Button,
+  Card,
+  Flex,
+  Heading,
+  Image,
+  Text,
+} from "@chakra-ui/react";
+import React from "react";
+
+const Team = () => {
+  return (
+    <Box marginX={marginX} py={5} textAlign={"center"}>
+      <Heading
+        as="h1"
+        fontSize={{ base: "2xl", md: "3xl" }}
+        fontFamily="poppins"
+        my={6}
+        color="gray.800"
+      >
+        Here When You’re Ready to Build Forward
+      </Heading>
+      <Flex
+        marginX={marginX}
+        mt={8}
+        justifyContent={{ base: "center", md: "space-between" }}
+        wrap="wrap"
+      >
+        {institutionalMembers.map((member, i) => (
+          <Card.Root maxW="16rem" overflow="hidden" key={i}>
+            <Image
+              src={member.image}
+              width="100%"
+              height="300px"
+              objectFit="cover"
+              alt="Green double couch with wooden legs"
+              borderRadius="md"
+              boxShadow="md"
+            />
+            <Card.Body gap={2}>
+              <Card.Title>{member.name}</Card.Title>
+              <Card.Description>
+                <Text fontSize="sm" color="gray.600">
+                  {member.title}
+                </Text>
+                <Box
+                  display="flex"
+                  justifyContent="flex-end"
+                  mt={2}
+                  _hover={{ cursor: "pointer" }}
+                >
+                  <LinkedInIcon boxSize={7} color={"blue.600"} />
+                </Box>
+              </Card.Description>
+            </Card.Body>
+          </Card.Root>
+        ))}
+      </Flex>{" "}
+      <Button
+        bg={"#0a2234"}
+        mt={6}
+        color={"white"}
+        px={8}
+        py={4}
+        rounded="full"
+        fontWeight="bold"
+      >
+        Align & Advance{" "}
+      </Button>
+    </Box>
+  );
+};
+
+export default Team;

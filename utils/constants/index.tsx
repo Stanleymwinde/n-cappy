@@ -176,6 +176,24 @@ export const teamMembers = [
   },
 ];
 
+export const institutionalMembers = [
+  {
+    image: "/images/gtr-1.jpg",
+    name: "John Doe",
+    title: "Chief Investment Officer",
+  },
+  {
+    image: "/images/gtr-2.jpg",
+    name: "Jane Smith",
+    title: "Senior Portfolio Manager",
+  },
+  {
+    image: "/images/gtr-3.jpg",
+    name: "Alice Johnson",
+    title: "Financial Analyst",
+  },
+];
+
 export const FaqsData = [
   {
     value: "a",
