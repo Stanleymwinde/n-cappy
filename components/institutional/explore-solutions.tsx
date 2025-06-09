@@ -2,10 +2,12 @@ import { marginX } from "@/utils/constants";
 import {
   Box,
   Button,
+  Collapsible,
   Flex,
   Grid,
   Heading,
   Image,
+  Link,
   SimpleGrid,
   Stack,
   Text,
@@ -89,9 +91,9 @@ const ExploreSolutions = () => {
                 py={4}
                 rounded="full"
                 fontWeight="bold"
-                display={"flex-end"}
+                _hover={{ bg: "#009fcc" }}
               >
-                I want to <FaChevronDown />
+                <FaChevronDown /> I want to
               </Button>
             </Box>
           </Flex>

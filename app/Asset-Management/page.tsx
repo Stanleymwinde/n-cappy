@@ -1,6 +1,8 @@
 import { CoreStrategy, Solutions } from "@/components/Asset-mgt";
+import WhyChooseUs from "@/components/Asset-mgt/WhyChooseUs";
 import { Currency } from "@/components/common";
 import Hero from "@/components/common/Hero";
+import { Connect, Faqs } from "@/components/individual";
 import React from "react";
 
 const page = () => {
@@ -15,6 +17,9 @@ const page = () => {
       <Currency />
       <Solutions />
       <CoreStrategy />
+      <WhyChooseUs />
+      <Connect />
+      <Faqs />
     </>
   );
 };

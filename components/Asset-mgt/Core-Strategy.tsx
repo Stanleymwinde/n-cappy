@@ -101,8 +101,8 @@ const CoreStrategy = () => {
                       passHref
                       target="_blank"
                     >
-                      <Button bg="#00caff" _hover={{ bg: "#00b5e0" }} mt={4}>
-                        Download Equity Strategy Factsheet
+                      <Button bg="#0a2234" _hover={{ bg: "#00b5e0" }} mt={4}>
+                        <Icons.LuDownload /> Download Equity Strategy Factsheet
                       </Button>
                     </Link>
                   </Flex>
