@@ -4,8 +4,8 @@ import React from "react";
 const currency = () => {
   return (
     <>
-      <Box py={3}>
-        <Flex>
+      <Box py={2}>
+        <Flex border={"1px solid #ccc"} borderRadius="md" p={2}>
           <Text
             fontSize="xl"
             fontWeight="bold"

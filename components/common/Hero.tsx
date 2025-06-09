@@ -5,9 +5,10 @@ type HeroProps = {
   title?: string;
   subtitle?: string;
   imageUrl?: string;
+  button?: string;
 };
 
-const Hero = ({ title, subtitle, imageUrl }: HeroProps) => {
+const Hero = ({ title, subtitle, imageUrl, button }: HeroProps) => {
   return (
     <Box
       position="relative"
@@ -39,6 +40,12 @@ const Hero = ({ title, subtitle, imageUrl }: HeroProps) => {
         fontFamily="Poppins"
         maxWidth="100%"
         boxSizing="border-box"
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+        height="80%"
+        textAlign="center"
       >
         <Text
           fontSize={{ base: "3xl", md: "5xl" }}
@@ -71,7 +78,7 @@ const Hero = ({ title, subtitle, imageUrl }: HeroProps) => {
           fontWeight="bold"
           _hover={{ bg: "blackAlpha.700" }}
         >
-          Start Investing
+          {button || "Get Started"}
         </Button>
       </Box>
     </Box>
