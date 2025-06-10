@@ -159,8 +159,8 @@ const contactData = [
 
   {
     icon: MailIcon,
-    label: "info@nairobichapel.org",
-    link: "mailto:info@nairobichapel.org",
+    label: "info@n-cappy.org",
+    link: "mailto:info@n-cappy.org",
   },
 ];
 

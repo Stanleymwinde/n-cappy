@@ -31,7 +31,7 @@ export const socials = [
   {
     id: 5,
     icon: TiktokIcon,
-    link: "https://www.tiktok.com/@nairobichapel",
+    link: "https://www.tiktok.com/",
     name: "Tiktok",
   },
 ];

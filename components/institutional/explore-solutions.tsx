@@ -1,3 +1,4 @@
+"use client";
 import { marginX } from "@/utils/constants";
 import {
   Box,
@@ -8,29 +9,16 @@ import {
   Heading,
   Image,
   Link,
-  SimpleGrid,
-  Stack,
+  Menu,
+  Portal,
   Text,
 } from "@chakra-ui/react";
 import React from "react";
 import { FaChevronDown } from "react-icons/fa6";
-
-const services = [
-  {
-    title: "Asset Management",
-    description:
-      "Nabo Capital's treasury solutions help institutions turn idle cash into consistent returns. Through strategic cash flow management and investment-grade options, businesses can unlock new revenue streams while maintaining liquidity.",
-    image: "/images/woman.jpg", // Replace with your actual image path
-  },
-  {
-    title: "Investment Advisory",
-    description:
-      "With deep market insight and tailored portfolio strategies, Nabo Capital offers asset advisory services that help corporates and institutions grow long-term wealth, optimize asset performance, and manage risk across cycles.",
-    image: "/images/man.jpg", // Replace with your actual image path
-  },
-];
+import { useState } from "react";
 
 const ExploreSolutions = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <Heading
@@ -81,20 +69,37 @@ const ExploreSolutions = () => {
                 idle cash into consistent returns. Through strategic cash flow
                 management and investment-grade options, businesses can unlock
                 new revenue streams while maintaining liquidity.
-              </Text>
-              <Button
-                mt={6}
-                colorScheme="blue"
-                bg="#00caff"
-                color="white"
-                px={8}
-                py={4}
-                rounded="full"
-                fontWeight="bold"
-                _hover={{ bg: "#009fcc" }}
-              >
-                <FaChevronDown /> I want to
-              </Button>
+              </Text>{" "}
+              <Box>
+                <Menu.Root>
+                  <Menu.Trigger asChild>
+                    <Button
+                      mt={6}
+                      colorScheme="blue"
+                      bg="#00caff"
+                      color="white"
+                      px={8}
+                      py={4}
+                      rounded="full"
+                      fontWeight="bold"
+                      display={"flex-end"}
+                    >
+                      I want to <FaChevronDown />
+                    </Button>
+                  </Menu.Trigger>
+                  <Portal>
+                    <Menu.Positioner>
+                      <Menu.Content bg={"gray.300"} p={2} rounded="md">
+                        <Link href="/Asset-Management">
+                          <Menu.Item value="asset-mgt">
+                            Protect My Business
+                          </Menu.Item>
+                        </Link>
+                      </Menu.Content>
+                    </Menu.Positioner>
+                  </Portal>
+                </Menu.Root>
+              </Box>
             </Box>
           </Flex>
         </Grid>
