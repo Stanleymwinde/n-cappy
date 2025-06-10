@@ -1,8 +1,18 @@
 import { CoreStrategiessData, marginX } from "@/utils/constants";
-import { Box, Button, Flex, Grid, Heading, Tabs, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Grid,
+  Heading,
+  Icon,
+  Tabs,
+  Text,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { FaRegCirclePlay } from "react-icons/fa6";
 import * as Icons from "react-icons/lu";
 
 const CoreStrategy = () => {
@@ -41,58 +51,63 @@ const CoreStrategy = () => {
 
           {CoreStrategiessData.map((goal, index) => (
             <Tabs.Content key={index} value={`goal-${index}`}>
-              <Box bgColor={"gray.600"} borderRadius={"lg"}>
+              <Box
+                bgColor="gray.700"
+                borderRadius="lg"
+                py={6}
+                px={{ base: 4, md: 8 }}
+              >
                 <Grid
-                  templateColumns={{ base: "1fr", md: "1fr 1fr" }}
-                  px={marginX}
+                  templateColumns={{ base: "1fr", md: "1fr 1.5fr" }}
+                  gap={6}
+                  alignItems="center"
                 >
-                  <Flex
-                    justifyContent="center"
-                    alignItems="center"
-                    overflow={"hidden"}
+                  {/* Image with play icon */}
+                  <Box
+                    position="relative"
+                    borderRadius="lg"
+                    overflow="hidden"
+                    w="100%"
+                    maxW="500px"
+                    mx="auto"
                   >
                     <Image
-                      src="/images/Pius.png"
-                      alt="Commitment Image"
-                      width={200}
-                      height={200}
-                      style={{
-                        maxHeight: "90%",
-                        width: "auto",
-                        objectFit: "contain",
-                      }}
+                      src="/images/strategy.png"
+                      alt="Strategy Preview"
+                      width={500}
+                      height={300}
+                      style={{ borderRadius: "12px" }}
                     />
-                  </Flex>{" "}
+                    {/* Play Icon Overlay */}
+                    <Box
+                      position="absolute"
+                      top="50%"
+                      left="50%"
+                      transform="translate(-50%, -50%)"
+                      zIndex="1"
+                      bg="rgba(255,255,255,0.6)"
+                      borderRadius="full"
+                      p={2}
+                    >
+                      <FaRegCirclePlay size={60} color="#0a2234" />
+                    </Box>
+                  </Box>
+
+                  {/* Text Content */}
                   <Flex
                     direction="column"
-                    justifyContent="center"
-                    alignItems={{ base: "center", md: "flex-start" }}
+                    justify="center"
+                    align={{ base: "center", md: "flex-start" }}
                     textAlign={{ base: "center", md: "left" }}
-                    height="100%"
-                    gap={8}
+                    gap={4}
                   >
-                    <Heading
-                      py={4}
-                      fontSize={{ base: "3xl", md: "5xl" }}
-                      fontFamily="poppins"
-                      color="white"
-                    >
+                    <Heading fontSize="2xl" color="white">
                       {goal.title}
                     </Heading>
-                    <Text
-                      fontSize="2xl"
-                      maxWidth="600px"
-                      lineHeight="1.8"
-                      color="white"
-                    >
+                    <Text fontSize="lg" fontWeight="medium" color="gray.300">
                       {goal.subtitle}
                     </Text>
-                    <Text
-                      fontSize="xl"
-                      maxWidth="600px"
-                      lineHeight="1.8"
-                      color="white"
-                    >
+                    <Text fontSize="md" lineHeight="1.8" color="white">
                       {goal.description}
                     </Text>
 
@@ -101,7 +116,16 @@ const CoreStrategy = () => {
                       passHref
                       target="_blank"
                     >
-                      <Button bg="#0a2234" _hover={{ bg: "#00b5e0" }} mt={4}>
+                      <Button
+                        bg="gray.900"
+                        color="white"
+                        _hover={{ bg: "#00b5e0", color: "white" }}
+                        mt={4}
+                        px={6}
+                        py={5}
+                        borderRadius="lg"
+                        fontWeight="semibold"
+                      >
                         <Icons.LuDownload /> Download Equity Strategy Factsheet
                       </Button>
                     </Link>
