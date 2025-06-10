@@ -53,6 +53,7 @@ const FinancialGoals = () => {
                     fontSize={{ base: "3xl", md: "6xl" }}
                     fontFamily="poppins"
                     color="white"
+                    lineHeight={"1"}
                   >
                     {goal.title}
                   </Heading>
