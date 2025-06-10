@@ -16,7 +16,7 @@ const Team = () => {
     <Box marginX={marginX} py={5} textAlign={"center"}>
       <Heading
         as="h1"
-        fontSize={{ base: "2xl", md: "3xl" }}
+        fontSize={{ base: "2xl", md: "4xl" }}
         fontFamily="poppins"
         my={6}
         color="gray.800"

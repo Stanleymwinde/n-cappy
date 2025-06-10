@@ -4,7 +4,7 @@ import React from "react";
 const CallToAction = () => {
   return (
     <Box
-      bgImage="url('/images/gtr-3.jpg')"
+      bgImage="url('/images/cta.png')"
       bgSize="cover"
       bgPos="center"
       bgRepeat="no-repeat"
@@ -37,17 +37,17 @@ const CallToAction = () => {
         >
           <Image
             backgroundColor={"black"}
-            src="/images/logo.svg"
+            src="/images/Logo.svg"
             alt="Nabo Capital Logo"
-            width={50}
-            height={50}
+            width={70}
+            height={70}
           />
 
           <Image
-            src="/images/logo.svg"
+            src="/images/Logo.svg"
             alt="Nabo Capital Logo"
-            width={50}
-            height={50}
+            width={70}
+            height={70}
           />
         </Flex>
         <Box

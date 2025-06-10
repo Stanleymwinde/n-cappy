@@ -130,19 +130,36 @@ const ExploreSolutions = () => {
                 institutions grow long-term wealth, optimize asset performance,
                 and manage risk across cycles.
               </Text>
-              <Button
-                mt={6}
-                colorScheme="blue"
-                bg="#00caff"
-                color="white"
-                px={8}
-                py={4}
-                rounded="full"
-                fontWeight="bold"
-                display={"flex-end"}
-              >
-                I want to <FaChevronDown />
-              </Button>
+              <Box>
+                <Menu.Root>
+                  <Menu.Trigger asChild>
+                    <Button
+                      mt={6}
+                      colorScheme="blue"
+                      bg="#00caff"
+                      color="white"
+                      px={8}
+                      py={4}
+                      rounded="full"
+                      fontWeight="bold"
+                      display={"flex-end"}
+                    >
+                      I want to <FaChevronDown />
+                    </Button>
+                  </Menu.Trigger>
+                  <Portal>
+                    <Menu.Positioner>
+                      <Menu.Content bg={"gray.300"} p={2} rounded="md">
+                        <Link href="#">
+                          <Menu.Item value="asset-mgt">
+                            Align Capital to Strategy
+                          </Menu.Item>
+                        </Link>
+                      </Menu.Content>
+                    </Menu.Positioner>
+                  </Portal>
+                </Menu.Root>
+              </Box>
             </Box>{" "}
             <Box
               flex="1"
