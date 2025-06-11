@@ -90,7 +90,7 @@ const ExploreSolutions = () => {
                   <Portal>
                     <Menu.Positioner>
                       <Menu.Content bg={"gray.300"} p={2} rounded="md">
-                        <Link href="/Asset-Management">
+                        <Link href="/institutional/Asset-Management">
                           <Menu.Item value="asset-mgt">
                             Protect My Business
                           </Menu.Item>

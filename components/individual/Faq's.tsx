@@ -4,12 +4,12 @@ import React from "react";
 
 const Faqs = () => {
   return (
-    <Box marginX={marginX} py={10}>
+    <Box marginX={marginX} py={8}>
       <Heading
         fontFamily={"poppins"}
         fontSize="5xl"
         fontWeight="bold"
-        mb={4}
+        mb={10}
         textAlign={"center"}
       >
         Frequently Asked Questions
