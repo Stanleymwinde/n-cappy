@@ -183,6 +183,39 @@ export const CoreStrategiessData = [
   },
 ];
 
+export const ResourcesTabsData = [
+  {
+    title: "All",
+    description:
+      "Explore our comprehensive guide to setting and achieving your financial goals.",
+    icon: "LuUser",
+    video:
+      "https://player.cloudinary.com/embed/?cloud_name=dgamw7ib9&public_id=Nairobi_Chapel_futor5&profile=cld-default",
+  },
+  {
+    title: "Inestment Types and Strategies",
+    description:
+      "Learn about our core investment strategies designed to maximize returns.",
+    icon: "LuFolder",
+    video:
+      "https://player.cloudinary.com/embed/?cloud_name=dgamw7ib9&public_id=Nairobi_Chapel_futor5&profile=cld-default",
+  },
+  {
+    title: "Private Wealth Management",
+    description: "Find answers to common questions about our services.",
+    icon: "LuSquareCheck",
+    video:
+      "https://player.cloudinary.com/embed/?cloud_name=dgamw7ib9&public_id=Nairobi_Chapel_futor5&profile=cld-default",
+  },
+  {
+    title: "Financial Planning and Retirement",
+    description: "here and there still figuring out it will look like",
+    icon: "LuSquareCheck",
+    video:
+      "https://player.cloudinary.com/embed/?cloud_name=dgamw7ib9&public_id=Nairobi_Chapel_futor5&profile=cld-default",
+  },
+];
+
 export const teamMembers = [
   {
     image: "/images/gtr-1.jpg",

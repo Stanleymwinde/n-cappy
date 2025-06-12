@@ -1,7 +1,7 @@
 import { Blog } from "@/components/blogs";
 import { Currency } from "@/components/common";
 import Hero from "@/components/common/Hero";
-import { Calculator } from "@/components/tools";
+import { Calculator, MoreResources, ResourcesTabs } from "@/components/tools";
 import { Heading } from "@chakra-ui/react";
 import React from "react";
 
@@ -17,6 +17,8 @@ const page = () => {
       <Currency />
       <Calculator />
       <Blog />
+      <MoreResources />
+      <ResourcesTabs />
     </>
   );
 };
