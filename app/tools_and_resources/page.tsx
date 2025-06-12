@@ -1,3 +1,4 @@
+import { Blog } from "@/components/blogs";
 import { Currency } from "@/components/common";
 import Hero from "@/components/common/Hero";
 import { Calculator } from "@/components/tools";
@@ -15,6 +16,7 @@ const page = () => {
       />
       <Currency />
       <Calculator />
+      <Blog />
     </>
   );
 };

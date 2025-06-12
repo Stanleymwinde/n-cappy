@@ -1,188 +1,215 @@
 "use client";
-import React, { useState } from "react";
+
+import React from "react";
 import {
   Box,
   Text,
   Input,
-  VStack,
   Button,
-  Field,
   Heading,
   Slider,
+  Field,
 } from "@chakra-ui/react";
-import { marginX } from "@/utils/constants";
+import { Controller, useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { CalculatorFormValues, CalculatorSchema } from "@/schema/calculator";
 
 const GoalPlanner = () => {
-  const [goal, setGoal] = useState("Buy a car");
-  const [years, setYears] = useState(5);
-  const [goalCost, setGoalCost] = useState(500000);
-  const [monthlySavings, setMonthlySavings] = useState(5000);
-  const [annualReturn, setAnnualReturn] = useState(10);
+  const {
+    control,
+    handleSubmit,
+    register,
+    watch,
+    setValue: setFormValue,
+    formState: { errors },
+  } = useForm<CalculatorFormValues>({
+    resolver: zodResolver(CalculatorSchema),
+    defaultValues: {
+      goal: "Buy a car",
+      years: [5],
+      goalCost: [500000],
+      monthlySavings: [5000],
+      annualReturn: [10],
+    },
+  });
+
+  const watchedValues = watch();
+
+  const onSubmit = handleSubmit((data) => {
+    console.log("Form submitted:", data);
+  });
+
+  const renderSlider = (
+    name: keyof CalculatorFormValues,
+    label: string,
+    min: number,
+    max: number,
+    step: number,
+    unit: string = ""
+  ) => (
+    <Controller
+      name={name}
+      control={control}
+      render={({ field }) => (
+        <Field.Root invalid={!!errors[name]}>
+          <Field.Label>
+            {label}: {field.value[0]} {unit}
+          </Field.Label>
+          <Slider.Root
+            width="full"
+            name={field.name}
+            value={Array.isArray(field.value) ? field.value : []}
+            min={min}
+            max={max}
+            step={step}
+            onValueChange={({ value }: { value: number[] }) => {
+              field.onChange(value);
+            }}
+            onFocusChange={({ focusedIndex }: { focusedIndex: number }) => {
+              if (focusedIndex === -1) field.onBlur();
+            }}
+          >
+            <Slider.Control>
+              <Slider.Track>
+                <Slider.Range />
+              </Slider.Track>
+              <Slider.Thumbs />
+            </Slider.Control>
+          </Slider.Root>
+          <Field.ErrorText>
+            {Array.isArray(errors[name])
+              ? errors[name]?.[0]?.message
+              : (errors[name] as { message?: string })?.message}
+          </Field.ErrorText>
+        </Field.Root>
+      )}
+    />
+  );
+
+  const goal = watchedValues.goal || "";
+  const years = watchedValues.years?.[0] || 0;
+  const monthlySavings = watchedValues.monthlySavings?.[0] || 0;
+  const annualReturn = watchedValues.annualReturn?.[0] || 0;
 
   const months = years * 12;
   const monthlyRate = annualReturn / 100 / 12;
+
   const futureValue =
-    monthlySavings * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate);
+    monthlyRate > 0
+      ? monthlySavings * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate)
+      : monthlySavings * months;
+
   const interest = futureValue - monthlySavings * months;
 
-  interface CustomSliderProps {
-    value: number;
-    onChange: (val: number) => void;
-    min: number;
-    max: number;
-    step: number;
-    label: string;
-    displayValue: string;
-  }
-
-  const CustomSlider: React.FC<CustomSliderProps> = ({
-    value,
-    onChange,
-    min,
-    max,
-    step,
-    label,
-    displayValue,
-  }) => (
-    <Box>
-      <Text>{label}</Text>
-      <Slider.Root
-        value={[value]}
-        min={min}
-        max={max}
-        step={step}
-        onValueChange={(details) => onChange(details.value[0])}
-      >
-        <Slider.Label />
-        <Slider.ValueText />
-        <Slider.Control>
-          <Slider.Track>
-            <Slider.Range />
-          </Slider.Track>
-          <Slider.Thumb index={0}>
-            <Slider.DraggingIndicator />
-            <Slider.HiddenInput />
-          </Slider.Thumb>
-          <Slider.MarkerGroup>
-            <Slider.Marker value={min} />
-            <Slider.Marker value={max} />
-          </Slider.MarkerGroup>
-        </Slider.Control>
-      </Slider.Root>
-      <Text mt={1} fontSize="sm">
-        {displayValue}
-      </Text>
-    </Box>
-  );
-
   return (
-    <Box bg={"gray.300"}>
+    <>
       {" "}
       <Heading
-        mb={6}
+        py={6}
         textAlign="center"
-        color={"#0a2234"}
-        fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
-        fontWeight="bold"
+        fontSize="5xl"
+        color={"#00caff"}
+        fontWeight={"bold"}
       >
         Put a Number to Your Dream
-      </Heading>{" "}
+      </Heading>
       <Box
+        bg="gray.100"
         color="white"
+        minH="80vh"
         display="flex"
         justifyContent="center"
         alignItems="center"
-        p={6}
       >
         <Box
           maxW="lg"
           w="full"
+          bg="#1e2d3d"
           p={6}
           borderRadius="2xl"
           boxShadow="lg"
-          bg={"#0a2234"}
         >
-          <VStack gap={4} align="stretch">
-            <Heading size="md">Let’s plan your dream, together.</Heading>
+          <form onSubmit={onSubmit}>
+            <Box display="flex" flexDirection="column" gap={4}>
+              <Heading size="md">Let’s plan your dream, together.</Heading>
 
-            <Box>
-              <Text>What’s your goal?</Text>
-              <Input
-                value={goal}
-                onChange={(e) => setGoal(e.target.value)}
-                bg="white"
-                color="black"
-              />
+              <Box>
+                <Text mb={1} fontWeight="medium">
+                  What’s your goal?
+                </Text>
+                <Input
+                  {...register("goal")}
+                  bg="white"
+                  color="black"
+                  onChange={(e) => {
+                    setFormValue("goal", e.target.value);
+                  }}
+                />
+              </Box>
+
+              {renderSlider(
+                "years",
+                "How soon would you like to make it happen?",
+                1,
+                30,
+                1,
+                "Years"
+              )}
+              {renderSlider(
+                "goalCost",
+                "How much will it cost you to reach this goal?",
+                1000,
+                10000000,
+                500,
+                "KES"
+              )}
+              {renderSlider(
+                "monthlySavings",
+                "How much can you set aside each month?",
+                1000,
+                10000000,
+                500,
+                "KES"
+              )}
+              {renderSlider(
+                "annualReturn",
+                "What is your expected annual return?",
+                1,
+                30,
+                1,
+                "%"
+              )}
+
+              <Box mt={4} fontSize="sm" color="green.300">
+                <Text fontWeight="bold">
+                  Here is your path to {goal.toLowerCase()}:
+                </Text>
+                <Text mt={2}>
+                  If you save KES {monthlySavings.toLocaleString()} each month
+                  for {years} years,
+                  <br />
+                  you will have KES{" "}
+                  {futureValue.toLocaleString(undefined, {
+                    maximumFractionDigits: 0,
+                  })}{" "}
+                  by the end –<br />
+                  including interest of KES{" "}
+                  {interest.toLocaleString(undefined, {
+                    maximumFractionDigits: 0,
+                  })}
+                  .
+                </Text>
+              </Box>
+
+              <Button colorScheme="blue" w="full" type="submit">
+                Start Investing Now
+              </Button>
             </Box>
-
-            <CustomSlider
-              value={years}
-              onChange={setYears}
-              min={1}
-              max={30}
-              step={1}
-              label="How soon would you like to make it happen?"
-              displayValue={`${years} Years`}
-            />
-
-            <CustomSlider
-              value={goalCost}
-              onChange={setGoalCost}
-              min={1000}
-              max={10000000}
-              step={1000}
-              label="How much will it cost you to reach this goal?"
-              displayValue={`KES ${goalCost.toLocaleString()}`}
-            />
-
-            <CustomSlider
-              value={monthlySavings}
-              onChange={setMonthlySavings}
-              min={1000}
-              max={10000000}
-              step={1000}
-              label="How much can you set aside each month?"
-              displayValue={`KES ${monthlySavings.toLocaleString()}`}
-            />
-
-            <CustomSlider
-              value={annualReturn}
-              onChange={setAnnualReturn}
-              min={1}
-              max={30}
-              step={1}
-              label="What is your expected annual return?"
-              displayValue={`${annualReturn}%`}
-            />
-
-            <Box border="1px solid #00caff" p={4} borderRadius="lg">
-              <Text fontWeight="bold">
-                Here is your path to {goal.toLowerCase()}:
-              </Text>
-              <Text mt={2}>
-                If you save KES {monthlySavings.toLocaleString()} each month for{" "}
-                {years} years,
-                <br />
-                you will have KES{" "}
-                {futureValue.toLocaleString(undefined, {
-                  maximumFractionDigits: 0,
-                })}{" "}
-                by the end –<br />
-                including interest of KES{" "}
-                {interest.toLocaleString(undefined, {
-                  maximumFractionDigits: 0,
-                })}
-                .
-              </Text>
-            </Box>
-
-            <Button bg={"#00caff"} w="full">
-              Start Investing Now
-            </Button>
-          </VStack>
+          </form>
         </Box>
       </Box>
-    </Box>
+    </>
   );
 };
 
