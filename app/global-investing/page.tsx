@@ -8,7 +8,7 @@ import {
   InvestingGlobally,
   MultiCurrencyInvestment,
 } from "@/components/global-investing";
-import { Testimonials } from "@/components/home";
+import { CallToAction, Testimonials } from "@/components/home";
 
 import React from "react";
 
@@ -28,6 +28,7 @@ const page = () => {
       <GlobalPartnerships />
       <ClientOnboarding />
       <Testimonials />
+      <CallToAction />
     </>
   );
 };
