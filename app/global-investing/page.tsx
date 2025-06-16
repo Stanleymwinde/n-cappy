@@ -1,6 +1,7 @@
 import { Currency } from "@/components/common";
 import Hero from "@/components/common/Hero";
 import {
+  ClientOnboarding,
   GlobalMarketFootprint,
   GlobalPartnerships,
   GlobalThoughtLeadership,
@@ -24,6 +25,7 @@ const page = () => {
       <GlobalMarketFootprint />
       <GlobalThoughtLeadership />
       <GlobalPartnerships />
+      <ClientOnboarding />
     </>
   );
 };
