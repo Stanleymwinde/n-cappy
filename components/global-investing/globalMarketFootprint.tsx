@@ -1,6 +1,7 @@
 import { marginX } from "@/utils/constants";
 import {
   Box,
+  Button,
   Circle,
   Flex,
   Heading,
@@ -88,6 +89,23 @@ const globalMarketFootprint = () => {
           </Text>
         </Box>
       </Flex>
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+        gap={4}
+      >
+        <Button
+          colorScheme="blue"
+          size="lg"
+          width="100%"
+          maxWidth="300px"
+          mt={4}
+        >
+          View All Whitepapers
+        </Button>
+      </Box>
     </Box>
   );
 };

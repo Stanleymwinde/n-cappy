@@ -356,3 +356,31 @@ export const InvestGloballyData = [
     icon: "FaChartLine",
   },
 ];
+
+export const GlobalPartnersData = [
+  {
+    name: "·Global Financial Licenses",
+    icon: "FaBuilding",
+    description:
+      "We work with leading financial institutions to facilitate global transactions.",
+    list: ["Citibank Global Network"],
+  },
+  {
+    name: "Regulatory Approvals",
+    icon: "FaShieldAlt",
+    description:
+      "We maintain all necessary licenses and regulatory approvals to operate globally.",
+    list: ["Capital Markets Authority (CMA) Kenya"],
+  },
+  {
+    name: "Strategic Alliances",
+    icon: "FaHandshake",
+    description:
+      "Our strategic partnerships expand our reach and capabilities.",
+    list: [
+      "Global Investment Research Firms",
+      "International Asset Managers",
+      "Regional Market Specialists",
+    ],
+  },
+];
