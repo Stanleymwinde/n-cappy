@@ -1,0 +1,95 @@
+import { marginX } from "@/utils/constants";
+import {
+  Box,
+  Circle,
+  Flex,
+  Heading,
+  HStack,
+  Image,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
+import React from "react";
+const regions = [
+  { name: "East Africa", color: "#EB5757" },
+  { name: "West Africa", color: "#2D9CDB" },
+  { name: "Southern Africa", color: "#1E1E1E" },
+  { name: "North Africa", color: "#F2994A" },
+  { name: "Europe", color: "#56CCF2" },
+  { name: "North America", color: "#000000" },
+  { name: "Asia", color: "#F2E85C" },
+];
+const globalMarketFootprint = () => {
+  return (
+    <Box marginX={marginX} py={10} bg="white">
+      <Box textAlign="center" mb={8}>
+        <Heading
+          as="h1"
+          fontSize={{ base: "2xl", md: "3xl" }}
+          fontFamily="poppins"
+          textAlign="center"
+          my={6}
+          color="gray.800"
+        >
+          Multi-Currency Investments Global Market Footprint
+        </Heading>
+        <Text color="gray.600">
+          Our presence spans across continents, providing you with truly global
+          investment opportunities and local expertise.
+        </Text>
+      </Box>
+
+      <Flex direction={{ base: "column", md: "row" }} align="center" gap={6}>
+        {/* Regions list */}
+        <VStack align="center" justify="center" gap={4} flex="1" width="100%">
+          <Text fontWeight="bold" fontSize="lg">
+            Our Regions
+          </Text>
+
+          {regions.map((region, idx) => (
+            <HStack key={idx} align="center" justify="center" width="100%">
+              <Text fontSize="md">{region.name}</Text>
+              <Circle size="12px" bg={region.color} />
+            </HStack>
+          ))}
+        </VStack>
+
+        {/* Map + Details */}
+        <Box
+          flex="2"
+          borderRadius="lg"
+          overflow="hidden"
+          boxShadow="sm"
+          p={4}
+          border="1px solid"
+          borderColor="gray.200"
+        >
+          <Image
+            src="/images/world-map.png"
+            alt="World Map"
+            borderRadius="md"
+            mb={4}
+            objectFit="cover"
+            width="100%"
+            height="200px"
+          />
+          <Text fontWeight="bold" fontSize="md" mb={2}>
+            Southern Africa
+          </Text>
+          <HStack wrap="wrap" gap={3} mb={3}>
+            <Text fontWeight="semibold">South Africa</Text>
+            <Text fontWeight="semibold">Botswana</Text>
+            <Text fontWeight="semibold">Zambia</Text>
+          </HStack>
+          <Text fontSize="sm" color="gray.600">
+            Select a region to see our presence and investment opportunities.
+            Our global network provides you with access to diverse markets and
+            asset classes around the world.
+          </Text>
+        </Box>
+      </Flex>
+    </Box>
+  );
+};
+
+export default globalMarketFootprint;

@@ -1,6 +1,7 @@
 import { Currency } from "@/components/common";
 import Hero from "@/components/common/Hero";
 import {
+  GlobalMarketFootprint,
   InvestingGlobally,
   MultiCurrencyInvestment,
 } from "@/components/global-investing";
@@ -18,6 +19,7 @@ const page = () => {
       <Currency />
       <MultiCurrencyInvestment />
       <InvestingGlobally />
+      <GlobalMarketFootprint />
     </>
   );
 };
