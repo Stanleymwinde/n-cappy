@@ -329,3 +329,30 @@ export const FaqsData = [
     text: "We charge a management fee based on the assets under management. There may also be transaction fees for buying or selling units in the fund.",
   },
 ];
+
+export const InvestGloballyData = [
+  {
+    title: "International Fund Access",
+    description:
+      "Gain access to premium global investment opportunities not available locally.",
+    icon: "FaGlobe",
+  },
+  {
+    title: "Currency Diversification",
+    description:
+      "Protect and grow your wealth by diversifying across multiple strong currencies.",
+    icon: "FaShieldAlt",
+  },
+  {
+    title: "Global Real Estate & Private Equity",
+    description:
+      "Access real estate, private equity, and debt deals across various geographies.",
+    icon: "FaBuilding",
+  },
+  {
+    title: "Regional Micro Insights",
+    description:
+      "Benefit from our deep local expertise combined with global market intelligence.",
+    icon: "FaChartLine",
+  },
+];

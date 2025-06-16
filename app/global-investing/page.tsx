@@ -1,6 +1,9 @@
 import { Currency } from "@/components/common";
 import Hero from "@/components/common/Hero";
-import { MultiCurrencyInvestment } from "@/components/global-investing";
+import {
+  InvestingGlobally,
+  MultiCurrencyInvestment,
+} from "@/components/global-investing";
 
 import React from "react";
 
@@ -14,6 +17,7 @@ const page = () => {
       />
       <Currency />
       <MultiCurrencyInvestment />
+      <InvestingGlobally />
     </>
   );
 };

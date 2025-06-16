@@ -80,20 +80,21 @@ const MultiCurrencyInvestment = () => {
           </Box>
         ))}
       </Box>
-      <Button
-        mt={6}
-        colorScheme="blue"
-        variant="solid"
-        size="lg"
-        width="100%"
-        _hover={{
-          bg: "#0a2234",
-          transform: "scale(1.05)",
-          color: "white",
-        }}
-      >
-        Invst Globally
-      </Button>
+      <Flex justifyContent="flex-end">
+        <Box
+          textAlign="center"
+          as={Button}
+          mt={6}
+          bg="#00caff"
+          _hover={{
+            bg: "#0a2234",
+            transform: "scale(1.05)",
+            color: "white",
+          }}
+        >
+          Invest Globally
+        </Box>
+      </Flex>
     </Box>
   );
 };
