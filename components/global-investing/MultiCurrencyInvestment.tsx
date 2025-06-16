@@ -24,7 +24,7 @@ const MultiCurrencyInvestment = () => {
         </Text>
       </Box>
 
-      <Box display="flex" flexDirection="column" gap={6}>
+      <Box display="flex" flexDirection="column" gap={6} marginX={marginX}>
         {investmentData.map((fund, idx) => (
           <Box key={idx} bg={"#0a2234"} pl={4} borderRadius="lg">
             <Box
@@ -80,6 +80,20 @@ const MultiCurrencyInvestment = () => {
           </Box>
         ))}
       </Box>
+      <Button
+        mt={6}
+        colorScheme="blue"
+        variant="solid"
+        size="lg"
+        width="100%"
+        _hover={{
+          bg: "#0a2234",
+          transform: "scale(1.05)",
+          color: "white",
+        }}
+      >
+        Invst Globally
+      </Button>
     </Box>
   );
 };
