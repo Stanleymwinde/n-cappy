@@ -48,7 +48,7 @@ const globalMarketFootprint = () => {
 
           {regions.map((region, idx) => (
             <HStack key={idx} align="center" justify="center" width="100%">
-              <Text fontSize="md">{region.name}</Text>
+              <Text fontSize="lg">{region.name}</Text>
               <Circle size="12px" bg={region.color} />
             </HStack>
           ))}
