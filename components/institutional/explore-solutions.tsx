@@ -163,18 +163,17 @@ const ExploreSolutions = () => {
             </Box>{" "}
             <Box
               flex="1"
-              bg={"gray.300"}
               alignContent={"center"}
               justifyContent={"center"}
               display={"flex"}
               borderRadius={"md"}
             >
               <Image
-                src="/images/Pius.png"
+                src="/images/Pius-new.png"
                 alt="Asset Management"
-                width="50%"
-                height="auto"
-                objectFit="cover"
+                width="auto"
+                height="600px"
+                objectFit="contain"
                 borderRadius="md"
                 overflow={"hidden"}
               />
