@@ -4,6 +4,7 @@ import "./globals.css";
 import { Provider } from "@/components/ui/provider";
 import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
+import NextTopLoader from "nextjs-toploader";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -50,6 +51,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={poppins.className}>
         <Provider>
+          <NextTopLoader />
           <Navigation />
           <main>{children}</main>
           <Footer />

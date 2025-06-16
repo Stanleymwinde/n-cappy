@@ -215,7 +215,47 @@ export const ResourcesTabsData = [
       "https://player.cloudinary.com/embed/?cloud_name=dgamw7ib9&public_id=Nairobi_Chapel_futor5&profile=cld-default",
   },
 ];
-
+export const investmentData = [
+  {
+    title: "Money Market Fund (USD)",
+    subtitle: "Short-term savings",
+    description:
+      "Ideal for short-term goals. Grow your dollars safely with minimal risk and easy access to your money when you need it.",
+    points: [
+      "Low risk",
+      "Easy liquidity",
+      "Stable returns",
+      "1-12 month timeframe",
+    ],
+    cta: "Money Market Fund (USD) Fact Sheet",
+  },
+  {
+    title: "Fixed Income Fund (USD)",
+    subtitle: "Steady growth",
+    description:
+      "Think of it like a monthly income generator. Get regular returns while protecting your principal investment",
+    points: [
+      "Medium risk",
+      "Regular income",
+      "Consistent growth",
+      "1-3 year timeframe",
+    ],
+    cta: "Fixed Income Fund (USD) Fact Sheet",
+  },
+  {
+    title: "Balanced Fund (USD)",
+    subtitle: "Long-term growth",
+    description:
+      "A little bit of everything. For long-term goals with steady returns and potential for higher growth.",
+    points: [
+      "Balanced risk",
+      "Growth potential",
+      "Diversified assets",
+      "3+ year timeframe",
+    ],
+    cta: "Balanced Fund (USD) Fact Sheet",
+  },
+];
 export const teamMembers = [
   {
     image: "/images/gtr-1.jpg",
