@@ -22,42 +22,72 @@ const GlobalThoughtLeadership = () => {
         navigate the complexities of international markets with confidence.
       </Box>
       <Box
-        position="relative"
-        width="40%"
-        height={{ base: "300px", md: "600px" }}
-        borderRadius={"lg"}
-        overflow="hidden"
-        px={{ base: 4, md: 16 }}
-        mx="auto"
+        p={{ base: 4, md: 8 }}
+        textAlign="center"
+        boxShadow={"lg"}
+        borderRadius="md"
+        justifyContent={"center"}
         display="flex"
-        alignItems="center"
-        justifyContent="center"
+        // flexDirection={{ base: "column", md: "row" }}
       >
-        {/* Background image */}
-        <Image
-          src="/images/Charles.png"
-          alt="Global Thought Leadership"
-          objectFit="cover"
-          fill
-        />
-
-        {/* Text overlay bottom-left */}
         <Box
-          position="absolute"
-          bottom="0"
-          left="0"
-          p={4}
-          bg="whiteAlpha.800"
-          borderTopRightRadius="md"
-          boxShadow="lg"
+          position="relative"
+          width="40%"
+          height={{ base: "300px", md: "600px" }}
+          borderRadius={"lg"}
+          overflow="hidden"
+          px={{ base: 4, md: 16 }}
+          mx="auto"
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          p={{ base: 4, md: 8 }}
         >
-          <Text color="black" fontSize="xl" fontWeight="bold">
-            Charles Miano
-          </Text>
-          <Text color="black" fontSize="sm">
-            Portfolio Manager
-          </Text>
+          {/* Background image */}
+          <Image
+            src="/images/Charles.png"
+            alt="Global Thought Leadership"
+            objectFit="cover"
+            fill
+          />
+          {/* Text overlay bottom-left */}
+          <Box
+            position="absolute"
+            bottom="0"
+            left="0"
+            p={4}
+            bg="whiteAlpha.800"
+            borderTopRightRadius="md"
+            boxShadow="lg"
+          >
+            <Text color="black" fontSize="xl" fontWeight="bold">
+              Charles Miano
+            </Text>
+            <Text color="black" fontSize="sm">
+              Portfolio Manager
+            </Text>
+          </Box>{" "}
         </Box>
+        <Text
+          justifyContent={"center"}
+          display="flex"
+          alignItems="center"
+          flexDirection="column"
+          textAlign="center"
+          color="gray.600"
+          mt={6}
+          fontSize={{ base: "md", md: "lg" }}
+          maxWidth={"800px"}
+          fontWeight={"semibold"}
+        >
+          With over 20 years of experience in global financial markets, Charles
+          leads our investment strategy across multiple geographies and asset
+          classes. His deep understanding of both developed and emerging markets
+          provides our clients with valuable insights and opportunities. Charles
+          regularly contributes to international financial publications and
+          speaks at global investment conferences, sharing his perspective on
+          market trends and investment strategies.
+        </Text>
       </Box>
     </Box>
   );
