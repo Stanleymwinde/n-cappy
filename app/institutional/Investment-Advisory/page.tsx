@@ -1,6 +1,9 @@
 import { Currency } from "@/components/common";
 import Hero from "@/components/common/Hero";
-import { WhatWeOffer } from "@/components/Investment-advisory";
+import {
+  WhatWeOffer,
+  WhyPartnerWithUs,
+} from "@/components/Investment-advisory";
 import React from "react";
 
 const page = () => {
@@ -14,6 +17,7 @@ const page = () => {
       />
       <Currency />
       <WhatWeOffer />
+      <WhyPartnerWithUs />
     </>
   );
 };
