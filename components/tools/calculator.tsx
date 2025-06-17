@@ -14,6 +14,7 @@ import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { CalculatorFormValues, CalculatorSchema } from "@/schema/calculator";
+import { marginX } from "@/utils/constants";
 
 const GoalPlanner = () => {
   const {
@@ -58,6 +59,7 @@ const GoalPlanner = () => {
           </Field.Label>
           <Slider.Root
             width="full"
+            colorPalette={"blue"}
             name={field.name}
             value={Array.isArray(field.value) ? field.value : []}
             min={min}
@@ -123,12 +125,12 @@ const GoalPlanner = () => {
         alignItems="center"
       >
         <Box
-          maxW="lg"
-          w="full"
+          marginX={marginX}
           bg="#1e2d3d"
           p={6}
           borderRadius="2xl"
           boxShadow="lg"
+          width={{ base: "90%", md: "90%", lg: "70%" }}
         >
           <form onSubmit={onSubmit}>
             <Box display="flex" flexDirection="column" gap={4}>
@@ -181,7 +183,19 @@ const GoalPlanner = () => {
                 "%"
               )}
 
-              <Box mt={4} fontSize="sm" color="green.300">
+              <Box
+                mt={4}
+                fontSize="sm"
+                color="#00caff"
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+                textAlign="center"
+                boxShadow={"md"}
+                p={4}
+                borderRadius="md"
+                border={"1px solid #00caff"}
+              >
                 <Text fontWeight="bold">
                   Here is your path to {goal.toLowerCase()}:
                 </Text>
@@ -201,10 +215,18 @@ const GoalPlanner = () => {
                   .
                 </Text>
               </Box>
-
-              <Button colorScheme="blue" w="full" type="submit">
-                Start Investing Now
-              </Button>
+            </Box>{" "}
+            <Box
+              display="flex"
+              justifyContent="center"
+              as={Button}
+              flexDirection="column"
+              alignItems="center"
+              textAlign="center"
+              mt={6}
+              bg={"#00caff"}
+            >
+              Start Investing Now
             </Box>
           </form>
         </Box>

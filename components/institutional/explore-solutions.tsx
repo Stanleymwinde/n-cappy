@@ -31,7 +31,7 @@ const ExploreSolutions = () => {
       >
         Explore Solutions
       </Heading>
-      <Box bg="blue.900" color="white" mx={marginX} py={10}>
+      <Box bg="#0a2234" color="white" mx={marginX} py={10}>
         <Grid templateColumns={{ base: "1fr", md: "1fr" }}>
           <Flex
             direction={{ base: "column", md: "row" }}

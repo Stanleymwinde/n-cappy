@@ -74,7 +74,7 @@ export const TestimonialData = [
   {
     name: "Coach Dexter",
     role: "Long Term Investor",
-    image: "/images/gtr-1.jpg",
+    image: "/images/slider-3.png",
     testimonial:
       "The reason why I feel like I have stayed at Nabo Capital this long is because of safety. It's because I feel safe. And I feel at home.",
   },

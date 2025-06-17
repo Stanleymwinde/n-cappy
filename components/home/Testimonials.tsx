@@ -1,6 +1,6 @@
 "use client";
 import { marginX, TestimonialData } from "@/utils/constants";
-import { Box, Flex, Heading, Image, Stack, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 // Import Swiper styles
 import "swiper/css";
@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Keyboard, Pagination, Navigation } from "swiper/modules";
+import Image from "next/image";
 
 const Testimonials = () => {
   return (
@@ -92,15 +93,23 @@ const Testimonials = () => {
               borderRadius="12px" // Added border radius to Flex
               bg="white"
             >
-              <Image
-                src={testimonial.image}
-                alt={testimonial.name}
-                width={300}
-                height={300}
+              <Box
+                position="relative"
+                width={{ base: "100%", md: "100%" }}
+                height="600px"
                 borderRadius="md"
-                objectFit="cover"
-                pl={{ base: 0, md: 4 }} // Adjust padding for smaller screens
-              />
+                overflow="hidden"
+                boxShadow="md"
+                bg="red"
+              >
+                <Image
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  fill
+                  objectFit="cover"
+                />
+              </Box>
+
               <Stack gap={4} textAlign={{ base: "center", md: "left" }}>
                 <Text fontSize="lg" fontStyle="italic" mb={4}>
                   “{testimonial.testimonial}”
