@@ -183,6 +183,99 @@ export const CoreStrategiessData = [
   },
 ];
 
+export const ResourcesData = [
+  {
+    title: "All",
+    subtitle: "Sustainable Capital Growth Across Market Cycles",
+    icon: "LuUser",
+    description: [], // You will generate this tab dynamically using all other tab items.
+  },
+  {
+    title: "Investment Types and Strategies",
+    subtitle: "Tailored investment structures for sustainable returns",
+    icon: "LuFolder",
+    description: [
+      {
+        id: 1,
+        title: "Equity & Hybrid Strategies",
+        text: "We explore a diverse mix of investment vehicles, including equity, debt, and hybrid instruments.",
+        image: "/images/thumbnail.png",
+        pdf: "/pdfs/Investment-Strategies-1.pdf",
+      },
+      {
+        id: 2,
+        title: "Strategic Allocation",
+        text: "Strategic allocation designed to adapt to evolving market conditions and deliver long-term performance.",
+        image: "/images/tools&resources.png",
+        pdf: "/pdfs/Investment-Strategies-2.pdf",
+      },
+    ],
+  },
+  {
+    title: "Private Wealth Management",
+    subtitle: "Comprehensive and personalized wealth strategies",
+    icon: "LuSquareCheck",
+    description: [
+      {
+        id: 1,
+        title: "Generational Wealth Planning",
+        text: "Dedicated wealth planning to preserve and grow generational wealth.",
+        image: "/images/gtr-1.jpg",
+        pdf: "/pdfs/Private-Wealth-1.pdf",
+      },
+      {
+        id: 2,
+        title: "Private Market Access",
+        text: "Access to exclusive private market opportunities for qualified investors.",
+        image: "/images/gtr-3.jpg",
+        pdf: "/pdfs/Private-Wealth-2.pdf",
+      },
+    ],
+  },
+  {
+    title: "Financial Planning and Retirement",
+    subtitle: "Secure your future with strategic planning",
+    icon: "LuSquareCheck",
+    description: [
+      {
+        id: 1,
+        title: "Retirement Solutions",
+        text: "Customized retirement solutions based on individual income needs and timelines.",
+        image: "/images/gtr-2.jpg",
+        pdf: "/pdfs/Financial-Planning-1.pdf",
+      },
+      {
+        id: 2,
+        title: "Goal-Based Planning",
+        text: "Goal-based planning with dynamic risk management.",
+        image: "/images/gtr-1.jpg",
+        pdf: "/pdfs/Financial-Planning-2.pdf",
+      },
+    ],
+  },
+  {
+    title: "Investor Mindset and Education",
+    subtitle: "Build confidence and clarity through knowledge",
+    icon: "LuSquareCheck",
+    description: [
+      {
+        id: 1,
+        title: "Investor Psychology",
+        text: "Insights into market psychology, risk tolerance, and behavioral finance.",
+        image: "/images/gtr-3.jpg",
+        pdf: "/pdfs/Investor-Education-1.pdf",
+      },
+      {
+        id: 2,
+        title: "Educational Guides",
+        text: "Investor guides and resources to navigate various market environments.",
+        image: "/images/tools&resources.png",
+        pdf: "/pdfs/Investor-Education-2.pdf",
+      },
+    ],
+  },
+];
+
 export const ResourcesTabsData = [
   {
     title: "All",
