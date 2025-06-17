@@ -7,6 +7,7 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import React from "react";
 
 const Investing = () => {
@@ -51,15 +52,17 @@ const Investing = () => {
               <Text fontSize="sm" color="gray.600" mb={4}>
                 {card.description}
               </Text>
-              <Button
-                variant="outline"
-                colorScheme="blackAlpha"
-                borderRadius="full"
-                fontWeight="bold"
-                w="100%"
-              >
-                Simulate
-              </Button>
+              <Link href={card.link} passHref>
+                <Button
+                  variant="outline"
+                  colorScheme="blackAlpha"
+                  borderRadius="full"
+                  fontWeight="bold"
+                  w="100%"
+                >
+                  Simulate
+                </Button>
+              </Link>
             </Box>
           </Box>
         ))}

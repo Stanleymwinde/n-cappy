@@ -76,9 +76,8 @@ const SwiperPage = () => {
                 fontWeight="bold"
                 lineHeight="short"
               >
-                Make money <br />
-                while doing what <br />
-                you love
+                Make money while doing
+                <br /> what you love
               </Text>
               <Text fontSize={{ base: "md", md: "xl" }} mt={6}>
                 {image.text}

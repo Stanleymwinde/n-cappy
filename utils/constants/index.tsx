@@ -1,3 +1,4 @@
+import { link } from "fs";
 import { FacebookIcon, InstagramIcon, XIcon, YoutubeIcon } from "../icons";
 import TiktokIcon from "../icons/TikTokIcon";
 
@@ -49,24 +50,28 @@ export const cardData = [
     description:
       "Whether you're building wealth, securing your future or planning for a milestone, intentional saving sets the foundation for financial freedom.",
     image: "/images/lifestylegoal-landing.jpeg",
+    link: "/lifestyle-goal",
   },
   {
     title: "Afford school for my kids",
     description:
       "We’ll help you build a smart savings plan for education—without the stress",
     image: "/images/Education-goal.jpeg",
+    link: "/education",
   },
   {
     title: "Travel the world",
     description:
       "Explore the world without financial worries. Save intentionally for unforgettable memories.",
     image: "/images/travelling-goal.jpeg",
+    link: "/travel",
   },
   {
     title: "Retire Comfortably",
     description:
       "Retire on your terms. Build a financial cushion that lets you enjoy life’s golden years with peace and pride.",
     image: "/images/retiring-goal.jpeg",
+    link: "/retire",
   },
 ];
 
@@ -474,6 +479,65 @@ export const GlobalPartnersData = [
       "Global Investment Research Firms",
       "International Asset Managers",
       "Regional Market Specialists",
+    ],
+  },
+];
+
+export const LifestylePlans = [
+  {
+    title: "Dream Vacations",
+    icon: "LuPlane",
+    description: "Plan beach escapes, adventure travel, and more.",
+    questions: [
+      {
+        id: 1,
+        question: "Where do you want to go?",
+        placeholder: "e.g. Mombasa, Paris, Bali",
+        hint: "Tell us your dream destination.",
+        image: "/images/vacation-1.jpg",
+      },
+      {
+        id: 2,
+        question: "What’s your travel budget?",
+        placeholder: "e.g. $5,000",
+        hint: "This helps us plan accordingly.",
+        image: "/images/vacation-2.jpg",
+      },
+      {
+        id: 3,
+        question: "How often do you travel?",
+        placeholder: "e.g. Twice a year",
+        hint: "This will guide your yearly budget.",
+        image: "/images/vacation-3.jpg",
+      },
+    ],
+  },
+  {
+    title: "Continuing Education",
+    icon: "LuBook",
+    description: "Use savings to go back to school or learn new skills.",
+    questions: [
+      {
+        id: 1,
+        question: "What do you want to study?",
+        placeholder: "e.g. Data Science",
+        hint: "Let us know your field of interest.",
+        image: "/images/education-1.jpg",
+      },
+      {
+        id: 2,
+        question: "Which institution?",
+        placeholder: "e.g. MIT, Udemy",
+        hint: "Helps tailor your savings goals.",
+        image: "/images/education-2.jpg",
+      },
+      {
+        id: 3,
+        question: "Expected tuition cost?",
+        placeholder: "e.g. $10,000",
+        hint: "This helps us prepare your plan.",
+        image: "/images/education-3.jpg",
+      },
     ],
   },
 ];
