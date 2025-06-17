@@ -1,5 +1,6 @@
 import { Currency } from "@/components/common";
 import Hero from "@/components/common/Hero";
+import { WhatWeOffer } from "@/components/Investment-advisory";
 import React from "react";
 
 const page = () => {
@@ -12,6 +13,7 @@ const page = () => {
         subtitle="We Offer Strategic Guidance for Institutional and Corporate Clients"
       />
       <Currency />
+      <WhatWeOffer />
     </>
   );
 };
