@@ -11,6 +11,7 @@ type HeroProps = {
 const Hero = ({ title, subtitle, imageUrl, button }: HeroProps) => {
   return (
     <Box
+      pt={16}
       position="relative"
       height={{ base: "60vh", md: "90vh" }}
       minHeight="400px"
