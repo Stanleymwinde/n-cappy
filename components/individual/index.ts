@@ -4,3 +4,5 @@ export { default as InvestmentSolutions } from "./InvestmentSolutions";
 export { default as ConsultationTeam } from "./ConsultationTeam";
 export { default as Connect } from "./Connect";
 export { default as Faqs } from "./Faq's";
+export { default as MMF } from "./MMF";
+export { default as FIF } from "./FIF";

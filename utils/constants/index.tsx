@@ -122,6 +122,7 @@ export const FinancialGoalsData = [
       "Withdraw funds when you need them",
     ],
     icon: "LuUser",
+    button: "Explore Funds",
   },
   {
     title: "Afford the Life I Want",
@@ -134,6 +135,7 @@ export const FinancialGoalsData = [
       "Withdraw funds when you need them",
     ],
     icon: "LuFolder",
+    button: "Explore Fixed Income Funds",
   },
   {
     title: "Travel the World",
@@ -145,8 +147,8 @@ export const FinancialGoalsData = [
       "Diversified Low-Risk Portfolio",
       "Withdraw funds when you need them",
     ],
-
     icon: "LuSquareCheck",
+    button: "Explore Funds",
   },
   {
     title: "Retire Comfortably",
@@ -159,6 +161,7 @@ export const FinancialGoalsData = [
       "Withdraw funds when you need them",
     ],
     icon: "LuSquareCheck",
+    button: "Explore Fixed Income Funds",
   },
 ];
 
