@@ -88,10 +88,9 @@ const Testimonials = () => {
               alignItems="center"
               gap={6}
               direction={{ base: "column", md: "row" }}
-              px={7}
-              py={10}
+              px={10}
+              py={8}
               borderRadius="12px" // Added border radius to Flex
-              bg="white"
             >
               <Box
                 position="relative"
@@ -100,7 +99,6 @@ const Testimonials = () => {
                 borderRadius="md"
                 overflow="hidden"
                 boxShadow="md"
-                bg="red"
               >
                 <Image
                   src={testimonial.image}

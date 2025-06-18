@@ -1,4 +1,5 @@
-import { Box, Flex, Image } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
+import Image from "next/image";
 import React from "react";
 
 const CallToAction = () => {
@@ -31,24 +32,29 @@ const CallToAction = () => {
         </Box>
         <Flex
           mt={2}
-          justifyContent="center"
-          alignItems="center"
           gap={{ base: 2, md: "4rem" }}
+          align={"center"}
+          justify={"center"}
+          flexDirection={{ base: "column", md: "row" }}
+          flexWrap="wrap"
         >
-          <Image
-            backgroundColor={"black"}
-            src="/images/Logo.svg"
-            alt="Nabo Capital Logo"
-            width={70}
-            height={70}
-          />
+          <Box w={200} h={100} position="relative">
+            <Image
+              src="/images/apple.png"
+              alt="Nabo Capital Logo"
+              fill
+              objectFit={"contain"}
+            />
+          </Box>
 
-          <Image
-            src="/images/Logo.svg"
-            alt="Nabo Capital Logo"
-            width={70}
-            height={70}
-          />
+          <Box w={200} h={100} position="relative">
+            <Image
+              src="/images/google.png"
+              alt="Nabo Capital Logo"
+              fill
+              objectFit={"contain"}
+            />
+          </Box>
         </Flex>
         <Box
           mt={4}

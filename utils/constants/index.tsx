@@ -1,6 +1,10 @@
 import { link } from "fs";
 import { FacebookIcon, InstagramIcon, XIcon, YoutubeIcon } from "../icons";
 import TiktokIcon from "../icons/TikTokIcon";
+import { MdOutlineRealEstateAgent } from "react-icons/md";
+import { FaHandsHelping } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa6";
+import { BsCashCoin } from "react-icons/bs";
 
 export const marginX = { base: "3%", sm: "2%", md: "4%", lg: "6%" };
 
@@ -485,9 +489,10 @@ export const GlobalPartnersData = [
 
 export const LifestylePlans = [
   {
-    title: "Dream Vacations",
-    icon: "LuPlane",
-    description: "Plan beach escapes, adventure travel, and more.",
+    title: "Estate Planning",
+    description:
+      "Ensure your assets are protected and distributed according to your wishes, minimizing taxes and complications for your heirs.",
+    icon: MdOutlineRealEstateAgent,
     questions: [
       {
         id: 1,
@@ -513,9 +518,10 @@ export const LifestylePlans = [
     ],
   },
   {
-    title: "Continuing Education",
-    icon: "LuBook",
-    description: "Use savings to go back to school or learn new skills.",
+    title: "Generational Wealth Transfer",
+    description:
+      "Create a structured approach to passing financial assets, knowledge, and values to future generations.",
+    icon: FaHandsHelping,
     questions: [
       {
         id: 1,
@@ -537,6 +543,93 @@ export const LifestylePlans = [
         placeholder: "e.g. $10,000",
         hint: "This helps us prepare your plan.",
         image: "/images/education-3.jpg",
+      },
+    ],
+  },
+  {
+    title: "Long-Term Care",
+    description:
+      "Prepare for potential health needs without compromising the financial legacy you intend to leave behind.",
+    icon: FaHeart,
+    questions: [
+      {
+        id: 1,
+        question: "What’s your ideal retirement age?",
+        placeholder: "e.g. 60",
+        hint: "This helps us plan your retirement savings.",
+        image: "/images/retirement-1.jpg",
+      },
+      {
+        id: 2,
+        question: "What lifestyle do you envision?",
+        placeholder: "e.g. Travel, hobbies",
+        hint: "Share your retirement dreams.",
+        image: "/images/retirement-2.jpg",
+      },
+      {
+        id: 3,
+        question: "Expected monthly expenses?",
+        placeholder: "e.g. $2,000",
+        hint: "Helps us calculate your retirement needs.",
+        image: "/images/retirement-3.jpg",
+      },
+    ],
+  },
+  {
+    title: "Giving with Intention",
+    description:
+      "Align your charitable contributions with your values and maximize their impact on causes you care about.",
+    icon: FaHandsHelping,
+    questions: [
+      {
+        id: 1,
+        question: "What causes are you passionate about?",
+        placeholder: "e.g. Education, Health",
+        hint: "This helps us align your giving goals.",
+        image: "/images/giving-1.jpg",
+      },
+      {
+        id: 2,
+        question: "How much do you want to give annually?",
+        placeholder: "e.g. $1,000",
+        hint: "This sets your giving budget.",
+        image: "/images/giving-2.jpg",
+      },
+      {
+        id: 3,
+        question: "Do you prefer local or global impact?",
+        placeholder: "e.g. Local",
+        hint: "Helps us find the right charities for you.",
+        image: "/images/giving-3.jpg",
+      },
+    ],
+  },
+  {
+    title: "Retirement Income",
+    description:
+      "Structure predictable and reliable income for your retirement years.",
+    icon: BsCashCoin,
+    questions: [
+      {
+        id: 1,
+        question: "Where do you want to go?",
+        placeholder: "e.g. Mombasa, Paris, Bali",
+        hint: "Tell us your dream destination.",
+        image: "/images/vacation-1.jpg",
+      },
+      {
+        id: 2,
+        question: "What’s your travel budget?",
+        placeholder: "e.g. $5,000",
+        hint: "This helps us plan accordingly.",
+        image: "/images/vacation-2.jpg",
+      },
+      {
+        id: 3,
+        question: "How often do you travel?",
+        placeholder: "e.g. Twice a year",
+        hint: "This will guide your yearly budget.",
+        image: "/images/vacation-3.jpg",
       },
     ],
   },

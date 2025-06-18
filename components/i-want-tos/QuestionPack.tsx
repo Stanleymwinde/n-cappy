@@ -47,8 +47,16 @@ const QuestionPack = () => {
       </VStack>
 
       <Grid templateColumns={{ base: "1fr", md: "repeat(5, 1fr)" }} gap={6}>
-        {blocks.map((block, idx) => (
-          <GridItem key={idx}>
+        {LifestylePlans.map((block, idx) => (
+          <GridItem
+            key={idx}
+            onClick={() => handleCardClick(idx)}
+            _hover={{
+              cursor: "pointer",
+              transform: "scale(1.02)",
+              boxShadow: "xl",
+            }}
+          >
             <Box
               p={4}
               border="1px"
@@ -81,30 +89,6 @@ const QuestionPack = () => {
         ))}
       </Grid>
       <VStack gap={6} p={6}>
-        <Text fontSize="3xl" fontWeight="bold">
-          Invest in the Life You Envision
-        </Text>
-        <Text fontSize="md">
-          Plan every part of your lifestyle with intention. Explore your options
-          below.
-        </Text>
-
-        <HStack wrap="wrap" gap={4} justify="center">
-          {LifestylePlans.map((plan, idx) => (
-            <Card.Root
-              key={idx}
-              cursor="pointer"
-              p={4}
-              border="1px solid"
-              borderColor="gray.300"
-              onClick={() => handleCardClick(idx)}
-            >
-              <Text fontWeight="bold">{plan.title}</Text>
-              <Text fontSize="sm">{plan.description}</Text>
-            </Card.Root>
-          ))}
-        </HStack>
-
         {activePlan && activeQuestion && (
           <Box
             width="100%"

@@ -95,7 +95,7 @@ const WhyforYou = () => {
         </Flex>
         <Flex justifyContent="center" alignItems="center" overflow={"hidden"}>
           <Image
-            src="/images/Pius.png"
+            src="/images/Pius-new.png"
             alt="Commitment Image"
             width={200}
             height={200}
