@@ -39,7 +39,12 @@ const planForJoy = ({
           {subtitle ||
             "This portfolio is for the dreamers, the doers, and the bold believers in more. It's for anyone who wants their money to create moments, not just returns."}
         </Text>
-        <Flex py={6} gap={8}>
+        <Flex
+          py={6}
+          gap={8}
+          display={{ base: "block", md: "flex" }}
+          alignItems="center"
+        >
           <Text
             fontSize={"2xl"}
             color={"#ffffff"}
