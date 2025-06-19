@@ -95,15 +95,12 @@ const WhyforYou = () => {
         </Flex>
         <Flex justifyContent="center" alignItems="center" overflow={"hidden"}>
           <Image
+
             src="/pius-m.png"
+
             alt="Commitment Image"
-            width={200}
-            height={200}
-            style={{
-              maxHeight: "90%",
-              width: "auto",
-              objectFit: "contain",
-            }}
+            width={500}
+            height={500}
           />
         </Flex>
       </Grid>

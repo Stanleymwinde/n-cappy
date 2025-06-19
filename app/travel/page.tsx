@@ -1,4 +1,5 @@
 import Hero from "@/components/common/Hero";
+import { CallToAction } from "@/components/home";
 import { PlanForJoy } from "@/components/i-want-tos";
 import QuestionPack from "@/components/i-want-tos/QuestionPack";
 
@@ -15,6 +16,7 @@ const page = () => {
       />
       <PlanForJoy />
       <QuestionPack />
+      <CallToAction />
     </>
   );
 };

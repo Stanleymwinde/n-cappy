@@ -82,7 +82,7 @@ const FinancialGoals = () => {
                     target="_blank"
                   >
                     <Button bg="#00caff" _hover={{ bg: "#00b5e0" }} mt={4}>
-                      Watch A Video
+                      {goal.button}
                     </Button>
                   </Link>
                 </Flex>
