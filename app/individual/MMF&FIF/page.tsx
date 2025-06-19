@@ -1,7 +1,7 @@
 import { Currency } from "@/components/common";
 import Hero from "@/components/common/Hero";
 import { CallToAction } from "@/components/home";
-import { FIF, MMF } from "@/components/individual";
+import { CompareFunds, FIF, MMF } from "@/components/individual";
 import React from "react";
 
 const page = () => {
@@ -16,6 +16,7 @@ const page = () => {
       <Currency />
       <MMF />
       <FIF />
+      <CompareFunds />
       <CallToAction />
     </>
   );
