@@ -13,7 +13,7 @@ const page = () => {
         title="Tools & Resources"
         subtitle="Everything You Need to make Informed Investment Decisions"
         button="Explore"
-        imageUrl="/images/tools&resources.png"
+        imageUrl="/images/calc.png"
       />
       <Currency />
       <Calculator />

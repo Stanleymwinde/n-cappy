@@ -48,7 +48,7 @@ const WhyforYou = () => {
 
         <Flex justifyContent="center" alignItems="center" overflow={"hidden"}>
           <Image
-            src="/images/Pius.png"
+            src="/images/pius-m.png"
             alt="YouTube Video Thumbnail"
             width={300}
             height={200}
@@ -95,7 +95,9 @@ const WhyforYou = () => {
         </Flex>
         <Flex justifyContent="center" alignItems="center" overflow={"hidden"}>
           <Image
-            src="/images/Pius-new.png"
+
+            src="/pius-m.png"
+
             alt="Commitment Image"
             width={500}
             height={500}

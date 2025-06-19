@@ -34,7 +34,7 @@ const Team = () => {
             <Image
               src={member.image}
               width="100%"
-              height="300px"
+              height="350px"
               objectFit="cover"
               alt="Green double couch with wooden legs"
               borderRadius="md"

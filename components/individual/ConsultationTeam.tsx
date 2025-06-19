@@ -1,21 +1,21 @@
+"use client";
+
 import { marginX, teamMembers } from "@/utils/constants";
-import { InstagramIcon, LinkedInIcon } from "@/utils/icons";
+import { LinkedInIcon } from "@/utils/icons";
 import {
   Box,
   Button,
-  Flex,
   Heading,
-  Icon,
   Image,
   Text,
-  VStack,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import { Card } from "@chakra-ui/react";
 import React from "react";
 
 const ConsultationTeam = () => {
   return (
-    <Box marginX={marginX} py={5} textAlign={"center"}>
+    <Box marginX={marginX} py={5} textAlign="center">
       <Heading
         as="h1"
         fontSize={{ base: "2xl", md: "5xl" }}
@@ -23,18 +23,27 @@ const ConsultationTeam = () => {
         my={6}
         color="gray.800"
       >
-        Ask.Choose.Build your path
+        Ask. Choose. Build your path
       </Heading>
-      <Button bg={"#02b5df"}>Schedule a Consultation</Button>
-      <Flex gap={4} mt={8} justifyContent="center" wrap="wrap">
+
+      <Button bg="#02b5df" color="white">
+        Schedule a Consultation
+      </Button>
+
+      <SimpleGrid
+        columns={{ base: 1, sm: 2, md: 3, lg: 4 }}
+        gap={6}
+        mt={8}
+        justifyItems="center"
+      >
         {teamMembers.map((member, i) => (
-          <Card.Root maxW="16rem" overflow="hidden" key={i}>
+          <Card.Root key={i} maxW="16rem" overflow="hidden">
             <Image
               src={member.image}
               width="100%"
               height="300px"
               objectFit="cover"
-              alt="Green double couch with wooden legs"
+              alt={member.name}
               borderRadius="md"
               boxShadow="md"
             />
@@ -45,13 +54,13 @@ const ConsultationTeam = () => {
                   {member.title}
                 </Text>
                 <Box display="flex" justifyContent="flex-end" mt={2}>
-                  <LinkedInIcon boxSize={7} color={"blue.600"} />
+                  <LinkedInIcon boxSize={7} color="blue.600" />
                 </Box>
               </Card.Description>
             </Card.Body>
           </Card.Root>
         ))}
-      </Flex>
+      </SimpleGrid>
     </Box>
   );
 };

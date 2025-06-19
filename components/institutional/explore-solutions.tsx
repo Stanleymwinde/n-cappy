@@ -3,7 +3,6 @@ import { marginX } from "@/utils/constants";
 import {
   Box,
   Button,
-  Collapsible,
   Flex,
   Grid,
   Heading,
@@ -13,12 +12,12 @@ import {
   Portal,
   Text,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa6";
-import { useState } from "react";
 
 const ExploreSolutions = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
       <Heading
@@ -32,6 +31,7 @@ const ExploreSolutions = () => {
         Explore Solutions
       </Heading>
       <Box bg="#0a2234" color="white" mx={marginX} py={10}>
+        {/* ASSET MANAGEMENT SECTION */}
         <Grid templateColumns={{ base: "1fr", md: "1fr" }}>
           <Flex
             direction={{ base: "column", md: "row" }}
@@ -40,21 +40,28 @@ const ExploreSolutions = () => {
             px={{ base: 4, md: 12 }}
             gap={8}
           >
-            <Image
-              src="/images/institution-hero.jpeg"
-              alt="Asset Management"
-              width="50%"
-              height="auto"
-              objectFit="cover"
-              borderRadius="md"
-              overflow={"hidden"}
-            />
+            {/* Image on the left */}
+            <Box
+              flex="1"
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+            >
+              <Image
+                src="/images/Mercy-m.png"
+                alt="Asset Management"
+                width="auto"
+                height="600px"
+                objectFit="contain"
+                borderRadius="md"
+                overflow="hidden"
+              />
+            </Box>
 
             <Box
               flex="1"
               p={4}
               textAlign={{ base: "center", md: "left" }}
-              w={"150%"}
             >
               <Heading
                 as="h2"
@@ -69,7 +76,7 @@ const ExploreSolutions = () => {
                 idle cash into consistent returns. Through strategic cash flow
                 management and investment-grade options, businesses can unlock
                 new revenue streams while maintaining liquidity.
-              </Text>{" "}
+              </Text>
               <Box>
                 <Menu.Root>
                   <Menu.Trigger asChild>
@@ -82,7 +89,6 @@ const ExploreSolutions = () => {
                       py={4}
                       rounded="full"
                       fontWeight="bold"
-                      display={"flex-end"}
                     >
                       I want to <FaChevronDown />
                     </Button>
@@ -103,6 +109,8 @@ const ExploreSolutions = () => {
             </Box>
           </Flex>
         </Grid>
+
+        {/* INVESTMENT ADVISORY SECTION */}
         <Grid templateColumns={{ base: "1fr", md: "1fr" }} py={10}>
           <Flex
             direction={{ base: "column", md: "row" }}
@@ -142,7 +150,6 @@ const ExploreSolutions = () => {
                       py={4}
                       rounded="full"
                       fontWeight="bold"
-                      display={"flex-end"}
                     >
                       I want to <FaChevronDown />
                     </Button>
@@ -151,7 +158,7 @@ const ExploreSolutions = () => {
                     <Menu.Positioner>
                       <Menu.Content bg={"gray.300"} p={2} rounded="md">
                         <Link href="/institutional/Investment-Advisory">
-                          <Menu.Item value="asset-mgt">
+                          <Menu.Item value="investment-advisory">
                             Align Capital to Strategy
                           </Menu.Item>
                         </Link>
@@ -160,22 +167,23 @@ const ExploreSolutions = () => {
                   </Portal>
                 </Menu.Root>
               </Box>
-            </Box>{" "}
+            </Box>
+
             <Box
               flex="1"
-              alignContent={"center"}
-              justifyContent={"center"}
-              display={"flex"}
-              borderRadius={"md"}
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              borderRadius="md"
             >
               <Image
-                src="/images/Pius-new.png"
-                alt="Asset Management"
+                src="/Pius-m.png"
+                alt="Investment Advisory"
                 width="auto"
                 height="600px"
                 objectFit="contain"
                 borderRadius="md"
-                overflow={"hidden"}
+                overflow="hidden"
               />
             </Box>
           </Flex>

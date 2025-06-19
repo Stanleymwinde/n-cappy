@@ -83,30 +83,23 @@ export const TestimonialData = [
   {
     name: "Coach Dexter",
     role: "Long Term Investor",
-    image: "/images/slider-3.png",
+    image: "/images/dexter.jpg",
     testimonial:
       "The reason why I feel like I have stayed at Nabo Capital this long is because of safety. It's because I feel safe. And I feel at home.",
   },
   {
-    name: "Investor Jane",
-    role: "Short Term Investor",
-    image: "/images/gtr-2.jpg",
+    name: "Coach Eileen",
+    role: "Long-term Investor",
+    image: "/images/c-eileen.png",
     testimonial:
-      "Nabo Capital has transformed my investment journey. Their expertise and personalized approach have made all the difference.",
+      "The thing I love about Nabo is that you are not just interested in my money you are interested in my mind, and my purpose.",
   },
   {
-    name: "Investor John",
-    role: "Institutional Investor",
-    image: "/images/gtr-3.jpg",
+    name: "Joyce Njoro",
+    role: "Long-term Investor",
+    image: "/images/njoro.png",
     testimonial:
-      "As an institution, we trust Nabo Capital for their strategic insights and commitment to our financial goals.",
-  },
-  {
-    name: "Investor Sarah",
-    role: "Wealth Builder",
-    image: "/images/gtr-1.jpg",
-    testimonial:
-      "Nabo Capital has been instrumental in helping me build and preserve my wealth. Their team is exceptional.",
+      "What I love about Nabo is that they actually take their time to explain to you where your money is going.",
   },
 ];
 
@@ -211,14 +204,14 @@ export const ResourcesData = [
         id: 1,
         title: "Equity & Hybrid Strategies",
         text: "We explore a diverse mix of investment vehicles, including equity, debt, and hybrid instruments.",
-        image: "/images/thumbnail.png",
+        image: "/images/vid1.webp",
         pdf: "/pdfs/Investment-Strategies-1.pdf",
       },
       {
         id: 2,
         title: "Strategic Allocation",
         text: "Strategic allocation designed to adapt to evolving market conditions and deliver long-term performance.",
-        image: "/images/tools&resources.png",
+        image: "/images/Strats.webp",
         pdf: "/pdfs/Investment-Strategies-2.pdf",
       },
     ],
@@ -232,14 +225,14 @@ export const ResourcesData = [
         id: 1,
         title: "Generational Wealth Planning",
         text: "Dedicated wealth planning to preserve and grow generational wealth.",
-        image: "/images/gtr-1.jpg",
+        image: "/images/vid2.webp",
         pdf: "/pdfs/Private-Wealth-1.pdf",
       },
       {
         id: 2,
         title: "Private Market Access",
         text: "Access to exclusive private market opportunities for qualified investors.",
-        image: "/images/gtr-3.jpg",
+        image: "/images/Pius-vd.webp",
         pdf: "/pdfs/Private-Wealth-2.pdf",
       },
     ],
@@ -253,14 +246,14 @@ export const ResourcesData = [
         id: 1,
         title: "Retirement Solutions",
         text: "Customized retirement solutions based on individual income needs and timelines.",
-        image: "/images/gtr-2.jpg",
+        image: "/images/vid4.webp",
         pdf: "/pdfs/Financial-Planning-1.pdf",
       },
       {
         id: 2,
         title: "Goal-Based Planning",
         text: "Goal-based planning with dynamic risk management.",
-        image: "/images/gtr-1.jpg",
+        image: "/images/Goal-based.webp",
         pdf: "/pdfs/Financial-Planning-2.pdf",
       },
     ],
@@ -274,14 +267,14 @@ export const ResourcesData = [
         id: 1,
         title: "Investor Psychology",
         text: "Insights into market psychology, risk tolerance, and behavioral finance.",
-        image: "/images/gtr-3.jpg",
+        image: "/images/i-p.webp",
         pdf: "/pdfs/Investor-Education-1.pdf",
       },
       {
         id: 2,
         title: "Educational Guides",
         text: "Investor guides and resources to navigate various market environments.",
-        image: "/images/tools&resources.png",
+        image: "/images/edu.webp",
         pdf: "/pdfs/Investor-Education-2.pdf",
       },
     ],
@@ -363,40 +356,60 @@ export const investmentData = [
 ];
 export const teamMembers = [
   {
-    image: "/images/gtr-1.jpg",
-    name: "John Doe",
+    image: "/images/Moses1.png",
+    name: "Moses Njuguna",
     title: "Chief Investment Officer",
   },
   {
-    image: "/images/gtr-2.jpg",
-    name: "Jane Smith",
+    image: "/images/Zach1.png",
+    name: "Zachary Maina",
     title: "Senior Portfolio Manager",
   },
   {
-    image: "/images/gtr-3.jpg",
-    name: "Alice Johnson",
+    image: "/Wycliffe.png",
+    name: "Wycliffe Simiyu",
     title: "Financial Analyst",
   },
   {
-    image: "/images/gtr-1.jpg",
-    name: "Bob Brown",
+    image: "/Alex.png",
+    name: "Alex Muchoki",
+    title: "Client Relations Manager",
+  },
+  {
+    image: "/images/joyce-m.png",
+    name: "Joyce Gathitu",
+    title: "Client Relations Manager",
+  },
+   {
+    image: "/images/Hillary.png",
+    name: "Hillary Hagai",
+    title: "Client Relations Manager",
+  },
+   {
+    image: "/images/antony-n.jpg",
+    name: "Antony Njagi",
+    title: "Client Relations Manager",
+  },
+   {
+    image: "/images/Brian.png",
+    name: "Brian Kipkemboi",
     title: "Client Relations Manager",
   },
 ];
 
 export const institutionalMembers = [
   {
-    image: "/images/gtr-1.jpg",
-    name: "John Doe",
+    image: "/images/Mercy-m.png",
+    name: "Mercy Mwongela",
     title: "Chief Investment Officer",
   },
   {
-    image: "/images/gtr-2.jpg",
+    image: "/images/Fredrick-o.jpg",
     name: "Jane Smith",
     title: "Senior Portfolio Manager",
   },
   {
-    image: "/images/gtr-3.jpg",
+    image: "/images/tedy.jpg",
     name: "Alice Johnson",
     title: "Financial Analyst",
   },

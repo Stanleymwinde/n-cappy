@@ -94,17 +94,24 @@ const Testimonials = () => {
             >
               <Box
                 position="relative"
-                width={{ base: "100%", md: "100%" }}
-                height="600px"
+                width={{ base: "100%", md: "700px" }}
+                height={{ base: "700px", md: "600px" }}
+                aspectRatio={3 / 4} 
                 borderRadius="md"
                 overflow="hidden"
+
                 boxShadow="md"
+
               >
                 <Image
                   src={testimonial.image}
                   alt={testimonial.name}
                   fill
-                  objectFit="cover"
+                  style={{
+    objectFit: "initial",
+    objectPosition: "top", // 👈 Keeps the top of the image visible
+  }}
+                 
                 />
               </Box>
 

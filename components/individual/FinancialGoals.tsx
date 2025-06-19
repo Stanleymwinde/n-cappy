@@ -92,7 +92,7 @@ const FinancialGoals = () => {
                   overflow={"hidden"}
                 >
                   <Image
-                    src="/images/Pius.png"
+                    src="/pius-m.png"
                     alt="Commitment Image"
                     width={200}
                     height={200}
