@@ -116,6 +116,7 @@ export const FinancialGoalsData = [
     ],
     icon: "LuUser",
     button: "Explore Funds",
+    image:"/images/carol.png"
   },
   {
     title: "Afford the Life I Want",
@@ -193,7 +194,7 @@ export const ResourcesData = [
     title: "All",
     subtitle: "Sustainable Capital Growth Across Market Cycles",
     icon: "LuUser",
-    description: [], // You will generate this tab dynamically using all other tab items.
+    description: [],
   },
   {
     title: "Investment Types and Strategies",
@@ -502,6 +503,40 @@ export const GlobalPartnersData = [
     ],
   },
 ];
+
+export const boardMembers = [
+  {
+    name: "Robert Bunyi",
+    title: "Chairman & Non-Executive Director",
+    image: "/Robert-Bunyi.jpg",
+    linkedin: "#",
+  },
+  {
+    name: "Pius Muchiri",
+    title: "Managing Director & CEO",
+    image: "/Pius-Muchiri.jpg",
+    linkedin: "#",
+  },
+  {
+    name: "Thapelo Muribame",
+    title: "Non-Executive Director",
+    image: "/Thapelo-Tebogo.jpg",
+    linkedin: "#",
+  },
+  {
+    name: "Edwin Macharia",
+    title: "Non-Executive Director",
+    image: "/Edwin-Macharia.jpg",
+    linkedin: "#",
+  },
+  {
+    name: "Mercy Njoroge",
+    title: "Chief Customer Experience Officer",
+    image: "/mercy.jpg",
+    linkedin: "#",
+  },
+];
+
 
 export const LifestylePlans = [
   {

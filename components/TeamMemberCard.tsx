@@ -4,7 +4,6 @@ import {
   Text,
   VStack,
   IconButton,
-  HStack,
   Link as ChakraLink,
 } from "@chakra-ui/react";
 import { FaLinkedin } from "react-icons/fa";
@@ -43,6 +42,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
         w="100%"
         h="260px"
       />
+
       <Box p={4} w="100%" position="relative" pb="10">
         <Text fontWeight="bold" fontSize="lg" mb={1}>
           {name}
@@ -50,23 +50,28 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
         <Text fontSize="sm" color="gray.600" mb={2}>
           {title}
         </Text>
+
         {linkedin && (
-          <Box position="absolute" bottom="0" right="0" p={2} >
-          <ChakraLink href={linkedin} >
-            <IconButton
-              size="sm"
-              variant="ghost"
-              colorScheme="blue"
-            ><FaLinkedin />
-              </IconButton>
-          </ChakraLink>
-         
-        </Box>
-        )}
+  <Box position="absolute" bottom="0" right="0" p={2}>
+    <ChakraLink href={linkedin} target="_blank" rel="noopener noreferrer">
+  <IconButton
+    aria-label={`LinkedIn of ${name}`}
+    size="sm"
+    variant="ghost"
+    colorScheme="blue"
+  >
+    <FaLinkedin />
+  </IconButton>
+</ChakraLink>
+
+  </Box>
+)}
       </Box>
     </VStack>
   );
 };
 
 export default TeamMemberCard;
+
+
 
