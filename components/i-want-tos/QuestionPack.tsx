@@ -150,36 +150,3 @@ const QuestionPack = () => {
 };
 
 export default QuestionPack;
-
-const blocks = [
-  {
-    title: "Estate Planning",
-    description:
-      "Ensure your assets are protected and distributed according to your wishes, minimizing taxes and complications for your heirs.",
-    icon: MdOutlineRealEstateAgent,
-  },
-  {
-    title: "Generational Wealth Transfer",
-    description:
-      "Create a structured approach to passing financial assets, knowledge, and values to future generations.",
-    icon: FaHandsHelping,
-  },
-  {
-    title: "Long-Term Care",
-    description:
-      "Prepare for potential health needs without compromising the financial legacy you intend to leave behind.",
-    icon: FaHeart,
-  },
-  {
-    title: "Giving with Intention",
-    description:
-      "Align your charitable contributions with your values and maximize their impact on causes you care about.",
-    icon: FaHandsHelping,
-  },
-  {
-    title: "Retirement Income",
-    description:
-      "Structure predictable and reliable income for your retirement years.",
-    icon: BsCashCoin,
-  },
-];

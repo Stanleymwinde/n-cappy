@@ -380,17 +380,17 @@ export const teamMembers = [
     name: "Joyce Gathitu",
     title: "Client Relations Manager",
   },
-   {
+  {
     image: "/images/Hillary.png",
     name: "Hillary Hagai",
     title: "Client Relations Manager",
   },
-   {
+  {
     image: "/images/antony-n.jpg",
     name: "Antony Njagi",
     title: "Client Relations Manager",
   },
-   {
+  {
     image: "/images/Brian.png",
     name: "Brian Kipkemboi",
     title: "Client Relations Manager",
@@ -647,6 +647,50 @@ export const LifestylePlans = [
         hint: "This will guide your yearly budget.",
         image: "/images/vacation-3.jpg",
       },
+    ],
+  },
+];
+
+export const HelpMeChoosePlans = [
+  {
+    question: "What is your primary financial goal?",
+    options: [
+      { label: "less than 6 months", value: "Less than 6 months" },
+      { label: "6 months to 1 year", value: "6 months to 1 year" },
+      { label: "1 to 3 years", value: "1 to 3 years" },
+      { label: "more than 3 yeard", value: "3 to 5 years" },
+    ],
+  },
+  {
+    question: "What is your risk tolerance?",
+    options: [
+      { label: "Low Risk", value: "Low Risk" },
+      { label: "Medium Risk", value: "Medium Risk" },
+      { label: "High Risk", value: "High Risk" },
+    ],
+  },
+  {
+    question: "What is your investment horizon?",
+    options: [
+      { label: "Short-term (less than 1 year)", value: "Short-term" },
+      { label: "Medium-term (1-3 years)", value: "Medium-term" },
+      { label: "Long-term (3+ years)", value: "Long-term" },
+    ],
+  },
+  {
+    question: "What is your preferred investment type?",
+    options: [
+      { label: "Equity", value: "Equity" },
+      { label: "Fixed Income", value: "Fixed Income" },
+      { label: "Balanced", value: "Balanced" },
+    ],
+  },
+  {
+    question: "What is your expected return on investment?",
+    options: [
+      { label: "Low (3-5%)", value: "Low" },
+      { label: "Medium (5-10%)", value: "Medium" },
+      { label: "High (10%+)", value: "High" },
     ],
   },
 ];

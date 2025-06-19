@@ -182,51 +182,54 @@ const GoalPlanner = () => {
                 1,
                 "%"
               )}
-
-              <Box
-                mt={4}
-                fontSize="sm"
-                color="#00caff"
-                display="flex"
-                flexDirection="column"
-                alignItems="center"
-                textAlign="center"
-                boxShadow={"md"}
-                p={4}
-                borderRadius="md"
-                border={"1px solid #00caff"}
-              >
-                <Text fontWeight="bold">
-                  Here is your path to {goal.toLowerCase()}:
-                </Text>
-                <Text mt={2}>
-                  If you save KES {monthlySavings.toLocaleString()} each month
-                  for {years} years,
-                  <br />
-                  you will have KES{" "}
-                  {futureValue.toLocaleString(undefined, {
-                    maximumFractionDigits: 0,
-                  })}{" "}
-                  by the end –<br />
-                  including interest of KES{" "}
-                  {interest.toLocaleString(undefined, {
-                    maximumFractionDigits: 0,
-                  })}
-                  .
-                </Text>
-              </Box>
             </Box>{" "}
             <Box
-              display="flex"
-              justifyContent="center"
-              as={Button}
+              mt={4}
+              fontSize="sm"
+              color="#00caff"
               flexDirection="column"
               alignItems="center"
               textAlign="center"
-              mt={6}
-              bg={"#00caff"}
+              boxShadow={"md"}
+              p={4}
+              borderRadius="md"
+              border={"1px solid #00caff"}
             >
-              Start Investing Now
+              <Text fontWeight="bold">
+                Here is your path to {goal.toLowerCase()}:
+              </Text>
+              <Text mt={2}>
+                If you save KES {monthlySavings.toLocaleString()} each month for{" "}
+                {years} years,
+                <br />
+                you will have KES{" "}
+                {futureValue.toLocaleString(undefined, {
+                  maximumFractionDigits: 0,
+                })}{" "}
+                by the end –<br />
+                including interest of KES{" "}
+                {interest.toLocaleString(undefined, {
+                  maximumFractionDigits: 0,
+                })}
+                .
+              </Text>
+            </Box>
+            <Box
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              textAlign="center"
+              mt={6}
+            >
+              <Button
+                type="submit"
+                bg={"#00caff"}
+                _hover={{ transform: "scale(1.07)", bg: "#00b5e0" }}
+                size="lg"
+                fontWeight="bold"
+              >
+                Start Investing Now
+              </Button>
             </Box>
           </form>
         </Box>
