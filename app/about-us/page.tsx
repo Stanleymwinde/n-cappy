@@ -11,10 +11,15 @@ import {
   Circle,
   useBreakpointValue,
   Flex,
+  Icon,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import TeamMemberCard from "@/components/TeamMemberCard";
+import { MdLocationOn, MdPhone, MdEmail } from "react-icons/md";
 
+
+
+import{ CallToAction }  from "@/components/home";
 // Heritage Data
 const heritageData = [
   {
@@ -56,7 +61,6 @@ const OurHeritageSection = () => {
 
   return (
     <Box fontFamily="'Poppins', sans-serif" py={6} bg="white" w="100%">
-      {/* Section Title */}
       <Box px={{ base: 4, md: 12 }} mb={4}>
         <Heading
           fontSize={{ base: "28px", md: "36px" }}
@@ -67,25 +71,21 @@ const OurHeritageSection = () => {
         </Heading>
       </Box>
 
-      {/* Heritage Container */}
       <Box bg="#FFFFFF" color="white" py={{ base: 12, md: 16 }}>
         <Container maxW="800px">
           <Box
-  bg="#1e2d3d"
-  p={6}
-  borderRadius="2xl"
-  boxShadow="lg"
-  width="190%"  
-  transform="scaleX(1.1)" 
-  marginX="auto"
-  position="relative"
-  left="-45%"
-  top="-30px" 
-   minHeight="500px"
-    
->
-
-            {/* Subheading */}
+            bg="#1e2d3d"
+            p={6}
+            borderRadius="2xl"
+            boxShadow="lg"
+            width="190%"
+            transform="scaleX(1.1)"
+            marginX="auto"
+            position="relative"
+            left="-45%"
+            top="-30px"
+            minHeight="500px"
+          >
             <Text
               fontWeight="semibold"
               fontSize="20px"
@@ -96,7 +96,6 @@ const OurHeritageSection = () => {
               Our Heritage
             </Text>
 
-            {/* Timeline */}
             <Box position="relative" mb={10}>
               <HStack
                 justify="space-between"
@@ -135,27 +134,28 @@ const OurHeritageSection = () => {
               />
             </Box>
 
-            {/* Active Year Info */}
-            <Box textAlign="center">
-              <Text
-                fontSize="18px"
-                color="#00C8FF"
-                fontWeight="bold"
-                mb={3}
-                textTransform="uppercase"
-              >
-                {activeYear.title}
-              </Text>
-              <Text
-                fontSize="16px"
-                color="whiteAlpha.900"
-                lineHeight="1.6"
-                maxW="640px"
-                mx="auto"
-              >
-                {activeYear.description}
-              </Text>
-            </Box>
+            <Box display="flex" flexDirection="column" justifyContent="flex-start" px={{ base: 2, md: 6 }}>
+  <Text
+    fontSize={{ base: "18px", md: "20px" }}
+    color="#00C8FF"
+    fontWeight="bold"
+    mb={3}
+    textTransform="uppercase"
+  >
+    {activeYear.title}
+  </Text>
+  <Text
+    fontSize={{ base: "15px", md: "16px" }}
+    color="whiteAlpha.900"
+    lineHeight="1.8"
+    whiteSpace="normal"
+    overflow="visible"
+    textOverflow="unset"
+  >
+    {activeYear.description}
+  </Text>
+</Box>
+
           </Box>
         </Container>
       </Box>
@@ -210,7 +210,6 @@ const CTAFooter = () => {
   );
 };
 
-
 const About: React.FC = () => {
   return (
     <>
@@ -230,7 +229,7 @@ const About: React.FC = () => {
             objectFit: "cover",
           }}
         >
-          <source src="/videos/hero.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/demvcea4r/video/upload/v1750574837/About_Us_1_1_xualz9.mp4" type="video/mp4" />
         </video>
 
         <VStack
@@ -262,83 +261,113 @@ const About: React.FC = () => {
 
       {/* Rates Ticker */}
       <Box py={1}>
-        <Flex border={"1px solid"} borderRadius="md" p={4} bg="gray.50">
-          <Text
-            fontSize="md"
-            fontStyle={"italic"}
-            width="100%"
-            textAlign="center"
-            whiteSpace="pre-line"
-          >
-            📈 🔔 Rates Update: Fixed Deposit – Up to 10.2% | Balanced Fund – 8.9% | Aggressive Growth – 12.1% | Let your money work harder.
-          </Text>
-        </Flex>
-      </Box>
+  <Flex border={"1px solid"} borderRadius="md" p={4} bg="gray.50">
+    <Text
+      fontSize="md"
+      fontWeight="bold"  // Makes the entire sentence bold
+      width="100%"
+      textAlign="center"
+      whiteSpace="pre-line"
+    >
+      📈 🔔 Rates Update: Fixed Deposit – Up to 10.2% | Balanced Fund – 8.9% | Aggressive Growth – 12.1% | Let your money work harder.
+    </Text>
+  </Flex>
+</Box>
+
 
       {/* Heritage Section */}
       <OurHeritageSection />
 
       {/* Team Section */}
       <Box bg="gray.50" pt={10} pb={16}>
-        <Container maxW="6xl" textAlign="center">
-          <Heading fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }} fontWeight="extrabold" mb={4}>
-            Real People. Big Vision. Deep Experiences
-          </Heading>
-          <Text fontSize={{ base: "xl", md: "2xl" }} color="#00caff" mb={12} fontWeight="bold" lineHeight="tall">
-            Board & Management
-          </Text>
+  <Container maxW="8xl" textAlign="center">
+    <Heading fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }} fontWeight="extrabold" mb={4}>
+      Real People. Big Vision. Deep Experiences
+    </Heading>
+    <Text fontSize={{ base: "xl", md: "2xl" }} color="#00caff" mb={12} fontWeight="bold" lineHeight="tall">
+      Board & Management
+    </Text>
 
-          {/* Board */}
-          <Box mb={16}>
-            <Heading fontSize="2xl" mb={8}>
-              Our Leadership (Board)
-            </Heading>
-            <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 5 }} gap={8}>
-              <TeamMemberCard name="Robert Bunyi" title="Chairman & Non-Executive Director" image="/Robert-Bunyi.jpg" linkedin="#" />
-              <TeamMemberCard name="Pius Muchiri" title="Managing Director & CEO" image="/Pius-Muchiri.jpg" linkedin="#" />
-              <TeamMemberCard name="Thapelo Muribame" title="Non-Executive Director" image="/Thapelo-Tebogo.jpg" linkedin="#" />
-              <TeamMemberCard name="Edwin Macharia" title="Non-Executive Director" image="/Edwin-Macharia.jpg" linkedin="#" />
-              <TeamMemberCard name="Mercy Njoroge" title="Chief Customer Experience Officer" image="/mercy.jpg" linkedin="#" />
-            </SimpleGrid>
-          </Box>
+    {/* Board */}
+    <Box mb={16}>
+      <Heading fontSize="2xl" mb={8}>
+        Our Leadership (Board)
+      </Heading>
+      <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 4 }} gap={10}>
+        <TeamMemberCard name="Robert Bunyi" title="Chairman & Non-Executive Director" image="/Robert-Bunyi.jpg" linkedin="#" />
+        <TeamMemberCard name="Pius Muchiri" title="Managing Director & CEO" image="/Pius-Muchiri.jpg" linkedin="#" />
+        <TeamMemberCard name="Thapelo Muribame" title="Non-Executive Director" image="/Thapelo-Tebogo.jpg" linkedin="#" />
+        <TeamMemberCard name="Edwin Macharia" title="Non-Executive Director" image="/Edwin-Macharia.jpg" linkedin="#" />
+        <TeamMemberCard name="Mercy Njoroge" title="Chief Customer Experience Officer" image="/mercy.jpg" linkedin="#" />
+      </SimpleGrid>
+    </Box>
 
-          {/* Our Team */}
-          <Box mb={16}>
-            <Heading fontSize="2xl" mb={8}>
-              Our Team
-            </Heading>
-            <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 5 }} gap={8}>
-              <TeamMemberCard name="David Awuah" title="Non-Executive Director" image="/David-BOD.jpg" linkedin="#" />
-              <TeamMemberCard name="Ally Angula" title="Non-Executive Director" image="/Ally-Angula.jpg" linkedin="#" />
-              <TeamMemberCard name="Fred Murimi" title="Alternate Director Centum PLC" image="/Fred-Murimi.jpg" linkedin="#" />
-            </SimpleGrid>
-          </Box>
+    {/* Management */}
+    <Box>
+      <Heading fontSize="2xl" mb={8}>
+        Our Leadership (Management)
+      </Heading>
+      <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 4 }} gap={10}>
+        <TeamMemberCard name="Pius Muchiri" title="Managing Director & CEO" image="/Pius-Muchiri.jpg" linkedin="#" />
+        <TeamMemberCard name="Mercy Njoroge" title="Chief Customer Experience Officer" image="/mercy.jpg" linkedin="#" />
+        <TeamMemberCard name="Damitha Pathmala" title="Chief Investment Officer" image="/Damitha-Pathmalal.jpg" linkedin="#" />
+        <TeamMemberCard name="Abby Mungai" title="General Wealth Manager" image="/abby-Mungai.jpg" linkedin="#" />
+        <TeamMemberCard name="Kezzy Omoni" title="Digital Creative Director" image="/abby-Mungai.jpg" linkedin="#" />
+        <TeamMemberCard name="Lilian Mungai" title="Finance & Operations Manager" image="/abby-Mungai.jpg" linkedin="#" />
+        <TeamMemberCard name="Irene Okoth" title="HR Officer" image="/abby-Mungai.jpg" linkedin="#" />
+      </SimpleGrid>
+    </Box>
+  </Container>
+</Box>
 
-          {/* Management */}
-          <Box>
-            <Heading fontSize="2xl" mb={8}>
-              Our Leadership (Management)
-            </Heading>
-            <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 5 }} gap={8}>
-              <TeamMemberCard name="Pius Muchiri" title="Managing Director & CEO" image="/Pius-Muchiri.jpg" linkedin="#" />
-              <TeamMemberCard name="Mercy Njoroge" title="Chief Customer Experience Officer" image="/mercy.jpg" linkedin="#" />
-              <TeamMemberCard name="Damitha Pathmala" title="Chief Investment Officer" image="/Damitha-Pathmalal.jpg" linkedin="#" />
-              <TeamMemberCard name="Abby Mungai" title="General Manager, Wealth Management" image="/abby-Mungai.jpg" linkedin="#" />
-              <TeamMemberCard name="Abby Mungai" title="General Manager, Wealth Management" image="/abby-Mungai.jpg" linkedin="#" />
-              <TeamMemberCard name="Abby Mungai" title="General Manager, Wealth Management" image="/abby-Mungai.jpg" linkedin="#" />
-              <TeamMemberCard name="Abby Mungai" title="General Manager, Wealth Management" image="/abby-Mungai.jpg" linkedin="#" />
-            </SimpleGrid>
-          </Box>
-        </Container>
-      </Box>
+
+          
 
       {/* CTA Footer Section */}
       <CTAFooter />
+
+      {/* Contact Info Section (INLINE) */}
+      <Box
+        bg="#00CFFF"
+        borderRadius="lg"
+        p={{ base: 6, md: 12 }}
+        my={10}
+        mx={{ base: 4, md: 16 }}
+      >
+        <Text
+          fontSize={{ base: "2xl", md: "3xl" }}
+          fontWeight="bold"
+          mb={6}
+          color="black"
+        >
+          Contact Information
+        </Text>
+
+        <VStack align="start" gap={6} color="black">
+          <Flex align="center" gap={4}>
+            <Icon as={MdLocationOn} w={6} h={6} />
+            <Text>International House, 5th floor, Nairobi</Text>
+          </Flex>
+
+          <Flex align="center" gap={4}>
+            <Icon as={MdPhone} w={6} h={6} />
+            <Text>0709902700 / 0709902702 / 0709902705</Text>
+          </Flex>
+
+          <Flex align="center" gap={4}>
+            <Icon as={MdEmail} w={6} h={6} />
+            <Text>
+              invest@nabocapital.com or clientservice@nabocapital.com
+            </Text>
+          </Flex>
+        </VStack>
+      </Box>
     </>
   );
 };
 
 export default About;
+
 
 
 

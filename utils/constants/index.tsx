@@ -44,6 +44,7 @@ export const socials = [
 export const navItems = [
   { label: "Individual", href: "/individual" },
   { label: "Institutional", href: "/institutional" },
+   { label: "Advisory", href: "/Advisory" },
   { label: "About Us", href: "/about-us" },
   { label: "Tools & Resources", href: "/tools_and_resources" },
 ];
@@ -83,21 +84,21 @@ export const TestimonialData = [
   {
     name: "Coach Dexter",
     role: "Long Term Investor",
-    image: "/images/dexter.jpg",
+    image: "/images/dt.png",
     testimonial:
       "The reason why I feel like I have stayed at Nabo Capital this long is because of safety. It's because I feel safe. And I feel at home.",
   },
   {
     name: "Coach Eileen",
     role: "Long-term Investor",
-    image: "/images/c-eileen.png",
+    image: "/images/ce.png",
     testimonial:
       "The thing I love about Nabo is that you are not just interested in my money you are interested in my mind, and my purpose.",
   },
   {
     name: "Joyce Njoro",
     role: "Long-term Investor",
-    image: "/images/njoro.png",
+    image: "/images/jn.png",
     testimonial:
       "What I love about Nabo is that they actually take their time to explain to you where your money is going.",
   },
@@ -130,6 +131,7 @@ export const FinancialGoalsData = [
     ],
     icon: "LuFolder",
     button: "Explore Fixed Income Funds",
+    image:"/images/carol.png"
   },
   {
     title: "Travel the World",
@@ -143,6 +145,7 @@ export const FinancialGoalsData = [
     ],
     icon: "LuSquareCheck",
     button: "Explore Funds",
+    image:"/images/carol.png"
   },
   {
     title: "Retire Comfortably",
@@ -156,6 +159,7 @@ export const FinancialGoalsData = [
     ],
     icon: "LuSquareCheck",
     button: "Explore Fixed Income Funds",
+     image:"/images/carol.png"
   },
 ];
 
@@ -194,7 +198,7 @@ export const ResourcesData = [
     title: "All",
     subtitle: "Sustainable Capital Growth Across Market Cycles",
     icon: "LuUser",
-    description: [],
+    description: [], // You will generate this tab dynamically using all other tab items.
   },
   {
     title: "Investment Types and Strategies",
