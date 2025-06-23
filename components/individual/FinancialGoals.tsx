@@ -12,7 +12,7 @@ const FinancialGoals = () => {
         fontSize={{ base: "2xl", md: "5xl" }}
         fontFamily="poppins"
         textAlign="center"
-        my={6}
+        my={4}  // Reduced the margin to bring the heading closer to the next text
         color="gray.800"
       >
         What Are Your Financial Goals?
@@ -35,7 +35,7 @@ const FinancialGoals = () => {
 
         {FinancialGoalsData.map((goal, index) => (
           <Tabs.Content key={index} value={`goal-${index}`}>
-            <Box bgColor={"#0a2234"}>
+            <Box bgColor={"#0a2234"} py={8}>
               <Grid
                 templateColumns={{ base: "1fr", md: "1fr 1fr" }}
                 px={marginX}
@@ -46,7 +46,7 @@ const FinancialGoals = () => {
                   alignItems={{ base: "center", md: "flex-start" }}
                   textAlign={{ base: "center", md: "left" }}
                   height="100%"
-                  gap={12}
+                  gap={8}  // Reduced the gap between Heading and Text
                 >
                   <Heading
                     as="h2"
@@ -54,6 +54,7 @@ const FinancialGoals = () => {
                     fontFamily="poppins"
                     color="white"
                     lineHeight={"1"}
+                    mb={2}  // Reduced the margin-bottom to bring it closer to the text
                   >
                     {goal.title}
                   </Heading>
@@ -62,6 +63,7 @@ const FinancialGoals = () => {
                     maxWidth="600px"
                     lineHeight="1.8"
                     color="white"
+                    mb={4}  // Adjusted the margin-bottom for the text to pull it closer to the list
                   >
                     {goal.description}
                   </Text>
@@ -76,7 +78,9 @@ const FinancialGoals = () => {
                       <li key={i}>• {point}</li>
                     ))}
                   </ul>
-                  <Link href="/individual/MMF&FIF" passHref target="_blank">
+
+                  <Link href="/individual/MMF&FIF" passHref>
+
                     <Button bg="#00caff" _hover={{ bg: "#00b5e0" }} mt={4}>
                       {goal.button}
                     </Button>
@@ -88,10 +92,10 @@ const FinancialGoals = () => {
                   overflow={"hidden"}
                 >
                   <Image
-                    src="/pius-m.png"
+                    src="/images/mmf-p.jpg"
                     alt="Commitment Image"
-                    width={200}
-                    height={200}
+                    width={400}
+                    height={700}
                     style={{
                       maxHeight: "90%",
                       width: "auto",
@@ -109,3 +113,4 @@ const FinancialGoals = () => {
 };
 
 export default FinancialGoals;
+

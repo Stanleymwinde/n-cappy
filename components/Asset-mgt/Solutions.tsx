@@ -6,22 +6,22 @@ import { Box, Grid, Image, Text, Flex, Heading } from "@chakra-ui/react";
 const clientSegments = [
   {
     title: "Pension Funds",
-    image: "/images/gtr-1.jpg",
+    image: "/images/Asset-1.jpeg",
     icon: "/icons/pension-icon.svg",
   },
   {
     title: "Insurance Companies",
-    image: "/images/gtr-2.jpg",
+    image: "/images/Asset-2.jpeg",
     icon: "/icons/insurance-icon.svg",
   },
   {
     title: "Sovereign Wealth Funds",
-    image: "/images/gtr-3.jpg",
+    image: "/images/Asset-3.jpeg",
     icon: "/icons/sovereign-icon.svg",
   },
   {
     title: "Public & Private Companies",
-    image: "/images/gtr-2.jpg",
+    image: "/images/Asset-4.jpeg",
     icon: "/icons/private-icon.svg",
   },
 ];

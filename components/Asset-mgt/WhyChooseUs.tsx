@@ -17,7 +17,7 @@ const WhyChooseUs = () => {
         color="gray.800"
         textAlign="center"
       >
-        Why Institutions Choose U
+        Why Institutions Choose You
       </Heading>
       <Text mb={8} textAlign="center" fontSize="lg" color="gray.600">
         Our institutional approach combines deep expertise, proprietary

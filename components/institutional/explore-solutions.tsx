@@ -48,7 +48,7 @@ const ExploreSolutions = () => {
               justifyContent="center"
             >
               <Image
-                src="/images/Mercy-m.png"
+                src="/images/mm.png"
                 alt="Asset Management"
                 width="auto"
                 height="600px"
@@ -177,7 +177,7 @@ const ExploreSolutions = () => {
               borderRadius="md"
             >
               <Image
-                src="/Pius-m.png"
+                src="/images/Pm.png"
                 alt="Investment Advisory"
                 width="auto"
                 height="600px"
