@@ -78,12 +78,9 @@ const FinancialGoals = () => {
                       <li key={i}>• {point}</li>
                     ))}
                   </ul>
-                  <Link
-                    href="https://www.youtube.com/watch?v=1b0d8a9f2c4"
-                    //{goal.image}
-                    passHref
-                    target="_blank"
-                  >
+
+                  <Link href="/individual/MMF&FIF" passHref>
+
                     <Button bg="#00caff" _hover={{ bg: "#00b5e0" }} mt={4}>
                       {goal.button}
                     </Button>
