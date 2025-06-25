@@ -12,7 +12,7 @@ const FinancialGoals = () => {
         fontSize={{ base: "2xl", md: "5xl" }}
         fontFamily="poppins"
         textAlign="center"
-        my={4}  // Reduced the margin to bring the heading closer to the next text
+        my={4}
         color="gray.800"
       >
         What Are Your Financial Goals?
@@ -46,7 +46,7 @@ const FinancialGoals = () => {
                   alignItems={{ base: "center", md: "flex-start" }}
                   textAlign={{ base: "center", md: "left" }}
                   height="100%"
-                  gap={8}  // Reduced the gap between Heading and Text
+                  gap={8}
                 >
                   <Heading
                     as="h2"
@@ -54,7 +54,7 @@ const FinancialGoals = () => {
                     fontFamily="poppins"
                     color="white"
                     lineHeight={"1"}
-                    mb={2}  // Reduced the margin-bottom to bring it closer to the text
+                    mb={2}
                   >
                     {goal.title}
                   </Heading>
@@ -63,7 +63,7 @@ const FinancialGoals = () => {
                     maxWidth="600px"
                     lineHeight="1.8"
                     color="white"
-                    mb={4}  // Adjusted the margin-bottom for the text to pull it closer to the list
+                    mb={4}
                   >
                     {goal.description}
                   </Text>
@@ -80,26 +80,23 @@ const FinancialGoals = () => {
                   </ul>
 
                   <Link href="/individual/MMF&FIF" passHref>
-
                     <Button bg="#00caff" _hover={{ bg: "#00b5e0" }} mt={4}>
                       {goal.button}
                     </Button>
                   </Link>
                 </Flex>
-                <Flex
-                  justifyContent="center"
-                  alignItems="center"
-                  overflow={"hidden"}
-                >
+
+                <Flex justifyContent="center" alignItems="center" overflow="hidden">
                   <Image
-                    src="/images/mmf-p.jpg"
-                    alt="Commitment Image"
-                    width={400}
-                    height={700}
+                    src={goal.image}
+                    alt={goal.title}
+                    width={500}
+                    height={600}
                     style={{
-                      maxHeight: "90%",
-                      width: "auto",
-                      objectFit: "contain",
+                      maxWidth: "100%",
+                      maxHeight: "100%",
+                      objectFit: "cover",
+                      borderRadius: "12px",
                     }}
                   />
                 </Flex>
@@ -113,4 +110,6 @@ const FinancialGoals = () => {
 };
 
 export default FinancialGoals;
+
+
 

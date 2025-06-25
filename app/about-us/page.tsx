@@ -15,11 +15,9 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 import TeamMemberCard from "@/components/TeamMemberCard";
-import { MdLocationOn, MdPhone, MdEmail } from "react-icons/md";
-
-
 
 import{ CallToAction }  from "@/components/home";
+import { MdLocationOn, MdPhone, MdEmail } from "react-icons/md";
 // Heritage Data
 const heritageData = [
   {
@@ -162,6 +160,8 @@ const OurHeritageSection = () => {
     </Box>
   );
 };
+{/* Call To Action Section */}
+<CallToAction />
 
 const CTAFooter = () => {
   return (

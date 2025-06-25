@@ -117,7 +117,7 @@ export const FinancialGoalsData = [
     ],
     icon: "LuUser",
     button: "Explore Funds",
-    image:"/images/carol.png"
+    image: "/images/mmf-p.jpg", 
   },
   {
     title: "Afford the Life I Want",
@@ -131,7 +131,7 @@ export const FinancialGoalsData = [
     ],
     icon: "LuFolder",
     button: "Explore Fixed Income Funds",
-    image:"/images/carol.png"
+    image: "/images/pius-fixed.jpg", 
   },
   {
     title: "Travel the World",
@@ -145,7 +145,7 @@ export const FinancialGoalsData = [
     ],
     icon: "LuSquareCheck",
     button: "Explore Funds",
-    image:"/images/carol.png"
+    image: "/images/fixed-abby.jpg",
   },
   {
     title: "Retire Comfortably",
@@ -159,9 +159,10 @@ export const FinancialGoalsData = [
     ],
     icon: "LuSquareCheck",
     button: "Explore Fixed Income Funds",
-     image:"/images/carol.png"
+    image: "/images/moses-r.jpg",
   },
 ];
+
 
 export const CoreStrategiessData = [
   {

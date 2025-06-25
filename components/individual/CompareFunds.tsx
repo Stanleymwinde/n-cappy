@@ -94,10 +94,10 @@ export const FundComparisonTable = ({ showOnly }: { showOnly?: string[] }) => {
       <Table.Header>
         <Table.Row>
           <Table.ColumnHeader>Feature</Table.ColumnHeader>
-          <Table.ColumnHeader color="#00caff">
+          <Table.ColumnHeader color="#003366">
             Money Market Fund (KES)
           </Table.ColumnHeader>
-          <Table.ColumnHeader color="#00caff">
+          <Table.ColumnHeader color="#003366">
             Fixed Income Fund
           </Table.ColumnHeader>
         </Table.Row>

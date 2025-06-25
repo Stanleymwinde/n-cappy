@@ -9,7 +9,7 @@ const page = () => {
     <>
       <Hero
         title="Grow Your Wealth With Nabo Capital"
-        imageUrl="/images/MMF.png"
+        imageUrl="/images/FIF.jpeg"
         subtitle="Choose the investment fund that aligns with your financial goals."
         button="Explore Funds"
       />
