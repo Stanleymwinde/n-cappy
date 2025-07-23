@@ -2,7 +2,7 @@ import { Box, Flex } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
 
-const CallToAction = () => {
+const CallToActionCommon = () => {
   return (
     <Box
       bgImage="url('/images/cta.png')"
@@ -73,4 +73,4 @@ const CallToAction = () => {
   );
 };
 
-export default CallToAction;
+export default CallToActionCommon;

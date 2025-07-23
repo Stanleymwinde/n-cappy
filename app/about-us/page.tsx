@@ -14,12 +14,15 @@ import {
   Icon,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import TeamMemberCard from "@/components/TeamMemberCard";
+import TeamMemberCard from "@/components/About/TeamMemberCard";
+import { TeamAlbum } from "@/components/About/teamalbum";
+
 import { MdLocationOn, MdPhone, MdEmail } from "react-icons/md";
+import CallToActionCommon from "@/components/common/CallToAction";
+import { Connect } from '@/components/individual';
+import { Rates} from  "@/components/individual";
 
 
-
-import{ CallToAction }  from "@/components/home";
 // Heritage Data
 const heritageData = [
   {
@@ -135,26 +138,26 @@ const OurHeritageSection = () => {
             </Box>
 
             <Box display="flex" flexDirection="column" justifyContent="flex-start" px={{ base: 2, md: 6 }}>
-  <Text
-    fontSize={{ base: "18px", md: "20px" }}
-    color="#00C8FF"
-    fontWeight="bold"
-    mb={3}
-    textTransform="uppercase"
-  >
-    {activeYear.title}
-  </Text>
-  <Text
-    fontSize={{ base: "15px", md: "16px" }}
-    color="whiteAlpha.900"
-    lineHeight="1.8"
-    whiteSpace="normal"
-    overflow="visible"
-    textOverflow="unset"
-  >
-    {activeYear.description}
-  </Text>
-</Box>
+              <Text
+                fontSize={{ base: "18px", md: "20px" }}
+                color="#00C8FF"
+                fontWeight="bold"
+                mb={3}
+                textTransform="uppercase"
+              >
+                {activeYear.title}
+              </Text>
+              <Text
+                fontSize={{ base: "15px", md: "16px" }}
+                color="whiteAlpha.900"
+                lineHeight="1.8"
+                whiteSpace="normal"
+                overflow="visible"
+                textOverflow="unset"
+              >
+                {activeYear.description}
+              </Text>
+            </Box>
 
           </Box>
         </Container>
@@ -163,52 +166,34 @@ const OurHeritageSection = () => {
   );
 };
 
-const CTAFooter = () => {
-  return (
-    <Box
-      bg="#0a2234"
-      w="100%"
-      display="flex"
-      flexDirection={{ base: "column", md: "row" }}
-      alignItems="center"
-      justifyContent="space-between"
-      py={4}
-      px={{ base: 4, md: 16 }}
-      gap={4}
-    >
-      <Box
-        bg="white"
-        borderRadius="xl"
-        px={4}
-        py={2}
-        mb={{ base: 4, md: 0 }}
-        whiteSpace="nowrap"
-        alignSelf={{ base: "center", md: "flex-start" }}
-      >
-        <Text as="span" fontWeight="bold" color="black">
-          #INVEST
-        </Text>{" "}
-        <Text as="span" color="black">
-          WITH
-        </Text>{" "}
-        <Text as="span" fontWeight="bold" color="black">
-          PURPOSE
-        </Text>
-      </Box>
-
-      <Text
-        color="#60e7ff"
-        fontSize={{ base: "md", md: "2xl" }}
-        fontWeight="bold"
-        flex={1}
-        textAlign={{ base: "center", md: "right" }}
-        mb={1}
-      >
-        Connect With Our Financial Advisors
-      </Text>
-    </Box>
-  );
-};
+const teamAlbumMembers = [
+  {
+    name: "Mercy Njoroge",
+    role: "Chief Customer Experience Officer",
+    photoUrl: "images/Asset-1.jpeg",
+  },
+  {
+    name: "Abby Mungai",
+    role: "General Wealth Manager",
+    photoUrl: "images/Asset-2.jpeg",
+  },
+  {
+    name: "Lilian Mungai",
+    role: "Finance & Operations Manager",
+    photoUrl: "images/Asset-3.jpeg",
+  },
+  {
+    name: "Irene Okoth",
+    role: "HR Officer",
+    photoUrl: "images//Asset-4.jpeg",
+  },
+  {
+    name: "Kezzy Omoni",
+    role: "Digital Creative Director",
+    photoUrl: "images//Asset-1.jpeg",
+  },
+];
+ 
 
 const About: React.FC = () => {
   return (
@@ -226,7 +211,7 @@ const About: React.FC = () => {
             left: 0,
             width: "100%",
             height: "100%",
-            objectFit: "cover",
+            objectFit: "contain",
           }}
         >
           <source src="https://res.cloudinary.com/demvcea4r/video/upload/v1750574837/About_Us_1_1_xualz9.mp4" type="video/mp4" />
@@ -259,20 +244,7 @@ const About: React.FC = () => {
         </VStack>
       </Box>
 
-      {/* Rates Ticker */}
-      <Box py={1}>
-  <Flex border={"1px solid"} borderRadius="md" p={4} bg="gray.50">
-    <Text
-      fontSize="md"
-      fontWeight="bold"  // Makes the entire sentence bold
-      width="100%"
-      textAlign="center"
-      whiteSpace="pre-line"
-    >
-      📈 🔔 Rates Update: Fixed Deposit – Up to 10.2% | Balanced Fund – 8.9% | Aggressive Growth – 12.1% | Let your money work harder.
-    </Text>
-  </Flex>
-</Box>
+      <Rates />
 
 
       {/* Heritage Section */}
@@ -280,51 +252,55 @@ const About: React.FC = () => {
 
       {/* Team Section */}
       <Box bg="gray.50" pt={10} pb={16}>
-  <Container maxW="8xl" textAlign="center">
-    <Heading fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }} fontWeight="extrabold" mb={4}>
-      Real People. Big Vision. Deep Experiences
-    </Heading>
-    <Text fontSize={{ base: "xl", md: "2xl" }} color="#00caff" mb={12} fontWeight="bold" lineHeight="tall">
-      Board & Management
-    </Text>
+        <Container maxW="8xl" textAlign="center">
+          <Heading fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }} fontWeight="extrabold" mb={4}>
+            Real People. Big Vision. Deep Experiences
+          </Heading>
+          <Text fontSize={{ base: "xl", md: "2xl" }} color="#00caff" mb={12} fontWeight="bold" lineHeight="tall">
+            Board & Management
+          </Text>
 
-    {/* Board */}
-    <Box mb={16}>
-      <Heading fontSize="2xl" mb={8}>
-        Our Leadership (Board)
-      </Heading>
-      <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 4 }} gap={10}>
-        <TeamMemberCard name="Robert Bunyi" title="Chairman & Non-Executive Director" image="/Robert-Bunyi.jpg" linkedin="#" />
-        <TeamMemberCard name="Pius Muchiri" title="Managing Director & CEO" image="/Pius-Muchiri.jpg" linkedin="#" />
-        <TeamMemberCard name="Thapelo Muribame" title="Non-Executive Director" image="/Thapelo-Tebogo.jpg" linkedin="#" />
-        <TeamMemberCard name="Edwin Macharia" title="Non-Executive Director" image="/Edwin-Macharia.jpg" linkedin="#" />
-        <TeamMemberCard name="Mercy Njoroge" title="Chief Customer Experience Officer" image="/mercy.jpg" linkedin="#" />
-      </SimpleGrid>
-    </Box>
+          {/* Board */}
+          <Box mb={16}>
+            <Heading fontSize="2xl" mb={8}>
+              Our Leadership (Board)
+            </Heading>
+            <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 4 }} gap={10}>
+              <TeamMemberCard name="Robert Bunyi" title="Chairman & Non-Executive Director" image="/Robert-Bunyi.jpg" linkedin="#" />
+              <TeamMemberCard name="Pius Muchiri" title="Managing Director & CEO" image="/Pius-Muchiri.jpg" linkedin="#" />
+              <TeamMemberCard name="Thapelo Muribame" title="Non-Executive Director" image="/Thapelo-Tebogo.jpg" linkedin="#" />
+              <TeamMemberCard name="Edwin Macharia" title="Non-Executive Director" image="/Edwin-Macharia.jpg" linkedin="#" />
+              <TeamMemberCard name="Mercy Njoroge" title="Chief Customer Experience Officer" image="/mercy.jpg" linkedin="#" />
+            </SimpleGrid>
+            
+          </Box>
 
-    {/* Management */}
-    <Box>
-      <Heading fontSize="2xl" mb={8}>
-        Our Leadership (Management)
-      </Heading>
-      <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 4 }} gap={10}>
-        <TeamMemberCard name="Pius Muchiri" title="Managing Director & CEO" image="/Pius-Muchiri.jpg" linkedin="#" />
-        <TeamMemberCard name="Mercy Njoroge" title="Chief Customer Experience Officer" image="/mercy.jpg" linkedin="#" />
-        <TeamMemberCard name="Damitha Pathmala" title="Chief Investment Officer" image="/Damitha-Pathmalal.jpg" linkedin="#" />
-        <TeamMemberCard name="Abby Mungai" title="General Wealth Manager" image="/abby-Mungai.jpg" linkedin="#" />
-        <TeamMemberCard name="Kezzy Omoni" title="Digital Creative Director" image="/abby-Mungai.jpg" linkedin="#" />
-        <TeamMemberCard name="Lilian Mungai" title="Finance & Operations Manager" image="/abby-Mungai.jpg" linkedin="#" />
-        <TeamMemberCard name="Irene Okoth" title="HR Officer" image="/abby-Mungai.jpg" linkedin="#" />
-      </SimpleGrid>
-    </Box>
-  </Container>
-</Box>
+          {/* Management */}
+          <Box>
+            <Heading fontSize="2xl" mb={8}>
+              Our Leadership (Management)
+            </Heading>
+            <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 4 }} gap={10}>
+              <TeamMemberCard name="Pius Muchiri" title="Managing Director & CEO" image="/Pius-Muchiri.jpg" linkedin="#" />
+              <TeamMemberCard name="Mercy Njoroge" title="Chief Customer Experience Officer" image="/mercy.jpg" linkedin="#" />
+              <TeamMemberCard name="Damitha Pathmala" title="Chief Investment Officer" image="/Damitha-Pathmalal.jpg" linkedin="#" />
+              <TeamMemberCard name="Abby Mungai" title="General Wealth Manager" image="/abby-Mungai.jpg" linkedin="#" />
+              <TeamMemberCard name="Kezzy Omoni" title="Digital Creative Director" image="/abby-Mungai.jpg" linkedin="#" />
+              <TeamMemberCard name="Lilian Mungai" title="Finance & Operations Manager" image="images/lilian.png" linkedin="#" />
+              <TeamMemberCard name="Irene Okoth" title="HR Officer" image="/abby-Mungai.jpg" linkedin="#" />
+            </SimpleGrid>
+          </Box>
+        </Container>
+      </Box>
 
 
-          
+
 
       {/* CTA Footer Section */}
-      <CTAFooter />
+      <TeamAlbum members={teamAlbumMembers} />
+      <Connect />
+  
+      
 
       {/* Contact Info Section (INLINE) */}
       <Box
@@ -362,7 +338,10 @@ const About: React.FC = () => {
           </Flex>
         </VStack>
       </Box>
+      <CallToActionCommon/>
     </>
+
+    
   );
 };
 
