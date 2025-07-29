@@ -1,10 +1,10 @@
-import { link } from "fs";
 import { FacebookIcon, InstagramIcon, XIcon, YoutubeIcon } from "../icons";
 import TiktokIcon from "../icons/TikTokIcon";
 import { MdOutlineRealEstateAgent } from "react-icons/md";
-import { FaHandsHelping } from "react-icons/fa";
-import { FaHeart } from "react-icons/fa6";
+import { FaHandsHelping, FaShieldAlt, FaUniversity } from "react-icons/fa";
+
 import { BsCashCoin } from "react-icons/bs";
+import { FaBuilding, FaGlobe, FaHeart, FaPiggyBank } from "react-icons/fa6";
 
 export const marginX = { base: "3%", sm: "2%", md: "4%", lg: "6%" };
 
@@ -44,7 +44,7 @@ export const socials = [
 export const navItems = [
   { label: "Individual", href: "/individual" },
   { label: "Institutional", href: "/institutional" },
-   { label: "Advisory", href: "/Advisory" },
+  { label: "Advisory", href: "/advisory" },
   { label: "About Us", href: "/about-us" },
   { label: "Tools & Resources", href: "/tools_and_resources" },
 ];
@@ -117,7 +117,7 @@ export const FinancialGoalsData = [
     ],
     icon: "LuUser",
     button: "Explore Funds",
-    image:"/images/carol.png"
+    image: "/images/carol.png",
   },
   {
     title: "Afford the Life I Want",
@@ -131,7 +131,7 @@ export const FinancialGoalsData = [
     ],
     icon: "LuFolder",
     button: "Explore Fixed Income Funds",
-    image:"/images/carol.png"
+    image: "/images/carol.png",
   },
   {
     title: "Travel the World",
@@ -145,7 +145,7 @@ export const FinancialGoalsData = [
     ],
     icon: "LuSquareCheck",
     button: "Explore Funds",
-    image:"/images/carol.png"
+    image: "/images/carol.png",
   },
   {
     title: "Retire Comfortably",
@@ -159,7 +159,7 @@ export const FinancialGoalsData = [
     ],
     icon: "LuSquareCheck",
     button: "Explore Fixed Income Funds",
-     image:"/images/carol.png"
+    image: "/images/carol.png",
   },
 ];
 
@@ -508,6 +508,41 @@ export const GlobalPartnersData = [
   },
 ];
 
+export const heritageData = [
+  {
+    year: "1954",
+    title: "NABO CAPITAL LIMITED IS SPUN OUT OF CENTUM",
+    description:
+      "A local DFI was incorporated to become the investment arm of the Kenyan Government in anticipation that the British colonial rule was nearing the end.",
+  },
+  {
+    year: "1967",
+    title:
+      "ICDC INVESTMENT (ICDCI), NOW CENTUM INVESTMENT, WAS INCORPORATED AS A SUBSIDIARY OF ICDC.",
+    description:
+      "Centum was subsequently listed from day one at the Nairobi Securities Exchange following a successful roadshow that raised USD 26,000 as seed capital.",
+  },
+  {
+    year: "1998",
+    title:
+      "APPOINTMENT OF THE LEGENDARY DR. CHRISTOPHER KIRUBI TO THE CENTUM BOARD",
+    description:
+      "By 1998, Dr. Christopher J. Kirubi had become one of the largest shareholders of Centum and was appointed to the board. He was renowned for his eye for lucrative investments and Centum was not an exception. According to him, he saw an undiscovered gem in Centum and began accumulating stake in the company. Following Dr. Kirubi’s appointment to the board, a major milestone was achieved when the board appointed the first independent management, separate from the parent company ICDC. This decision began a new era of putting together one of the most coveted, youthful and entrepreneurial investment management team in the region. According to Forbes, Dr. Kirubi was among the 40 wealthiest people in Africa; a seasoned entrepreneur, investor and industrialist with interests in media, consumer, financial, real estate, agriculture and technology.",
+  },
+  {
+    year: "2008",
+    title: "JAMES MWORIA BEGAN HIS REIGN AT THE HELM OF CENTUM",
+    description:
+      "In 2008, at age 30 ,James Mworia was appointed as the Chief Executive Officer (CEO) of Centum becoming the youngest CEO of a publicly listed company in the region. Under his leadership, an extremely ambitious Centum 2.0 strategy was immediately put together to grow the Assets Under Management (AUMs) fivefold. During the first eight years of his tenure, Centum increased its asset base from Kes 6Bn ($69mn) to approximately Kes 61Bn ($610mn) while the share price grew eight fold, from Kes 5/share to the Kes 40/share, creating extraordinary returns for shareholders. On the back of this remarkable success, James Mworia is now widely celebrated across the globe and has received numerous accolades locally, regionally and internationally. One of the major contributing factors to that success was an ingenious decision to unpackage the portfolio into three distinct business lines: real estate, private equity and quoted private equity (public markets). The decision was inspired by a strong desire to have sharp focus in optimizing value along these three business lines and in the process, nurture specialized skills and unique track records for each business unit. These business units have since devolved into independent subsidiaries and the QPE team, now housed within Nabo Capital, was the first to spin off into a fully fledged fund management company licensed by the Capital Markets Authority (CMA). From just one company in 2009, Centum is now a holding company with more than 30 subdiaries spread across eight sectors.",
+  },
+  {
+    year: "2013",
+    title: "NABO CAPITAL LIMITED IS SPUN OUT OF CENTUM",
+    description:
+      "The Quoted Private Equity(QPE) business line was inspired by an observation; “If one excludes the 5 most liquid counters in any African stock exchange(excludingSA),one is left with a relatively “illiquid” asset class that is mostly under – researched and below – the – radar of most investors”. Given our rich history of Private Equity expertise in Africa, in 2009 we set aside a KES 2.3Bn($26mn) proprietary fund and christened it “Quoted Private Equity” portfolio. The strategy was to leverage on our private equity expertise to identify and seize significant minority stakes in securities in listed space that were under-researched, below-the-radar and had significant potential for growth across the various African stock exchanges. More importantly, we desired exposure to the fastest growing economies in Africa and hence the exclusion of South Africa. Up until 2013, the strategy had paid-off handsomely throughout performing benchmarks by a healthy spread, which led to requests from external parties to leverage on our in-house expertise to replicate the QPE portfolio and track record. That triggered the 2013 spin-off of the QPE team led by Pius Muchiri and hence the emergence of Nabo Capital, now an independent fully-fledged and licensed fund manager. Nabo Capital has rapidly grown since its inception and now manages over Kes13Bn ($130mn) in AUMs. Our clients appreciate our position as a Boots-on-the-Ground Investment Manager, our specialization exemplified by a solid track record of investing in Africa, and our unique investment philosophy that is heavily informed by a rich Private Equity heritage. We draw our clients from some of the largest sovereign wealth funds, fund of funds, African multinationals, insurance and investment companies. Nabo is a Maasai word meaning Number One, reflective of the company’s aspiration to be the leading Fund Manager in Africa.",
+  },
+];
+
 export const boardMembers = [
   {
     name: "Robert Bunyi",
@@ -540,7 +575,6 @@ export const boardMembers = [
     linkedin: "#",
   },
 ];
-
 
 export const LifestylePlans = [
   {
@@ -731,5 +765,25 @@ export const HelpMeChoosePlans = [
       { label: "Medium (5-10%)", value: "Medium" },
       { label: "High (10%+)", value: "High" },
     ],
+  },
+];
+
+export const services = [
+  {
+    label: "Individuals and families",
+    icon: <FaPiggyBank size={26} />,
+  },
+  {
+    label: "Entrepreneurs and business owners",
+    icon: <FaShieldAlt size={26} />,
+  },
+  {
+    label: "Small and large companies",
+    icon: <FaBuilding size={26} />,
+  },
+  { label: "Finance teams", icon: <FaGlobe size={26} /> },
+  {
+    label: "Government agencies and organizations",
+    icon: <FaUniversity size={26} />,
   },
 ];

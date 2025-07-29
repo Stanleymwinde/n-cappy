@@ -1,7 +1,7 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 
-const currency = () => {
+const rates = () => {
   return (
     <>
       <Box py={2}>
@@ -22,4 +22,4 @@ const currency = () => {
   );
 };
 
-export default currency;
+export default rates;

@@ -1,1 +1,2 @@
-export { default as Currency } from "./currency";
+export { default as Rates } from "./rates";
+export { default as Calculator } from "./Calculator";

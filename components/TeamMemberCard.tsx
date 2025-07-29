@@ -31,13 +31,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
     >
       {/* Image Section */}
       <Box w="100%" h="300px">
-        <Image
-          src={image}
-          alt={name}
-          objectFit="cover"
-          w="100%"
-          h="100%"
-        />
+        <Image src={image} alt={name} objectFit="cover" w="100%" h="100%" />
       </Box>
 
       {/* Text Section */}
@@ -106,21 +100,11 @@ const CallToAction = () => {
           flexWrap="wrap"
         >
           <Box w={200} h={100} position="relative">
-            <Image
-              src="/images/apple.png"
-              alt="Nabo Capital Logo"
-        
-              objectFit={"contain"}
-            />
+            <Image src="/images/apple.png" alt="Nabo Capital Logo" />
           </Box>
 
           <Box w={200} h={100} position="relative">
-            <Image
-              src="/images/google.png"
-              alt="Nabo Capital Logo"
-          
-              objectFit={"contain"}
-            />
+            <Image src="/images/google.png" alt="Nabo Capital Logo" />
           </Box>
         </Flex>
         <Box
@@ -141,9 +125,3 @@ const CallToAction = () => {
 };
 
 export default TeamMemberCard;
-
-
-
-
-
-

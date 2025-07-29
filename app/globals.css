@@ -50,3 +50,8 @@
   stroke-dasharray: 125.6;
   transform: rotate(-90deg);
 }
+
+/* Hide Next.js badge and error messages */
+body > nextjs-portal {
+  display: none;
+}

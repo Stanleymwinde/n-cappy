@@ -1,4 +1,4 @@
-import { Currency } from "@/components/common";
+import { Rates } from "@/components/common";
 import {
   Account,
   CallToAction,
@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <SwiperPage />
-      <Currency />
+      <Rates />
       <Account />
       <Investing />
       <WhyforYou />

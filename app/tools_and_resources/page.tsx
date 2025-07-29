@@ -1,9 +1,8 @@
 import { Blog } from "@/components/blogs";
-import { Currency } from "@/components/common";
+import { Calculator, Rates } from "@/components/common";
 import Hero from "@/components/common/Hero";
 import { CallToAction } from "@/components/home";
-import { Calculator, MoreResources, ResourcesTabs } from "@/components/tools";
-import { Heading } from "@chakra-ui/react";
+import { MoreResources, ResourcesTabs } from "@/components/tools";
 import React from "react";
 
 const page = () => {
@@ -15,7 +14,8 @@ const page = () => {
         button="Explore"
         imageUrl="/images/rc.jpeg"
       />
-      <Currency />
+      <Rates />
+      {/* <Calculator /> */}
       <Calculator />
       <Blog />
       <MoreResources />

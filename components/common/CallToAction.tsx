@@ -38,7 +38,13 @@ const CallToAction = () => {
           flexDirection={{ base: "column", md: "row" }}
           flexWrap="wrap"
         >
-          <Box w={200} h={100} position="relative">
+          <Box
+            w={200}
+            h={100}
+            position="relative"
+            _hover={{ transform: "scale(1.05)", cursor: "pointer" }}
+            transition="transform 0.3s ease"
+          >
             <Image
               src="/images/apple.png"
               alt="Nabo Capital Logo"
@@ -47,7 +53,13 @@ const CallToAction = () => {
             />
           </Box>
 
-          <Box w={200} h={100} position="relative">
+          <Box
+            w={200}
+            h={100}
+            position="relative"
+            _hover={{ transform: "scale(1.05)", cursor: "pointer" }}
+            transition="transform 0.3s ease"
+          >
             <Image
               src="/images/google.png"
               alt="Nabo Capital Logo"
