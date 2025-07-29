@@ -6,6 +6,7 @@ import {
   ExploreSolutions,
   PartnerWithUs,
   Team,
+  WhatAreYourGoals,
 } from "@/components/institutional";
 import React from "react";
 
@@ -19,7 +20,7 @@ const page = () => {
         subtitle="We don't just manage Institutional Capital, We Guard it's purpose"
         button="Start A Strategic Conversation"
       />
-
+      <WhatAreYourGoals />
       <ExploreSolutions />
       <Team />
       <PartnerWithUs />

@@ -1,3 +1,4 @@
+import { StrategyCall } from "@/components/Asset-mgt";
 import { Rates } from "@/components/common";
 import Hero from "@/components/common/Hero";
 import { Faqs } from "@/components/individual";
@@ -21,6 +22,7 @@ const page = () => {
       <WhoWeServe />
       <WhatWeOffer />
       <WhyChooseUs />
+      <StrategyCall />
       <Faqs />
     </>
   );
