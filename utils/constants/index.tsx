@@ -46,7 +46,8 @@ export const navItems = [
   { label: "Institutional", href: "/institutional" },
   { label: "Advisory", href: "/advisory" },
   { label: "About Us", href: "/about-us" },
-  { label: "Tools & Resources", href: "/tools_and_resources" },
+  { label: "Investor's Companion", href: "/tools_and_resources" },
+  { label: "Calculator", href: "/calculator" },
 ];
 
 export const cardData = [
