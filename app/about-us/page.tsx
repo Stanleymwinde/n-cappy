@@ -14,11 +14,15 @@ import {
   Icon,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import TeamMemberCard from "@/components/TeamMemberCard";
-import { MdLocationOn, MdPhone, MdEmail } from "react-icons/md";
+import TeamMemberCard from "@/components/About/TeamMemberCard";
+import { TeamAlbum } from "@/components/About/teamalbum";
 
-import { CallToAction } from "@/components/home";
+import { MdLocationOn, MdPhone, MdEmail } from "react-icons/md";
+import CallToActionCommon from "@/components/common/CallToAction";
+import { Connect } from "@/components/individual";
+import { Rates } from "@/components/individual";
 import { heritageData } from "@/utils/constants";
+
 // Heritage Data
 
 const OurHeritageSection = () => {
@@ -133,52 +137,33 @@ const OurHeritageSection = () => {
   );
 };
 
-const CTAFooter = () => {
-  return (
-    <Box
-      bg="#0a2234"
-      w="100%"
-      display="flex"
-      flexDirection={{ base: "column", md: "row" }}
-      alignItems="center"
-      justifyContent="space-between"
-      py={4}
-      px={{ base: 4, md: 16 }}
-      gap={4}
-    >
-      <Box
-        bg="white"
-        borderRadius="xl"
-        px={4}
-        py={2}
-        mb={{ base: 4, md: 0 }}
-        whiteSpace="nowrap"
-        alignSelf={{ base: "center", md: "flex-start" }}
-      >
-        <Text as="span" fontWeight="bold" color="black">
-          #INVEST
-        </Text>{" "}
-        <Text as="span" color="black">
-          WITH
-        </Text>{" "}
-        <Text as="span" fontWeight="bold" color="black">
-          PURPOSE
-        </Text>
-      </Box>
-
-      <Text
-        color="#60e7ff"
-        fontSize={{ base: "md", md: "2xl" }}
-        fontWeight="bold"
-        flex={1}
-        textAlign={{ base: "center", md: "right" }}
-        mb={1}
-      >
-        Connect With Our Financial Advisors
-      </Text>
-    </Box>
-  );
-};
+const teamAlbumMembers = [
+  {
+    name: "Mercy Njoroge",
+    role: "Chief Customer Experience Officer",
+    photoUrl: "images/Asset-1.jpeg",
+  },
+  {
+    name: "Abby Mungai",
+    role: "General Wealth Manager",
+    photoUrl: "images/Asset-2.jpeg",
+  },
+  {
+    name: "Lilian Mungai",
+    role: "Finance & Operations Manager",
+    photoUrl: "images/Asset-3.jpeg",
+  },
+  {
+    name: "Irene Okoth",
+    role: "HR Officer",
+    photoUrl: "images//Asset-4.jpeg",
+  },
+  {
+    name: "Kezzy Omoni",
+    role: "Digital Creative Director",
+    photoUrl: "images//Asset-1.jpeg",
+  },
+];
 
 const About: React.FC = () => {
   return (
@@ -202,7 +187,7 @@ const About: React.FC = () => {
             left: 0,
             width: "100%",
             height: "100%",
-            objectFit: "cover",
+            objectFit: "contain",
           }}
         >
           <source
@@ -238,21 +223,7 @@ const About: React.FC = () => {
         </VStack>
       </Box>
 
-      {/* Rates Ticker */}
-      <Box py={1}>
-        <Flex border={"1px solid"} borderRadius="md" p={4} bg="gray.50">
-          <Text
-            fontSize="md"
-            fontWeight="bold" // Makes the entire sentence bold
-            width="100%"
-            textAlign="center"
-            whiteSpace="pre-line"
-          >
-            📈 🔔 Rates Update: Fixed Deposit – Up to 10.2% | Balanced Fund –
-            8.9% | Aggressive Growth – 12.1% | Let your money work harder.
-          </Text>
-        </Flex>
-      </Box>
+      <Rates />
 
       {/* Heritage Section */}
       <OurHeritageSection />
@@ -355,7 +326,7 @@ const About: React.FC = () => {
               <TeamMemberCard
                 name="Lilian Mungai"
                 title="Finance & Operations Manager"
-                image="/abby-Mungai.jpg"
+                image="images/lilian.png"
                 linkedin="#"
               />
               <TeamMemberCard
@@ -370,7 +341,8 @@ const About: React.FC = () => {
       </Box>
 
       {/* CTA Footer Section */}
-      <CTAFooter />
+      <TeamAlbum members={teamAlbumMembers} />
+      <Connect />
 
       {/* Contact Info Section (INLINE) */}
       <Box
@@ -406,6 +378,7 @@ const About: React.FC = () => {
           </Flex>
         </VStack>
       </Box>
+      <CallToActionCommon />
     </>
   );
 };
