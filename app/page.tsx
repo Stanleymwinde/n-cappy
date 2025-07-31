@@ -11,9 +11,9 @@ import SwiperPage from "@/components/swiper";
 
 export default function Home() {
   return (
-    <>
-      <SwiperPage />
+    <>  
       <Currency />
+      <SwiperPage />
       <Account />
       <Investing />
       <WhyforYou />

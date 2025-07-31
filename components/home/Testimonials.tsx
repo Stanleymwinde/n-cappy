@@ -2,7 +2,8 @@
 import { marginX, TestimonialData } from "@/utils/constants";
 import { Box, Flex, Heading, Stack, Text } from "@chakra-ui/react";
 import React from "react";
-// Import Swiper styles
+
+// Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -17,58 +18,24 @@ const Testimonials = () => {
       <Heading
         as="h2"
         fontSize={{ base: "3xl", md: "6xl" }}
-        fontFamily="poppins"
+        fontFamily="Poppins"
         textAlign="center"
         my={8}
         py={4}
       >
         What Our Investors Have to Say ...
       </Heading>
-      <Text fontSize="xl" textAlign="center" mb={8}>
+
+      <Text fontSize="xl" textAlign="center" mb={8} fontFamily="Poppins">
         Hear from investors who have trusted us with their global investment
         journey.
       </Text>
 
-      {/* testimonial card */}
-      {/* <Box
-        // bg="#f0f0f0"
-        p={4}
-        borderRadius="md"
-        boxShadow="md"
-        maxWidth="900px"
-        margin="auto"
-        mb={6}
-        border={"1px solid #00caff"}
-      >
-        <Flex justifyContent="center" alignItems="center" gap={6}>
-          <Image
-            src={"/images/gtr-1.jpg"}
-            alt="Investor"
-            width={300}
-            height={300}
-            borderRadius="md"
-          />
-          <Stack gap={6} textAlign="center">
-            <Text fontSize="lg" mb={4}>
-              "The reason why I feel like I have stayed at Nabo Capital this
-              long is because of safety. It's because I feel safe. And I feel at
-              home."
-            </Text>
-            <Text fontWeight="bold">- Coach Dexter, Investor</Text>
-            <Text fontStyle="italic">Long Term Invester</Text>
-          </Stack>
-        </Flex>
-      </Box> */}
-
       <Swiper
         slidesPerView={1}
         spaceBetween={20}
-        keyboard={{
-          enabled: true,
-        }}
-        pagination={{
-          clickable: true,
-        }}
+        keyboard={{ enabled: true }}
+        pagination={{ clickable: true }}
         navigation={true}
         modules={[Keyboard, Pagination, Navigation]}
         className="mySwiper"
@@ -77,10 +44,9 @@ const Testimonials = () => {
           <SwiperSlide
             key={index}
             style={{
-              background: "transparent",
-              border: "1px solid #00caff",
-              borderRadius: "12px", // Added border radius
-              boxShadow: "md",
+              background: "rgba(102, 102, 111, 0.6)", // semi-transparent background
+              border: "1px solid black",
+              borderRadius: "12px",
             }}
           >
             <Flex
@@ -90,32 +56,38 @@ const Testimonials = () => {
               direction={{ base: "column", md: "row" }}
               px={10}
               py={8}
-              borderRadius="12px" // Added border radius to Flex
+              borderRadius="12px"
+              height={{ base: "auto", md: "600px" }} // set container height to match image
             >
+              {/* Image Section */}
               <Box
                 position="relative"
                 width={{ base: "100%", md: "700px" }}
                 height={{ base: "700px", md: "600px" }}
-                aspectRatio={3 / 4} 
+                aspectRatio={3 / 4}
                 borderRadius="md"
                 overflow="hidden"
-
                 boxShadow="md"
-
               >
                 <Image
                   src={testimonial.image}
                   alt={testimonial.name}
                   fill
                   style={{
-    objectFit: "initial",
-    objectPosition: "top", // 👈 Keeps the top of the image visible
-  }}
-                 
+                    objectFit: "initial",
+                    objectPosition: "top", // shows the top of image
+                  }}
                 />
               </Box>
 
-              <Stack gap={4} textAlign={{ base: "center", md: "left" }}>
+              {/* Text Section */}
+              <Stack
+                gap={4}
+                textAlign={{ base: "center", md: "left" }}
+                justifyContent="center"
+                height="100%"
+                fontFamily="Poppins"
+              >
                 <Text fontSize="lg" fontStyle="italic" mb={4}>
                   “{testimonial.testimonial}”
                 </Text>

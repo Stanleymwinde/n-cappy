@@ -198,6 +198,7 @@ const teamAlbumMembers = [
 const About: React.FC = () => {
   return (
     <>
+      <Rates />
       {/* Hero Section */}
       <Box position="relative" w="100%" h="100vh" overflow="hidden" bg="gray.800">
         <video
@@ -244,7 +245,7 @@ const About: React.FC = () => {
         </VStack>
       </Box>
 
-      <Rates />
+    
 
 
       {/* Heritage Section */}

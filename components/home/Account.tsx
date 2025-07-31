@@ -1,59 +1,56 @@
-import { marginX } from "@/utils/constants";
-import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Button, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 
 const Account = () => {
   return (
     <Box
-      bg="#00caff"
-      p={{ base: "6", md: "12" }}
-      borderRadius="md"
-      boxShadow="md"
+      bg="#0a2234"
+      py={{ base: 12, md: 20 }}
+      px={4}
+      textAlign="center"
+      fontFamily="Poppins"
     >
-      <Flex
-        marginX={marginX}
-        justifyContent="space-between"
-        alignItems="center"
-        flexDirection={{ base: "column", md: "row" }}
-        gap={6}
-        w={{ base: "100%", md: "80%" }}
+      {/* Button */}
+      <Button
+        bg="#00caff"
+        color="white"
+        fontWeight="bold"
+        fontSize={{ base: "md", md: "xl" }}
+        px={10}
+        py={8}
+        borderRadius="xl"
+        mb={8}
+        _hover={{ bg: "#00b3e6" }}
+        fontFamily="Poppins"
       >
-        {/* Text Section */}
-        <Box textAlign={{ base: "center", md: "left" }} flex="1">
-          <Heading fontSize="2xl">Investing for everything it's worth</Heading>
-          <Text fontSize="md" mt={2}>
-            Whether you're saving for smaller moments or the big ones... <br />
-            we're here for you
-          </Text>
-        </Box>
+        Start Investing With Purpose
+      </Button>
 
-        {/* Buttons Section */}
-        <Flex
-          direction={{ base: "column", md: "row" }}
-          alignItems="center"
-          justifyContent="center"
-          gap={4}
-          flexShrink={0}
-        >
-          <Button
-            colorScheme="blue"
-            size="md"
-            width={{ base: "100%", md: "auto" }}
-          >
-            Login
-          </Button>
-          <Button
-            variant={"outline"}
-            bg={"gray.100"}
-            size="md"
-            width={{ base: "100%", md: "auto" }}
-          >
-            Open an account
-          </Button>
-        </Flex>
-      </Flex>
+      {/* Heading */}
+      <Heading
+        as="h2"
+        fontSize={{ base: "2xl", md: "3xl" }}
+        fontWeight="extrabold"
+        color="white"
+        mb={4}
+        fontFamily="Poppins"
+      >
+        Investing for everything it’s worth
+      </Heading>
+
+      {/* Description */}
+      <Text
+        fontSize={{ base: "sm", md: "md" }}
+        color="gray.200"
+        fontFamily="Poppins"
+      >
+        Whether you are saving for smaller moments or the big ones... <br />
+        we are here for you
+      </Text>
     </Box>
   );
 };
 
 export default Account;
+
+
