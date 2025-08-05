@@ -54,8 +54,7 @@ const rates = async () => {
         throw new Error("Network response was not ok");
       }
       const data = await response.json();
-      // console.log("Fetched rates:", data.securities);
-      // Assuming the API returns an array of securities
+
       return data.securities;
     } catch (error) {
       console.error("Failed to fetch rates:", error);
