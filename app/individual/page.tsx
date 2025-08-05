@@ -19,8 +19,7 @@ const page = () => {
         subtitle="choose the investment fund that aligns with your financial goals"
         imageUrl="/images/individual-hero.png"
       />
-      
-      <FinancialGoals />
+    
       <InvestmentSolutions />
       <ConsultationTeam />
       <Connect />

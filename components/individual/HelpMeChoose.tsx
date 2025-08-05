@@ -1,3 +1,4 @@
+"use client";
 import { HelpMeChoosePlans } from "@/utils/constants";
 import {
   Box,
@@ -85,3 +86,6 @@ const HelpMeChoose = () => {
 };
 
 export default HelpMeChoose;
+
+
+

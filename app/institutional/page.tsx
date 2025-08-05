@@ -1,7 +1,7 @@
 import { Currency } from "@/components/common";
 import Hero from "@/components/common/Hero";
 import { CallToAction } from "@/components/home";
-import { Faqs } from "@/components/individual";
+import { Faqs, FinancialGoals } from "@/components/individual";
 import {
   ExploreSolutions,
   PartnerWithUs,
@@ -12,19 +12,20 @@ import React from "react";
 const page = () => {
   return (
     <>
+      <Currency />
       <Hero
         title="Your Vision. Our Discipline. One Enduring Partnership"
-        imageUrl="/images/institution-hero.jpeg"
-        subtitle="We don't just manage Institutional Capital, We Guard it's purpose"
+        imageUrl="/images/image13.jpg"
+        subtitle="Your ambition carries weight. We help you carry it well."
         button="Start A Strategic Conversation"
       />
-      <Currency />
-      <ExploreSolutions />
+      <FinancialGoals />
       <Team />
       <PartnerWithUs />
       <Faqs />
       <CallToAction />
     </>
+      
   );
 };
 
