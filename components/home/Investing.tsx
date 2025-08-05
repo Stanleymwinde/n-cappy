@@ -19,10 +19,18 @@ const Investing = () => {
         mb={4}
         fontFamily={"Poppins"}
       >
-        Investing with{" "}
+        Money isn't the goal.{" "}
         <Box as="span" color="#00caff">
-          Purpose
+          Purpose is
         </Box>
+        <Box
+    textAlign="center"
+    fontSize={{ base: "2xl", md: "5xl" }}
+    mt={6} 
+    fontFamily={"Poppins"}
+  >
+    What do you want your money to do for you?
+  </Box>
       </Heading>
       <Text fontSize={{ base: "md", md: "3xl" }} color="gray.600" py={4}>
         I want to ...
@@ -60,7 +68,7 @@ const Investing = () => {
                   fontWeight="bold"
                   w="100%"
                 >
-                  Simulate
+                  Explore More
                 </Button>
               </Link>
             </Box>

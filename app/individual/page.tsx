@@ -13,12 +13,13 @@ import React from "react";
 const page = () => {
   return (
     <>
+    <Rates />
       <Hero
         title="Grow Your Wealth with Nabo Capital"
         subtitle="choose the investment fund that aligns with your financial goals"
         imageUrl="/images/individual-hero.png"
       />
-      <Rates />
+      
       <FinancialGoals />
       <InvestmentSolutions />
       <ConsultationTeam />

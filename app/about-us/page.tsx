@@ -168,6 +168,7 @@ const teamAlbumMembers = [
 const About: React.FC = () => {
   return (
     <>
+      <Rates />
       {/* Hero Section */}
       <Box
         position="relative"
@@ -223,7 +224,7 @@ const About: React.FC = () => {
         </VStack>
       </Box>
 
-      <Rates />
+    
 
       {/* Heritage Section */}
       <OurHeritageSection />

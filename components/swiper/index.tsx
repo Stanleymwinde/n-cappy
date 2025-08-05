@@ -10,9 +10,7 @@ import "swiper/css/pagination";
 
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Box, Button, Text } from "@chakra-ui/react";
-import { link } from "fs";
 import Link from "next/link";
-import { text } from "stream/consumers";
 
 interface AutoplayTimeLeftParams {
   swiper: import("swiper").Swiper;
@@ -55,8 +53,6 @@ const SwiperPage = () => {
       className="mySwiper"
     >
       {slider_images.map((image, index) => (
-        // Inside your map function (replacing <Box>...</Box>):
-
         <SwiperSlide key={index}>
           <Box
             position="relative"
@@ -70,7 +66,19 @@ const SwiperPage = () => {
             justifyContent="flex-start"
             px={{ base: 4, md: 20 }}
           >
-            <Box color="#0a2234">
+            {/* Black overlay */}
+            <Box
+              position="absolute"
+              top={0}
+              left={0}
+              width="100%"
+              height="100%"
+              bg="rgba(0, 0, 0, 0.4)" 
+              zIndex={0}
+            />
+
+            {/* Slide content */}
+            <Box color="white" position="relative" zIndex={1}>
               <Text
                 fontSize={{ base: "3xl", md: "5xl" }}
                 fontWeight="bold"
@@ -116,31 +124,38 @@ export default SwiperPage;
 
 const slider_images = [
   {
-    image: "/images/slide-1.png",
+    image: "/images/travel_dubai.png",
     title: "Make Money While doing what you love",
-    description: "Start Your Freedom Plan",
-    text: "Start Your Freedom Plan",
+    description: "Dubai's Calling",
+    text: "Dubai's Calling",
     link: "/",
-  },
-  {
-    image: "/images/slide-2.png",
-    title: "Make Money While doing what you love",
-    description: "Explore What's Possible",
-    text: "Explore What's Possible",
-    link: "/",
-  },
-  {
-    image: "/images/slider-3.png",
-    title: "Make Money While doing what you love",
-    description: "Go Global with Nabo",
-    text: "Go Global with Nabo",
-    link: "/global-investing",
   },
   {
     image: "/images/slide-4.png",
     title: "Make Money While doing what you love",
-    description: "Clock Out, We've got you",
-    text: "Clock Out, We've got you",
+    description: "Settle down. Now it’s your money’s turn to clock in.",
+    text: "Settle down. Now it’s your money’s turn to clock in.",
+    link: "/",
+  },
+  {
+    image: "/images/globaly.jpeg",
+    title: "Make Money While doing what you love",
+    description: "Go Global with Us",
+    text: "Go Global with Us",
+    link: "/global-investing",
+  },
+  {
+    image: "/images/father.son.jpeg",
+    title: "Make Money While doing what you love",
+    description: "Say yes to life’s big and beautiful moments ",
+    text: "Say yes to life’s big and beautiful moments ",
+    link: "/",
+  },
+  {
+    image: "/images/oldcouple.jpeg",
+    title: "Make Money While doing what you love",
+    description: "Make your mark. Then make it last",
+    text: "Make your mark. Then make it last",
     link: "/",
   },
 ];
