@@ -34,7 +34,7 @@ const rates = async () => {
           whiteSpace="nowrap"
         >
            <Marquee gradient={false} speed={40}  pauseOnHover={true}>
-          <Text fontSize="sm" fontWeight="medium">
+          <Text fontSize="sm" fontWeight="bold">
             📊 Top Performers:{" "}
             {securities.map((security, index) => (
               <Box as="span" key={security.id} fontWeight="semibold">
