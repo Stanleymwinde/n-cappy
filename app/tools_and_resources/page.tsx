@@ -8,13 +8,14 @@ import React from "react";
 const page = () => {
   return (
     <>
+      <Rates />
       <Hero
         title="Tools & Resources"
         subtitle="Everything You Need to make Informed Investment Decisions"
         button="Explore"
         imageUrl="/images/rc.jpeg"
       />
-      <Rates />
+     
       {/* <Calculator /> */}
       <Calculator />
       <Blog />
