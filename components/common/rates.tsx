@@ -1,5 +1,6 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
+import Marquee from "react-fast-marquee";
 
 type Security = {
   id: string | number;
@@ -8,6 +9,7 @@ type Security = {
 };
 
 const rates = async () => {
+  
   const securities: Security[] | null = await fetchRates();
   if (!securities) {
     return (
@@ -31,6 +33,7 @@ const rates = async () => {
           minHeight="50px"
           whiteSpace="nowrap"
         >
+           <Marquee gradient={false} speed={40}  pauseOnHover={true}>
           <Text fontSize="sm" fontWeight="medium">
             📊 Top Performers:{" "}
             {securities.map((security, index) => (
@@ -39,8 +42,9 @@ const rates = async () => {
                 {index !== securities.length - 1 && "   |   "}
               </Box>
             ))}
-            {" | Updated Weekly"}
+            {"   |   Updated Weekly"}
           </Text>
+        </Marquee>
         </Flex>
       </Box>
     </>
