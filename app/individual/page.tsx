@@ -4,7 +4,6 @@ import {
   Connect,
   ConsultationTeam,
   Faqs,
-  FinancialGoals,
   InvestmentSolutions,
   Rates,
 } from "@/components/individual";
@@ -20,7 +19,7 @@ const page = () => {
         imageUrl="/images/individual-hero.png"
       />
       
-      <FinancialGoals />
+      
       <InvestmentSolutions />
       <ConsultationTeam />
       <Connect />
