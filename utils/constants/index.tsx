@@ -906,3 +906,24 @@ export const services = [
     icon: <FaUniversity size={26} />,
   },
 ];
+
+export const whoweserve = [
+  {
+    label: "Pention Funds",
+    icon: <FaPiggyBank size={26} />,
+  },
+  {
+    label: "Insurance Companies",
+    icon: <FaShieldAlt size={26} />,
+  },
+  {
+    label: "Government Investment Funds",
+    icon: <FaBuilding size={26} />,
+  },
+  { label: "Local and International Businesses", icon: <FaGlobe size={26} /> },
+  {
+    label: "SMEs, Large Corporates",
+    icon: <FaUniversity size={26} />,
+  },
+];
+

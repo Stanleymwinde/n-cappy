@@ -3,10 +3,13 @@ import Hero from "@/components/common/Hero";
 import { CallToAction } from "@/components/home";
 import { Faqs } from "@/components/individual";
 import {
-  ExploreSolutions,
+  
   PartnerWithUs,
   Team,
+  WhoDoWeServe,
+  WhyOrgsChooseUs,
   WhatAreYourGoals,
+  OurInvestmentSolutions,
 } from "@/components/institutional";
 import React from "react";
 
@@ -21,13 +24,18 @@ const page = () => {
         button="Start A Strategic Conversation"
       />
       <WhatAreYourGoals />
-      <ExploreSolutions />
+      <WhoDoWeServe />
+      <OurInvestmentSolutions />
+      <WhyOrgsChooseUs />
       <Team />
       <PartnerWithUs />
       <Faqs />
       <CallToAction />
+      
     </>
   );
 };
 
 export default page;
+
+     

@@ -4,6 +4,7 @@ import Hero from "@/components/common/Hero";
 import { CallToAction } from "@/components/home";
 import { Faqs } from "@/components/individual";
 import { PartnerWithUs } from "@/components/institutional";
+import { WhyOrgsChooseUs } from "@/components/institutional";
 import {
   WhatWeOffer,
   WhyPartnerWithUs,
@@ -22,12 +23,14 @@ const page = () => {
       />
 
       <WhatWeOffer />
+      <WhyOrgsChooseUs />
       <WhyPartnerWithUs />
       <PartnerWithUs />
       <StrategyCall />
       <Faqs />
       <CallToAction />
     </>
+      
   );
 };
 
