@@ -204,7 +204,7 @@ export const WhatAreYourGoalsData = [
       "Withdraw funds when you need them",
     ],
     icon: "LuSquareCheck",
-    button: "Explore Funds",
+    button: "Learn More",
     image: "/images/carol.png",
   },
   {
@@ -263,7 +263,7 @@ export const TreasuryGoalsData = [
       "Withdraw funds when you need them",
     ],
     icon: "LuSquareCheck",
-    button: "Explore Funds",
+    button: "Learn More",
     image: "/images/carol.png",
   },
   {

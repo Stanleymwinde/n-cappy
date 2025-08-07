@@ -47,7 +47,7 @@ const WhatAreYourGoals = () => {
 
         {WhatAreYourGoalsData.map((goal, index) => (
           <Tabs.Content key={index} value={`goal-${index}`}>
-            <Box bgColor={"#00caff"} py={8} px={{ base: 4, md: 8 }}>
+            <Box bgColor={"#00caff"} py={6} px={{ base: 4, md: 8 }}>
               <Flex
                 marginX={marginX}
                 direction="column"
@@ -55,22 +55,22 @@ const WhatAreYourGoals = () => {
                 alignItems={{ base: "center", md: "flex-start" }}
                 textAlign={{ base: "center", md: "left" }}
                 height="100%"
-                gap={8} // Reduced the gap between Heading and Text
+                gap={4} // Reduced the gap between Heading and Text
               >
                 <Heading
                   as="h2"
                   fontSize={{ base: "3xl", md: "6xl" }}
                   fontFamily="poppins"
                   lineHeight={"1"}
-                  mb={2} // Reduced the margin-bottom to bring it closer to the text
+                  
                 >
                   {goal.title}
                 </Heading>
                 <Text
                   fontSize="2xl"
-                  maxWidth="600px"
+                  
                   lineHeight="1.8"
-                  mb={4} // Adjusted the margin-bottom for the text to pull it closer to the list
+                 
                 >
                   {goal.description}
                 </Text>
