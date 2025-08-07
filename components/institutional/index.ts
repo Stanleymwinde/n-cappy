@@ -9,7 +9,7 @@ export { default as WhyOrgsChooseUs } from "./WhyOrgsChooseUs";
 export { default as InvestmentSolutions } from "./InvestmentSolutions";
 export { default as Strategy } from "./Strategy";
 export { default as InvestmentSolutionsVideo } from "./InvestmentSolutionsVideo";
-export { default as bulletpoints } from "./bulletpoints";
+
 
 
 
