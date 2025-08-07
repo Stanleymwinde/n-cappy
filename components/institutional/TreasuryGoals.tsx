@@ -102,7 +102,7 @@ const TreasuryGoals = () => {
                       src={goal.image}
                       alt={goal.title}
                       style={{
-                        maxWidth: "350px",
+                        maxWidth: "500px",
                         width: "100%",
                         borderRadius: "16px",
                         boxShadow: "0 4px 24px rgba(0,0,0,0.08)",

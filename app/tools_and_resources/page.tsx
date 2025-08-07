@@ -16,8 +16,7 @@ const page = () => {
         imageUrl="/images/rc.jpeg"
       />
      
-      {/* <Calculator /> */}
-      <Calculator />
+      
       <Blog />
       <MoreResources />
       <ResourcesTabs />
