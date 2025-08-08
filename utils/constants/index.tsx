@@ -273,9 +273,9 @@ export const TreasuryGoalsData = [
 export const CoreStrategiessData = [
   {
     title: "Equity Strategy",
-    subtitle: "Sustainable Capital Growth Across Market Cycles",
+    subtitle: "Sustainable Capital Growth Across Market Cyclesssssss",
     description: [
-      "Our equity strategy focuses on identifying quality companies with sustainable competitive advantages and strong growth potential. We employ a disciplined investment process that combines fundamental analysis with valuation discipline to deliver consistent alpha across market cycles.",
+      "Our equitys strategy focuses on identifying quality companies with sustainable competitive advantages and strong growth potential. We employ a disciplined investment process that combines fundamental analysis with valuation discipline to deliver consistent alpha across market cycles.",
     ],
     pdf: "/pdfs/Equity-Strategy.pdf",
     icon: "LuUser",
@@ -466,6 +466,32 @@ export const investmentData = [
     cta: "Balanced Fund (USD) Fact Sheet",
   },
 ];
+
+export const itemss = [
+  {
+    value: "a",
+    title: "Equity Strategy",
+    text: "Pursuing Sustainable Capital Growth Across Market Cycles",
+    points: [
+      "Rigorous Stock Selection: Active, research-intensive process grounded in intrinsic value and growth potential",
+      "Rigorous Stock Selection: Active, research-intensive process grounded in intrinsic value and growth potential",
+      "Rigorous Stock Selection: Active, research-intensive process grounded in intrinsic value and growth potential",
+      "Rigorous Stock Selection: Active, research-intensive process grounded in intrinsic value and growth potential",
+      ],
+      
+
+  },
+  {
+    value: "b",
+    title: "Balanced Strategy",
+    text: "Optimizing Risk-Adjusted Returns Through Asset Class Synergy",
+  },
+  {
+    value: "c",
+    title: "Fixed Income Strategy",
+    text: " Preserving Capital and Generating Reliable Income",
+  },
+  ];
 export const teamMembers = [
   {
     image: "/images/Moses1.png",

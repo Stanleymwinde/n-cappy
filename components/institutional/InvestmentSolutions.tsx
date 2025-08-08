@@ -208,7 +208,7 @@ const items = [
   {
     value: "a",
     title: "Capital Raising",
-    text: "Stucturing and Sourcing for Sustainable Growth",
+    text: "Stucturing and Sourcing for Sustaidddddnable Growth",
   },
   {
     value: "b",
