@@ -88,19 +88,7 @@ const InvestmentSolutions = () => {
                           color="gray.700"
                           lineHeight="1.8"
                         >
-                          <li
-                            style={{
-                              display: "flex",
-                              alignItems: "center",
-                              gap: "16px",
-                            }}
-                          >
-                            <MdFiberManualRecord color="blue.700" />
-                            <Text>
-                              Origination of proprietary deal flow across
-                              private equity and private credit markets
-                            </Text>
-                          </li>
+                       
                           <li
                             style={{
                               display: "flex",
@@ -220,7 +208,7 @@ const items = [
   {
     value: "a",
     title: "Capital Raising",
-    text: "Stucturing and Sourcing for Sustainable Growth",
+    text: "Stucturing and Sourcing for Sustaidddddnable Growth",
   },
   {
     value: "b",

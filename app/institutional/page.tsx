@@ -6,8 +6,10 @@ import {
   
   PartnerWithUs,
   Team,
+  Strategy,
   WhoDoWeServe,
   WhyOrgsChooseUs,
+  InvestmentSolutionsVideo,
   WhatAreYourGoals,
   OurInvestmentSolutions,
 } from "@/components/institutional";
@@ -26,7 +28,9 @@ const page = () => {
       <WhatAreYourGoals />
       <WhoDoWeServe />
       <OurInvestmentSolutions />
+      <InvestmentSolutionsVideo />
       <WhyOrgsChooseUs />
+      <Strategy />
       <Team />
       <PartnerWithUs />
       <Faqs />

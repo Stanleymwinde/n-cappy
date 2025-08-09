@@ -1,6 +1,6 @@
 import { Rates } from "@/components/common";
 import Hero from "@/components/common/Hero";
-import { InvestmentSolutions, TreasuryGoals } from "@/components/institutional";
+import { InvestmentSolutions, InvestmentSolutionsVideo, TreasuryGoals, WhyOrgsChooseUs } from "@/components/institutional";
 import React from "react";
 
 const page = () => {
@@ -15,6 +15,8 @@ const page = () => {
       />
       <TreasuryGoals />
       <InvestmentSolutions />
+      <InvestmentSolutionsVideo />
+      <WhyOrgsChooseUs />
     </>
   );
 };
