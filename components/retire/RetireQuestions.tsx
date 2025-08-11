@@ -1,5 +1,5 @@
 "use client";
-import { LifestylePlans, marginX } from "@/utils/constants";
+import { RetirePlans, marginX } from "@/utils/constants";  // <-- fixed import here
 import {
   Box,
   Button,
@@ -20,7 +20,7 @@ import { FaHandsHelping, FaHeart } from "react-icons/fa";
 import { MdOutlineRealEstateAgent } from "react-icons/md";
 import { useColorModeValue } from "../ui/color-mode";
 
-const QuestionPack = () => {
+const RetireQuestions = () => {
   const cardBg = useColorModeValue("white", "gray.800");
   const [activePlanIndex, setActivePlanIndex] = useState<number | null>(null);
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -30,9 +30,10 @@ const QuestionPack = () => {
     setQuestionIndex(0);
   };
 
-  const activePlan =
-    activePlanIndex !== null ? LifestylePlans[activePlanIndex] : null;
+  // Replace LifestylePlans with RetirePlans here
+  const activePlan = activePlanIndex !== null ? RetirePlans[activePlanIndex] : null;
   const activeQuestion = activePlan?.questions[questionIndex];
+
   return (
     <Box marginX={marginX} py={10} bg="white">
       <VStack gap={3} textAlign="center" mb={8}>
@@ -41,13 +42,12 @@ const QuestionPack = () => {
         </Heading>
         <Text maxW="2xl" fontSize="md" color="gray.600">
           Each aspect of your financial legacy requires thoughtful planning.
-          Explore the key areas below or jump straight to your personalized
-          calculation.
+          Explore the key areas below or jump straight to your personalized calculation.
         </Text>
       </VStack>
 
       <Grid templateColumns={{ base: "1fr", md: "repeat(5, 1fr)" }} gap={6}>
-        {LifestylePlans.map((block, idx) => (
+        {RetirePlans.map((block, idx) => (
           <GridItem
             key={idx}
             onClick={() => handleCardClick(idx)}
@@ -149,4 +149,4 @@ const QuestionPack = () => {
   );
 };
 
-export default QuestionPack;
+export default RetireQuestions;

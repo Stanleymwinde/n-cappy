@@ -10,7 +10,8 @@ const page = () => {
     <>
       <Hero
         button="Unlock My Plan"
-        imageUrl="/images/travel.png"
+        button1="Learn More"
+        imageUrl="/images/travel-hero.jpeg"
         title="Because Life is About Living Fully"
         subtitle="Say yes to Life's Big, Beautiful moments without guilt, without worry"
       />

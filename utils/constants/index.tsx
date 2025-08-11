@@ -61,7 +61,7 @@ export const cardData = [
   {
     title: "Afford school for my kids",
     description:
-      "We’ll help you build a smart savings plan for education—without the stress",
+      "We’ll help you build a smart savings plan for education; designed around your goals to give your children the best possible future.",
     image: "/images/Education-goal.jpeg",
     link: "/education",
   },
@@ -709,7 +709,7 @@ export const boardMembers = [
   },
 ];
 
-export const LifestylePlans = [
+export const RetirementPlans = [
   {
     title: "Estate Planning",
     description:
@@ -720,23 +720,46 @@ export const LifestylePlans = [
         id: 1,
         question: "Where do you want to go?",
         placeholder: "e.g. Mombasa, Paris, Bali",
-        hint: "Tell us your dream destination.",
+        hint: "Whether it’s a beach, city or the desert , you only need 230 USD per month",
         image: "/images/life-1.png",
       },
       {
         id: 2,
-        question: "What's your travel budget?",
-        placeholder: "e.g. $5,000",
-        hint: "This helps us plan accordingly.",
+        question: "When do you want to travel?",
+        placeholder: "eg.   December 2025",
+        hint: "When are you planning to take this trip? Even an approximate time is fine.",
         image: "/images/life-3.png",
       },
       {
         id: 3,
-        question: "How often do you travel?",
-        placeholder: "e.g. Twice a year",
-        hint: "This will guide your yearly budget.",
+        question: "How long will you stay?",
+        placeholder: "eg.   7 days",
+        hint: "How many days or weeks would you like to spend there?",
         image: "/images/life-2.png",
       },
+      {
+        id: 4,
+        question: "What Is your estimated cost?",
+        placeholder: "eg.   KES 5000",
+        hint: "Your best estimate of the total cost. Don’t worry if you are not sure.",
+        image: "/images/life-2.png",
+      },
+      {
+        id: 5,
+        question: "How much have you saved ?",
+        placeholder: "eg.   KES 10,000",
+        hint: "How much have you already put aside for this trip?",
+        image: "/images/life-2.png",
+      },
+      {
+        id: 6,
+        question: "How much can you save monthly?",
+        placeholder: "eg.   KES 10,000",
+        hint: "How much have you already put aside for this trip?",
+        image: "/images/life-2.png",
+      },
+      
+      
     ],
   },
   {
@@ -826,10 +849,184 @@ export const LifestylePlans = [
       },
     ],
   },
+
   {
     title: "Retirement Income",
     description:
-      "Structure predictable and reliable income for your retirement years.",
+      "Structure provide reliable income  ",
+    icon: FaHandsHelping,
+    questions: [
+      {
+        id: 1,
+        question: "What causes are you passionate about?",
+        placeholder: "e.g. Education, Health",
+        hint: "This helps us align your giving goals.",
+        image: "/images/giving-1.jpg",
+      },
+      {
+        id: 2,
+        question: "How much do you want to give annually?",
+        placeholder: "e.g. $1,000",
+        hint: "This sets your giving budget.",
+        image: "/images/giving-2.jpg",
+      },
+      {
+        id: 3,
+        question: "Do you prefer local or global impact?",
+        placeholder: "e.g. Local",
+        hint: "Helps us find the right charities for you.",
+        image: "/images/giving-3.jpg",
+      },
+    ],
+  },
+  
+];
+
+
+export const LifestylePlans = [
+  {
+    title: "Dream Vacations",
+    description:
+      "You’ve earned the right to explore. Take that beach escape,  or adventure abroad — this plan helps you travel confidently, without financial pressure.",
+    icon: MdOutlineRealEstateAgent,
+    questions: [
+      {
+        id: 1,
+        question: "Where do you want to go?",
+        placeholder: "e.g. Mombasa, Paris, Bali",
+        hint: "Whether it’s a beach, city or the desert , you only need 230 USD per month",
+        image: "/images/life-1.png",
+      },
+      {
+        id: 2,
+        question: "When do you want to travel?",
+        placeholder: "eg.   December 2025",
+        hint: "When are you planning to take this trip? Even an approximate time is fine.",
+        image: "/images/life-3.png",
+      },
+      {
+        id: 3,
+        question: "How long will you stay?",
+        placeholder: "eg.   7 days",
+        hint: "How many days or weeks would you like to spend there?",
+        image: "/images/life-2.png",
+      },
+      {
+        id: 4,
+        question: "What Is your estimated cost?",
+        placeholder: "eg.   KES 5000",
+        hint: "Your best estimate of the total cost. Don’t worry if you are not sure.",
+        image: "/images/life-2.png",
+      },
+      {
+        id: 5,
+        question: "How much have you saved ?",
+        placeholder: "eg.   KES 10,000",
+        hint: "How much have you already put aside for this trip?",
+        image: "/images/life-2.png",
+      },
+      {
+        id: 5,
+        question: "How much can you save monthly?",
+        placeholder: "eg.   KES 10,000",
+        hint: "How much have you already put aside for this trip?",
+        image: "/images/life-2.png",
+      },
+      
+      
+    ],
+  },
+  {
+    title: "Continuing Education",
+    description:
+      "Learning is a lifelong investment. Use your savings to pursue new skills, go back to school, or support a loved one’s academic journey.",
+    icon: FaHandsHelping,
+    questions: [
+      {
+        id: 1,
+        question: "What do you want to study?",
+        placeholder: "e.g. Data Science",
+        hint: "Let us know your field of interest.",
+        image: "/images/ed-q-4.png",
+      },
+      {
+        id: 2,
+        question: "Which institution?",
+        placeholder: "e.g. MIT, Udemy",
+        hint: "Helps tailor your savings goals.",
+        image: "/images/ed-q-2.png",
+      },
+      {
+        id: 3,
+        question: "Expected tuition cost?",
+        placeholder: "e.g. $10,000",
+        hint: "This helps us prepare your plan.",
+        image: "/images/ed-q-1.png",
+      },
+    ],
+  },
+  {
+    title: "Building Your Dream Home",
+    description:
+      "Turn your vision into reality. From buying land to finishing touches, your plan helps you create a home that truly reflects your goals and lifestyle.",
+    icon: FaHeart,
+    questions: [
+      {
+        id: 1,
+        question: "What’s your ideal retirement age?",
+        placeholder: "e.g. 60",
+        hint: "This helps us plan your retirement savings.",
+        image: "/images/r-1.png",
+      },
+      {
+        id: 2,
+        question: "What lifestyle do you envision?",
+        placeholder: "e.g. Travel, hobbies",
+        hint: "Share your retirement dreams.",
+        image: "/images/r-2.png",
+      },
+      {
+        id: 3,
+        question: "Expected monthly expenses?",
+        placeholder: "e.g. $2,000",
+        hint: "Helps us calculate your retirement needs.",
+        image: "/images/life-3.png",
+      },
+    ],
+  },
+  {
+    title: "Treating Your Family",
+    description:
+      "The best moments are shared. Plan ahead for birthdays, holidays, or surprise gifts — and enjoy giving without the financial strain",
+    icon: FaHandsHelping,
+    questions: [
+      {
+        id: 1,
+        question: "What causes are you passionate about?",
+        placeholder: "e.g. Education, Health",
+        hint: "This helps us align your giving goals.",
+        image: "/images/giving-1.jpg",
+      },
+      {
+        id: 2,
+        question: "How much do you want to give annually?",
+        placeholder: "e.g. $1,000",
+        hint: "This sets your giving budget.",
+        image: "/images/giving-2.jpg",
+      },
+      {
+        id: 3,
+        question: "Do you prefer local or global impact?",
+        placeholder: "e.g. Local",
+        hint: "Helps us find the right charities for you.",
+        image: "/images/giving-3.jpg",
+      },
+    ],
+  },
+  {
+    title: "Enjoying the life You",
+    description:
+      "You’ve earned more than a paycheck — you’ve earned peace of mind. This plan lets you relax, celebrate milestones, and f",
     icon: BsCashCoin,
     questions: [
       {
@@ -940,4 +1137,265 @@ export const whoweserve = [
     icon: <FaUniversity size={26} />,
   },
 ];
+
+export const RetirePlans = [
+  {
+    title: "Estate Planning",
+    description:
+      "Ensure your assets are protected and distributed according to your wishes, minimizing taxes and complications for your heirs.",
+    icon: MdOutlineRealEstateAgent,
+    questions: [
+      {
+        id: 1,
+        question: "Where are you in your legacy journey?",
+        placeholder: "e.g.Just Starting, mid career, near retirement",
+        hint: "Every journey is unique. Let;s start by undestanding where you are today.",
+        image: "/images/life-1.png",
+      },
+      {
+        id: 2,
+        question: "Who are you planning for?",
+        placeholder: "eg. Yourself, Family, Charity",
+        hint: "Your legacy extends beyond yourself!",
+        image: "/images/life-3.png",
+      },
+      {
+        id: 3,
+        question: "What do you care about most?",
+        placeholder: "eg. Generational wealth, Giving back, Healthcare",
+        hint: "Your values guide your financial decisions. What matters most to you?",
+        image: "/images/life-2.png",
+      },
+      {
+        id: 4,
+        question: "How much have you saved already?  ",
+        placeholder: "eg. KES 500,000",
+        hint: "Include retirement accounts, investments and other assets you have set aside for the future.",
+        image: "/images/life-2.png",
+      },
+      {
+        id: 5,
+        question: "How much have you saved ?",
+        placeholder: "eg.   KES 50,000",
+        hint: "Regular contributions are key to building your legacy",
+        image: "/images/life-2.png",
+      },
+      {
+        id: 6,
+        question: "What is your ideal retirement age ?  ",
+        placeholder: "eg.  50, 85, 60",
+        hint: "When would you like to transition to the next phase of your journey? ",
+        image: "/images/life-2.png",
+      },
+      
+      
+    ],
+  },
+  {
+   title: "Generational Wealth Transfer",
+description:
+  "Create a structured approach to passing financial assets, knowledge, and values to future generations.",
+icon: MdOutlineRealEstateAgent,
+questions: [
+ {
+    id: 1,
+    question: "What stage are you at in your wealth transfer plan?",
+    placeholder: "e.g. Just beginning, have a plan, actively transferring",
+    hint: "Understanding your current stage helps tailor the best strategy for your family.",
+    image: "/images/life-1.png",
+  },
+  {
+    id: 2,
+    question: "Who are the primary beneficiaries of your wealth transfer?",
+    placeholder: "e.g. Children, grandchildren, trusts, charities",
+    hint: "Clarify who will receive your assets to ensure alignment with your wishes.",
+    image: "/images/life-3.png",
+  },
+   {
+    id: 3,
+    question: "What are your goals for generational wealth transfer?",
+    placeholder: "e.g. Preserve family business, education funds, philanthropy",
+    hint: "Your intentions shape how your wealth is distributed and managed.",
+    image: "/images/life-2.png",
+  },
+ {
+    id: 4,
+    question: "Have you set up any trusts or legal entities for wealth transfer?",
+    placeholder: "e.g. Family trust, charitable trust, foundations",
+    hint: "Trusts can help protect assets and provide tax advantages for heirs.",
+    image: "/images/life-2.png",
+  },
+{
+    id: 5,
+    question: "How do you plan to educate your heirs about managing the inheritance?",
+    placeholder: "e.g. Financial literacy programs, family meetings",
+    hint: "Preparing heirs helps ensure the legacy is sustained responsibly.",
+    image: "/images/life-2.png",
+  },
+ {
+    id: 6,
+    question: "What concerns do you have about transferring wealth to future generations?",
+    placeholder: "e.g. Taxes, family disputes, asset protection",
+    hint: "Identifying challenges helps us address them proactively.",
+    image: "/images/life-2.png",
+  },
+],
+},
+  {
+   title: "Long-Term Care", 
+    description: "Prepare for potential health needs without compromising the financial legacy you intend to leave behind.",
+    
+    icon: FaHandsHelping,
+    questions: [
+      {
+    id: 1,
+    question: "What type of long-term care do you anticipate?",
+    placeholder: "e.g. Assisted living, home care, nursing home",
+    hint: "Understanding your care preference helps tailor your plan.",
+    image: "/images/long-term-care-1.png",
+  },
+      {
+    id: 2,
+    question: "When do you expect to start needing care?",
+    placeholder: "e.g. 5 years from now, immediately",
+    hint: "An approximate timeline helps us estimate costs.",
+    image: "/images/long-term-care-2.png",
+  },
+       {
+    id: 3,
+    question: "What is your estimated monthly care cost?",
+    placeholder: "e.g. $2,500",
+    hint: "This helps us prepare a realistic savings plan.",
+    image: "/images/long-term-care-3.png",
+  },
+
+  {
+    id: 4,
+    question: "How much have you already saved for long-term care?",
+    placeholder: "e.g. $20,000",
+    hint: "Let us know what you’ve set aside so far.",
+    image: "/images/long-term-care-4.png",
+  },
+
+  {
+    id: 5,
+    question: "How much can you save monthly toward this plan?",
+    placeholder: "e.g. $500",
+    hint: "Your monthly savings capacity helps us create your timeline.",
+    image: "/images/long-term-care-5.png",
+  },
+
+  {
+    id: 6,
+    question: "Do you have family or insurance support?",
+    placeholder: "e.g. Yes, family help or LTC insurance",
+    hint: "This affects your overall care plan and budget.",
+    image: "/images/long-term-care-6.png",
+  },
+    ],
+  },
+  {
+    title: "Giving with Intention",
+    description:
+      "Align your charitable contributions with your values and maximize their impact on causes you care about.",
+    icon: BsCashCoin,
+    questions: [
+      {
+    id: 1,
+    question: "What causes matter most to you?",
+    placeholder: "e.g. Education, Environment, Health",
+    hint: "Identifying your passions helps focus your giving.",
+    image: "/images/giving-intent-1.jpg",
+  },
+      {
+    id: 2,
+    question: "How much do you want to donate annually?",
+    placeholder: "e.g. $1,000",
+    hint: "This helps set your giving budget.",
+    image: "/images/giving-intent-2.jpg",
+  },
+     {
+    id: 3,
+    question: "Do you prefer one-time gifts or recurring donations?",
+    placeholder: "e.g. Monthly, Quarterly, One-time",
+    hint: "This affects your giving schedule and impact.",
+    image: "/images/giving-intent-3.jpg",
+  },
+
+  {
+    id: 4,
+    question: "Would you like to support local or global organizations?",
+    placeholder: "e.g. Local",
+    hint: "Helps us align your giving to your preferred communities.",
+    image: "/images/giving-intent-4.jpg",
+  },
+
+  {
+    id: 5,
+    question: "Are you interested in volunteering your time as well?",
+    placeholder: "e.g. Yes, No, Maybe",
+    hint: "This adds another dimension to your giving plan.",
+    image: "/images/giving-intent-5.jpg",
+  },
+   {
+    id: 6,
+    question: "Would you like help tracking the impact of your donations?",
+    placeholder: "e.g. Yes, I want updates",
+    hint: "Stay informed about how your gifts make a difference.",
+    image: "/images/giving-intent-6.jpg",
+  },
+    ],
+  },
+  {
+   title: "Retirement income",
+description:
+  "Prepare today for a comfortable and fulfilling tomorrow. This plan helps you estimate your retirement needs, set realistic savings goals, and envision the lifestyle you want once you stop working.",
+icon: MdOutlineRealEstateAgent,
+questions: [
+{
+    id: 1,
+    question: "At what age do you plan to retire?",
+    placeholder: "e.g. 60",
+    hint: "This helps us estimate how long your retirement savings need to last.",
+    image: "/images/retirement-1.png",
+  },
+  {
+    id: 2,
+    question: "What kind of lifestyle do you envision during retirement?",
+    placeholder: "e.g. Travel, hobbies, quiet life",
+    hint: "Share your dreams to tailor your retirement plan.",
+    image: "/images/retirement-2.png",
+  },
+   {
+    id: 3,
+    question: "What are your expected monthly expenses in retirement?",
+    placeholder: "e.g. $3,000",
+    hint: "Includes housing, food, healthcare, leisure, and more.",
+    image: "/images/retirement-3.png",
+  },
+ {
+    id: 4,
+    question: "How much have you saved for retirement so far?",
+    placeholder: "e.g. $50,000",
+    hint: "This gives us a starting point for your plan.",
+    image: "/images/retirement-4.png",
+  },
+{
+    id: 5,
+    question: "How much can you save monthly toward retirement?",
+    placeholder: "e.g. $500",
+    hint: "Regular savings help you reach your goals on time.",
+    image: "/images/retirement-5.png",
+  },
+ {
+    id: 6,
+    question: "Do you expect any additional income during retirement?",
+    placeholder: "e.g. Pension, rental income",
+    hint: "Helps calculate your total retirement resources.",
+    image: "/images/retirement-6.png",
+  },
+],
+},
+];
+
 

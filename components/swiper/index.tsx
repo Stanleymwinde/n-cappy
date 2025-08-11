@@ -94,13 +94,13 @@ const SwiperPage = () => {
                 <Button
                   mt={6}
                   colorScheme="blackAlpha"
-                  bg="blackAlpha.800"
+                  bg="#0A2233"
                   color="white"
                   px={8}
                   py={6}
                   rounded="full"
                   fontWeight="bold"
-                  _hover={{ bg: "blackAlpha.700" }}
+                  _hover={{ bg: "#00CAFF" }}
                 >
                   Start Investing
                 </Button>
@@ -128,14 +128,14 @@ const slider_images = [
     title: "Make Money While doing what you love",
     description: "Dubai's Calling",
     text: "Dubai's Calling",
-    link: "/",
+    link: "/travel",
   },
   {
     image: "/images/slide-4.png",
     title: "Make Money While doing what you love",
     description: "Settle down. Now it’s your money’s turn to clock in.",
     text: "Settle down. Now it’s your money’s turn to clock in.",
-    link: "/",
+    link: "/lifestyle-goal",
   },
   {
     image: "/images/globaly.jpeg",
@@ -149,13 +149,13 @@ const slider_images = [
     title: "Make Money While doing what you love",
     description: "Say yes to life’s big and beautiful moments ",
     text: "Say yes to life’s big and beautiful moments ",
-    link: "/",
+    link: "/education",
   },
   {
     image: "/images/oldcouple.jpeg",
     title: "Make Money While doing what you love",
     description: "Make your mark. Then make it last",
     text: "Make your mark. Then make it last",
-    link: "/",
+    link: "/retire",
   },
 ];

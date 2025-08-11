@@ -1,4 +1,3 @@
-import { marginX } from "@/utils/constants";
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
@@ -10,73 +9,83 @@ type PlanForJoyProps = {
   subtext?: string;
 };
 
-const planForJoy = ({
+const PlanForJoy = ({
   title,
   subtitle,
   imageUrl,
   subtext,
 }: PlanForJoyProps) => {
   return (
-    <Box bg={"#0a2234"}>
-      <Box marginX={marginX} paddingY={10}>
-        <Heading
-          color={"#00caff"}
-          as={"h1"}
-          lineHeight={1}
-          fontSize={"5xl"}
-          textAlign={"center"}
-          pb={5}
-        >
-          {title || "Are you ready to plan for Joy?"}
-          {/* Are you ready to plan for Joy? */}
-        </Heading>
+    <Box
+      bg="#0e2340" // slightly lighter navy blue than before for better contrast
+      borderRadius="lg"
+      padding={{ base: 6, md: 10 }}
+      maxWidth="1500px"
+      marginX="auto"
+      color="white"
+      
+    >
+      <Heading
+        color="#00caff"
+        as="h1"
+        fontSize={{ base: "2xl", md: "4xl" }}
+        fontWeight="bold"
+        textAlign="center"
+        mb={4}
+      >
+        {title || "Are you ready to plan for joy?"}
+      </Heading>
+
+      <Text
+        color="gray.300"
+        fontSize={{ base: "md", md: "lg" }}
+        textAlign="Center"
+        mb={8}
+          lineHeight="tall"
+      
+        
+      >
+        {subtitle ||
+          "This portfolio is for the dreamers, the doers, and the bold believers in more. It’s for anyone who wants their money to create moments, not just returns."}
+      </Text>
+
+      <Flex
+        direction={{ base: "column", md: "row" }}
+        align="left"
+        gap={8}
+      >
         <Text
-          fontSize={"xl"}
-          color={"#ffffff"}
-          textAlign={"center"}
-          marginTop={4}
+          color="white"
+          fontSize={{ base: "md", md: "xl" }}
+          lineHeight="taller"
+          flex="1"
+          maxWidth={{ base: "100%", md: "60%" }}
         >
-          {subtitle ||
-            "This portfolio is for the dreamers, the doers, and the bold believers in more. It's for anyone who wants their money to create moments, not just returns."}
+          {subtext ||
+            'Whether you’re planning that once-in-a-lifetime trip, launching a passion project close to your heart, or creating unforgettable memories to share with your family, we’re here to support you every step of the way. No more waiting for “one day”. Together, we’ll turn your dreams into achievable plans and bring those moments to life today. With clear, practical guidance tailored just for you, we make it simple to take action now and start living the life you’ve always imagined.'}
         </Text>
-        <Flex
-          py={6}
-          gap={8}
-          display={{ base: "block", md: "flex" }}
-          alignItems="center"
+
+        <Box
+          flex="1"
+          maxWidth={{ base: "100%", md: "50%" }}
+          borderRadius="md"
+          overflow="hidden"
+          boxShadow="lg"
+          minHeight="250px"
+          position="relative"
+          width="100%"
         >
-          <Text
-            fontSize={"2xl"}
-            color={"#ffffff"}
-            textAlign={"center"}
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            lineHeight={1.5}
-            maxWidth="700px"
-          >
-            {subtext ||
-              "Whether you're planning that once-in-a-lifetime trip, launching a passion project, or gifting unforgettable memories to your family,we're here to help you turn “one day” into today."}
-          </Text>
-          <Box
-            bg={"#ffffff"}
-            position="relative"
-            height={400}
-            width="100%"
-            borderRadius={"md"}
-            overflow="hidden"
-          >
-            <Image
-              src={imageUrl || "/images/slider-1.png"}
-              alt="Plan for Joy"
-              fill
-              objectFit="cover"
-            />
-          </Box>
-        </Flex>
-      </Box>
+          <Image
+            src={imageUrl || "/images/slider-1.png"}
+            alt="Plan for Joy"
+            fill
+            style={{ objectFit: "cover", borderRadius: "8px" }}
+            priority
+          />
+        </Box>
+      </Flex>
     </Box>
   );
 };
 
-export default planForJoy;
+export default PlanForJoy;
