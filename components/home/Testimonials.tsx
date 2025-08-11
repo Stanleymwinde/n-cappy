@@ -44,7 +44,7 @@ const Testimonials = () => {
           <SwiperSlide
             key={index}
             style={{
-              background: "rgba(102, 102, 111, 0.6)", // semi-transparent background
+              background: "rgba(123, 134, 135, 0.6)", // semi-transparent background
               border: "1px solid black",
               borderRadius: "12px",
             }}

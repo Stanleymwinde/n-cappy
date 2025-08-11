@@ -1,37 +1,36 @@
-import { Box, Button, Text, Image } from "@chakra-ui/react";
+import { Box, Button, Text, Flex } from "@chakra-ui/react";
+import Image from "next/image";
 import React from "react";
 
 type HeroProps = {
   title?: string;
   subtitle?: string;
   imageUrl?: string;
-  button?: string;
+  button?: string;   // First button text
+  button1?: string;  // Second button text
 };
 
-const Hero = ({ title, subtitle, imageUrl, button }: HeroProps) => {
+const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
   return (
     <Box
-      pt={16}
       position="relative"
-      height={{ base: "60vh", md: "90vh" }}
-      minHeight="400px"
-      maxHeight="1000px"
+      height={{ base: "70vh", md: "90vh" }}
+      minHeight="300px"
+      maxHeight="900px"
       width="100%"
       overflow="hidden"
+      pt={4}
     >
       <Image
         src={imageUrl || "/images/gtr-2.jpg"}
         alt="Hero"
-        objectFit="fill"
-        width="100%"
-        height="100%"
-        position="absolute"
-        top={0}
-        left={0}
-        zIndex={0}
+        fill
+        style={{ objectFit: "cover", position: "absolute", top: 0, left: 0, zIndex: 0, borderRadius: 0 }}
+        priority
       />
+
       <Box
-        color="white"
+        color="#0A2233"
         p={6}
         rounded="lg"
         position="relative"
@@ -60,6 +59,7 @@ const Hero = ({ title, subtitle, imageUrl, button }: HeroProps) => {
             </>
           )}
         </Text>
+
         <Text fontSize={{ base: "md", md: "xl" }} mt={6}>
           {subtitle || (
             <>
@@ -68,21 +68,40 @@ const Hero = ({ title, subtitle, imageUrl, button }: HeroProps) => {
             </>
           )}
         </Text>
-        <Button
-          mt={6}
-          bg="cyan.900"
-          color="white"
-          px={8}
-          py={6}
-          rounded="full"
-          fontWeight="bold"
-          _hover={{ bg: "blackAlpha.700" }}
-        >
-          {button || "Get Started"}
-        </Button>
+
+        <Flex gap={4} mt={6} justify="center" width="100%">
+          <Button
+            flex="1"
+            bg="cyan.900"
+            color="white"
+            px={8}
+            py={6}
+            rounded="full"
+            fontWeight="bold"
+            _hover={{ bg: "#00CAFF" }}
+          >
+            {button || "Get Started"}
+          </Button>
+
+          {button1 && (
+            <Button
+              flex="1"
+              bg="#0A2233"
+              color="white"
+              px={8}
+              py={6}
+              rounded="full"
+              fontWeight="bold"
+              _hover={{ bg: "#00CAFF" }}
+            >
+              {button1}
+            </Button>
+          )}
+        </Flex>
       </Box>
     </Box>
   );
 };
 
 export default Hero;
+
