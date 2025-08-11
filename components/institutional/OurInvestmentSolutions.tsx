@@ -1,4 +1,5 @@
 import { marginX } from "@/utils/constants";
+import { itemss } from "@/utils/constants";
 import {
   Accordion,
   Box,
@@ -33,7 +34,7 @@ const OurInvestmentSolutions = () => {
       </Text>
       <Box py={6} bg="gray.50" borderRadius="md" mt={6}>
         <Accordion.Root collapsible gap={2}>
-          {items.map((item, index) => (
+          {itemss.map((item, index) => (
             <Accordion.Item
               key={index}
               value={item.value}
@@ -183,13 +184,7 @@ const OurInvestmentSolutions = () => {
                       maxW="4xl"
                     >
                       <Text fontWeight="bold">Institutional Application:</Text>
-                      <Text fontSize="sm" mt={2}>
-                        A pension fund with multi-decade liabilities may
-                        allocate to this strategy to achieve real returns above
-                        inflation while accessing global equity growth
-                        opportunities, including early-stage innovation in
-                        emerging markets.
-                      </Text>
+                      <Text fontSize="sm" mt={2}></Text>
                     </Box>
                   </Box>
                 </Accordion.ItemBody>
@@ -203,29 +198,3 @@ const OurInvestmentSolutions = () => {
 };
 
 export default OurInvestmentSolutions;
-
-const items = [
-  {
-    value: "a",
-    title: "Equity Strategy",
-    text: "Pursuing Sustainable Capital Growth Across Market Cycles",
-    keyDifferentiators: [
-      "Rigorous Stock Selection",
-      "Sector & Geographic Diversification",
-      "Forward-Looking Themes",
-      "Sustainable Investing Integration",
-    ],
-    image: "/images/Charles.png",
-    video: "https://www.youtube.com/watch?v=example", // Placeholder for video URL
-  },
-  {
-    value: "b",
-    title: "Balanced Strategy",
-    text: "Optimizing Risk-Adjusted Returns Through Asset Class Synergy",
-  },
-  {
-    value: "c",
-    title: "Fixed Income Strategy",
-    text: " Preserving Capital and Generating Reliable Income",
-  },
-];

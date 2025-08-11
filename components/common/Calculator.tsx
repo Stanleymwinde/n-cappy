@@ -107,8 +107,8 @@ export default function Page() {
               borderRadius="md"
               bgGradient="linear(to-r, blue.800, blue.400)"
               color="white"
-              px={4}
-              py={4}
+              px={2}
+              py={2}
               _focusVisible={{ outline: "2px solid white" }}
             >
               <Select.Trigger>

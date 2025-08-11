@@ -182,7 +182,7 @@ export const WhatAreYourGoalsData = [
   {
     title: "Match assets to liabilities",
     description:
-      "We’ll help you build a smart savings plan for education—without the stress",
+      "We’ll help you build a smart savings plan for education. Without the stress",
     points: [
       "Competitive returns above inflation",
       "Proffesional Fund Management",
@@ -204,7 +204,7 @@ export const WhatAreYourGoalsData = [
       "Withdraw funds when you need them",
     ],
     icon: "LuSquareCheck",
-    button: "Explore Funds",
+    button: "Learn More",
     image: "/images/carol.png",
   },
   {
@@ -225,56 +225,44 @@ export const WhatAreYourGoalsData = [
 
 export const TreasuryGoalsData = [
   {
-    title: "Deliver sustainable returns",
+    title: "Stay liquid without losing value",
     description:
-      "Whether you're building wealth, securing your future or planning for a milestone, intentional saving sets the foundation for financial freedom.",
+      "Life doesn’t wait. Whether it’s a business opportunity, an emergency, or a personal goal, you want quick access to your money; without it sitting idle or losing value to inflation. Our cash and liquidity solutions help you balance accessibility with intelligent growth.",
     points: [
-      "Competitive returns above inflation",
-      "Proffesional Fund Management",
-      "Diversified Low-Risk Portfolio",
-      "Withdraw funds when you need them",
+      
     ],
     icon: "LuUser",
     button: "Learn More",
-    image: "/images/carol.png",
+    image: "/images/treasuryyy.png",
   },
   {
-    title: "Match assets to liabilities",
+    title: "Stay ready for opportunities",
     description:
       "We’ll help you build a smart savings plan for education—without the stress",
     points: [
-      "Competitive returns above inflation",
-      "Proffesional Fund Management",
-      "Diversified Low-Risk Portfolio",
-      "Withdraw funds when you need them",
+      
     ],
     icon: "LuFolder",
     button: "Learn More",
     image: "/images/carol.png",
   },
   {
-    title: "Diversify and maximize portfolio efficiency",
+    title: "Stay liquid without loosing capital ",
     description:
       "Explore the world without financial worries. Save intentionally for unforgettable memories.",
     points: [
-      "Competitive returns above inflation",
-      "Proffesional Fund Management",
-      "Diversified Low-Risk Portfolio",
-      "Withdraw funds when you need them",
+      
     ],
     icon: "LuSquareCheck",
-    button: "Explore Funds",
+    button: "Learn More",
     image: "/images/carol.png",
   },
   {
-    title: "Grow surplus capital",
+    title: "Preserve capital",
     description:
       "Retire on your terms. Build a financial cushion that lets you enjoy life’s golden years with peace and pride.",
     points: [
-      "Competitive returns above inflation",
-      "Proffesional Fund Management",
-      "Diversified Low-Risk Portfolio",
-      "Withdraw funds when you need them",
+      
     ],
     icon: "LuSquareCheck",
     button: "Learn More",
@@ -285,9 +273,9 @@ export const TreasuryGoalsData = [
 export const CoreStrategiessData = [
   {
     title: "Equity Strategy",
-    subtitle: "Sustainable Capital Growth Across Market Cycles",
+    subtitle: "Sustainable Capital Growth Across Market Cyclesssssss",
     description: [
-      "Our equity strategy focuses on identifying quality companies with sustainable competitive advantages and strong growth potential. We employ a disciplined investment process that combines fundamental analysis with valuation discipline to deliver consistent alpha across market cycles.",
+      "Our equitys strategy focuses on identifying quality companies with sustainable competitive advantages and strong growth potential. We employ a disciplined investment process that combines fundamental analysis with valuation discipline to deliver consistent alpha across market cycles.",
     ],
     pdf: "/pdfs/Equity-Strategy.pdf",
     icon: "LuUser",
@@ -478,6 +466,32 @@ export const investmentData = [
     cta: "Balanced Fund (USD) Fact Sheet",
   },
 ];
+
+export const itemss = [
+  {
+    value: "a",
+    title: "Equity Strategy",
+    text: "Pursuing Sustainable Capital Growth Across Market Cycles",
+    points: [
+      "Rigorous Stock Selection: Active, research-intensive process grounded in intrinsic value and growth potential",
+      "Rigorous Stock Selection: Active, research-intensive process grounded in intrinsic value and growth potential",
+      "Rigorous Stock Selection: Active, research-intensive process grounded in intrinsic value and growth potential",
+      "Rigorous Stock Selection: Active, research-intensive process grounded in intrinsic value and growth potential",
+      ],
+      
+
+  },
+  {
+    value: "b",
+    title: "Balanced Strategy",
+    text: "Optimizing Risk-Adjusted Returns Through Asset Class Synergy",
+  },
+  {
+    value: "c",
+    title: "Fixed Income Strategy",
+    text: " Preserving Capital and Generating Reliable Income",
+  },
+  ];
 export const teamMembers = [
   {
     image: "/images/Moses1.png",
