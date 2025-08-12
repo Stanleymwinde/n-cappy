@@ -45,7 +45,7 @@ const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
         left={0}
         right={0}
         bottom={0}
-        bg="rgba(0, 0, 0, 0.5)" // Adjust opacity as needed
+        bg="rgba(0, 0, 0, 0.2)"
         zIndex={1}
       />
 
@@ -55,7 +55,7 @@ const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
         p={6}
         rounded="lg"
         position="relative"
-        zIndex={2} // Ensure content is above overlay
+        zIndex={2}
         width={{ base: "100%", md: "45%" }}
         ml={{ base: 4, md: 32 }}
         fontFamily="Poppins"
@@ -92,7 +92,6 @@ const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
 
         <Flex gap={4} mt={6} justify="center" width="100%" flexWrap="wrap">
           <Button
-           
             bg="cyan.900"
             color="white"
             px={6}
@@ -105,6 +104,7 @@ const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
           </Button>
 
           {button1 && (
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Link href="#" passHref>
               <Button
@@ -120,10 +120,24 @@ const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
                   transform: "scale(1.05)",
                   cursor: "pointer",
                 }}
+=======
+            <Link href="/individual" passHref>
+              <Button
+                as="a"
+                flex="1"
+                bg="#0A2233"
+                color="white"
+                px={6}
+                py={6}
+                rounded="full"
+                fontWeight="bold"
+                _hover={{ bg: "#00CAFF" }}
+>>>>>>> 90d327ab3a2f305488cf6854ed461fca780f0ae8
               >
                 {button1}
               </Button>
             </Link>
+<<<<<<< HEAD
 =======
             <Button
               flex="1"
@@ -138,6 +152,8 @@ const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
               {button1}
             </Button>
 >>>>>>> 7497ad1222a2a913b5e6f5250f837d47d3e17df5
+=======
+>>>>>>> 90d327ab3a2f305488cf6854ed461fca780f0ae8
           )}
         </Flex>
       </Box>
