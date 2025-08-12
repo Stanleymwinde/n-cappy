@@ -1,5 +1,6 @@
 import { Box, Button, Text, Flex } from "@chakra-ui/react";
 import Image from "next/image";
+import Link from "next/link"; // <-- add this
 import React from "react";
 
 type HeroProps = {
@@ -44,7 +45,7 @@ const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
         left={0}
         right={0}
         bottom={0}
-        bg="rgba(0, 0, 0, 0.5)" // Adjust opacity as needed
+        bg="rgba(0, 0, 0, 0.2)"
         zIndex={1}
       />
 
@@ -54,7 +55,7 @@ const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
         p={6}
         rounded="lg"
         position="relative"
-        zIndex={2} // Ensure content is above overlay
+        zIndex={2}
         width={{ base: "100%", md: "45%" }}
         ml={{ base: 4, md: 32 }}
         fontFamily="Poppins"
@@ -91,7 +92,6 @@ const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
 
         <Flex gap={4} mt={6} justify="center" width="100%">
           <Button
-           
             bg="cyan.900"
             color="white"
             px={6}
@@ -104,18 +104,21 @@ const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
           </Button>
 
           {button1 && (
-            <Button
-              flex="1"
-              bg="#0A2233"
-              color="white"
-              px={6}
-              py={6}
-              rounded="full"
-              fontWeight="bold"
-              _hover={{ bg: "#00CAFF" }}
-            >
-              {button1}
-            </Button>
+            <Link href="/individual" passHref>
+              <Button
+                as="a"
+                flex="1"
+                bg="#0A2233"
+                color="white"
+                px={6}
+                py={6}
+                rounded="full"
+                fontWeight="bold"
+                _hover={{ bg: "#00CAFF" }}
+              >
+                {button1}
+              </Button>
+            </Link>
           )}
         </Flex>
       </Box>
