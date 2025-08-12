@@ -3,7 +3,6 @@ import { LifestylePlans, marginX } from "@/utils/constants";
 import {
   Box,
   Button,
-  Card,
   Grid,
   GridItem,
   Heading,
@@ -15,13 +14,8 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { BsCashCoin } from "react-icons/bs";
-import { FaHandsHelping, FaHeart } from "react-icons/fa";
-import { MdOutlineRealEstateAgent } from "react-icons/md";
-import { useColorModeValue } from "../ui/color-mode";
 
-const QuestionPack = () => {
-  const cardBg = useColorModeValue("white", "gray.800");
+const EduQuestionsComponent = () => {
   const [activePlanIndex, setActivePlanIndex] = useState<number | null>(null);
   const [questionIndex, setQuestionIndex] = useState(0);
 
@@ -33,8 +27,10 @@ const QuestionPack = () => {
   const activePlan =
     activePlanIndex !== null ? LifestylePlans[activePlanIndex] : null;
   const activeQuestion = activePlan?.questions[questionIndex];
+
   return (
     <Box marginX={marginX} py={10} bg="white">
+      {/* Header Section */}
       <VStack gap={3} textAlign="center" mb={8}>
         <Heading fontSize={{ base: "2xl", md: "3xl" }} color="blue.900">
           Building Blocks of Your Legacy
@@ -46,6 +42,7 @@ const QuestionPack = () => {
         </Text>
       </VStack>
 
+      {/* Plans Grid */}
       <Grid templateColumns={{ base: "1fr", md: "repeat(5, 1fr)" }} gap={6}>
         {LifestylePlans.map((block, idx) => (
           <GridItem
@@ -61,7 +58,7 @@ const QuestionPack = () => {
               border="1px"
               borderColor="gray.200"
               borderRadius="2xl"
-              bg={cardBg}
+              bg="white"
               height="100%"
               boxShadow="sm"
               _hover={{ boxShadow: "md" }}
@@ -84,7 +81,7 @@ const QuestionPack = () => {
                 </Text>
               </VStack>
 
-              {/* Centered Explore More Button */}
+              {/* Centered Button */}
               <Button
                 mt={4}
                 size="sm"
@@ -104,6 +101,7 @@ const QuestionPack = () => {
         ))}
       </Grid>
 
+      {/* Active Question Section */}
       <VStack gap={6} p={6}>
         {activePlan && activeQuestion && (
           <Box
@@ -123,6 +121,7 @@ const QuestionPack = () => {
               gap={6}
               flexDir={{ base: "column", md: "row" }}
             >
+              {/* Question Image */}
               <Box flex={1}>
                 <Image
                   src={activeQuestion.image}
@@ -130,9 +129,11 @@ const QuestionPack = () => {
                   borderRadius="lg"
                   objectFit="cover"
                   width="100%"
-                  height="250px"
+                  height={{ base: "200px", md: "250px" }}
                 />
               </Box>
+
+              {/* Question Text & Input */}
               <VStack align="start" gap={4} flex={2}>
                 <Text fontSize="xl" fontWeight="bold">
                   {activeQuestion.question}
@@ -141,6 +142,8 @@ const QuestionPack = () => {
                 <Text fontSize="sm" color="gray.600">
                   {activeQuestion.hint}
                 </Text>
+
+                {/* Navigation Button */}
                 <Button
                   mt={4}
                   onClick={() => {
@@ -148,7 +151,7 @@ const QuestionPack = () => {
                     if (next < activePlan.questions.length) {
                       setQuestionIndex(next);
                     } else {
-                      setActivePlanIndex(null); // Done with this plan
+                      setActivePlanIndex(null); // Reset to plans view
                     }
                   }}
                 >
@@ -165,4 +168,4 @@ const QuestionPack = () => {
   );
 };
 
-export default QuestionPack;
+export default EduQuestionsComponent;

@@ -1,13 +1,16 @@
 import Hero from "@/components/common/Hero";
 import { CallToAction } from "@/components/home";
 import { PlanForJoy, QuestionPacks } from "@/components/i-want-tos";
+import {  Rates } from "@/components/common";
 import React from "react";
 
 const page = () => {
   return (
     <>
+      <Rates />
       <Hero
         button="Unlock My Plan"
+         button1="Learn More"
         imageUrl="/images/lifestyle-hero.png"
         title="Live Purposefully.Save Deliberately."
         subtitle="Secure the day-to-day, and create room to breathe, plan, and enjoy life."

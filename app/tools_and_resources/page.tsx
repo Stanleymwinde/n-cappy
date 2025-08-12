@@ -10,7 +10,7 @@ const page = () => {
     <>
       <Rates />
       <Hero
-        title="Tools & Resources"
+        title="Investor's Companion"
         subtitle="Everything You Need to make Informed Investment Decisions"
         button="Explore"
         imageUrl="/images/rc.jpeg"
