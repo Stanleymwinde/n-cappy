@@ -3,12 +3,15 @@ import { CallToAction } from "@/components/home";
 import { PlanForJoy,  } from "@/components/i-want-tos";
 import React from "react";
 import { EduQuestions } from "../../components/Education";
+import {  Rates } from "@/components/common";
+
 
 
 
 const page = () => {
   return (
     <>
+     <Rates />
       <Hero
         button="Unlock My Plan"
          button1="Learn More"
