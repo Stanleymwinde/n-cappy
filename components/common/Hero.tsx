@@ -104,18 +104,20 @@ const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
           </Button>
 
           {button1 && (
-            <Button
-              flex="1"
-              bg="#0A2233"
-              color="white"
-              px={6}
-              py={6}
-              rounded="full"
-              fontWeight="bold"
-              _hover={{ bg: "#00CAFF" }}
-            >
-              {button1}
-            </Button>
+            <Link href="/individual" passHref>
+              <Button
+                flex="1"
+                bg="#0A2233"
+                color="white"
+                px={6}
+                py={6}
+                rounded="full"
+                fontWeight="bold"
+                _hover={{ bg: "#00CAFF" }}
+              >
+                {button1}
+              </Button>
+            </Link>
           )}
         </Flex>
       </Box>
