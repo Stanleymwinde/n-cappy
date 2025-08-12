@@ -96,7 +96,7 @@ const InvestmentSolutions = () => {
               borderRadius="md"
               _hover={{ bgColor: "blue.200" }}
             >
-              INVEST NOW
+              LEARN MORE
             </Box>
           </Flex>
         </Box>
@@ -164,7 +164,7 @@ const InvestmentSolutions = () => {
               borderRadius="md"
               _hover={{ bgColor: "blue.200" }}
             >
-              INVEST NOW
+              LEARN MORE
             </Box>
           </Flex>
         </Box>
