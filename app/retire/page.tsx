@@ -1,12 +1,20 @@
+"use client";
+
 import Hero from "@/components/common/Hero";
 import { CallToAction } from "@/components/home";
 import { PlanForJoy } from "@/components/i-want-tos";
 import { RetireQuestions } from "@/components/retire"; 
-import React from "react";
+import {  Rates } from "@/components/common";
+import React, { useState } from "react";
 
 const Page = () => {
+  
+  const [goal, setGoal] = useState("");
+
   return (
     <>
+      <Rates />
+      
       <Hero
         button="Unlock My Plan"
         button1="Learn More"
@@ -21,7 +29,12 @@ const Page = () => {
 Let your story echo through generations`}
         imageUrl="/images/retire-plan.png"
       />
+
+      
+      
+
       <RetireQuestions /> 
+  
       <CallToAction />
     </>
   );

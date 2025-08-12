@@ -1,45 +1,54 @@
 import {
   marginX,
   TreasuryGoalsData,
-  WhatAreYourGoalsData,
 } from "@/utils/constants";
 import {
   Box,
-  Button,
   Flex,
   Heading,
   Image,
   Tabs,
   Text,
 } from "@chakra-ui/react";
-import Link from "next/link";
 import * as Icons from "react-icons/lu";
 import React from "react";
 
 const TreasuryGoals = () => {
   return (
-    <Box marginX={marginX} py={1}>
+    <Box marginX={marginX} py={1} mt={20}>
+      {/* Main Heading */}
       <Heading
         as="h1"
-        fontSize={{ base: "2xl", md: "5xl" }}
+        fontSize={{ base: "5xl", md: "6xl" }} // increased size
         fontFamily="poppins"
         textAlign="center"
-        my={4} // Reduced the margin to bring the heading closer to the next text
+        mb={8} // added more bottom margin for space
         color="gray.800"
       >
         What Are Your Financial Goals?
       </Heading>
-      <Text marginX={marginX} fontSize={{ base: "md", md: "xl" }} mb={6}>
+
+      {/* Subheading */}
+      <Text
+        marginX={marginX}
+        fontSize={{ base: "md", md: "xl" }}
+        mb={6}
+      >
         I want to ...
       </Text>
 
+      {/* Tabs */}
       <Tabs.Root defaultValue="goal-0" variant="plain">
         <Flex justify="center" align="center" width="100%" py={4}>
           <Tabs.List bg="bg.muted" rounded="l3" p="1">
             {TreasuryGoalsData.map((goal, index) => {
               const Icon = Icons[goal.icon as keyof typeof Icons];
               return (
-                <Tabs.Trigger key={index} value={`goal-${index}`}>
+                <Tabs.Trigger
+                  key={index}
+                  value={`goal-${index}`}
+                  fontSize="sm" 
+                >
                   {Icon && <Icon />} {goal.title}
                 </Tabs.Trigger>
               );
@@ -60,6 +69,7 @@ const TreasuryGoals = () => {
                 height="100%"
                 gap={8}
               >
+                {/* Text Section */}
                 <Flex
                   direction="column"
                   flex="1"
@@ -91,6 +101,8 @@ const TreasuryGoals = () => {
                     ))}
                   </ul>
                 </Flex>
+
+                {/* Image Section */}
                 {goal.image && (
                   <Box
                     flex="1"

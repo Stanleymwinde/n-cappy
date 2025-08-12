@@ -3,7 +3,6 @@ import { RetirePlans, marginX } from "@/utils/constants";  // <-- fixed import h
 import {
   Box,
   Button,
-  Card,
   Grid,
   GridItem,
   Heading,
@@ -15,9 +14,6 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { BsCashCoin } from "react-icons/bs";
-import { FaHandsHelping, FaHeart } from "react-icons/fa";
-import { MdOutlineRealEstateAgent } from "react-icons/md";
 import { useColorModeValue } from "../ui/color-mode";
 
 const RetireQuestions = () => {
@@ -66,6 +62,9 @@ const RetireQuestions = () => {
               height="100%"
               boxShadow="sm"
               _hover={{ boxShadow: "md" }}
+              display="flex"
+              flexDirection="column"
+              justifyContent="space-between"
             >
               <VStack gap={3} align="start">
                 <Box
@@ -84,10 +83,25 @@ const RetireQuestions = () => {
                   {block.description}
                 </Text>
               </VStack>
+
+              <Button
+                mt={4}
+                size="sm"
+                colorScheme="#0A2233"
+                bg="#0A2233"
+                rounded="full"
+                fontWeight="bold"
+                _hover={{ bg: "#00CAFF" }}
+                 onClick={() => handleCardClick(idx)}
+               
+              >
+                Explore More
+              </Button>
             </Box>
           </GridItem>
         ))}
       </Grid>
+
       <VStack gap={6} p={6}>
         {activePlan && activeQuestion && (
           <Box
@@ -132,7 +146,7 @@ const RetireQuestions = () => {
                     if (next < activePlan.questions.length) {
                       setQuestionIndex(next);
                     } else {
-                      setActivePlanIndex(null); // Done with this plan
+                      setActivePlanIndex(null); 
                     }
                   }}
                 >

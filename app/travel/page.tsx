@@ -2,12 +2,15 @@ import Hero from "@/components/common/Hero";
 import { CallToAction } from "@/components/home";
 import { PlanForJoy } from "@/components/i-want-tos";
 import QuestionPack from "@/components/i-want-tos/QuestionPack";
+import {  Rates } from "@/components/common";
 
 import React from "react";
 
 const page = () => {
   return (
-    <>
+    <> 
+      <Rates />
+
       <Hero
         button="Unlock My Plan"
         button1="Learn More"

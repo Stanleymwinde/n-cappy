@@ -6,8 +6,8 @@ type HeroProps = {
   title?: string;
   subtitle?: string;
   imageUrl?: string;
-  button?: string;   // First button text
-  button1?: string;  // Second button text
+  button?: string;
+  button1?: string;
 };
 
 const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
@@ -21,20 +21,40 @@ const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
       overflow="hidden"
       pt={4}
     >
+      {/* Background Image */}
       <Image
         src={imageUrl || "/images/gtr-2.jpg"}
         alt="Hero"
         fill
-        style={{ objectFit: "cover", position: "absolute", top: 0, left: 0, zIndex: 0, borderRadius: 0 }}
+        style={{
+          objectFit: "cover",
+          position: "absolute",
+          top: 0,
+          left: 0,
+          zIndex: 0,
+          borderRadius: 0,
+        }}
         priority
       />
 
+      {/* Black Overlay */}
       <Box
-        color="#0A2233"
+        position="absolute"
+        top={0}
+        left={0}
+        right={0}
+        bottom={0}
+        bg="rgba(0, 0, 0, 0.5)" // Adjust opacity as needed
+        zIndex={1}
+      />
+
+      {/* Hero Content */}
+      <Box
+        color="white"
         p={6}
         rounded="lg"
         position="relative"
-        zIndex={1}
+        zIndex={2} // Ensure content is above overlay
         width={{ base: "100%", md: "45%" }}
         ml={{ base: 4, md: 32 }}
         fontFamily="Poppins"
@@ -71,10 +91,10 @@ const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
 
         <Flex gap={4} mt={6} justify="center" width="100%">
           <Button
-            flex="1"
+           
             bg="cyan.900"
             color="white"
-            px={8}
+            px={6}
             py={6}
             rounded="full"
             fontWeight="bold"
@@ -88,7 +108,7 @@ const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
               flex="1"
               bg="#0A2233"
               color="white"
-              px={8}
+              px={6}
               py={6}
               rounded="full"
               fontWeight="bold"
@@ -104,4 +124,3 @@ const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
 };
 
 export default Hero;
-

@@ -154,7 +154,7 @@
 
 "@chakra-ui/react@^3.24.2":
   version "3.24.2"
-  resolved "https://registry.npmjs.org/@chakra-ui/react/-/react-3.24.2.tgz"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/react/-/react-3.24.2.tgz#f01eb790ddd07d934c80c3f522aa915a6e2f0927"
   integrity sha512-FT+WR7WVZOTA+9m5adRrtxPuVh4Y45EsUIX8JimRut3e1U6j6Ddkas9kdUcvy90tkIMhRvvZXq3smDH9buVGtw==
   dependencies:
     "@ark-ui/react" "5.18.2"
@@ -220,7 +220,7 @@
 
 "@emotion/react@^11.14.0":
   version "11.14.0"
-  resolved "https://registry.npmjs.org/@emotion/react/-/react-11.14.0.tgz"
+  resolved "https://registry.yarnpkg.com/@emotion/react/-/react-11.14.0.tgz#cfaae35ebc67dd9ef4ea2e9acc6cd29e157dd05d"
   integrity sha512-O000MLDBDdk/EohJPFUqvnp4qnHeYkVP5B0xEG0D/L7cOKP9kefu2DXn8dj74cQfsEzUqh+sr1RzFqiL1o+PpA==
   dependencies:
     "@babel/runtime" "^7.18.3"
@@ -250,7 +250,7 @@
 
 "@emotion/styled@^11.14.1":
   version "11.14.1"
-  resolved "https://registry.npmjs.org/@emotion/styled/-/styled-11.14.1.tgz"
+  resolved "https://registry.yarnpkg.com/@emotion/styled/-/styled-11.14.1.tgz#8c34bed2948e83e1980370305614c20955aacd1c"
   integrity sha512-qEEJt42DuToa3gurlH4Qqc1kVpNq8wO8cJtDzU46TjlzWjDlsVyevtYCRijVq3SrHsROS+gVQ8Fnea108GnKzw==
   dependencies:
     "@babel/runtime" "^7.18.3"
@@ -1556,7 +1556,7 @@ find-root@^1.1.0:
 
 framer-motion@^12.23.12:
   version "12.23.12"
-  resolved "https://registry.npmjs.org/framer-motion/-/framer-motion-12.23.12.tgz"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-12.23.12.tgz#80cf6fd7c111073a0c558e336c85ca36cca80d3d"
   integrity sha512-6e78rdVtnBvlEVgu6eFEAgG9v3wLnYEboM8I5O5EXvfKC8gxGQB8wXJdhkMy10iVcn05jl6CNw7/HTsTCfwcWg==
   dependencies:
     motion-dom "^12.23.12"
