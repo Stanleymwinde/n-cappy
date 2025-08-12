@@ -91,10 +91,10 @@ const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
 
         <Flex gap={4} mt={6} justify="center" width="100%">
           <Button
-            flex="1"
+           
             bg="cyan.900"
             color="white"
-            px={8}
+            px={6}
             py={6}
             rounded="full"
             fontWeight="bold"
@@ -108,7 +108,7 @@ const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
               flex="1"
               bg="#0A2233"
               color="white"
-              px={8}
+              px={6}
               py={6}
               rounded="full"
               fontWeight="bold"
