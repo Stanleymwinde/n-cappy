@@ -8,6 +8,7 @@ const page = () => {
     <>
       <Hero
         button="Unlock My Plan"
+        button1="Learn More"
         imageUrl="/images/lifestyle-hero.png"
         title="Live Purposefully.Save Deliberately."
         subtitle="Secure the day-to-day, and create room to breathe, plan, and enjoy life."

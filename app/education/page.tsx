@@ -8,6 +8,7 @@ const page = () => {
     <>
       <Hero
         button="Unlock My Plan"
+        button1="Learn More"
         imageUrl="/images/education-hero.png"
         title="For life’s big moments and the unexpected"
         subtitle="True peace of mind is being financially ready."

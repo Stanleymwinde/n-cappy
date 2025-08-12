@@ -1,13 +1,14 @@
 import { Box, Button, Text, Flex } from "@chakra-ui/react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 type HeroProps = {
   title?: string;
   subtitle?: string;
   imageUrl?: string;
-  button?: string;   // First button text
-  button1?: string;  // Second button text
+  button?: string; // First button text
+  button1?: string; // Second button text
 };
 
 const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
@@ -25,7 +26,14 @@ const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
         src={imageUrl || "/images/gtr-2.jpg"}
         alt="Hero"
         fill
-        style={{ objectFit: "cover", position: "absolute", top: 0, left: 0, zIndex: 0, borderRadius: 0 }}
+        style={{
+          objectFit: "cover",
+          position: "absolute",
+          top: 0,
+          left: 0,
+          zIndex: 0,
+          borderRadius: 0,
+        }}
         priority
       />
 
@@ -69,13 +77,12 @@ const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
           )}
         </Text>
 
-        <Flex gap={4} mt={6} justify="center" width="100%">
+        <Flex gap={4} mt={6} justify="center" width="100%" flexWrap="wrap">
           <Button
             flex="1"
+            height="56px"
             bg="cyan.900"
             color="white"
-            px={8}
-            py={6}
             rounded="full"
             fontWeight="bold"
             _hover={{ bg: "#00CAFF" }}
@@ -84,18 +91,24 @@ const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
           </Button>
 
           {button1 && (
-            <Button
-              flex="1"
-              bg="#0A2233"
-              color="white"
-              px={8}
-              py={6}
-              rounded="full"
-              fontWeight="bold"
-              _hover={{ bg: "#00CAFF" }}
-            >
-              {button1}
-            </Button>
+            <Link href="#" passHref>
+              <Button
+                as="a"
+                flex="1"
+                height="56px"
+                bg="#0A2233"
+                color="white"
+                rounded="full"
+                fontWeight="bold"
+                _hover={{
+                  bg: "#00CAFF",
+                  transform: "scale(1.05)",
+                  cursor: "pointer",
+                }}
+              >
+                {button1}
+              </Button>
+            </Link>
           )}
         </Flex>
       </Box>
@@ -104,4 +117,3 @@ const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
 };
 
 export default Hero;
-
