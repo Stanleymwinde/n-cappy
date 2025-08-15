@@ -57,7 +57,7 @@ const Hero = ({ title, subtitle, imageUrl, button, button1, scrollTarget }: Hero
         p={6}
         rounded="lg"
         position="relative"
-        zIndex={2}
+        zIndex={2} // Ensure content is above overlay
         width={{ base: "100%", md: "45%" }}
         ml={{ base: 4, md: 16 }}  
         fontFamily="Poppins"
@@ -121,10 +121,10 @@ const Hero = ({ title, subtitle, imageUrl, button, button1, scrollTarget }: Hero
             </Button>
           )}
 
+
           {button1 && (
             <Link href="/individual" passHref>
               <Button
-                as="a"
                 flex="1"
                 bg="#0A2233"
                 color="white"
