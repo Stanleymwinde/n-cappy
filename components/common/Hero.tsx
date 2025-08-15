@@ -59,16 +59,16 @@ const Hero = ({ title, subtitle, imageUrl, button, button1, scrollTarget }: Hero
         position="relative"
         zIndex={2}
         width={{ base: "100%", md: "45%" }}
-        ml={{ base: 4, md: 16 }}  // slightly moved left
+        ml={{ base: 4, md: 16 }}  
         fontFamily="Poppins"
         maxWidth="100%"
         boxSizing="border-box"
         display="flex"
         flexDirection="column"
-        alignItems="flex-start"  // left-aligned
+        alignItems="flex-start"  
         justifyContent="center"
         height="80%"
-        textAlign="left"  // left text
+        textAlign="left"  
       >
         <Text
           fontSize={{ base: "3xl", md: "5xl" }}
@@ -92,7 +92,7 @@ const Hero = ({ title, subtitle, imageUrl, button, button1, scrollTarget }: Hero
           )}
         </Text>
 
-        <Flex gap={4} mt={6} justify="flex-start" width="100%"> {/* left-aligned buttons */}
+        <Flex gap={4} mt={6} justify="flex-start" width="100%"> 
           {scrollTarget ? (
             <a href={scrollTarget}>
               <Button

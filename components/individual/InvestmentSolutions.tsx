@@ -13,11 +13,13 @@ const InvestmentSolutions = () => {
       bgColor="white"
       boxShadow="md"
       borderRadius="md"
+      mt={15}
     >
       <Heading
         as="h1"
-        fontSize={{ base: "2xl", md: "5xl" }}
+        fontSize={{ base: "3xl", md: "6xl" }}
         fontFamily="poppins"
+        fontWeight={"bold"}
         textAlign="center"
         my={6}
         color="gray.800"

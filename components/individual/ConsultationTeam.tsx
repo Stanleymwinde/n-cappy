@@ -15,11 +15,12 @@ import React from "react";
 
 const ConsultationTeam = () => {
   return (
-    <Box id="consultation" marginX={marginX} py={5} textAlign="center">
+    <Box id="consultation" marginX={marginX} py={5} textAlign="center"  mt={15}>
       <Heading
         as="h1"
-        fontSize={{ base: "2xl", md: "5xl" }} 
+        fontSize={{ base: "3xl", md: "6xl" }} 
         fontFamily="poppins"
+        fontWeight={"bold"}
         my={6}
         color="gray.800"
       >
