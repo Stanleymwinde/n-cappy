@@ -244,7 +244,7 @@ export const TreasuryGoalsData = [
     ],
     icon: "LuFolder",
     button: "Learn More",
-    image: "/images/carol.png",
+    image: "/images/treasuryyy.png",
   },
   {
     title: "Stay liquid without loosing capital ",
@@ -255,7 +255,7 @@ export const TreasuryGoalsData = [
     ],
     icon: "LuSquareCheck",
     button: "Learn More",
-    image: "/images/carol.png",
+    image: "/images/treasuryyy.png",
   },
   {
     title: "Preserve capital",
@@ -266,7 +266,7 @@ export const TreasuryGoalsData = [
     ],
     icon: "LuSquareCheck",
     button: "Learn More",
-    image: "/images/carol.png",
+    image: "/images/treasuryyy.png",
   },
 ];
 
