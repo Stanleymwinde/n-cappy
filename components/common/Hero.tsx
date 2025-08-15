@@ -47,7 +47,7 @@ const Hero = ({ title, subtitle, imageUrl, button, button1, scrollTarget }: Hero
         left={0}
         right={0}
         bottom={0}
-        bg="rgba(0, 0, 0, 0.4)"
+        bg="rgba(0, 0, 0, 0.3)"
         zIndex={1}
       />
 
@@ -92,7 +92,7 @@ const Hero = ({ title, subtitle, imageUrl, button, button1, scrollTarget }: Hero
           )}
         </Text>
 
-        <Flex gap={4} mt={6} justify="flex-start" width="100%"> 
+        <Flex gap={4} mt={5} justify="flex-start" width="100%"> 
           {scrollTarget ? (
             <a href={scrollTarget}>
               <Button
