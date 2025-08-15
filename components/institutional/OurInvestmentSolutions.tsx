@@ -3,7 +3,6 @@ import { itemss } from "@/utils/constants";
 import {
   Accordion,
   Box,
-  Flex,
   Grid,
   GridItem,
   Heading,
@@ -30,7 +29,9 @@ const OurInvestmentSolutions = () => {
         Our Investment Solutions
       </Heading>
       <Text fontSize="md" color="gray.600" textAlign="center">
-       We offer comprehensive solutions designed to optimize your financial position while maintaining the flexibility and security your organization demands.
+        We offer comprehensive solutions designed to optimize your financial
+        position while maintaining the flexibility and security your
+        organization demands.
       </Text>
       <Box py={6} bg="gray.50" borderRadius="md" mt={6}>
         <Accordion.Root collapsible gap={2}>
@@ -56,12 +57,12 @@ const OurInvestmentSolutions = () => {
                 <Accordion.ItemBody>
                   <Box px={{ base: 4, md: 16 }} bg="white">
                     <Text fontSize="lg" mb={6} maxW="4xl">
-                    Our Equity Strategy is designed for institutions 
-                    seeking to maximize long-term capital appreciation
-                    through high-conviction investments in quality companies.
-                    We employ a fundamentally driven, bottom-up approach that 
-                    targets businesses with strong earnings potential, durable 
-                    competitive advantages, and prudent capital allocation
+                      Our Equity Strategy is designed for institutions seeking
+                      to maximize long-term capital appreciation through
+                      high-conviction investments in quality companies. We
+                      employ a fundamentally driven, bottom-up approach that
+                      targets businesses with strong earnings potential, durable
+                      competitive advantages, and prudent capital allocation
                     </Text>
 
                     <Grid
@@ -91,14 +92,14 @@ const OurInvestmentSolutions = () => {
                           <li
                             style={{
                               display: "flex",
-                              alignItems: "center",
+                              // alignItems: "center",
                               gap: "16px",
                             }}
                           >
                             <MdFiberManualRecord color="blue.700" />
-                            <Text>
-                              Rigorous Stock Selection: Active, research-intensive process grounded in intrinsic value and growth potential
-                            </Text>
+                            Rigorous Stock Selection: Active, research-intensive
+                            process grounded in intrinsic value and growth
+                            potential
                           </li>
                           <li
                             style={{
@@ -110,7 +111,9 @@ const OurInvestmentSolutions = () => {
                           >
                             <MdFiberManualRecord color="blue.700" />
                             <Text lineHeight={"1.6"}>
-                              Sector & Geographic Diversification: Risk-adjusted exposure across developed, emerging, and frontier markets
+                              Sector & Geographic Diversification: Risk-adjusted
+                              exposure across developed, emerging, and frontier
+                              markets
                             </Text>
                           </li>
                           <li
@@ -122,7 +125,10 @@ const OurInvestmentSolutions = () => {
                           >
                             <MdFiberManualRecord color="blue.700" />
                             <Text>
-                             Forward-Looking Themes: Allocation to secular growth trends in technology, healthcare innovation, energy transition, and digital infrastructure
+                              Forward-Looking Themes: Allocation to secular
+                              growth trends in technology, healthcare
+                              innovation, energy transition, and digital
+                              infrastructure
                             </Text>
                           </li>
                           <li
@@ -134,7 +140,10 @@ const OurInvestmentSolutions = () => {
                           >
                             <MdFiberManualRecord color="blue.700" />
                             <Text>
-                             Sustainable Investing Integration: ESG considerations embedded into investment decisions to ensure alignment with global sustainability standards and stakeholder expectations
+                              Sustainable Investing Integration: ESG
+                              considerations embedded into investment decisions
+                              to ensure alignment with global sustainability
+                              standards and stakeholder expectations
                             </Text>
                           </li>
                         </Box>
@@ -166,7 +175,6 @@ const OurInvestmentSolutions = () => {
                       </GridItem>
                     </Grid>
 
-                
                     {/* Featured Deal Box */}
                     <Box
                       bg="blue.900"
@@ -176,12 +184,8 @@ const OurInvestmentSolutions = () => {
                       borderRadius="md"
                       maxW="4xl"
                     >
-                      <Text fontWeight="bold">
-                        Institutional Application:
-                      </Text>
-                      <Text fontSize="sm" mt={2}>
-                        
-                      </Text>
+                      <Text fontWeight="bold">Institutional Application:</Text>
+                      <Text fontSize="sm" mt={2}></Text>
                     </Box>
                   </Box>
                 </Accordion.ItemBody>
@@ -195,4 +199,3 @@ const OurInvestmentSolutions = () => {
 };
 
 export default OurInvestmentSolutions;
-

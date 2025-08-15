@@ -1,11 +1,9 @@
 import Hero from "@/components/common/Hero";
 import { CallToAction } from "@/components/home";
-import { PlanForJoy,  } from "@/components/i-want-tos";
+import { PlanForJoy } from "@/components/i-want-tos";
 import React from "react";
 import { EduQuestions } from "../../components/Education";
 import {  Rates } from "@/components/common";
-
-
 
 
 const page = () => {
@@ -14,7 +12,7 @@ const page = () => {
      <Rates />
       <Hero
         button="Unlock My Plan"
-         button1="Learn More"
+        button1="Learn More"
         imageUrl="/images/education-hero.png"
         title="For life’s big moments and the unexpected"
         subtitle="True peace of mind is being financially ready."
@@ -25,7 +23,7 @@ const page = () => {
         subtext="Whether it’s a future home, school fees, or an unforeseen medical bill, this plan keeps you in control. It’s stability without slowdown—flexible, reliable, and always ready when you need it most."
         imageUrl="/images/school.png"
       />
-       <EduQuestions />
+      <EduQuestions />
       <CallToAction />
     </>
   );
