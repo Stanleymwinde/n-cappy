@@ -1,6 +1,6 @@
-import { Box, Button, Text, Flex } from "@chakra-ui/react";
+import { Box, Button, Text, Flex } from "@chakra-ui/react"; 
 import Image from "next/image";
-import Link from "next/link"; // <-- add this
+import Link from "next/link";
 import React from "react";
 
 type HeroProps = {
@@ -9,9 +9,10 @@ type HeroProps = {
   imageUrl?: string;
   button?: string;
   button1?: string;
+  scrollTarget?: string; 
 };
 
-const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
+const Hero = ({ title, subtitle, imageUrl, button, button1, scrollTarget }: HeroProps) => {
   return (
     <Box
       position="relative"
@@ -26,9 +27,10 @@ const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
       <Image
         src={imageUrl || "/images/gtr-2.jpg"}
         alt="Hero"
+        quality={90}
         fill
         style={{
-          objectFit: "cover",
+          objectFit: "fill",
           position: "absolute",
           top: 0,
           left: 0,
@@ -45,7 +47,7 @@ const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
         left={0}
         right={0}
         bottom={0}
-        bg="rgba(0, 0, 0, 0.2)"
+        bg="rgba(0, 0, 0, 0.4)"
         zIndex={1}
       />
 
@@ -57,16 +59,16 @@ const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
         position="relative"
         zIndex={2}
         width={{ base: "100%", md: "45%" }}
-        ml={{ base: 4, md: 32 }}
+        ml={{ base: 4, md: 16 }}  // slightly moved left
         fontFamily="Poppins"
         maxWidth="100%"
         boxSizing="border-box"
         display="flex"
         flexDirection="column"
-        alignItems="center"
+        alignItems="flex-start"  // left-aligned
         justifyContent="center"
         height="80%"
-        textAlign="center"
+        textAlign="left"  // left text
       >
         <Text
           fontSize={{ base: "3xl", md: "5xl" }}
@@ -90,18 +92,34 @@ const Hero = ({ title, subtitle, imageUrl, button, button1 }: HeroProps) => {
           )}
         </Text>
 
-        <Flex gap={4} mt={6} justify="center" width="100%">
-          <Button
-            bg="cyan.900"
-            color="white"
-            px={6}
-            py={6}
-            rounded="full"
-            fontWeight="bold"
-            _hover={{ bg: "#00CAFF" }}
-          >
-            {button || "Get Started"}
-          </Button>
+        <Flex gap={4} mt={6} justify="flex-start" width="100%"> {/* left-aligned buttons */}
+          {scrollTarget ? (
+            <a href={scrollTarget}>
+              <Button
+                bg="cyan.900"
+                color="white"
+                px={6}
+                py={6}
+                rounded="full"
+                fontWeight="bold"
+                _hover={{ bg: "#00CAFF" }}
+              >
+                {button || "Get Started"}
+              </Button>
+            </a>
+          ) : (
+            <Button
+              bg="cyan.900"
+              color="white"
+              px={6}
+              py={6}
+              rounded="full"
+              fontWeight="bold"
+              _hover={{ bg: "#00CAFF" }}
+            >
+              {button || "Get Started"}
+            </Button>
+          )}
 
           {button1 && (
             <Link href="/individual" passHref>

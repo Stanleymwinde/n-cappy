@@ -17,12 +17,13 @@ import React from "react";
 
 const OurInvestmentSolutions = () => {
   return (
-    <Box marginX={marginX}>
+    <Box marginX={marginX} mt={8}>
       <Heading
         as="h1"
-        fontSize={{ base: "2xl", md: "5xl" }}
+        fontSize={{ base: "3xl", md: "6xl" }}
         fontFamily="poppins"
-        my={6}
+        fontWeight={"bold"}
+        my={5}
         color="gray.800"
         textAlign="center"
       >

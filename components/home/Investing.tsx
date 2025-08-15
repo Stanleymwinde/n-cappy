@@ -16,14 +16,15 @@ const Investing = () => {
       {/* First sentence */}
       <Heading
         textAlign="center"
-        fontSize={{ base: "2xl", md: "6xl" }}
+        fontSize={{ base: "3xl", md: "6xl" }}
         mb={8}
         mt={8}
         fontFamily={"Poppins"}
+         fontWeight={"bold"}
       >
         Money isn't the goal.{" "}
         <Box as="span" color="#00caff">
-          Purpose is
+          Purpose is.
         </Box>
       </Heading>
 
@@ -38,7 +39,7 @@ const Investing = () => {
         What do you want your money to do for you?
       </Box>
 
-      <Text fontSize={{ base: "md", md: "2xl" }} color="gray.600" py={2}>
+      <Text fontSize={{ base: "md", md: "3xl" }} color="gray.600" py={2}>
         I want to ...
       </Text>
 

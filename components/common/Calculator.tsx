@@ -227,7 +227,7 @@ export default function Page() {
           </SimpleGrid>
 
           <Button colorScheme="blue" size="lg" onClick={calculate}>
-            Start Investing
+            Calculate
           </Button>
 
           {result !== null && (

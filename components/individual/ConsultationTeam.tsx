@@ -15,10 +15,10 @@ import React from "react";
 
 const ConsultationTeam = () => {
   return (
-    <Box marginX={marginX} py={5} textAlign="center">
+    <Box id="consultation" marginX={marginX} py={5} textAlign="center">
       <Heading
         as="h1"
-        fontSize={{ base: "2xl", md: "5xl" }}
+        fontSize={{ base: "2xl", md: "5xl" }} 
         fontFamily="poppins"
         my={6}
         color="gray.800"
@@ -26,9 +26,18 @@ const ConsultationTeam = () => {
         Ask. Choose. Build your path
       </Heading>
 
-      <Button bg="#02b5df" color="white">
-        Schedule a Consultation
-      </Button>
+      {/* Schedule a Consultation button */}
+      <Box my={4}>
+        <a
+          href="https://forms.office.com/Pages/ResponsePage.aspx?id=1I3gDCgn-kmOcay0o8PRRR6Lv0VsgzBFmSkSbPkBGwNUMDFGTVU2RlQ0SkY3TFI5MTVSRFVESEc2Wi4u"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button bg="#02b5df" color="white" _hover={{ bg: "#029ec3" }}>
+            Schedule a Consultation
+          </Button>
+        </a>
+      </Box>
 
       <SimpleGrid
         columns={{ base: 1, sm: 2, md: 3, lg: 4 }}
@@ -54,7 +63,16 @@ const ConsultationTeam = () => {
                   {member.title}
                 </Text>
                 <Box display="flex" justifyContent="flex-end" mt={2}>
-                  <LinkedInIcon boxSize={7} color="blue.600" />
+                  {member.link && (
+                    <a
+                      href={member.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ display: "inline-block" }}
+                    >
+                      <LinkedInIcon boxSize={7} color="blue.600" />
+                    </a>
+                  )}
                 </Box>
               </Card.Description>
             </Card.Body>

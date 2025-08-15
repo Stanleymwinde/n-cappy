@@ -17,6 +17,7 @@ const page = () => {
         title="Grow Your Wealth with Nabo Capital"
         subtitle="choose the investment fund that aligns with your financial goals"
         imageUrl="/images/individual-hero.png"
+        scrollTarget="#consultation"
       />
       
       

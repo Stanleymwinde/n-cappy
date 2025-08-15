@@ -3,15 +3,15 @@ import { Box, Heading, Text, Grid, VStack, Icon } from "@chakra-ui/react";
 
 export default function WhoWeServe() {
   return (
-    <Box py={10} px={6}>
-      <VStack gap={4} textAlign="center">
+    <Box py={10} px={6} mt={8}>
+      <VStack gap={3} textAlign="center">
         <Heading
           as="h1"
-          fontSize={{ base: "2xl", md: "5xl" }}
+          fontSize={{ base: "3xl", md: "6xl" }}
           fontWeight={"bold"}
           fontFamily="poppins"
           textAlign="center"
-          my={6}
+           my={5}
           color="gray.800"
         >
           Who do We Serve
