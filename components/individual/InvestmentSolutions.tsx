@@ -13,7 +13,7 @@ const InvestmentSolutions = () => {
       bgColor="white"
       boxShadow="md"
       borderRadius="md"
-      mt={15}
+      mt={20}
     >
       <Heading
         as="h1"
