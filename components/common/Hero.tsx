@@ -91,7 +91,6 @@ const Hero = ({ title, subtitle, imageUrl, button, button1, scrollTarget }: Hero
             </>
           )}
         </Text>
-
         <Flex gap={4} mt={5} justify="flex-start" width="100%"> 
           {scrollTarget ? (
             <a href={scrollTarget}>
@@ -120,8 +119,6 @@ const Hero = ({ title, subtitle, imageUrl, button, button1, scrollTarget }: Hero
               {button || "Get Started"}
             </Button>
           )}
-
-
           {button1 && (
             <Link href="/individual" passHref>
               <Button
