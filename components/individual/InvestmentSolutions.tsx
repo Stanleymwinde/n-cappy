@@ -1,5 +1,8 @@
+"use client";
+
 import { marginX } from "@/utils/constants";
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import Link from "next/link";
 import React from "react";
 
 const InvestmentSolutions = () => {
@@ -10,11 +13,13 @@ const InvestmentSolutions = () => {
       bgColor="white"
       boxShadow="md"
       borderRadius="md"
+      mt={20}
     >
       <Heading
         as="h1"
-        fontSize={{ base: "2xl", md: "5xl" }}
+        fontSize={{ base: "3xl", md: "6xl" }}
         fontFamily="poppins"
+        fontWeight={"bold"}
         textAlign="center"
         my={6}
         color="gray.800"
@@ -32,6 +37,7 @@ const InvestmentSolutions = () => {
         alignItems="center"
         gap={6}
       >
+        {/* Money Market Funds */}
         <Box
           bgColor="#00b5e0"
           p={4}
@@ -85,21 +91,25 @@ const InvestmentSolutions = () => {
               <Text fontWeight="bold">Currency</Text>
               <Text fontSize="lg">KES</Text>
             </Box>
-            <Box
-              as="button"
-              mt={4}
-              px={6}
-              py={2}
-              bgColor="transparent"
-              border="2px solid white"
-              color="white"
-              borderRadius="md"
-              _hover={{ bgColor: "blue.200" }}
-            >
-              LEARN MORE
-            </Box>
+            <Link href="/individual/MMF&FIF" passHref>
+              <Box
+                as="button"
+                mt={4}
+                px={6}
+                py={2}
+                bgColor="transparent"
+                border="2px solid white"
+                color="white"
+                borderRadius="md"
+                _hover={{ bgColor: "blue.200" }}
+              >
+                LEARN MORE
+              </Box>
+            </Link>
           </Flex>
         </Box>
+
+        {/* Fixed Income Funds */}
         <Box
           bgColor="#0a2234"
           p={4}
@@ -112,8 +122,7 @@ const InvestmentSolutions = () => {
             Fixed Income Funds
           </Heading>
           <Text py={6}>
-            A balanced option providing steady returns through government &
-            corporate bonds.
+            A balanced option providing steady returns through government & corporate bonds.
           </Text>
           <Box display="flex" gap={4} mt={4}>
             <Box
@@ -153,19 +162,21 @@ const InvestmentSolutions = () => {
               <Text fontWeight="bold">Currency</Text>
               <Text fontSize="lg">KES</Text>
             </Box>
-            <Box
-              as="button"
-              mt={4}
-              px={6}
-              py={2}
-              bgColor="transparent"
-              border="2px solid white"
-              color="white"
-              borderRadius="md"
-              _hover={{ bgColor: "blue.200" }}
-            >
-              LEARN MORE
-            </Box>
+            <Link href="/individual/MMF&FIF" passHref>
+              <Box
+                as="button"
+                mt={4}
+                px={6}
+                py={2}
+                bgColor="transparent"
+                border="2px solid white"
+                color="white"
+                borderRadius="md"
+                _hover={{ bgColor: "blue.200" }}
+              >
+                LEARN MORE
+              </Box>
+            </Link>
           </Flex>
         </Box>
       </Box>

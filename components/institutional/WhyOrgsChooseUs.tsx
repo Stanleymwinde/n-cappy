@@ -35,9 +35,9 @@ const features = [
 export default function WhyChooseUs() {
   return (
     <Box bg="cyan.950" color="white" py={16} px={6} textAlign="center">
-      <VStack gap={4}>
+      <VStack gap={8}> {/* Increased from 4 to 8 for more space */}
         <Heading
-          fontSize={{ base: "2xl", md: "5xl" }}
+          fontSize={{ base: "3xl", md: "6xl" }}
           fontWeight={"bold"}
           fontFamily="poppins"
           textAlign="center"
@@ -46,13 +46,13 @@ export default function WhyChooseUs() {
           Why Choose Us
         </Heading>
         <Text maxW="3xl" fontSize="md" color="gray.300">
-         Our institutional approach is built on a foundation of expertise, integrity, and a deep commitment to creating lasting value for our clients.
+          Our institutional approach is built on a foundation of expertise, integrity, and a deep commitment to creating lasting value for our clients.
         </Text>
       </VStack>
 
-      <SimpleGrid columns={[1, 2, 4]} gap={8} mt={10} justifyContent="center">
+      <SimpleGrid columns={[1, 2, 4]} gap={8} mt={5} justifyContent="center">
         {features.map((feature, index) => (
-          <VStack key={index} gap={4}>
+          <VStack key={index} gap={8}>
             <Box
               bg="cyan.800"
               p={4}

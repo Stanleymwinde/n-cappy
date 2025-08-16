@@ -14,7 +14,7 @@ import React, { ReactNode } from "react";
 import { marginX } from "@/utils/constants";
 import Socials from "../common/socials";
 import { PhoneIcon } from "@/utils/icons";
-import MessageIcon from "@/utils/icons/MessageIcon";
+import WhatsAppIcon from "@/utils/icons/WhatsApp";
 import MailIcon from "@/utils/icons/MailIcon";
 
 const Footer = () => {
@@ -49,7 +49,7 @@ const Footer = () => {
           </Flex>
         </Stack>
         <Stack>
-          <CHeading>Helpful links</CHeading>
+          <CHeading>Helpful Links</CHeading>
           {HelpfulLinks.map((item, i) => (
             <FooterCard key={i} link={item.link} label={item.label} />
           ))}
@@ -152,14 +152,14 @@ const contactData = [
   },
 
   {
-    icon: MessageIcon,
+    icon: WhatsAppIcon,
     label: "+254 709 902 700",
     link: "tel:+2547709900700",
   },
 
   {
     icon: MailIcon,
-    label: "info@n-cappy.org",
+    label: "invest@nabocapital.com ",
     link: "mailto:info@n-cappy.org",
   },
 ];
@@ -181,7 +181,7 @@ const ExploreData = {
       link: "#",
     },
     {
-      label: "tools & resources",
+      label: "Investor's Companion",
       link: "#",
     },
   ],

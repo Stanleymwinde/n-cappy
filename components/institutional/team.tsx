@@ -1,4 +1,5 @@
-import { institutionalMembers, marginX } from "@/utils/constants";
+"use client"; 
+import { institutionalMembers, marginX } from "@/utils/constants"; 
 import { LinkedInIcon } from "@/utils/icons";
 import {
   Box,
@@ -23,6 +24,7 @@ const Team = () => {
       >
         Here When You’re Ready to Build Forward
       </Heading>
+
       <Flex
         marginX={marginX}
         mt={8}
@@ -58,7 +60,8 @@ const Team = () => {
             </Card.Body>
           </Card.Root>
         ))}
-      </Flex>{" "}
+      </Flex>
+
       <Button
         bg={"#0a2234"}
         mt={6}
@@ -67,8 +70,15 @@ const Team = () => {
         py={4}
         rounded="full"
         fontWeight="bold"
+        _hover={{ bg: "#00CAFF" }}
+        onClick={() =>
+          window.open(
+            "https://forms.office.com/Pages/ResponsePage.aspx?id=1I3gDCgn-kmOcay0o8PRRR6Lv0VsgzBFmSkSbPkBGwNUMDFGTVU2RlQ0SkY3TFI5MTVSRFVESEc2Wi4u",
+            "_blank"
+          )
+        }
       >
-        Align & Advance{" "}
+        Align & Advance
       </Button>
     </Box>
   );

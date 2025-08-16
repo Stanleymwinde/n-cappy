@@ -21,7 +21,7 @@ const page = () => {
       <Rates />
       <Hero
         title="Your Vision. Our Discipline. One Enduring Partnership"
-        imageUrl="/images/institution-hero.jpeg"
+        imageUrl="/images/sll.jpeg"
         subtitle="We don't just manage Institutional Capital, We Guard it's purpose"
         button="Start A Strategic Conversation"
       />

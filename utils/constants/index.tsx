@@ -52,21 +52,21 @@ export const navItems = [
 
 export const cardData = [
   {
-    title: "Afford the Life I want",
+    title: "Afford the Life I Want",
     description:
       "Whether you're building wealth, securing your future or planning for a milestone, intentional saving sets the foundation for financial freedom.",
     image: "/images/lifestylegoal-landing.jpeg",
     link: "/lifestyle-goal",
   },
   {
-    title: "Afford school for my kids",
+    title: "Afford School for my Kids",
     description:
       "We’ll help you build a smart savings plan for education; designed around your goals to give your children the best possible future.",
     image: "/images/Education-goal.jpeg",
     link: "/education",
   },
   {
-    title: "Travel the world",
+    title: "Travel the World",
     description:
       "Explore the world without financial worries. Save intentionally for unforgettable memories.",
     image: "/images/travelling-goal.jpeg",
@@ -240,7 +240,7 @@ export const TreasuryGoalsData = [
     points: [],
     icon: "LuFolder",
     button: "Learn More",
-    image: "/images/carol.png",
+    image: "/images/treasuryyy.png",
   },
   {
     title: "Stay liquid without loosing capital ",
@@ -249,7 +249,7 @@ export const TreasuryGoalsData = [
     points: [],
     icon: "LuSquareCheck",
     button: "Learn More",
-    image: "/images/carol.png",
+    image: "/images/treasuryyy.png",
   },
   {
     title: "Preserve capital",
@@ -258,7 +258,7 @@ export const TreasuryGoalsData = [
     points: [],
     icon: "LuSquareCheck",
     button: "Learn More",
-    image: "/images/carol.png",
+    image: "/images/treasuryyy.png",
   },
 ];
 
@@ -487,41 +487,49 @@ export const teamMembers = [
     image: "/images/Moses1.png",
     name: "Moses Njuguna",
     title: "Chief Investment Officer",
+    link: " https://www.linkedin.com/in/moses-njuguna-msc-acsi/ ",
   },
   {
     image: "/images/Zach1.png",
     name: "Zachary Maina",
     title: "Senior Portfolio Manager",
+    link: "  https://www.linkedin.com/in/zachary-mwangi-acsi-76431bba/ ",
   },
   {
     image: "/Wycliffe.png",
     name: "Wycliffe Simiyu",
     title: "Financial Analyst",
+    link: "  https://www.linkedin.com/in/wycliffe-simiyu-acsi-2834b29a/ ",
   },
   {
     image: "/Alex.png",
     name: "Alex Muchoki",
     title: "Client Relations Manager",
+    link: "  https://www.linkedin.com/in/alex-muchoki-ab28a643/  ",
   },
   {
     image: "/images/joyce-m.png",
     name: "Joyce Gathitu",
     title: "Client Relations Manager",
+    link: " https://www.linkedin.com/in/joyce-gathitu/  ",
   },
   {
     image: "/images/Hillary.png",
     name: "Hillary Hagai",
     title: "Client Relations Manager",
+    link: "  https://www.linkedin.com/in/hillary-haggai-910563119/  ",
   },
   {
     image: "/images/antony-n.jpg",
     name: "Antony Njagi",
     title: "Client Relations Manager",
+    link: "  https://www.linkedin.com/in/anthony-njagi-128689166/  ",
   },
   {
     image: "/images/Brian.png",
     name: "Brian Kipkemboi",
     title: "Client Relations Manager",
+    link: "https://www.linkedin.com/in/brian-kipkemboi/  ",
   },
 ];
 

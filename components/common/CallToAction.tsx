@@ -24,10 +24,9 @@ const CallToActionCommon = () => {
         flexDirection="column"
         justifyContent="center"
         alignItems="center"
-        color="white"
         textAlign="center"
       >
-        <Box fontSize={{ base: "2xl", md: "4xl" }} fontWeight="bold">
+        <Box fontSize={{ base: "2xl", md: "4xl" }} fontWeight="bold" color="white">
           Innovation that feels personal
         </Box>
         <Flex
@@ -71,8 +70,9 @@ const CallToActionCommon = () => {
         <Box
           mt={4}
           fontSize={{ base: "md", md: "lg" }}
+          fontWeight="bold"
           as={"button"}
-          bgColor={"#0a2234"}
+          bgColor={"white"}
           padding="10px 20px"
           borderRadius="5px"
           _hover={{ bgColor: "#00b5e0" }}
