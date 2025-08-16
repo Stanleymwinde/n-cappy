@@ -252,9 +252,11 @@ export default function Page() {
             </Field.Root>
           </SimpleGrid>
 
+
           <Button colorScheme="blue" size="lg" onClick={calculate}
                 _hover={{ bg: "#00CAFF" }}
           >
+
             Calculate
           </Button>
 
