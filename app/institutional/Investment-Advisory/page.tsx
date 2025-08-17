@@ -2,7 +2,7 @@ import { StrategyCall } from "@/components/Asset-mgt";
 import { Rates } from "@/components/common";
 import Hero from "@/components/common/Hero";
 import { CallToAction } from "@/components/home";
-import { Faqs } from "@/components/individual";
+import { Faqs1 } from "@/components/Investment-advisory";
 import { PartnerWithUs } from "@/components/institutional";
 import { WhyOrgsChooseUs } from "@/components/institutional";
 import {
@@ -27,7 +27,7 @@ const page = () => {
       <WhyPartnerWithUs />
       <PartnerWithUs />
       <StrategyCall />
-      <Faqs />
+      <Faqs1/>
       <CallToAction />
     </>
       

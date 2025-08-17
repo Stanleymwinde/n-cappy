@@ -565,17 +565,52 @@ export const FaqsData = [
   {
     value: "a",
     title: "What is a Unit Trust?",
-    text: "A Unit Trust, also known as a mutual fund, is a pooled investment vehicle where investors' money is collectively managed by a professional fund manager..",
+    text: "A Unit Trust, also known as a mutual fund, is a pooled investment vehicle where investors' money is collectively managed by a professional fund manager.​",
   },
   {
     value: "b",
     title: "What are the differences between the various funds?",
-    text: "You can start investing with Nabo Capital by visiting our website and signing up for an account. Our team will guide you through the process.",
+    text: "Nabo Money Market Fund(KES & USD), seeks to maximize current income by investing primarily in a diversified portfolio of short-term debt securities and instruments whilst aiming to preserve capital and maintain a high degree of liquidity.​ Nabo Fixed Income Fund(KES & USD), The fund generates stable capital growth over the medium to long term. Under this fund, we invest in a diversified range of Fixed Income Securities across Africa. ",
   },
   {
     value: "c",
     title: "Is my money safe?",
-    text: "We offer a variety of investment products including mutual funds, ETFs, and personalized portfolio management services.",
+    text: "Yes, your money and assets that are purchased are safely secured in a bank custody account and will not be affected by failure of any service provider.​",
+  },
+  {
+    value: "d",
+    title: "Can I top up my account?",
+    text: "Yes, a client can top up their account as many times as they wish.​",
+  },
+  {
+    value: "e",
+    title: "How do I withdraw my funds?",
+    text: "Send us a redemption request via email to clientservice@nabocapital.com  quoting the amount to be redeemed.​",
+  },
+  {
+    value: "f",
+    title: "How long does it take for funds to be transferred into my account when I redeem?​",
+    text: "It takes 2 to 3 working days from the date of request. This is a requirement of the regulation governing unit trusts.​",
+  },
+  
+];
+
+
+export const FaqsData1 = [
+  {
+    value: "a",
+    title: "What is the minimum investment amount for the various funds?​",
+    text: "Currently, the minimum investment amount for all funds is KES 100,000. But clients who have below KES 100,000 can channel the funds through Chumz App.​",
+  },
+  {
+    value: "b",
+    title: "What is the minimum top-up amount for the various funds?​",
+    text: "The minimum top-up amount for all funds is KES 10,000​",
+  },
+  {
+    value: "c",
+    title: "What hidden charges are there?",
+    text: "There are none",
   },
   {
     value: "d",
@@ -584,15 +619,82 @@ export const FaqsData = [
   },
   {
     value: "e",
-    title: "How do I withdraw my funds?",
-    text: "You can withdraw your funds by logging into your account and submitting a withdrawal request. The funds will be processed within 3-5 business days.",
+    title: " Is there any locking period?​",
+    text: "Only for Nabo KES Fixed Income Fund for a period of 6 months on the initial investment, subsequent top-ups are not locked.",
   },
   {
     value: "f",
-    title: "What are the fees associated with investing?",
-    text: "We charge a management fee based on the assets under management. There may also be transaction fees for buying or selling units in the fund.",
+    title: "Are the returns guaranteed?​",
+    text: "No, we are not required to guarantee returns as per the CMA regulations as the assets we invest in don’t guarantee returns.​",
   },
+  
 ];
+
+export const FaqsData2 = [
+  {
+    value: "a",
+    title: "What is a Portfolio?​",
+    text: "A portfolio is a collection of investments, including stocks, bonds, and other assets i.e. real estate, and commodities, owned by an individual or entity, aimed at diversifying risk and achieving financial objectives such as capital growth or stable, consistent income. ​",
+  },
+  {
+    value: "b",
+    title: "Are the returns guaranteed?",
+    text: "No, we are not required to guarantee returns as per the CMA regulations as the assets we invest in don’t guarantee returns.​",
+  },
+  {
+    value: "c",
+    title: "How do I monitor my Investment?​",
+    text: "We shall be providing you with monthly statements that you can use to track your investments, and factsheets that indicate the performance of all the funds monthly. ​",
+  },
+  {
+    value: "d",
+    title: "Do you have Sharia-compliant investment solutions? ​",
+    text: "We are in the process of providing this solution to our clients in the next coming quarters of the year.​",
+  },
+  {
+    value: "e",
+    title: "Who are the key players to secure my investment?​",
+    text: "On top of CMA being the regulator, these are the key service providers to make sure clients’ investment is secure and does not mix with Fund Manager’s money​",
+  },
+  {
+    value: "f",
+    title: "Why is the dollar rate lower than the KES rate​",
+    text: "Investment return rates in USD may appear lower than KES due to factors such as;​ Demand for Currency(strengthen of USD against KES).​Inflation(US has lower inflation rate than Kenya).​This will mean the FX gain will be high in the range of 12% - 15% and when added back to the USD rate, it will be higher than the KES rate.​",
+  },
+  
+];
+
+export const FaqsData3 = [
+  {
+    value: "a",
+    title: " Why is your MMF KES giving greater returns than the FIF KES ",
+    text: "The money market fund has a weighted average tenor of 13 months, which allows us to identify higher-yielding assets in the short term. The Fixed Income Fund is invested in longer-term assets such as Govt. Bonds whose returns may, from time to time, be weighed down by older dated securities.​",
+  },
+  {
+    value: "b",
+    title: "Where do we invest? ​",
+    text: "We invest primarily across Africa excluding South Africa.​",
+  },
+  {
+    value: "c",
+    title: "Is Chumz legitimate and what is the relationship between Nabo  Capital and Chumz? ​",
+    text: "Chumz is a legitimate mobile application that allows you to invest in Nabo Capital’s funds. It is a product of Nabo Capital and is regulated by the Capital Markets Authority (CMA).​",
+  },
+  {
+    value: "d",
+    title: "How long has Nabo has been in existence?",
+    text: "Nabo Capital is a 3rd generation investment firm, leveraging over 50 years of experience under Centum Investments PLC and 11 years as a stand-alone fund manager.​",
+  },
+  {
+    value: "e",
+    title: "Can I create a family trust with NABO? ​",
+    text: "Yes, we will be launching our family trust solution by the end of Q3, 2024.​",
+  },
+
+  
+];
+
+
 
 export const InvestGloballyData = [
   {

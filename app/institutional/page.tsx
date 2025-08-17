@@ -1,7 +1,7 @@
 import { Rates } from "@/components/common";
 import Hero from "@/components/common/Hero";
 import { CallToAction } from "@/components/home";
-import { Faqs } from "@/components/individual";
+import { Faqs2 } from "@/components/institutional";
 import {
   
   PartnerWithUs,
@@ -33,7 +33,7 @@ const page = () => {
       <Strategy />
       <Team />
       <PartnerWithUs />
-      <Faqs />
+      <Faqs2 />
       <CallToAction />
       
     </>
