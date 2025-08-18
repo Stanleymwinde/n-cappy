@@ -8,8 +8,9 @@ const GlobalThoughtLeadership = () => {
     <Box marginX={marginX} py={8} bg="white">
       <Heading
         as="h1"
-        fontSize={{ base: "2xl", md: "3xl" }}
+        fontSize={{ base: "3xl", md: "6xl" }}
         fontFamily="poppins"
+        fontWeight={"bold"}
         textAlign="center"
         my={6}
         color="gray.800"

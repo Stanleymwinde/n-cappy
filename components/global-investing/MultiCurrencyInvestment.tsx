@@ -1,17 +1,18 @@
 import { investmentData, marginX } from "@/utils/constants";
-import { Box, Button, Flex, Heading, ListItem, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 import { FaDownload } from "react-icons/fa6";
 import { IoCheckmarkDone } from "react-icons/io5";
 
 const MultiCurrencyInvestment = () => {
   return (
-    <Box py={10} bg="gray.50" marginX={marginX}>
+    <Box py={10} bg="gray.50" marginX={marginX} mt={20}>
       <Box textAlign="center" mb={8}>
         <Heading
           as="h1"
-          fontSize={{ base: "2xl", md: "5xl" }}
+          fontSize={{ base: "3xl", md: "6xl" }}
           fontFamily="poppins"
+          fontWeight={"bold"}
           textAlign="center"
           my={6}
           color="gray.800"
@@ -63,16 +64,15 @@ const MultiCurrencyInvestment = () => {
 
               <Flex justify="flex-end">
                 <Button
-                  colorScheme="gray"
-                  variant="outline"
+                  bg="#0a2234"
+                  color="white"
                   size="sm"
                   _hover={{
-                    bg: "#0a2234",
+                    bg: "#00CAFF",
                     transform: "scale(1.05)",
-                    color: "white",
                   }}
                 >
-                  <FaDownload />
+                  <FaDownload style={{ marginRight: "6px" }} />
                   {fund.cta}
                 </Button>
               </Flex>
@@ -80,20 +80,19 @@ const MultiCurrencyInvestment = () => {
           </Box>
         ))}
       </Box>
+
       <Flex justifyContent="flex-end">
-        <Box
-          textAlign="center"
-          as={Button}
+        <Button
           mt={6}
-          bg="#00caff"
+          bg="#0a2234"
+          color="white"
           _hover={{
-            bg: "#0a2234",
+            bg: "#00CAFF",
             transform: "scale(1.05)",
-            color: "white",
           }}
         >
           Invest Globally
-        </Box>
+        </Button>
       </Flex>
     </Box>
   );

@@ -1,5 +1,5 @@
 import { FaqsData, marginX } from "@/utils/constants";
-import { Accordion, Box, Button, Heading, Span } from "@chakra-ui/react";
+import { Accordion, Box, Button, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 
@@ -8,10 +8,11 @@ const ClientOnboarding = () => {
     <Box marginX={marginX}>
       <Heading
         as="h1"
-        fontSize={{ base: "2xl", md: "3xl" }}
+        fontSize={{ base: "3xl", md: "6xl" }}
         fontFamily="poppins"
+        fontWeight={"bold"}
         textAlign="center"
-        my={6}
+        my={10}
         color="gray.800"
       >
         Client Onboarding Access
@@ -28,11 +29,15 @@ const ClientOnboarding = () => {
           <Box mb={4} key={index}>
             <Accordion.Item value={item.value}>
               <Accordion.ItemTrigger>
-                <Span flex="1">{item.title}</Span>
+                <Text flex="1" fontWeight="bold">
+                  {item.title}
+                </Text>
                 <Accordion.ItemIndicator />
               </Accordion.ItemTrigger>
               <Accordion.ItemContent>
-                <Accordion.ItemBody>{item.text}</Accordion.ItemBody>
+                <Accordion.ItemBody>
+                  <Text>{item.text}</Text>
+                </Accordion.ItemBody>
               </Accordion.ItemContent>
             </Accordion.Item>
           </Box>
@@ -48,7 +53,7 @@ const ClientOnboarding = () => {
           alignItems={"center"}
           alignContent={"center"}
           color="white"
-          _hover={{ bg: "#0a2234", transform: "scale(1.05)" }}
+           _hover={{ bg: "#00CAFF" }}
         >
           Let&apos;s Onboard Without Borders <FaArrowRight />
         </Button>
