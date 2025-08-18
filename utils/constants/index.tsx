@@ -99,7 +99,7 @@ export const TestimonialData = [
   {
     name: "Joyce Njoro",
     role: "Long-term Investor",
-    image: "/images/Joyce.png",
+    image: "/images/Joyce2.0.png",
     testimonial:
       "What I love about Nabo is that they actually take their time to explain to you where your money is going.",
   },
