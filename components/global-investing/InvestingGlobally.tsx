@@ -5,11 +5,12 @@ import * as Icons from "react-icons/fa";
 
 const InvestingGlobally = () => {
   return (
-    <Box marginX={marginX}>
+    <Box marginX={marginX} mt={10}>
       <Heading
         as="h1"
-        fontSize={{ base: "2xl", md: "5xl" }}
+        fontSize={{ base: "3xl", md: "6xl" }}
         fontFamily="poppins"
+        fontWeight="bold"
         textAlign="center"
         my={6}
         color="gray.800"

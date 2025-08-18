@@ -11,6 +11,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import React from "react";
+
 const regions = [
   { name: "East Africa", color: "#EB5757" },
   { name: "West Africa", color: "#2D9CDB" },
@@ -20,17 +21,20 @@ const regions = [
   { name: "North America", color: "#000000" },
   { name: "Asia", color: "#F2E85C" },
 ];
+
 const globalMarketFootprint = () => {
   return (
     <Box marginX={marginX} py={10} bg="white">
       <Box textAlign="center" mb={8}>
         <Heading
           as="h1"
-          fontSize={{ base: "2xl", md: "3xl" }}
+          fontSize={{ base: "3xl", md: "6xl" }}
           fontFamily="poppins"
+          fontWeight="bold"
           textAlign="center"
-          my={6}
+          my={2}
           color="gray.800"
+          lineHeight={{ base: "1.2", md: "1.1" }} // ✅ Added for better spacing
         >
           Multi-Currency Investments Global Market Footprint
         </Heading>
@@ -78,9 +82,12 @@ const globalMarketFootprint = () => {
             Southern Africa
           </Text>
           <HStack wrap="wrap" gap={3} mb={3}>
-            <Text fontWeight="semibold">South Africa</Text>
+            <Text fontWeight="semibold">Uganda</Text>
             <Text fontWeight="semibold">Botswana</Text>
             <Text fontWeight="semibold">Zambia</Text>
+            <Text fontWeight="semibold">Tanzania</Text>
+            <Text fontWeight="semibold">Rwanda</Text>
+            <Text fontWeight="semibold">Burundi</Text>
           </HStack>
           <Text fontSize="sm" color="gray.600">
             Select a region to see our presence and investment opportunities.
@@ -89,6 +96,7 @@ const globalMarketFootprint = () => {
           </Text>
         </Box>
       </Flex>
+
       <Box
         display="flex"
         flexDirection="column"
@@ -102,8 +110,9 @@ const globalMarketFootprint = () => {
           width="100%"
           maxWidth="300px"
           mt={4}
+           _hover={{ bg: "#00CAFF" }}
         >
-          View All Whitepapers
+          Download Whitepapers
         </Button>
       </Box>
     </Box>

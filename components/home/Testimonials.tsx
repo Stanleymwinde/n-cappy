@@ -14,13 +14,14 @@ import Image from "next/image";
 
 const Testimonials = () => {
   return (
-    <Box marginX={marginX}>
+    <Box marginX={marginX} mt={20}>
       <Heading
         as="h2"
         fontSize={{ base: "3xl", md: "6xl" }}
         fontFamily="Poppins"
+        fontWeight="bold"
         textAlign="center"
-        my={8}
+        my={4}
         py={4}
       >
         What Our Investors Have to Say ...
