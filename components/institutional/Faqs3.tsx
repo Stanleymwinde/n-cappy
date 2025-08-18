@@ -1,4 +1,4 @@
-import { FaqsData1, marginX } from "@/utils/constants";
+import { FaqsData3, marginX } from "@/utils/constants";
 import {
   Accordion,
   Box,
@@ -20,7 +20,7 @@ const Faqs = () => {
         Frequently Asked Questions
       </Heading>
       <Accordion.Root collapsible defaultValue={["a"]} bg={"gray.300"} p={6} py={8}>
-        {FaqsData1.map((item, index) => (
+        {FaqsData3.map((item, index) => (
           <Box mb={4} key={index}>
             <Accordion.Item value={item.value}>
               <Accordion.ItemTrigger>

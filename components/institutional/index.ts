@@ -8,8 +8,9 @@ export { default as OurInvestmentSolutions } from "./OurInvestmentSolutions";
 export { default as WhyOrgsChooseUs } from "./WhyOrgsChooseUs";
 export { default as InvestmentSolutions } from "./InvestmentSolutions";
 export { default as Strategy } from "./Strategy";
-export { default as InvestmentSolutionsVideo } from "./InvestmentSolutionsVideo";
-
+export { default as InvestmentSolutionsVideo } from "./InvestmentSolutionsVideo"
+export { default as Faqs2 } from "./Faqs2";
+export { default as Faqs3 } from "./Faqs3";
 
 
 
