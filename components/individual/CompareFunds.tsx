@@ -1,5 +1,3 @@
-"use client";
-
 import { Tabs } from "@chakra-ui/react";
 import { LuFolder, LuSquareCheck, LuUser } from "react-icons/lu";
 import { Box, Text, Flex, Table } from "@chakra-ui/react";
@@ -36,12 +34,11 @@ const data = [
 const CompareFunds = () => {
   return (
     <Box marginX={marginX} py={8}>
-      <Text fontSize="2xl" fontWeight="bold" mb={2}>
+      <Text  textAlign="center" fontSize={{ base: "3xl", md: "6xl" }}fontWeight="bold">
         Compare Our Funds
       </Text>
-      <Text fontSize="md" mb={6} color="gray.600" maxW="600px">
-        See how our investment funds stack up against each oTable.ColumnHeaderer
-        to find Table.ColumnHeadere perfect match for your financial goals.
+      <Text fontSize="md" mb={6} color="gray.600" textAlign="center">
+        See how our investment funds stack up against each other to find the perfect match for your financial goals.
       </Text>
 
       <Tabs.Root defaultValue="all-features" activationMode="manual">

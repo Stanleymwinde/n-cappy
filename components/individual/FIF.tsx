@@ -58,12 +58,13 @@ const FIFfeatures = [
 
 const FixedIncomeFund = () => {
   return (
-    <Box py={16} px={{ base: 4, md: 16 }} marginX={marginX}>
-      <VStack gap={4} textAlign="center" mb={10}>
+    <Box py={16} px={{ base: 4, md: 16 }} marginX={marginX} >
+      <VStack gap={4} textAlign="center" mb={7}>
         <Heading
           as="h1"
-          fontSize={{ base: "2xl", md: "5xl" }}
+          fontSize={{ base: "3xl", md: "6xl" }}
           fontFamily="poppins"
+          fontWeight={"bold"}
           textAlign="center"
           my={6}
           color="gray.800"
@@ -109,10 +110,11 @@ const FixedIncomeFund = () => {
           <Button
             bg="blue.900"
             color="white"
-            _hover={{ bg: "blue.800" }}
+            _hover={{ bg: "#00CAFF" }}
             rounded="lg"
             px={6}
             py={5}
+           
           >
             {" "}
             <MdDownload />
