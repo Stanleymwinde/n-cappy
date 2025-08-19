@@ -167,7 +167,6 @@ const InvestmentSolutions = () => {
                         p={6}
                         mt={8}
                         borderRadius="md"
-                        
                       >
                         <Text fontWeight="bold" fontSize={{ base: "md", md: "xl" }}>
                           {item.featuredDeal.title}

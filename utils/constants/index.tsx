@@ -42,7 +42,7 @@ export const socials = [
 ];
 
 export const navItems = [
-  { label: "Individual", href: "/individual" },
+  { label: "Individual", href: "/" },
   { label: "Institutional", href: "/institutional" },
   { label: "Advisory", href: "/advisory" },
   { label: "About Us", href: "/about-us" },
@@ -228,9 +228,7 @@ export const TreasuryGoalsData = [
     title: "Stay liquid without losing value",
     description:
       "Life doesn’t wait. Whether it’s a business opportunity, an emergency, or a personal goal, you want quick access to your money; without it sitting idle or losing value to inflation. Our cash and liquidity solutions help you balance accessibility with intelligent growth.",
-    points: [
-      
-    ],
+    points: [],
     icon: "LuUser",
     button: "Learn More",
     image: "/images/treasuryyy.png",
@@ -239,9 +237,7 @@ export const TreasuryGoalsData = [
     title: "Stay ready for opportunities",
     description:
       "We’ll help you build a smart savings plan for education—without the stress",
-    points: [
-      
-    ],
+    points: [],
     icon: "LuFolder",
     button: "Learn More",
     image: "/images/treasuryyy.png",
@@ -250,9 +246,7 @@ export const TreasuryGoalsData = [
     title: "Stay liquid without loosing capital ",
     description:
       "Explore the world without financial worries. Save intentionally for unforgettable memories.",
-    points: [
-      
-    ],
+    points: [],
     icon: "LuSquareCheck",
     button: "Learn More",
     image: "/images/treasuryyy.png",
@@ -261,9 +255,7 @@ export const TreasuryGoalsData = [
     title: "Preserve capital",
     description:
       "Retire on your terms. Build a financial cushion that lets you enjoy life’s golden years with peace and pride.",
-    points: [
-      
-    ],
+    points: [],
     icon: "LuSquareCheck",
     button: "Learn More",
     image: "/images/treasuryyy.png",
@@ -477,9 +469,7 @@ export const itemss = [
       "Rigorous Stock Selection: Active, research-intensive process grounded in intrinsic value and growth potential",
       "Rigorous Stock Selection: Active, research-intensive process grounded in intrinsic value and growth potential",
       "Rigorous Stock Selection: Active, research-intensive process grounded in intrinsic value and growth potential",
-      ],
-      
-
+    ],
   },
   {
     value: "b",
@@ -491,7 +481,7 @@ export const itemss = [
     title: "Fixed Income Strategy",
     text: " Preserving Capital and Generating Reliable Income",
   },
-  ];
+];
 export const teamMembers = [
   {
     image: "/images/Moses1.png",
@@ -868,8 +858,6 @@ export const RetirementPlans = [
         hint: "How much have you already put aside for this trip?",
         image: "/images/life-2.png",
       },
-      
-      
     ],
   },
   {
@@ -962,8 +950,7 @@ export const RetirementPlans = [
 
   {
     title: "Retirement Income",
-    description:
-      "Structure provide reliable income  ",
+    description: "Structure provide reliable income  ",
     icon: FaHandsHelping,
     questions: [
       {
@@ -989,9 +976,7 @@ export const RetirementPlans = [
       },
     ],
   },
-  
 ];
-
 
 export const LifestylePlans = [
   {
@@ -1042,8 +1027,6 @@ export const LifestylePlans = [
         hint: "How much have you already put aside for this trip?",
         image: "/Travelsix.png",
       },
-      
-      
     ],
   },
   {
@@ -1298,111 +1281,114 @@ export const RetirePlans = [
         hint: "When would you like to transition to the next phaseof your journey? ",
         image: "/images/life-2.png",
       },
-      
-      
     ],
   },
   {
-   title: "Generational Wealth Transfer",
-description:
-  "Create a structured approach to passing financial assets, knowledge, and values to future generations.",
-icon: MdOutlineRealEstateAgent,
-questions: [
- {
-    id: 1,
-    question: "What stage are you at in your wealth transfer plan?",
-    placeholder: "e.g. Just beginning, have a plan, actively transferring",
-    hint: "Understanding your current stage helps tailor the best strategy for your family.",
-    image: "/images/life-1.png",
+    title: "Generational Wealth Transfer",
+    description:
+      "Create a structured approach to passing financial assets, knowledge, and values to future generations.",
+    icon: MdOutlineRealEstateAgent,
+    questions: [
+      {
+        id: 1,
+        question: "What stage are you at in your wealth transfer plan?",
+        placeholder: "e.g. Just beginning, have a plan, actively transferring",
+        hint: "Understanding your current stage helps tailor the best strategy for your family.",
+        image: "/images/life-1.png",
+      },
+      {
+        id: 2,
+        question: "Who are the primary beneficiaries of your wealth transfer?",
+        placeholder: "e.g. Children, grandchildren, trusts, charities",
+        hint: "Clarify who will receive your assets to ensure alignment with your wishes.",
+        image: "/images/life-3.png",
+      },
+      {
+        id: 3,
+        question: "What are your goals for generational wealth transfer?",
+        placeholder:
+          "e.g. Preserve family business, education funds, philanthropy",
+        hint: "Your intentions shape how your wealth is distributed and managed.",
+        image: "/images/life-2.png",
+      },
+      {
+        id: 4,
+        question:
+          "Have you set up any trusts or legal entities for wealth transfer?",
+        placeholder: "e.g. Family trust, charitable trust, foundations",
+        hint: "Trusts can help protect assets and provide tax advantages for heirs.",
+        image: "/images/life-2.png",
+      },
+      {
+        id: 5,
+        question:
+          "How do you plan to educate your heirs about managing the inheritance?",
+        placeholder: "e.g. Financial literacy programs, family meetings",
+        hint: "Preparing heirs helps ensure the legacy is sustained responsibly.",
+        image: "/images/life-2.png",
+      },
+      {
+        id: 6,
+        question:
+          "What concerns do you have about transferring wealth to future generations?",
+        placeholder: "e.g. Taxes, family disputes, asset protection",
+        hint: "Identifying challenges helps us address them proactively.",
+        image: "/images/life-2.png",
+      },
+    ],
   },
   {
-    id: 2,
-    question: "Who are the primary beneficiaries of your wealth transfer?",
-    placeholder: "e.g. Children, grandchildren, trusts, charities",
-    hint: "Clarify who will receive your assets to ensure alignment with your wishes.",
-    image: "/images/life-3.png",
-  },
-   {
-    id: 3,
-    question: "What are your goals for generational wealth transfer?",
-    placeholder: "e.g. Preserve family business, education funds, philanthropy",
-    hint: "Your intentions shape how your wealth is distributed and managed.",
-    image: "/images/life-2.png",
-  },
- {
-    id: 4,
-    question: "Have you set up any trusts or legal entities for wealth transfer?",
-    placeholder: "e.g. Family trust, charitable trust, foundations",
-    hint: "Trusts can help protect assets and provide tax advantages for heirs.",
-    image: "/images/life-2.png",
-  },
-{
-    id: 5,
-    question: "How do you plan to educate your heirs about managing the inheritance?",
-    placeholder: "e.g. Financial literacy programs, family meetings",
-    hint: "Preparing heirs helps ensure the legacy is sustained responsibly.",
-    image: "/images/life-2.png",
-  },
- {
-    id: 6,
-    question: "What concerns do you have about transferring wealth to future generations?",
-    placeholder: "e.g. Taxes, family disputes, asset protection",
-    hint: "Identifying challenges helps us address them proactively.",
-    image: "/images/life-2.png",
-  },
-],
-},
-  {
-   title: "Long-Term Care", 
-    description: "Prepare for potential health needs without compromising the financial legacy you intend to leave behind.",
-    
+    title: "Long-Term Care",
+    description:
+      "Prepare for potential health needs without compromising the financial legacy you intend to leave behind.",
+
     icon: FaHandsHelping,
     questions: [
       {
-    id: 1,
-    question: "What type of long-term care do you anticipate?",
-    placeholder: "e.g. Assisted living, home care, nursing home",
-    hint: "Understanding your care preference helps tailor your plan.",
-    image: "/images/long-term-care-1.png",
-  },
+        id: 1,
+        question: "What type of long-term care do you anticipate?",
+        placeholder: "e.g. Assisted living, home care, nursing home",
+        hint: "Understanding your care preference helps tailor your plan.",
+        image: "/images/long-term-care-1.png",
+      },
       {
-    id: 2,
-    question: "When do you expect to start needing care?",
-    placeholder: "e.g. 5 years from now, immediately",
-    hint: "An approximate timeline helps us estimate costs.",
-    image: "/images/long-term-care-2.png",
-  },
-       {
-    id: 3,
-    question: "What is your estimated monthly care cost?",
-    placeholder: "e.g. $2,500",
-    hint: "This helps us prepare a realistic savings plan.",
-    image: "/images/long-term-care-3.png",
-  },
+        id: 2,
+        question: "When do you expect to start needing care?",
+        placeholder: "e.g. 5 years from now, immediately",
+        hint: "An approximate timeline helps us estimate costs.",
+        image: "/images/long-term-care-2.png",
+      },
+      {
+        id: 3,
+        question: "What is your estimated monthly care cost?",
+        placeholder: "e.g. $2,500",
+        hint: "This helps us prepare a realistic savings plan.",
+        image: "/images/long-term-care-3.png",
+      },
 
-  {
-    id: 4,
-    question: "How much have you already saved for long-term care?",
-    placeholder: "e.g. $20,000",
-    hint: "Let us know what you’ve set aside so far.",
-    image: "/images/long-term-care-4.png",
-  },
+      {
+        id: 4,
+        question: "How much have you already saved for long-term care?",
+        placeholder: "e.g. $20,000",
+        hint: "Let us know what you’ve set aside so far.",
+        image: "/images/long-term-care-4.png",
+      },
 
-  {
-    id: 5,
-    question: "How much can you save monthly toward this plan?",
-    placeholder: "e.g. $500",
-    hint: "Your monthly savings capacity helps us create your timeline.",
-    image: "/images/long-term-care-5.png",
-  },
+      {
+        id: 5,
+        question: "How much can you save monthly toward this plan?",
+        placeholder: "e.g. $500",
+        hint: "Your monthly savings capacity helps us create your timeline.",
+        image: "/images/long-term-care-5.png",
+      },
 
-  {
-    id: 6,
-    question: "Do you have family or insurance support?",
-    placeholder: "e.g. Yes, family help or LTC insurance",
-    hint: "This affects your overall care plan and budget.",
-    image: "/images/long-term-care-6.png",
-  },
+      {
+        id: 6,
+        question: "Do you have family or insurance support?",
+        placeholder: "e.g. Yes, family help or LTC insurance",
+        hint: "This affects your overall care plan and budget.",
+        image: "/images/long-term-care-6.png",
+      },
     ],
   },
   {
@@ -1412,102 +1398,102 @@ questions: [
     icon: BsCashCoin,
     questions: [
       {
-    id: 1,
-    question: "What causes matter most to you?",
-    placeholder: "e.g. Education, Environment, Health",
-    hint: "Identifying your passions helps focus your giving.",
-    image: "/images/giving-intent-1.jpg",
-  },
+        id: 1,
+        question: "What causes matter most to you?",
+        placeholder: "e.g. Education, Environment, Health",
+        hint: "Identifying your passions helps focus your giving.",
+        image: "/images/giving-intent-1.jpg",
+      },
       {
-    id: 2,
-    question: "How much do you want to donate annually?",
-    placeholder: "e.g. $1,000",
-    hint: "This helps set your giving budget.",
-    image: "/images/giving-intent-2.jpg",
-  },
-     {
-    id: 3,
-    question: "Do you prefer one-time gifts or recurring donations?",
-    placeholder: "e.g. Monthly, Quarterly, One-time",
-    hint: "This affects your giving schedule and impact.",
-    image: "/images/giving-intent-3.jpg",
-  },
+        id: 2,
+        question: "How much do you want to donate annually?",
+        placeholder: "e.g. $1,000",
+        hint: "This helps set your giving budget.",
+        image: "/images/giving-intent-2.jpg",
+      },
+      {
+        id: 3,
+        question: "Do you prefer one-time gifts or recurring donations?",
+        placeholder: "e.g. Monthly, Quarterly, One-time",
+        hint: "This affects your giving schedule and impact.",
+        image: "/images/giving-intent-3.jpg",
+      },
 
-  {
-    id: 4,
-    question: "Would you like to support local or global organizations?",
-    placeholder: "e.g. Local",
-    hint: "Helps us align your giving to your preferred communities.",
-    image: "/images/giving-intent-4.jpg",
-  },
+      {
+        id: 4,
+        question: "Would you like to support local or global organizations?",
+        placeholder: "e.g. Local",
+        hint: "Helps us align your giving to your preferred communities.",
+        image: "/images/giving-intent-4.jpg",
+      },
 
-  {
-    id: 5,
-    question: "Are you interested in volunteering your time as well?",
-    placeholder: "e.g. Yes, No, Maybe",
-    hint: "This adds another dimension to your giving plan.",
-    image: "/images/giving-intent-5.jpg",
-  },
-   {
-    id: 6,
-    question: "Would you like help tracking the impact of your donations?",
-    placeholder: "e.g. Yes, I want updates",
-    hint: "Stay informed about how your gifts make a difference.",
-    image: "/images/giving-intent-6.jpg",
-  },
+      {
+        id: 5,
+        question: "Are you interested in volunteering your time as well?",
+        placeholder: "e.g. Yes, No, Maybe",
+        hint: "This adds another dimension to your giving plan.",
+        image: "/images/giving-intent-5.jpg",
+      },
+      {
+        id: 6,
+        question: "Would you like help tracking the impact of your donations?",
+        placeholder: "e.g. Yes, I want updates",
+        hint: "Stay informed about how your gifts make a difference.",
+        image: "/images/giving-intent-6.jpg",
+      },
     ],
   },
   {
-   title: "Retirement income",
-description:
-  "Prepare today for a comfortable and fulfilling tomorrow. This plan helps you estimate your retirement needs, set realistic savings goals, and envision the lifestyle you want once you stop working.",
-icon: MdOutlineRealEstateAgent,
-exploreMoreUrl: "/estate-planning",
-questions: [
-{
-    id: 1,
-    question: "At what age do you plan to retire?",
-    placeholder: "e.g. 60",
-    hint: "This helps us estimate how long your retirement savings need to last.",
-    image: "/images/retirement-1.png",
+    title: "Retirement income",
+    description:
+      "Prepare today for a comfortable and fulfilling tomorrow. This plan helps you estimate your retirement needs, set realistic savings goals, and envision the lifestyle you want once you stop working.",
+    icon: MdOutlineRealEstateAgent,
+    exploreMoreUrl: "/estate-planning",
+    questions: [
+      {
+        id: 1,
+        question: "At what age do you plan to retire?",
+        placeholder: "e.g. 60",
+        hint: "This helps us estimate how long your retirement savings need to last.",
+        image: "/images/retirement-1.png",
+      },
+      {
+        id: 2,
+        question: "What kind of lifestyle do you envision during retirement?",
+        placeholder: "e.g. Travel, hobbies, quiet life",
+        hint: "Share your dreams to tailor your retirement plan.",
+        image: "/images/retirement-2.png",
+      },
+      {
+        id: 3,
+        question: "What are your expected monthly expenses in retirement?",
+        placeholder: "e.g. $3,000",
+        hint: "Includes housing, food, healthcare, leisure, and more.",
+        image: "/images/retirement-3.png",
+      },
+      {
+        id: 4,
+        question: "How much have you saved for retirement so far?",
+        placeholder: "e.g. $50,000",
+        hint: "This gives us a starting point for your plan.",
+        image: "/images/retirement-4.png",
+      },
+      {
+        id: 5,
+        question: "How much can you save monthly toward retirement?",
+        placeholder: "e.g. $500",
+        hint: "Regular savings help you reach your goals on time.",
+        image: "/images/retirement-5.png",
+      },
+      {
+        id: 6,
+        question: "Do you expect any additional income during retirement?",
+        placeholder: "e.g. Pension, rental income",
+        hint: "Helps calculate your total retirement resources.",
+        image: "/images/retirement-6.png",
+      },
+    ],
   },
-  {
-    id: 2,
-    question: "What kind of lifestyle do you envision during retirement?",
-    placeholder: "e.g. Travel, hobbies, quiet life",
-    hint: "Share your dreams to tailor your retirement plan.",
-    image: "/images/retirement-2.png",
-  },
-   {
-    id: 3,
-    question: "What are your expected monthly expenses in retirement?",
-    placeholder: "e.g. $3,000",
-    hint: "Includes housing, food, healthcare, leisure, and more.",
-    image: "/images/retirement-3.png",
-  },
- {
-    id: 4,
-    question: "How much have you saved for retirement so far?",
-    placeholder: "e.g. $50,000",
-    hint: "This gives us a starting point for your plan.",
-    image: "/images/retirement-4.png",
-  },
-{
-    id: 5,
-    question: "How much can you save monthly toward retirement?",
-    placeholder: "e.g. $500",
-    hint: "Regular savings help you reach your goals on time.",
-    image: "/images/retirement-5.png",
-  },
- {
-    id: 6,
-    question: "Do you expect any additional income during retirement?",
-    placeholder: "e.g. Pension, rental income",
-    hint: "Helps calculate your total retirement resources.",
-    image: "/images/retirement-6.png",
-  },
-],
-},
 ];
 
 export const EducationPlans = [
@@ -1560,111 +1546,114 @@ export const EducationPlans = [
         hint: "When would you like to transition to the next phaseof your journey? ",
         image: "/images/life-2.png",
       },
-      
-      
     ],
   },
   {
-   title: "Generational Wealth Transfer",
-description:
-  "Create a structured approach to passing financial assets, knowledge, and values to future generations.",
-icon: MdOutlineRealEstateAgent,
-questions: [
- {
-    id: 1,
-    question: "What stage are you at in your wealth transfer plan?",
-    placeholder: "e.g. Just beginning, have a plan, actively transferring",
-    hint: "Understanding your current stage helps tailor the best strategy for your family.",
-    image: "/images/life-1.png",
+    title: "Generational Wealth Transfer",
+    description:
+      "Create a structured approach to passing financial assets, knowledge, and values to future generations.",
+    icon: MdOutlineRealEstateAgent,
+    questions: [
+      {
+        id: 1,
+        question: "What stage are you at in your wealth transfer plan?",
+        placeholder: "e.g. Just beginning, have a plan, actively transferring",
+        hint: "Understanding your current stage helps tailor the best strategy for your family.",
+        image: "/images/life-1.png",
+      },
+      {
+        id: 2,
+        question: "Who are the primary beneficiaries of your wealth transfer?",
+        placeholder: "e.g. Children, grandchildren, trusts, charities",
+        hint: "Clarify who will receive your assets to ensure alignment with your wishes.",
+        image: "/images/life-3.png",
+      },
+      {
+        id: 3,
+        question: "What are your goals for generational wealth transfer?",
+        placeholder:
+          "e.g. Preserve family business, education funds, philanthropy",
+        hint: "Your intentions shape how your wealth is distributed and managed.",
+        image: "/images/life-2.png",
+      },
+      {
+        id: 4,
+        question:
+          "Have you set up any trusts or legal entities for wealth transfer?",
+        placeholder: "e.g. Family trust, charitable trust, foundations",
+        hint: "Trusts can help protect assets and provide tax advantages for heirs.",
+        image: "/images/life-2.png",
+      },
+      {
+        id: 5,
+        question:
+          "How do you plan to educate your heirs about managing the inheritance?",
+        placeholder: "e.g. Financial literacy programs, family meetings",
+        hint: "Preparing heirs helps ensure the legacy is sustained responsibly.",
+        image: "/images/life-2.png",
+      },
+      {
+        id: 6,
+        question:
+          "What concerns do you have about transferring wealth to future generations?",
+        placeholder: "e.g. Taxes, family disputes, asset protection",
+        hint: "Identifying challenges helps us address them proactively.",
+        image: "/images/life-2.png",
+      },
+    ],
   },
   {
-    id: 2,
-    question: "Who are the primary beneficiaries of your wealth transfer?",
-    placeholder: "e.g. Children, grandchildren, trusts, charities",
-    hint: "Clarify who will receive your assets to ensure alignment with your wishes.",
-    image: "/images/life-3.png",
-  },
-   {
-    id: 3,
-    question: "What are your goals for generational wealth transfer?",
-    placeholder: "e.g. Preserve family business, education funds, philanthropy",
-    hint: "Your intentions shape how your wealth is distributed and managed.",
-    image: "/images/life-2.png",
-  },
- {
-    id: 4,
-    question: "Have you set up any trusts or legal entities for wealth transfer?",
-    placeholder: "e.g. Family trust, charitable trust, foundations",
-    hint: "Trusts can help protect assets and provide tax advantages for heirs.",
-    image: "/images/life-2.png",
-  },
-{
-    id: 5,
-    question: "How do you plan to educate your heirs about managing the inheritance?",
-    placeholder: "e.g. Financial literacy programs, family meetings",
-    hint: "Preparing heirs helps ensure the legacy is sustained responsibly.",
-    image: "/images/life-2.png",
-  },
- {
-    id: 6,
-    question: "What concerns do you have about transferring wealth to future generations?",
-    placeholder: "e.g. Taxes, family disputes, asset protection",
-    hint: "Identifying challenges helps us address them proactively.",
-    image: "/images/life-2.png",
-  },
-],
-},
-  {
-   title: "Long-Term Care", 
-    description: "Prepare for potential health needs without compromising the financial legacy you intend to leave behind.",
-    
+    title: "Long-Term Care",
+    description:
+      "Prepare for potential health needs without compromising the financial legacy you intend to leave behind.",
+
     icon: FaHandsHelping,
     questions: [
       {
-    id: 1,
-    question: "What type of long-term care do you anticipate?",
-    placeholder: "e.g. Assisted living, home care, nursing home",
-    hint: "Understanding your care preference helps tailor your plan.",
-    image: "/images/long-term-care-1.png",
-  },
+        id: 1,
+        question: "What type of long-term care do you anticipate?",
+        placeholder: "e.g. Assisted living, home care, nursing home",
+        hint: "Understanding your care preference helps tailor your plan.",
+        image: "/images/long-term-care-1.png",
+      },
       {
-    id: 2,
-    question: "When do you expect to start needing care?",
-    placeholder: "e.g. 5 years from now, immediately",
-    hint: "An approximate timeline helps us estimate costs.",
-    image: "/images/long-term-care-2.png",
-  },
-       {
-    id: 3,
-    question: "What is your estimated monthly care cost?",
-    placeholder: "e.g. $2,500",
-    hint: "This helps us prepare a realistic savings plan.",
-    image: "/images/long-term-care-3.png",
-  },
+        id: 2,
+        question: "When do you expect to start needing care?",
+        placeholder: "e.g. 5 years from now, immediately",
+        hint: "An approximate timeline helps us estimate costs.",
+        image: "/images/long-term-care-2.png",
+      },
+      {
+        id: 3,
+        question: "What is your estimated monthly care cost?",
+        placeholder: "e.g. $2,500",
+        hint: "This helps us prepare a realistic savings plan.",
+        image: "/images/long-term-care-3.png",
+      },
 
-  {
-    id: 4,
-    question: "How much have you already saved for long-term care?",
-    placeholder: "e.g. $20,000",
-    hint: "Let us know what you’ve set aside so far.",
-    image: "/images/long-term-care-4.png",
-  },
+      {
+        id: 4,
+        question: "How much have you already saved for long-term care?",
+        placeholder: "e.g. $20,000",
+        hint: "Let us know what you’ve set aside so far.",
+        image: "/images/long-term-care-4.png",
+      },
 
-  {
-    id: 5,
-    question: "How much can you save monthly toward this plan?",
-    placeholder: "e.g. $500",
-    hint: "Your monthly savings capacity helps us create your timeline.",
-    image: "/images/long-term-care-5.png",
-  },
+      {
+        id: 5,
+        question: "How much can you save monthly toward this plan?",
+        placeholder: "e.g. $500",
+        hint: "Your monthly savings capacity helps us create your timeline.",
+        image: "/images/long-term-care-5.png",
+      },
 
-  {
-    id: 6,
-    question: "Do you have family or insurance support?",
-    placeholder: "e.g. Yes, family help or LTC insurance",
-    hint: "This affects your overall care plan and budget.",
-    image: "/images/long-term-care-6.png",
-  },
+      {
+        id: 6,
+        question: "Do you have family or insurance support?",
+        placeholder: "e.g. Yes, family help or LTC insurance",
+        hint: "This affects your overall care plan and budget.",
+        image: "/images/long-term-care-6.png",
+      },
     ],
   },
   {
@@ -1674,102 +1663,102 @@ questions: [
     icon: BsCashCoin,
     questions: [
       {
-    id: 1,
-    question: "What causes matter most to you?",
-    placeholder: "e.g. Education, Environment, Health",
-    hint: "Identifying your passions helps focus your giving.",
-    image: "/images/giving-intent-1.jpg",
-  },
+        id: 1,
+        question: "What causes matter most to you?",
+        placeholder: "e.g. Education, Environment, Health",
+        hint: "Identifying your passions helps focus your giving.",
+        image: "/images/giving-intent-1.jpg",
+      },
       {
-    id: 2,
-    question: "How much do you want to donate annually?",
-    placeholder: "e.g. $1,000",
-    hint: "This helps set your giving budget.",
-    image: "/images/giving-intent-2.jpg",
-  },
-     {
-    id: 3,
-    question: "Do you prefer one-time gifts or recurring donations?",
-    placeholder: "e.g. Monthly, Quarterly, One-time",
-    hint: "This affects your giving schedule and impact.",
-    image: "/images/giving-intent-3.jpg",
-  },
+        id: 2,
+        question: "How much do you want to donate annually?",
+        placeholder: "e.g. $1,000",
+        hint: "This helps set your giving budget.",
+        image: "/images/giving-intent-2.jpg",
+      },
+      {
+        id: 3,
+        question: "Do you prefer one-time gifts or recurring donations?",
+        placeholder: "e.g. Monthly, Quarterly, One-time",
+        hint: "This affects your giving schedule and impact.",
+        image: "/images/giving-intent-3.jpg",
+      },
 
-  {
-    id: 4,
-    question: "Would you like to support local or global organizations?",
-    placeholder: "e.g. Local",
-    hint: "Helps us align your giving to your preferred communities.",
-    image: "/images/giving-intent-4.jpg",
-  },
+      {
+        id: 4,
+        question: "Would you like to support local or global organizations?",
+        placeholder: "e.g. Local",
+        hint: "Helps us align your giving to your preferred communities.",
+        image: "/images/giving-intent-4.jpg",
+      },
 
-  {
-    id: 5,
-    question: "Are you interested in volunteering your time as well?",
-    placeholder: "e.g. Yes, No, Maybe",
-    hint: "This adds another dimension to your giving plan.",
-    image: "/images/giving-intent-5.jpg",
-  },
-   {
-    id: 6,
-    question: "Would you like help tracking the impact of your donations?",
-    placeholder: "e.g. Yes, I want updates",
-    hint: "Stay informed about how your gifts make a difference.",
-    image: "/images/giving-intent-6.jpg",
-  },
+      {
+        id: 5,
+        question: "Are you interested in volunteering your time as well?",
+        placeholder: "e.g. Yes, No, Maybe",
+        hint: "This adds another dimension to your giving plan.",
+        image: "/images/giving-intent-5.jpg",
+      },
+      {
+        id: 6,
+        question: "Would you like help tracking the impact of your donations?",
+        placeholder: "e.g. Yes, I want updates",
+        hint: "Stay informed about how your gifts make a difference.",
+        image: "/images/giving-intent-6.jpg",
+      },
     ],
   },
   {
-   title: "Retirement income",
-description:
-  "Prepare today for a comfortable and fulfilling tomorrow. This plan helps you estimate your retirement needs, set realistic savings goals, and envision the lifestyle you want once you stop working.",
-icon: MdOutlineRealEstateAgent,
-exploreMoreUrl: "/estate-planning",
-questions: [
-{
-    id: 1,
-    question: "At what age do you plan to retire?",
-    placeholder: "e.g. 60",
-    hint: "This helps us estimate how long your retirement savings need to last.",
-    image: "/images/retirement-1.png",
+    title: "Retirement income",
+    description:
+      "Prepare today for a comfortable and fulfilling tomorrow. This plan helps you estimate your retirement needs, set realistic savings goals, and envision the lifestyle you want once you stop working.",
+    icon: MdOutlineRealEstateAgent,
+    exploreMoreUrl: "/estate-planning",
+    questions: [
+      {
+        id: 1,
+        question: "At what age do you plan to retire?",
+        placeholder: "e.g. 60",
+        hint: "This helps us estimate how long your retirement savings need to last.",
+        image: "/images/retirement-1.png",
+      },
+      {
+        id: 2,
+        question: "What kind of lifestyle do you envision during retirement?",
+        placeholder: "e.g. Travel, hobbies, quiet life",
+        hint: "Share your dreams to tailor your retirement plan.",
+        image: "/images/retirement-2.png",
+      },
+      {
+        id: 3,
+        question: "What are your expected monthly expenses in retirement?",
+        placeholder: "e.g. $3,000",
+        hint: "Includes housing, food, healthcare, leisure, and more.",
+        image: "/images/retirement-3.png",
+      },
+      {
+        id: 4,
+        question: "How much have you saved for retirement so far?",
+        placeholder: "e.g. $50,000",
+        hint: "This gives us a starting point for your plan.",
+        image: "/images/retirement-4.png",
+      },
+      {
+        id: 5,
+        question: "How much can you save monthly toward retirement?",
+        placeholder: "e.g. $500",
+        hint: "Regular savings help you reach your goals on time.",
+        image: "/images/retirement-5.png",
+      },
+      {
+        id: 6,
+        question: "Do you expect any additional income during retirement?",
+        placeholder: "e.g. Pension, rental income",
+        hint: "Helps calculate your total retirement resources.",
+        image: "/images/retirement-6.png",
+      },
+    ],
   },
-  {
-    id: 2,
-    question: "What kind of lifestyle do you envision during retirement?",
-    placeholder: "e.g. Travel, hobbies, quiet life",
-    hint: "Share your dreams to tailor your retirement plan.",
-    image: "/images/retirement-2.png",
-  },
-   {
-    id: 3,
-    question: "What are your expected monthly expenses in retirement?",
-    placeholder: "e.g. $3,000",
-    hint: "Includes housing, food, healthcare, leisure, and more.",
-    image: "/images/retirement-3.png",
-  },
- {
-    id: 4,
-    question: "How much have you saved for retirement so far?",
-    placeholder: "e.g. $50,000",
-    hint: "This gives us a starting point for your plan.",
-    image: "/images/retirement-4.png",
-  },
-{
-    id: 5,
-    question: "How much can you save monthly toward retirement?",
-    placeholder: "e.g. $500",
-    hint: "Regular savings help you reach your goals on time.",
-    image: "/images/retirement-5.png",
-  },
- {
-    id: 6,
-    question: "Do you expect any additional income during retirement?",
-    placeholder: "e.g. Pension, rental income",
-    hint: "Helps calculate your total retirement resources.",
-    image: "/images/retirement-6.png",
-  },
-],
-},
 ];
 
 export const StrategyContent = [
@@ -2054,3 +2043,4 @@ export const whatweoffer = [
     },
   },
 ];
+
