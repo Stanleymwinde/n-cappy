@@ -1,6 +1,6 @@
 "use client";
-
 import { marginX, StrategyContent } from "@/utils/constants";
+
 import {
   Accordion,
   Box,
@@ -14,7 +14,9 @@ import Image from "next/image";
 import { MdPlayCircleFilled, MdFiberManualRecord } from "react-icons/md";
 import React from "react";
 
-const Differentiators = () => {
+
+const InvestmentSolutions = () => {
+
   return (
     <Box marginX={marginX} mt={20}>
       {/* Main Title */}
@@ -27,7 +29,7 @@ const Differentiators = () => {
         color="gray.800"
         textAlign="center"
       >
-        Our Investment Solutions
+        What We Offer
       </Heading>
 
       {/* Intro Text */}
@@ -39,6 +41,7 @@ const Differentiators = () => {
       <Box py={6} bg="gray.50" borderRadius="md" mt={6}>
         <Accordion.Root collapsible gap={2}>
           {StrategyContent.map((item, index) => (
+
             <Accordion.Item
               key={index}
               value={item.value}
@@ -68,22 +71,18 @@ const Differentiators = () => {
                     <Text fontSize={{ base: "lg", md: "2xl" }} mb={6}>
                       {item.body}
                     </Text>
-
-                    {/* Grid: Differentiators and Media */}
                     <Grid
                       templateColumns={{ base: "1fr", md: "2fr 1fr" }}
                       gap={8}
                       px={{ base: 4, md: 8 }}
                       py={6}
                       alignItems="start"
-                    >
-                      {/* Left Column: Differentiators */}
+                    >             
                       <GridItem>
                         <Heading fontSize={{ base: "2xl", md: "3xl" }} mb={4}>
                           Differentiators
                         </Heading>
 
-                        {/* Differentiators List */}
                         <Box
                           as="ul"
                           display="flex"
@@ -116,8 +115,7 @@ const Differentiators = () => {
                                   {diff.description}
                                 </Text>
                               </Box>
-                            </Box>
-                          ))}
+                            </Box>              
                         </Box>
                       </GridItem>
 
@@ -146,6 +144,18 @@ const Differentiators = () => {
                         </Box>
                       </GridItem>
                     </Grid>
+                    {/* Extra Text */}
+                    {item.extraText && (
+                      <Text
+                        mt={10}
+                        fontSize={{ base: "lg", md: "xl" }}
+                        maxW="6xl"
+                        textAlign="justify"
+                      >
+                        {item.extraText}
+                      </Text>
+                    )}
+
 
                     {/* Featured Deal */}
                     {item.featuredDeal && (
@@ -175,4 +185,4 @@ const Differentiators = () => {
   );
 };
 
-export default Differentiators;
+export default InvestmentSolutions;
