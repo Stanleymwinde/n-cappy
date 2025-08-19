@@ -2042,5 +2042,6 @@ export const whatweoffer = [
         "Structured a $12M convertible note for a rapidly growing health-tech platform, balancing immediate growth capital needs with long-term equity upside for investors and founders alike",
     },
   },
+
 ];
 

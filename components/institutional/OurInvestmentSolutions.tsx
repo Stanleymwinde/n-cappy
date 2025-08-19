@@ -1,6 +1,6 @@
 "use client";
+import { marginX, StrategyContent } from "@/utils/constants";
 
-import { marginX, whatweoffer } from "@/utils/constants";
 import {
   Accordion,
   Box,
@@ -14,7 +14,9 @@ import Image from "next/image";
 import { MdPlayCircleFilled, MdFiberManualRecord } from "react-icons/md";
 import React from "react";
 
+
 const InvestmentSolutions = () => {
+
   return (
     <Box marginX={marginX} mt={20}>
       {/* Main Title */}
@@ -32,15 +34,14 @@ const InvestmentSolutions = () => {
 
       {/* Intro Text */}
       <Text fontSize={{ base: "lg", md: "2xl" }} color="gray.600" textAlign="center">
-        We offer tailored investment advisory services for institutional and
-        corporate clients, combining deep market insight with strategic analysis
-        to drive long-term value.
+        We offer comprehensive solutions designed to optimize your financial position while maintaining the flexibility and security your organization demands
       </Text>
 
       {/* Accordion */}
       <Box py={6} bg="gray.50" borderRadius="md" mt={6}>
         <Accordion.Root collapsible gap={2}>
-          {whatweoffer.map((item, index) => (
+          {StrategyContent.map((item, index) => (
+
             <Accordion.Item
               key={index}
               value={item.value}
@@ -70,23 +71,18 @@ const InvestmentSolutions = () => {
                     <Text fontSize={{ base: "lg", md: "2xl" }} mb={6}>
                       {item.body}
                     </Text>
-
-                    {/* Grid: Services and Media */}
                     <Grid
                       templateColumns={{ base: "1fr", md: "2fr 1fr" }}
                       gap={8}
                       px={{ base: 4, md: 8 }}
                       py={6}
                       alignItems="start"
-                    >
-                      {/* Left Column: Services */}
+                    >             
                       <GridItem>
-                        {/* Services Heading */}
-                        <Heading fontSize={{ base: "2xl", md: "3xl" }} mb={4} >
-                          Our Services
+                        <Heading fontSize={{ base: "2xl", md: "3xl" }} mb={4}>
+                          Differentiators
                         </Heading>
 
-                        {/* Services List */}
                         <Box
                           as="ul"
                           display="flex"
@@ -96,28 +92,30 @@ const InvestmentSolutions = () => {
                           paddingLeft={0}
                           maxW="6xl"
                         >
-                          {item.services.map((service, idx) => (
-                            <li
+                          {item.differentiators.map((diff, idx) => (
+                            <Box
                               key={idx}
-                              style={{
-                                display: "flex",
-                                alignItems: "flex-start",
-                                gap: "16px",
-                              }}
+                              display="flex"
+                              alignItems="flex-start"
+                              gap={4}
                             >
-                              <MdFiberManualRecord color="blue.700" size={24} style={{ marginTop: 6 }} />
+                              {/* Bullet */}
+                              <Box mt={1}>
+                                <MdFiberManualRecord color="blue.700" size={16} />
+                              </Box>
+
+                              {/* Text */}
                               <Box>
-                                {service.title && (
+                                {diff.title && (
                                   <Text fontWeight="bold" fontSize={{ base: "lg", md: "xl" }} mb={1}>
-                                    {service.title}
+                                    {diff.title}
                                   </Text>
                                 )}
                                 <Text fontSize={{ base: "lg", md: "xl" }} color="gray.700" lineHeight="tall">
-                                  {service.description}
+                                  {diff.description}
                                 </Text>
                               </Box>
-                            </li>
-                          ))}
+                            </Box>              
                         </Box>
                       </GridItem>
 
@@ -146,7 +144,6 @@ const InvestmentSolutions = () => {
                         </Box>
                       </GridItem>
                     </Grid>
-
                     {/* Extra Text */}
                     {item.extraText && (
                       <Text
@@ -158,6 +155,7 @@ const InvestmentSolutions = () => {
                         {item.extraText}
                       </Text>
                     )}
+
 
                     {/* Featured Deal */}
                     {item.featuredDeal && (

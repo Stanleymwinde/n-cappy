@@ -146,37 +146,56 @@ const InvestmentSolutions = () => {
                         </Box>
                       </GridItem>
                     </Grid>
+                    <Text
+                      mt={10}
+                      fontSize="md"
+                      maxW="4xl"
+                      textAlign={"justify"}
+                    >
+                      {item.extraText}
+                    </Text>
 
-                    {/* Extra Text */}
-                    {item.extraText && (
-                      <Text
-                        mt={10}
-                        fontSize={{ base: "lg", md: "xl" }}
-                        maxW="6xl"
-                        textAlign="justify"
-                      >
-                        {item.extraText}
-                      </Text>
-                    )}
+                    {/* Featured Deal Box */}
+                    {Array.isArray(item.featuredDeal)
+                      ? item.featuredDeal.map(
+                          (
+                            deal: { title: string; description: string },
+                            idt: number
+                          ) => (
+                            <Box
+                              bg="blue.900"
+                              color="white"
+                              p={4}
+                              mt={8}
+                              borderRadius="md"
+                              maxW="4xl"
+                              key={idt}
+                            >
+                              <Text fontWeight="bold">{deal.title}</Text>
+                              <Text fontSize="sm" mt={2}>
+                                {deal.description}
+                              </Text>
+                            </Box>
+                          )
+                        )
+                      : item.featuredDeal && (
+                          <Box
+                            bg="blue.900"
+                            color="white"
+                            p={4}
+                            mt={8}
+                            borderRadius="md"
+                            maxW="4xl"
+                          >
+                            <Text fontWeight="bold">
+                              {item.featuredDeal.title}
+                            </Text>
+                            <Text fontSize="sm" mt={2}>
+                              {item.featuredDeal.description}
+                            </Text>
+                          </Box>
+                        )}
 
-                    {/* Featured Deal */}
-                    {item.featuredDeal && (
-                      <Box
-                        bg="blue.900"
-                        color="white"
-                        p={6}
-                        mt={8}
-                        borderRadius="md"
-                        
-                      >
-                        <Text fontWeight="bold" fontSize={{ base: "md", md: "xl" }}>
-                          {item.featuredDeal.title}
-                        </Text>
-                        <Text fontSize={{ base: "md", md: "xl" }} mt={2}>
-                          {item.featuredDeal.description}
-                        </Text>
-                      </Box>
-                    )}
                   </Box>
                 </Accordion.ItemBody>
               </Accordion.ItemContent>

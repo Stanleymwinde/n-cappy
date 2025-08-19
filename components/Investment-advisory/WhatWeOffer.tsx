@@ -1,6 +1,7 @@
-"use client";
 
+"use client";
 import { marginX, whatweoffer } from "@/utils/constants";
+
 import {
   Accordion,
   Box,
@@ -16,11 +17,12 @@ import React from "react";
 
 const InvestmentSolutions = () => {
   return (
-    <Box marginX={marginX} mt={20}>
-      {/* Main Title */}
+
+    <Box marginX={marginX}>
+
       <Heading
         as="h1"
-        fontSize={{ base: "3xl", md: "6xl" }}
+        fontSize={{ base: "2xl", md: "5xl" }}
         fontFamily="poppins"
         fontWeight="bold"
         my={6}
