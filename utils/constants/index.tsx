@@ -1760,3 +1760,287 @@ export const EducationPlans = [
     ],
   },
 ];
+
+export const StrategyContent = [
+  {
+    value: "equity-strategy",
+    title: "Equity Strategy",
+    text: "Pursuing Sustainable Capital Growth Across Market Cycles- This is to appear on the website while the rest is hidden. ",
+    body: "Our Equity Strategy is designed for institutions seeking to maximize long-term capital appreciation through high-conviction investments in quality companies. We employ a fundamentally driven, bottom-up approach that targets businesses with strong earnings potential, durable competitive advantages, and prudent capital allocation. ",
+
+    differentiators: [
+      {
+        title: "Rigorous Stock Selection",
+        description:
+          "Active, research-intensive process grounded in intrinsic value and growth potential",
+      },
+      {
+        title: "Sector & Geographic Diversification",
+        description:
+          "Risk-adjusted exposure across developed, emerging, and frontier markets",
+      },
+      {
+        title: "Forward-Looking Themes",
+        description:
+          "Allocation to secular growth trends in technology, healthcare innovation, energy transition, and digital infrastructure",
+      },
+      {
+        title: "Sustainable Investing Integration",
+        description:
+          "ESG considerations embedded into investment decisions to ensure alignment with global sustainability standards and stakeholder expectations",
+      },
+    ],
+
+    media: {
+      image: "/images/Charles.png",
+      alt: "Advisory Team",
+    },
+
+    featuredDeal: {
+      title: "Institutional Application:",
+      description:
+        " A pension fund with multi-decade liabilities may allocate to this strategy to achieve real returns above inflation while accessing global equity growth opportunities, including early-stage innovation in emerging markets. ",
+    },
+  },
+
+  {
+    value: "Balanced Strategy ",
+    title: "Balanced Strategy ",
+    text: "Optimizing Risk-Adjusted Returns Through Asset Class Synergy- This is to appear on the website while the rest is hidden. ",
+    body: "The Balanced Strategy is tailored for institutions that require capital growth alongside consistent income. This multi-asset approach strategically blends equities with fixed income instruments to generate a resilient portfolio that performs across varying economic conditions. ",
+
+    differentiators: [
+      {
+        title: "Dynamic Asset Allocation",
+        description:
+          "Tactical shifts driven by macroeconomic indicators, interest rate trends, and valuation signals ",
+      },
+      {
+        title: "Dual Objective",
+        description:
+          "Capital appreciation from equities combined with steady income from bonds and dividend-yielding assets ",
+      },
+      {
+        title: "Volatility Management",
+        description:
+          "Smoother return profile compared to pure equity strategies ",
+      },
+      {
+        title: "Inflation Buffer",
+        description:
+          "Selective positioning in inflation-sensitive securities and real assets ",
+      },
+    ],
+
+    media: {
+      image: "/images/Charles.png",
+      alt: "Private Credit Team",
+    },
+
+    featuredDeal: {
+      title: "Institutional Application:",
+      description:
+        " An insurance company managing policyholder reserves may benefit from this strategy’s balanced approach—generating steady income streams while capturing equity upside to offset long-term liabilities. ",
+    },
+  },
+
+  {
+    value: "Fixed Income Strategy  ",
+    title: "Fixed Income Strategy  ",
+    text: "Preserving Capital and Generating Reliable Income- This is to appear on the website while the rest is hidden",
+    body: "Our Fixed Income Strategy is purpose-built for institutions prioritizing capital preservation, income consistency, and downside protection. The strategy focuses on investment-grade sovereign, quasi-sovereign, and high-quality corporate debt, guided by active duration management and credit selection. ",
+
+    differentiators: [
+      {
+        title: "Credit Quality Discipline",
+        description:
+          "Emphasis on resilient issuers with strong fundamentals and favorable risk-return profiles ",
+      },
+      {
+        title: "Interest Rate Positioning",
+        description:
+          "Tactical allocation along the yield curve to optimize duration exposure and interest rate sensitivity ",
+      },
+      {
+        title: "Inflation Protection",
+        description:
+          "Integration of inflation-linked securities to safeguard purchasing power ",
+      },
+      {
+        title: "Liability Matching",
+        description:
+          "Well-suited for institutions deploying liability-driven investment (LDI) frameworks to meet known cash flow needs",
+      },
+    ],
+
+    media: {
+      image:"/images/Charles.png",
+      alt: "Infrastructure Projects",
+    },
+
+    featuredDeal: {
+      title: "Institutional Application:",
+      description:
+        "A sovereign wealth fund or endowment seeking low-volatility income to support national development projects or annual grant-making may deploy this strategy to stabilize returns through market cycles. ",
+    },
+  },
+];
+
+export const whatweoffer = [
+  {
+    value: "Capital-Raising",
+    title: "Capital Raising",
+    text: "Structuring and Sourcing Capital for Sustainable Growth.",
+    body: "Raising capital isn’t just about finding funding; it’s about finding the right kind of capital, under the right structure, at the right time. Whether you are expanding operations, restructuring, or investing in new markets, we will help you access strategic funding to support your next phase of growth.",
+    extraText: "We focus on sustainable strategies that maximize investor value while supporting business growth.",
+    services: [
+      {
+        title: "Custom Funding Strategies",
+        description:
+          "Designing custom funding strategies aligned with your business stage and sector",
+      },
+      {
+        title: "Investor Network Access",
+        description:
+          "Mapping and connecting you to our trusted network of institutional and private investors",
+      },
+      {
+        title: "Investment Documentation",
+        description:
+          "Preparing professional investment documents: pitch decks, financial models, and valuations",
+      },
+      {
+        title: "Transaction Support",
+        description:
+          "Full transaction support: due diligence, investor negotiations, and term sheet execution",
+      },
+    ],
+    media: {
+      image: "/images/Pius-new.png",
+      alt: "Advisory Team",
+    },
+    featuredDeal: {
+      title: "Featured Deal:",
+      description:
+        "Structured a $12M convertible note for a rapidly growing health-tech platform, balancing immediate growth capital needs with long-term equity upside for investors and founders alike",
+    },
+  },
+
+  {
+    value: "Business Valuation",
+    title: "Business Valuation",
+    text: "We turn complex numbers into clear insights so you can move forward with confidence. ",
+    body: "A clear, credible business valuation is essential. Whether you are planning an exit, raising funds, buying a company, or restructuring. We help individuals and businesses understand the real worth of their assets and what drives value.",
+    extraText: "Designed for investors who seek a blend of growth and stability across market cycles.",
+    services: [
+      {
+        title: "Standards-Aligned Reporting",
+        description:
+          "We deliver valuation reports that comply with international standards, including IVSC, IFRS, and CMA guidelines.",
+      },
+      {
+        title: "Robust Methodologies",
+        description:
+          "We apply multiple approaches—DCF, market comparables, and precedent transactions—for accuracy and reliability.",
+      },
+      {
+        title: "Benchmarking & Scenario Testing",
+        description:
+          "We conduct industry benchmarking, scenario analysis, and sensitivity testing to assess performance under different conditions.",
+      },
+      {
+        title: "Tailored Valuation Reviews",
+        description:
+          "We prepare valuations specifically designed for boards, investors, and auditors, ensuring clarity and decision-making support.",
+      },
+    ],
+    media: {
+      image: "/images/Pius-new.png",
+      alt: "Private Credit Team",
+    },
+    featuredDeal: {
+      title: "Featured Deal:",
+      description:
+        "Structured a $12M convertible note for a rapidly growing health-tech platform, balancing immediate growth capital needs with long-term equity upside for investors and founders alike",
+    },
+  },
+
+  {
+    value: "Private Funding and Investment Advisory   ",
+    title: "Private Funding and Investment Advisory   ",
+    text: "Access Capital That Is Beyond Public Markets",
+    body: "Not all capital comes from banks or stock markets. For clients looking to raise funds or invest in private market opportunities, we offer expert guidance through Africa’s growing private capital ecosystem.",
+    extraText: "Ideal for investors who want stable income with minimal risk.",
+    services: [
+      {
+        title: "Deal Sourcing",
+        description:
+          "We identify and access attractive opportunities in private equity and private debt markets tailored to investor mandates.",
+      },
+      {
+        title: "Investment Structuring",
+        description:
+          "We design flexible investment structures—equity, convertible debt, or mezzanine finance—to balance risk and return.",
+      },
+      {
+        title: "Exit Planning & Support",
+        description:
+          "We develop and execute exit strategies, including secondaries, buyouts, or strategic sales, to maximize investor outcomes.",
+      },
+      {
+        title: "Portfolio Monitoring",
+        description:
+          "We provide ongoing oversight of private portfolios, ensuring performance tracking, reporting, and value optimization.",
+      },
+    ],
+    media: {
+      image: "/images/Pius-new.png",
+      alt: "Infrastructure Projects",
+    },
+    featuredDeal: {
+      title: "Featured Deal:",
+      description:
+        "Structured a $12M convertible note for a rapidly growing health-tech platform, balancing immediate growth capital needs with long-term equity upside for investors and founders alike",
+    },
+  },
+
+    {
+    value: "Business Deals",
+    title: "Business Deals and Partnerships",
+    text: "Expert Support Across Your Deals’ Lifecycles  ",
+    body: "If you are looking to buy, sell, or merge a business, we provide expert support at every step.  Our role is to ensure the deal is not only financially sound but also strategically aligned with your growth or exit goals.",
+    extraText: "Designed for investors who seek a blend of growth and stability across market cycles.",
+    services: [
+      {
+        title: "Buy-side and sell-side advisory",
+        description:
+          "We guide businesses through both acquisitions and divestitures, ensuring transactions are strategically aligned and value-driven",
+      },
+      {
+        title: "Screening and identifying strategic opportunities",
+        description:
+          "We identify and evaluate strategic opportunities that best fit your business objectives, sector trends, and growth potential.",
+      },
+      {
+        title: "Valuation and deal structuring",
+        description:
+          "We provide accurate business valuations and design deal structures that maximize financial and strategic outcomes.",
+      },
+      {
+        title: "Negotiation, execution, and post-deal integration",
+        description:
+          "We support you through negotiations, transaction closing, and seamless post-deal integration to ensure long-term success.",
+      },
+    ],
+    media: {
+      image: "/images/Pius-new.png",
+      alt: "Private Credit Team",
+    },
+    featuredDeal: {
+      title: "Featured Deal:",
+      description:
+        "Structured a $12M convertible note for a rapidly growing health-tech platform, balancing immediate growth capital needs with long-term equity upside for investors and founders alike",
+    },
+  },
+];
+

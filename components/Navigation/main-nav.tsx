@@ -27,7 +27,7 @@ const MainNav = () => {
         <Link href="/">
           <Image
             priority
-            src="/images/Logo.svg"
+            src="/images/Logooo.png"
             alt="logo"
             width={60}
             height={70}
