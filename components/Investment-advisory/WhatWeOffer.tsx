@@ -1,4 +1,4 @@
-import { marginX } from "@/utils/constants";
+import { marginX,whatweoffer } from "@/utils/constants";
 import {
   Accordion,
   Box,
@@ -14,15 +14,14 @@ import { MdPlayCircleFilled, MdFiberManualRecord } from "react-icons/md";
 
 import React from "react";
 
-const WhatWeOffer = () => {
+const InvestmentSolutions = () => {
   return (
-    <Box marginX={marginX} mt={15}>
+    <Box marginX={marginX}>
       <Heading
         as="h1"
-        fontSize={{ base: "3xl", md: "6xl" }}
+        fontSize={{ base: "2xl", md: "5xl" }}
         fontFamily="poppins"
-        fontWeight={"bold"}
-        my={5}
+        my={6}
         color="gray.800"
         textAlign="center"
       >
@@ -89,19 +88,7 @@ const WhatWeOffer = () => {
                           color="gray.700"
                           lineHeight="1.8"
                         >
-                          <li
-                            style={{
-                              display: "flex",
-                              alignItems: "center",
-                              gap: "16px",
-                            }}
-                          >
-                            <MdFiberManualRecord color="blue.700" />
-                            <Text>
-                              Origination of proprietary deal flow across
-                              private equity and private credit markets
-                            </Text>
-                          </li>
+                       
                           <li
                             style={{
                               display: "flex",
@@ -215,7 +202,7 @@ const WhatWeOffer = () => {
   );
 };
 
-export default WhatWeOffer;
+export default InvestmentSolutions;
 
 const items = [
   {

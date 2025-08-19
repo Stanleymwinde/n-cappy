@@ -1,4 +1,4 @@
-import { marginX } from "@/utils/constants";
+import { marginX, whatweoffer } from "@/utils/constants";
 import {
   Accordion,
   Box,
@@ -34,7 +34,7 @@ const InvestmentSolutions = () => {
       </Text>
       <Box py={6} bg="gray.50" borderRadius="md" mt={6}>
         <Accordion.Root collapsible gap={2}>
-          {items.map((item, index) => (
+          {whatweoffer.map((item, index) => (
             <Accordion.Item
               key={index}
               value={item.value}
@@ -55,13 +55,8 @@ const InvestmentSolutions = () => {
               <Accordion.ItemContent>
                 <Accordion.ItemBody>
                   <Box px={{ base: 4, md: 16 }} bg="white">
-                    <Text fontSize="lg" mb={6} maxW="4xl">
-                      We bridge institutional capital with high-growth,
-                      privately-held enterprises across Africa and beyond.
-                      Whether your institution is seeking differentiated alpha
-                      or your business is looking to scale through non-dilutive
-                      capital, our advisory offering creates value through
-                      structured, long-term alignment.
+                    <Text fontSize="lg" mb={6} >
+                      {item.body}
                     </Text>
 
                     <Grid
@@ -71,66 +66,52 @@ const InvestmentSolutions = () => {
                     >
                       {/* Left Text Column */}
                       <GridItem w={"90%"} mx="auto">
-                        <Heading fontSize="3xl" mb={4}>
+                        <Heading fontSize={{ base: "3xl", md: "4xl" }} mb={4}>
                           Our Services
                         </Heading>
-
-                        <Box
-                          alignContent={"center"}
-                          as={"ul"}
-                          gap={8}
-                          display="flex-column"
-                          alignItems="center"
-                          flexDirection="column"
-                          listStyleType="none"
-                          paddingLeft={0}
-                          fontSize="2xl"
-                          color="gray.700"
-                          lineHeight="1.8"
-                        >
-                       
-                          <li
-                            style={{
-                              display: "flex",
-                              alignItems: "center",
-                              gap: "16px",
-                              lineHeight: "1.6",
-                            }}
-                          >
-                            <MdFiberManualRecord color="blue.700" />
-                            <Text lineHeight={"1.6"}>
-                              Transaction structuring including equity
-                              placements, convertible debt, and mezzanine
-                              finance
-                            </Text>
-                          </li>
-                          <li
-                            style={{
-                              display: "flex",
-                              alignItems: "center",
-                              gap: "16px",
-                            }}
-                          >
-                            <MdFiberManualRecord color="blue.700" />
-                            <Text>
-                              Ongoing portfolio monitoring and performance
-                              evaluation for investor clients
-                            </Text>
-                          </li>
-                          <li
-                            style={{
-                              display: "flex",
-                              alignItems: "center",
-                              gap: "16px",
-                            }}
-                          >
-                            <MdFiberManualRecord color="blue.700" />
-                            <Text>
-                              Design and execution of exit strategies (including
-                              secondary sales and strategic buyouts)
-                            </Text>
-                          </li>
-                        </Box>
+                        {item.services?.map(
+                          (
+                            service: { title: string; description: string },
+                            idx: number
+                          ) => (
+                            <Box
+                              key={idx}
+                              as={"ol"}
+                              listStyleType="none"
+                              paddingLeft={0}
+                              color="gray.700"
+                              lineHeight="1.8"
+                              mb={4} // spacing between services
+                            >
+                              <li
+                                style={{
+                                  display: "flex",
+                                  gap: "12px",
+                                  alignItems: "flex-start",
+                                }}
+                              >
+                                <MdFiberManualRecord color="blue.700" size={16} />
+                                <Box>
+                                  <Text
+                                    fontWeight="bold"
+                                    fontSize="md"
+                                    lineHeight="1.4"
+                                  >
+                                    {service.title}
+                                  </Text>
+                                  <Text
+                                    fontSize="2xl"
+                                    color="gray.600"
+                                    mt={1}
+                                    lineHeight="1.5"
+                                  >
+                                    {service.description}
+                                  </Text>
+                                </Box>
+                              </li>
+                            </Box>
+                          )
+                        )}
                       </GridItem>
 
                       {/* Right Video Image Column */}
@@ -143,8 +124,8 @@ const InvestmentSolutions = () => {
                           height={{ base: "200px", md: "600px" }}
                         >
                           <Image
-                            src="/images/Charles.png"
-                            alt="Advisory Team"
+                            src={item.media.image}
+                            alt={item.media.alt}
                             fill
                           />
                           <Box
@@ -153,7 +134,7 @@ const InvestmentSolutions = () => {
                             left="50%"
                             transform="translate(-50%, -50%)"
                           >
-                            <MdPlayCircleFilled size="64px" color="white" />
+                            <MdPlayCircleFilled size={64} color="white" />
                           </Box>
                         </Box>
                       </GridItem>
@@ -165,32 +146,49 @@ const InvestmentSolutions = () => {
                       maxW="4xl"
                       textAlign={"justify"}
                     >
-                      We maintain a deep understanding of the evolving private
-                      capital landscape and work closely with institutional
-                      asset allocators to unlock co-investment opportunities,
-                      strategic capital partnerships, and bespoke funding
-                      solutions.
+                      {item.extraText}
                     </Text>
 
                     {/* Featured Deal Box */}
-                    <Box
-                      bg="blue.900"
-                      color="white"
-                      p={4}
-                      mt={8}
-                      borderRadius="md"
-                      maxW="4xl"
-                    >
-                      <Text fontWeight="bold">
-                        Featured Deal: Healthcare Technology Platform
-                      </Text>
-                      <Text fontSize="sm" mt={2}>
-                        Structured a $12M convertible note for a rapidly growing
-                        health-tech platform, balancing immediate growth capital
-                        needs with long-term equity upside for investors and
-                        founders alike.
-                      </Text>
-                    </Box>
+                    {Array.isArray(item.featuredDeal)
+                      ? item.featuredDeal.map(
+                          (
+                            deal: { title: string; description: string },
+                            idt: number
+                          ) => (
+                            <Box
+                              bg="blue.900"
+                              color="white"
+                              p={4}
+                              mt={8}
+                              borderRadius="md"
+                              maxW="4xl"
+                              key={idt}
+                            >
+                              <Text fontWeight="bold">{deal.title}</Text>
+                              <Text fontSize="sm" mt={2}>
+                                {deal.description}
+                              </Text>
+                            </Box>
+                          )
+                        )
+                      : item.featuredDeal && (
+                          <Box
+                            bg="blue.900"
+                            color="white"
+                            p={4}
+                            mt={8}
+                            borderRadius="md"
+                            maxW="4xl"
+                          >
+                            <Text fontWeight="bold">
+                              {item.featuredDeal.title}
+                            </Text>
+                            <Text fontSize="sm" mt={2}>
+                              {item.featuredDeal.description}
+                            </Text>
+                          </Box>
+                        )}
                   </Box>
                 </Accordion.ItemBody>
               </Accordion.ItemContent>
@@ -203,26 +201,3 @@ const InvestmentSolutions = () => {
 };
 
 export default InvestmentSolutions;
-
-const items = [
-  {
-    value: "a",
-    title: "Capital Raising",
-    text: "Stucturing and Sourcing for Sustainable Growth",
-  },
-  {
-    value: "b",
-    title: "Business Evaluation",
-    text: "Independent Evaluation for Strategic Clarity and Capital Decisions",
-  },
-  {
-    value: "c",
-    title: "Private Equity & Private Debt Advisory",
-    text: "Access  to Capital Beyond Public Markets",
-  },
-  {
-    value: "d",
-    title: "Mergers & Acquisitions (M&A)",
-    text: "End to End Advisory Across the  M&A Lifecycle",
-  },
-];
