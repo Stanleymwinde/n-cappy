@@ -2043,3 +2043,31 @@ export const whatweoffer = [
     },
   },
 ];
+
+export const teamAlbumMembers = [
+  {
+    name: "Mercy Njoroge",
+    role: "Chief Customer Experience Officer",
+    photoUrl: "/images/IMG_6199.jpg",
+  },
+  {
+    name: "Abby Mungai",
+    role: "General Wealth Manager",
+    photoUrl: "/images/IMG_6205.jpg",
+  },
+  {
+    name: "Lilian Mungai",
+    role: "Finance & Operations Manager",
+    photoUrl: "/images/IMG_6208.jpg",
+  },
+  {
+    name: "Irene Okoth",
+    role: "HR Officer",
+    photoUrl: "/images/IMG_6221.jpg",
+  },
+  {
+    name: "Kezzy Omoni",
+    role: "Digital Creative Director",
+    photoUrl: "/images/IMG_6222.jpg",
+  },
+];

@@ -1,106 +1,71 @@
-import React, { useEffect, useState } from "react";
-import { Box, Image, Text } from "@chakra-ui/react";
+"use client";
 
-type TeamMember = {
-  name: string;
-  role: string;
-  photoUrl: string;
-};
+import { Box, Image, Heading, Text, VStack } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 
-type TeamAlbumProps = {
-  members: TeamMember[];
-};
+const images = [
+  "/images/IMG_6245.jpg",
+  "/images/IMG_6199.jpg",
+  "/images/IMG_6205.jpg",
+  "/images/IMG_6208.jpg",
+  "/images/IMG_6221.jpg",
+  "/images/IMG_6222.jpg",
+  "/images/IMG_6236.jpg",
+  "/images/IMG_6242.jpg",
+  "/images/IMG_0610.jpg",
+  "/images/IMG_6257.jpg",
+  "/images/IMG_6277.jpg",
+  "/images/IMG_6283.jpg",
+  "/images/IMG_6285.jpg",
+  "/images/IMG_6288.jpg",
+  "/images/IMG_6294.jpg",
+  // add all your 20 image paths here
+];
 
-// Custom hook to detect prefers-reduced-motion
-function usePrefersReducedMotion() {
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
-
-  React.useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setPrefersReducedMotion(mediaQuery.matches);
-
-    const handler = () => setPrefersReducedMotion(mediaQuery.matches);
-    mediaQuery.addEventListener("change", handler);
-    return () => mediaQuery.removeEventListener("change", handler);
-  }, []);
-
-  return prefersReducedMotion;
-}
-
-export const TeamAlbum: React.FC<TeamAlbumProps> = ({ members }) => {
-  const prefersReducedMotion = usePrefersReducedMotion();
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [fade, setFade] = useState(true);
+const TeamAlbum: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    if (prefersReducedMotion) return; // no animation
-
     const interval = setInterval(() => {
-      setFade(false); // start fade out
-      setTimeout(() => {
-        setActiveIndex((prev) => (prev + 1) % members.length);
-        setFade(true); // fade in next
-      }, 1000); // fade out duration 1s
-    }, 10000); // every 10 seconds
-
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); // change image every 3 seconds
     return () => clearInterval(interval);
-  }, [members.length, prefersReducedMotion]);
+  }, []);
 
   return (
-    <Box width="100%" height="100vh">
-      {/* Text section above */}
-      <Box
-        w="100%"
-        py={8}
-        textAlign="center"
-        color="Black"
-        fontFamily="Poppins, sans-serif"
-      >
-        <Text
-  fontSize={{ base: "3xl", md: "5xl" }}
-  fontWeight="bold"
-  mb={2}
-  bgGradient="linear(to-r, blue.900, teal.300)"
-  bgClip="text"
-  color="blue.900"
->
-  Nabo Capital Team (Leadership in Living Colour)
-</Text>
-       
-        <Text fontSize={{ base: "md", md: "xl" }} maxW="600px" mx="auto">
-      These are the quiet moments, the defining moments and unspoken values of Nabo 
+    <Box width="100%">
+      {/* Title Section */}
+      <VStack gap={6} textAlign="center"  mb={10} mt={20}>
+        <Heading
+         color="#0A2233"
+         fontSize={{ base: "3xl", md: "6xl" }}
+         fontFamily="poppins"
+         fontWeight="bold"
+        >
+        Our Team in Living Colour
+        </Heading>
+        <Text fontSize={{ base: "md", md: "lg" }} color="gray.700">
+          Moments and unspoken values that define who we are 
         </Text>
-      </Box>
+      </VStack>
 
-      {/* Image slideshow below */}
-      <Box
-        position="relative"
-        w="100%"
-        height="calc(100vh - 120px)" // subtract approx height of text section
-        overflow="hidden"
-      >
-        {members.map((member, idx) => {
-          const isActive = idx === activeIndex;
-
-          return (
-            <Image
-              key={member.photoUrl}
-              src={member.photoUrl}
-              alt={member.name}
-              position="absolute"
-              top={0}
-              left={0}
-              width="100%"
-              height="100%"
-              objectFit="cover"
-              userSelect="none"
-              draggable={false}
-              opacity={isActive && fade ? 1 : 0}
-              transition="opacity 1s ease"
-              pointerEvents={isActive ? "auto" : "none"}
-            />
-          );
-        })}
+      {/* Image carousel */}
+      <Box position="relative" width="100%" height="1000px" overflow="hidden">
+        {images.map((src, index) => (
+          <Image
+            key={index}
+            src={src}
+            alt={`Team image ${index + 1}`}
+            position="absolute"
+            top={0}
+            left={0}
+            width="100%"
+            height="800px"
+            objectFit="cover"
+            transition="opacity 1s ease-in-out"
+            opacity={index === currentIndex ? 1 : 0}
+          />
+        ))}
       </Box>
     </Box>
   );
