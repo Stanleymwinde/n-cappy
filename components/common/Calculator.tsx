@@ -15,6 +15,7 @@ import {
   Portal,
   Select,
   createListCollection,
+  HStack,
 } from "@chakra-ui/react";
 import { useState, useRef } from "react";
 import {
@@ -28,8 +29,6 @@ import {
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 import autoTable from "jspdf-autotable";
-
-
 
 type ChartData = {
   year: number;
@@ -58,8 +57,25 @@ export default function Page() {
   const [years, setYears] = useState(12);
   const [data, setData] = useState<ChartData[]>([]);
   const [result, setResult] = useState<number | null>(null);
+  const [currency, setCurrency] = useState<"KES" | "USD">("KES");
+  const [rate, setRate] = useState(1); 
 
   const exportRef = useRef<HTMLDivElement>(null);
+
+  const handleCurrencyToggle = (selected: "KES" | "USD") => {
+    if (selected === currency) return; 
+
+    if (selected === "USD") {
+      setTargetAmount(targetAmount * 0.0075);
+      setMonthlyContribution(monthlyContribution * 0.0075);
+      setRate(0.0075);
+    } else {
+      setTargetAmount(targetAmount / 0.0075);
+      setMonthlyContribution(monthlyContribution / 0.0075);
+      setRate(1);
+    }
+    setCurrency(selected);
+  };
 
   const calculate = () => {
     const r = interestRate / 100;
@@ -82,12 +98,15 @@ export default function Page() {
     setResult(Number(balance.toFixed(2)));
   };
 
+  const formatCurrency = (value: number) => {
+    return value.toLocaleString(undefined, { minimumFractionDigits: 2 });
+  };
+
   const downloadPDF = async () => {
     const pdf = new jsPDF({ orientation: "landscape" });
 
-    // Optional: add chart as image
     if (exportRef.current) {
-      const chartContainer = exportRef.current.querySelector(".recharts-wrapper"); 
+      const chartContainer = exportRef.current.querySelector(".recharts-wrapper");
       if (chartContainer) {
         const canvas = await html2canvas(chartContainer as HTMLElement, {
           scale: 3,
@@ -96,24 +115,23 @@ export default function Page() {
         });
         const imgData = canvas.toDataURL("image/png");
 
-        const pdfWidth = pdf.internal.pageSize.getWidth() - 20; 
+        const pdfWidth = pdf.internal.pageSize.getWidth() - 20;
         const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
 
         pdf.addImage(imgData, "PNG", 10, 10, pdfWidth, pdfHeight);
       }
     }
 
-    
     autoTable(pdf, {
       startY: 120,
       head: [["Year", "Principal", "Monthly", "Annual", "Interest", "End of Year"]],
       body: data.map((row, i) => [
         row.year,
-        i === 0 ? row.principal?.toLocaleString() : "-",
-        monthlyContribution.toLocaleString(),
-        (monthlyContribution * 12).toLocaleString(),
-        i === 0 ? "-" : row.interest.toLocaleString(),
-        row.endOfYear.toLocaleString(),
+        i === 0 ? formatCurrency(row.principal || 0) : "-",
+        formatCurrency(monthlyContribution),
+        formatCurrency(monthlyContribution * 12),
+        i === 0 ? "-" : formatCurrency(row.interest),
+        formatCurrency(row.endOfYear),
       ]),
       styles: { fontSize: 10 },
       headStyles: { fillColor: [49, 130, 206], textColor: 255 },
@@ -173,6 +191,24 @@ export default function Page() {
         </Box>
       </Box>
 
+      {/* Currency Toggle */}
+      <Box textAlign="center" mb={4}>
+        <HStack justify="center" gap={4}>
+          <Button
+            colorScheme={currency === "KES" ? "blue" : "gray"}
+            onClick={() => handleCurrencyToggle("KES")}
+          >
+            KES
+          </Button>
+          <Button
+            colorScheme={currency === "USD" ? "blue" : "gray"}
+            onClick={() => handleCurrencyToggle("USD")}
+          >
+            USD
+          </Button>
+        </HStack>
+      </Box>
+
       {/* Inputs */}
       <Box bg="white" maxW="2000px" marginX={marginX} p={8} color="black" borderRadius="2xl">
         <VStack gap={6} align="center" width="full" px={4}>
@@ -198,29 +234,27 @@ export default function Page() {
             <Field.Root>
               <Field.Label fontWeight="bold">It will cost me</Field.Label>
               <Input
-                placeholder="KES"
-                value={targetAmount.toLocaleString()}
-                onChange={(e) =>
-                  setTargetAmount(Number(e.target.value.replace(/,/g, "")))
-                }
+                placeholder={currency}
+                value={targetAmount === 0 ? "" : formatCurrency(targetAmount)}
+                onChange={(e) => {
+                  const val = e.target.value.replace(/,/g, "");
+                  setTargetAmount(val === "" ? 0 : Number(val));
+                }}
               />
-              <Text fontSize="sm" color="gray.700">
-                to reach this goal
-              </Text>
+              <Text fontSize="sm" color="gray.700">to reach this goal</Text>
             </Field.Root>
 
             <Field.Root>
               <Field.Label fontWeight="bold">I'll contribute</Field.Label>
               <Input
-                placeholder="KES"
-                value={monthlyContribution.toLocaleString()}
-                onChange={(e) =>
-                  setMonthlyContribution(Number(e.target.value.replace(/,/g, "")))
-                }
+                placeholder={currency}
+                value={monthlyContribution === 0 ? "" : formatCurrency(monthlyContribution)}
+                onChange={(e) => {
+                  const val = e.target.value.replace(/,/g, "");
+                  setMonthlyContribution(val === "" ? 0 : Number(val));
+                }}
               />
-              <Text fontSize="sm" color="gray.700">
-                Every month
-              </Text>
+              <Text fontSize="sm" color="gray.700">Every month</Text>
             </Field.Root>
           </SimpleGrid>
 
@@ -233,9 +267,7 @@ export default function Page() {
                 value={interestRate}
                 onChange={(e) => setInterestRate(Number(e.target.value))}
               />
-              <Text fontSize="sm" color="gray.700">
-                interest annually
-              </Text>
+              <Text fontSize="sm" color="gray.700">interest annually</Text>
             </Field.Root>
 
             <Field.Root>
@@ -246,28 +278,19 @@ export default function Page() {
                 value={years}
                 onChange={(e) => setYears(Number(e.target.value))}
               />
-              <Text fontSize="sm" color="gray.700">
-                years
-              </Text>
+              <Text fontSize="sm" color="gray.700">years</Text>
             </Field.Root>
           </SimpleGrid>
 
-
-          <Button colorScheme="blue" size="lg" onClick={calculate}
-                _hover={{ bg: "#00CAFF" }}
-          >
-
+          <Button colorScheme="blue" size="lg" onClick={calculate} _hover={{ bg: "#00CAFF" }}>
             Calculate
           </Button>
 
           {result !== null && (
             <Box textAlign="center">
-              <Text fontSize="xl" fontWeight="bold" mt={4}>
-                You’ll have
-              </Text>
+              <Text fontSize="xl" fontWeight="bold" mt={4}>You’ll have</Text>
               <Text fontSize="2xl" fontWeight="extrabold" color="orange.500">
-                KES.{" "}
-                {result.toLocaleString(undefined, { minimumFractionDigits: 2 })}
+                {currency} {formatCurrency(result)}
               </Text>
             </Box>
           )}
@@ -277,9 +300,7 @@ export default function Page() {
       {/* Chart & Table with PDF download */}
       <Box p={6} bg="#f5f5f5">
         <Box textAlign="right" mb={4}>
-          <Button colorScheme="green" size="sm" onClick={downloadPDF} 
-                _hover={{ bg: "#00CAFF" }}
-          >
+          <Button colorScheme="green" size="sm" onClick={downloadPDF} _hover={{ bg: "#00CAFF" }}>
             Download PDF
           </Button>
         </Box>
@@ -295,7 +316,7 @@ export default function Page() {
               <Tabs.Content value="linegraph">
                 <Box py={6}>
                   <ResponsiveContainer width="100%" height={300}>
-                    <LineChart data={data}>
+                    <LineChart data={data.map(d => ({ ...d, endOfYear: d.endOfYear }))}>
                       <XAxis dataKey="year" />
                       <YAxis />
                       <Tooltip
@@ -303,12 +324,7 @@ export default function Page() {
                           value.toLocaleString(undefined, { minimumFractionDigits: 0 })
                         }
                       />
-                      <Line
-                        type="monotone"
-                        dataKey="endOfYear"
-                        stroke="#3182ce"
-                        strokeWidth={3}
-                      />
+                      <Line type="monotone" dataKey="endOfYear" stroke="#3182ce" strokeWidth={3} />
                     </LineChart>
                   </ResponsiveContainer>
                 </Box>
@@ -330,13 +346,11 @@ export default function Page() {
                     {data.map((row, i) => (
                       <Table.Row key={i}>
                         <Table.Cell>{row.year}</Table.Cell>
-                        <Table.Cell>
-                          {i === 0 ? row.principal?.toLocaleString() : "-"}
-                        </Table.Cell>
-                        <Table.Cell>{monthlyContribution.toLocaleString()}</Table.Cell>
-                        <Table.Cell>{(monthlyContribution * 12).toLocaleString()}</Table.Cell>
-                        <Table.Cell>{i === 0 ? "-" : row.interest.toLocaleString()}</Table.Cell>
-                        <Table.Cell>{row.endOfYear.toLocaleString()}</Table.Cell>
+                        <Table.Cell>{i === 0 ? formatCurrency(row.principal || 0) : "-"}</Table.Cell>
+                        <Table.Cell>{formatCurrency(monthlyContribution)}</Table.Cell>
+                        <Table.Cell>{formatCurrency(monthlyContribution * 12)}</Table.Cell>
+                        <Table.Cell>{i === 0 ? "-" : formatCurrency(row.interest)}</Table.Cell>
+                        <Table.Cell>{formatCurrency(row.endOfYear)}</Table.Cell>
                       </Table.Row>
                     ))}
                   </Table.Body>
