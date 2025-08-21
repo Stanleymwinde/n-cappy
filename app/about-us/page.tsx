@@ -5,7 +5,7 @@ import Herosection from "@/components/About/Herosection";
 import Heritagesection from "@/components/About/Heritagesection";
 import Teamsection from "@/components/About/Teamsection";
 import { Connect } from "@/components/individual";
-import { TeamAlbum } from "@/components/About";
+import { TeamsAlbum } from "@/components/About";
 import CallToActionCommon from "@/components/common/CallToAction";
 import Contactinfo from "@/components/About/Contactinfo";
 
@@ -19,7 +19,7 @@ const AboutPage: React.FC = () => {
       <Herosection />
       <Heritagesection />
       <Teamsection />
-      <TeamAlbum />
+      <TeamsAlbum />
       <Connect />
        <Contactinfo />
       <CallToActionCommon />
