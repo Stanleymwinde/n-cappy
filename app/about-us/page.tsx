@@ -11,7 +11,7 @@ import { TeamsAlbum } from "@/components/About";
 
 const AboutPage: React.FC = () => {
   return (
-    <Box>
+    <>
       <Herosection />
       <Heritagesection />
       <Teamsection />
@@ -19,7 +19,7 @@ const AboutPage: React.FC = () => {
       <Connect />
       <Contactinfo />
       <CallToActionCommon />
-    </Box>
+    </>
   );
 };
 
