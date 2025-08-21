@@ -3,6 +3,7 @@ import { Box, Button, Text, Flex } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+
 type HeroProps = {
   title?: string;
   subtitle?: string;
@@ -10,15 +11,9 @@ type HeroProps = {
   button?: string;
   button1?: string;
   scrollTarget?: string; 
-  buttonLink?: string; 
 };
 
-const Hero = ({ title, subtitle, imageUrl, button, button1, scrollTarget, buttonLink }: HeroProps) => {
-
-  buttonLink?: string; // added buttonLink
-};
-
-
+const Hero = ({ title, subtitle, imageUrl, button, button1, scrollTarget }: HeroProps) => {
   return (
     <Box
       position="relative"
@@ -85,21 +80,7 @@ const Hero = ({ title, subtitle, imageUrl, button, button1, scrollTarget, button
 
         <Flex gap={4} mt={5} flexWrap="wrap">
           {/* Primary Button */}
-          {buttonLink ? (
-            <a href={buttonLink} target="_blank" rel="noopener noreferrer">
-              <Button
-                bg="cyan.900"
-                color="white"
-                px={6}
-                py={6}
-                rounded="full"
-                fontWeight="bold"
-                _hover={{ bg: "#00CAFF" }}
-              >
-                {button || "Get Started"}
-              </Button>
-            </a>
-          ) : scrollTarget ? (
+          {scrollTarget ? (
             <a href={scrollTarget}>
               <Button
                 bg="cyan.900"
@@ -113,19 +94,6 @@ const Hero = ({ title, subtitle, imageUrl, button, button1, scrollTarget, button
                 {button || "Get Started"}
               </Button>
             </a>
-          ) : buttonLink ? (
-            <Button
-              bg="cyan.900"
-              color="white"
-              px={6}
-              py={6}
-              rounded="full"
-              fontWeight="bold"
-              _hover={{ bg: "#00CAFF" }}
-              onClick={() => window.open(buttonLink, "_blank")} 
-            >
-              {button || "Get Started"}
-            </Button>
           ) : (
             <Button
               bg="cyan.900"

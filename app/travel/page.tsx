@@ -2,11 +2,10 @@ import Hero from "@/components/common/Hero";
 import { CallToAction } from "@/components/home";
 import { PlanForJoy } from "@/components/i-want-tos";
 import QuestionPack from "@/components/i-want-tos/QuestionPack";
-import {  Rates } from "@/components/common";
-
+import { Rates } from "@/components/common";
 import React from "react";
 
-const page = () => {
+const Page: React.FC = () => {
   return (
     <> 
       <Rates />
@@ -18,6 +17,7 @@ const page = () => {
         title="Because Life is About Living Fully"
         subtitle="Say yes to Life's Big, Beautiful moments without guilt, without worry"
       />
+
       <PlanForJoy />
       <QuestionPack />
       <CallToAction />
@@ -25,4 +25,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -23,9 +23,7 @@ const page = () => {
         imageUrl="/images/sll.jpeg"
         subtitle="We don't just manage Institutional Capital, We Guard its purpose"
         button="Start A Strategic Conversation"
-
-        buttonLink="https://forms.office.com/Pages/ResponsePage.aspx?id=1I3gDCgn-kmOcay0o8PRRR6Lv0VsgzBFmSkSbPkBGwNUQVpWSFNZU0JWSDJNUFU1OTNYTEZDVVNHVi4u"
-
+       
       />
       <WhatAreYourGoals />
       <WhoDoWeServe />
