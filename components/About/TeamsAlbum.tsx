@@ -19,6 +19,11 @@ const images = [
   "/images/IMG_6285.jpg",
   "/images/IMG_6288.jpg",
   "/images/IMG_6294.jpg",
+ 
+];
+
+const TeamAlbum: React.FC = () => {
+
 ];
 
 const TeamsAlbum: React.FC = () => {
@@ -34,17 +39,18 @@ const TeamsAlbum: React.FC = () => {
   return (
     <Box width="100%">
       {/* Title Section */}
-      <VStack gap={6} textAlign="center" mb={10} mt={20}>
+      <VStack gap={6} textAlign="center"  mb={10} mt={20}>
         <Heading
-          color="#0A2233"
-          fontSize={{ base: "3xl", md: "6xl" }}
-          fontFamily="poppins"
-          fontWeight="bold"
+         color="#0A2233"
+         fontSize={{ base: "3xl", md: "6xl" }}
+         fontFamily="poppins"
+         fontWeight="bold"
         >
-          Our Team in Living Colour
+        Our Team in Living Colour
         </Heading>
         <Text fontSize={{ base: "md", md: "lg" }} color="gray.700">
-          Moments and unspoken values that define who we are
+          Moments and unspoken values that define who we are 
+
         </Text>
       </VStack>
 
@@ -59,7 +65,8 @@ const TeamsAlbum: React.FC = () => {
             top={0}
             left={0}
             width="100%"
-            height="800px"
+            height="850px"
+
             objectFit="cover"
             transition="opacity 1s ease-in-out"
             opacity={index === currentIndex ? 1 : 0}

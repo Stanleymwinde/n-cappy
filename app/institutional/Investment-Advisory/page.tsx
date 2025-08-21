@@ -11,7 +11,7 @@ import {
 } from "@/components/Investment-advisory";
 import React from "react";
 
-const page = () => {
+const Page = () => {
   return (
     <>
       <Rates />
@@ -20,6 +20,7 @@ const page = () => {
         imageUrl="/images/investment-advisory.png"
         title="Investment Advisory"
         subtitle="We Offer Strategic Guidance for Institutional and Corporate Clients"
+        buttonLink="https://forms.office.com/Pages/ResponsePage.aspx?id=1I3gDCgn-kmOcay0o8PRRR6Lv0VsgzBFmSkSbPkBGwNUQVpWSFNZU0JWSDJNUFU1OTNYTEZDVVNHVi4u"
       />
 
       <WhatWeOffer />
@@ -34,4 +35,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

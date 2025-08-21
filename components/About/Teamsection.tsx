@@ -42,7 +42,7 @@ const TeamSection: React.FC = () => {
             <TeamMemberCard
               name="Pius Muchiri"
               title="Managing Director & CEO"
-              image="/Pius-Muchiri.jpg"
+              image="/images/Piusss.png"
               linkedin="https://www.linkedin.com/in/pius-muchiri-cfa-0619392a/"
             />
             <TeamMemberCard
@@ -57,6 +57,30 @@ const TeamSection: React.FC = () => {
               image="/Edwin-Macharia.jpg"
               linkedin="https://www.linkedin.com/in/edwin-macharia-0aa5a63/"
             />
+            <TeamMemberCard
+              name="Dr. Mercy Njoroge Mwongela"
+              title="Chairman & Non-Executive Director"
+              image="/images/Mwongela2.png"
+              linkedin=" https://www.linkedin.com/in/mercymwongela/"
+            />
+            <TeamMemberCard
+              name="David Awuah"
+              title="Non-Executive Director"
+              image="/images/David.jpg"
+              linkedin="https://www.linkedin.com/company/icgroupafrica/people/"
+            />
+            <TeamMemberCard
+              name="Ally Angula"
+              title="Non-Executive Director"
+              image="/images/Ally.jpg"
+              linkedin=" https://www.linkedin.com/in/angula-ally-37492511/"
+            />
+            <TeamMemberCard
+              name="Fred Murimi"
+              title="Non-Executive Director"
+              image="/images/Freddy.jpg"
+              linkedin=" https://www.linkedin.com/in/fred-murimi-ngari-28a72836/ "
+            />
           </SimpleGrid>
         </Box>
 
@@ -69,13 +93,13 @@ const TeamSection: React.FC = () => {
             <TeamMemberCard
               name="Pius Muchiri"
               title="Managing Director & CEO"
-              image="/Pius-Muchiri.jpg"
+              image="/images/Piusss.png"
               linkedin="https://www.linkedin.com/in/pius-muchiri-cfa-0619392a/"
             />
             <TeamMemberCard
-              name="Mercy Njoroge"
+              name="Dr. Mercy Njoroge Mwongela"
               title="Chief Customer Experience Officer"
-              image="/mercy.jpg"
+              image="/images/Mwongela2.png"
               linkedin="https://www.linkedin.com/in/mercymwongela/"
             />
             <TeamMemberCard
@@ -93,7 +117,7 @@ const TeamSection: React.FC = () => {
             <TeamMemberCard
               name="Kezzy Omoni"
               title="Digital Creative Director"
-              image="/abby-Mungai.jpg"
+              image="/images/kezzy2.png"
               linkedin="https://www.linkedin.com/in/kezzy-omoni/"
             />
             <TeamMemberCard
@@ -105,7 +129,7 @@ const TeamSection: React.FC = () => {
             <TeamMemberCard
               name="Irene Okoth"
               title="HR Officer"
-              image="/abby-Mungai.jpg"
+              image="/images/irene2.png"
               linkedin="https://www.linkedin.com/in/chrp-k-pm-ihrm-akoth-irene-051430179/"
             />
           </SimpleGrid>

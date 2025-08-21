@@ -1,8 +1,8 @@
+"use client";
 import { Box, Button, Text, Flex } from "@chakra-ui/react"; 
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
 type HeroProps = {
   title?: string;
   subtitle?: string;
@@ -10,18 +10,15 @@ type HeroProps = {
   button?: string;
   button1?: string;
   scrollTarget?: string; 
+  buttonLink?: string; 
+};
+
+const Hero = ({ title, subtitle, imageUrl, button, button1, scrollTarget, buttonLink }: HeroProps) => {
+
   buttonLink?: string; // added buttonLink
 };
 
-const Hero: React.FC<HeroProps> = ({
-  title,
-  subtitle,
-  imageUrl,
-  button,
-  button1,
-  scrollTarget,
-  buttonLink,
-}) => {
+
   return (
     <Box
       position="relative"
@@ -64,7 +61,7 @@ const Hero: React.FC<HeroProps> = ({
         color="white"
         p={6}
         position="relative"
-        zIndex={2} // Ensure content is above overlay
+        zIndex={2} 
         width={{ base: "100%", md: "45%" }}
         ml={{ base: 4, md: 16 }}
         fontFamily="Poppins"
@@ -116,6 +113,19 @@ const Hero: React.FC<HeroProps> = ({
                 {button || "Get Started"}
               </Button>
             </a>
+          ) : buttonLink ? (
+            <Button
+              bg="cyan.900"
+              color="white"
+              px={6}
+              py={6}
+              rounded="full"
+              fontWeight="bold"
+              _hover={{ bg: "#00CAFF" }}
+              onClick={() => window.open(buttonLink, "_blank")} 
+            >
+              {button || "Get Started"}
+            </Button>
           ) : (
             <Button
               bg="cyan.900"
