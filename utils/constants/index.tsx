@@ -2043,5 +2043,4 @@ export const whatweoffer = [
     },
   },
 
-];
 
