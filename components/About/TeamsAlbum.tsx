@@ -19,10 +19,9 @@ const images = [
   "/images/IMG_6285.jpg",
   "/images/IMG_6288.jpg",
   "/images/IMG_6294.jpg",
-  // add all your 20 image paths here
 ];
 
-const TeamAlbum: React.FC = () => {
+const TeamsAlbum: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -71,4 +70,4 @@ const TeamAlbum: React.FC = () => {
   );
 };
 
-export default TeamAlbum;
+export default TeamsAlbum;
