@@ -1,4 +1,4 @@
-import { marginX, whatweoffer } from "@/utils/constants";
+import { marginX, whatweoffertreasury } from "@/utils/constants";
 import {
   Accordion,
   Box,
@@ -34,7 +34,7 @@ const InvestmentSolutions = () => {
       </Text>
       <Box py={6} bg="gray.50" borderRadius="md" mt={6}>
         <Accordion.Root collapsible gap={2}>
-          {whatweoffer.map((item, index) => (
+          {whatweoffertreasury.map((item, index) => (
             <Accordion.Item
               key={index}
               value={item.value}

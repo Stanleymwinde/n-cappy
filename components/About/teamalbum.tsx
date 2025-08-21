@@ -19,7 +19,7 @@ const images = [
   "/images/IMG_6285.jpg",
   "/images/IMG_6288.jpg",
   "/images/IMG_6294.jpg",
-  // add all your 20 image paths here
+ 
 ];
 
 const TeamAlbum: React.FC = () => {
@@ -60,7 +60,7 @@ const TeamAlbum: React.FC = () => {
             top={0}
             left={0}
             width="100%"
-            height="800px"
+            height="850px"
             objectFit="cover"
             transition="opacity 1s ease-in-out"
             opacity={index === currentIndex ? 1 : 0}

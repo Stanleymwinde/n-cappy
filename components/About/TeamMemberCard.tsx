@@ -31,7 +31,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
     >
       {/* Image Section */}
       <Box w="100%" h="300px">
-        <Image src={image} alt={name} objectFit="cover" w="100%" h="100%" />
+        <Image src={image} alt={name} objectFit="fill" w="100%" h="100%" />
       </Box>
 
       {/* Text Section */}

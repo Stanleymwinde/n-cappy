@@ -486,70 +486,74 @@ export const teamMembers = [
   {
     image: "/images/Moses1.png",
     name: "Moses Njuguna",
-    title: "Chief Investment Officer",
+    title: "Seniour Private Wealth Manager",
     link: " https://www.linkedin.com/in/moses-njuguna-msc-acsi/ ",
   },
   {
     image: "/images/Zach1.png",
     name: "Zachary Maina",
-    title: "Senior Portfolio Manager",
+    title: "Private Wealth Manager",
     link: "  https://www.linkedin.com/in/zachary-mwangi-acsi-76431bba/ ",
   },
   {
     image: "/Wycliffe.png",
     name: "Wycliffe Simiyu",
-    title: "Financial Analyst",
+    title: "Senior Private Wealth Consultant",
     link: "  https://www.linkedin.com/in/wycliffe-simiyu-acsi-2834b29a/ ",
   },
   {
     image: "/Alex.png",
     name: "Alex Muchoki",
-    title: "Client Relations Manager",
+    title: "Senior Private Wealth Consultant/ IFA Coordinator",
     link: "  https://www.linkedin.com/in/alex-muchoki-ab28a643/  ",
   },
   {
     image: "/images/joyce-m.png",
     name: "Joyce Gathitu",
-    title: "Client Relations Manager",
+    title: "Private Wealth Consultant",
     link: " https://www.linkedin.com/in/joyce-gathitu/  ",
   },
   {
     image: "/images/Hillary.png",
     name: "Hillary Hagai",
-    title: "Client Relations Manager",
+    title: "Senior Private Wealth Consultant",
     link: "  https://www.linkedin.com/in/hillary-haggai-910563119/  ",
   },
   {
     image: "/images/antony-n.jpg",
     name: "Antony Njagi",
-    title: "Client Relations Manager",
+    title: "Senior Private Wealth Consultant",
     link: "  https://www.linkedin.com/in/anthony-njagi-128689166/  ",
   },
   {
     image: "/images/Brian.png",
     name: "Brian Kipkemboi",
-    title: "Client Relations Manager",
+    title: "Senior Private Wealth Consultant",
     link: "https://www.linkedin.com/in/brian-kipkemboi/  ",
   },
 ];
 
 export const institutionalMembers = [
   {
-    image: "/images/Mercy-m.png",
+    image: "/mwongela.jpeg",
     name: "Mercy Mwongela",
     title: "Chief Investment Officer",
+    linkedin: "https://www.linkedin.com/in/mercymwongela/",
   },
   {
     image: "/images/Fredrick-o.jpg",
-    name: "Jane Smith",
+    name: "Fredrick Okudo",
     title: "Senior Portfolio Manager",
+    linkedin: "https://www.linkedin.com/in/fredrick-okudo-960567135/",
   },
   {
     image: "/images/tedy.jpg",
-    name: "Alice Johnson",
+    name: "Teddey Muthoka",
     title: "Financial Analyst",
+    linkedin: "https://www.linkedin.com/in/teddey-muthoka/",
   },
 ];
+
 
 export const FaqsData = [
   {
@@ -759,22 +763,29 @@ export const heritageData = [
     year: "1998",
     title:
       "APPOINTMENT OF THE LEGENDARY DR. CHRISTOPHER KIRUBI TO THE CENTUM BOARD",
-    description:
-      "By 1998, Dr. Christopher J. Kirubi had become one of the largest shareholders of Centum and was appointed to the board. He was renowned for his eye for lucrative investments and Centum was not an exception. According to him, he saw an undiscovered gem in Centum and began accumulating stake in the company. Following Dr. Kirubi’s appointment to the board, a major milestone was achieved when the board appointed the first independent management, separate from the parent company ICDC. This decision began a new era of putting together one of the most coveted, youthful and entrepreneurial investment management team in the region. According to Forbes, Dr. Kirubi was among the 40 wealthiest people in Africa; a seasoned entrepreneur, investor and industrialist with interests in media, consumer, financial, real estate, agriculture and technology.",
+    description: [
+      "By 1998, Dr. Christopher J. Kirubi had become one of the largest shareholders of Centum and was appointed to the board. He was renowned for his eye for lucrative investments and Centum was not an exception. According to him, he saw an undiscovered gem in Centum and began accumulating stake in the company.",
+      "Following Dr. Kirubi’s appointment to the board, a major milestone was achieved when the board appointed the first independent management, separate from the parent company ICDC. This decision began a new era of putting together one of the most coveted, youthful and entrepreneurial investment management teams in the region. According to Forbes, Dr. Kirubi was among the 40 wealthiest people in Africa; a seasoned entrepreneur, investor and industrialist with interests in media, consumer, financial, real estate, agriculture and technology.",
+    ],
   },
   {
     year: "2008",
     title: "JAMES MWORIA BEGAN HIS REIGN AT THE HELM OF CENTUM",
-    description:
-      "In 2008, at age 30 ,James Mworia was appointed as the Chief Executive Officer (CEO) of Centum becoming the youngest CEO of a publicly listed company in the region. Under his leadership, an extremely ambitious Centum 2.0 strategy was immediately put together to grow the Assets Under Management (AUMs) fivefold. During the first eight years of his tenure, Centum increased its asset base from Kes 6Bn ($69mn) to approximately Kes 61Bn ($610mn) while the share price grew eight fold, from Kes 5/share to the Kes 40/share, creating extraordinary returns for shareholders. On the back of this remarkable success, James Mworia is now widely celebrated across the globe and has received numerous accolades locally, regionally and internationally. One of the major contributing factors to that success was an ingenious decision to unpackage the portfolio into three distinct business lines: real estate, private equity and quoted private equity (public markets). The decision was inspired by a strong desire to have sharp focus in optimizing value along these three business lines and in the process, nurture specialized skills and unique track records for each business unit. These business units have since devolved into independent subsidiaries and the QPE team, now housed within Nabo Capital, was the first to spin off into a fully fledged fund management company licensed by the Capital Markets Authority (CMA). From just one company in 2009, Centum is now a holding company with more than 30 subdiaries spread across eight sectors.",
+    description: [
+      "In 2008, at age 30, James Mworia was appointed as the Chief Executive Officer (CEO) of Centum, becoming the youngest CEO of a publicly listed company in the region. Under his leadership, an extremely ambitious Centum 2.0 strategy was immediately put together to grow the Assets Under Management (AUMs) fivefold. During the first eight years of his tenure, Centum increased its asset base from Kes 6Bn ($69mn) to approximately Kes 61Bn ($610mn) while the share price grew eightfold, from Kes 5/share to Kes 40/share, creating extraordinary returns for shareholders.",
+      "One of the major contributing factors to that success was an ingenious decision to unpackage the portfolio into three distinct business lines: real estate, private equity, and quoted private equity (public markets). The decision was inspired by a strong desire to have sharp focus in optimizing value along these three business lines and in the process, nurture specialized skills and unique track records for each business unit. These business units have since devolved into independent subsidiaries and the QPE team, now housed within Nabo Capital, was the first to spin off into a fully fledged fund management company licensed by the Capital Markets Authority (CMA). From just one company in 2009, Centum is now a holding company with more than 30 subsidiaries spread across eight sectors.",
+    ],
   },
   {
     year: "2013",
-    title: "NABO CAPITAL LIMITED IS SPUN OUT OF CENTUM",
-    description:
-      "The Quoted Private Equity(QPE) business line was inspired by an observation; “If one excludes the 5 most liquid counters in any African stock exchange(excludingSA),one is left with a relatively “illiquid” asset class that is mostly under – researched and below – the – radar of most investors”. Given our rich history of Private Equity expertise in Africa, in 2009 we set aside a KES 2.3Bn($26mn) proprietary fund and christened it “Quoted Private Equity” portfolio. The strategy was to leverage on our private equity expertise to identify and seize significant minority stakes in securities in listed space that were under-researched, below-the-radar and had significant potential for growth across the various African stock exchanges. More importantly, we desired exposure to the fastest growing economies in Africa and hence the exclusion of South Africa. Up until 2013, the strategy had paid-off handsomely throughout performing benchmarks by a healthy spread, which led to requests from external parties to leverage on our in-house expertise to replicate the QPE portfolio and track record. That triggered the 2013 spin-off of the QPE team led by Pius Muchiri and hence the emergence of Nabo Capital, now an independent fully-fledged and licensed fund manager. Nabo Capital has rapidly grown since its inception and now manages over Kes13Bn ($130mn) in AUMs. Our clients appreciate our position as a Boots-on-the-Ground Investment Manager, our specialization exemplified by a solid track record of investing in Africa, and our unique investment philosophy that is heavily informed by a rich Private Equity heritage. We draw our clients from some of the largest sovereign wealth funds, fund of funds, African multinationals, insurance and investment companies. Nabo is a Maasai word meaning Number One, reflective of the company’s aspiration to be the leading Fund Manager in Africa.",
+    title: "NABO CAPITAL LIMITED IS SPUN OFF AS AN INDEPENDENT FUND MANAGER",
+    description: [
+      "The Quoted Private Equity (QPE) business line was inspired by an observation: “If one excludes the 5 most liquid counters in any African stock exchange (excluding SA), one is left with a relatively illiquid asset class that is mostly under-researched and below the radar of most investors”. Given our rich history of Private Equity expertise in Africa, in 2009 we set aside a KES 2.3Bn ($26mn) proprietary fund and christened it the “Quoted Private Equity” portfolio. The strategy was to leverage our private equity expertise to identify and seize significant minority stakes in listed securities that were under-researched, below-the-radar and had significant growth potential across African stock exchanges.",
+      "Up until 2013, the strategy had paid off handsomely against benchmarks, which led to requests from external parties to leverage our in-house expertise to replicate the QPE portfolio and track record. That triggered the 2013 spin-off of the QPE team led by Pius Muchiri and hence the emergence of Nabo Capital, now an independent fully-fledged and licensed fund manager. Nabo Capital has rapidly grown since its inception and now manages over Kes 13Bn ($130mn) in AUMs. Our clients appreciate our position as a Boots-on-the-Ground Investment Manager, our specialization exemplified by a solid track record of investing in Africa, and our unique investment philosophy heavily informed by a rich Private Equity heritage.",
+    ],
   },
 ];
+
 
 export const boardMembers = [
   {
@@ -997,7 +1008,7 @@ export const LifestylePlans = [
         question: "When do you want to travel?",
         placeholder: "eg.   December 2025",
         hint: "When are you planning to take this trip? Even an approximate time is fine.",
-        image: "/images/Traveltwo.png",
+        image: "/images/Travetwo.png",
       },
       {
         id: 3,
@@ -1117,7 +1128,7 @@ export const LifestylePlans = [
     ],
   },
   {
-    title: "Enjoying the life You",
+    title: "Enjoying the life You want",
     description:
       "You’ve earned more than a paycheck — you’ve earned peace of mind. This plan lets you relax, celebrate milestones, and f",
     icon: BsCashCoin,
@@ -2008,6 +2019,163 @@ export const whatweoffer = [
     value: "Business Deals",
     title: "Business Deals and Partnerships",
     text: "Expert Support Across Your Deals’ Lifecycles  ",
+    body: "If you are looking to buy, sell, or merge a business, we provide expert support at every step.  Our role is to ensure the deal is not only financially sound but also strategically aligned with your growth or exit goals.",
+    extraText: "Designed for investors who seek a blend of growth and stability across market cycles.",
+    services: [
+      {
+        title: "Buy-side and sell-side advisory",
+        description:
+          "We guide businesses through both acquisitions and divestitures, ensuring transactions are strategically aligned and value-driven",
+      },
+      {
+        title: "Screening and identifying strategic opportunities",
+        description:
+          "We identify and evaluate strategic opportunities that best fit your business objectives, sector trends, and growth potential.",
+      },
+      {
+        title: "Valuation and deal structuring",
+        description:
+          "We provide accurate business valuations and design deal structures that maximize financial and strategic outcomes.",
+      },
+      {
+        title: "Negotiation, execution, and post-deal integration",
+        description:
+          "We support you through negotiations, transaction closing, and seamless post-deal integration to ensure long-term success.",
+      },
+    ],
+    media: {
+      image: "/images/Pius-new.png",
+      alt: "Private Credit Team",
+    },
+    featuredDeal: {
+      title: "Featured Deal:",
+      description:
+        "Structured a $12M convertible note for a rapidly growing health-tech platform, balancing immediate growth capital needs with long-term equity upside for investors and founders alike",
+    },
+  },
+];
+
+export const whatweoffertreasury = [
+  {
+    value: "Customized liquidity Portfolios",
+    title: "Customized liquidity Portfolios",
+    text: "Tailored solutions that align your cash needs with market opportunities and your business’ needs",
+    body: "Raising capital isn’t just about finding funding; it’s about finding the right kind of capital, under the right structure, at the right time. Whether you are expanding operations, restructuring, or investing in new markets, we will help you access strategic funding to support your next phase of growth.",
+    extraText: "We focus on sustainable strategies that maximize investor value while supporting business growth.",
+    services: [
+      {
+        title: "Custom Funding Strategies",
+        description:
+          "Designing custom funding strategies aligned with your business stage and sector",
+      },
+      {
+        title: "Investor Network Access",
+        description:
+          "Mapping and connecting you to our trusted network of institutional and private investors",
+      },
+      {
+        title: "Investment Documentation",
+        description:
+          "Preparing professional investment documents: pitch decks, financial models, and valuations",
+      },
+      {
+        title: "Transaction Support",
+        description:
+          "Full transaction support: due diligence, investor negotiations, and term sheet execution",
+      },
+    ],
+    media: {
+      image: "/images/Pius-new.png",
+      alt: "Advisory Team",
+    },
+    featuredDeal: {
+      title: "Featured Deal:",
+      description:
+        "Structured a $12M convertible note for a rapidly growing health-tech platform, balancing immediate growth capital needs with long-term equity upside for investors and founders alike",
+    },
+  },
+
+  {
+    value: "Short-Term Investment Strategies",
+    title: "Short-Term Investment Strategies",
+    text: " Preserve capital while generating returns with minimal risk.",
+    body: "A clear, credible business valuation is essential. Whether you are planning an exit, raising funds, buying a company, or restructuring. We help individuals and businesses understand the real worth of their assets and what drives value.",
+    extraText: "Designed for investors who seek a blend of growth and stability across market cycles.",
+    services: [
+      {
+        title: "Standards-Aligned Reporting",
+        description:
+          "We deliver valuation reports that comply with international standards, including IVSC, IFRS, and CMA guidelines.",
+      },
+      {
+        title: "Robust Methodologies",
+        description:
+          "We apply multiple approaches—DCF, market comparables, and precedent transactions—for accuracy and reliability.",
+      },
+      {
+        title: "Benchmarking & Scenario Testing",
+        description:
+          "We conduct industry benchmarking, scenario analysis, and sensitivity testing to assess performance under different conditions.",
+      },
+      {
+        title: "Tailored Valuation Reviews",
+        description:
+          "We prepare valuations specifically designed for boards, investors, and auditors, ensuring clarity and decision-making support.",
+      },
+    ],
+    media: {
+      image: "/images/Pius-new.png",
+      alt: "Private Credit Team",
+    },
+    featuredDeal: {
+      title: "Featured Deal:",
+      description:
+        "Structured a $12M convertible note for a rapidly growing health-tech platform, balancing immediate growth capital needs with long-term equity upside for investors and founders alike",
+    },
+  },
+
+  {
+    value: "Liquidity Access Planning",
+    title: "Liquidity Access Planning",
+    text: " Tools and structures to ensure access to your funds when needed.",
+    body: "Not all capital comes from banks or stock markets. For clients looking to raise funds or invest in private market opportunities, we offer expert guidance through Africa’s growing private capital ecosystem.",
+    extraText: "Ideal for investors who want stable income with minimal risk.",
+    services: [
+      {
+        title: "Deal Sourcing",
+        description:
+          "We identify and access attractive opportunities in private equity and private debt markets tailored to investor mandates.",
+      },
+      {
+        title: "Investment Structuring",
+        description:
+          "We design flexible investment structures—equity, convertible debt, or mezzanine finance—to balance risk and return.",
+      },
+      {
+        title: "Exit Planning & Support",
+        description:
+          "We develop and execute exit strategies, including secondaries, buyouts, or strategic sales, to maximize investor outcomes.",
+      },
+      {
+        title: "Portfolio Monitoring",
+        description:
+          "We provide ongoing oversight of private portfolios, ensuring performance tracking, reporting, and value optimization.",
+      },
+    ],
+    media: {
+      image: "/images/Pius-new.png",
+      alt: "Infrastructure Projects",
+    },
+    featuredDeal: {
+      title: "Featured Deal:",
+      description:
+        "Structured a $12M convertible note for a rapidly growing health-tech platform, balancing immediate growth capital needs with long-term equity upside for investors and founders alike",
+    },
+  },
+    {
+    value: "Advisory Services",
+    title: "Advisory Services",
+    text: "Ongoing support to help you manage your cash flow more effectively in changing market conditions. ",
     body: "If you are looking to buy, sell, or merge a business, we provide expert support at every step.  Our role is to ensure the deal is not only financially sound but also strategically aligned with your growth or exit goals.",
     extraText: "Designed for investors who seek a blend of growth and stability across market cycles.",
     services: [

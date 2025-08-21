@@ -51,7 +51,7 @@ const ConsultationTeam = () => {
             <Image
               src={member.image}
               width="100%"
-              height="300px"
+              height="400px"
               objectFit="cover"
               alt={member.name}
               borderRadius="md"

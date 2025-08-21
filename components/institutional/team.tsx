@@ -1,5 +1,5 @@
-"use client"; 
-import { institutionalMembers, marginX } from "@/utils/constants"; 
+"use client";
+import { institutionalMembers, marginX } from "@/utils/constants";
 import { LinkedInIcon } from "@/utils/icons";
 import {
   Box,
@@ -38,7 +38,7 @@ const Team = () => {
               width="100%"
               height="350px"
               objectFit="cover"
-              alt="Green double couch with wooden legs"
+              alt={`${member.name} profile picture`}
               borderRadius="md"
               boxShadow="md"
             />
@@ -48,13 +48,18 @@ const Team = () => {
                 <Text fontSize="sm" color="gray.600">
                   {member.title}
                 </Text>
-                <Box
-                  display="flex"
-                  justifyContent="flex-end"
-                  mt={2}
-                  _hover={{ cursor: "pointer" }}
-                >
-                  <LinkedInIcon boxSize={7} color={"blue.600"} />
+                <Box display="flex" justifyContent="flex-end" mt={2}>
+                  <a
+                    href={member.linkedin} // 👈 uses the linkedin property
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <LinkedInIcon
+                      boxSize={7}
+                      color={"blue.600"}
+                      style={{ cursor: "pointer" }}
+                    />
+                  </a>
                 </Box>
               </Card.Description>
             </Card.Body>
@@ -73,7 +78,7 @@ const Team = () => {
         _hover={{ bg: "#00CAFF" }}
         onClick={() =>
           window.open(
-            "https://forms.office.com/Pages/ResponsePage.aspx?id=1I3gDCgn-kmOcay0o8PRRR6Lv0VsgzBFmSkSbPkBGwNUMDFGTVU2RlQ0SkY3TFI5MTVSRFVESEc2Wi4u",
+            "https://forms.office.com/Pages/ResponsePage.aspx?id=1I3gDCgn-kmOcay0o8PRRR6Lv0VsgzBFmSkSbPkBGwNUQVpWSFNZU0JWSDJNUFU1OTNYTEZDVVNHVi4",
             "_blank"
           )
         }
