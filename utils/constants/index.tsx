@@ -579,12 +579,11 @@ export const FaqsData = [
   },
   {
     value: "f",
-    title: "How long does it take for funds to be transferred into my account when I redeem?​",
+    title:
+      "How long does it take for funds to be transferred into my account when I redeem?​",
     text: "It takes 2 to 3 working days from the date of request. This is a requirement of the regulation governing unit trusts.​",
   },
-  
 ];
-
 
 export const FaqsData1 = [
   {
@@ -617,7 +616,6 @@ export const FaqsData1 = [
     title: "Are the returns guaranteed?​",
     text: "No, we are not required to guarantee returns as per the CMA regulations as the assets we invest in don’t guarantee returns.​",
   },
-  
 ];
 
 export const FaqsData2 = [
@@ -651,7 +649,6 @@ export const FaqsData2 = [
     title: "Why is the dollar rate lower than the KES rate​",
     text: "Investment return rates in USD may appear lower than KES due to factors such as;​ Demand for Currency(strengthen of USD against KES).​Inflation(US has lower inflation rate than Kenya).​This will mean the FX gain will be high in the range of 12% - 15% and when added back to the USD rate, it will be higher than the KES rate.​",
   },
-  
 ];
 
 export const FaqsData3 = [
@@ -667,7 +664,8 @@ export const FaqsData3 = [
   },
   {
     value: "c",
-    title: "Is Chumz legitimate and what is the relationship between Nabo  Capital and Chumz? ​",
+    title:
+      "Is Chumz legitimate and what is the relationship between Nabo  Capital and Chumz? ​",
     text: "Chumz is a legitimate mobile application that allows you to invest in Nabo Capital’s funds. It is a product of Nabo Capital and is regulated by the Capital Markets Authority (CMA).​",
   },
   {
@@ -680,11 +678,7 @@ export const FaqsData3 = [
     title: "Can I create a family trust with NABO? ​",
     text: "Yes, we will be launching our family trust solution by the end of Q3, 2024.​",
   },
-
-  
 ];
-
-
 
 export const InvestGloballyData = [
   {
@@ -1874,7 +1868,7 @@ export const StrategyContent = [
     ],
 
     media: {
-      image:"/images/Charles.png",
+      image: "/images/Charles.png",
       alt: "Infrastructure Projects",
     },
 
@@ -1892,7 +1886,8 @@ export const whatweoffer = [
     title: "Capital Raising",
     text: "Structuring and Sourcing Capital for Sustainable Growth.",
     body: "Raising capital isn’t just about finding funding; it’s about finding the right kind of capital, under the right structure, at the right time. Whether you are expanding operations, restructuring, or investing in new markets, we will help you access strategic funding to support your next phase of growth.",
-    extraText: "We focus on sustainable strategies that maximize investor value while supporting business growth.",
+    extraText:
+      "We focus on sustainable strategies that maximize investor value while supporting business growth.",
     services: [
       {
         title: "Custom Funding Strategies",
@@ -1931,7 +1926,8 @@ export const whatweoffer = [
     title: "Business Valuation",
     text: "We turn complex numbers into clear insights so you can move forward with confidence. ",
     body: "A clear, credible business valuation is essential. Whether you are planning an exit, raising funds, buying a company, or restructuring. We help individuals and businesses understand the real worth of their assets and what drives value.",
-    extraText: "Designed for investors who seek a blend of growth and stability across market cycles.",
+    extraText:
+      "Designed for investors who seek a blend of growth and stability across market cycles.",
     services: [
       {
         title: "Standards-Aligned Reporting",
@@ -2004,12 +2000,13 @@ export const whatweoffer = [
     },
   },
 
-    {
+  {
     value: "Business Deals",
     title: "Business Deals and Partnerships",
     text: "Expert Support Across Your Deals’ Lifecycles  ",
     body: "If you are looking to buy, sell, or merge a business, we provide expert support at every step.  Our role is to ensure the deal is not only financially sound but also strategically aligned with your growth or exit goals.",
-    extraText: "Designed for investors who seek a blend of growth and stability across market cycles.",
+    extraText:
+      "Designed for investors who seek a blend of growth and stability across market cycles.",
     services: [
       {
         title: "Buy-side and sell-side advisory",
@@ -2042,5 +2039,4 @@ export const whatweoffer = [
         "Structured a $12M convertible note for a rapidly growing health-tech platform, balancing immediate growth capital needs with long-term equity upside for investors and founders alike",
     },
   },
-
-
+];

@@ -35,17 +35,17 @@ const TeamAlbum: React.FC = () => {
   return (
     <Box width="100%">
       {/* Title Section */}
-      <VStack gap={6} textAlign="center"  mb={10} mt={20}>
+      <VStack gap={6} textAlign="center" mb={10} mt={20}>
         <Heading
-         color="#0A2233"
-         fontSize={{ base: "3xl", md: "6xl" }}
-         fontFamily="poppins"
-         fontWeight="bold"
+          color="#0A2233"
+          fontSize={{ base: "3xl", md: "6xl" }}
+          fontFamily="poppins"
+          fontWeight="bold"
         >
-        Our Team in Living Colour
+          Our Team in Living Colour
         </Heading>
         <Text fontSize={{ base: "md", md: "lg" }} color="gray.700">
-          Moments and unspoken values that define who we are 
+          Moments and unspoken values that define who we are
         </Text>
       </VStack>
 
