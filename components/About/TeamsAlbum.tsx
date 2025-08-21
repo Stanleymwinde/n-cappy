@@ -23,6 +23,10 @@ const images = [
 ];
 
 const TeamAlbum: React.FC = () => {
+
+];
+
+const TeamsAlbum: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -46,6 +50,7 @@ const TeamAlbum: React.FC = () => {
         </Heading>
         <Text fontSize={{ base: "md", md: "lg" }} color="gray.700">
           Moments and unspoken values that define who we are 
+
         </Text>
       </VStack>
 
@@ -61,6 +66,7 @@ const TeamAlbum: React.FC = () => {
             left={0}
             width="100%"
             height="850px"
+
             objectFit="cover"
             transition="opacity 1s ease-in-out"
             opacity={index === currentIndex ? 1 : 0}
@@ -71,4 +77,4 @@ const TeamAlbum: React.FC = () => {
   );
 };
 
-export default TeamAlbum;
+export default TeamsAlbum;

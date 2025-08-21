@@ -1,6 +1,6 @@
 "use client";
-
 import { marginX, StrategyContent } from "@/utils/constants";
+
 import {
   Accordion,
   Box,
@@ -14,7 +14,7 @@ import Image from "next/image";
 import { MdPlayCircleFilled, MdFiberManualRecord } from "react-icons/md";
 import React from "react";
 
-const Differentiators = () => {
+const InvestmentSolutions = () => {
   return (
     <Box marginX={marginX} mt={20}>
       {/* Main Title */}
@@ -27,12 +27,18 @@ const Differentiators = () => {
         color="gray.800"
         textAlign="center"
       >
-        Our Investment Solutions
+        What We Offer
       </Heading>
 
       {/* Intro Text */}
-      <Text fontSize={{ base: "lg", md: "2xl" }} color="gray.600" textAlign="center">
-        We offer comprehensive solutions designed to optimize your financial position while maintaining the flexibility and security your organization demands
+      <Text
+        fontSize={{ base: "lg", md: "2xl" }}
+        color="gray.600"
+        textAlign="center"
+      >
+        We offer comprehensive solutions designed to optimize your financial
+        position while maintaining the flexibility and security your
+        organization demands
       </Text>
 
       {/* Accordion */}
@@ -50,7 +56,10 @@ const Differentiators = () => {
               {/* Accordion Trigger */}
               <Accordion.ItemTrigger>
                 <Stack gap={4} px={4} py={4} flex={1}>
-                  <Text fontSize={{ base: "3xl", md: "4xl" }} fontWeight="semibold">
+                  <Text
+                    fontSize={{ base: "3xl", md: "4xl" }}
+                    fontWeight="semibold"
+                  >
                     {item.title}
                   </Text>
                   <Text fontSize={{ base: "md", md: "xl" }} color="gray.600">
@@ -68,8 +77,6 @@ const Differentiators = () => {
                     <Text fontSize={{ base: "lg", md: "2xl" }} mb={6}>
                       {item.body}
                     </Text>
-
-                    {/* Grid: Differentiators and Media */}
                     <Grid
                       templateColumns={{ base: "1fr", md: "2fr 1fr" }}
                       gap={8}
@@ -77,13 +84,11 @@ const Differentiators = () => {
                       py={6}
                       alignItems="start"
                     >
-                      {/* Left Column: Differentiators */}
                       <GridItem>
                         <Heading fontSize={{ base: "2xl", md: "3xl" }} mb={4}>
                           Differentiators
                         </Heading>
 
-                        {/* Differentiators List */}
                         <Box
                           as="ul"
                           display="flex"
@@ -102,17 +107,28 @@ const Differentiators = () => {
                             >
                               {/* Bullet */}
                               <Box mt={1}>
-                                <MdFiberManualRecord color="blue.700" size={16} />
+                                <MdFiberManualRecord
+                                  color="blue.700"
+                                  size={16}
+                                />
                               </Box>
 
                               {/* Text */}
                               <Box>
                                 {diff.title && (
-                                  <Text fontWeight="bold" fontSize={{ base: "lg", md: "xl" }} mb={1}>
+                                  <Text
+                                    fontWeight="bold"
+                                    fontSize={{ base: "lg", md: "xl" }}
+                                    mb={1}
+                                  >
                                     {diff.title}
                                   </Text>
                                 )}
-                                <Text fontSize={{ base: "lg", md: "xl" }} color="gray.700" lineHeight="tall">
+                                <Text
+                                  fontSize={{ base: "lg", md: "xl" }}
+                                  color="gray.700"
+                                  lineHeight="tall"
+                                >
                                   {diff.description}
                                 </Text>
                               </Box>
@@ -156,7 +172,10 @@ const Differentiators = () => {
                         mt={8}
                         borderRadius="md"
                       >
-                        <Text fontWeight="bold" fontSize={{ base: "md", md: "xl" }}>
+                        <Text
+                          fontWeight="bold"
+                          fontSize={{ base: "md", md: "xl" }}
+                        >
                           {item.featuredDeal.title}
                         </Text>
                         <Text fontSize={{ base: "md", md: "xl" }} mt={2}>
@@ -175,4 +194,4 @@ const Differentiators = () => {
   );
 };
 
-export default Differentiators;
+export default InvestmentSolutions;

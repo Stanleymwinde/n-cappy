@@ -14,6 +14,11 @@ type HeroProps = {
 };
 
 const Hero = ({ title, subtitle, imageUrl, button, button1, scrollTarget, buttonLink }: HeroProps) => {
+
+  buttonLink?: string; // added buttonLink
+};
+
+
   return (
     <Box
       position="relative"
@@ -36,7 +41,6 @@ const Hero = ({ title, subtitle, imageUrl, button, button1, scrollTarget, button
           top: 0,
           left: 0,
           zIndex: 0,
-          borderRadius: 0,
         }}
         priority
       />
@@ -56,44 +60,46 @@ const Hero = ({ title, subtitle, imageUrl, button, button1, scrollTarget, button
       <Box
         color="white"
         p={6}
-        rounded="lg"
         position="relative"
         zIndex={2} 
         width={{ base: "100%", md: "45%" }}
-        ml={{ base: 4, md: 16 }}  
+        ml={{ base: 4, md: 16 }}
         fontFamily="Poppins"
-        maxWidth="100%"
-        boxSizing="border-box"
         display="flex"
         flexDirection="column"
-        alignItems="flex-start"  
         justifyContent="center"
         height="80%"
-        textAlign="left"  
+        textAlign="left"
       >
         <Text
           fontSize={{ base: "3xl", md: "5xl" }}
           fontWeight="bold"
           lineHeight="short"
         >
-          {title || (
-            <>
-              Begin The Journey <br />
-              We'll Walk With You <br />
-            </>
-          )}
+          {title || "Begin The Journey. We'll Walk With You."}
         </Text>
 
         <Text fontSize={{ base: "md", md: "xl" }} mt={6}>
-          {subtitle || (
-            <>
-              That's the Nabo Promise. <br />
-              Your Growth Our Focus
-            </>
-          )}
+          {subtitle || "That's the Nabo Promise. Your Growth, Our Focus."}
         </Text>
-        <Flex gap={4} mt={5} justify="flex-start" width="100%"> 
-          {scrollTarget ? (
+
+        <Flex gap={4} mt={5} flexWrap="wrap">
+          {/* Primary Button */}
+          {buttonLink ? (
+            <a href={buttonLink} target="_blank" rel="noopener noreferrer">
+              <Button
+                bg="cyan.900"
+                color="white"
+                px={6}
+                py={6}
+                rounded="full"
+                fontWeight="bold"
+                _hover={{ bg: "#00CAFF" }}
+              >
+                {button || "Get Started"}
+              </Button>
+            </a>
+          ) : scrollTarget ? (
             <a href={scrollTarget}>
               <Button
                 bg="cyan.900"
@@ -133,6 +139,8 @@ const Hero = ({ title, subtitle, imageUrl, button, button1, scrollTarget, button
               {button || "Get Started"}
             </Button>
           )}
+
+          {/* Secondary Button */}
           {button1 && (
             <Link href="/individual" passHref>
               <Button

@@ -10,26 +10,18 @@ import CallToActionCommon from "@/components/common/CallToAction";
 import Contactinfo from "@/components/About/Contactinfo";
 
 
-
-
 const AboutPage: React.FC = () => {
   return (
     <Box>
-     
       <Herosection />
       <Heritagesection />
       <Teamsection />
       <TeamsAlbum />
       <Connect />
-       <Contactinfo />
+      <Contactinfo />
       <CallToActionCommon />
-      
-   
-
     </Box>
   );
 };
 
 export default AboutPage;
-
-
