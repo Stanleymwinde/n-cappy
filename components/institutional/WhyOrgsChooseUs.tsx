@@ -34,7 +34,7 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <Box bg="cyan.950" color="white" py={16} px={6} textAlign="center">
+    <Box bg="cyan.950" color="white" py={16} px={6} textAlign="center" mt={20}>
       <VStack gap={8}> {/* Increased from 4 to 8 for more space */}
         <Heading
           fontSize={{ base: "3xl", md: "6xl" }}

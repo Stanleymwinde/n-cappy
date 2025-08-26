@@ -25,12 +25,12 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
       align="start"
       p={0}
       w="100%"
-      h="400px"
+      h="600px"
       position="relative"
       boxSize="100%"
     >
       {/* Image Section */}
-      <Box w="100%" h="300px">
+      <Box w="100%" h="400px">
         <Image src={image} alt={name} objectFit="fill" w="100%" h="100%" />
       </Box>
 

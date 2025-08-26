@@ -8,12 +8,16 @@ import { WhyOrgsChooseUs } from "@/components/institutional";
 import {
   WhatWeOffer,
   WhyPartnerWithUs,
+
 } from "@/components/Investment-advisory";
+
+
 import React from "react";
 
 const Page = () => {
   return (
     <>
+        <Faqs1/>
       <Rates />
       <Hero
         button="Schedule a Cosnsultation"
@@ -28,7 +32,6 @@ const Page = () => {
       <WhyPartnerWithUs />
       <PartnerWithUs />
       <StrategyCall />
-      <Faqs1/>
       <CallToAction />
     </>
       
