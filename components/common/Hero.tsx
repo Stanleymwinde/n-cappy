@@ -9,11 +9,22 @@ type HeroProps = {
   subtitle?: string;
   imageUrl?: string;
   button?: string;
+  buttonLink?: string;   
   button1?: string;
+  button1Link?: string;  
   scrollTarget?: string; 
 };
 
-const Hero = ({ title, subtitle, imageUrl, button, button1, scrollTarget }: HeroProps) => {
+const Hero = ({ 
+  title, 
+  subtitle, 
+  imageUrl, 
+  button, 
+  buttonLink, 
+  button1, 
+  button1Link, 
+  scrollTarget 
+}: HeroProps) => {
   return (
     <Box
       position="relative"
@@ -94,6 +105,20 @@ const Hero = ({ title, subtitle, imageUrl, button, button1, scrollTarget }: Hero
                 {button || "Get Started"}
               </Button>
             </a>
+          ) : buttonLink ? (
+            <a href={buttonLink} target="_blank" rel="noopener noreferrer">
+              <Button
+                bg="cyan.900"
+                color="white"
+                px={6}
+                py={6}
+                rounded="full"
+                fontWeight="bold"
+                _hover={{ bg: "#00CAFF" }}
+              >
+                {button || "Get Started"}
+              </Button>
+            </a>
           ) : (
             <Button
               bg="cyan.900"
@@ -110,20 +135,37 @@ const Hero = ({ title, subtitle, imageUrl, button, button1, scrollTarget }: Hero
 
           {/* Secondary Button */}
           {button1 && (
-            <Link href="/individual" passHref>
-              <Button
-                flex="1"
-                bg="#0A2233"
-                color="white"
-                px={6}
-                py={6}
-                rounded="full"
-                fontWeight="bold"
-                _hover={{ bg: "#00CAFF" }}
-              >
-                {button1}
-              </Button>
-            </Link>
+            button1Link?.startsWith("http") ? (
+              <a href={button1Link} target="_blank" rel="noopener noreferrer">
+                <Button
+                  flex="1"
+                  bg="#0A2233"
+                  color="white"
+                  px={6}
+                  py={6}
+                  rounded="full"
+                  fontWeight="bold"
+                  _hover={{ bg: "#00CAFF" }}
+                >
+                  {button1}
+                </Button>
+              </a>
+            ) : (
+              <Link href={button1Link || "/individual"} passHref>
+                <Button
+                  flex="1"
+                  bg="#0A2233"
+                  color="white"
+                  px={6}
+                  py={6}
+                  rounded="full"
+                  fontWeight="bold"
+                  _hover={{ bg: "#00CAFF" }}
+                >
+                  {button1}
+                </Button>
+              </Link>
+            )
           )}
         </Flex>
       </Box>
