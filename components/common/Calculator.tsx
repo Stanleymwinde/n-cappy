@@ -58,12 +58,12 @@ export default function Page() {
   const [data, setData] = useState<ChartData[]>([]);
   const [result, setResult] = useState<number | null>(null);
   const [currency, setCurrency] = useState<"KES" | "USD">("KES");
-  const [rate, setRate] = useState(1); 
+  const [rate, setRate] = useState(1);
 
   const exportRef = useRef<HTMLDivElement>(null);
 
   const handleCurrencyToggle = (selected: "KES" | "USD") => {
-    if (selected === currency) return; 
+    if (selected === currency) return;
 
     if (selected === "USD") {
       setTargetAmount(targetAmount * 0.0075);
@@ -210,7 +210,7 @@ export default function Page() {
       </Box>
 
       {/* Inputs */}
-      <Box bg="white" maxW="2000px" marginX={marginX} p={8} color="black" borderRadius="2xl">
+      <Box bg="white" marginX={marginX} p={8} color="black" borderRadius="2xl"  width="1600px" mx="auto">
         <VStack gap={6} align="center" width="full" px={4}>
           <Heading size="5xl" textAlign="center">
             Let’s plan your dream, together.
@@ -286,25 +286,29 @@ export default function Page() {
             Calculate
           </Button>
 
+          {/* 🔹 CHANGED: moved download button here */}
           {result !== null && (
-            <Box textAlign="center">
-              <Text fontSize="xl" fontWeight="bold" mt={4}>You’ll have</Text>
-              <Text fontSize="2xl" fontWeight="extrabold" color="orange.500">
+            <Box textAlign="center" mt={4}>
+              <Text fontSize="xl" fontWeight="bold">You’ll have</Text>
+              <Text fontSize="2xl" fontWeight="extrabold" color="orange.500" mb={4}>
                 {currency} {formatCurrency(result)}
               </Text>
+
+              <Button 
+                colorScheme="green" 
+                size="sm" 
+                onClick={downloadPDF} 
+                _hover={{ bg: "#00CAFF" }}
+              >
+                Download PDF
+              </Button>
             </Box>
           )}
         </VStack>
       </Box>
 
-      {/* Chart & Table with PDF download */}
+      {/* Chart & Table */}
       <Box p={6} bg="#f5f5f5">
-        <Box textAlign="right" mb={4}>
-          <Button colorScheme="green" size="sm" onClick={downloadPDF} _hover={{ bg: "#00CAFF" }}>
-            Download PDF
-          </Button>
-        </Box>
-
         <Box ref={exportRef}>
           {data.length > 0 && (
             <Tabs.Root mt={10} colorScheme="blue" solid-rounded>

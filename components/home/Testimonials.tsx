@@ -46,7 +46,7 @@ const Testimonials = () => {
             key={index}
             style={{
               background: "rgba(123, 134, 135, 0.6)", // semi-transparent background
-              border: "1px solid black",
+              border: "1 px #00caff",
               borderRadius: "12px",
             }}
           >

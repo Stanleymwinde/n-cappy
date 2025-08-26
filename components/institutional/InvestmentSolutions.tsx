@@ -1,4 +1,5 @@
 "use client";
+
 import { marginX, whatweoffertreasury } from "@/utils/constants";
 import {
   Accordion,
@@ -64,24 +65,27 @@ const InvestmentSolutions = () => {
               {/* Accordion Content */}
               <Accordion.ItemContent>
                 <Accordion.ItemBody>
-                  <Box px={{ base: 4, md: 16 }} bg="white">
+                  <Box px={{ base: 4, md: 8 }} bg="white">
                     {/* Main Body Text */}
-                    <Text fontSize={{ base: "lg", md: "2xl" }} mb={6}>
+                    <Text
+                      fontSize={{ base: "lg", md: "2xl" }}
+                      mb={4}
+                      textAlign="left"
+                    >
                       {item.body}
                     </Text>
 
                     {/* Grid: Services and Media */}
                     <Grid
                       templateColumns={{ base: "1fr", md: "2fr 1fr" }}
-                      gap={8}
-                      px={{ base: 4, md: 8 }}
-                      py={6}
+                      gap={6}
+                      px={{ base: 0, md: 4 }}
+                      py={4}
                       alignItems="start"
                     >
                       {/* Left Column: Services */}
-                      <GridItem>
-                        {/* Services Heading */}
-                        <Heading fontSize={{ base: "2xl", md: "3xl" }} mb={4} >
+                      <GridItem mt={2}>
+                        <Heading fontSize={{ base: "2xl", md: "3xl" }} mb={3}>
                           Our Services
                         </Heading>
 
@@ -91,7 +95,7 @@ const InvestmentSolutions = () => {
                           display="flex"
                           flexDirection="column"
                           listStyleType="none"
-                          gap={4}
+                          gap={3}
                           paddingLeft={0}
                           maxW="6xl"
                         >
@@ -101,17 +105,29 @@ const InvestmentSolutions = () => {
                               style={{
                                 display: "flex",
                                 alignItems: "flex-start",
-                                gap: "16px",
+                                gap: "12px",
                               }}
                             >
-                              <MdFiberManualRecord color="blue.700" size={24} style={{ marginTop: 6 }} />
+                              <MdFiberManualRecord
+                                color="blue.700"
+                                size={20}
+                                style={{ marginTop: 5 }}
+                              />
                               <Box>
                                 {service.title && (
-                                  <Text fontWeight="bold" fontSize={{ base: "lg", md: "xl" }} mb={1}>
+                                  <Text
+                                    fontWeight="bold"
+                                    fontSize={{ base: "lg", md: "xl" }}
+                                    mb={1}
+                                  >
                                     {service.title}
                                   </Text>
                                 )}
-                                <Text fontSize={{ base: "lg", md: "xl" }} color="gray.700" lineHeight="tall">
+                                <Text
+                                  fontSize={{ base: "md", md: "lg" }}
+                                  color="gray.700"
+                                  lineHeight="tall"
+                                >
                                   {service.description}
                                 </Text>
                               </Box>
@@ -127,13 +143,9 @@ const InvestmentSolutions = () => {
                           borderRadius="md"
                           overflow="hidden"
                           width="100%"
-                          height={{ base: "250px", md: "600px" }}
+                          height={{ base: "250px", md: "500px" }}
                         >
-                          <Image
-                            src={item.media.image}
-                            alt={item.media.alt}
-                            fill
-                          />
+                          <Image src={item.media.image} alt={item.media.alt} fill />
                           <Box
                             position="absolute"
                             top="50%"
@@ -145,27 +157,20 @@ const InvestmentSolutions = () => {
                         </Box>
                       </GridItem>
                     </Grid>
-                    <Text
-                      mt={10}
-                      fontSize="md"
-                      maxW="4xl"
-                      textAlign={"justify"}
-                    >
+
+                    <Text mt={6} fontSize="md" maxW="4xl" textAlign="left">
                       {item.extraText}
                     </Text>
 
                     {/* Featured Deal Box */}
                     {Array.isArray(item.featuredDeal)
                       ? item.featuredDeal.map(
-                          (
-                            deal: { title: string; description: string },
-                            idt: number
-                          ) => (
+                          (deal: { title: string; description: string }, idt: number) => (
                             <Box
                               bg="blue.900"
                               color="white"
                               p={4}
-                              mt={8}
+                              mt={6}
                               borderRadius="md"
                               maxW="4xl"
                               key={idt}
@@ -182,19 +187,15 @@ const InvestmentSolutions = () => {
                             bg="blue.900"
                             color="white"
                             p={4}
-                            mt={8}
+                            mt={6}
                             borderRadius="md"
-                            maxW="4xl"
                           >
-                            <Text fontWeight="bold">
-                              {item.featuredDeal.title}
-                            </Text>
-                            <Text fontSize="sm" mt={2}>
+                            <Text fontWeight="bold">{item.featuredDeal.title}</Text>
+                            <Text fontSize="2xl" mt={2}>
                               {item.featuredDeal.description}
                             </Text>
                           </Box>
                         )}
-
                   </Box>
                 </Accordion.ItemBody>
               </Accordion.ItemContent>
@@ -207,3 +208,4 @@ const InvestmentSolutions = () => {
 };
 
 export default InvestmentSolutions;
+

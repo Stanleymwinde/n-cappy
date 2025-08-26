@@ -41,14 +41,14 @@ const MultiCurrencyInvestment = () => {
               <Text color="gray.500" fontWeight="medium" mb={3}>
                 {fund.subtitle}
               </Text>
-              <Text fontSize="sm" color="gray.700" mb={4}>
+              <Text fontSize="md" color="gray.700" mb={4}>
                 {fund.description}
               </Text>
 
               <Box
                 as={"ul"}
                 color="teal.600"
-                fontSize="sm"
+                fontSize="md"
                 pl={4}
                 mb={5}
                 display={"flex"}

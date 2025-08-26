@@ -14,12 +14,13 @@ import React from "react";
 
 const Team = () => {
   return (
-    <Box marginX={marginX} py={5} textAlign={"center"}>
+    <Box marginX={marginX} py={5} textAlign={"center"} mt={20}>
       <Heading
         as="h1"
-        fontSize={{ base: "2xl", md: "4xl" }}
+        fontSize={{ base: "3xl", md: "6xl" }}
         fontFamily="poppins"
-        my={6}
+        fontWeight="bold"
+        my={12}
         color="gray.800"
       >
         Here When You’re Ready to Build Forward

@@ -236,25 +236,25 @@ export const TreasuryGoalsData = [
   {
     title: "Stay ready for opportunities",
     description:
-      "We’ll help you build a smart savings plan for education—without the stress",
+      "Opportunities can come without warning. So being financially ready can make all the difference. Our liquidity strategies give you fast access to your money, so you can respond quickly when the right moment arrives; be it an investment, a business deal, or a personal milestone.",
     points: [],
     icon: "LuFolder",
     button: "Learn More",
     image: "/images/treasuryyy.png",
   },
   {
-    title: "Stay liquid without loosing capital ",
+    title: "Preserve Capital",
     description:
-      "Explore the world without financial worries. Save intentionally for unforgettable memories.",
+      "Your cash is valuable and so is peace of mind. We help you protect your money with low-risk, short-term investment options designed to preserve capital while maintaining liquidity. Whether you are saving for obligations or safeguarding reserves, our solutions ensure your funds remain secure.",
     points: [],
     icon: "LuSquareCheck",
     button: "Learn More",
     image: "/images/treasuryyy.png",
   },
   {
-    title: "Preserve capital",
+    title: "Run my business efficiently",
     description:
-      "Retire on your terms. Build a financial cushion that lets you enjoy life’s golden years with peace and pride.",
+      "Whether you are a small enterprise or a large institution, cash flow is the heartbeat of your operations. We help you optimize your short-term liquidity, align your cash with operational cycles, and maximize returns on surplus funds; all tailored to your needs.",
     points: [],
     icon: "LuSquareCheck",
     button: "Learn More",
@@ -486,7 +486,7 @@ export const teamMembers = [
   {
     image: "/images/Moses1.png",
     name: "Moses Njuguna",
-    title: "Seniour Private Wealth Manager",
+    title: "Senior Private Wealth Manager",
     link: " https://www.linkedin.com/in/moses-njuguna-msc-acsi/ ",
   },
   {
@@ -536,12 +536,12 @@ export const teamMembers = [
 export const institutionalMembers = [
   {
     image: "/mwongela.jpeg",
-    name: "Mercy Mwongela",
-    title: "Chief Investment Officer",
+    name: "Dr. Mercy Mwongela",
+    title: "Head of Asset Management, CX & IT",
     linkedin: "https://www.linkedin.com/in/mercymwongela/",
   },
   {
-    image: "/images/Fredrick-o.jpg",
+    image: "/images/fredd.png",
     name: "Fredrick Okudo",
     title: "Senior Portfolio Manager",
     linkedin: "https://www.linkedin.com/in/fredrick-okudo-960567135/",
@@ -2058,29 +2058,25 @@ export const whatweoffertreasury = [
     value: "Customized liquidity Portfolios",
     title: "Customized liquidity Portfolios",
     text: "Tailored solutions that align your cash needs with market opportunities and your business’ needs",
-    body: "Raising capital isn’t just about finding funding; it’s about finding the right kind of capital, under the right structure, at the right time. Whether you are expanding operations, restructuring, or investing in new markets, we will help you access strategic funding to support your next phase of growth.",
+    body: "Managing liquidity isn’t just about keeping cash; it’s about making sure your money is structured to meet your needs, stay safe, and remain accessible when it matters most. Whether you are covering daily operations, planning for large payments, or preparing for growth, we help you align liquidity with your broader financial strategy.",
     extraText: "We focus on sustainable strategies that maximize investor value while supporting business growth.",
     services: [
       {
-        title: "Custom Funding Strategies",
+        title: "Tailored Horizon",
         description:
-          "Designing custom funding strategies aligned with your business stage and sector",
+          "Investments are structured to match your short, medium, or long-term liquidity needs.",
       },
       {
-        title: "Investor Network Access",
+        title: "Risk Alignment",
         description:
-          "Mapping and connecting you to our trusted network of institutional and private investors",
+          "Portfolios are built to reflect your comfort level with risk while preserving capital.",
       },
       {
-        title: "Investment Documentation",
+        title: "Balanced Performance",
         description:
-          "Preparing professional investment documents: pitch decks, financial models, and valuations",
+          "We ensure flexibility and accessibility while optimizing returns.",
       },
-      {
-        title: "Transaction Support",
-        description:
-          "Full transaction support: due diligence, investor negotiations, and term sheet execution",
-      },
+  
     ],
     media: {
       image: "/images/Pius-new.png",
@@ -2101,25 +2097,21 @@ export const whatweoffertreasury = [
     extraText: "Designed for investors who seek a blend of growth and stability across market cycles.",
     services: [
       {
-        title: "Standards-Aligned Reporting",
+        title: "Safe Investments",
         description:
-          "We deliver valuation reports that comply with international standards, including IVSC, IFRS, and CMA guidelines.",
+          "Using treasury bills, commercial paper, and other secure instruments.",
       },
       {
-        title: "Robust Methodologies",
+        title: "Reliable Income",
         description:
-          "We apply multiple approaches—DCF, market comparables, and precedent transactions—for accuracy and reliability.",
+          "Generating steady yields to enhance cash productivity.",
       },
       {
-        title: "Benchmarking & Scenario Testing",
+        title: "Accessible Liquidity",
         description:
-          "We conduct industry benchmarking, scenario analysis, and sensitivity testing to assess performance under different conditions.",
+          "Ensuring funds are available when you need them.",
       },
-      {
-        title: "Tailored Valuation Reviews",
-        description:
-          "We prepare valuations specifically designed for boards, investors, and auditors, ensuring clarity and decision-making support.",
-      },
+     
     ],
     media: {
       image: "/images/Pius-new.png",
@@ -2136,28 +2128,23 @@ export const whatweoffertreasury = [
     value: "Liquidity Access Planning",
     title: "Liquidity Access Planning",
     text: " Tools and structures to ensure access to your funds when needed.",
-    body: "Not all capital comes from banks or stock markets. For clients looking to raise funds or invest in private market opportunities, we offer expert guidance through Africa’s growing private capital ecosystem.",
+    body: "Ensuring your liquidity supports both short-term needs and long-term financial goals.",
     extraText: "Ideal for investors who want stable income with minimal risk.",
     services: [
       {
-        title: "Deal Sourcing",
+        title: "Structure Review",
         description:
-          "We identify and access attractive opportunities in private equity and private debt markets tailored to investor mandates.",
+          "Assessing your existing liquidity against your broader financial objectives.",
       },
       {
-        title: "Investment Structuring",
+        title: "Optimal Allocation",
         description:
-          "We design flexible investment structures—equity, convertible debt, or mezzanine finance—to balance risk and return.",
+          "Balancing immediate access, near-term needs, and longer-term reserves.",
       },
       {
-        title: "Exit Planning & Support",
+        title: "Growth Alignment",
         description:
-          "We develop and execute exit strategies, including secondaries, buyouts, or strategic sales, to maximize investor outcomes.",
-      },
-      {
-        title: "Portfolio Monitoring",
-        description:
-          "We provide ongoing oversight of private portfolios, ensuring performance tracking, reporting, and value optimization.",
+          "Positioning liquidity to support stability and future opportunities.",
       },
     ],
     media: {
@@ -2171,31 +2158,26 @@ export const whatweoffertreasury = [
     },
   },
     {
-    value: "Advisory Services",
-    title: "Advisory Services",
-    text: "Ongoing support to help you manage your cash flow more effectively in changing market conditions. ",
-    body: "If you are looking to buy, sell, or merge a business, we provide expert support at every step.  Our role is to ensure the deal is not only financially sound but also strategically aligned with your growth or exit goals.",
+    value: "Daily Liquidity Monitoring & Reporting",
+    title: "Daily Liquidity Monitoring & Reporting",
+    text: "Transparent, real-time insights into portfolio performance and accessibility",
+    body: "Providing real-time visibility into portfolio performance and accessibility.",
     extraText: "Designed for investors who seek a blend of growth and stability across market cycles.",
     services: [
       {
-        title: "Buy-side and sell-side advisory",
+        title: "Active Oversight",
         description:
-          "We guide businesses through both acquisitions and divestitures, ensuring transactions are strategically aligned and value-driven",
+          "Tracking daily portfolio activity and cash levels.",
       },
       {
-        title: "Screening and identifying strategic opportunities",
+        title: "Transparent Reporting",
         description:
-          "We identify and evaluate strategic opportunities that best fit your business objectives, sector trends, and growth potential.",
+          "Giving clear insights into availability and performance.",
       },
       {
-        title: "Valuation and deal structuring",
+        title: "Proactive Adjustments",
         description:
-          "We provide accurate business valuations and design deal structures that maximize financial and strategic outcomes.",
-      },
-      {
-        title: "Negotiation, execution, and post-deal integration",
-        description:
-          "We support you through negotiations, transaction closing, and seamless post-deal integration to ensure long-term success.",
+          "Recommending timely changes based on market conditions and evolving needs.",
       },
     ],
     media: {
@@ -2238,3 +2220,143 @@ export const teamAlbumMembers = [
   },
 ];
 
+export const Lifestyle = [
+  {
+    title: "Food & Household essentials",
+    description:
+      "Everyday essentials may seem small, but they form the foundation of a dignified life. Plan for them, and protect your peace.",
+    icon: MdOutlineRealEstateAgent,
+    questions: [
+      {
+        id: 1,
+        question: "Where do you want to go?",
+        placeholder: "e.g. Mombasa, Paris, Bali",
+        hint: "Whether it’s a beach, city or the desert , you only need 230 USD per month",
+        image: "/images/Travelone.png",
+      },
+      {
+        id: 2,
+        question: "When do you want to travel?",
+        placeholder: "eg.   December 2025",
+        hint: "When are you planning to take this trip? Even an approximate time is fine.",
+        image: "/images/Travetwo.png",
+      },
+      {
+        id: 3,
+        question: "How long will you stay?",
+        placeholder: "eg.   7 days",
+        hint: "How many days or weeks would you like to spend there?",
+        image: "/images/Travelthree.png",
+      },
+      {
+        id: 4,
+        question: "What Is your estimated cost?",
+        placeholder: "eg.   KES 5000",
+        hint: "Your best estimate of the total cost. Don’t worry if you are not sure.",
+        image: "/Travelfour.png",
+      },
+      {
+        id: 5,
+        question: "How much have you saved ?",
+        placeholder: "eg.   KES 10,000",
+        hint: "How much have you already put aside for this trip?",
+        image: "/Travelfive.png",
+      },
+      {
+        id: 5,
+        question: "How much can you save monthly?",
+        placeholder: "eg.   KES 10,000",
+        hint: "How much have you already put aside for this trip?",
+        image: "/Travelsix.png",
+      },
+    ],
+  },
+  {
+    title: "Rent Payments",
+    description:
+      "A roof over your head is more than a shelter, it’s stability. Whether you’re renting or building a legacy, secure it wisely.",
+    icon: FaHandsHelping,
+    questions: [
+      {
+        id: 1,
+        question: "What do you want to study?",
+        placeholder: "e.g. Data Science",
+        hint: "Let us know your field of interest.",
+        image: "/images/ed-q-4.png",
+      },
+      {
+        id: 2,
+        question: "Which institution?",
+        placeholder: "e.g. MIT, Udemy",
+        hint: "Helps tailor your savings goals.",
+        image: "/images/ed-q-2.png",
+      },
+      {
+        id: 3,
+        question: "Expected tuition cost?",
+        placeholder: "e.g. $10,000",
+        hint: "This helps us prepare your plan.",
+        image: "/images/ed-q-1.png",
+      },
+    ],
+  },
+  {
+    title: " Transport",
+    description:
+      "Mobility gives you access to opportunity. Budget for it, because how you move determines where you go.",
+    icon: FaHeart,
+    questions: [
+      {
+        id: 1,
+        question: "What’s your ideal retirement age?",
+        placeholder: "e.g. 60",
+        hint: "This helps us plan your retirement savings.",
+        image: "/images/r-1.png",
+      },
+      {
+        id: 2,
+        question: "What lifestyle do you envision?",
+        placeholder: "e.g. Travel, hobbies",
+        hint: "Share your retirement dreams.",
+        image: "/images/r-2.png",
+      },
+      {
+        id: 3,
+        question: "Expected monthly expenses?",
+        placeholder: "e.g. $2,000",
+        hint: "Helps us calculate your retirement needs.",
+        image: "/images/life-3.png",
+      },
+    ],
+  },
+  {
+    title: " Clothing & Utilities",
+    description:
+      "Dignity is in the details; Clean clothes, running water and power when you need it. Plan for them, to preserve your comfort and confidence",
+    icon: FaHandsHelping,
+    questions: [
+      {
+        id: 1,
+        question: "What causes are you passionate about?",
+        placeholder: "e.g. Education, Health",
+        hint: "This helps us align your giving goals.",
+        image: "/images/giving-1.jpg",
+      },
+      {
+        id: 2,
+        question: "How much do you want to give annually?",
+        placeholder: "e.g. $1,000",
+        hint: "This sets your giving budget.",
+        image: "/images/giving-2.jpg",
+      },
+      {
+        id: 3,
+        question: "Do you prefer local or global impact?",
+        placeholder: "e.g. Local",
+        hint: "Helps us find the right charities for you.",
+        image: "/images/giving-3.jpg",
+      },
+    ],
+  },
+  
+];

@@ -1,5 +1,5 @@
 "use client";
-import { RetirePlans, marginX } from "@/utils/constants";  // <-- fixed import here
+import { RetirePlans, marginX } from "@/utils/constants";
 import {
   Box,
   Button,
@@ -21,13 +21,19 @@ const RetireQuestions = () => {
   const [activePlanIndex, setActivePlanIndex] = useState<number | null>(null);
   const [questionIndex, setQuestionIndex] = useState(0);
 
+  // store answers as { "planIndex-questionIndex": "answer" }
+  const [answers, setAnswers] = useState<{ [key: string]: string }>({});
+
   const handleCardClick = (index: number) => {
     setActivePlanIndex(index);
     setQuestionIndex(0);
   };
 
-  // Replace LifestylePlans with RetirePlans here
-  const activePlan = activePlanIndex !== null ? RetirePlans[activePlanIndex] : null;
+  // Helper to get unique key for each question
+  const getQuestionKey = (planIdx: number, qIdx: number) => `${planIdx}-${qIdx}`;
+
+  const activePlan =
+    activePlanIndex !== null ? RetirePlans[activePlanIndex] : null;
   const activeQuestion = activePlan?.questions[questionIndex];
 
   return (
@@ -38,7 +44,8 @@ const RetireQuestions = () => {
         </Heading>
         <Text maxW="2xl" fontSize="md" color="gray.600">
           Each aspect of your financial legacy requires thoughtful planning.
-          Explore the key areas below or jump straight to your personalized calculation.
+          Explore the key areas below or jump straight to your personalized
+          calculation.
         </Text>
       </VStack>
 
@@ -92,8 +99,7 @@ const RetireQuestions = () => {
                 rounded="full"
                 fontWeight="bold"
                 _hover={{ bg: "#00CAFF" }}
-                 onClick={() => handleCardClick(idx)}
-               
+                onClick={() => handleCardClick(idx)}
               >
                 Explore More
               </Button>
@@ -135,7 +141,22 @@ const RetireQuestions = () => {
                 <Text fontSize="xl" fontWeight="bold">
                   {activeQuestion.question}
                 </Text>
-                <Input placeholder={activeQuestion.placeholder} />
+                {/* controlled input tied to answers */}
+                <Input
+                  key={getQuestionKey(activePlanIndex!, questionIndex)}
+                  placeholder={activeQuestion.placeholder}
+                  value={
+                    answers[getQuestionKey(activePlanIndex!, questionIndex)] ||
+                    ""
+                  }
+                  onChange={(e) =>
+                    setAnswers((prev) => ({
+                      ...prev,
+                      [getQuestionKey(activePlanIndex!, questionIndex)]:
+                        e.target.value,
+                    }))
+                  }
+                />
                 <Text fontSize="sm" color="gray.600">
                   {activeQuestion.hint}
                 </Text>
@@ -146,7 +167,7 @@ const RetireQuestions = () => {
                     if (next < activePlan.questions.length) {
                       setQuestionIndex(next);
                     } else {
-                      setActivePlanIndex(null); 
+                      setActivePlanIndex(null); // later we’ll show results
                     }
                   }}
                 >
