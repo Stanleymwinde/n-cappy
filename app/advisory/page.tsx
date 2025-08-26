@@ -19,8 +19,9 @@ const page = () => {
         subtitle="Strategic Capital Guidance for Investors, Businesses, and Institutions"
         button="Schedule a Consultation"
       />
-      <WhoWeServe />
+
       <WhatWeOffer />
+      <WhoWeServe />
       <WhyChooseUs />
       <StrategyCall />
       <Faqs />
