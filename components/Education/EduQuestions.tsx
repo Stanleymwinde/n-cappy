@@ -1,5 +1,5 @@
 "use client";
-import { LifestylePlans, marginX } from "@/utils/constants";
+import { EducationPlans, marginX } from "@/utils/constants";
 import {
   Box,
   Button,
@@ -12,27 +12,36 @@ import {
   Input,
   Text,
   VStack,
+  
 } from "@chakra-ui/react";
 import React, { useState } from "react";
+import { Results } from "@/components/i-want-tos";
+import { useColorModeValue } from "../ui/color-mode";
 
 const EduQuestionsComponent = () => {
+  const cardBg = useColorModeValue("white", "gray.800");
   const [activePlanIndex, setActivePlanIndex] = useState<number | null>(null);
   const [questionIndex, setQuestionIndex] = useState(0);
+  const [showResults, setShowResults] = useState(false);
 
   const handleCardClick = (index: number) => {
     setActivePlanIndex(index);
     setQuestionIndex(0);
+    setShowResults(false);
   };
 
   const activePlan =
-    activePlanIndex !== null ? LifestylePlans[activePlanIndex] : null;
-  const activeQuestion = activePlan?.questions[questionIndex];
+    activePlanIndex !== null ? EducationPlans[activePlanIndex] : null;
+  const activeQuestion =
+    activePlan && questionIndex < activePlan.questions.length
+      ? activePlan.questions[questionIndex]
+      : null;
 
   return (
-    <Box marginX={marginX} py={10} bg="white">
+    <Box marginX={marginX} py={10} bg={cardBg}>
       {/* Header Section */}
-      <VStack gap={3} textAlign="center" mb={8}>
-        <Heading fontSize={{ base: "2xl", md: "3xl" }} color="blue.900">
+      <VStack gap={6} textAlign="center" mb={8}>
+        <Heading fontSize={{ base: "4xl", md: "5xl" }} fontWeight="bold" color="blue.900">
           Building Blocks of Your Legacy
         </Heading>
         <Text maxW="2xl" fontSize="md" color="gray.600">
@@ -43,8 +52,8 @@ const EduQuestionsComponent = () => {
       </VStack>
 
       {/* Plans Grid */}
-      <Grid templateColumns={{ base: "1fr", md: "repeat(5, 1fr)" }} gap={6}>
-        {LifestylePlans.map((block, idx) => (
+      <Grid templateColumns={{ base: "1fr", md: "repeat(4, 1fr)" }} gap={6}>
+        {EducationPlans.map((block, idx) => (
           <GridItem
             key={idx}
             _hover={{
@@ -58,10 +67,13 @@ const EduQuestionsComponent = () => {
               border="1px"
               borderColor="gray.200"
               borderRadius="2xl"
-              bg="white"
+              bg={cardBg}
               height="100%"
               boxShadow="sm"
               _hover={{ boxShadow: "md" }}
+              display="flex"
+              flexDirection="column"
+              justifyContent="space-between"
             >
               <VStack gap={3} align="start">
                 <Box
@@ -129,36 +141,56 @@ const EduQuestionsComponent = () => {
                   borderRadius="lg"
                   objectFit="cover"
                   width="100%"
-                  height={{ base: "200px", md: "250px" }}
+                  height="500px"
                 />
               </Box>
 
-              {/* Question Text & Input */}
-              <VStack align="start" gap={4} flex={2}>
-                <Text fontSize="xl" fontWeight="bold">
-                  {activeQuestion.question}
-                </Text>
-                <Input placeholder={activeQuestion.placeholder} />
-                <Text fontSize="sm" color="gray.600">
-                  {activeQuestion.hint}
-                </Text>
+              <VStack align="start" gap={4} flex={2} h="100%">
+                <Box>
+                  <Text fontSize="xl" fontWeight="bold">
+                    {activeQuestion.question}
+                  </Text>
+                  <Input placeholder={activeQuestion.placeholder} mt={3} />
+                  <Text fontSize="sm" color="gray.600" mt={2}>
+                    {activeQuestion.hint}
+                  </Text>
+                </Box>
 
-                {/* Navigation Button */}
-                <Button
-                  mt={4}
-                  onClick={() => {
-                    const next = questionIndex + 1;
-                    if (next < activePlan.questions.length) {
-                      setQuestionIndex(next);
-                    } else {
-                      setActivePlanIndex(null); // Reset to plans view
-                    }
-                  }}
-                >
-                  {questionIndex < activePlan.questions.length - 1
-                    ? "Next ➔"
-                    : "Finish"}
-                </Button>
+                <HStack w="100%" justify="space-between" mt="auto">
+                  {questionIndex > 0 ? (
+                    <Button
+                      onClick={() => setQuestionIndex(questionIndex - 1)}
+                      bg="#0A2233"
+                      color="white"
+                      rounded="full"
+                      fontWeight="bold"
+                    >
+                      ← Previous
+                    </Button>
+                  ) : (
+                    <Box />
+                  )}
+
+                  <Button
+                    onClick={() => {
+                      const next = questionIndex + 1;
+                      if (activePlan && next < activePlan.questions.length) {
+                        setQuestionIndex(next);
+                      } else {
+                        setShowResults(true);
+                      }
+                    }}
+                    bg="#0A2233"
+                    color="white"
+                    rounded="full"
+                    fontWeight="bold"
+                  >
+                    {activePlan &&
+                    questionIndex < activePlan.questions.length - 1
+                      ? "Next ➔"
+                      : "Finish"}
+                  </Button>
+                </HStack>
               </VStack>
             </HStack>
           </Box>
