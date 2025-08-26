@@ -28,7 +28,7 @@ const PlanForJoy = ({
       <Heading
         color="#00caff"
         as="h1"
-        fontSize={{ base: "2xl", md: "4xl" }}
+        fontSize={{ base: "4xl", md: "5xl" }}
         fontWeight="bold"
         textAlign="center"
         mb={4}

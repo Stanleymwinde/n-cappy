@@ -21,7 +21,7 @@ const page = () => {
         title="Do You Want to Be Ready for Anything?"
         subtitle="Think of this as your personal financial safety shield—built for those who plan for life’s milestones and prepare for the unexpected."
         subtext="Whether it’s a future home, school fees, or an unforeseen medical bill, this plan keeps you in control. It’s stability without slowdown—flexible, reliable, and always ready when you need it most."
-        imageUrl="/images/school.png"
+        imageUrl="/images/old-coup1.jpeg"
       />
       <EduQuestions />
       <CallToAction />
