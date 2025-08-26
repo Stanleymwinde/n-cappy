@@ -21,6 +21,7 @@ const Page = () => {
         imageUrl="/images/retire-hero.png"
         title="Build something that outlives you"
         subtitle="Make your mark. Then make it last"
+        buttonLink="https://forms.office.com/Pages/ResponsePage.aspx?id=1I3gDCgn-kmOcay0o8PRRR6Lv0VsgzBFmSkSbPkBGwNUMDFGTVU2RlQ0SkY3TFI5MTVSRFVESEc2Wi4u  "
       />
       <PlanForJoy
         title="What Story Will Your Wealth Tell?"

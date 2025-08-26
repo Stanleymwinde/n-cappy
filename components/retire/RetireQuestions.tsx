@@ -15,26 +15,27 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useColorModeValue } from "../ui/color-mode";
+// import { Results } from "@/components/retire"; // optional if you have results
 
 const RetireQuestions = () => {
   const cardBg = useColorModeValue("white", "gray.800");
   const [activePlanIndex, setActivePlanIndex] = useState<number | null>(null);
   const [questionIndex, setQuestionIndex] = useState(0);
-
-  // store answers as { "planIndex-questionIndex": "answer" }
-  const [answers, setAnswers] = useState<{ [key: string]: string }>({});
+  const [showResults, setShowResults] = useState(false);
 
   const handleCardClick = (index: number) => {
     setActivePlanIndex(index);
     setQuestionIndex(0);
+    setShowResults(false);
   };
-
-  // Helper to get unique key for each question
-  const getQuestionKey = (planIdx: number, qIdx: number) => `${planIdx}-${qIdx}`;
 
   const activePlan =
     activePlanIndex !== null ? RetirePlans[activePlanIndex] : null;
-  const activeQuestion = activePlan?.questions[questionIndex];
+
+  const activeQuestion =
+    activePlan && questionIndex < activePlan.questions.length
+      ? activePlan.questions[questionIndex]
+      : null;
 
   return (
     <Box marginX={marginX} py={10} bg="white">
@@ -49,11 +50,11 @@ const RetireQuestions = () => {
         </Text>
       </VStack>
 
+      {/* Cards */}
       <Grid templateColumns={{ base: "1fr", md: "repeat(5, 1fr)" }} gap={6}>
         {RetirePlans.map((block, idx) => (
           <GridItem
             key={idx}
-            onClick={() => handleCardClick(idx)}
             _hover={{
               cursor: "pointer",
               transform: "scale(1.02)",
@@ -94,12 +95,14 @@ const RetireQuestions = () => {
               <Button
                 mt={4}
                 size="sm"
-                colorScheme="#0A2233"
                 bg="#0A2233"
+                color="white"
                 rounded="full"
                 fontWeight="bold"
                 _hover={{ bg: "#00CAFF" }}
                 onClick={() => handleCardClick(idx)}
+                mx="auto"
+                display="block"
               >
                 Explore More
               </Button>
@@ -108,76 +111,107 @@ const RetireQuestions = () => {
         ))}
       </Grid>
 
+      {/* Questions / Results */}
       <VStack gap={6} p={6}>
-        {activePlan && activeQuestion && (
+        {showResults ? (
           <Box
             width="100%"
-            bg="#00CAFF"
+            bg="green.100"
             p={6}
             rounded="lg"
             mt={8}
-            position="relative"
+            textAlign="center"
           >
-            <Text mb={2} fontSize="sm">
-              Question {questionIndex + 1} of {activePlan.questions.length}
+            <Heading size="md" color="green.800">
+              🎉 You’ve completed the {activePlan?.title} plan!
+            </Heading>
+            <Text mt={2} color="gray.700">
+              (You can show results summary here)
             </Text>
-
-            <HStack
-              align="start"
-              gap={6}
-              flexDir={{ base: "column", md: "row" }}
-            >
-              <Box flex={1}>
-                <Image
-                  src={activeQuestion.image}
-                  alt="question visual"
-                  borderRadius="lg"
-                  objectFit="cover"
-                  width="100%"
-                  height="250px"
-                />
-              </Box>
-              <VStack align="start" gap={4} flex={2}>
-                <Text fontSize="xl" fontWeight="bold">
-                  {activeQuestion.question}
-                </Text>
-                {/* controlled input tied to answers */}
-                <Input
-                  key={getQuestionKey(activePlanIndex!, questionIndex)}
-                  placeholder={activeQuestion.placeholder}
-                  value={
-                    answers[getQuestionKey(activePlanIndex!, questionIndex)] ||
-                    ""
-                  }
-                  onChange={(e) =>
-                    setAnswers((prev) => ({
-                      ...prev,
-                      [getQuestionKey(activePlanIndex!, questionIndex)]:
-                        e.target.value,
-                    }))
-                  }
-                />
-                <Text fontSize="sm" color="gray.600">
-                  {activeQuestion.hint}
-                </Text>
-                <Button
-                  mt={4}
-                  onClick={() => {
-                    const next = questionIndex + 1;
-                    if (next < activePlan.questions.length) {
-                      setQuestionIndex(next);
-                    } else {
-                      setActivePlanIndex(null); // later we’ll show results
-                    }
-                  }}
-                >
-                  {questionIndex < activePlan.questions.length - 1
-                    ? "Next ➔"
-                    : "Finish"}
-                </Button>
-              </VStack>
-            </HStack>
           </Box>
+        ) : (
+          activePlan &&
+          activeQuestion && (
+            <Box
+              width="100%"
+              bg="#00CAFF"
+              p={6}
+              rounded="lg"
+              mt={8}
+              position="relative"
+              minH="500px"
+            >
+              <Text mb={2} fontSize="sm">
+                Question {questionIndex + 1} of {activePlan.questions.length}
+              </Text>
+
+              <HStack
+                align="stretch"
+                gap={6}
+                flexDir={{ base: "column", md: "row" }}
+                minH="350px"
+              >
+                <Box flex={1}>
+                  <Image
+                    src={activeQuestion.image}
+                    alt="question visual"
+                    borderRadius="lg"
+                    objectFit="cover"
+                    width="100%"
+                    height="500px"
+                  />
+                </Box>
+
+                <VStack align="start" gap={4} flex={2} h="100%">
+                  <Box>
+                    <Text fontSize="xl" fontWeight="bold">
+                      {activeQuestion.question}
+                    </Text>
+                    <Input placeholder={activeQuestion.placeholder} mt={3} />
+                    <Text fontSize="sm" color="gray.600" mt={2}>
+                      {activeQuestion.hint}
+                    </Text>
+                  </Box>
+
+                  <HStack w="100%" justify="space-between" mt="auto">
+                    {questionIndex > 0 ? (
+                      <Button
+                        onClick={() => setQuestionIndex(questionIndex - 1)}
+                        bg="#0A2233"
+                        color="white"
+                        rounded="full"
+                        fontWeight="bold"
+                      >
+                        ← Previous
+                      </Button>
+                    ) : (
+                      <Box />
+                    )}
+
+                    <Button
+                      onClick={() => {
+                        const next = questionIndex + 1;
+                        if (activePlan && next < activePlan.questions.length) {
+                          setQuestionIndex(next);
+                        } else {
+                          setShowResults(true);
+                        }
+                      }}
+                      bg="#0A2233"
+                      color="white"
+                      rounded="full"
+                      fontWeight="bold"
+                    >
+                      {activePlan &&
+                      questionIndex < activePlan.questions.length - 1
+                        ? "Next ➔"
+                        : "Finish"}
+                    </Button>
+                  </HStack>
+                </VStack>
+              </HStack>
+            </Box>
+          )
         )}
       </VStack>
     </Box>
