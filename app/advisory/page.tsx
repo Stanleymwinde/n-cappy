@@ -18,6 +18,8 @@ const page = () => {
         imageUrl="/images/inv-adv.png"
         subtitle="Strategic Capital Guidance for Investors, Businesses, and Institutions"
         button="Schedule a Consultation"
+        buttonLink=" https://forms.office.com/Pages/ResponsePage.aspx?id=1I3gDCgn-kmOcay0o8PRRR6Lv0VsgzBFmSkSbPkBGwNUQVpWSFNZU0JWSDJNUFU1OTNYTEZDVVNHVi4u
+"
       />
 
       <WhatWeOffer />

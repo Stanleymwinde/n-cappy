@@ -18,7 +18,7 @@ import React from "react";
 const InvestmentSolutions = () => {
   return (
 
-    <Box marginX={marginX}>
+    <Box marginX={marginX} mt={20}>
 
       <Heading
         as="h1"

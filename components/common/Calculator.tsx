@@ -16,6 +16,8 @@ import {
   Select,
   createListCollection,
   HStack,
+  Container,
+ //  useColorModeValue,
 } from "@chakra-ui/react";
 import { useState, useRef } from "react";
 import {
@@ -142,176 +144,189 @@ export default function Page() {
   };
 
   return (
-    <Box p={6} bg="#0A2233">
-      {/* Header & Goal Selection */}
-      <Box py={8} px={4} borderRadius="lg" textAlign="center">
-        <Text fontSize="xl" fontWeight="bold" color="blue.300" mb={4}>
-          Put a Number to Your Dream
-        </Text>
+    <Box p={6} bg="#0A2233" minH="70vh">
+      {/* Centered container for consistent width */}
+      <Container maxW="14xl">
+        {/* Header & Goal Selection */}
+        <Box py={8} px={4} borderRadius="lg" textAlign="center">
+          <Text fontSize="xl" fontWeight="bold" color="blue.300" mb={4}>
+            Put a Number to Your Dream
+          </Text>
 
-        <Box display="flex" justifyContent="center" alignItems="center" width="100%" mb={6}>
-          <Select.Root
-            collection={goalCollection}
-            value={goal ? [goal] : []}
-            onValueChange={(details) =>
-              setGoal(Array.isArray(details.value) ? details.value[0] : details.value)
-            }
-            width="320px"
-            size="sm"
-          >
-            <Select.HiddenSelect />
-            <Select.Control
-              borderRadius="md"
-              bgGradient="linear(to-r, blue.800, blue.400)"
-              color="white"
-              px={2}
-              py={2}
-              _focusVisible={{ outline: "2px solid white" }}
+          <Box display="flex" justifyContent="center" alignItems="center" width="100%" mb={6}>
+            <Select.Root
+              collection={goalCollection}
+              value={goal ? [goal] : []}
+              onValueChange={(details) =>
+                setGoal(Array.isArray(details.value) ? details.value[0] : details.value)
+              }
+              width="320px"
+              size="sm"
             >
-              <Select.Trigger>
-                <Select.ValueText placeholder="I want to" color="white" px={4} />
-              </Select.Trigger>
-              <Select.IndicatorGroup>
-                <Select.Indicator color="white" />
-              </Select.IndicatorGroup>
-            </Select.Control>
-            <Portal>
-              <Select.Positioner>
-                <Select.Content bg="white" color="black" borderRadius="md" shadow="md">
-                  {goalCollection.items.map((item) => (
-                    <Select.Item key={item.value} item={item}>
-                      {item.label}
-                      <Select.ItemIndicator />
-                    </Select.Item>
-                  ))}
-                </Select.Content>
-              </Select.Positioner>
-            </Portal>
-          </Select.Root>
-        </Box>
-      </Box>
-
-      {/* Currency Toggle */}
-      <Box textAlign="center" mb={4}>
-        <HStack justify="center" gap={4}>
-          <Button
-            colorScheme={currency === "KES" ? "blue" : "gray"}
-            onClick={() => handleCurrencyToggle("KES")}
-          >
-            KES
-          </Button>
-          <Button
-            colorScheme={currency === "USD" ? "blue" : "gray"}
-            onClick={() => handleCurrencyToggle("USD")}
-          >
-            USD
-          </Button>
-        </HStack>
-      </Box>
-
-      {/* Inputs */}
-      <Box bg="white" marginX={marginX} p={8} color="black" borderRadius="2xl"  width="1600px" mx="auto">
-        <VStack gap={6} align="center" width="full" px={4}>
-          <Heading size="5xl" textAlign="center">
-            Let’s plan your dream, together.
-          </Heading>
-
-          <SimpleGrid columns={{ base: 1, md: 3 }} gap={4} width="full">
-            <Field.Root>
-              <Field.Label fontWeight="bold">My goal is</Field.Label>
-              <Input
-                placeholder="Enter your goal"
-                value={
-                  goal === "other"
-                    ? customGoal
-                    : goalCollection.items.find((item) => item.value === goal)?.label || ""
-                }
-                onChange={(e) => goal === "other" && setCustomGoal(e.target.value)}
-                readOnly={goal !== "other"}
-              />
-            </Field.Root>
-
-            <Field.Root>
-              <Field.Label fontWeight="bold">It will cost me</Field.Label>
-              <Input
-                placeholder={currency}
-                value={targetAmount === 0 ? "" : formatCurrency(targetAmount)}
-                onChange={(e) => {
-                  const val = e.target.value.replace(/,/g, "");
-                  setTargetAmount(val === "" ? 0 : Number(val));
-                }}
-              />
-              <Text fontSize="sm" color="gray.700">to reach this goal</Text>
-            </Field.Root>
-
-            <Field.Root>
-              <Field.Label fontWeight="bold">I'll contribute</Field.Label>
-              <Input
-                placeholder={currency}
-                value={monthlyContribution === 0 ? "" : formatCurrency(monthlyContribution)}
-                onChange={(e) => {
-                  const val = e.target.value.replace(/,/g, "");
-                  setMonthlyContribution(val === "" ? 0 : Number(val));
-                }}
-              />
-              <Text fontSize="sm" color="gray.700">Every month</Text>
-            </Field.Root>
-          </SimpleGrid>
-
-          <SimpleGrid columns={{ base: 1, md: 2 }} gap={4} width="full">
-            <Field.Root>
-              <Field.Label fontWeight="bold">I want to earn</Field.Label>
-              <Input
-                placeholder="%"
-                type="number"
-                value={interestRate}
-                onChange={(e) => setInterestRate(Number(e.target.value))}
-              />
-              <Text fontSize="sm" color="gray.700">interest annually</Text>
-            </Field.Root>
-
-            <Field.Root>
-              <Field.Label fontWeight="bold">I want to invest for</Field.Label>
-              <Input
-                placeholder="#"
-                type="number"
-                value={years}
-                onChange={(e) => setYears(Number(e.target.value))}
-              />
-              <Text fontSize="sm" color="gray.700">years</Text>
-            </Field.Root>
-          </SimpleGrid>
-
-          <Button colorScheme="blue" size="lg" onClick={calculate} _hover={{ bg: "#00CAFF" }}>
-            Calculate
-          </Button>
-
-          {/* 🔹 CHANGED: moved download button here */}
-          {result !== null && (
-            <Box textAlign="center" mt={4}>
-              <Text fontSize="xl" fontWeight="bold">You’ll have</Text>
-              <Text fontSize="2xl" fontWeight="extrabold" color="orange.500" mb={4}>
-                {currency} {formatCurrency(result)}
-              </Text>
-
-              <Button 
-                colorScheme="green" 
-                size="sm" 
-                onClick={downloadPDF} 
-                _hover={{ bg: "#00CAFF" }}
+              <Select.HiddenSelect />
+              <Select.Control
+                borderRadius="md"
+                bgGradient="linear(to-r, blue.800, blue.400)"
+                color="white"
+                px={2}
+                py={2}
+                _focusVisible={{ outline: "2px solid white" }}
               >
-                Download PDF
-              </Button>
-            </Box>
-          )}
-        </VStack>
-      </Box>
+                <Select.Trigger>
+                  <Select.ValueText placeholder="I want to" color="white" px={4} />
+                </Select.Trigger>
+                <Select.IndicatorGroup>
+                  <Select.Indicator color="white" />
+                </Select.IndicatorGroup>
+              </Select.Control>
+              <Portal>
+                <Select.Positioner>
+                  <Select.Content bg="white" color="black" borderRadius="md" shadow="md">
+                    {goalCollection.items.map((item) => (
+                      <Select.Item key={item.value} item={item}>
+                        {item.label}
+                        <Select.ItemIndicator />
+                      </Select.Item>
+                    ))}
+                  </Select.Content>
+                </Select.Positioner>
+              </Portal>
+            </Select.Root>
+          </Box>
+        </Box>
 
-      {/* Chart & Table */}
-      <Box p={6} bg="#f5f5f5">
-        <Box ref={exportRef}>
+        {/* Currency Toggle */}
+        <Box textAlign="center" mb={4}>
+          <HStack justify="center" gap={4}>
+            <Button
+              colorScheme={currency === "KES" ? "blue" : "gray"}
+              onClick={() => handleCurrencyToggle("KES")}
+            >
+              KES
+            </Button>
+            <Button
+              colorScheme={currency === "USD" ? "blue" : "gray"}
+              onClick={() => handleCurrencyToggle("USD")}
+            >
+              USD
+            </Button>
+          </HStack>
+        </Box>
+
+        {/* Inputs Card */}
+        <Box
+          bg="white"
+          p={8}
+          color="black"
+          borderRadius="2xl"
+          shadow="md"
+          mb={8}
+        >
+          <VStack gap={6} align="center" width="full" px={4}>
+            <Heading size="2xl" textAlign="center">
+              Let’s plan your dream, together.
+            </Heading>
+
+            <SimpleGrid columns={{ base: 1, md: 3 }} gap={4} width="full">
+              <Field.Root>
+                <Field.Label fontWeight="bold">My goal is</Field.Label>
+                <Input
+                  placeholder="Enter your goal"
+                  value={
+                    goal === "other"
+                      ? customGoal
+                      : goalCollection.items.find((item) => item.value === goal)?.label || ""
+                  }
+                  onChange={(e) => goal === "other" && setCustomGoal(e.target.value)}
+                  readOnly={goal !== "other"}
+                />
+              </Field.Root>
+
+              <Field.Root>
+                <Field.Label fontWeight="bold">It will cost me</Field.Label>
+                <Input
+                  placeholder={currency}
+                  value={targetAmount === 0 ? "" : formatCurrency(targetAmount)}
+                  onChange={(e) => {
+                    const val = e.target.value.replace(/,/g, "");
+                    setTargetAmount(val === "" ? 0 : Number(val));
+                  }}
+                />
+                <Text fontSize="sm" color="gray.700">to reach this goal</Text>
+              </Field.Root>
+
+              <Field.Root>
+                <Field.Label fontWeight="bold">I'll contribute</Field.Label>
+                <Input
+                  placeholder={currency}
+                  value={monthlyContribution === 0 ? "" : formatCurrency(monthlyContribution)}
+                  onChange={(e) => {
+                    const val = e.target.value.replace(/,/g, "");
+                    setMonthlyContribution(val === "" ? 0 : Number(val));
+                  }}
+                />
+                <Text fontSize="sm" color="gray.700">Every month</Text>
+              </Field.Root>
+            </SimpleGrid>
+
+            <SimpleGrid columns={{ base: 1, md: 2 }} gap={4} width="full">
+              <Field.Root>
+                <Field.Label fontWeight="bold">I want to earn</Field.Label>
+                <Input
+                  placeholder="%"
+                  type="number"
+                  value={interestRate}
+                  onChange={(e) => setInterestRate(Number(e.target.value))}
+                />
+                <Text fontSize="sm" color="gray.700">interest annually</Text>
+              </Field.Root>
+
+              <Field.Root>
+                <Field.Label fontWeight="bold">I want to invest for</Field.Label>
+                <Input
+                  placeholder="#"
+                  type="number"
+                  value={years}
+                  onChange={(e) => setYears(Number(e.target.value))}
+                />
+                <Text fontSize="sm" color="gray.700">years</Text>
+              </Field.Root>
+            </SimpleGrid>
+
+            <Button colorScheme="blue" size="lg" onClick={calculate} _hover={{ bg: "#00CAFF" }}>
+              Calculate
+            </Button>
+
+            {result !== null && (
+              <Box textAlign="center" mt={4}>
+                <Text fontSize="xl" fontWeight="bold">You’ll have</Text>
+                <Text fontSize="2xl" fontWeight="extrabold" color="orange.500" mb={4}>
+                  {currency} {formatCurrency(result)}
+                </Text>
+
+                <Button 
+                  colorScheme="green" 
+                  size="sm" 
+                  onClick={downloadPDF} 
+                  _hover={{ bg: "#00CAFF" }}
+                >
+                  Download PDF
+                </Button>
+              </Box>
+            )}
+          </VStack>
+        </Box>
+
+        {/* Chart & Table Card (same width & style as calculator) */}
+        <Box
+          bg="white"
+          p={8}
+          borderRadius="2xl"
+          shadow="md"
+          ref={exportRef}
+        >
           {data.length > 0 && (
-            <Tabs.Root mt={10} colorScheme="blue" solid-rounded>
+            <Tabs.Root mt={4} colorScheme="blue" solid-rounded>
               <Tabs.List>
                 <Tabs.Trigger value="linegraph">Line Graph</Tabs.Trigger>
                 <Tabs.Trigger value="table">Table</Tabs.Trigger>
@@ -363,7 +378,7 @@ export default function Page() {
             </Tabs.Root>
           )}
         </Box>
-      </Box>
+      </Container>
     </Box>
   );
 }

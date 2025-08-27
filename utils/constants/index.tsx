@@ -543,13 +543,13 @@ export const institutionalMembers = [
   {
     image: "/images/fredd.png",
     name: "Fredrick Okudo",
-    title: "Senior Portfolio Manager",
+    title: "Snr. Associate Product Structuring and CX & UX",
     linkedin: "https://www.linkedin.com/in/fredrick-okudo-960567135/",
   },
   {
     image: "/images/tedy.jpg",
     name: "Teddey Muthoka",
-    title: "Financial Analyst",
+    title: "Asset Management & Products Analyst",
     linkedin: "https://www.linkedin.com/in/teddey-muthoka/",
   },
 ];

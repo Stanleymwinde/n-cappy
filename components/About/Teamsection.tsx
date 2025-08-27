@@ -59,7 +59,7 @@ const TeamSection: React.FC = () => {
             />
             <TeamMemberCard
               name="Dr. Mercy Njoroge Mwongela"
-              title="Chairman & Non-Executive Director"
+              title="Company Secretary"
               image="/images/Mwongela2.png"
               linkedin=" https://www.linkedin.com/in/mercymwongela/"
             />
