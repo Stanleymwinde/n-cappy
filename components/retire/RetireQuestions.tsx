@@ -40,7 +40,7 @@ const RetireQuestions = () => {
   return (
     <Box marginX={marginX} py={10} bg="white">
       <VStack gap={3} textAlign="center" mb={8}>
-        <Heading fontSize={{ base: "2xl", md: "3xl" }} color="blue.900">
+        <Heading fontSize={{ base: "4xl", md: "5xl" }} color="blue.900" fontWeight={"bold"}>
           Building Blocks of Your Legacy
         </Heading>
         <Text maxW="2xl" fontSize="md" color="gray.600">
