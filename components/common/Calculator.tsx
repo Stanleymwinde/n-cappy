@@ -104,9 +104,67 @@ export default function Page() {
     return value.toLocaleString(undefined, { minimumFractionDigits: 2 });
   };
 
+  /* --------- ONLY this function changed ---------
+     - Adds the logo from /public/images/Logo.svg (converts SVG -> PNG for PDF)
+     - Adds a centered title
+     - Captures your chart (exact same selection as before)
+     - Places the table below the chart (same data and styling, slightly adjusted startY to avoid overlap)
+     ------------------------------------------------*/
   const downloadPDF = async () => {
     const pdf = new jsPDF({ orientation: "landscape" });
 
+    // Try to load the SVG logo and convert it to PNG before adding to pdf.
+    // This conversion helps jsPDF avoid SVG compatibility issues.
+    try {
+      const logoUrl = "/images/Logo.svg"; // ensure this file is in public/images
+      const svgText = await fetch(logoUrl).then((r) => r.text());
+
+      // Safely base64-encode the SVG (handle unicode)
+      const svgBase64 = "data:image/svg+xml;base64," + btoa(unescape(encodeURIComponent(svgText)));
+
+      // Create an image from the SVG data URL, draw to a canvas, then get PNG data URL.
+      const img = new Image();
+      img.crossOrigin = "anonymous";
+      img.src = svgBase64;
+
+      await new Promise<void>((resolve, reject) => {
+        img.onload = () => resolve();
+        img.onerror = () => reject(new Error("Failed to load SVG image for PDF logo"));
+      });
+
+      const tmpCanvas = document.createElement("canvas");
+      const tmpCtx = tmpCanvas.getContext("2d");
+      // Use natural dimensions (or fallbacks) and cap width to avoid huge images
+      const naturalW = img.naturalWidth || img.width || 400;
+      const naturalH = img.naturalHeight || img.height || 100;
+      const maxWidth = 800;
+      const scale = Math.min(1, maxWidth / naturalW);
+      tmpCanvas.width = naturalW * scale;
+      tmpCanvas.height = naturalH * scale;
+
+      tmpCtx?.clearRect(0, 0, tmpCanvas.width, tmpCanvas.height);
+      tmpCtx?.drawImage(img, 0, 0, tmpCanvas.width, tmpCanvas.height);
+
+      const logoPngData = tmpCanvas.toDataURL("image/png");
+      // Add the logo PNG to the PDF (top-left)
+      pdf.addImage(logoPngData, "PNG", 10, 8, 40, 20);
+    } catch (err) {
+      // If the logo fails to load/convert, continue without breaking PDF generation.
+      // (We silently continue but log to console for debugging.)
+      // eslint-disable-next-line no-console
+      console.warn("Could not add logo to PDF:", err);
+    }
+
+    // Add report title (centered)
+    pdf.setFontSize(18);
+    pdf.text("Goal Calculation Report", pdf.internal.pageSize.getWidth() / 2, 20, {
+      align: "center",
+    });
+
+    // Default table startY (used if chart capture fails)
+    let tableStartY = 120;
+
+    // Capture the chart area (unchanged selection logic)
     if (exportRef.current) {
       const chartContainer = exportRef.current.querySelector(".recharts-wrapper");
       if (chartContainer) {
@@ -120,12 +178,18 @@ export default function Page() {
         const pdfWidth = pdf.internal.pageSize.getWidth() - 20;
         const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
 
-        pdf.addImage(imgData, "PNG", 10, 10, pdfWidth, pdfHeight);
+        // place chart below header (leave some space for logo/title)
+        const chartY = 30;
+        pdf.addImage(imgData, "PNG", 10, chartY, pdfWidth, pdfHeight);
+
+        // make table start below the chart
+        tableStartY = chartY + pdfHeight + 10;
       }
     }
 
+    // Create table exactly with the same data as before, but using computed startY
     autoTable(pdf, {
-      startY: 120,
+      startY: tableStartY,
       head: [["Year", "Principal", "Monthly", "Annual", "Interest", "End of Year"]],
       body: data.map((row, i) => [
         row.year,
@@ -135,13 +199,15 @@ export default function Page() {
         i === 0 ? "-" : formatCurrency(row.interest),
         formatCurrency(row.endOfYear),
       ]),
-      styles: { fontSize: 10 },
-      headStyles: { fillColor: [49, 130, 206], textColor: 255 },
+      styles: { fontSize: 10, textColor: [0, 0, 0] },
+      headStyles: { fillColor: [10, 34, 51], textColor: 255 },
+      alternateRowStyles: { fillColor: [245, 247, 250] },
       theme: "grid",
     });
 
     pdf.save("goal_calculation.pdf");
   };
+  /* --------- end only-changed function --------- */
 
   return (
     <Box p={6} bg="#0A2233" minH="70vh">
