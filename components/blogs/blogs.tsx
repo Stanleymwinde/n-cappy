@@ -18,9 +18,9 @@ import FeaturedBlogs from "./FeaturedBlogs";
 
 export default function page() {
   return (
-    <Box py={12} marginX={marginX} bg={useColorModeValue("white", "gray.800")}>
-      <Stack gap={4} textAlign="center" mb={10}>
-        <Heading fontSize={{ base: "2xl", md: "4xl" }} fontWeight="bold">
+    <Box py={12} marginX={marginX} bg={useColorModeValue("white", "gray.800")} mt={20}>
+      <Stack gap={8} textAlign="center" mb={10}>
+        <Heading fontSize={{ base: "3xl", md: "6xl" }} fontWeight="bold">
           Fresh Take on Finance Every Week
         </Heading>
         <Text fontSize={{ base: "md", md: "lg" }} color="gray.600">
@@ -45,8 +45,8 @@ export default function page() {
         >
           <Box position="relative">
             <Image
-              src="/images/blog-image.png"
-              alt="Weekly Financial Bulletin"
+              src="/images/dubai-calling.png"
+              alt="When Was the Last Time You Truly Stepped Out?"
               objectFit="cover"
               w="full"
               h={{ base: "200px", md: "250px" }}
@@ -67,15 +67,14 @@ export default function page() {
           </Box>
           <Box px={4} py={5}>
             <Flex justify="space-between" color="gray.500" fontSize="sm" mb={2}>
-              <Text>June 15, 2023</Text>
+              <Text>August 4, 2025</Text>
               <Text>8 min read</Text>
             </Flex>
             <Heading fontSize="lg" mb={2}>
-              China Strikes Back: A New Chapter of the Trade War Begins
+              The Campaign That Dares You to See More
             </Heading>
             <Text fontSize="sm" color="gray.600" mb={4}>
-              “In a global market shaped by geopolitical friction, tactical
-              precision matters more than strategic conviction.” — Ray Dalio
+             At first glance, Dubai Is Calling may look like a travel offer. But look closer, and you will see something deeper. This isn’t about ticking destinations off a bucket list. It’s about rethinking what it means to invest in yourself.
             </Text>
             <Link
               color="blue.500"
@@ -100,12 +99,10 @@ export default function page() {
             Weekly Blog
           </Text>
           <Heading size="md" mt={2} mb={2}>
-            Democratising Investments in Kenya
+           The Nabo Capital Insider
           </Heading>
           <Text fontSize="sm" color="gray.600" mb={4}>
-            In 2023, it was reported that investments in Kenya were on a
-            decline. Many blamed touch economic times and low confidence among
-            investors.
+            Welcome to The Nabo Capital Insider, your go-to source for financial literacy tips, industry insights and expert advice.
           </Text>
           <Link
             color="blue.500"

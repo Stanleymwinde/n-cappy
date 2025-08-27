@@ -37,7 +37,7 @@ const Team = () => {
             <Image
               src={member.image}
               width="100%"
-              height="350px"
+              height="400px"
               objectFit="cover"
               alt={`${member.name} profile picture`}
               borderRadius="md"
@@ -79,8 +79,8 @@ const Team = () => {
         _hover={{ bg: "#00CAFF" }}
         onClick={() =>
           window.open(
-            "https://forms.office.com/Pages/ResponsePage.aspx?id=1I3gDCgn-kmOcay0o8PRRR6Lv0VsgzBFmSkSbPkBGwNUQVpWSFNZU0JWSDJNUFU1OTNYTEZDVVNHVi4",
-            "_blank"
+            "https://forms.office.com/Pages/ResponsePage.aspx?id=1I3gDCgn-kmOcay0o8PRRR6Lv0VsgzBFmSkSbPkBGwNUQVpWSFNZU0JWSDJNUFU1OTNYTEZDVVNHVi4u",
+           
           )
         }
       >

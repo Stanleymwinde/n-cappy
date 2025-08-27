@@ -11,14 +11,15 @@ const MoreResources = () => {
       <Box marginX={marginX} py={8}>
         <Heading
           as="h2"
-          size="6xl"
+          fontSize={{ base: "3xl", md: "6xl" }}
           mb={4}
-          color={" #00caff"}
+          color={" #0a2234"}
           fontWeight={"bold"}
+           textAlign="center" 
         >
           More Resources
         </Heading>
-        <Text fontSize="lg" color="gray.600">
+        <Text fontSize="lg" color="gray.600"  textAlign="center" >
           Explore our collection of educational videos
         </Text>
         <Box
