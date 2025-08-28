@@ -72,12 +72,12 @@ const GettingStarted: React.FC = () => {
         <Text fontSize={{ base: "3xl", md: "6xl" }} fontWeight="bold">
           Getting Started is Easy
         </Text>
-        <Text fontSize="md" color="gray.600">
+        <Text fontSize="xl" color="gray.600">
           Begin your investment journey with Nabo Capital in just three simple steps.
         </Text>
       </VStack>
 
-      <HStack gap={8} justify="center">
+      <HStack gap={8} justify="center" fontSize="lg">
         {steps.map((step, index) => (
           <StepCard
             key={index}

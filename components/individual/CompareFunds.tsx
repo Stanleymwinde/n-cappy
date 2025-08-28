@@ -37,11 +37,11 @@ const CompareFunds = () => {
       <Text  textAlign="center" fontSize={{ base: "3xl", md: "6xl" }}fontWeight="bold">
         Compare Our Funds
       </Text>
-      <Text fontSize="md" mb={6} color="gray.600" textAlign="center">
+      <Text fontSize="xl" mb={6} color="gray.600" textAlign="center">
         See how our investment funds stack up against each other to find the perfect match for your financial goals.
       </Text>
 
-      <Tabs.Root defaultValue="all-features" activationMode="manual">
+      <Tabs.Root defaultValue="all-features" activationMode="manual" fontSize="lg">
         <Flex
           flexWrap="wrap"
           gap={2}
@@ -51,7 +51,7 @@ const CompareFunds = () => {
           mb={4}
           as={Tabs.List}
         >
-          <Tabs.Trigger value="all-features" color={"#fc8500"}>
+          <Tabs.Trigger value="all-features" color={"#fc8500"} fontSize="lg">
             All Features
           </Tabs.Trigger>
           <Tabs.Trigger value="risk-returns">Risk & Returns</Tabs.Trigger>
