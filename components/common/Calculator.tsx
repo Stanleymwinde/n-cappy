@@ -17,9 +17,8 @@ import {
   createListCollection,
   HStack,
   Container,
- //  useColorModeValue,
 } from "@chakra-ui/react";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import {
   LineChart,
   Line,
@@ -62,7 +61,23 @@ export default function Page() {
   const [currency, setCurrency] = useState<"KES" | "USD">("KES");
   const [rate, setRate] = useState(1);
 
+  // new raw input states (to make typing smooth)
+  const [targetAmountInput, setTargetAmountInput] = useState(
+    targetAmount.toString()
+  );
+  const [monthlyContributionInput, setMonthlyContributionInput] = useState(
+    monthlyContribution.toString()
+  );
+
   const exportRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setTargetAmountInput(targetAmount.toString());
+  }, [targetAmount]);
+
+  useEffect(() => {
+    setMonthlyContributionInput(monthlyContribution.toString());
+  }, [monthlyContribution]);
 
   const handleCurrencyToggle = (selected: "KES" | "USD") => {
     if (selected === currency) return;
@@ -104,37 +119,27 @@ export default function Page() {
     return value.toLocaleString(undefined, { minimumFractionDigits: 2 });
   };
 
-  /* --------- ONLY this function changed ---------
-     - Adds the logo from /public/images/Logo.svg (converts SVG -> PNG for PDF)
-     - Adds a centered title
-     - Captures your chart (exact same selection as before)
-     - Places the table below the chart (same data and styling, slightly adjusted startY to avoid overlap)
-     ------------------------------------------------*/
   const downloadPDF = async () => {
     const pdf = new jsPDF({ orientation: "landscape" });
 
-    // Try to load the SVG logo and convert it to PNG before adding to pdf.
-    // This conversion helps jsPDF avoid SVG compatibility issues.
     try {
-      const logoUrl = "/images/Logo.svg"; // ensure this file is in public/images
+      const logoUrl = "/images/Logo.svg";
       const svgText = await fetch(logoUrl).then((r) => r.text());
-
-      // Safely base64-encode the SVG (handle unicode)
-      const svgBase64 = "data:image/svg+xml;base64," + btoa(unescape(encodeURIComponent(svgText)));
-
-      // Create an image from the SVG data URL, draw to a canvas, then get PNG data URL.
+      const svgBase64 =
+        "data:image/svg+xml;base64," +
+        btoa(unescape(encodeURIComponent(svgText)));
       const img = new Image();
       img.crossOrigin = "anonymous";
       img.src = svgBase64;
 
       await new Promise<void>((resolve, reject) => {
         img.onload = () => resolve();
-        img.onerror = () => reject(new Error("Failed to load SVG image for PDF logo"));
+        img.onerror = () =>
+          reject(new Error("Failed to load SVG image for PDF logo"));
       });
 
       const tmpCanvas = document.createElement("canvas");
       const tmpCtx = tmpCanvas.getContext("2d");
-      // Use natural dimensions (or fallbacks) and cap width to avoid huge images
       const naturalW = img.naturalWidth || img.width || 400;
       const naturalH = img.naturalHeight || img.height || 100;
       const maxWidth = 800;
@@ -146,27 +151,26 @@ export default function Page() {
       tmpCtx?.drawImage(img, 0, 0, tmpCanvas.width, tmpCanvas.height);
 
       const logoPngData = tmpCanvas.toDataURL("image/png");
-      // Add the logo PNG to the PDF (top-left)
       pdf.addImage(logoPngData, "PNG", 10, 8, 40, 20);
     } catch (err) {
-      // If the logo fails to load/convert, continue without breaking PDF generation.
-      // (We silently continue but log to console for debugging.)
-      // eslint-disable-next-line no-console
       console.warn("Could not add logo to PDF:", err);
     }
 
-    // Add report title (centered)
     pdf.setFontSize(18);
-    pdf.text("Goal Calculation Report", pdf.internal.pageSize.getWidth() / 2, 20, {
-      align: "center",
-    });
+    pdf.text(
+      "Goal Calculation Report",
+      pdf.internal.pageSize.getWidth() / 2,
+      20,
+      {
+        align: "center",
+      }
+    );
 
-    // Default table startY (used if chart capture fails)
     let tableStartY = 120;
 
-    // Capture the chart area (unchanged selection logic)
     if (exportRef.current) {
-      const chartContainer = exportRef.current.querySelector(".recharts-wrapper");
+      const chartContainer =
+        exportRef.current.querySelector(".recharts-wrapper");
       if (chartContainer) {
         const canvas = await html2canvas(chartContainer as HTMLElement, {
           scale: 3,
@@ -178,19 +182,18 @@ export default function Page() {
         const pdfWidth = pdf.internal.pageSize.getWidth() - 20;
         const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
 
-        // place chart below header (leave some space for logo/title)
         const chartY = 30;
         pdf.addImage(imgData, "PNG", 10, chartY, pdfWidth, pdfHeight);
 
-        // make table start below the chart
         tableStartY = chartY + pdfHeight + 10;
       }
     }
 
-    // Create table exactly with the same data as before, but using computed startY
     autoTable(pdf, {
       startY: tableStartY,
-      head: [["Year", "Principal", "Monthly", "Annual", "Interest", "End of Year"]],
+      head: [
+        ["Year", "Principal", "Monthly", "Annual", "Interest", "End of Year"],
+      ],
       body: data.map((row, i) => [
         row.year,
         i === 0 ? formatCurrency(row.principal || 0) : "-",
@@ -207,24 +210,31 @@ export default function Page() {
 
     pdf.save("goal_calculation.pdf");
   };
-  /* --------- end only-changed function --------- */
 
   return (
     <Box p={6} bg="#0A2233" minH="70vh">
-      {/* Centered container for consistent width */}
       <Container maxW="14xl">
-        {/* Header & Goal Selection */}
         <Box py={8} px={4} borderRadius="lg" textAlign="center">
           <Text fontSize="xl" fontWeight="bold" color="blue.300" mb={4}>
             Put a Number to Your Dream
           </Text>
 
-          <Box display="flex" justifyContent="center" alignItems="center" width="100%" mb={6}>
+          <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            width="100%"
+            mb={6}
+          >
             <Select.Root
               collection={goalCollection}
               value={goal ? [goal] : []}
               onValueChange={(details) =>
-                setGoal(Array.isArray(details.value) ? details.value[0] : details.value)
+                setGoal(
+                  Array.isArray(details.value)
+                    ? details.value[0]
+                    : details.value
+                )
               }
               width="320px"
               size="sm"
@@ -239,7 +249,11 @@ export default function Page() {
                 _focusVisible={{ outline: "2px solid white" }}
               >
                 <Select.Trigger>
-                  <Select.ValueText placeholder="I want to" color="white" px={4} />
+                  <Select.ValueText
+                    placeholder="I want to"
+                    color="white"
+                    px={4}
+                  />
                 </Select.Trigger>
                 <Select.IndicatorGroup>
                   <Select.Indicator color="white" />
@@ -247,7 +261,12 @@ export default function Page() {
               </Select.Control>
               <Portal>
                 <Select.Positioner>
-                  <Select.Content bg="white" color="black" borderRadius="md" shadow="md">
+                  <Select.Content
+                    bg="white"
+                    color="black"
+                    borderRadius="md"
+                    shadow="md"
+                  >
                     {goalCollection.items.map((item) => (
                       <Select.Item key={item.value} item={item}>
                         {item.label}
@@ -301,37 +320,50 @@ export default function Page() {
                   value={
                     goal === "other"
                       ? customGoal
-                      : goalCollection.items.find((item) => item.value === goal)?.label || ""
+                      : goalCollection.items.find((item) => item.value === goal)
+                          ?.label || ""
                   }
-                  onChange={(e) => goal === "other" && setCustomGoal(e.target.value)}
+                  onChange={(e) =>
+                    goal === "other" && setCustomGoal(e.target.value)
+                  }
                   readOnly={goal !== "other"}
                 />
               </Field.Root>
 
+              {/* It will cost me fixed for Caro*/}
               <Field.Root>
                 <Field.Label fontWeight="bold">It will cost me</Field.Label>
                 <Input
                   placeholder={currency}
-                  value={targetAmount === 0 ? "" : formatCurrency(targetAmount)}
+                  value={targetAmountInput}
                   onChange={(e) => {
                     const val = e.target.value.replace(/,/g, "");
-                    setTargetAmount(val === "" ? 0 : Number(val));
+                    setTargetAmountInput(e.target.value);
+                    const num = Number(val);
+                    if (!isNaN(num)) setTargetAmount(num);
                   }}
                 />
-                <Text fontSize="sm" color="gray.700">to reach this goal</Text>
+                <Text fontSize="sm" color="gray.700">
+                  to reach this goal
+                </Text>
               </Field.Root>
 
+              {/* I'll contribute...fixed for Caro */}
               <Field.Root>
                 <Field.Label fontWeight="bold">I'll contribute</Field.Label>
                 <Input
                   placeholder={currency}
-                  value={monthlyContribution === 0 ? "" : formatCurrency(monthlyContribution)}
+                  value={monthlyContributionInput}
                   onChange={(e) => {
                     const val = e.target.value.replace(/,/g, "");
-                    setMonthlyContribution(val === "" ? 0 : Number(val));
+                    setMonthlyContributionInput(e.target.value);
+                    const num = Number(val);
+                    if (!isNaN(num)) setMonthlyContribution(num);
                   }}
                 />
-                <Text fontSize="sm" color="gray.700">Every month</Text>
+                <Text fontSize="sm" color="gray.700">
+                  Every month
+                </Text>
               </Field.Root>
             </SimpleGrid>
 
@@ -344,36 +376,54 @@ export default function Page() {
                   value={interestRate}
                   onChange={(e) => setInterestRate(Number(e.target.value))}
                 />
-                <Text fontSize="sm" color="gray.700">interest annually</Text>
+                <Text fontSize="sm" color="gray.700">
+                  interest annually
+                </Text>
               </Field.Root>
 
               <Field.Root>
-                <Field.Label fontWeight="bold">I want to invest for</Field.Label>
+                <Field.Label fontWeight="bold">
+                  I want to invest for
+                </Field.Label>
                 <Input
                   placeholder="#"
                   type="number"
                   value={years}
                   onChange={(e) => setYears(Number(e.target.value))}
                 />
-                <Text fontSize="sm" color="gray.700">years</Text>
+                <Text fontSize="sm" color="gray.700">
+                  years
+                </Text>
               </Field.Root>
             </SimpleGrid>
 
-            <Button colorScheme="blue" size="lg" onClick={calculate} _hover={{ bg: "#00CAFF" }}>
+            <Button
+              colorScheme="blue"
+              size="lg"
+              onClick={calculate}
+              _hover={{ bg: "#00CAFF" }}
+            >
               Calculate
             </Button>
 
             {result !== null && (
               <Box textAlign="center" mt={4}>
-                <Text fontSize="xl" fontWeight="bold">You’ll have</Text>
-                <Text fontSize="2xl" fontWeight="extrabold" color="orange.500" mb={4}>
+                <Text fontSize="xl" fontWeight="bold">
+                  You’ll have
+                </Text>
+                <Text
+                  fontSize="2xl"
+                  fontWeight="extrabold"
+                  color="orange.500"
+                  mb={4}
+                >
                   {currency} {formatCurrency(result)}
                 </Text>
 
-                <Button 
-                  colorScheme="green" 
-                  size="sm" 
-                  onClick={downloadPDF} 
+                <Button
+                  colorScheme="green"
+                  size="sm"
+                  onClick={downloadPDF}
                   _hover={{ bg: "#00CAFF" }}
                 >
                   Download PDF
@@ -383,14 +433,8 @@ export default function Page() {
           </VStack>
         </Box>
 
-        {/* Chart & Table Card (same width & style as calculator) */}
-        <Box
-          bg="white"
-          p={8}
-          borderRadius="2xl"
-          shadow="md"
-          ref={exportRef}
-        >
+        {/* Chart & Table */}
+        <Box bg="white" p={8} borderRadius="2xl" shadow="md" ref={exportRef}>
           {data.length > 0 && (
             <Tabs.Root mt={4} colorScheme="blue" solid-rounded>
               <Tabs.List>
@@ -401,15 +445,24 @@ export default function Page() {
               <Tabs.Content value="linegraph">
                 <Box py={6}>
                   <ResponsiveContainer width="100%" height={300}>
-                    <LineChart data={data.map(d => ({ ...d, endOfYear: d.endOfYear }))}>
+                    <LineChart
+                      data={data.map((d) => ({ ...d, endOfYear: d.endOfYear }))}
+                    >
                       <XAxis dataKey="year" />
                       <YAxis />
                       <Tooltip
                         formatter={(value: number) =>
-                          value.toLocaleString(undefined, { minimumFractionDigits: 0 })
+                          value.toLocaleString(undefined, {
+                            minimumFractionDigits: 0,
+                          })
                         }
                       />
-                      <Line type="monotone" dataKey="endOfYear" stroke="#3182ce" strokeWidth={3} />
+                      <Line
+                        type="monotone"
+                        dataKey="endOfYear"
+                        stroke="#3182ce"
+                        strokeWidth={3}
+                      />
                     </LineChart>
                   </ResponsiveContainer>
                 </Box>
@@ -431,10 +484,18 @@ export default function Page() {
                     {data.map((row, i) => (
                       <Table.Row key={i}>
                         <Table.Cell>{row.year}</Table.Cell>
-                        <Table.Cell>{i === 0 ? formatCurrency(row.principal || 0) : "-"}</Table.Cell>
-                        <Table.Cell>{formatCurrency(monthlyContribution)}</Table.Cell>
-                        <Table.Cell>{formatCurrency(monthlyContribution * 12)}</Table.Cell>
-                        <Table.Cell>{i === 0 ? "-" : formatCurrency(row.interest)}</Table.Cell>
+                        <Table.Cell>
+                          {i === 0 ? formatCurrency(row.principal || 0) : "-"}
+                        </Table.Cell>
+                        <Table.Cell>
+                          {formatCurrency(monthlyContribution)}
+                        </Table.Cell>
+                        <Table.Cell>
+                          {formatCurrency(monthlyContribution * 12)}
+                        </Table.Cell>
+                        <Table.Cell>
+                          {i === 0 ? "-" : formatCurrency(row.interest)}
+                        </Table.Cell>
                         <Table.Cell>{formatCurrency(row.endOfYear)}</Table.Cell>
                       </Table.Row>
                     ))}
