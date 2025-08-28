@@ -10,10 +10,17 @@ import {
   Tabs,
   Text,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import * as Icons from "react-icons/lu";
+import { IoPlayCircleOutline } from "react-icons/io5";
 
 const ResourcesTabs = () => {
+  const [playingId, setPlayingId] = useState<number | null>(null);
+
+  const handlePlay = (id: number) => {
+    setPlayingId(id);
+  };
+
   return (
     <Box marginX={marginX}>
       <Tabs.Root defaultValue="goal-0" variant="plain">
@@ -41,22 +48,11 @@ const ResourcesTabs = () => {
         </Flex>
 
         {ResourcesData.map((goal, index) => {
-          const isAllTab = index === 0;
-
-          // Flatten all other tab items for "All" tab
-          const cards = isAllTab
-            ? ResourcesData.slice(1).flatMap((g) =>
-                g.description.map((desc: any) => ({
-                  ...desc,
-                  parentTitle: g.title,
-                  parentSubtitle: g.subtitle,
-                }))
-              )
-            : goal.description.map((desc: any) => ({
-                ...desc,
-                parentTitle: goal.title,
-                parentSubtitle: goal.subtitle,
-              }));
+          const cards = goal.description.map((desc: any) => ({
+            ...desc,
+            parentTitle: goal.title,
+            parentSubtitle: goal.subtitle,
+          }));
 
           return (
             <Tabs.Content
@@ -72,17 +68,63 @@ const ResourcesTabs = () => {
                 {cards.map((card, idx) => (
                   <GridItem key={idx}>
                     <Card.Root>
-                      <Image
-                        src={card.image}
-                        alt={card.title}
-                        width={400}
-                        height={240}
-                        style={{
-                          width: "100%",
-                          borderTopLeftRadius: 12,
-                          borderTopRightRadius: 12,
-                        }}
-                      />
+                      {card.video ? (
+                        <Box position="relative" width="100%" cursor="pointer">
+                          {/* Show thumbnail first */}
+                          {playingId !== card.id && (
+                            <>
+                              <Image
+                                src={card.image}
+                                alt={card.title}
+                                width={400}
+                                height={240}
+                                style={{ width: "100%", borderRadius: 12 }}
+                                onClick={() => handlePlay(card.id)}
+                              />
+                              <Box
+                                position="absolute"
+                                top="50%"
+                                left="50%"
+                                transform="translate(-50%, -50%)"
+                                fontSize="5xl"
+                                color="white"
+                              >
+                                <IoPlayCircleOutline />
+                              </Box>
+                            </>
+                          )}
+
+                          {/* Video iframe */}
+                          {playingId === card.id && (
+                            <Box borderRadius={12} overflow="hidden">
+                              <iframe
+                                src={card.video.replace(
+                                  "youtu.be",
+                                  "www.youtube.com/embed"
+                                )}
+                                width="100%"
+                                height="240"
+                                style={{ border: "none" }}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                              />
+                            </Box>
+                          )}
+                        </Box>
+                      ) : (
+                        <Image
+                          src={card.image}
+                          alt={card.title}
+                          width={400}
+                          height={240}
+                          style={{
+                            width: "100%",
+                            borderTopLeftRadius: 12,
+                            borderTopRightRadius: 12,
+                          }}
+                        />
+                      )}
+
                       <Card.Body gap="2">
                         <Card.Title>{card.title}</Card.Title>
                         <Text fontSize="sm" fontWeight="semibold">
