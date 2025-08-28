@@ -71,7 +71,7 @@ const FixedIncomeFund = () => {
         >
           What is Fixed Income Fund?
         </Heading>
-        <Text fontSize="md" maxW="3xl">
+        <Text fontSize="xl" maxW="6xl">
           The <strong>Nabo Capital Fixed Income Fund</strong> is a low-risk,
           KES-denominated collective investment scheme designed to generate
           stable capital growth over the medium to long term.
@@ -85,7 +85,7 @@ const FixedIncomeFund = () => {
       >
         {FIFfeatures.map((feature, index) => (
           <GridItem key={index}>
-            <Flex align="flex-start" gap={4}>
+            <Flex align="flex-start" gap={4} fontSize="lg">
               <Box
                 bg="gray.100"
                 p={3}
