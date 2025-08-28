@@ -23,6 +23,7 @@ const PlanForJoy = ({
       maxWidth="1500px"
       marginX="auto"
       color="white"
+      
     >
       <Heading
         color="#00caff"
@@ -32,6 +33,7 @@ const PlanForJoy = ({
         lineHeight="1.1"
         textAlign="center"
         mb={4}
+        mt={15}
       >
         {title || "Are you ready to plan for joy?"}
       </Heading>
