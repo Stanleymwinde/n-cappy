@@ -1,6 +1,7 @@
 import Hero from "@/components/common/Hero";
 import { CallToAction } from "@/components/home";
-import { PlanForJoy, QuestionPacks } from "@/components/i-want-tos";
+import { PlanForJoy } from "@/components/i-want-tos";
+import { LifestyleQuestions } from "@/components/lifestyle";
 import { Rates } from "@/components/common";
 import React from "react";
 
@@ -21,7 +22,7 @@ const page = () => {
         subtext="You will gain breathing room; the kind that covers your basic needs without stress. Whether it’s keeping the lights on or paying school fees, your essentials stay protected. Always."
         imageUrl="/images/heroafrica.jpeg"
       />
-      <QuestionPacks />
+      <LifestyleQuestions />
       <CallToAction />
     </>
   );
