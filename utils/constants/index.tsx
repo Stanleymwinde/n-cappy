@@ -294,30 +294,19 @@ export const CoreStrategiessData = [
 
 export const ResourcesData = [
   {
-    title: "All",
-    subtitle: "Sustainable Capital Growth Across Market Cycles",
-    icon: "LuUser",
-    description: [], // You will generate this tab dynamically using all other tab items.
-  },
-  {
     title: "Investment Types and Strategies",
     subtitle: "Tailored investment structures for sustainable returns",
     icon: "LuFolder",
     description: [
       {
         id: 1,
-        title: "Equity & Hybrid Strategies",
+        title: "Investment Types and Strategies",
         text: "We explore a diverse mix of investment vehicles, including equity, debt, and hybrid instruments.",
         image: "/images/vid1.webp",
         pdf: "/pdfs/Investment-Strategies-1.pdf",
+        video: "https://youtu.be/hTRb832NqOs",
       },
-      {
-        id: 2,
-        title: "Strategic Allocation",
-        text: "Strategic allocation designed to adapt to evolving market conditions and deliver long-term performance.",
-        image: "/images/Strats.webp",
-        pdf: "/pdfs/Investment-Strategies-2.pdf",
-      },
+
     ],
   },
   {
@@ -327,18 +316,13 @@ export const ResourcesData = [
     description: [
       {
         id: 1,
-        title: "Generational Wealth Planning",
+        title: "Private Wealth Management",
         text: "Dedicated wealth planning to preserve and grow generational wealth.",
         image: "/images/vid2.webp",
         pdf: "/pdfs/Private-Wealth-1.pdf",
+        video: "https://youtu.be/EvIDuxqmEbU",
       },
-      {
-        id: 2,
-        title: "Private Market Access",
-        text: "Access to exclusive private market opportunities for qualified investors.",
-        image: "/images/Pius-vd.webp",
-        pdf: "/pdfs/Private-Wealth-2.pdf",
-      },
+  
     ],
   },
   {
@@ -348,18 +332,13 @@ export const ResourcesData = [
     description: [
       {
         id: 1,
-        title: "Retirement Solutions",
+        title: "Financial Planning and Retirements",
         text: "Customized retirement solutions based on individual income needs and timelines.",
         image: "/images/vid4.webp",
         pdf: "/pdfs/Financial-Planning-1.pdf",
+        video: "https://youtu.be/tlPZBJL0qRY",
       },
-      {
-        id: 2,
-        title: "Goal-Based Planning",
-        text: "Goal-based planning with dynamic risk management.",
-        image: "/images/Goal-based.webp",
-        pdf: "/pdfs/Financial-Planning-2.pdf",
-      },
+     
     ],
   },
   {
@@ -369,54 +348,18 @@ export const ResourcesData = [
     description: [
       {
         id: 1,
-        title: "Investor Psychology",
+        title: "Investor Mindset and Education",
         text: "Insights into market psychology, risk tolerance, and behavioral finance.",
         image: "/images/i-p.webp",
         pdf: "/pdfs/Investor-Education-1.pdf",
+        video: "https://youtu.be/HC6xJ8qKd9w",
       },
-      {
-        id: 2,
-        title: "Educational Guides",
-        text: "Investor guides and resources to navigate various market environments.",
-        image: "/images/edu.webp",
-        pdf: "/pdfs/Investor-Education-2.pdf",
-      },
+
     ],
   },
 ];
 
-export const ResourcesTabsData = [
-  {
-    title: "All",
-    description:
-      "Explore our comprehensive guide to setting and achieving your financial goals.",
-    icon: "LuUser",
-    video:
-      "https://player.cloudinary.com/embed/?cloud_name=dgamw7ib9&public_id=Nairobi_Chapel_futor5&profile=cld-default",
-  },
-  {
-    title: "Inestment Types and Strategies",
-    description:
-      "Learn about our core investment strategies designed to maximize returns.",
-    icon: "LuFolder",
-    video:
-      "https://player.cloudinary.com/embed/?cloud_name=dgamw7ib9&public_id=Nairobi_Chapel_futor5&profile=cld-default",
-  },
-  {
-    title: "Private Wealth Management",
-    description: "Find answers to common questions about our services.",
-    icon: "LuSquareCheck",
-    video:
-      "https://player.cloudinary.com/embed/?cloud_name=dgamw7ib9&public_id=Nairobi_Chapel_futor5&profile=cld-default",
-  },
-  {
-    title: "Financial Planning and Retirement",
-    description: "here and there still figuring out it will look like",
-    icon: "LuSquareCheck",
-    video:
-      "https://player.cloudinary.com/embed/?cloud_name=dgamw7ib9&public_id=Nairobi_Chapel_futor5&profile=cld-default",
-  },
-];
+
 export const investmentData = [
   {
     title: "Money Market Fund (USD)",
