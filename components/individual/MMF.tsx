@@ -71,7 +71,7 @@ const MoneyMarketFund = () => {
         >
           What is Money Market Fund?
         </Heading>
-        <Text fontSize="md" maxW="3xl">
+        <Text fontSize="xl" maxW="6xl">
           The <strong>Nabo Capital Money Market Fund</strong> is a low-risk,
           KES-denominated collective investment scheme designed to preserve
           capital while providing competitive returns.
@@ -85,7 +85,7 @@ const MoneyMarketFund = () => {
       >
         {features.map((feature, index) => (
           <GridItem key={index}>
-            <Flex align="flex-start" gap={4}>
+            <Flex align="flex-start" gap={4} fontSize="lg">
               <Box
                 bg="gray.100"
                 p={3}
