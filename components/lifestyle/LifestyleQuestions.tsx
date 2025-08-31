@@ -38,7 +38,7 @@ const LifestyleQuestions = () => {
       : null;
 
   return (
-    <Box marginX={marginX} py={10} bg="white" mt={15}>
+    <Box  id="questions" marginX={marginX} py={10} bg="white" mt={15}>
       <VStack gap={6} textAlign="center" mb={8}>
         <Heading fontSize={{ base: "4xl", md: "5xl" }} color="blue.900">
           Building Blocks of Your Legacy
