@@ -15,6 +15,7 @@ const page = () => {
         imageUrl="/images/life-style.jpeg"
         title="Live Purposefully.Save Deliberately."
         subtitle="Secure the day-to-day, and create room to breathe, plan, and enjoy life."
+        scrollTarget="#questions"
       />
       <PlanForJoy
         title="Do you want steady monthly returns that cover life's core expenses?"

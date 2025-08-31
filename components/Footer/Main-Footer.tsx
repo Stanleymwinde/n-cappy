@@ -8,6 +8,7 @@ import {
   SimpleGrid,
   Stack,
   Text,
+  Link, // ✅ Added Link
 } from "@chakra-ui/react";
 import React, { ReactNode } from "react";
 
@@ -31,6 +32,7 @@ const Footer = () => {
         mx={marginX}
         gap={8}
       >
+        {/* Logo */}
         <Stack>
           <Image
             boxSize="150px"
@@ -39,52 +41,46 @@ const Footer = () => {
             objectFit="contain"
           />
         </Stack>
+
+        {/* Explore */}
         <Stack>
           <CHeading>Explore</CHeading>
           {ExploreData.call.map((item, i) => (
             <FooterCard key={i} link={item.link} label={item.label} />
           ))}
-          <Flex align="center" gap={2}>
-            {/* <Socials /> */}
-          </Flex>
         </Stack>
+
+        {/* Helpful Links */}
         <Stack>
           <CHeading>Helpful Links</CHeading>
           {HelpfulLinks.map((item, i) => (
             <FooterCard key={i} link={item.link} label={item.label} />
           ))}
-          <Flex align="center" gap={2}>
-            {/* <Socials /> */}
-          </Flex>
         </Stack>
+
+        {/* Our Services */}
         <Stack>
           <CHeading>Our Services </CHeading>
           {OurServices.map((item, i) => (
             <FooterCard key={i} link={item.link} label={item.label} />
           ))}
-          <Flex align="center" gap={2}>
-            {/* <Socials /> */}
-          </Flex>
         </Stack>
 
+        {/* Contact Us */}
         <Stack>
           <CHeading>Contact Us</CHeading>
           {contactData.map((item, i) => (
-            <Flex
+            <Link
               key={i}
-              align="center"
-              gap={1}
-              lineHeight={"1.5"}
-              as="a"
-              textAlign={"left"}
-              _hover={{
-                textDecoration: "underline",
-                cursor: "pointer",
-              }}
+              href={item.link}
+              _hover={{ textDecoration: "underline" }}
+              textAlign="left"
             >
-              <Box as={item.icon} color="primary" boxSize={5} />
-              <Text fontSize="md">{item.label}</Text>
-            </Flex>
+              <Flex align="center" gap={1} lineHeight="1.5">
+                <Box as={item.icon} color="primary" boxSize={5} />
+                <Text fontSize="md">{item.label}</Text>
+              </Flex>
+            </Link>
           ))}
           <Flex pt={3} align="center" gap={2}>
             <Socials />
@@ -111,28 +107,22 @@ const FooterCard = ({
   link?: string;
 }) => {
   return link ? (
-    <Flex
-      align="center"
-      gap={1}
-      lineHeight={"1.5"}
-      as="a"
-      textAlign={"left"}
-      _hover={{
-        textDecoration: "underline",
-        cursor: "pointer",
-      }}
+    <Link
+      href={link}
+      _hover={{ textDecoration: "underline" }}
+      textAlign="left"
     >
-      <Text fontSize="md">{label}</Text>
-    </Flex>
+      <Flex align="center" gap={1} lineHeight="1.5">
+        <Text fontSize="md">{label}</Text>
+      </Flex>
+    </Link>
   ) : (
     <Flex
       align="center"
       gap={1}
-      _hover={{
-        textDecoration: "underline",
-      }}
+      _hover={{ textDecoration: "underline" }}
     >
-      <Box as={icon} color="primary" boxSize={5} />
+      {icon && <Box as={icon} color="primary" boxSize={5} />}
       <Text fontSize="md">{label}</Text>
     </Flex>
   );
@@ -148,18 +138,16 @@ const contactData = [
   {
     icon: PhoneIcon,
     label: "+254 709 902 700",
-    link: "tel:+2547709902700",
+    link: "tel:+254709902700",
   },
-
   {
     icon: WhatsAppIcon,
     label: "+254 709 902 700",
-    link: "tel:+2547709900700",
+    link: "https://wa.me/254709902700", // ✅ WhatsApp link
   },
-
   {
     icon: MailIcon,
-    label: "invest@nabocapital.com ",
+    label: "invest@nabocapital.com",
     link: "mailto:info@n-cappy.org",
   },
 ];
@@ -168,21 +156,19 @@ const ExploreData = {
   call: [
     {
       label: "About Us",
-      link: "#",
+      link: "/about-us",
     },
-
     {
-      label: "Individual investment",
-      link: "#",
+      label: "Individual Investment",
+      link: "/individual",
     },
-
     {
       label: "Institutional Investment",
-      link: "#",
+      link: "/institutional",
     },
     {
       label: "Investor's Companion",
-      link: "#",
+      link: "/tools_and_resources",
     },
   ],
 };
