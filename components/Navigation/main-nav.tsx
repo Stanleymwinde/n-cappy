@@ -22,12 +22,9 @@ const MainNav = () => {
       py={3}
       justify="space-between"
       align="center"
-      position="sticky"
-      top="0"
-      zIndex="10"
       bg="white"
       boxShadow="sm"
-      wrap="wrap" // ✅ ensures no overlap on smaller tablets
+      wrap="wrap" // prevents items from overlapping on smaller screens
     >
       {/* Logo */}
       <Link href="/">
@@ -43,17 +40,17 @@ const MainNav = () => {
 
       {/* Desktop Nav Links */}
       <HStack
-        gap={{ base: 4, lg: 8 }} // ✅ tighter spacing on tablets
+        gap={{ base: 4, lg: 8 }}
         fontSize="md"
         display={{ base: "none", md: "flex" }}
         flex="1"
-        justify="center" // ✅ keeps nav centered between logo and buttons
+        justify="center"
       >
         {navItems.map((item, i) => (
           <Link key={i} href={item.href}>
             <Text
               fontWeight="semibold"
-              fontSize={{ base: "md", lg: "lg" }} // ✅ scales font
+              fontSize={{ base: "md", lg: "lg" }}
               color={handleActiveNav(item.href)}
               _hover={{
                 color: "primary",
@@ -74,7 +71,7 @@ const MainNav = () => {
             borderColor="brand"
             borderRadius="xl"
             fontWeight="semibold"
-            size={{ base: "sm", lg: "md" }} // ✅ adjusts size
+            size={{ base: "sm", lg: "md" }}
           >
             Log In
           </Button>
@@ -93,7 +90,7 @@ const MainNav = () => {
         </Link>
       </HStack>
 
-      {/* Mobile Nav (Hamburger) */}
+      {/* Mobile Nav */}
       <Box display={{ base: "flex", md: "none" }}>
         <MobileNav />
       </Box>
