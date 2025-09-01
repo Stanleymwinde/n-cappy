@@ -8,7 +8,7 @@ import {
   SimpleGrid,
   Stack,
   Text,
-  Link, // ✅ Added Link
+  Link,
 } from "@chakra-ui/react";
 import React, { ReactNode } from "react";
 
@@ -60,7 +60,7 @@ const Footer = () => {
 
         {/* Our Services */}
         <Stack>
-          <CHeading>Our Services </CHeading>
+          <CHeading>Our Services</CHeading>
           {OurServices.map((item, i) => (
             <FooterCard key={i} link={item.link} label={item.label} />
           ))}
@@ -75,6 +75,8 @@ const Footer = () => {
               href={item.link}
               _hover={{ textDecoration: "underline" }}
               textAlign="left"
+              target={item.link.startsWith("http") || item.link.startsWith("mailto:") ? "_blank" : undefined}
+              rel={item.link.startsWith("http") || item.link.startsWith("mailto:") ? "noopener noreferrer" : undefined}
             >
               <Flex align="center" gap={1} lineHeight="1.5">
                 <Box as={item.icon} color="primary" boxSize={5} />
@@ -106,22 +108,22 @@ const FooterCard = ({
   icon?: (props: IconProps) => React.JSX.Element;
   link?: string;
 }) => {
+  const isExternal = link?.startsWith("http") || link?.startsWith("mailto:");
+
   return link ? (
     <Link
       href={link}
       _hover={{ textDecoration: "underline" }}
       textAlign="left"
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
     >
       <Flex align="center" gap={1} lineHeight="1.5">
         <Text fontSize="md">{label}</Text>
       </Flex>
     </Link>
   ) : (
-    <Flex
-      align="center"
-      gap={1}
-      _hover={{ textDecoration: "underline" }}
-    >
+    <Flex align="center" gap={1} _hover={{ textDecoration: "underline" }}>
       {icon && <Box as={icon} color="primary" boxSize={5} />}
       <Text fontSize="md">{label}</Text>
     </Flex>
@@ -143,7 +145,7 @@ const contactData = [
   {
     icon: WhatsAppIcon,
     label: "+254 709 902 700",
-    link: "https://wa.me/254709902700", // ✅ WhatsApp link
+    link: "https://wa.me/254709902700",
   },
   {
     icon: MailIcon,
@@ -154,55 +156,21 @@ const contactData = [
 
 const ExploreData = {
   call: [
-    {
-      label: "About Us",
-      link: "/about-us",
-    },
-    {
-      label: "Individual Investment",
-      link: "/individual",
-    },
-    {
-      label: "Institutional Investment",
-      link: "/institutional",
-    },
-    {
-      label: "Investor's Companion",
-      link: "/tools_and_resources",
-    },
+    { label: "About Us", link: "/about-us" },
+    { label: "Individual Investment", link: "/individual" },
+    { label: "Institutional Investment", link: "/institutional" },
+    { label: "Investor's Companion", link: "/tools_and_resources" },
   ],
 };
 
 const HelpfulLinks = [
-  {
-    label: "Support",
-    link: "#",
-  },
-  {
-    label: "Privacy Policy",
-    link: "#",
-  },
-  {
-    label: "Terms & Condition",
-    link: "#",
-  },
-  {
-    label: "Sign In",
-    link: "#",
-  },
+  { label: "Support", link: "mailto:invest@nabocapital.com" },
+  { label: "Privacy Policy", link: "/Privacy-policy" },
+  { label: "Sign In", link: "https://invest.nabocapital.com" },
 ];
 
 const OurServices = [
-  {
-    label: "Unit Trust Funds",
-    link: "#",
-  },
-  {
-    label: "Private Wealth Management",
-    link: "#",
-  },
-  {
-    label: "Institutional Investment Solutions",
-    link: "#",
-  },
+  { label: "Unit Trust Funds", link: "#" },
+  { label: "Private Wealth Management", link: "#" },
+  { label: "Institutional Investment Solutions", link: "#" },
 ];
