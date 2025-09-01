@@ -11,15 +11,23 @@ const Faqs = () => {
   return (
     <Box marginX={marginX} py={8}>
       <Heading
-        fontFamily={"poppins"}
-        fontSize="5xl"
+        fontFamily="poppins"
+        fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }} // responsive font size
         fontWeight="bold"
         mb={10}
-        textAlign={"center"}
+        textAlign="center"
+        lineHeight={{ base: "short", md: "shorter", lg: "short" }} // better spacing for broken lines
+        letterSpacing="tight" // improves readability
       >
         Frequently Asked Questions
       </Heading>
-      <Accordion.Root collapsible defaultValue={["a"]} bg={"gray.300"} p={6} py={8}>
+      <Accordion.Root
+        collapsible
+        defaultValue={["a"]}
+        bg="gray.300"
+        p={{ base: 4, md: 6 }}
+        py={{ base: 6, md: 8 }}
+      >
         {FaqsData2.map((item, index) => (
           <Box mb={4} key={index}>
             <Accordion.Item value={item.value}>
@@ -43,4 +51,3 @@ const Faqs = () => {
 };
 
 export default Faqs;
-

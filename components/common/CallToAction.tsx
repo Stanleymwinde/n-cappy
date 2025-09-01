@@ -1,5 +1,6 @@
 import { Box, Flex } from "@chakra-ui/react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const CallToActionCommon = () => {
@@ -67,19 +68,23 @@ const CallToActionCommon = () => {
             />
           </Box>
         </Flex>
-        <Box
-          mt={4}
-          fontSize={{ base: "md", md: "lg" }}
-          fontWeight="bold"
-          as={"button"}
-          bgColor={"white"}
-          padding="10px 20px"
-          borderRadius="5px"
-          _hover={{ bgColor: "#00b5e0" }}
-          cursor="pointer"
-        >
-          INVEST NOW
-        </Box>
+
+        {/* Updated Invest Now button with link */}
+        <Link href="https://invest.nabocapital.com" passHref target="_blank">
+          <Box
+            mt={4}
+            fontSize={{ base: "md", md: "lg" }}
+            fontWeight="bold"
+            as={"button"}
+            bgColor={"white"}
+            padding="10px 20px"
+            borderRadius="5px"
+            _hover={{ bgColor: "#00b5e0" }}
+            cursor="pointer"
+          >
+            INVEST NOW
+          </Box>
+        </Link>
       </Box>
     </Box>
   );
