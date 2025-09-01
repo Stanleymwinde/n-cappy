@@ -1,8 +1,7 @@
 "use client";
 import { marginX, navItems } from "@/utils/constants";
-import { Box, Button, Flex, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, HStack, Text } from "@chakra-ui/react";
 import Image from "next/image";
-
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import MobileNav from "./mobile-nav";
@@ -16,63 +15,86 @@ const MainNav = () => {
     }
     return pathname.includes(nav) ? "primary" : "brand.white";
   }
+
   return (
-    <Flex marginX={marginX} py={2} justify="space-between" align="center">
-      <Flex
-        align="center"
-        gap={12}
+    <Flex
+      marginX={marginX}
+      py={3}
+      justify="space-between"
+      align="center"
+      position="sticky"
+      top="0"
+      zIndex="10"
+      bg="white"
+      boxShadow="sm"
+      wrap="wrap" // ✅ ensures no overlap on smaller tablets
+    >
+      {/* Logo */}
+      <Link href="/">
+        <Image
+          priority
+          src="/images/Logooo.png"
+          alt="logo"
+          width={55}
+          height={65}
+          style={{ cursor: "pointer" }}
+        />
+      </Link>
+
+      {/* Desktop Nav Links */}
+      <HStack
+        gap={{ base: 4, lg: 8 }} // ✅ tighter spacing on tablets
         fontSize="md"
         display={{ base: "none", md: "flex" }}
+        flex="1"
+        justify="center" // ✅ keeps nav centered between logo and buttons
       >
-        <Link href="/">
-          <Image
-            priority
-            src="/images/Logooo.png"
-            alt="logo"
-            width={60}
-            height={70}
-          />
-        </Link>
         {navItems.map((item, i) => (
           <Link key={i} href={item.href}>
             <Text
               fontWeight="semibold"
-              fontSize="lg"
+              fontSize={{ base: "md", lg: "lg" }} // ✅ scales font
               color={handleActiveNav(item.href)}
               _hover={{
                 color: "primary",
               }}
+              transition="color 0.2s ease"
             >
               {item.label}
             </Text>
           </Link>
-        ))}{" "}
-      </Flex>
-      <Flex align="center" gap={4} fontSize="md">
-        <Link href="/contact">
+        ))}
+      </HStack>
+
+      {/* Desktop Buttons */}
+      <HStack gap={3} display={{ base: "none", md: "flex" }}>
+        <Link href="https://invest.nabocapital.com" target="_blank">
           <Button
-            hideBelow="md"
-            variant={"outline"}
-            borderColor={"brand"}
+            variant="outline"
+            borderColor="brand"
             borderRadius="xl"
-            fontStyle="capitalize"
+            fontWeight="semibold"
+            size={{ base: "sm", lg: "md" }} // ✅ adjusts size
           >
             Log In
           </Button>
         </Link>
-        <Link href="/inquiry">
+        <Link href="https://invest.nabocapital.com" target="_blank">
           <Button
-            hideBelow="md"
-            colorScheme="cyan.fg"
+            bg="primary"
+            color="white"
             borderRadius="xl"
-            fontStyle="capitalize"
+            fontWeight="semibold"
+            size={{ base: "sm", lg: "md" }}
+            _hover={{ bg: "cyan.600" }}
           >
             INVEST NOW
           </Button>
         </Link>
-      </Flex>
+      </HStack>
 
-      <Box hideFrom="md">
+      {/* Mobile Nav (Hamburger) */}
+      <Box display={{ base: "flex", md: "none" }}>
         <MobileNav />
       </Box>
     </Flex>

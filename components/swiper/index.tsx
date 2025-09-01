@@ -56,15 +56,16 @@ const SwiperPage = () => {
         <SwiperSlide key={index}>
           <Box
             position="relative"
-            height="90vh"
+            height={{ base: "70vh", md: "90vh" }} // 🔹 smaller height for mobile
             width="100%"
             backgroundImage={`url(${image.image})`}
             backgroundSize="cover"
             backgroundPosition="center"
             display="flex"
-            alignItems="center"
+            alignItems={{ base: "flex-start", md: "center" }} // 🔹 text higher on mobile
             justifyContent="flex-start"
             px={{ base: 4, md: 20 }}
+            py={{ base: 16, md: 0 }} // 🔹 extra padding top for small screens
           >
             {/* Black overlay */}
             <Box
@@ -78,16 +79,16 @@ const SwiperPage = () => {
             />
 
             {/* Slide content */}
-            <Box color="white" position="relative" zIndex={1}>
+            <Box color="white" position="relative" zIndex={1} maxW={{ base: "90%", md: "50%" }}>
               <Text
-                fontSize={{ base: "3xl", md: "5xl" }}
+                fontSize={{ base: "2xl", sm: "3xl", md: "5xl" }} // 🔹 scale font by device
                 fontWeight="bold"
                 lineHeight="short"
               >
                 Make money while doing
                 <br /> what you love
               </Text>
-              <Text fontSize={{ base: "md", md: "xl" }} mt={6}>
+              <Text fontSize={{ base: "sm", sm: "md", md: "xl" }} mt={4}>
                 {image.text}
               </Text>
               <Link href={image.link} passHref>
@@ -96,10 +97,11 @@ const SwiperPage = () => {
                   colorScheme="blackAlpha"
                   bg="#0A2233"
                   color="white"
-                  px={8}
-                  py={6}
+                  px={{ base: 6, md: 8 }} // 🔹 smaller button padding on mobile
+                  py={{ base: 4, md: 6 }}
                   rounded="full"
                   fontWeight="bold"
+                  fontSize={{ base: "sm", md: "md" }} // 🔹 font adapts
                   _hover={{ bg: "#00CAFF" }}
                 >
                   Start Investing
@@ -110,11 +112,15 @@ const SwiperPage = () => {
         </SwiperSlide>
       ))}
 
-      <div className="autoplay-progress" slot="container-end"  style={{ display: "none" }}>
+      <div
+        className="autoplay-progress"
+        slot="container-end"
+        style={{ display: "none" }}
+      >
         <svg viewBox="0 0 48 48" ref={progressCircle}>
           <circle cx="24" cy="24" r="20"></circle>
         </svg>
-        <span ref={progressContent}  style={{ display: "none" }}></span>
+        <span ref={progressContent} style={{ display: "none" }}></span>
       </div>
     </Swiper>
   );

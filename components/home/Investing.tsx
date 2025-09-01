@@ -12,15 +12,16 @@ import React from "react";
 
 const Investing = () => {
   return (
-    <Box marginX={marginX} py={12}>
+    <Box marginX={marginX} py={{ base: 8, md: 12 }}>
       {/* First sentence */}
       <Heading
         textAlign="center"
-        fontSize={{ base: "3xl", md: "6xl" }}
-        mb={8}
-        mt={8}
+        fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }} // 🔹 scales smoothly
+        mb={{ base: 6, md: 8 }}
+        mt={{ base: 4, md: 8 }}
         fontFamily={"Poppins"}
-         fontWeight={"bold"}
+        fontWeight={"bold"}
+        lineHeight="short"
       >
         Money isn't the goal.{" "}
         <Box as="span" color="#00caff">
@@ -28,22 +29,33 @@ const Investing = () => {
         </Box>
       </Heading>
 
-      {/* Second sentence with more spacing */}
+      {/* Second sentence */}
       <Box
         textAlign="center"
-        fontSize={{ base: "2xl", md: "5xl" }}
-        mt={{ base: 6, md: 8 }} // More space on desktop
-        mb={8}
+        fontSize={{ base: "lg", sm: "xl", md: "3xl", lg: "5xl" }} // 🔹 responsive scaling
+        mt={{ base: 4, md: 8 }}
+        mb={{ base: 6, md: 8 }}
         fontFamily={"Poppins"}
+        lineHeight="short"
+        px={{ base: 4, md: 0 }} // 🔹 prevent overflow on small screens
       >
         What do you want your money to do for you?
       </Box>
 
-      <Text fontSize={{ base: "md", md: "3xl" }} color="gray.600" py={2}>
+      <Text
+        fontSize={{ base: "sm", sm: "md", md: "xl", lg: "3xl" }}
+        color="gray.600"
+        py={2}
+        textAlign={{ base: "center", md: "left" }} // 🔹 center text on mobile
+      >
         I want to ...
       </Text>
 
-      <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} gap={6} p={4}>
+      <SimpleGrid
+        columns={{ base: 1, sm: 2, md: 2, lg: 4 }} // 🔹 smoother breakpoints
+        gap={{ base: 4, md: 6 }}
+        p={{ base: 2, md: 4 }}
+      >
         {cardData.map((card, index) => (
           <Box
             key={index}
@@ -55,37 +67,49 @@ const Investing = () => {
             _hover={{ boxShadow: "lg", transform: "translateY(-4px)" }}
             display="flex"
             flexDirection="column"
-            minHeight="350px"    // enforce min height for all cards
+            minHeight={{ base: "300px", md: "350px" }} // 🔹 smaller height on phones
           >
             <Image
               src={card.image}
               alt={card.title}
               objectFit="cover"
               width="100%"
-              height="200px"
+              height={{ base: "150px", md: "200px" }} // 🔹 smaller image on mobile
               flexShrink={0}
             />
             <Box
-              p={4}
+              p={{ base: 3, md: 4 }}
               display="flex"
               flexDirection="column"
               flexGrow={1}
             >
-              <Heading fontSize="lg" mb={2}>
+              <Heading
+                fontSize={{ base: "md", md: "lg" }}
+                mb={2}
+                
+              >
                 {card.title}
               </Heading>
-              <Text fontSize="sm" color="gray.600" mb={4} flexGrow={1}>
+              <Text
+                fontSize={{ base: "xs", sm: "sm", md: "sm" }}
+                color="gray.600"
+                mb={4}
+                flexGrow={1}
+                
+              >
                 {card.description}
               </Text>
               <Link href={card.link} passHref>
                 <Button
-                 borderColor="rgba(0, 0, 0, 0.6)"
+                  borderColor="rgba(0, 0, 0, 0.6)"
                   variant="outline"
                   colorScheme="blackAlpha"
                   borderRadius="full"
                   fontWeight="bold"
                   w="100%"
                   mt="auto"
+                  fontSize={{ base: "sm", md: "md" }}
+                  py={{ base: 2, md: 3 }}
                 >
                   Explore More
                 </Button>
