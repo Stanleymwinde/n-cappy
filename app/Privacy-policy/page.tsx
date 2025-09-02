@@ -9,7 +9,7 @@ import {
 import { Divider } from "@chakra-ui/layout";
 
 
-const PrivacyPolicy: React.FC = () => {
+const PrivacyPolicy = () => {
   return (
     <Box as="main" maxW="container.lg" mx="auto" py={10} px={6}>
       <Heading as="h1" size="xl" mb={4}>

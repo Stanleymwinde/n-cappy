@@ -24,19 +24,18 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
       textAlign="left"
       align="start"
       p={0}
-      w="100%"
-      h="600px"
+      w="250px" // reduced width
+      h="450px"
       position="relative"
-      boxSize="100%"
     >
       {/* Image Section */}
-      <Box w="100%" h="400px">
-        <Image src={image} alt={name} objectFit="fill" w="100%" h="100%" />
+      <Box w="100%" h="250px">
+        <Image src={image} alt={name} objectFit="cover" w="100%" h="120%" />
       </Box>
 
       {/* Text Section */}
       <Box p={4} w="100%">
-        <Text fontWeight="medium" fontSize="md" mb={1}>
+        <Text fontWeight="medium" fontSize="md" mb={1} mt={8}>
           {name}
         </Text>
         <Text fontSize="sm" color="gray.600" mb={2}>
@@ -52,7 +51,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
           right="10px"
           align="center"
           justify="center"
-          zIndex={10} // Ensures it's above the other content
+          zIndex={10}
         >
           <a href={linkedin} target="_blank" rel="noopener noreferrer">
             <LinkedInIcon boxSize={7} color="blue.600" />
