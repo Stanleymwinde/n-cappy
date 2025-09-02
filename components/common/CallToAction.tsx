@@ -1,6 +1,6 @@
-import { Box, Flex } from "@chakra-ui/react";
-import Image from "next/image";
-import Link from "next/link";
+"use client";
+
+import { Box, Flex, Link, Image } from "@chakra-ui/react";
 import React from "react";
 
 const CallToActionCommon = () => {
@@ -12,7 +12,7 @@ const CallToActionCommon = () => {
       bgRepeat="no-repeat"
       width="100%"
       height="300px"
-      position={"relative"}
+      position="relative"
     >
       <Box
         position="absolute"
@@ -27,52 +27,57 @@ const CallToActionCommon = () => {
         alignItems="center"
         textAlign="center"
       >
+        {/* Heading */}
         <Box fontSize={{ base: "2xl", md: "4xl" }} fontWeight="bold" color="white">
           Innovation that feels personal
         </Box>
+
+        {/* Store Buttons */}
         <Flex
-          mt={2}
-          gap={{ base: 2, md: "4rem" }}
-          align={"center"}
-          justify={"center"}
+          mt={4}
+          gap={{ base: 3, md: "2rem" }}
+          align="center"
+          justify="center"
           flexDirection={{ base: "column", md: "row" }}
           flexWrap="wrap"
         >
-          <Box
-            w={200}
-            h={100}
-            position="relative"
-            _hover={{ transform: "scale(1.05)", cursor: "pointer" }}
-            transition="transform 0.3s ease"
+          {/* App Store Badge */}
+          <Link
+            href="https://apps.apple.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            _hover={{ transform: "scale(1.05)" }}
+            transition="all 0.3s ease"
           >
             <Image
-              src="/images/apple.png"
-              alt="Nabo Capital Logo"
-              fill
-              objectFit={"contain"}
+              src="/images/App_store.svg"
+              alt="Download on the App Store"
+              height="70px"
+              objectFit="contain"
             />
-          </Box>
+          </Link>
 
-          <Box
-            w={200}
-            h={100}
-            position="relative"
-            _hover={{ transform: "scale(1.05)", cursor: "pointer" }}
-            transition="transform 0.3s ease"
+          {/* Google Play Badge */}
+          <Link
+            href="https://play.google.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            _hover={{ transform: "scale(1.05)" }}
+            transition="all 0.3s ease"
           >
             <Image
-              src="/images/google.png"
-              alt="Nabo Capital Logo"
-              fill
-              objectFit={"contain"}
+              src="/images/gg.webp"
+              alt="Get it on Google Play"
+              height="160px"
+              objectFit="contain"
             />
-          </Box>
+          </Link>
         </Flex>
 
-        {/* Updated Invest Now button with link */}
-        <Link href="https://invest.nabocapital.com" passHref target="_blank">
+        {/* CTA Button */}
+        <Link href="https://invest.nabocapital.com" target="_blank">
           <Box
-            mt={4}
+
             fontSize={{ base: "md", md: "lg" }}
             fontWeight="bold"
             as={"button"}

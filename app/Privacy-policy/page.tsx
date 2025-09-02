@@ -1,13 +1,6 @@
 import React from "react";
-import {
-  Box,
-  Heading,
-  Text,
-  VStack,
-  Link,
-} from "@chakra-ui/react";
+import { Box, Heading, Text, VStack, Link } from "@chakra-ui/react";
 import { Divider } from "@chakra-ui/layout";
-
 
 const PrivacyPolicy = () => {
   return (
@@ -28,8 +21,8 @@ const PrivacyPolicy = () => {
             Nabo Capital Limited (“Nabo”) is committed to promoting good
             corporate governance by adhering to all national and international
             laws that are applicable to it. Nabo’s Data Protection Policy
-            (“Policy”) is intended to facilitate the protection of personal
-            data by complying with the Data Protection Act 2019 (“DPA”) and its
+            (“Policy”) is intended to facilitate the protection of personal data
+            by complying with the Data Protection Act 2019 (“DPA”) and its
             Regulations.
           </Text>
           <Text mt={2}>
