@@ -37,7 +37,7 @@ const RetireQuestions = () => {
       : null;
 
   return (
-    <Box marginX={marginX} py={10} bg={cardBg}>
+    <Box id="questions2" marginX={marginX} py={10} bg={cardBg}>
       {/* Header Section */}
       <VStack gap={6} textAlign="center" mb={8}>
         <Heading

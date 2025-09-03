@@ -61,7 +61,7 @@ const WhatAreYourGoals = () => {
                 <Tabs.Trigger
                   key={index}
                   value={`goal-${index}`}
-                  fontSize={{ base: "sm", md: "md", lg: "lg" }}
+                  fontSize={{ base: "md", md: "lg", lg: "xl" }}
                   px={{ base: 2, md: 4 }}
                   py={{ base: 1, md: 2 }}
                   whiteSpace="nowrap"
@@ -99,7 +99,7 @@ const WhatAreYourGoals = () => {
                 <Text fontSize={{ base: "sm", sm: "md", md: "2xl" }} lineHeight="1.6">
                   {goal.description}
                 </Text>
-                <ul style={{ fontSize: "0.9rem", lineHeight: "1.6" }}>
+                <ul style={{ fontSize: "1.2rem", lineHeight: "1.8" }}>
                   {goal.points.map((point, i) => (
                     <li key={i}>• {point}</li>
                   ))}

@@ -38,7 +38,7 @@ const QuestionPack = () => {
       : null;
 
   return (
-    <Box marginX={marginX} py={10} bg="white">
+    <Box id="questions1" marginX={marginX} py={10} bg="white">
       <VStack gap={3} textAlign="center" mb={8}>
         <Heading fontSize={{ base: "2xl", md: "3xl" }} color="blue.900">
           Building Blocks of Your Legacy

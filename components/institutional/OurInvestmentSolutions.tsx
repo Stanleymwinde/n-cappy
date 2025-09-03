@@ -151,14 +151,6 @@ const InvestmentSolutions = () => {
                             alt={item.media.alt}
                             fill
                           />
-                          <Box
-                            position="absolute"
-                            top="50%"
-                            left="50%"
-                            transform="translate(-50%, -50%)"
-                          >
-                            <MdPlayCircleFilled size={64} color="white" />
-                          </Box>
                         </Box>
                       </GridItem>
                     </Grid>
