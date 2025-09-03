@@ -3,18 +3,16 @@
 import Hero from "@/components/common/Hero";
 import { CallToAction } from "@/components/home";
 import { PlanForJoy } from "@/components/i-want-tos";
-import { RetireQuestions } from "@/components/retire"; 
-import {  Rates } from "@/components/common";
-import React, { useState } from "react";
+import { RetireQuestions } from "@/components/retire";
+import { Rates } from "@/components/common";
+import React from "react";
+import { EduQuestions } from "../../components/Education";
 
 const Page = () => {
-  
-  const [goal, setGoal] = useState("");
-
   return (
     <>
       <Rates />
-      
+
       <Hero
         button="Unlock My Plan"
         button1="Learn More"
@@ -30,12 +28,8 @@ const Page = () => {
 Let your story echo through generations`}
         imageUrl="/images/retire-plan.png"
       />
-
-      
-      
-
-      <RetireQuestions /> 
-  
+      <RetireQuestions />
+      {/* <EduQuestions /> */}
       <CallToAction />
     </>
   );

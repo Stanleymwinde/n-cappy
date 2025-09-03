@@ -64,7 +64,7 @@ const rates = async () => {
       const data = await response.json();
       return data.securities;
     } catch (error) {
-      console.error("Failed to fetch rates:", error);
+      // console.error("Failed to fetch rates:", error);
       return null;
     }
   }

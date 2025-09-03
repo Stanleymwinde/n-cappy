@@ -1,5 +1,12 @@
 "use client";
-import { Box, Button, Text, Flex } from "@chakra-ui/react"; 
+import {
+  Box,
+  Button,
+  Text,
+  Flex,
+  Skeleton,
+  SkeletonText,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -9,21 +16,21 @@ type HeroProps = {
   subtitle?: string;
   imageUrl?: string;
   button?: string;
-  buttonLink?: string;   
+  buttonLink?: string;
   button1?: string;
-  button1Link?: string;  
-  scrollTarget?: string; 
+  button1Link?: string;
+  scrollTarget?: string;
 };
 
-const Hero = ({ 
-  title, 
-  subtitle, 
-  imageUrl, 
-  button, 
-  buttonLink, 
-  button1, 
-  button1Link, 
-  scrollTarget 
+const Hero = ({
+  title,
+  subtitle,
+  imageUrl,
+  button,
+  buttonLink,
+  button1,
+  button1Link,
+  scrollTarget,
 }: HeroProps) => {
   return (
     <Box
@@ -67,7 +74,7 @@ const Hero = ({
         color="white"
         p={{ base: 4, md: 6 }}
         position="relative"
-        zIndex={2} 
+        zIndex={2}
         width={{ base: "90%", sm: "85%", md: "45%" }}
         ml={{ base: "auto", md: 16 }}
         mr={{ base: "auto", md: 0 }}
@@ -90,7 +97,12 @@ const Hero = ({
           {subtitle || "That's the Nabo Promise. Your Growth, Our Focus."}
         </Text>
 
-        <Flex gap={4} mt={5} flexWrap="wrap" justifyContent={{ base: "center", md: "flex-start" }}>
+        <Flex
+          gap={4}
+          mt={5}
+          flexWrap="wrap"
+          justifyContent={{ base: "center", md: "flex-start" }}
+        >
           {/* Primary Button */}
           {scrollTarget ? (
             <a href={scrollTarget}>
@@ -135,8 +147,8 @@ const Hero = ({
           )}
 
           {/* Secondary Button */}
-          {button1 && (
-            button1Link?.startsWith("http") ? (
+          {button1 &&
+            (button1Link?.startsWith("http") ? (
               <a href={button1Link} target="_blank" rel="noopener noreferrer">
                 <Button
                   flex="1"
@@ -166,8 +178,7 @@ const Hero = ({
                   {button1}
                 </Button>
               </Link>
-            )
-          )}
+            ))}
         </Flex>
       </Box>
     </Box>

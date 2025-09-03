@@ -306,6 +306,7 @@ export const ResourcesData = [
         pdf: "/pdfs/Investment-Strategies-1.pdf",
         video: "https://youtu.be/hTRb832NqOs",
       },
+
       {
         id: 2,
         title: "Investment Types and Strategies",
@@ -343,6 +344,7 @@ export const ResourcesData = [
       },
 
 
+
     ],
   },
   {
@@ -358,6 +360,7 @@ export const ResourcesData = [
         pdf: "/pdfs/Private-Wealth-1.pdf",
         video: "https://youtu.be/EvIDuxqmEbU",
       },
+
        {
         id: 1,
         title: "Private Wealth Management",
@@ -391,6 +394,7 @@ export const ResourcesData = [
         video: "https://youtu.be/C6GUmUsr1Qk?si=XD0IbPXnhi5TWlHK",
       },
   
+
     ],
   },
   {
@@ -406,6 +410,7 @@ export const ResourcesData = [
         pdf: "/pdfs/Financial-Planning-1.pdf",
         video: "https://youtu.be/tlPZBJL0qRY",
       },
+
       {
         id: 1,
         title: "Financial Planning and Retirements",
@@ -463,6 +468,7 @@ export const ResourcesData = [
         video: "https://youtu.be/HC6xJ8qKd9w",
       },
 
+
       {
         id: 1,
         title: "Investor Mindset and Education",
@@ -493,7 +499,6 @@ export const ResourcesData = [
     ],
   },
 ];
-
 
 export const investmentData = [
   {
@@ -631,7 +636,6 @@ export const institutionalMembers = [
     linkedin: "https://www.linkedin.com/in/teddey-muthoka/",
   },
 ];
-
 
 export const FaqsData = [
   {
@@ -858,7 +862,6 @@ export const heritageData = [
   },
 ];
 
-
 export const boardMembers = [
   {
     name: "Robert Bunyi",
@@ -892,174 +895,174 @@ export const boardMembers = [
   },
 ];
 
-export const RetirementPlans = [
-  {
-    title: "Estate Planning",
-    description:
-      "Ensure your assets are protected and distributed according to your wishes, minimizing taxes and complications for your heirs.",
-    icon: MdOutlineRealEstateAgent,
-    questions: [
-      {
-        id: 1,
-        question: "Where do you want to go?",
-        placeholder: "e.g. Mombasa, Paris, Bali",
-        hint: "Whether it’s a beach, city or the desert , you only need 230 USD per month",
-        image: "/images/life-1.png",
-      },
-      {
-        id: 2,
-        question: "When do you want to travel?",
-        placeholder: "eg.   December 2025",
-        hint: "When are you planning to take this trip? Even an approximate time is fine.",
-        image: "/images/life-3.png",
-      },
-      {
-        id: 3,
-        question: "How long will you stay?",
-        placeholder: "eg.   7 days",
-        hint: "How many days or weeks would you like to spend there?",
-        image: "/images/life-2.png",
-      },
-      {
-        id: 4,
-        question: "What Is your estimated cost?",
-        placeholder: "eg.   KES 5000",
-        hint: "Your best estimate of the total cost. Don’t worry if you are not sure.",
-        image: "/images/life-2.png",
-      },
-      {
-        id: 5,
-        question: "How much have you saved ?",
-        placeholder: "eg.   KES 10,000",
-        hint: "How much have you already put aside for this trip?",
-        image: "/images/life-2.png",
-      },
-      {
-        id: 6,
-        question: "How much can you save monthly?",
-        placeholder: "eg.   KES 10,000",
-        hint: "How much have you already put aside for this trip?",
-        image: "/images/life-2.png",
-      },
-    ],
-  },
-  {
-    title: "Generational Wealth Transfer",
-    description:
-      "Create a structured approach to passing financial assets, knowledge, and values to future generations.",
-    icon: FaHandsHelping,
-    questions: [
-      {
-        id: 1,
-        question: "What do you want to study?",
-        placeholder: "e.g. Data Science",
-        hint: "Let us know your field of interest.",
-        image: "/images/ed-q-4.png",
-      },
-      {
-        id: 2,
-        question: "Which institution?",
-        placeholder: "e.g. MIT, Udemy",
-        hint: "Helps tailor your savings goals.",
-        image: "/images/ed-q-2.png",
-      },
-      {
-        id: 3,
-        question: "Expected tuition cost?",
-        placeholder: "e.g. $10,000",
-        hint: "This helps us prepare your plan.",
-        image: "/images/ed-q-1.png",
-      },
-    ],
-  },
-  {
-    title: "Long-Term Care",
-    description:
-      "Prepare for potential health needs without compromising the financial legacy you intend to leave behind.",
-    icon: FaHeart,
-    questions: [
-      {
-        id: 1,
-        question: "What’s your ideal retirement age?",
-        placeholder: "e.g. 60",
-        hint: "This helps us plan your retirement savings.",
-        image: "/images/r-1.png",
-      },
-      {
-        id: 2,
-        question: "What lifestyle do you envision?",
-        placeholder: "e.g. Travel, hobbies",
-        hint: "Share your retirement dreams.",
-        image: "/images/r-2.png",
-      },
-      {
-        id: 3,
-        question: "Expected monthly expenses?",
-        placeholder: "e.g. $2,000",
-        hint: "Helps us calculate your retirement needs.",
-        image: "/images/life-3.png",
-      },
-    ],
-  },
-  {
-    title: "Giving with Intention",
-    description:
-      "Align your charitable contributions with your values and maximize their impact on causes you care about.",
-    icon: FaHandsHelping,
-    questions: [
-      {
-        id: 1,
-        question: "What causes are you passionate about?",
-        placeholder: "e.g. Education, Health",
-        hint: "This helps us align your giving goals.",
-        image: "/images/giving-1.jpg",
-      },
-      {
-        id: 2,
-        question: "How much do you want to give annually?",
-        placeholder: "e.g. $1,000",
-        hint: "This sets your giving budget.",
-        image: "/images/giving-2.jpg",
-      },
-      {
-        id: 3,
-        question: "Do you prefer local or global impact?",
-        placeholder: "e.g. Local",
-        hint: "Helps us find the right charities for you.",
-        image: "/images/giving-3.jpg",
-      },
-    ],
-  },
+// export const RetirementPlans = [
+//   {
+//     title: "Estate Planning",
+//     description:
+//       "Ensure your assets are protected and distributed according to your wishes, minimizing taxes and complications for your heirs.",
+//     icon: MdOutlineRealEstateAgent,
+//     questions: [
+//       {
+//         id: 1,
+//         question: "Where do you want to go?",
+//         placeholder: "e.g. Mombasa, Paris, Bali",
+//         hint: "Whether it’s a beach, city or the desert , you only need 230 USD per month",
+//         image: "/images/life-1.png",
+//       },
+//       {
+//         id: 2,
+//         question: "When do you want to travel?",
+//         placeholder: "eg.   December 2025",
+//         hint: "When are you planning to take this trip? Even an approximate time is fine.",
+//         image: "/images/life-3.png",
+//       },
+//       {
+//         id: 3,
+//         question: "How long will you stay?",
+//         placeholder: "eg.   7 days",
+//         hint: "How many days or weeks would you like to spend there?",
+//         image: "/images/life-2.png",
+//       },
+//       {
+//         id: 4,
+//         question: "What Is your estimated cost?",
+//         placeholder: "eg.   KES 5000",
+//         hint: "Your best estimate of the total cost. Don’t worry if you are not sure.",
+//         image: "/images/life-2.png",
+//       },
+//       {
+//         id: 5,
+//         question: "How much have you saved ?",
+//         placeholder: "eg.   KES 10,000",
+//         hint: "How much have you already put aside for this trip?",
+//         image: "/images/life-2.png",
+//       },
+//       {
+//         id: 6,
+//         question: "How much can you save monthly?",
+//         placeholder: "eg.   KES 10,000",
+//         hint: "How much have you already put aside for this trip?",
+//         image: "/images/life-2.png",
+//       },
+//     ],
+//   },
+//   {
+//     title: "Generational Wealth Transfer",
+//     description:
+//       "Create a structured approach to passing financial assets, knowledge, and values to future generations.",
+//     icon: FaHandsHelping,
+//     questions: [
+//       {
+//         id: 1,
+//         question: "What do you want to study?",
+//         placeholder: "e.g. Data Science",
+//         hint: "Let us know your field of interest.",
+//         image: "/images/ed-q-4.png",
+//       },
+//       {
+//         id: 2,
+//         question: "Which institution?",
+//         placeholder: "e.g. MIT, Udemy",
+//         hint: "Helps tailor your savings goals.",
+//         image: "/images/ed-q-2.png",
+//       },
+//       {
+//         id: 3,
+//         question: "Expected tuition cost?",
+//         placeholder: "e.g. $10,000",
+//         hint: "This helps us prepare your plan.",
+//         image: "/images/ed-q-1.png",
+//       },
+//     ],
+//   },
+//   {
+//     title: "Long-Term Care",
+//     description:
+//       "Prepare for potential health needs without compromising the financial legacy you intend to leave behind.",
+//     icon: FaHeart,
+//     questions: [
+//       {
+//         id: 1,
+//         question: "What’s your ideal retirement age?",
+//         placeholder: "e.g. 60",
+//         hint: "This helps us plan your retirement savings.",
+//         image: "/images/r-1.png",
+//       },
+//       {
+//         id: 2,
+//         question: "What lifestyle do you envision?",
+//         placeholder: "e.g. Travel, hobbies",
+//         hint: "Share your retirement dreams.",
+//         image: "/images/r-2.png",
+//       },
+//       {
+//         id: 3,
+//         question: "Expected monthly expenses?",
+//         placeholder: "e.g. $2,000",
+//         hint: "Helps us calculate your retirement needs.",
+//         image: "/images/life-3.png",
+//       },
+//     ],
+//   },
+//   {
+//     title: "Giving with Intention",
+//     description:
+//       "Align your charitable contributions with your values and maximize their impact on causes you care about.",
+//     icon: FaHandsHelping,
+//     questions: [
+//       {
+//         id: 1,
+//         question: "What causes are you passionate about?",
+//         placeholder: "e.g. Education, Health",
+//         hint: "This helps us align your giving goals.",
+//         image: "/images/giving-1.jpg",
+//       },
+//       {
+//         id: 2,
+//         question: "How much do you want to give annually?",
+//         placeholder: "e.g. $1,000",
+//         hint: "This sets your giving budget.",
+//         image: "/images/giving-2.jpg",
+//       },
+//       {
+//         id: 3,
+//         question: "Do you prefer local or global impact?",
+//         placeholder: "e.g. Local",
+//         hint: "Helps us find the right charities for you.",
+//         image: "/images/giving-3.jpg",
+//       },
+//     ],
+//   },
 
-  {
-    title: "Retirement Income",
-    description: "Structure provide reliable income  ",
-    icon: FaHandsHelping,
-    questions: [
-      {
-        id: 1,
-        question: "What causes are you passionate about?",
-        placeholder: "e.g. Education, Health",
-        hint: "This helps us align your giving goals.",
-        image: "/images/giving-1.jpg",
-      },
-      {
-        id: 2,
-        question: "How much do you want to give annually?",
-        placeholder: "e.g. $1,000",
-        hint: "This sets your giving budget.",
-        image: "/images/giving-2.jpg",
-      },
-      {
-        id: 3,
-        question: "Do you prefer local or global impact?",
-        placeholder: "e.g. Local",
-        hint: "Helps us find the right charities for you.",
-        image: "/images/giving-3.jpg",
-      },
-    ],
-  },
-];
+//   {
+//     title: "Retirement Income",
+//     description: "Structure provide reliable income  ",
+//     icon: FaHandsHelping,
+//     questions: [
+//       {
+//         id: 1,
+//         question: "What causes are you passionate about?",
+//         placeholder: "e.g. Education, Health",
+//         hint: "This helps us align your giving goals.",
+//         image: "/images/giving-1.jpg",
+//       },
+//       {
+//         id: 2,
+//         question: "How much do you want to give annually?",
+//         placeholder: "e.g. $1,000",
+//         hint: "This sets your giving budget.",
+//         image: "/images/giving-2.jpg",
+//       },
+//       {
+//         id: 3,
+//         question: "Do you prefer local or global impact?",
+//         placeholder: "e.g. Local",
+//         hint: "Helps us find the right charities for you.",
+//         image: "/images/giving-3.jpg",
+//       },
+//     ],
+//   },
+// ];
 
 export const LifestylePlans = [
   {
@@ -1377,7 +1380,7 @@ export const RetirePlans = [
         question: "What stage are you at in your wealth transfer plan?",
         placeholder: "e.g. Just beginning, have a plan, actively transferring",
         hint: "Understanding your current stage helps tailor the best strategy for your family.",
-        image:"/images/legc.jpeg",
+        image: "/images/legc.jpeg",
       },
       {
         id: 2,
@@ -1392,7 +1395,7 @@ export const RetirePlans = [
         placeholder:
           "e.g. Preserve family business, education funds, philanthropy",
         hint: "Your intentions shape how your wealth is distributed and managed.",
-        image:  "/images/life-3.jpeg",
+        image: "/images/life-3.jpeg",
       },
       {
         id: 4,
@@ -1410,7 +1413,6 @@ export const RetirePlans = [
         hint: "Preparing heirs helps ensure the legacy is sustained responsibly.",
         image: "/images/legc-savings.jpeg",
       },
-  
     ],
   },
   {
@@ -1494,7 +1496,6 @@ export const RetirePlans = [
         hint: "This affects your giving schedule and impact.",
         image: "/images/giving-intent-3.jpg",
       },
-
       {
         id: 4,
         question: "Would you like to support local or global organizations?",
@@ -1580,49 +1581,50 @@ export const EducationPlans = [
     icon: MdOutlineRealEstateAgent,
     exploreMoreUrl: "/home-ownership",
     questions: [
-    {
-  id: 1,
-  question: "Where are you in your homeownership journey?",
-  placeholder: "e.g. Just starting, saving for down payment, already own a home",
-  hint: "Understanding your stage helps us guide you better toward your housing goals.",
-  image: "/images/Home-own1.jpeg",
-},
-{
-  id: 2,
-  question: "Who will live in the home with you?",
-  placeholder: "e.g. Just me, Partner, Family, Investment tenants",
-  hint: "Knowing who you're planning for helps shape your ideal home choice.",
-  image: "/images/Fam-home1.jpeg",
-},
-{
-  id: 3,
-  question: "What type of home do you dream of?",
-  placeholder: "e.g. Apartment, Townhouse, Family house, Land for building",
-  hint: "Your lifestyle and aspirations influence the kind of property that suits you best.",
-  image: "/images/Home.jpeg",
-},
-{
-  id: 4,
-  question: "How much have you saved toward your home?",
-  placeholder: "e.g. KES 500,000",
-  hint: "Your savings, including down payment and related funds, shape your affordability.",
-  image: "/images/home-save.jpg",
-},
-{
-  id: 5,
-  question: "What is your monthly housing budget?",
-  placeholder: "e.g. KES 30,000",
-  hint: "Include mortgage, rent-to-own payments, or maintenance costs you’re comfortable with.",
-  image: "/images/house-budget1.jpeg",
-},
-{
-  id: 6,
-  question: "When do you want to own your home?",
-  placeholder: "e.g. 2 years, 5 years, 10 years",
-  hint: "Your timeline helps align savings, financing, and planning strategies.",
-  image: "/images/home-buying1.jpeg",
-},
-
+      {
+        id: 1,
+        question: "Where are you in your homeownership journey?",
+        placeholder:
+          "e.g. Just starting, saving for down payment, already own a home",
+        hint: "Understanding your stage helps us guide you better toward your housing goals.",
+        image: "/images/Home-own1.jpeg",
+      },
+      {
+        id: 2,
+        question: "Who will live in the home with you?",
+        placeholder: "e.g. Just me, Partner, Family, Investment tenants",
+        hint: "Knowing who you're planning for helps shape your ideal home choice.",
+        image: "/images/Fam-home1.jpeg",
+      },
+      {
+        id: 3,
+        question: "What type of home do you dream of?",
+        placeholder:
+          "e.g. Apartment, Townhouse, Family house, Land for building",
+        hint: "Your lifestyle and aspirations influence the kind of property that suits you best.",
+        image: "/images/Home.jpeg",
+      },
+      {
+        id: 4,
+        question: "How much have you saved toward your home?",
+        placeholder: "e.g. KES 500,000",
+        hint: "Your savings, including down payment and related funds, shape your affordability.",
+        image: "/images/home-save.jpg",
+      },
+      {
+        id: 5,
+        question: "What is your monthly housing budget?",
+        placeholder: "e.g. KES 30,000",
+        hint: "Include mortgage, rent-to-own payments, or maintenance costs you’re comfortable with.",
+        image: "/images/house-budget1.jpeg",
+      },
+      {
+        id: 6,
+        question: "When do you want to own your home?",
+        placeholder: "e.g. 2 years, 5 years, 10 years",
+        hint: "Your timeline helps align savings, financing, and planning strategies.",
+        image: "/images/home-buying1.jpeg",
+      },
     ],
   },
   {
@@ -1632,48 +1634,48 @@ export const EducationPlans = [
     icon: MdOutlineRealEstateAgent,
     questions: [
       {
-  id: 1,
-  question: "Where are you in preparing for medical emergencies?",
-  placeholder: "e.g. Just starting, have partial cover, fully insured",
-  hint: "Knowing your current preparedness helps us guide your next step.",
-  image: "/images/medic-emergency.jpg",
-},
-{
-  id: 2,
-  question: "Who are you preparing for?",
-  placeholder: "e.g. Yourself, Spouse, Children, Parents",
-  hint: "Medical emergencies often affect loved ones too, not just you.",
-  image: "/images/med-prep1.jpeg",
-},
-{
-  id: 3,
-  question: "What type of medical cover do you currently have?",
-  placeholder: "e.g. NHIF, Private insurance, None",
-  hint: "Your existing support determines what extra protection you may need.",
-  image: "/images/med-insurance.jpg",
-},
-{
-  id: 4,
-  question: "How much have you set aside for emergencies?",
-  placeholder: "e.g. KES 100,000",
-  hint: "Savings can cover expenses not included in insurance plans.",
-  image: "/images/medi-savings.jpeg",
-},
-{
-  id: 5,
-  question: "What is your monthly budget for health coverage?",
-  placeholder: "e.g. KES 5,000",
-  hint: "Planning for ongoing contributions ensures sustainable protection.",
-  image: "/images/health-budget1.jpeg",
-},
-{
-  id: 6,
-  question: "What matters most to you in medical planning?",
-  placeholder: "e.g. Fast access to hospitals, Cover for chronic illness, Family security",
-  hint: "Your priorities help identify the best solutions for peace of mind.",
-  image: "/images/hospital-beds.jpg",
-}
-
+        id: 1,
+        question: "Where are you in preparing for medical emergencies?",
+        placeholder: "e.g. Just starting, have partial cover, fully insured",
+        hint: "Knowing your current preparedness helps us guide your next step.",
+        image: "/images/medic-emergency.jpg",
+      },
+      {
+        id: 2,
+        question: "Who are you preparing for?",
+        placeholder: "e.g. Yourself, Spouse, Children, Parents",
+        hint: "Medical emergencies often affect loved ones too, not just you.",
+        image: "/images/med-prep1.jpeg",
+      },
+      {
+        id: 3,
+        question: "What type of medical cover do you currently have?",
+        placeholder: "e.g. NHIF, Private insurance, None",
+        hint: "Your existing support determines what extra protection you may need.",
+        image: "/images/med-insurance.jpg",
+      },
+      {
+        id: 4,
+        question: "How much have you set aside for emergencies?",
+        placeholder: "e.g. KES 100,000",
+        hint: "Savings can cover expenses not included in insurance plans.",
+        image: "/images/medi-savings.jpeg",
+      },
+      {
+        id: 5,
+        question: "What is your monthly budget for health coverage?",
+        placeholder: "e.g. KES 5,000",
+        hint: "Planning for ongoing contributions ensures sustainable protection.",
+        image: "/images/health-budget1.jpeg",
+      },
+      {
+        id: 6,
+        question: "What matters most to you in medical planning?",
+        placeholder:
+          "e.g. Fast access to hospitals, Cover for chronic illness, Family security",
+        hint: "Your priorities help identify the best solutions for peace of mind.",
+        image: "/images/hospital-beds.jpg",
+      },
     ],
   },
   {
@@ -1684,48 +1686,49 @@ export const EducationPlans = [
     icon: FaHandsHelping,
     questions: [
       {
-  id: 1,
-  question: "Where are you in your education planning journey?",
-  placeholder: "e.g. Just starting, saving for primary, saving for university",
-  hint: "Understanding your stage helps in setting realistic education goals.",
-  image: "/images/eduu-plan.jpeg",
-},
-{
-  id: 2,
-  question: "Who are you planning education for?",
-  placeholder: "e.g. Myself, Child, Sibling, Family member",
-  hint: "Education planning often extends beyond just yourself.",
-  image: "/images/educ1.jpeg",
-},
-{
-  id: 3,
-  question: "What type of education are you planning for?",
-  placeholder: "e.g. Local university, International school, Professional certification",
-  hint: "Different education paths come with different costs and timelines.",
-  image: "/images/educ-levell.jpeg",
-},
-{
-  id: 4,
-  question: "How much have you saved so far?",
-  placeholder: "e.g. KES 200,000",
-  hint: "Your current savings help determine the gap between now and your goal.",
-  image: "/images/educ-save1.jpeg",
-},
-{
-  id: 5,
-  question: "What is your monthly budget for education savings?",
-  placeholder: "e.g. KES 10,000",
-  hint: "Consistent contributions are key to building a strong education fund.",
-  image: "/images/edu-budget.jpg",
-},
-{
-  id: 6,
-  question: "When will the funds be needed?",
-  placeholder: "e.g. 2 years, 5 years, 10 years",
-  hint: "Your timeline affects how much and how you should invest or save.",
-  image: "/images/edu-mon.jpeg",
-}
-
+        id: 1,
+        question: "Where are you in your education planning journey?",
+        placeholder:
+          "e.g. Just starting, saving for primary, saving for university",
+        hint: "Understanding your stage helps in setting realistic education goals.",
+        image: "/images/eduu-plan.jpeg",
+      },
+      {
+        id: 2,
+        question: "Who are you planning education for?",
+        placeholder: "e.g. Myself, Child, Sibling, Family member",
+        hint: "Education planning often extends beyond just yourself.",
+        image: "/images/educ1.jpeg",
+      },
+      {
+        id: 3,
+        question: "What type of education are you planning for?",
+        placeholder:
+          "e.g. Local university, International school, Professional certification",
+        hint: "Different education paths come with different costs and timelines.",
+        image: "/images/educ-levell.jpeg",
+      },
+      {
+        id: 4,
+        question: "How much have you saved so far?",
+        placeholder: "e.g. KES 200,000",
+        hint: "Your current savings help determine the gap between now and your goal.",
+        image: "/images/educ-save1.jpeg",
+      },
+      {
+        id: 5,
+        question: "What is your monthly budget for education savings?",
+        placeholder: "e.g. KES 10,000",
+        hint: "Consistent contributions are key to building a strong education fund.",
+        image: "/images/edu-budget.jpg",
+      },
+      {
+        id: 6,
+        question: "When will the funds be needed?",
+        placeholder: "e.g. 2 years, 5 years, 10 years",
+        hint: "Your timeline affects how much and how you should invest or save.",
+        image: "/images/edu-mon.jpeg",
+      },
     ],
   },
   {
@@ -1735,49 +1738,50 @@ export const EducationPlans = [
     icon: MdOutlineRealEstateAgent,
     exploreMoreUrl: "/insurance-premiums",
     questions: [
-     {
-  id: 1,
-  question: "Where are you in your insurance journey?",
-  placeholder: "e.g. Just exploring, Already have some policies, Looking to upgrade",
-  hint: "Your stage determines the type of guidance you may need.",
-  image: "/images/insurance-jon1.jpeg",
-},
-{
-  id: 2,
-  question: "Who are you getting insurance coverage for?",
-  placeholder: "e.g. Myself, Spouse, Children, Family business",
-  hint: "Insurance can protect not just you, but the people and assets you care about.",
-  image: "/images/famil-biss.jpeg",
-},
-{
-  id: 3,
-  question: "What type of insurance are you considering?",
-  placeholder: "e.g. Health, Life, Motor, Property",
-  hint: "Different policies serve different needs — the right mix provides peace of mind.",
-  image: "/images/ins-types1.jpeg",
-},
-{
-  id: 4,
-  question: "How much are you currently paying in premiums?",
-  placeholder: "e.g. KES 15,000 per year",
-  hint: "This helps identify if you are underinsured, overpaying, or well balanced.",
-  image: "/images/insurance-prem1.jpeg",
-},
-{
-  id: 5,
-  question: "What is your budget for future premiums?",
-  placeholder: "e.g. KES 5,000 per month",
-  hint: "Budgeting ensures your policies remain affordable and sustainable.",
-  image: "/images/insurance-budget1.jpeg",
-},
-{
-  id: 6,
-  question: "What matters most in your insurance planning?",
-  placeholder: "e.g. Comprehensive coverage, Low cost, Flexibility, Quick claims",
-  hint: "Your priorities help select the right policies to protect your goals.",
-  image: "/images/ins-care1.jpeg",
-}
-
+      {
+        id: 1,
+        question: "Where are you in your insurance journey?",
+        placeholder:
+          "e.g. Just exploring, Already have some policies, Looking to upgrade",
+        hint: "Your stage determines the type of guidance you may need.",
+        image: "/images/insurance-jon1.jpeg",
+      },
+      {
+        id: 2,
+        question: "Who are you getting insurance coverage for?",
+        placeholder: "e.g. Myself, Spouse, Children, Family business",
+        hint: "Insurance can protect not just you, but the people and assets you care about.",
+        image: "/images/famil-biss.jpeg",
+      },
+      {
+        id: 3,
+        question: "What type of insurance are you considering?",
+        placeholder: "e.g. Health, Life, Motor, Property",
+        hint: "Different policies serve different needs — the right mix provides peace of mind.",
+        image: "/images/ins-types1.jpeg",
+      },
+      {
+        id: 4,
+        question: "How much are you currently paying in premiums?",
+        placeholder: "e.g. KES 15,000 per year",
+        hint: "This helps identify if you are underinsured, overpaying, or well balanced.",
+        image: "/images/insurance-prem1.jpeg",
+      },
+      {
+        id: 5,
+        question: "What is your budget for future premiums?",
+        placeholder: "e.g. KES 5,000 per month",
+        hint: "Budgeting ensures your policies remain affordable and sustainable.",
+        image: "/images/insurance-budget1.jpeg",
+      },
+      {
+        id: 6,
+        question: "What matters most in your insurance planning?",
+        placeholder:
+          "e.g. Comprehensive coverage, Low cost, Flexibility, Quick claims",
+        hint: "Your priorities help select the right policies to protect your goals.",
+        image: "/images/ins-care1.jpeg",
+      },
     ],
   },
 ];
@@ -2068,14 +2072,14 @@ export const whatweoffer = [
   },
 ];
 
-
 export const whatweoffertreasury = [
   {
     value: "Customized liquidity Portfolios",
     title: "Customized liquidity Portfolios",
     text: "Tailored solutions that align your cash needs with market opportunities and your business’ needs",
     body: "Managing liquidity isn’t just about keeping cash; it’s about making sure your money is structured to meet your needs, stay safe, and remain accessible when it matters most. Whether you are covering daily operations, planning for large payments, or preparing for growth, we help you align liquidity with your broader financial strategy.",
-    extraText: "We focus on sustainable strategies that maximize investor value while supporting business growth.",
+    extraText:
+      "We focus on sustainable strategies that maximize investor value while supporting business growth.",
     services: [
       {
         title: "Tailored Horizon",
@@ -2092,7 +2096,6 @@ export const whatweoffertreasury = [
         description:
           "We ensure flexibility and accessibility while optimizing returns.",
       },
-  
     ],
     media: {
       image: "/images/Pius-new.png",
@@ -2110,7 +2113,8 @@ export const whatweoffertreasury = [
     title: "Short-Term Investment Strategies",
     text: " Preserve capital while generating returns with minimal risk.",
     body: "A clear, credible business valuation is essential. Whether you are planning an exit, raising funds, buying a company, or restructuring. We help individuals and businesses understand the real worth of their assets and what drives value.",
-    extraText: "Designed for investors who seek a blend of growth and stability across market cycles.",
+    extraText:
+      "Designed for investors who seek a blend of growth and stability across market cycles.",
     services: [
       {
         title: "Safe Investments",
@@ -2119,15 +2123,12 @@ export const whatweoffertreasury = [
       },
       {
         title: "Reliable Income",
-        description:
-          "Generating steady yields to enhance cash productivity.",
+        description: "Generating steady yields to enhance cash productivity.",
       },
       {
         title: "Accessible Liquidity",
-        description:
-          "Ensuring funds are available when you need them.",
+        description: "Ensuring funds are available when you need them.",
       },
-     
     ],
     media: {
       image: "/images/Pius-new.png",
@@ -2173,22 +2174,21 @@ export const whatweoffertreasury = [
         "Structured a $12M convertible note for a rapidly growing health-tech platform, balancing immediate growth capital needs with long-term equity upside for investors and founders alike",
     },
   },
-    {
+  {
     value: "Daily Liquidity Monitoring & Reporting",
     title: "Daily Liquidity Monitoring & Reporting",
     text: "Transparent, real-time insights into portfolio performance and accessibility",
     body: "Providing real-time visibility into portfolio performance and accessibility.",
-    extraText: "Designed for investors who seek a blend of growth and stability across market cycles.",
+    extraText:
+      "Designed for investors who seek a blend of growth and stability across market cycles.",
     services: [
       {
         title: "Active Oversight",
-        description:
-          "Tracking daily portfolio activity and cash levels.",
+        description: "Tracking daily portfolio activity and cash levels.",
       },
       {
         title: "Transparent Reporting",
-        description:
-          "Giving clear insights into availability and performance.",
+        description: "Giving clear insights into availability and performance.",
       },
       {
         title: "Proactive Adjustments",
@@ -2374,5 +2374,4 @@ export const Lifestyle = [
       },
     ],
   },
-  
 ];
