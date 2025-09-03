@@ -171,7 +171,7 @@ export const WhatAreYourGoalsData = [
       "Whether you're building wealth, securing your future or planning for a milestone, intentional saving sets the foundation for financial freedom.",
     points: [
       "Competitive returns above inflation",
-      "Proffesional Fund Management",
+      "Professional Fund Management",
       "Diversified Low-Risk Portfolio",
       "Withdraw funds when you need them",
     ],
@@ -1299,7 +1299,7 @@ export const services = [
 
 export const whoweserve = [
   {
-    label: "Pention Funds",
+    label: "Pension Funds",
     icon: <FaPiggyBank size={26} />,
   },
   {

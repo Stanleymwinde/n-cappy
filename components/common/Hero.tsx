@@ -49,7 +49,7 @@ const Hero = ({
         quality={90}
         fill
         style={{
-          objectFit: "cover", // changed from fill to cover
+          objectFit: "cover",
           position: "absolute",
           top: 0,
           left: 0,

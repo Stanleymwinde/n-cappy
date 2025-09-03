@@ -13,9 +13,10 @@ const Page: React.FC = () => {
       <Hero
         button="Unlock My Plan"
         button1="Learn More"
-        imageUrl="/images/travel-hero.jpeg"
+        imageUrl="/images/travelling.jpeg"
         title="Because Life is About Living Fully"
         subtitle="Say yes to Life's Big, Beautiful moments without guilt, without worry"
+        scrollTarget="#questions1"
       />
 
       <PlanForJoy />

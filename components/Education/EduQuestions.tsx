@@ -38,7 +38,7 @@ const EduQuestionsComponent = () => {
       : null;
 
   return (
-    <Box marginX={marginX} py={10} bg={cardBg}>
+    <Box id="questions3" marginX={marginX} py={10} bg={cardBg}>
       {/* Header Section */}
       <VStack gap={6} textAlign="center" mb={8}>
         <Heading fontSize={{ base: "4xl", md: "5xl" }} fontWeight="bold" color="blue.900">

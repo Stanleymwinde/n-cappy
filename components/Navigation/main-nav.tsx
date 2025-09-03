@@ -1,5 +1,5 @@
 "use client";
-import { marginX, navItems } from "@/utils/constants";
+import { navItems } from "@/utils/constants";
 import { Box, Button, Flex, HStack, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -18,13 +18,12 @@ const MainNav = () => {
 
   return (
     <Flex
-      marginX={marginX}
       py={3}
       justify="space-between"
       align="center"
       bg="white"
       boxShadow="sm"
-      wrap="wrap" // prevents items from overlapping on smaller screens
+      wrap="wrap"
     >
       {/* Logo */}
       <Link href="/">
@@ -52,9 +51,7 @@ const MainNav = () => {
               fontWeight="semibold"
               fontSize={{ base: "md", lg: "lg" }}
               color={handleActiveNav(item.href)}
-              _hover={{
-                color: "primary",
-              }}
+              _hover={{ color: "primary" }}
               transition="color 0.2s ease"
             >
               {item.label}
