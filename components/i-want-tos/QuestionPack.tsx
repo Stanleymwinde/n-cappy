@@ -15,18 +15,23 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useColorModeValue } from "../ui/color-mode";
-import { Results } from "@/components/i-want-tos";
+import Results from "@/components/i-want-tos/Results"; 
+
+
+type GoalType = "Travel" | "Retire" | "Lifestyle" | "Education";
 
 const QuestionPack = () => {
   const cardBg = useColorModeValue("white", "gray.800");
   const [activePlanIndex, setActivePlanIndex] = useState<number | null>(null);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [showResults, setShowResults] = useState(false);
+  const [answers, setAnswers] = useState<{ [key: string]: string }>({});
 
   const handleCardClick = (index: number) => {
     setActivePlanIndex(index);
     setQuestionIndex(0);
     setShowResults(false);
+    setAnswers({});
   };
 
   const activePlan =
@@ -36,6 +41,29 @@ const QuestionPack = () => {
     activePlan && questionIndex < activePlan.questions.length
       ? activePlan.questions[questionIndex]
       : null;
+
+
+  const buildSummary = () => {
+    return {
+      destination: answers["destination"] || "",
+      when: answers["when"] || "",
+      who: answers["who"] || "",
+      budget: answers["budget"] || "",
+      totalCost: answers["totalCost"] || "",
+      alreadySaved: answers["alreadySaved"] || "",
+      remaining: answers["remaining"] || "",
+      monthly: answers["monthly"] || "",
+      duration: answers["duration"] || "",
+    };
+  };
+
+ 
+  const getGoalType = (title: string): GoalType => {
+    if (title.includes("Travel") || title.includes("Vacation")) return "Travel";
+    if (title.includes("Retire") || title.includes("Home")) return "Retire";
+    if (title.includes("Education") || title.includes("Study")) return "Education";
+    return "Lifestyle";
+  };
 
   return (
     <Box id="questions1" marginX={marginX} py={10} bg="white">
@@ -99,11 +127,7 @@ const QuestionPack = () => {
                 rounded="full"
                 fontWeight="bold"
                 _hover={{ bg: "#00CAFF" }}
-                onClick={() => {
-                  if (block.title === "Dream Vacations") {
-                    handleCardClick(idx);
-                  }
-                }}
+                onClick={() => handleCardClick(idx)}
                 mx="auto"
                 display="block"
               >
@@ -116,19 +140,12 @@ const QuestionPack = () => {
 
       <VStack gap={6} p={6}>
         {showResults ? (
-          <Results
-            summary={{
-              destination: "Dubai",
-              when: "December 2026, 3 weeks",
-              who: "Alone",
-              budget: "KES 90,000",
-              totalCost: "KES 90,000",
-              alreadySaved: "KES 30,000",
-              remaining: "KES 60,000",
-              monthly: "KES 5000",
-              duration: "12 months",
-            }}
-          />
+          activePlan && (
+            <Results
+              goalType={getGoalType(activePlan.title)}
+              summary={buildSummary()}
+            />
+          )
         ) : (
           activePlan &&
           activeQuestion && (
@@ -167,7 +184,17 @@ const QuestionPack = () => {
                     <Text fontSize="xl" fontWeight="bold">
                       {activeQuestion.question}
                     </Text>
-                    <Input placeholder={activeQuestion.placeholder} mt={3} />
+                    <Input
+                      placeholder={activeQuestion.placeholder}
+                      mt={3}
+                      value={answers[activeQuestion.key] || ""}
+                      onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                        setAnswers({
+                          ...answers,
+                          [activeQuestion.key]: e.target.value,
+                        })
+                      }
+                    />
                     <Text fontSize="sm" color="gray.600" mt={2}>
                       {activeQuestion.hint}
                     </Text>
@@ -195,6 +222,7 @@ const QuestionPack = () => {
                           setQuestionIndex(next);
                         } else {
                           setShowResults(true);
+                          console.log("Summary passed to Results:", buildSummary()); 
                         }
                       }}
                       bg="#0A2233"

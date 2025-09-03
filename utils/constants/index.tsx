@@ -1068,46 +1068,61 @@ export const LifestylePlans = [
   {
     title: "Dream Vacations",
     description:
-      "You’ve earned the right to explore. Take that beach escape,  or adventure abroad — this plan helps you travel confidently, without financial pressure.",
+      "You’ve earned the right to explore. Take that beach escape, or adventure abroad — this plan helps you travel confidently, without financial pressure.",
     icon: MdOutlineRealEstateAgent,
     questions: [
       {
         id: 1,
+        key: "destination",
         question: "Where do you want to go?",
         placeholder: "e.g. Mombasa, Paris, Bali",
-        hint: "Whether it’s a beach, city or the desert , you only need 230 USD per month",
+        hint: "Whether it’s a beach, city or the desert, you only need 230 USD per month",
         image: "/images/Travelone.png",
       },
       {
         id: 2,
+        key: "when",
         question: "When do you want to travel?",
-        placeholder: "eg.   December 2025",
+        placeholder: "eg. December 2025",
         hint: "When are you planning to take this trip? Even an approximate time is fine.",
         image: "/images/Travetwo.png",
       },
       {
         id: 3,
+        key: "duration",
         question: "How long will you stay?",
-        placeholder: "eg.   7 days",
+        placeholder: "eg. 7 days",
         hint: "How many days or weeks would you like to spend there?",
         image: "/images/Travelthree.png",
       },
       {
         id: 4,
-        question: "What Is your estimated cost?",
-        placeholder: "eg.   KES 5000",
+        key: "budget",
+        question: "What is your estimated cost?",
+        placeholder: "eg. KES 5000",
         hint: "Your best estimate of the total cost. Don’t worry if you are not sure.",
-        image: "/Travelfour.png",
+        image: "/images/Travelfour.png",
       },
       {
         id: 5,
+        key: "companions",
+        question: "Who are you going with?",
+        placeholder: "eg. Alone, With my family",
+        hint: "Who are you travelling to your dream destination with",
+        image: "/images/Travelfive.png",
+      },
+
+       {
+        id: 6,
+         key: "companions",
         question: "How much have you saved ?",
         placeholder: "eg.   KES 10,000",
         hint: "How much have you already put aside for this trip?",
         image: "/Travelfive.png",
       },
       {
-        id: 5,
+        id: 7,
+         key: "companions",
         question: "How much can you save monthly?",
         placeholder: "eg.   KES 10,000",
         hint: "How much have you already put aside for this trip?",
@@ -1123,6 +1138,7 @@ export const LifestylePlans = [
     questions: [
       {
         id: 1,
+        key: "studyField",
         question: "What do you want to study?",
         placeholder: "e.g. Data Science",
         hint: "Let us know your field of interest.",
@@ -1130,6 +1146,7 @@ export const LifestylePlans = [
       },
       {
         id: 2,
+        key: "institution",
         question: "Which institution?",
         placeholder: "e.g. MIT, Udemy",
         hint: "Helps tailor your savings goals.",
@@ -1137,10 +1154,27 @@ export const LifestylePlans = [
       },
       {
         id: 3,
+        key: "tuitionCost",
         question: "Expected tuition cost?",
         placeholder: "e.g. $10,000",
         hint: "This helps us prepare your plan.",
         image: "/images/ed-q-1.png",
+      },
+      {
+        id: 4,
+        key: "duration",
+        question: "How long will the course/program take?",
+        placeholder: "e.g. 6 months, 4 years",
+        hint: "Gives a better picture of your time and savings requirements.",
+        image: "/images/ed-q-5.png",
+      },
+      {
+        id: 5,
+        key: "fundingSource",
+        question: "How will you fund it?",
+        placeholder: "e.g. Savings, Scholarship",
+        hint: "Helps us understand your financial plan for education.",
+        image: "/images/ed-q-6.png",
       },
     ],
   },
@@ -1152,6 +1186,7 @@ export const LifestylePlans = [
     questions: [
       {
         id: 1,
+        key: "retirementAge",
         question: "What’s your ideal retirement age?",
         placeholder: "e.g. 60",
         hint: "This helps us plan your retirement savings.",
@@ -1159,6 +1194,7 @@ export const LifestylePlans = [
       },
       {
         id: 2,
+        key: "lifestyle",
         question: "What lifestyle do you envision?",
         placeholder: "e.g. Travel, hobbies",
         hint: "Share your retirement dreams.",
@@ -1166,21 +1202,39 @@ export const LifestylePlans = [
       },
       {
         id: 3,
+        key: "monthlyExpenses",
         question: "Expected monthly expenses?",
         placeholder: "e.g. $2,000",
         hint: "Helps us calculate your retirement needs.",
         image: "/images/life-3.png",
+      },
+      {
+        id: 4,
+        key: "homeSize",
+        question: "How big is your dream home?",
+        placeholder: "e.g. 3 bedrooms, 2 bathrooms",
+        hint: "Gives a sense of your future space requirements.",
+        image: "/images/home-4.png",
+      },
+      {
+        id: 5,
+        key: "location",
+        question: "Where do you want to build it?",
+        placeholder: "e.g. Nairobi, Mombasa",
+        hint: "Helps plan for land costs and location preferences.",
+        image: "/images/home-5.png",
       },
     ],
   },
   {
     title: "Treating Your Family",
     description:
-      "The best moments are shared. Plan ahead for birthdays, holidays, or surprise gifts — and enjoy giving without the financial strain",
+      "The best moments are shared. Plan ahead for birthdays, holidays, or surprise gifts — and enjoy giving without the financial strain.",
     icon: FaHandsHelping,
     questions: [
       {
         id: 1,
+        key: "cause",
         question: "What causes are you passionate about?",
         placeholder: "e.g. Education, Health",
         hint: "This helps us align your giving goals.",
@@ -1188,6 +1242,7 @@ export const LifestylePlans = [
       },
       {
         id: 2,
+        key: "annualAmount",
         question: "How much do you want to give annually?",
         placeholder: "e.g. $1,000",
         hint: "This sets your giving budget.",
@@ -1195,21 +1250,39 @@ export const LifestylePlans = [
       },
       {
         id: 3,
+        key: "impact",
         question: "Do you prefer local or global impact?",
         placeholder: "e.g. Local",
         hint: "Helps us find the right charities for you.",
         image: "/images/giving-3.jpg",
       },
+      {
+        id: 4,
+        key: "specialOccasions",
+        question: "Which occasions do you want to focus on?",
+        placeholder: "e.g. Birthdays, Holidays",
+        hint: "Helps prioritize your giving plan.",
+        image: "/images/giving-4.jpg",
+      },
+      {
+        id: 5,
+        key: "familyMembers",
+        question: "Who in your family do you want to treat?",
+        placeholder: "e.g. Parents, Children",
+        hint: "Gives more clarity on your gifting plans.",
+        image: "/images/giving-5.jpg",
+      },
     ],
   },
   {
-    title: "Enjoying the life You want",
+    title: "Enjoying the Life You Want",
     description:
-      "You’ve earned more than a paycheck — you’ve earned peace of mind. This plan lets you relax, celebrate milestones, and f",
+      "You’ve earned more than a paycheck — you’ve earned peace of mind. This plan lets you relax, celebrate milestones, and focus on what matters most.",
     icon: BsCashCoin,
     questions: [
       {
         id: 1,
+        key: "destination",
         question: "Where do you want to go?",
         placeholder: "e.g. Mombasa, Paris, Bali",
         hint: "Tell us your dream destination.",
@@ -1217,6 +1290,7 @@ export const LifestylePlans = [
       },
       {
         id: 2,
+        key: "budget",
         question: "What’s your travel budget?",
         placeholder: "e.g. $5,000",
         hint: "This helps us plan accordingly.",
@@ -1224,14 +1298,32 @@ export const LifestylePlans = [
       },
       {
         id: 3,
+        key: "frequency",
         question: "How often do you travel?",
         placeholder: "e.g. Twice a year",
         hint: "This will guide your yearly budget.",
         image: "/images/vacation-3.jpg",
       },
+      {
+        id: 4,
+        key: "preferredActivities",
+        question: "What activities do you enjoy?",
+        placeholder: "e.g. Hiking, Spa, Sightseeing",
+        hint: "Helps tailor your experiences.",
+        image: "/images/vacation-4.jpg",
+      },
+      {
+        id: 5,
+        key: "travelCompanions",
+        question: "Who do you usually travel with?",
+        placeholder: "e.g. Friends, Family, Alone",
+        hint: "Gives more context for your travel planning.",
+        image: "/images/vacation-5.jpg",
+      },
     ],
   },
 ];
+
 
 export const HelpMeChoosePlans = [
   {

@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@chakra-ui/icons':
-        specifier: ^2.2.6
-        version: 2.2.6(@chakra-ui/react@3.26.0(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react@19.1.1)
+        specifier: ^2.2.4
+        version: 2.2.4(@chakra-ui/react@3.26.0(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react@19.1.1)
       '@chakra-ui/layout':
         specifier: ^2.3.1
         version: 2.3.1(@chakra-ui/system@2.6.2(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@types/react@19.1.12)(react@19.1.1))(react@19.1.1))(react@19.1.1)
@@ -86,12 +86,12 @@ importers:
     devDependencies:
       '@types/node':
         specifier: ^20.19.11
-        version: 20.19.11
+        version: 20.19.12
       '@types/react':
         specifier: ^19.1.12
         version: 19.1.12
       '@types/react-dom':
-        specifier: ^19
+        specifier: ^19.1.9
         version: 19.1.9(@types/react@19.1.12)
       typescript:
         specifier: ^5.9.2
@@ -167,8 +167,8 @@ packages:
       '@chakra-ui/system': '>=2.0.0'
       react: '>=18'
 
-  '@chakra-ui/icons@2.2.6':
-    resolution: {integrity: sha512-WhNdb4hWMOhSGtgknV6INILg/sZDHFRJVwNRwO5B2JO4bPr+/9NPEf8jZuvcx5xMFi00qAC4qIvbMoN4ID0XDQ==}
+  '@chakra-ui/icons@2.2.4':
+    resolution: {integrity: sha512-l5QdBgwrAg3Sc2BRqtNkJpfuLw/pWRDwwT58J6c4PqQT6wzXxyNa8Q0PForu1ltB5qEiFb1kxr/F/HO1EwNa6g==}
     peerDependencies:
       '@chakra-ui/react': '>=2.0.0'
       react: '>=18'
@@ -703,8 +703,8 @@ packages:
   '@types/lodash@4.17.20':
     resolution: {integrity: sha512-H3MHACvFUEiujabxhaI/ImO6gUrd8oOurg7LQtS7mbwIXA/cUqWrvBsaeJ23aZEPk1TAYkurjfMbSELfoCXlGA==}
 
-  '@types/node@20.19.11':
-    resolution: {integrity: sha512-uug3FEEGv0r+jrecvUUpbY8lLisvIjg6AAic6a2bSP5OEOLeJsDSnvhCDov7ipFFMXS3orMpzlmi0ZcuGkBbow==}
+  '@types/node@20.19.12':
+    resolution: {integrity: sha512-lSOjyS6vdO2G2g2CWrETTV3Jz2zlCXHpu1rcubLKpz9oj+z/1CceHlj+yq53W+9zgb98nSov/wjEKYDNauD+Hw==}
 
   '@types/pako@2.0.4':
     resolution: {integrity: sha512-VWDCbrLeVXJM9fihYodcLiIv0ku+AlOa/TQ1SvYOaBuyrSKgEcro95LJyIsJ4vSo6BXIxOKxiJAat04CmST9Fw==}
@@ -1636,7 +1636,7 @@ snapshots:
       '@chakra-ui/system': 2.6.2(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@types/react@19.1.12)(react@19.1.1))(react@19.1.1)
       react: 19.1.1
 
-  '@chakra-ui/icons@2.2.6(@chakra-ui/react@3.26.0(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react@19.1.1)':
+  '@chakra-ui/icons@2.2.4(@chakra-ui/react@3.26.0(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react@19.1.1)':
     dependencies:
       '@chakra-ui/react': 3.26.0(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       react: 19.1.1
@@ -2149,7 +2149,7 @@ snapshots:
 
   '@types/lodash@4.17.20': {}
 
-  '@types/node@20.19.11':
+  '@types/node@20.19.12':
     dependencies:
       undici-types: 6.21.0
 
