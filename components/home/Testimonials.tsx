@@ -48,13 +48,13 @@ const Testimonials = () => {
         navigation={true}
         modules={[Keyboard, Pagination, Navigation]}
         className="mySwiper"
-        style={{ paddingBottom: "40px" }} // space for pagination dots
+        style={{ paddingBottom: "40px" }} 
       >
         {TestimonialData.map((testimonial, index) => (
           <SwiperSlide
             key={index}
             style={{
-              background: "rgba(123, 134, 135, 0.6)", // semi-transparent background
+              background: "#0A2233", 
               border: "1px solid #00caff",
               borderRadius: "12px",
             }}
@@ -102,14 +102,14 @@ const Testimonials = () => {
                 <Text
                   fontSize={{ base: "md", sm: "lg", md: "xl" }}
                   fontStyle="italic"
-                  mb={2}
+                  mb={2}  color="white"
                 >
                   “{testimonial.testimonial}”
                 </Text>
-                <Text fontWeight="bold" fontSize={{ base: "sm", md: "lg" }}>
+                <Text fontWeight="bold" fontSize={{ base: "sm", md: "lg" }}  color="white">
                   - {testimonial.name}
                 </Text>
-                <Text fontSize={{ base: "sm", md: "md" }} color="gray.500">
+                <Text fontSize={{ base: "sm", md: "md" }} color="white">
                   {testimonial.role}
                 </Text>
               </Stack>

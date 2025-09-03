@@ -31,7 +31,7 @@ const MoreResources = () => {
         >
           <Box position="relative" width="100%" maxWidth="1000px">
             <Image
-              src="/images/thumbnail.png"
+              src="/images/thumbnail.jpeg"
               alt="Educational Video Thumbnail"
               width="100%"
               objectFit="contain"
