@@ -164,7 +164,7 @@ const ExploreData = {
 };
 
 const HelpfulLinks = [
-  { label: "Support", link: "mailto:invest@nabocapital.com" },
+  { label: "Support", link: "mailto:clientservice@nabocapital.com" },
   { label: "Privacy Policy", link: "/Privacy-policy" },
   { label: "Sign In", link: "https://invest.nabocapital.com" },
 ];
