@@ -85,21 +85,21 @@ export const TestimonialData = [
   {
     name: "Coach Dexter",
     role: "Long Term Investor",
-    image: "/images/dx.png",
+    image: "/images/Dee.png",
     testimonial:
       "The reason why I feel like I have stayed at Nabo Capital this long is because of safety. It's because I feel safe. And I feel at home.",
   },
   {
     name: "Coach Eileen",
     role: "Long-term Investor",
-    image: "/images/Eileen.png",
+    image: "/images/e-c.png",
     testimonial:
       "The thing I love about Nabo is that you are not just interested in my money you are interested in my mind, and my purpose.",
   },
   {
     name: "Joyce Njoro",
     role: "Long-term Investor",
-    image: "/images/Joyce2.0.png",
+    image: "/images/cee.png",
     testimonial:
       "What I love about Nabo is that they actually take their time to explain to you where your money is going.",
   },
