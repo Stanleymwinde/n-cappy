@@ -1,5 +1,3 @@
-"use client";
-
 import Hero from "@/components/common/Hero";
 import { CallToAction } from "@/components/home";
 import { PlanForJoy } from "@/components/i-want-tos";
