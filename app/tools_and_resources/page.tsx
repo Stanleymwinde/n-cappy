@@ -5,6 +5,25 @@ import { CallToAction } from "@/components/home";
 import { MoreResources, ResourcesTabs } from "@/components/tools";
 import React from "react";
 
+// SEO metadata for Blog / Insights page
+export const metadata = {
+  title: "Investment Insights & Guides | Nabo Capital Blog",
+  description:
+    "Explore expert insights, seasonal strategies, and step-by-step investment guides. Learn how to start investing and make informed financial decisions in Kenya.",
+  keywords: [
+    "new year investment goals 2025",
+    "mid-year investment review",
+    "bonus investment ideas",
+    "year-end investment planning",
+    "13th month investment Kenya",
+    "investment tax planning",
+    "how to start investing in Kenya",
+    "steps to start investing Kenya",
+    "how much money to start investing",
+    "investment tutorial Kenya"
+  ],
+};
+
 const page = () => {
   return (
     <>
@@ -15,8 +34,7 @@ const page = () => {
         button="Explore"
         imageUrl="/images/rc.jpeg"
       />
-     
-      
+
       <Blog />
       <MoreResources />
       <ResourcesTabs />
