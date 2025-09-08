@@ -342,9 +342,6 @@ export const ResourcesData = [
         pdf: "/pdfs/Investment-Strategies-1.pdf",
         video: "https://youtu.be/5IJqH-h9Dro?si=kEhhpe1Luy95CGRo",
       },
-
-
-
     ],
   },
   {
@@ -361,7 +358,7 @@ export const ResourcesData = [
         video: "https://youtu.be/EvIDuxqmEbU",
       },
 
-       {
+      {
         id: 1,
         title: "Private Wealth Management",
         text: "Dedicated wealth planning to preserve and grow generational wealth.",
@@ -369,7 +366,7 @@ export const ResourcesData = [
         pdf: "/pdfs/Private-Wealth-1.pdf",
         video: "https://youtu.be/o-L7zORkNVE?si=Qhim-LiUhDVL1BXn",
       },
-       {
+      {
         id: 1,
         title: "Private Wealth Management",
         text: "Dedicated wealth planning to preserve and grow generational wealth.",
@@ -377,7 +374,7 @@ export const ResourcesData = [
         pdf: "/pdfs/Private-Wealth-1.pdf",
         video: "https://youtu.be/uz3vaxrWMQo?si=uo6I1D3lconmswql",
       },
-       {
+      {
         id: 1,
         title: "Private Wealth Management",
         text: "Dedicated wealth planning to preserve and grow generational wealth.",
@@ -385,7 +382,7 @@ export const ResourcesData = [
         pdf: "/pdfs/Private-Wealth-1.pdf",
         video: "https://youtu.be/7aY-NCRe0Ko?si=JGn81FTGpKzne40f",
       },
-       {
+      {
         id: 1,
         title: "Private Wealth Management",
         text: "Dedicated wealth planning to preserve and grow generational wealth.",
@@ -393,8 +390,6 @@ export const ResourcesData = [
         pdf: "/pdfs/Private-Wealth-1.pdf",
         video: "https://youtu.be/C6GUmUsr1Qk?si=XD0IbPXnhi5TWlHK",
       },
-  
-
     ],
   },
   {
@@ -419,7 +414,7 @@ export const ResourcesData = [
         pdf: "/pdfs/Financial-Planning-1.pdf",
         video: "https://youtu.be/mNgEwqeX-VI?si=-6E1ypZUrXbjizMp",
       },
-     {
+      {
         id: 1,
         title: "Financial Planning and Retirements",
         text: "Customized retirement solutions based on individual income needs and timelines.",
@@ -427,7 +422,7 @@ export const ResourcesData = [
         pdf: "/pdfs/Financial-Planning-1.pdf",
         video: "https://youtu.be/yRbj8kWT5TU?si=IChJTrHQj9mEebyt",
       },
-     {
+      {
         id: 1,
         title: "Financial Planning and Retirements",
         text: "Customized retirement solutions based on individual income needs and timelines.",
@@ -435,7 +430,7 @@ export const ResourcesData = [
         pdf: "/pdfs/Financial-Planning-1.pdf",
         video: "https://youtu.be/0R7k1IvySpw?si=yXjwwuouk7eHNeAF",
       },
-     {
+      {
         id: 1,
         title: "Financial Planning and Retirements",
         text: "Customized retirement solutions based on individual income needs and timelines.",
@@ -443,7 +438,6 @@ export const ResourcesData = [
         pdf: "/pdfs/Financial-Planning-1.pdf",
         video: "https://youtu.be/OC3yZG41ggg?si=DO3Rw4F_xdfZyuNB",
       },
-     
     ],
   },
   {
@@ -468,7 +462,6 @@ export const ResourcesData = [
         video: "https://youtu.be/HC6xJ8qKd9w",
       },
 
-
       {
         id: 1,
         title: "Investor Mindset and Education",
@@ -486,7 +479,7 @@ export const ResourcesData = [
         pdf: "/pdfs/Investor-Education-1.pdf",
         video: "https://youtu.be/HC6xJ8qKd9w",
       },
-{
+      {
         id: 1,
         title: "Investor Mindset and Education",
         text: "Insights into market psychology, risk tolerance, and behavioral finance.",
@@ -494,8 +487,6 @@ export const ResourcesData = [
         pdf: "/pdfs/Investor-Education-1.pdf",
         video: "https://youtu.be/HC6xJ8qKd9w",
       },
-
-
     ],
   },
 ];
@@ -1112,9 +1103,9 @@ export const LifestylePlans = [
         image: "/images/Travelfive.png",
       },
 
-       {
+      {
         id: 6,
-         key: "companions",
+        key: "companions",
         question: "How much have you saved ?",
         placeholder: "eg.   KES 10,000",
         hint: "How much have you already put aside for this trip?",
@@ -1122,7 +1113,7 @@ export const LifestylePlans = [
       },
       {
         id: 7,
-         key: "companions",
+        key: "companions",
         question: "How much can you save monthly?",
         placeholder: "eg.   KES 10,000",
         hint: "How much have you already put aside for this trip?",
@@ -1323,7 +1314,6 @@ export const LifestylePlans = [
     ],
   },
 ];
-
 
 export const HelpMeChoosePlans = [
   {
@@ -2465,5 +2455,28 @@ export const Lifestyle = [
         image: "/images/giving-3.jpg",
       },
     ],
+  },
+];
+
+export const BlogData = [
+  {
+    title: "Understanding Financial Planning: A Comprehensive Guide",
+    excerpt:
+      "At first glance, Dubai Is Calling may look like a travel offer. But look closer, and you will see something deeper. This isn’t about ticking destinations off a bucket list. Its about rethinking what it means to invest in yourself.",
+    Description:
+      "Financial planning is a crucial aspect of managing your personal finances effectively. It involves setting financial goals, creating a budget, and developing strategies to achieve those goals. A well-structured financial plan can help you navigate life's uncertainties and ensure a secure financial future.",
+    date: "August 4, 2025",
+    readTime: "8 min read",
+    image: "/images/dubai-calling.png",
+  },
+  {
+    title: "The Nabo Capital Insider",
+    excerpt:
+      "Welcome to The Nabo Capital Insider, your go-to source for financial literacy tips, industry insights and expert advice.",
+    Description:
+      "From understanding risk tolerance to diversifying your portfolio, these strategies will provide a solid foundation for making informed investment decisions.",
+    date: "July 20, 2025",
+    readTime: "7 min read",
+    image: "/images/investment-strategies.png",
   },
 ];

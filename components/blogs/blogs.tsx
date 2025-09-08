@@ -18,7 +18,12 @@ import FeaturedBlogs from "./FeaturedBlogs";
 
 export default function page() {
   return (
-    <Box py={12} marginX={marginX} bg={useColorModeValue("white", "gray.800")} mt={20}>
+    <Box
+      py={12}
+      marginX={marginX}
+      bg={useColorModeValue("white", "gray.800")}
+      mt={20}
+    >
       <Stack gap={8} textAlign="center" mb={10}>
         <Heading fontSize={{ base: "3xl", md: "6xl" }} fontWeight="bold">
           Fresh Take on Finance Every Week
@@ -74,13 +79,17 @@ export default function page() {
               The Campaign That Dares You to See More
             </Heading>
             <Text fontSize="sm" color="gray.600" mb={4}>
-             At first glance, Dubai Is Calling may look like a travel offer. But look closer, and you will see something deeper. This isn’t about ticking destinations off a bucket list. It’s about rethinking what it means to invest in yourself.
+              At first glance, Dubai Is Calling may look like a travel offer.
+              But look closer, and you will see something deeper. This isn’t
+              about ticking destinations off a bucket list. It’s about
+              rethinking what it means to invest in yourself.
             </Text>
             <Link
               color="blue.500"
               fontWeight="medium"
               display="flex"
               alignItems="center"
+              href="/tools_and_resources/dubai-calling"
             >
               Read More <IoArrowForwardCircleOutline />
             </Link>
@@ -99,10 +108,11 @@ export default function page() {
             Weekly Blog
           </Text>
           <Heading size="md" mt={2} mb={2}>
-           The Nabo Capital Insider
+            The Nabo Capital Insider
           </Heading>
           <Text fontSize="sm" color="gray.600" mb={4}>
-            Welcome to The Nabo Capital Insider, your go-to source for financial literacy tips, industry insights and expert advice.
+            Welcome to The Nabo Capital Insider, your go-to source for financial
+            literacy tips, industry insights and expert advice.
           </Text>
           <Link
             color="blue.500"

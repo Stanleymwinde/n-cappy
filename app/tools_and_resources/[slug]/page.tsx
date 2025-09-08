@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   Box,
@@ -11,7 +12,7 @@ import {
   Image,
   Stack,
 } from "@chakra-ui/react";
-import { useColorModeValue } from "../ui/color-mode";
+import { useColorModeValue } from "@/components/ui/color-mode";
 
 // Example single-file React component for Next.js + Chakra UI v3
 // Place the hero image in the public/ folder of your Next.js app
