@@ -5,6 +5,20 @@ import { LifestyleQuestions } from "@/components/lifestyle";
 import { Rates } from "@/components/common";
 import React from "react";
 
+// SEO metadata for Lifestyle Portfolio page
+export const metadata = {
+  title: "Lifestyle Portfolio | Invest for Early Career Growth",
+  description:
+    "Discover investment portfolios tailored for young professionals in Kenya. Start early, grow your wealth, and plan for your financial goals with Nabo Capital.",
+  keywords: [
+    "investment for young professionals Kenya",
+    "first salary investment Kenya",
+    "investment for 20s Kenya",
+    "young professional wealth building",
+    "where to invest 100k in Kenya"
+  ],
+};
+
 const page = () => {
   return (
     <>

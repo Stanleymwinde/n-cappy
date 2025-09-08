@@ -6,16 +6,6 @@ import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
 import NextTopLoader from "nextjs-toploader";
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
-
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -24,6 +14,24 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "N-Cappy ",
   description: "Making Money While Doing what you love",
+  keywords: [
+    "investment options Kenya",
+    "best investments in Kenya",
+    "safe places to invest money Kenya",
+    "investment companies Nairobi",
+    "financial advisors Nairobi",
+    "unit trust offices Nairobi",
+    "investment companies Mombasa",
+    "wealth management Kisumu",
+    "investment company reviews Kenya",
+    "African investment opportunities",
+    "ethical investing Kenya",
+    "purpose driven investing Kenya",
+    "generational wealth building",
+    "investment calculator Kenya",
+    "investment tutorial Kenya",
+    "investment tracker Kenya"
+  ],
   openGraph: {
     title: "N-Cappy",
     description: "Making Money While Doing what you love",
