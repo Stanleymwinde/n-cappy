@@ -27,7 +27,7 @@ const Page: React.FC = () => {
         button1="Learn More"
         imageUrl="/images/travelling.jpeg"
         title="Because Life is About Living Fully"
-        subtitle="Say yes to Life's Big, Beautiful moments without guilt, without worry"
+        subtitle="Invest in possibility. Safe, accessible, and ready—the Money Market Fund makes your next adventure always within reach."
         scrollTarget="#questions1"
       />
 

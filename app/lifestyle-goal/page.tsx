@@ -28,7 +28,7 @@ const page = () => {
         button1="Learn More"
         imageUrl="/images/life-style.jpeg"
         title="Live Purposefully.Save Deliberately."
-        subtitle="Secure the day-to-day, and create room to breathe, plan, and enjoy life."
+        subtitle="Invest in freedom. The Money Market Fund keeps you liquid, ready, and covered for life’s daily moves."
         scrollTarget="#questions"
       />
       <PlanForJoy

@@ -27,7 +27,7 @@ const Page = () => {
         button1="Learn More"
         imageUrl="/images/oldyy1.jpeg"
         title="Build something that outlives you"
-        subtitle="Make your mark. Then make it last"
+        subtitle="Invest in forever. The Fixed Income Fund grows wealth designed to outlast you."
         buttonLink="https://forms.office.com/Pages/ResponsePage.aspx?id=1I3gDCgn-kmOcay0o8PRRR6Lv0VsgzBFmSkSbPkBGwNUMDFGTVU2RlQ0SkY3TFI5MTVSRFVESEc2Wi4u"
         scrollTarget="#questions2"
       />
