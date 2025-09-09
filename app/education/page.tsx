@@ -28,7 +28,7 @@ const page = () => {
         button1="Learn More"
         imageUrl="/images/grad1.jpeg"
         title="For life’s big moments and the unexpected"
-        subtitle="True peace of mind is being financially ready."
+        subtitle="Invest in certainty. The Fixed Income Fund anchors your capital when life hits hardest."
         scrollTarget="#questions3"
       />
       <PlanForJoy

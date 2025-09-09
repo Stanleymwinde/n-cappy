@@ -56,16 +56,16 @@ const SwiperPage = () => {
         <SwiperSlide key={index}>
           <Box
             position="relative"
-            height={{ base: "70vh", md: "90vh" }} // 🔹 smaller height for mobile
+            height={{ base: "70vh", md: "90vh" }}
             width="100%"
             backgroundImage={`url(${image.image})`}
             backgroundSize="cover"
             backgroundPosition="center"
             display="flex"
-            alignItems={{ base: "flex-start", md: "center" }} // 🔹 text higher on mobile
+            alignItems={{ base: "flex-start", md: "center" }}
             justifyContent="flex-start"
             px={{ base: 4, md: 20 }}
-            py={{ base: 16, md: 0 }} // 🔹 extra padding top for small screens
+            py={{ base: 16, md: 0 }}
           >
             {/* Black overlay */}
             <Box
@@ -74,34 +74,44 @@ const SwiperPage = () => {
               left={0}
               width="100%"
               height="100%"
-              bg="rgba(0, 0, 0, 0.4)" 
+              bg="rgba(0, 0, 0, 0.4)"
               zIndex={0}
             />
 
             {/* Slide content */}
-            <Box color="white" position="relative" zIndex={1} maxW={{ base: "90%", md: "50%" }}>
+            <Box
+              color="white"
+              position="relative"
+              zIndex={1}
+              maxW={{ base: "90%", md: "50%" }}
+              textAlign="left"
+            >
               <Text
-                fontSize={{ base: "2xl", sm: "3xl", md: "5xl" }} // 🔹 scale font by device
+                fontSize={{ base: "2xl", sm: "3xl", md: "5xl" }}
                 fontWeight="bold"
                 lineHeight="short"
               >
-                Make money while doing
-                <br /> what you love
+                {image.title}
               </Text>
-              <Text fontSize={{ base: "sm", sm: "md", md: "xl" }} mt={4}>
+
+              <Text
+                fontSize={{ base: "sm", sm: "md", md: "xl" }}
+                mt={4}
+              >
                 {image.text}
               </Text>
+
               <Link href={image.link} passHref>
                 <Button
                   mt={6}
                   colorScheme="blackAlpha"
                   bg="#0A2233"
                   color="white"
-                  px={{ base: 6, md: 8 }} // 🔹 smaller button padding on mobile
+                  px={{ base: 6, md: 8 }}
                   py={{ base: 4, md: 6 }}
                   rounded="full"
                   fontWeight="bold"
-                  fontSize={{ base: "sm", md: "md" }} // 🔹 font adapts
+                  fontSize={{ base: "sm", md: "md" }}
                   _hover={{ bg: "#00CAFF" }}
                 >
                   Start Investing
@@ -131,9 +141,11 @@ export default SwiperPage;
 const slider_images = [
   {
     image: "/images/travel_dubai.png",
-    title: "Make Money While doing what you love",
-    description: "Dubai's Calling",
-    text: "Dubai's Calling",
+    title: "Invest in Experiences. Invest in Dubai.",
+    description:
+      "Step into a city where luxury, thrill, and wonder collide. Every moment you invest here becomes a memory that never fades.",
+    text:
+      "Step into a city where luxury, thrill, and wonder collide. Every moment you invest here becomes a memory that never fades.",
     link: "/travel",
   },
   {
@@ -143,18 +155,27 @@ const slider_images = [
     text: "Settle down. Now it’s your money’s turn to clock in.",
     link: "/lifestyle-goal",
   },
+    {
+    image: "/images/smiling.jpeg",
+    title: "Invest Where Performance Leads. Unlock Up to 13% p.a.",
+    description: "The Nabo Money Market Fund delivers trusted, market-leading growth. Invest smart, stay liquid, and watch your wealth work harder for you.",
+    text: "The Nabo Money Market Fund delivers trusted, market-leading growth. Invest smart, stay liquid, and watch your wealth work harder for you.",
+    link: "/lifestyle-goal",
+  },
   {
     image: "/images/globaly.jpeg",
-    title: "Make Money While doing what you love",
-    description: "Go Global with Us",
-    text: "Go Global with Us",
+    title: "Invest Beyond Borders. Build Wealth Without Limits.",
+    description:
+      "Unlock global markets, diversify your portfolio, and invest in opportunities that grow your wealth today—and protect your legacy tomorrow.",
+    text:
+      "Unlock global markets, diversify your portfolio, and invest in opportunities that grow your wealth today—and protect your legacy tomorrow.",
     link: "/global-investing",
   },
   {
     image: "/images/father.son.jpeg",
     title: "Make Money While doing what you love",
-    description: "Say yes to life’s big and beautiful moments ",
-    text: "Say yes to life’s big and beautiful moments ",
+    description: "Say yes to life’s big and beautiful moments",
+    text: "Say yes to life’s big and beautiful moments",
     link: "/education",
   },
   {
