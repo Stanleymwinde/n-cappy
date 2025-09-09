@@ -1,4 +1,4 @@
-import { FacebookIcon, InstagramIcon, XIcon, YoutubeIcon } from "../icons";
+import { FacebookIcon, InstagramIcon, LinkedInIcon, XIcon, YoutubeIcon } from "../icons";
 import TiktokIcon from "../icons/TikTokIcon";
 import { MdOutlineRealEstateAgent } from "react-icons/md";
 import { FaHandsHelping, FaShieldAlt, FaUniversity } from "react-icons/fa";
@@ -12,32 +12,38 @@ export const socials = [
   {
     id: 1,
     icon: FacebookIcon,
-    link: "https://www.facebook.com/",
+    link: "https://www.facebook.com/NaboCapital",
     name: "Facebook",
   },
   {
     id: 2,
     icon: XIcon,
-    link: "https://twitter.com/",
+    link: "https://x.com/NaboCapital",
     name: "Twitter",
   },
   {
     id: 3,
     icon: InstagramIcon,
-    link: "https://www.instagram.com//",
+    link: "https://www.instagram.com/nabocapital/",
     name: "Instagram",
   },
   {
     id: 4,
     icon: YoutubeIcon,
-    link: "https://youtube.com",
+    link: "https://www.youtube.com/@NaboCapitalKe",
     name: "Youtube",
   },
   {
     id: 5,
     icon: TiktokIcon,
-    link: "https://www.tiktok.com/",
+    link: "https://www.tiktok.com/@nabo_capital?lang=en",
     name: "Tiktok",
+  },
+  {
+    id: 5,
+    icon: LinkedInIcon,
+    link: "https://www.linkedin.com/company/nabo-capital/posts/?feedView=all",
+    name: "LinkedIn",
   },
 ];
 
