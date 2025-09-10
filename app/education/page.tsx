@@ -1,9 +1,9 @@
-import Hero from "@/components/common/Hero";
 import { CallToAction } from "@/components/home";
 import { PlanForJoy } from "@/components/i-want-tos";
 import React from "react";
 import { EduQuestions } from "../../components/Education";
 import { Rates } from "@/components/common";
+import HeroSwiper from "@/components/common/HeroSwiper"; // ✅ import swiper
 
 // SEO metadata for Security Portfolio page
 export const metadata = {
@@ -19,18 +19,32 @@ export const metadata = {
   ],
 };
 
-const page = () => {
+const securitySlides = [
+  {
+    image: "/images/grad1.jpeg",
+    title: "For life’s big moments and the unexpected",
+    text: "True peace of mind is being financially ready.",
+    primaryButton: "Unlock My Plan",
+    primaryLink: "/security-goal",
+    secondaryButton: "Learn More",
+    secondaryLink: "/security-goal",
+  },
+  {
+    image: "/images/iestate-plan.jpeg", 
+    title: "For life’s big moments and the unexpected",
+    text: "Invest in certainty. The Fixed Income Fund anchors your capital when life hits hardest.",
+    primaryButton: "Unlock My Plan",
+    primaryLink: "/security-goal",
+    secondaryButton: "Learn More",
+    secondaryLink: "/security-goal",
+  },
+];
+
+const Page: React.FC = () => {
   return (
     <>
       <Rates />
-      <Hero
-        button="Unlock My Plan"
-        button1="Learn More"
-        imageUrl="/images/grad1.jpeg"
-        title="For life’s big moments and the unexpected"
-        subtitle="Invest in certainty. The Fixed Income Fund anchors your capital when life hits hardest."
-        scrollTarget="#questions3"
-      />
+      <HeroSwiper slides={securitySlides} /> 
       <PlanForJoy
         title="Do You Want to Be Ready for Anything?"
         subtitle="Think of this as your personal financial safety shield—built for those who plan for life’s milestones and prepare for the unexpected."
@@ -43,4 +57,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
