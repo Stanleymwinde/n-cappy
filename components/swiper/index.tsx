@@ -160,7 +160,7 @@ const slider_images = [
     title: "Invest Where Performance Leads. Unlock Up to 13% p.a.",
     description: "The Nabo Money Market Fund delivers trusted, market-leading growth. Invest smart, stay liquid, and watch your wealth work harder for you.",
     text: "The Nabo Money Market Fund delivers trusted, market-leading growth. Invest smart, stay liquid, and watch your wealth work harder for you.",
-    link: "/lifestyle-goal",
+    link: "/individual/MMF&FIF",
   },
   {
     image: "/images/globaly.jpeg",

@@ -1,11 +1,9 @@
-import Hero from "@/components/common/Hero";
 import { CallToAction } from "@/components/home";
 import { PlanForJoy } from "@/components/i-want-tos";
 import { LifestyleQuestions } from "@/components/lifestyle";
 import { Rates } from "@/components/common";
-import React from "react";
+import HeroSwiper from "@/components/common/HeroSwiper"; 
 
-// SEO metadata for Lifestyle Portfolio page
 export const metadata = {
   title: "Lifestyle Portfolio | Invest for Early Career Growth",
   description:
@@ -15,22 +13,37 @@ export const metadata = {
     "first salary investment Kenya",
     "investment for 20s Kenya",
     "young professional wealth building",
-    "where to invest 100k in Kenya"
+    "where to invest 100k in Kenya",
   ],
 };
 
-const page = () => {
+const lifestyleSlides = [
+  {
+    image: "/images/life-style.jpeg",
+    title: "Live Purposefully. Save Deliberately.",
+    text: "Secure the day-to-day, and create room to breathe, plan, and enjoy life.",
+    primaryButton: "Unlock My Plan",
+    primaryLink: "/lifestyle-goal",
+    secondaryButton: "Learn More",
+    secondaryLink: "/lifestyle-goal",
+  },
+  {
+    image: "/images/clothing-utilities.jpeg",
+    title: "Live Purposefully. Save Deliberately.",
+    text: "Invest in freedom.\nThe Money Market Fund keeps you liquid, ready \nand covered for life’s daily moves.",
+    primaryButton: "Unlock My Plan",
+    primaryLink: "/lifestyle-goal",
+    secondaryButton: "Learn More",
+    secondaryLink: "/lifestyle-goal",
+  },
+];
+
+const Page = () => {
   return (
     <>
       <Rates />
-      <Hero
-        button="Unlock My Plan"
-        button1="Learn More"
-        imageUrl="/images/life-style.jpeg"
-        title="Live Purposefully.Save Deliberately."
-        subtitle="Invest in freedom. The Money Market Fund keeps you liquid, ready, and covered for life’s daily moves."
-        scrollTarget="#questions"
-      />
+      {/* ✅ Pass slides to HeroSwiper */}
+      <HeroSwiper slides={lifestyleSlides} />
       <PlanForJoy
         title="Do you want steady monthly returns that cover life's core expenses?"
         subtitle="With this plan, we help you replace your monthly income so that even if you lose your job, take a break, or face unexpected changes, your life keeps moving forward."
@@ -43,4 +56,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

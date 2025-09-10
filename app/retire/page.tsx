@@ -1,37 +1,56 @@
-import Hero from "@/components/common/Hero";
 import { CallToAction } from "@/components/home";
 import { PlanForJoy } from "@/components/i-want-tos";
 import { RetireQuestions } from "@/components/retire";
 import { Rates } from "@/components/common";
-import React from "react";
+import HeroSwiper from "@/components/common/HeroSwiper"; // new reusable swiper component
 
 export const metadata = {
-  title: "Legacy Portfolio | Build Wealth for Future Generations",
+  title: "Retirement Portfolio | Build Wealth for the Future",
   description:
-    "Plan for your family’s future with Nabo Capital’s legacy investment strategies. Learn about generational wealth building, education funds, and long-term wealth management in Kenya.",
+    "Plan for your retirement with Nabo Capital’s tailored investment strategies. Secure steady income, safeguard your future, and retire with peace of mind in Kenya.",
   keywords: [
-    "generational wealth building",
-    "children education fund Kenya",
-    "long-term wealth management Kenya",
-    "investment tax planning",
+    "retirement investment Kenya",
+    "retire early Kenya",
+    "pension planning Kenya",
+    "secure future investments",
+    "long-term financial planning Kenya",
   ],
 };
+
+const retireSlides = [
+  {
+    image: "/images/oldyy1.jpeg",
+    title: "Build something that outlives you",
+    text: "Make your mark. Then make it last",
+    primaryButton: "Unlock My Plan",
+    primaryLink: "/retire-goal",
+    secondaryButton: "Learn More",
+    secondaryLink: "/retire-goal",
+  },
+  {
+    image: "/images/estate-plan.jpeg",
+    title: "Retire with peace of mind",
+    text: "Invest in forever.The Fixed Income Fund grows wealth\ndesigned to outlast you.",
+    primaryButton: "Unlock My Plan",
+    primaryLink: "/retire-goal",
+    secondaryButton: "Learn More",
+     secondaryLink: "/retire-goal",
+  },
+];
+
+<HeroSwiper slides={retireSlides} />
 
 const Page = () => {
   return (
     <>
       <Rates />
-
-      <Hero
-        button="Unlock My Plan"
-        button1="Learn More"
+      <HeroSwiper slides={retireSlides} />
+      <PlanForJoy
+        title="Do you want to retire with peace of mind and steady income?"
+        subtitle="With this retirement plan, we help you grow a portfolio that provides you with predictable income long after you stop working."
+        subtext="You’ll enjoy the freedom of retirement without worrying about monthly expenses. Whether it’s healthcare, travel, or family, your essentials remain secured."
         imageUrl="/images/oldyy1.jpeg"
-        title="Build something that outlives you"
-        subtitle="Invest in forever. The Fixed Income Fund grows wealth designed to outlast you."
-        buttonLink="https://forms.office.com/Pages/ResponsePage.aspx?id=1I3gDCgn-kmOcay0o8PRRR6Lv0VsgzBFmSkSbPkBGwNUMDFGTVU2RlQ0SkY3TFI5MTVSRFVESEc2Wi4u"
-        scrollTarget="#questions2"
       />
-
       <RetireQuestions />
       <CallToAction />
     </>
