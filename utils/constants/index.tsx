@@ -1919,6 +1919,8 @@ export const StrategyContent = [
       alt: "Advisory Team",
     },
 
+     quote: "“Equity is the art of patience; time turns great companies into lasting wealth.” – Charles Miano",
+
     featuredDeal: {
       title: "Institutional Application:",
       description:
@@ -1960,6 +1962,8 @@ export const StrategyContent = [
       alt: "Private Credit Team",
     },
 
+    quote: "“A balanced portfolio is wealth in harmony; where endurance beats extremes.” – Charles Miano",
+
     featuredDeal: {
       title: "Institutional Application:",
       description:
@@ -2000,6 +2004,7 @@ export const StrategyContent = [
       image: "/images/Charles.png",
       alt: "Infrastructure Projects",
     },
+    quote: "“In uncertain markets, fixed income delivers the rarest asset of all: predictable cash flow.” – Charles Miano",
 
     featuredDeal: {
       title: "Institutional Application:",
@@ -2043,6 +2048,7 @@ export const whatweoffer = [
       image: "/images/Pius-new.png",
       alt: "Advisory Team",
     },
+    quote: "“We don’t just raise capital, we raise the belief that tomorrow can be bigger than today.” – Pius Muchiri",
     featuredDeal: {
       title: "Featured Deal:",
       description:
@@ -2083,6 +2089,7 @@ export const whatweoffer = [
       image: "/images/Pius-new.png",
       alt: "Private Credit Team",
     },
+    quote: "“True value is not only in today’s numbers, but in tomorrow’s potential.” – Pius Muchiri",
     featuredDeal: {
       title: "Featured Deal:",
       description:
@@ -2122,6 +2129,7 @@ export const whatweoffer = [
       image: "/images/Pius-new.png",
       alt: "Infrastructure Projects",
     },
+    quote: "“The best investor isn’t defined by pockets, but by vision aligned with yours.” – Pius Muchiri",
     featuredDeal: {
       title: "Featured Deal:",
       description:
@@ -2162,6 +2170,7 @@ export const whatweoffer = [
       image: "/images/Pius-new.png",
       alt: "Private Credit Team",
     },
+    quote: "“In every deal, the rarest and most valuable currency is trust.” – Pius Muchiri",
     featuredDeal: {
       title: "Featured Deal:",
       description:
@@ -2199,6 +2208,7 @@ export const whatweoffertreasury = [
       image: "/images/Pius-new.png",
       alt: "Advisory Team",
     },
+     quote: "“Liquidity should serve strategy, not limit it; bespoke portfolios make every shilling count.” – Pius Muchiri",
     featuredDeal: {
       title: "Featured Deal:",
       description:
@@ -2232,6 +2242,7 @@ export const whatweoffertreasury = [
       image: "/images/Pius-new.png",
       alt: "Private Credit Team",
     },
+     quote: "“Short-term doesn’t mean short-sighted; discipline turns idle cash into steady gains.” – Pius Muchiri",
     featuredDeal: {
       title: "Featured Deal:",
       description:
@@ -2266,6 +2277,7 @@ export const whatweoffertreasury = [
       image: "/images/Pius-new.png",
       alt: "Infrastructure Projects",
     },
+     quote: "“True strength is never caught off guard; planned liquidity keeps opportunity within reach.”” – Pius Muchiri",
     featuredDeal: {
       title: "Featured Deal:",
       description:
@@ -2298,6 +2310,7 @@ export const whatweoffertreasury = [
       image: "/images/Pius-new.png",
       alt: "Private Credit Team",
     },
+     quote: "“Markets move fast—daily oversight keeps your liquidity a step ahead” – Pius Muchiri",
     featuredDeal: {
       title: "Featured Deal:",
       description:

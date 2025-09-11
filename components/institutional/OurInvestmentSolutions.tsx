@@ -152,6 +152,18 @@ const InvestmentSolutions = () => {
                             fill
                           />
                         </Box>
+
+                        {item.quote && (
+                          <Text
+                            mt={4}
+                            fontStyle="italic"
+                            fontSize={{ base: "md", md: "lg" }}
+                            color="gray.700"
+                            textAlign="center"
+                          >
+                            {item.quote}
+                          </Text>
+                        )}
                       </GridItem>
                     </Grid>
 
