@@ -31,7 +31,11 @@ const InvestmentSolutions = () => {
       </Heading>
 
       {/* Intro Text */}
-      <Text fontSize={{ base: "lg", md: "2xl" }} color="gray.600" textAlign="center">
+      <Text
+        fontSize={{ base: "lg", md: "2xl" }}
+        color="gray.600"
+        textAlign="center"
+      >
         We offer tailored investment advisory services for institutional and
         corporate clients, combining deep market insight with strategic analysis
         to drive long-term value.
@@ -52,7 +56,10 @@ const InvestmentSolutions = () => {
               {/* Accordion Trigger */}
               <Accordion.ItemTrigger>
                 <Stack gap={4} px={4} py={4} flex={1}>
-                  <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight="semibold">
+                  <Text
+                    fontSize={{ base: "xl", md: "2xl" }}
+                    fontWeight="semibold"
+                  >
                     {item.title}
                   </Text>
                   <Text fontSize={{ base: "md", md: "xl" }} color="gray.600">
@@ -142,30 +149,44 @@ const InvestmentSolutions = () => {
                           position="relative"
                           borderRadius="md"
                           overflow="hidden"
-                          width="100%"
+                          width="90%"
                           height={{ base: "250px", md: "500px" }}
                         >
-                          <Image src={item.media.image} alt={item.media.alt} fill />
+                          <Image
+                            src={item.media.image}
+                            alt={item.media.alt}
+                            fill
+                          />
                           <Box
                             position="absolute"
                             top="50%"
                             left="50%"
                             transform="translate(-50%, -50%)"
-                          >
-                            <MdPlayCircleFilled size={64} color="white" />
-                          </Box>
+                          ></Box>
                         </Box>
+
+                        {item.quote && (
+                          <Text
+                            mt={4}
+                            fontStyle="italic"
+                            fontSize={{ base: "md", md: "lg" }}
+                            color="gray.700"
+                            textAlign="center"
+                            px={2}
+                          >
+                            {item.quote}
+                          </Text>
+                        )}
                       </GridItem>
                     </Grid>
-
-                    <Text mt={6} fontSize="md" maxW="4xl" textAlign="left">
-                      {item.extraText}
-                    </Text>
 
                     {/* Featured Deal Box */}
                     {Array.isArray(item.featuredDeal)
                       ? item.featuredDeal.map(
-                          (deal: { title: string; description: string }, idt: number) => (
+                          (
+                            deal: { title: string; description: string },
+                            idt: number
+                          ) => (
                             <Box
                               bg="blue.900"
                               color="white"
@@ -190,7 +211,9 @@ const InvestmentSolutions = () => {
                             mt={6}
                             borderRadius="md"
                           >
-                            <Text fontWeight="bold">{item.featuredDeal.title}</Text>
+                            <Text fontWeight="bold">
+                              {item.featuredDeal.title}
+                            </Text>
                             <Text fontSize="2xl" mt={2}>
                               {item.featuredDeal.description}
                             </Text>
