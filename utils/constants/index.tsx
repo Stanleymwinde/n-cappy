@@ -301,52 +301,52 @@ export const CoreStrategiessData = [
 export const ResourcesData = [
   {
     title: "Investment Types and Strategies",
-    subtitle: "Tailored investment structures for sustainable returns",
     icon: "LuFolder",
     description: [
       {
         id: 1,
         title: "Investment Types and Strategies",
+        subtitle: "Financial freedom isn’t found in chasing returns. ",
         text: "We explore a diverse mix of investment vehicles, including equity, debt, and hybrid instruments.",
         image: "/images/Vid-1.jpeg",
         pdf: "/pdfs/Investment-Strategies-1.pdf",
-        video: "https://youtu.be/hTRb832NqOs",
+        video: "https://youtu.be/fmW4ZwDaHS4?si=_fe0b_Ao-rGTakMt",
       },
-
       {
         id: 2,
         title: "Investment Types and Strategies",
+        subtitle: "A Raise Won't Fix What You Do Not Know About Money",
         text: "We explore a diverse mix of investment vehicles, including equity, debt, and hybrid instruments.",
-        image: "/images/Vid-1.0.jpeg",
+        image: "/images/Vid-1.jpeg",
         pdf: "/pdfs/Investment-Strategies-1.pdf",
-        video: "https://youtu.be/NDCFSkCDJv4?si=KdWNfzyDxdgLOyRo",
+        video: "https://youtu.be/IjDo69fZrPA?si=wJfvYuCk5vgZY3wf",
       },
-
       {
         id: 3,
         title: "Investment Types and Strategies",
+        subtitle: "You Will Never Be Free, If You Count On Your Salary!",
         text: "We explore a diverse mix of investment vehicles, including equity, debt, and hybrid instruments.",
-        image: "/images/Vid-1.1.jpeg",
+        image: "/images/Vid-1.jpeg",
         pdf: "/pdfs/Investment-Strategies-1.pdf",
-        video: "https://youtu.be/kxIbC_CXP94?si=pYMQvfbiT4se78Ft",
+        video: "https://youtu.be/NDCFSkCDJv4?si=rVP4_eu6x3MKfcKw",
       },
-
       {
         id: 4,
         title: "Investment Types and Strategies",
+        subtitle: "Never Go Broke Again, This Investment Plan Works!",
         text: "We explore a diverse mix of investment vehicles, including equity, debt, and hybrid instruments.",
-        image: "/images/Vid1.2.jpeg",
+        image: "/images/Vid-1.jpeg",
         pdf: "/pdfs/Investment-Strategies-1.pdf",
-        video: "https://youtu.be/pWC1gJCSnOI?si=7y53SHqx_hVcSKJw",
+        video: "https://youtu.be/hTRb832NqOs?si=6-EpzM47u14VSWCS",
       },
-
       {
         id: 5,
         title: "Investment Types and Strategies",
+        subtitle: "The Strategies You Need To Invest With Purpose",
         text: "We explore a diverse mix of investment vehicles, including equity, debt, and hybrid instruments.",
-        image: "/images/Vid-1.3.jpeg",
+        image: "/images/Vid-1.jpeg",
         pdf: "/pdfs/Investment-Strategies-1.pdf",
-        video: "https://youtu.be/5IJqH-h9Dro?si=kEhhpe1Luy95CGRo",
+        video: "https://youtu.be/FFOGreNBrmg?si=woETNjuo58xyu02L",
       },
     ],
   },
@@ -358,43 +358,47 @@ export const ResourcesData = [
       {
         id: 1,
         title: "Private Wealth Management",
+        subtitle: "This Is Why Most People Stay Broke, Even When They Try",
         text: "Dedicated wealth planning to preserve and grow generational wealth.",
         image: "/images/vid-2.jpeg",
         pdf: "/pdfs/Private-Wealth-1.pdf",
-        video: "https://youtu.be/EvIDuxqmEbU",
-      },
-
-      {
-        id: 1,
-        title: "Private Wealth Management",
-        text: "Dedicated wealth planning to preserve and grow generational wealth.",
-        image: "/images/vid2.webp",
-        pdf: "/pdfs/Private-Wealth-1.pdf",
-        video: "https://youtu.be/o-L7zORkNVE?si=Qhim-LiUhDVL1BXn",
+        video: "https://youtu.be/OXJRWE1EOYo?si=RDlmlGBUmp9fFyTs",
       },
       {
-        id: 1,
+        id: 2,
         title: "Private Wealth Management",
+        subtitle: "You Look Rich, But One Crisis Can Break You",
         text: "Dedicated wealth planning to preserve and grow generational wealth.",
-        image: "/images/vid2.webp",
+        image: "/images/vid-2.jpeg",
         pdf: "/pdfs/Private-Wealth-1.pdf",
-        video: "https://youtu.be/uz3vaxrWMQo?si=uo6I1D3lconmswql",
+        video: "https://youtu.be/BmfeB03BF7c?si=_7tHX5lOuFUIr7VA",
       },
       {
-        id: 1,
+        id: 3,
         title: "Private Wealth Management",
+        subtitle: "If Your Money Needs You Awake, You Are Not Free!",
         text: "Dedicated wealth planning to preserve and grow generational wealth.",
-        image: "/images/vid2.webp",
+        image: "/images/vid-2.jpeg",
         pdf: "/pdfs/Private-Wealth-1.pdf",
-        video: "https://youtu.be/7aY-NCRe0Ko?si=JGn81FTGpKzne40f",
+        video: "https://youtu.be/5Kb_Mour9Io?si=CqxAwCnZG4RwO7XE",
       },
       {
-        id: 1,
+        id: 4,
         title: "Private Wealth Management",
+        subtitle: "You've Worked Too Hard To Stay Broke. Let's Fix That",
         text: "Dedicated wealth planning to preserve and grow generational wealth.",
-        image: "/images/vid2.webp",
+        image: "/images/vid-2.jpeg",
         pdf: "/pdfs/Private-Wealth-1.pdf",
-        video: "https://youtu.be/C6GUmUsr1Qk?si=XD0IbPXnhi5TWlHK",
+        video: "https://youtu.be/EvIDuxqmEbU?si=iOmIwNpwghnWucRL",
+      },
+      {
+        id: 5,
+        title: "Private Wealth Management",
+        subtitle: "The Heart Behind Billions | Ft. Pius Muchiri and Moses Njuguna",
+        text: "Dedicated wealth planning to preserve and grow generational wealth.",
+        image: "/images/vid-2.jpeg",
+        pdf: "/pdfs/Private-Wealth-1.pdf",
+        video: "https://youtu.be/0bMIZFy6fDQ?si=2qPnqstcLP_2h12l",
       },
     ],
   },
@@ -406,43 +410,47 @@ export const ResourcesData = [
       {
         id: 1,
         title: "Financial Planning and Retirements",
+        subtitle: "Your Gift Comes With A Mission | Customer Testimonial",
         text: "Customized retirement solutions based on individual income needs and timelines.",
         image: "/images/vid-3.jpeg",
         pdf: "/pdfs/Financial-Planning-1.pdf",
-        video: "https://youtu.be/tlPZBJL0qRY",
-      },
-
-      {
-        id: 1,
-        title: "Financial Planning and Retirements",
-        text: "Customized retirement solutions based on individual income needs and timelines.",
-        image: "/images/vid4.webp",
-        pdf: "/pdfs/Financial-Planning-1.pdf",
-        video: "https://youtu.be/mNgEwqeX-VI?si=-6E1ypZUrXbjizMp",
+        video: "https://youtu.be/g7SYcLx9GIs?si=WH4SuBgJIW_QJfpB",
       },
       {
-        id: 1,
+        id: 2,
         title: "Financial Planning and Retirements",
+        subtitle: " Claim the freedom you deserve ",
         text: "Customized retirement solutions based on individual income needs and timelines.",
-        image: "/images/vid4.webp",
+        image: "/images/vid-3.jpeg",
         pdf: "/pdfs/Financial-Planning-1.pdf",
-        video: "https://youtu.be/yRbj8kWT5TU?si=IChJTrHQj9mEebyt",
+        video: "https://youtu.be/OCUe4uRurOo?si=4b4Ub0yytJ6DMkRi",
       },
       {
-        id: 1,
+        id: 3,
         title: "Financial Planning and Retirements",
+        subtitle: "Want It, Earn It! | Customer Testimonial",
         text: "Customized retirement solutions based on individual income needs and timelines.",
-        image: "/images/vid4.webp",
+        image: "/images/vid-3.jpeg",
         pdf: "/pdfs/Financial-Planning-1.pdf",
-        video: "https://youtu.be/0R7k1IvySpw?si=yXjwwuouk7eHNeAF",
+        video: "https://youtu.be/2FgbL6GmmEs?si=RFQ2bxEeism_gs-Q",
       },
       {
-        id: 1,
+        id: 4,
         title: "Financial Planning and Retirements",
+        subtitle: "How Asking 'Why Built Wealth",
         text: "Customized retirement solutions based on individual income needs and timelines.",
-        image: "/images/vid4.webp",
+        image: "/images/vid-3.jpeg",
         pdf: "/pdfs/Financial-Planning-1.pdf",
-        video: "https://youtu.be/OC3yZG41ggg?si=DO3Rw4F_xdfZyuNB",
+        video: "https://youtu.be/8TI-mBG7T3k?si=QHLJbl1qANilKwDC",
+      },
+      {
+        id: 5,
+        title: "Financial Planning and Retirements",
+        subtitle: "Think Big Attract Bigger! | Customer Testimonial",
+        text: "Customized retirement solutions based on individual income needs and timelines.",
+        image: "/images/vid-3.jpeg",
+        pdf: "/pdfs/Financial-Planning-1.pdf",
+        video: "https://youtu.be/ECgt-6OINO8?si=mCZ4ZaWa5o3UPbie",
       },
     ],
   },
@@ -454,48 +462,52 @@ export const ResourcesData = [
       {
         id: 1,
         title: "Investor Mindset and Education",
+        subtitle: " First, Get Your Money Mindset Right",
         text: "Insights into market psychology, risk tolerance, and behavioral finance.",
         image: "/images/vid-4.jpeg",
         pdf: "/pdfs/Investor-Education-1.pdf",
-        video: "https://youtu.be/HC6xJ8qKd9w",
+        video: "https://youtu.be/-Ilk82l9uW4?si=oqC-sn_KS4W6fa37",
       },
       {
-        id: 1,
+        id: 2,
         title: "Investor Mindset and Education",
+        subtitle: "You Want A Legacy Not A Side Hustle",
         text: "Insights into market psychology, risk tolerance, and behavioral finance.",
-        image: "/images/i-p.webp",
+        image: "/images/vid-4.jpeg",
         pdf: "/pdfs/Investor-Education-1.pdf",
-        video: "https://youtu.be/HC6xJ8qKd9w",
+        video: "https://youtu.be/FPEA_TAv1v4?si=EqA05AdHaiXkx85y",
       },
-
       {
-        id: 1,
+        id: 3,
         title: "Investor Mindset and Education",
+        subtitle: "The Habit That Changes Everything",
         text: "Insights into market psychology, risk tolerance, and behavioral finance.",
-        image: "/images/i-p.webp",
+        image: "/images/vid-4.jpeg",
         pdf: "/pdfs/Investor-Education-1.pdf",
-        video: "https://youtu.be/HC6xJ8qKd9w",
+        video: "https://youtu.be/MlgPoHVVvNU?si=dI5Gvf-PMZPfB8pP",
       },
-
       {
-        id: 1,
+        id: 4,
         title: "Investor Mindset and Education",
+        subtitle: "This Is How You Move From Zero To Wealth",
         text: "Insights into market psychology, risk tolerance, and behavioral finance.",
-        image: "/images/i-p.webp",
+        image: "/images/vid-4.jpeg",
         pdf: "/pdfs/Investor-Education-1.pdf",
-        video: "https://youtu.be/HC6xJ8qKd9w",
+        video: "https://youtu.be/HC6xJ8qKd9w?si=wFg-A-R1QVV7ady9",
       },
       {
-        id: 1,
+        id: 5,
         title: "Investor Mindset and Education",
+        subtitle: "Developing a Growth Mindset",
         text: "Insights into market psychology, risk tolerance, and behavioral finance.",
-        image: "/images/i-p.webp",
+        image: "/images/vid-4.jpeg",
         pdf: "/pdfs/Investor-Education-1.pdf",
         video: "https://youtu.be/HC6xJ8qKd9w",
       },
     ],
   },
 ];
+
 
 export const investmentData = [
   {
@@ -1109,9 +1121,9 @@ export const LifestylePlans = [
         image: "/images/Travelfive.png",
       },
 
-      {
+       {
         id: 6,
-        key: "companions",
+         key: "companions",
         question: "How much have you saved ?",
         placeholder: "eg.   KES 10,000",
         hint: "How much have you already put aside for this trip?",
@@ -1119,7 +1131,7 @@ export const LifestylePlans = [
       },
       {
         id: 7,
-        key: "companions",
+         key: "companions",
         question: "How much can you save monthly?",
         placeholder: "eg.   KES 10,000",
         hint: "How much have you already put aside for this trip?",
@@ -1320,6 +1332,7 @@ export const LifestylePlans = [
     ],
   },
 ];
+
 
 export const HelpMeChoosePlans = [
   {
@@ -2474,28 +2487,5 @@ export const Lifestyle = [
         image: "/images/giving-3.jpg",
       },
     ],
-  },
-];
-
-export const BlogData = [
-  {
-    title: "Understanding Financial Planning: A Comprehensive Guide",
-    excerpt:
-      "At first glance, Dubai Is Calling may look like a travel offer. But look closer, and you will see something deeper. This isn’t about ticking destinations off a bucket list. Its about rethinking what it means to invest in yourself.",
-    Description:
-      "Financial planning is a crucial aspect of managing your personal finances effectively. It involves setting financial goals, creating a budget, and developing strategies to achieve those goals. A well-structured financial plan can help you navigate life's uncertainties and ensure a secure financial future.",
-    date: "August 4, 2025",
-    readTime: "8 min read",
-    image: "/images/dubai-calling.png",
-  },
-  {
-    title: "The Nabo Capital Insider",
-    excerpt:
-      "Welcome to The Nabo Capital Insider, your go-to source for financial literacy tips, industry insights and expert advice.",
-    Description:
-      "From understanding risk tolerance to diversifying your portfolio, these strategies will provide a solid foundation for making informed investment decisions.",
-    date: "July 20, 2025",
-    readTime: "7 min read",
-    image: "/images/investment-strategies.png",
   },
 ];
