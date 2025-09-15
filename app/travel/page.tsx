@@ -22,11 +22,11 @@ const travelSlides = [
   {
     image: "/images/travelling.jpeg",
     title: "Because Life is About Living Fully",
-    text: "Say Yes to Life’s Big, Beautiful moments without guilt, without worry",
+    text: "Say Yes to life’s big, beautiful moments without guilt, without worry",
     primaryButton: "Unlock My Plan",
     primaryLink: "/travel-goal",
     secondaryButton: "Learn More",
-    secondaryLink: "/travel-goal",
+    secondaryLink: "/individual",
   },
   {
     image: "/images/b-t.jpeg",
@@ -35,7 +35,7 @@ const travelSlides = [
     primaryButton: "Unlock My Plan",
     primaryLink: "/travel-goal",
     secondaryButton: "Learn More",
-    secondaryLink: "/travel-goal",
+    secondaryLink: "/individual",
   },
 ];
 

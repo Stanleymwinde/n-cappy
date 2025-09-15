@@ -54,6 +54,8 @@ const Strategy = () => {
                     {item.description}
                   </Card.Description>
                 </Card.Body>
+
+                {/* Card Footer */}
                 <Card.Footer
                   bg={"black"}
                   color="white"
@@ -62,15 +64,17 @@ const Strategy = () => {
                   borderRadius="md"
                   _hover={{ bg: "gray.700", transform: "scale(1.04)" }}
                 >
-                  {item.link ? (
-                    <Link href={item.link} passHref target="_blank">
-                      Book a Consultation
-                    </Link>
-                  ) : (
-                    <Link href="#" passHref>
-                      Download Whitepapers
-                    </Link>
-                  )}
+                  <Link href={item.link} passHref legacyBehavior>
+                    <a
+                      download={item.title === "Download Brochure" ? true : undefined}
+                      target={item.title === "Book a Strategy Call" ? "_blank" : "_self"}
+                      style={{ color: "inherit", textDecoration: "none" }}
+                    >
+                      {item.title === "Book a Strategy Call"
+                        ? "Book a Consultation"
+                        : "Download Monthly Notes"}
+                    </a>
+                  </Link>
                 </Card.Footer>
               </Flex>
             </Card.Root>
@@ -96,5 +100,6 @@ const strategyData = [
     title: "Download Brochure",
     description:
       "Institutional-grade reporting, compliance oversight, and real-time risk analytics ensure full visibility and trust.",
+    link: "/notes/monthly-notes.zip", // <-- your zipped .docx file
   },
 ];

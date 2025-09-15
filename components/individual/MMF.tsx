@@ -58,13 +58,13 @@ const features = [
 
 const MoneyMarketFund = () => {
   return (
-    <Box marginX={marginX} px={{ base: 4, md: 16 }}  mt={20}>
+    <Box marginX={marginX} px={{ base: 4, md: 16 }} mt={20}>
       <VStack gap={4} textAlign="center" mb={10}>
         <Heading
           as="h1"
           fontSize={{ base: "3xl", md: "6xl" }}
           fontFamily="poppins"
-          fontWeight={"bold"}
+          fontWeight="bold"
           textAlign="center"
           my={6}
           color="gray.800"
@@ -105,21 +105,21 @@ const MoneyMarketFund = () => {
         ))}
       </Grid>
 
+      {/* Download Fact Sheet Button */}
       <Flex justify={{ base: "center", md: "flex-end" }}>
-        <Link href="/pdfs/mmf-factsheet.pdf" _hover={{ textDecor: "none" }}>
+        <a href="/images/mmf-factsheet.jpeg" download>
           <Button
             bg="#0a2234"
             color="white"
-             _hover={{ bg: "#00CAFF" }}
+            _hover={{ bg: "#00CAFF" }}
             rounded="lg"
             px={6}
             py={5}
           >
-            {" "}
-            <MdDownload />
+            <MdDownload style={{ marginRight: "8px" }} />
             Money Market Fund (KES) Fact Sheet
           </Button>
-        </Link>
+        </a>
       </Flex>
     </Box>
   );
