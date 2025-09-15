@@ -22,21 +22,21 @@ export const metadata = {
 const securitySlides = [
   {
     image: "/images/grad1.jpeg",
-    title: "For life’s big moments and the unexpected",
+    title: "For Life’s Big Moments and the Unexpected",
     text: "True peace of mind is being financially ready.",
     primaryButton: "Unlock My Plan",
     primaryLink: "/security-goal",
     secondaryButton: "Learn More",
-    secondaryLink: "/security-goal",
+    secondaryLink: "/individual",
   },
   {
     image: "/images/iestate-plan.jpeg", 
-    title: "For life’s big moments and the unexpected",
-    text: "Invest in certainty. The Fixed Income Fund anchors your capital when life hits hardest.",
+    title: "For Life’s Big Moments and the Unexpected",
+    text: "Invest in certainty. The Fixed income Fund anchors your capital when life hits hardest.",
     primaryButton: "Unlock My Plan",
     primaryLink: "/security-goal",
     secondaryButton: "Learn More",
-    secondaryLink: "/security-goal",
+    secondaryLink: "/individual",
   },
 ];
 

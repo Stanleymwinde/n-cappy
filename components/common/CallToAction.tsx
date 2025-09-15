@@ -1,7 +1,29 @@
 "use client";
-
 import { Box, Flex, Link, Image } from "@chakra-ui/react";
 import React from "react";
+import { motion } from "framer-motion";
+
+const MotionBox = motion(Box);
+
+const headingVariant = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
+};
+
+const leftBadgeVariant = {
+  hidden: { opacity: 0, x: -150 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.7 } },
+};
+
+const rightBadgeVariant = {
+  hidden: { opacity: 0, x: 150 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.7 } },
+};
+
+const investButtonVariant = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
+};
 
 const CallToActionCommon = () => {
   return (
@@ -11,7 +33,7 @@ const CallToActionCommon = () => {
       bgPos="center"
       bgRepeat="no-repeat"
       width="100%"
-      height="300px"
+      height="400px"
       position="relative"
     >
       <Box
@@ -26,70 +48,97 @@ const CallToActionCommon = () => {
         justifyContent="center"
         alignItems="center"
         textAlign="center"
+        px={4}
       >
         {/* Heading */}
-        <Box fontSize={{ base: "2xl", md: "4xl" }} fontWeight="bold" color="white">
+        <MotionBox
+          variants={headingVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.3 }}
+          fontSize={{ base: "2xl", md: "4xl" }}
+          fontWeight="bold"
+          color="white"
+          mt={{ base: 8, md: 12 }} // push heading down a bit
+          mb={{ base: 2, md: 3 }}
+        >
           Innovation that feels personal
-        </Box>
+        </MotionBox>
 
         {/* Store Buttons */}
         <Flex
-          mt={4}
-          gap={{ base: 3, md: "2rem" }}
+          mb={{ base: 2, md: 3 }} // reduce space between badges and button
           align="center"
           justify="center"
           flexDirection={{ base: "column", md: "row" }}
-          flexWrap="wrap"
         >
           {/* App Store Badge */}
-          <Link
-            href="https://apps.apple.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            _hover={{ transform: "scale(1.05)" }}
-            transition="all 0.3s ease"
+          <MotionBox
+            variants={leftBadgeVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            mr={{ base: 0, md: 4 }}
+            mb={{ base: 2, md: 0 }}
           >
-            <Image
-              src="/images/App_store.svg"
-              alt="Download on the App Store"
-              height="70px"
-              objectFit="contain"
-            />
-          </Link>
+            <Link
+              href="https://apps.apple.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/images/App_store.svg"
+                alt="App Store"
+                height="70px"
+                objectFit="contain"
+              />
+            </Link>
+          </MotionBox>
 
           {/* Google Play Badge */}
-          <Link
-            href="https://play.google.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            _hover={{ transform: "scale(1.05)" }}
-            transition="all 0.3s ease"
+          <MotionBox
+            variants={rightBadgeVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
           >
-            <Image
-              src="/images/gg.webp"
-              alt="Get it on Google Play"
-              height="160px"
-              objectFit="contain"
-            />
-          </Link>
+            <Link
+              href="https://play.google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/images/gg.webp"
+                alt="Google Play"
+                height="160px"
+                objectFit="contain"
+              />
+            </Link>
+          </MotionBox>
         </Flex>
 
-        {/* CTA Button */}
-        <Link href="https://invest.nabocapital.com" target="_blank">
-          <Box
-
-            fontSize={{ base: "md", md: "lg" }}
-            fontWeight="bold"
-            as={"button"}
-            bgColor={"white"}
-            padding="10px 20px"
-            borderRadius="5px"
-            _hover={{ bgColor: "#00b5e0" }}
-            cursor="pointer"
-          >
-            INVEST NOW
-          </Box>
-        </Link>
+        {/* INVEST NOW Button */}
+        <MotionBox
+          variants={investButtonVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.3 }}
+          mt={{ base: -4, md: -6 }} // move button up to occupy space better
+        >
+          <Link href="https://invest.nabocapital.com" target="_blank">
+            <Box
+              fontSize={{ base: "md", md: "lg" }}
+              fontWeight="bold"
+              bgColor="white"
+              padding="10px 20px"
+              borderRadius="5px"
+              _hover={{ bgColor: "#00b5e0" }}
+              cursor="pointer"
+            >
+              INVEST NOW
+            </Box>
+          </Link>
+        </MotionBox>
       </Box>
     </Box>
   );

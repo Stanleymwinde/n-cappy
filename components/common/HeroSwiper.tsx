@@ -50,13 +50,13 @@ const HeroSwiper: React.FC<HeroSwiperProps> = ({ slides }) => {
       navigation
       modules={[Autoplay, Pagination, Navigation]}
       onAutoplayTimeLeft={onAutoplayTimeLeft}
-      style={{ width: "100%", height: "83vh" }}
+      style={{ width: "100%", height: "93vh" }}
     >
       {slides.map((slide, index) => (
         <SwiperSlide key={index}>
           <Box
             position="relative"
-            height={{ base: "60vh", md: "83vh" }}
+            height={{ base: "60vh", md: "99vh" }}
             width="100%"
             objectFit={"fill"}
             backgroundImage={`url(${slide.image})`}
@@ -75,7 +75,7 @@ const HeroSwiper: React.FC<HeroSwiperProps> = ({ slides }) => {
               left={0}
               width="100%"
               height="100%"
-              bg="rgba(0, 0, 0, 0.5)"
+              bg="rgba(0, 0, 0, 0.3)"
               zIndex={0}
             />
 

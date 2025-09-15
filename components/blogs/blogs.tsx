@@ -45,7 +45,7 @@ export default function page() {
         >
           <Box position="relative">
             <Image
-              src="/images/why-choose-dubai.jpeg"
+              src="/images/dubai-calling.png"
               alt="When Was the Last Time You Truly Stepped Out?"
               objectFit="cover"
               w="full"

@@ -35,7 +35,7 @@ const Hero = ({
   return (
     <Box
       position="relative"
-      height={{ base: "70vh", sm: "75vh", md: "90vh" }}
+      height={{ base: "65vh", sm: "80vh", md: "110vh" }}
       minHeight="300px"
       maxHeight="900px"
       width="100%"
@@ -65,7 +65,7 @@ const Hero = ({
         left={0}
         right={0}
         bottom={0}
-        bg="rgba(0, 0, 0, 0.4)"
+        bg="rgba(0, 0, 0, 0.2)"
         zIndex={1}
       />
 

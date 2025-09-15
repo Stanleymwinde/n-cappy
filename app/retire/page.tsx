@@ -20,7 +20,7 @@ export const metadata = {
 const retireSlides = [
   {
     image: "/images/oldyy1.jpeg",
-    title: "Build something that outlives you",
+    title: "Build Something that Outlives You",
     text: "Make your mark. Then make it last",
     primaryButton: "Unlock My Plan",
     primaryLink: "/retire-goal",
@@ -29,12 +29,12 @@ const retireSlides = [
   },
   {
     image: "/images/estate-plan.jpeg",
-    title: "Retire with peace of mind",
+    title: "Build Something that Outlives You",
     text: "Invest in forever.The Fixed Income Fund grows wealth\ndesigned to outlast you.",
     primaryButton: "Unlock My Plan",
     primaryLink: "/retire-goal",
     secondaryButton: "Learn More",
-     secondaryLink: "/retire-goal",
+     secondaryLink: "/individual",
   },
 ];
 

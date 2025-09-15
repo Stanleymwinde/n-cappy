@@ -1,3 +1,4 @@
+"use client";
 import {
   Box,
   Flex,
@@ -11,12 +12,21 @@ import {
   Link,
 } from "@chakra-ui/react";
 import React, { ReactNode } from "react";
+import { motion } from "framer-motion";
 
 import { marginX } from "@/utils/constants";
 import Socials from "../common/socials";
 import { PhoneIcon } from "@/utils/icons";
 import WhatsAppIcon from "@/utils/icons/WhatsApp";
 import MailIcon from "@/utils/icons/MailIcon";
+
+const MotionBox = motion(Box);
+
+// Animation variant for "coming from bottom"
+const fadeUpVariant = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" as const } },
+};
 
 const Footer = () => {
   return (
@@ -33,61 +43,104 @@ const Footer = () => {
         gap={8}
       >
         {/* Logo */}
-        <Stack>
-          <Image
-            boxSize="150px"
-            src="/images/Logo.svg"
-            alt="N-Cappy Logo"
-            objectFit="contain"
-          />
-        </Stack>
+        <MotionBox
+          variants={fadeUpVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.3 }}
+        >
+          <Stack>
+            <Image
+              boxSize="150px"
+              src="/images/Logo.svg"
+              alt="N-Cappy Logo"
+              objectFit="contain"
+            />
+          </Stack>
+        </MotionBox>
 
         {/* Explore */}
-        <Stack>
-          <CHeading>Explore</CHeading>
-          {ExploreData.call.map((item, i) => (
-            <FooterCard key={i} link={item.link} label={item.label} />
-          ))}
-        </Stack>
+        <MotionBox
+          variants={fadeUpVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.3 }}
+        >
+          <Stack>
+            <CHeading>Explore</CHeading>
+            {ExploreData.call.map((item, i) => (
+              <FooterCard key={i} link={item.link} label={item.label} />
+            ))}
+          </Stack>
+        </MotionBox>
 
         {/* Helpful Links */}
-        <Stack>
-          <CHeading>Helpful Links</CHeading>
-          {HelpfulLinks.map((item, i) => (
-            <FooterCard key={i} link={item.link} label={item.label} />
-          ))}
-        </Stack>
+        <MotionBox
+          variants={fadeUpVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.3 }}
+        >
+          <Stack>
+            <CHeading>Helpful Links</CHeading>
+            {HelpfulLinks.map((item, i) => (
+              <FooterCard key={i} link={item.link} label={item.label} />
+            ))}
+          </Stack>
+        </MotionBox>
 
         {/* Our Services */}
-        <Stack>
-          <CHeading>Our Services</CHeading>
-          {OurServices.map((item, i) => (
-            <FooterCard key={i} link={item.link} label={item.label} />
-          ))}
-        </Stack>
+        <MotionBox
+          variants={fadeUpVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.3 }}
+        >
+          <Stack>
+            <CHeading>Our Services</CHeading>
+            {OurServices.map((item, i) => (
+              <FooterCard key={i} link={item.link} label={item.label} />
+            ))}
+          </Stack>
+        </MotionBox>
 
         {/* Contact Us */}
-        <Stack>
-          <CHeading>Contact Us</CHeading>
-          {contactData.map((item, i) => (
-            <Link
-              key={i}
-              href={item.link}
-              _hover={{ textDecoration: "underline" }}
-              textAlign="left"
-              target={item.link.startsWith("http") || item.link.startsWith("mailto:") ? "_blank" : undefined}
-              rel={item.link.startsWith("http") || item.link.startsWith("mailto:") ? "noopener noreferrer" : undefined}
-            >
-              <Flex align="center" gap={1} lineHeight="1.5">
-                <Box as={item.icon} color="primary" boxSize={5} />
-                <Text fontSize="md">{item.label}</Text>
-              </Flex>
-            </Link>
-          ))}
-          <Flex pt={3} align="center" gap={2}>
-            <Socials />
-          </Flex>
-        </Stack>
+        <MotionBox
+          variants={fadeUpVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.3 }}
+        >
+          <Stack>
+            <CHeading>Contact Us</CHeading>
+            {contactData.map((item, i) => (
+              <Link
+                key={i}
+                href={item.link}
+                _hover={{ textDecoration: "underline" }}
+                textAlign="left"
+                target={
+                  item.link.startsWith("http") || item.link.startsWith("mailto:")
+                    ? "_blank"
+                    : undefined
+                }
+                rel={
+                  item.link.startsWith("http") || item.link.startsWith("mailto:")
+                    ? "noopener noreferrer"
+                    : undefined
+                }
+              >
+                <Flex align="center" gap={1} lineHeight="1.5">
+                  <Box as={item.icon} color="primary" boxSize={5} />
+                  <Text fontSize="md">{item.label}</Text>
+                </Flex>
+              </Link>
+            ))}
+            <Flex pt={3} align="center" gap={2}>
+              <Socials />
+            </Flex>
+          </Stack>
+        </MotionBox>
       </SimpleGrid>
     </Box>
   );
