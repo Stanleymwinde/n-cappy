@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -22,6 +22,15 @@ const SwiperPage = () => {
   const progressCircle = useRef<SVGSVGElement | null>(null);
   const progressContent = useRef<HTMLSpanElement | null>(null);
 
+  const [windowWidth, setWindowWidth] = useState<number | null>(null);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    handleResize(); // set initial width
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const onAutoplayTimeLeft = (
     s: import("swiper").Swiper,
     time: number,
@@ -32,6 +41,16 @@ const SwiperPage = () => {
       progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
     }
   };
+
+  // calculate clamp lines safely
+  const clampLines =
+    windowWidth === null
+      ? 3 // default for SSR
+      : windowWidth < 480
+      ? 3
+      : windowWidth < 768
+      ? 4
+      : 5;
 
   return (
     <Swiper
@@ -96,12 +115,7 @@ const SwiperPage = () => {
                 display="-webkit-box"
                 css={{
                   WebkitBoxOrient: "vertical",
-                  WebkitLineClamp:
-                    window.innerWidth < 480
-                      ? 3
-                      : window.innerWidth < 768
-                      ? 4
-                      : 5,
+                  WebkitLineClamp: clampLines,
                 }}
               >
                 {image.text}
@@ -161,7 +175,8 @@ const slider_images = [
   {
     image: "/images/smiling.jpeg",
     title: "Invest Where Performance Leads. Unlock Up to 13% p.a.",
-    text: "The Nabo Money Market Fund delivers trusted, market-leading growth. Invest smart, stay liquid, and watch your wealth work harder for you.",
+    text:
+      "The Nabo Money Market Fund delivers trusted, market-leading growth. Invest smart, stay liquid, and watch your wealth work harder for you.",
     link: "/individual/MMF&FIF",
   },
   {
