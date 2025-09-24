@@ -1,6 +1,7 @@
 import { StrategyCall } from "@/components/Asset-mgt"; 
 import { Rates } from "@/components/common";
 import Hero from "@/components/common/Hero";
+import { CallToAction } from "@/components/home";
 import { Faqs } from "@/components/individual";
 import {
   WhatWeOffer,
@@ -43,6 +44,7 @@ const page = () => {
       <WhyChooseUs />
       <StrategyCall />
       <Faqs />
+      <CallToAction />
     </>
   );
 };

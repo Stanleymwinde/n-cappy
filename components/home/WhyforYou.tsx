@@ -65,7 +65,7 @@ const WhyforYou = () => {
             Why This Is For You
           </Heading>
           <Text
-            fontSize={{ base: "md", sm: "lg", md: "2xl" }}
+            fontSize={{ base: "sm", sm: "md", md: "xl" }}
             maxW="600px"
             lineHeight="1.8"
             color="white"

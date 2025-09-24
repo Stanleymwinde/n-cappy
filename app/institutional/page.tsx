@@ -1,6 +1,7 @@
 import { Rates } from "@/components/common"; 
 import Hero from "@/components/common/Hero";
 import { CallToAction } from "@/components/home";
+import { marginX } from "@/utils/constants";
 import {
   PartnerWithUs,
   Team,

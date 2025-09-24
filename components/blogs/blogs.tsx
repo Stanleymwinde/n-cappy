@@ -8,40 +8,70 @@ import {
   Image,
   Stack,
   Link,
-  Card,
-  Button,
 } from "@chakra-ui/react";
-import { useColorModeValue } from "../ui/color-mode";
+import { useColorModeValue } from "@chakra-ui/system";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import { marginX } from "@/utils/constants";
 import FeaturedBlogs from "./FeaturedBlogs";
+import { motion, easeInOut } from "framer-motion";
 
-export default function page() {
+const MotionBox = motion(Box);
+
+const fadeUpVariant = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: easeInOut } },
+};
+
+export default function Page() {
   return (
-    <Box py={12} marginX={marginX} bg={useColorModeValue("white", "gray.800")} mt={20}>
-      <Stack gap={8} textAlign="center" mb={10}>
-        <Heading fontSize={{ base: "3xl", md: "6xl" }} fontWeight="bold">
-          Fresh Take on Finance Every Week
-        </Heading>
-        <Text fontSize={{ base: "md", md: "lg" }} color="gray.600">
-          Stay informed with our latest financial articles, market analysis, and
-          expert insights.
-        </Text>
-      </Stack>
+    <Box
+      py={{ base: 8, md: 12 }}
+      marginX={{ base: 4, sm: 6, md: marginX }}
+      bg={useColorModeValue("white", "gray.800")}
+      mt={20}
+    >
+      {/* Heading & Subtext */}
+      <MotionBox
+        variants={fadeUpVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.3 }}
+        mb={{ base: 8, md: 10 }}
+      >
+        <Stack gap={6} textAlign="center">
+          <Heading
+            fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
+            fontWeight="bold"
+          >
+            Fresh Take on Finance Every Week
+          </Heading>
+          <Text fontSize={{ base: "md", md: "lg" }} color="gray.600">
+            Stay informed with our latest financial articles, market analysis, and
+            expert insights.
+          </Text>
+        </Stack>
+      </MotionBox>
 
+      {/* Cards */}
       <Flex
         direction={{ base: "column", md: "row" }}
-        gap={6}
+        gap={{ base: 6, md: 8 }}
         justify="center"
-        align="start"
+        align={{ base: "center", md: "start" }}
       >
-        {/* Left card */}
-        <Box
+        {/* Left Card */}
+        <MotionBox
+          variants={fadeUpVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.3 }}
           bg="white"
           borderRadius="xl"
           boxShadow="md"
           maxW={{ base: "full", md: "lg" }}
           overflow="hidden"
+          cursor="pointer"
+          transition={{ duration: 0.5 }}
         >
           <Box position="relative">
             <Image
@@ -49,7 +79,7 @@ export default function page() {
               alt="When Was the Last Time You Truly Stepped Out?"
               objectFit="cover"
               w="full"
-              h={{ base: "200px", md: "250px" }}
+              h={{ base: "200px", md: "250px", lg: "300px" }}
             />
             <Box
               position="absolute"
@@ -65,41 +95,47 @@ export default function page() {
               </Text>
             </Box>
           </Box>
-          <Box px={4} py={5}>
+          <Box px={{ base: 3, sm: 4 }} py={{ base: 4, md: 5 }}>
             <Flex justify="space-between" color="gray.500" fontSize="sm" mb={2}>
               <Text>August 4, 2025</Text>
               <Text>8 min read</Text>
             </Flex>
-            <Heading fontSize="lg" mb={2}>
+            <Heading fontSize={{ base: "md", sm: "lg", md: "xl" }} mb={2}>
               The Campaign That Dares You to See More
             </Heading>
-            <Text fontSize="sm" color="gray.600" mb={4}>
-             At first glance, Dubai Is Calling may look like a travel offer. But look closer, and you will see something deeper. This isn’t about ticking destinations off a bucket list. It’s about rethinking what it means to invest in yourself.
+            <Text fontSize={{ base: "sm", md: "md" }} color="gray.600" mb={4}>
+              At first glance, Dubai Is Calling may look like a travel offer. But look closer, and you will see something deeper. This isn’t about ticking destinations off a bucket list. It’s about rethinking what it means to invest in yourself.
             </Text>
             <Link
               color="blue.500"
               fontWeight="medium"
               display="flex"
               alignItems="center"
+              _hover={{ textDecoration: "underline" }}
             >
-              Read More <IoArrowForwardCircleOutline />
+              Read More <IoArrowForwardCircleOutline style={{ marginLeft: "0.25rem" }} />
             </Link>
           </Box>
-        </Box>
+        </MotionBox>
 
-        {/* Right card */}
-        <Box
+        {/* Right Card */}
+        <MotionBox
+          variants={fadeUpVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.3 }}
           bg={useColorModeValue("white", "gray.700")}
           borderRadius="xl"
           boxShadow="md"
-          p={6}
+          p={{ base: 4, md: 6 }}
           w={{ base: "full", md: "sm" }}
+          transition={{ duration: 0.5 }}
         >
           <Text color="blue.400" fontSize="sm" fontWeight="semibold">
             Weekly Blog
           </Text>
           <Heading size="md" mt={2} mb={2}>
-           The Nabo Capital Insider
+            The Nabo Capital Insider
           </Heading>
           <Text fontSize="sm" color="gray.600" mb={4}>
             Welcome to The Nabo Capital Insider, your go-to source for financial literacy tips, industry insights and expert advice.
@@ -109,12 +145,23 @@ export default function page() {
             fontWeight="medium"
             display="flex"
             alignItems="center"
+            _hover={{ textDecoration: "underline" }}
           >
-            Subscribe to weekly updates <IoArrowForwardCircleOutline />
+            Subscribe to weekly updates <IoArrowForwardCircleOutline style={{ marginLeft: "0.25rem" }} />
           </Link>
-        </Box>
+        </MotionBox>
       </Flex>
-      <FeaturedBlogs />
+
+      {/* Featured Blogs */}
+      <MotionBox
+        variants={fadeUpVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.3 }}
+        mt={{ base: 8, md: 10 }}
+      >
+        <FeaturedBlogs />
+      </MotionBox>
     </Box>
   );
 }

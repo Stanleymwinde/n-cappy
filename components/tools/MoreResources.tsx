@@ -11,7 +11,7 @@ const MoreResources = () => {
       <Box marginX={marginX} py={8}>
         <Heading
           as="h2"
-          fontSize={{ base: "3xl", md: "6xl" }}
+          fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
           mb={4}
           color={" #0a2234"}
           fontWeight={"bold"}

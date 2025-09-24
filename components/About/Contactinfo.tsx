@@ -29,7 +29,7 @@ const ContactInfoSection: React.FC = () => {
 
         <Flex align="center" gap={4}>
           <Icon as={MdPhone} w={6} h={6} />
-          <Text>0709902700 / 0709902702 / 0709902705</Text>
+          <Text>0709902700</Text>
         </Flex>
 
         <Flex align="center" gap={4}>

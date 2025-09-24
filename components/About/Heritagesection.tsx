@@ -21,8 +21,8 @@ const HeritageSection: React.FC = () => {
       {/* Section Heading */}
       <Box px={{ base: 4, md: 12 }} mb={4}>
         <Heading
-          fontSize={{ base: "3xl", md: "6xl" }}
-          fontWeight="extrabold"
+          fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
+          fontWeight="bold"
           fontFamily="poppins"
           color="#0A2233"
           textAlign="center"

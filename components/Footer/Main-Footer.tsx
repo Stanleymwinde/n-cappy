@@ -223,7 +223,7 @@ const HelpfulLinks = [
 ];
 
 const OurServices = [
-  { label: "Unit Trust Funds", link: "#" },
-  { label: "Private Wealth Management", link: "#" },
-  { label: "Institutional Investment Solutions", link: "#" },
+  { label: "Unit Trust Funds", link: "/individual/MMF&FIF" },
+  { label: "Private Wealth Management", link: "/institutional/treasury" },
+  { label: "Institutional Investment Solutions", link: "/institutional" },
 ];
