@@ -103,15 +103,19 @@ export default function Page() {
             <Heading fontSize={{ base: "md", sm: "lg", md: "xl" }} mb={2}>
               The Campaign That Dares You to See More
             </Heading>
+
             <Text fontSize={{ base: "sm", md: "md" }} color="gray.600" mb={4}>
               At first glance, Dubai Is Calling may look like a travel offer. But look closer, and you will see something deeper. This isn’t about ticking destinations off a bucket list. It’s about rethinking what it means to invest in yourself.
+
             </Text>
             <Link
               color="blue.500"
               fontWeight="medium"
               display="flex"
               alignItems="center"
+
               _hover={{ textDecoration: "underline" }}
+
             >
               Read More <IoArrowForwardCircleOutline style={{ marginLeft: "0.25rem" }} />
             </Link>
@@ -138,7 +142,8 @@ export default function Page() {
             The Nabo Capital Insider
           </Heading>
           <Text fontSize="sm" color="gray.600" mb={4}>
-            Welcome to The Nabo Capital Insider, your go-to source for financial literacy tips, industry insights and expert advice.
+            Welcome to The Nabo Capital Insider, your go-to source for financial
+            literacy tips, industry insights and expert advice.
           </Text>
           <Link
             color="blue.500"

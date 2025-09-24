@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   Box,
@@ -11,7 +12,8 @@ import {
   Image,
   Stack,
 } from "@chakra-ui/react";
-import { useColorModeValue } from "../ui/color-mode";
+import { useColorModeValue } from "@/components/ui/color-mode";
+import { marginX } from "@/utils/constants";
 
 // Example single-file React component for Next.js + Chakra UI v3
 // Place the hero image in the public/ folder of your Next.js app
@@ -26,12 +28,14 @@ export default function ArticleFeatureCard() {
       <Box bg={bg} borderRadius="lg" boxShadow="sm" overflow="hidden">
         {/* Header band */}
         <Box p={6}>
-          <Heading size="lg" mb={2} letterSpacing="tight">
-            China Strikes Back
-          </Heading>
-          <Text color={muted} fontSize="sm" mb={4}>
-            A New Chapter of the Trade War Begins
-          </Text>
+          <Stack bg={useColorModeValue("gray.50", "gray.700")} p={4} mb={4}>
+            <Heading size="2xl" mb={2} letterSpacing="tight">
+              China Strikes Back
+            </Heading>
+            <Text color={muted} fontSize="sm" mb={4}>
+              A New Chapter of the Trade War Begins
+            </Text>
+          </Stack>
 
           <HStack gap={4} alignItems="center">
             <Avatar.Root>
@@ -50,15 +54,25 @@ export default function ArticleFeatureCard() {
             <Badge colorScheme="gray">Edition Two</Badge>
           </HStack>
         </Box>
-
-        {/* Hero image */}
-        <Image
-          src="/Travelfive.png"
-          alt="Weekly Financial Bulletin"
-          objectFit="cover"
-          w="100%"
-          h={{ base: "220px", md: "320px" }}
-        />
+        <Stack
+          position="relative"
+          h={{ base: "220px", md: "420px" }}
+          overflow="hidden"
+          bg={useColorModeValue("gray.50", "gray.700")}
+          justify="center"
+          align="center"
+        >
+          <Image
+            marginX={marginX}
+            src="/images/Asset-3.jpeg"
+            alt="Weekly Financial Bulletin"
+            objectFit="contain" // ✅ keeps whole image visible
+            maxW="90%" // ✅ fills width without stretching
+            maxH="100%" // ✅ fills height without stretching
+            borderTop="1px solid"
+            borderColor={useColorModeValue("gray.100", "gray.700")}
+          />
+        </Stack>
 
         {/* Body */}
         <Box p={6}>
