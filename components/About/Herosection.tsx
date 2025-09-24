@@ -43,9 +43,11 @@ const HeroSection: React.FC = () => {
         fontFamily="Poppins"
       >
         <Heading
-          fontSize={{ base: "3xl", md: "5xl" }}
-          fontWeight="bold"
-          lineHeight="short"
+          fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
+          fontWeight={"bold"}
+          fontFamily="poppins"
+          textAlign="center"
+          color="#FFFFFF"
         >
           Who We Are
         </Heading>

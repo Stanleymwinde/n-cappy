@@ -1,5 +1,5 @@
 "use client";
-import { Box, Button, Heading, Text } from "@chakra-ui/react";
+import { Box, Button, Heading, Text, Link } from "@chakra-ui/react";
 import React from "react";
 import { motion, easeOut } from "framer-motion";
 
@@ -27,21 +27,27 @@ const Account = () => {
       viewport={{ once: false, amount: 0.3 }}
       variants={centerReveal}
     >
-      {/* Button */}
-      <Button
-        bg="#00caff"
-        color="white"
-        fontWeight="bold"
-        fontSize={{ base: "md", md: "xl" }}
-        px={10}
-        py={8}
-        borderRadius="xl"
-        mb={8}
-        _hover={{ bg: "#00b3e6" }}
-        fontFamily="Poppins"
+      {/* Button as link */}
+      <Link
+        href="https://invest.nabocapital.com"
+        target="_blank"
+        _hover={{ textDecoration: "none" }}
       >
-        Start Investing With Purpose
-      </Button>
+        <Button
+          bg="#00caff"
+          color="white"
+          fontWeight="bold"
+          fontSize={{ base: "md", md: "xl" }}
+          px={10}
+          py={8}
+          borderRadius="xl"
+          mb={8}
+          _hover={{ bg: "#00b3e6" }}
+          fontFamily="Poppins"
+        >
+          Start Investing With Purpose
+        </Button>
+      </Link>
 
       {/* Heading */}
       <Heading

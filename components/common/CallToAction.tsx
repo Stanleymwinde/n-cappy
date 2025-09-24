@@ -33,7 +33,7 @@ const CallToActionCommon = () => {
       bgPos="center"
       bgRepeat="no-repeat"
       width="100%"
-      height="400px"
+      height={{ base: "370px", sm: "450px", md: "550px" }}
       position="relative"
     >
       <Box
@@ -42,13 +42,13 @@ const CallToActionCommon = () => {
         left="0"
         width="100%"
         height="100%"
-        bgColor="rgba(0, 0, 0, 0.5)"
+        bgColor="rgba(0, 0, 0, 0.55)"
         display="flex"
         flexDirection="column"
         justifyContent="center"
         alignItems="center"
         textAlign="center"
-        px={4}
+        px={{ base: 3, md: 6 }}
       >
         {/* Heading */}
         <MotionBox
@@ -56,21 +56,21 @@ const CallToActionCommon = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.3 }}
-          fontSize={{ base: "2xl", md: "4xl" }}
+          fontSize={{ base: "xl", sm: "2xl", md: "4xl" }}
           fontWeight="bold"
           color="white"
-          mt={{ base: 8, md: 12 }} // push heading down a bit
-          mb={{ base: 2, md: 3 }}
+          mb={{ base: 4, md: 6 }}
         >
           Innovation that feels personal
         </MotionBox>
 
         {/* Store Buttons */}
         <Flex
-          mb={{ base: 2, md: 3 }} // reduce space between badges and button
+          mb={{ base: 4, md: 6 }}
           align="center"
           justify="center"
-          flexDirection={{ base: "column", md: "row" }}
+          flexDirection={{ base: "column", sm: "row" }}
+          gap={{ base: 3, md: 6 }}
         >
           {/* App Store Badge */}
           <MotionBox
@@ -78,8 +78,6 @@ const CallToActionCommon = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
-            mr={{ base: 0, md: 4 }}
-            mb={{ base: 2, md: 0 }}
           >
             <Link
               href="https://apps.apple.com"
@@ -110,8 +108,8 @@ const CallToActionCommon = () => {
               <Image
                 src="/images/gg.webp"
                 alt="Google Play"
-                height="160px"
-                objectFit="contain"
+                height= "160px"
+                objectFit="fill"
               />
             </Link>
           </MotionBox>
@@ -123,17 +121,18 @@ const CallToActionCommon = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.3 }}
-          mt={{ base: -4, md: -6 }} // move button up to occupy space better
         >
           <Link href="https://invest.nabocapital.com" target="_blank">
             <Box
-              fontSize={{ base: "md", md: "lg" }}
+              fontSize={{ base: "sm", sm: "md", md: "lg" }}
               fontWeight="bold"
               bgColor="white"
-              padding="10px 20px"
-              borderRadius="5px"
-              _hover={{ bgColor: "#00b5e0" }}
+              px={{ base: 4, sm: 6, md: 8 }}
+              py={{ base: 2, sm: 3, md: 4 }}
+              borderRadius="8px"
+              _hover={{ bgColor: "#00b5e0", color: "white" }}
               cursor="pointer"
+              transition="all 0.3s ease"
             >
               INVEST NOW
             </Box>

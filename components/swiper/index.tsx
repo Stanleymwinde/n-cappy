@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import { Box, Button, Text } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 import Link from "next/link";
 
 interface AutoplayTimeLeftParams {
@@ -22,31 +22,42 @@ const SwiperPage = () => {
   const progressCircle = useRef<SVGSVGElement | null>(null);
   const progressContent = useRef<HTMLSpanElement | null>(null);
 
+  const [windowWidth, setWindowWidth] = useState<number | null>(null);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    handleResize(); // set initial width
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const onAutoplayTimeLeft = (
     s: import("swiper").Swiper,
     time: number,
     progress: number
   ): void => {
-    progressCircle.current?.style.setProperty(
-      "--progress",
-      String(1 - progress)
-    );
+    progressCircle.current?.style.setProperty("--progress", String(1 - progress));
     if (progressContent.current) {
       progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
     }
   };
 
+  // calculate clamp lines safely
+  const clampLines =
+    windowWidth === null
+      ? 3 // default for SSR
+      : windowWidth < 480
+      ? 3
+      : windowWidth < 768
+      ? 4
+      : 5;
+
   return (
     <Swiper
       spaceBetween={30}
       centeredSlides={true}
-      autoplay={{
-        delay: 5500,
-        disableOnInteraction: false,
-      }}
-      pagination={{
-        clickable: true,
-      }}
+      autoplay={{ delay: 5500, disableOnInteraction: false }}
+      pagination={{ clickable: true }}
       navigation={true}
       modules={[Autoplay, Pagination, Navigation]}
       onAutoplayTimeLeft={onAutoplayTimeLeft}
@@ -56,7 +67,7 @@ const SwiperPage = () => {
         <SwiperSlide key={index}>
           <Box
             position="relative"
-            height={{ base: "70vh", md: "90vh" }}
+            height={{ base: "70vh", sm: "80vh", md: "90vh", lg: "100vh" }}
             width="100%"
             backgroundImage={`url(${image.image})`}
             backgroundSize="cover"
@@ -64,8 +75,8 @@ const SwiperPage = () => {
             display="flex"
             alignItems={{ base: "flex-start", md: "center" }}
             justifyContent="flex-start"
-            px={{ base: 4, md: 20 }}
-            py={{ base: 16, md: 0 }}
+            px={{ base: 4, sm: 8, md: 20, lg: 32 }}
+            py={{ base: 20, sm: 24, md: 0 }}
           >
             {/* Black overlay */}
             <Box
@@ -74,7 +85,7 @@ const SwiperPage = () => {
               left={0}
               width="100%"
               height="100%"
-              bg="rgba(0, 0, 0, 0.4)"
+              bg="rgba(0, 0, 0, 0.45)"
               zIndex={0}
             />
 
@@ -83,23 +94,32 @@ const SwiperPage = () => {
               color="white"
               position="relative"
               zIndex={1}
-              maxW={{ base: "90%", md: "50%" }}
+              maxW={{ base: "95%", sm: "80%", md: "55%", lg: "40%" }}
               textAlign="left"
             >
-              <Text
-                fontSize={{ base: "2xl", sm: "3xl", md: "5xl" }}
+              <Box
+                as="p"
+                fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
                 fontWeight="bold"
                 lineHeight="short"
               >
                 {image.title}
-              </Text>
+              </Box>
 
-              <Text
-                fontSize={{ base: "sm", sm: "md", md: "xl" }}
+              <Box
+                as="p"
+                fontSize={{ base: "sm", sm: "md", md: "lg", lg: "xl" }}
                 mt={4}
+                overflow="hidden"
+                textOverflow="ellipsis"
+                display="-webkit-box"
+                css={{
+                  WebkitBoxOrient: "vertical",
+                  WebkitLineClamp: clampLines,
+                }}
               >
                 {image.text}
-              </Text>
+              </Box>
 
               <Link href={image.link} passHref>
                 <Button
@@ -107,11 +127,11 @@ const SwiperPage = () => {
                   colorScheme="blackAlpha"
                   bg="#0A2233"
                   color="white"
-                  px={{ base: 6, md: 8 }}
-                  py={{ base: 4, md: 6 }}
+                  px={{ base: 6, sm: 8, md: 10 }}
+                  py={{ base: 3, sm: 4, md: 6 }}
                   rounded="full"
                   fontWeight="bold"
-                  fontSize={{ base: "sm", md: "md" }}
+                  fontSize={{ base: "sm", sm: "md", md: "lg" }}
                   _hover={{ bg: "#00CAFF" }}
                 >
                   Start Investing
@@ -142,8 +162,6 @@ const slider_images = [
   {
     image: "/images/travel_dubai.png",
     title: "Invest in Experiences. Invest in Dubai.",
-    description:
-      "Step into a city where luxury, thrill, and wonder collide. Every moment you invest here becomes a memory that never fades.",
     text:
       "Step into a city where luxury, thrill, and wonder collide. Every moment you invest here becomes a memory that never fades.",
     link: "/travel",
@@ -151,22 +169,19 @@ const slider_images = [
   {
     image: "/images/slide-4.png",
     title: "Make Money While doing what you love",
-    description: "Settle down. Now it’s your money’s turn to clock in.",
     text: "Settle down. Now it’s your money’s turn to clock in.",
     link: "/lifestyle-goal",
   },
-    {
+  {
     image: "/images/smiling.jpeg",
     title: "Invest Where Performance Leads. Unlock Up to 13% p.a.",
-    description: "The Nabo Money Market Fund delivers trusted, market-leading growth. Invest smart, stay liquid, and watch your wealth work harder for you.",
-    text: "The Nabo Money Market Fund delivers trusted, market-leading growth. Invest smart, stay liquid, and watch your wealth work harder for you.",
+    text:
+      "The Nabo Money Market Fund delivers trusted, market-leading growth. Invest smart, stay liquid, and watch your wealth work harder for you.",
     link: "/individual/MMF&FIF",
   },
   {
     image: "/images/globaly.jpeg",
     title: "Invest Beyond Borders. Build Wealth Without Limits.",
-    description:
-      "Unlock global markets, diversify your portfolio, and invest in opportunities that grow your wealth today—and protect your legacy tomorrow.",
     text:
       "Unlock global markets, diversify your portfolio, and invest in opportunities that grow your wealth today—and protect your legacy tomorrow.",
     link: "/global-investing",
@@ -174,14 +189,12 @@ const slider_images = [
   {
     image: "/images/father.son.jpeg",
     title: "Make Money While doing what you love",
-    description: "Say yes to life’s big and beautiful moments",
     text: "Say yes to life’s big and beautiful moments",
     link: "/education",
   },
   {
     image: "/images/oldcouple.jpeg",
     title: "Make Money While doing what you love",
-    description: "Make your mark. Then make it last",
     text: "Make your mark. Then make it last",
     link: "/retire",
   },

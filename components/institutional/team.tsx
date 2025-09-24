@@ -37,16 +37,15 @@ const Team = () => {
         {institutionalMembers.map((member, i) => (
           <Card.Root
             key={i}
-            flex="1 1 250px" // ✅ flexible basis
-            minW={{ base: "100%", sm: "15rem", md: "14rem" }}
-            maxW={{ base: "100%", sm: "18rem", md: "20rem" }}
+            minW={{ base: "50%", sm: "15rem", md: "14rem" }}
+            maxW={{ base: "50%", sm: "18rem", md: "20rem" }}
             overflow="hidden"
           >
             <Image
               src={member.image}
-              width="100%"
+              width="90%"
               height={{ base: "300px", sm: "360px", md: "420px" }}
-              objectFit="fill"
+              objectFit="cover"
               alt={`${member.name} profile picture`}
               borderRadius="md"
               boxShadow="md"

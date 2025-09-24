@@ -63,20 +63,20 @@ export default function Page() {
 
   // new raw input states (to make typing smooth)
   const [targetAmountInput, setTargetAmountInput] = useState(
-    targetAmount.toString()
+   targetAmount != null ? String(targetAmount) : ""
   );
   const [monthlyContributionInput, setMonthlyContributionInput] = useState(
-    monthlyContribution.toString()
+    monthlyContribution != null ? String(monthlyContribution) : ""
   );
 
   const exportRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setTargetAmountInput(targetAmount.toString());
+   setTargetAmountInput(targetAmount != null ? String(targetAmount) : "");
   }, [targetAmount]);
 
   useEffect(() => {
-    setMonthlyContributionInput(monthlyContribution.toString());
+    setMonthlyContributionInput(monthlyContribution != null ? String(monthlyContribution) : "");
   }, [monthlyContribution]);
 
   const handleCurrencyToggle = (selected: "KES" | "USD") => {

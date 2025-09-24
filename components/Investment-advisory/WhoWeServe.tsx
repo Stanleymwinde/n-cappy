@@ -7,7 +7,7 @@ export default function WhoWeServe() {
       <VStack gap={4} textAlign="center">
         <Heading
           as="h1"
-          fontSize={{ base: "3xl", md: "6xl" }}
+          fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
           fontWeight={"bold"}
           fontFamily="poppins"
           textAlign="center"

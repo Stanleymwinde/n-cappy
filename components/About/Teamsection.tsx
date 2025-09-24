@@ -14,14 +14,14 @@ const TeamSection: React.FC = () => {
     <Box bg="gray.50" pt={10} pb={16}>
       <Container maxW="8xl" textAlign="center">
         {/* Section Heading */}
-        <Heading fontSize={{ base: "3xl", md: "6xl" }} fontWeight="bold" mb={4}>
+        <Heading fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }} fontWeight="bold" mb={4} fontFamily="poppins">
           Real People. Big Vision. Deep Experiences
         </Heading>
         <Text
           fontSize={{ base: "xl", md: "5xl" }}
           color="#00caff"
           mb={12}
-          fontWeight="bold"
+          fontWeight="Regular"
           lineHeight="tall"
         >
           Board & Management
@@ -29,7 +29,7 @@ const TeamSection: React.FC = () => {
 
         {/* Board Section */}
         <Box mb={16}>
-          <Heading fontSize="4xl" mb={8}>
+          <Heading fontSize="4xl" mb={8} fontWeight="Medium">
             Our Leadership (Board)
           </Heading>
           <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 4 }} gap={10}>
@@ -86,7 +86,7 @@ const TeamSection: React.FC = () => {
 
         {/* Management Section */}
         <Box>
-          <Heading fontSize={{ base: "xl", md: "4xl" }} fontWeight="regular" mb={8}>
+          <Heading fontSize="4xl" mb={8} fontWeight="Medium">
             Our Leadership (Management)
           </Heading>
           <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 4 }} gap={10}>

@@ -28,7 +28,7 @@ const slideLeftVariant = {
 
 const WhatAreYourGoals = () => {
   return (
-    <Box marginX={marginX} py={{ base: 4, md: 8 }} mt={20}>
+    <Box marginX={{ base: 4, sm: 6, md: marginX }} py={{ base: 4, md: 8 }} mt={20}>
       {/* Main Heading */}
       <MotionBox
         variants={fadeUpVariant}
@@ -40,10 +40,11 @@ const WhatAreYourGoals = () => {
           as="h1"
           fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
           fontFamily="poppins"
-          fontWeight={"bold"}
+          fontWeight="bold"
           textAlign="center"
           my={{ base: 3, md: 5 }}
           color="gray.800"
+          px={{ base: 2, sm: 4 }}
         >
           What Are Your Financial Goals?
         </Heading>
@@ -67,7 +68,8 @@ const WhatAreYourGoals = () => {
         </Text>
       </MotionBox>
 
-      <Tabs.Root defaultValue="goal-0" variant="plain">
+      {/* Tabs Root */}
+      <Tabs.Root defaultValue="goal-0" orientation="horizontal">
         {/* Tabs List */}
         <MotionBox
           variants={slideLeftVariant}
@@ -76,14 +78,22 @@ const WhatAreYourGoals = () => {
           viewport={{ once: false, amount: 0.3 }}
           transition={{ delay: 0.3 }}
         >
-          <Flex justify="center" align="center" width="100%" py={4} overflowX="auto">
+          <Flex
+            justify="center"
+            align="center"
+            width="100%"
+            py={4}
+            overflowX="auto"
+            px={{ base: 2, sm: 4 }}
+          >
             <Tabs.List
-              bg="bg.muted"
-              rounded="l3"
-              p={{ base: 1, md: 1 }}
-              minW="max-content"
               display="flex"
+              flexWrap={{ base: "nowrap", md: "wrap" }}
               gap={{ base: 2, md: 4 }}
+              bg="gray.100"
+              rounded="xl"
+              p={2}
+              minW="max-content"
               whiteSpace="nowrap"
             >
               {WhatAreYourGoalsData.map((goal, index) => {
@@ -92,17 +102,21 @@ const WhatAreYourGoals = () => {
                   <Tabs.Trigger
                     key={index}
                     value={`goal-${index}`}
-                    fontSize={{ base: "md", md: "lg", lg: "xl" }}
-                    px={{ base: 2, md: 4 }}
-                    py={{ base: 1, md: 2 }}
-                    whiteSpace="nowrap"
+                    fontSize={{ base: "sm", sm: "md", md: "lg", lg: "xl" }}
+                    px={{ base: 2, sm: 3, md: 4 }}
+                    py={{ base: 1, sm: 2 }}
+                     _selected={{
+                    bg: "#0A2233",
+                    color: "white",
+                    rounded: "md",
+                    fontWeight: "medium",
+                    }}
                   >
                     {Icon && <Icon style={{ marginRight: "0.5rem" }} />}
                     {goal.title}
                   </Tabs.Trigger>
                 );
               })}
-              <Tabs.Indicator rounded="l2" />
             </Tabs.List>
           </Flex>
         </MotionBox>
@@ -117,45 +131,57 @@ const WhatAreYourGoals = () => {
               viewport={{ once: false, amount: 0.3 }}
               transition={{ delay: 0.4 }}
             >
-              <Box bgColor={"#00caff"} py={{ base: 4, md: 6 }} px={{ base: 4, md: 8 }}>
+              <Box
+                bgColor="#00caff"
+                py={{ base: 4, md: 6 }}
+                px={{ base: 3, sm: 4, md: 8 }}
+                rounded={{ base: "lg", md: "2xl" }}
+              >
                 <Flex
                   marginX={{ base: 2, md: marginX }}
                   direction="column"
                   justifyContent="center"
                   alignItems={{ base: "center", md: "flex-start" }}
                   textAlign={{ base: "center", md: "left" }}
-                  height="100%"
                   gap={4}
                 >
                   <Heading
                     as="h2"
-                    fontSize={{ base: "2xl", sm: "3xl", md: "4xl" }}
+                    fontSize={{ base: "lg", sm: "2xl", md: "4xl" }}
                     fontFamily="poppins"
-                    lineHeight={"1"}
+                    lineHeight="1.2"
                   >
                     {goal.title}
                   </Heading>
-                  <Text fontSize={{ base: "sm", sm: "md", md: "2xl" }} lineHeight="1.6">
+                  <Text
+                    fontSize={{ base: "sm", sm: "md", md: "2xl" }}
+                    lineHeight="1.6"
+                  >
                     {goal.description}
                   </Text>
-                  <ul style={{ fontSize: "1.2rem", lineHeight: "1.8" }}>
+                  <Box
+                    as="ul"
+                    fontSize={{ base: "sm", sm: "md", md: "lg" }}
+                    lineHeight="1.8"
+                  >
                     {goal.points.map((point, i) => (
                       <li key={i}>• {point}</li>
                     ))}
-                  </ul>
+                  </Box>
 
                   <Flex
                     width="100%"
                     justify={{ base: "center", md: "flex-end" }}
-                    align="center"
                     mt={4}
                   >
                     <Link href="/institutional/treasury" passHref>
                       <Button
                         bg="#0a2234"
                         _hover={{ bg: "cyan.700" }}
-                        px={{ base: 4, md: 6 }}
-                        py={{ base: 3, md: 4 }}
+                        px={{ base: 3, sm: 4, md: 6 }}
+                        py={{ base: 2, md: 4 }}
+                        fontSize={{ base: "sm", md: "md" }}
+                        rounded="lg"
                       >
                         {goal.button}
                       </Button>

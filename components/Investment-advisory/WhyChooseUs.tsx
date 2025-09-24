@@ -37,7 +37,7 @@ export default function WhyChooseUs() {
     <Box bg="cyan.950" color="white" py={16} px={6} textAlign="center">
       <VStack gap={8}>
         <Heading
-          fontSize={{ base: "3xl", md: "6xl" }}
+          fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
           fontWeight={"bold"}
           fontFamily="poppins"
           textAlign="center"
