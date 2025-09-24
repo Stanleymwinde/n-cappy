@@ -4,6 +4,7 @@ import React from "react";
 
 const Account = () => {
   return (
+
     <Box
       bg="#0a2234"
       py={{ base: 12, md: 20 }}
@@ -12,6 +13,7 @@ const Account = () => {
       fontFamily="Poppins"
     >
       {/* Button as link */}
+
       <Link
         href="https://invest.nabocapital.com"
         target="_blank"
