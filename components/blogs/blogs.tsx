@@ -8,15 +8,15 @@ import {
   Image,
   Stack,
   Link,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import { marginX } from "@/utils/constants";
 import FeaturedBlogs from "./FeaturedBlogs";
 
 export default function Page() {
-  const bgColor = useColorModeValue("white", "gray.800");
-  const cardBgRight = useColorModeValue("white", "gray.700");
+  // Static colors instead of useColorModeValue
+  const bgColor = "white";
+  const cardBgRight = "white";
 
   return (
     <Box py={{ base: 8, md: 12 }} marginX={{ base: 4, sm: 6, md: marginX }} bg={bgColor} mt={20}>
