@@ -2,7 +2,6 @@
 import { marginX, TestimonialData } from "@/utils/constants";
 import { Box, Flex, Heading, Stack, Text } from "@chakra-ui/react";
 import React from "react";
-import { motion, easeOut } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -10,40 +9,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Keyboard, Pagination, Navigation } from "swiper/modules";
 import Image from "next/image";
 
-const MotionBox = motion(Box);
-const MotionFlex = motion(Flex);
-const MotionHeading = motion(Heading);
-const MotionText = motion(Text);
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.25, when: "beforeChildren" },
-  },
-};
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: easeOut },
-  },
-};
-
 export default function Testimonials() {
   return (
-    <MotionBox
-      marginX={marginX}
-      mt={20}
-      variants={containerVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: false, amount: 0.2 }}
-    >
+    <Box marginX={marginX} mt={20}>
       {/* Heading */}
-      <MotionHeading
+      <Heading
         as="h2"
         fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
         fontFamily="Poppins"
@@ -51,13 +21,12 @@ export default function Testimonials() {
         textAlign="center"
         my={4}
         py={4}
-        variants={fadeUp}
       >
         What Our Investors Have to Say ...
-      </MotionHeading>
+      </Heading>
 
       {/* Subheading */}
-      <MotionText
+      <Text
         fontSize={{ base: "md", sm: "lg", md: "xl" }}
         textAlign="center"
         mb={8}
@@ -65,13 +34,12 @@ export default function Testimonials() {
         maxW="700px"
         mx="auto"
         px={{ base: 4, md: 0 }}
-        variants={fadeUp}
       >
         Hear from investors who have trusted us with their global investment journey.
-      </MotionText>
+      </Text>
 
       {/* Carousel */}
-      <MotionBox variants={fadeUp}>
+      <Box>
         <Swiper
           slidesPerView={1}
           spaceBetween={20}
@@ -91,11 +59,7 @@ export default function Testimonials() {
                 borderRadius: "12px",
               }}
             >
-              <MotionFlex
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false, amount: 0.3 }}
+              <Flex
                 justifyContent="center"
                 alignItems="center"
                 gap={{ base: 6, md: 10 }}
@@ -154,11 +118,11 @@ export default function Testimonials() {
                     {testimonial.role}
                   </Text>
                 </Stack>
-              </MotionFlex>
+              </Flex>
             </SwiperSlide>
           ))}
         </Swiper>
-      </MotionBox>
-    </MotionBox>
+      </Box>
+    </Box>
   );
 }

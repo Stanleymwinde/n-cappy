@@ -8,70 +8,40 @@ import {
   Image,
   Stack,
   Link,
+  useColorModeValue,
 } from "@chakra-ui/react";
-import { useColorModeValue } from "@chakra-ui/system";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import { marginX } from "@/utils/constants";
 import FeaturedBlogs from "./FeaturedBlogs";
-import { motion, easeInOut } from "framer-motion";
-
-const MotionBox = motion(Box);
-
-const fadeUpVariant = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: easeInOut } },
-};
 
 export default function Page() {
+  const bgColor = useColorModeValue("white", "gray.800");
+  const cardBgRight = useColorModeValue("white", "gray.700");
+
   return (
-    <Box
-      py={{ base: 8, md: 12 }}
-      marginX={{ base: 4, sm: 6, md: marginX }}
-      bg={useColorModeValue("white", "gray.800")}
-      mt={20}
-    >
+    <Box py={{ base: 8, md: 12 }} marginX={{ base: 4, sm: 6, md: marginX }} bg={bgColor} mt={20}>
       {/* Heading & Subtext */}
-      <MotionBox
-        variants={fadeUpVariant}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
-        mb={{ base: 8, md: 10 }}
-      >
-        <Stack gap={6} textAlign="center">
-          <Heading
-            fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
-            fontWeight="bold"
-          >
-            Fresh Take on Finance Every Week
-          </Heading>
-          <Text fontSize={{ base: "md", md: "lg" }} color="gray.600">
-            Stay informed with our latest financial articles, market analysis, and
-            expert insights.
-          </Text>
-        </Stack>
-      </MotionBox>
+      <Stack gap={6} textAlign="center" mb={{ base: 8, md: 10 }}>
+        <Heading fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }} fontWeight="bold">
+          Fresh Take on Finance Every Week
+        </Heading>
+        <Text fontSize={{ base: "md", md: "lg" }} color="gray.600">
+          Stay informed with our latest financial articles, market analysis, and expert insights.
+        </Text>
+      </Stack>
 
       {/* Cards */}
-      <Flex
-        direction={{ base: "column", md: "row" }}
-        gap={{ base: 6, md: 8 }}
-        justify="center"
-        align={{ base: "center", md: "start" }}
-      >
+      <Flex direction={{ base: "column", md: "row" }} gap={{ base: 6, md: 8 }} justify="center" align={{ base: "center", md: "start" }}>
         {/* Left Card */}
-        <MotionBox
-          variants={fadeUpVariant}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
+        <Box
           bg="white"
           borderRadius="xl"
           boxShadow="md"
           maxW={{ base: "full", md: "lg" }}
           overflow="hidden"
           cursor="pointer"
-          transition={{ duration: 0.5 }}
+          transition="all 0.3s ease"
+          _hover={{ transform: "translateY(-4px)", boxShadow: "lg" }}
         >
           <Box position="relative">
             <Image
@@ -81,15 +51,7 @@ export default function Page() {
               w="full"
               h={{ base: "200px", md: "250px", lg: "300px" }}
             />
-            <Box
-              position="absolute"
-              bottom={2}
-              left={2}
-              bg="blue.900"
-              px={3}
-              py={1}
-              borderRadius="md"
-            >
+            <Box position="absolute" bottom={2} left={2} bg="blue.900" px={3} py={1} borderRadius="md">
               <Text fontSize="sm" fontWeight="bold" color="white">
                 EDITION TWO
               </Text>
@@ -106,34 +68,22 @@ export default function Page() {
 
             <Text fontSize={{ base: "sm", md: "md" }} color="gray.600" mb={4}>
               At first glance, Dubai Is Calling may look like a travel offer. But look closer, and you will see something deeper. This isn’t about ticking destinations off a bucket list. It’s about rethinking what it means to invest in yourself.
-
             </Text>
-            <Link
-              color="blue.500"
-              fontWeight="medium"
-              display="flex"
-              alignItems="center"
-
-              _hover={{ textDecoration: "underline" }}
-
-            >
+            <Link color="blue.500" fontWeight="medium" display="flex" alignItems="center" _hover={{ textDecoration: "underline" }}>
               Read More <IoArrowForwardCircleOutline style={{ marginLeft: "0.25rem" }} />
             </Link>
           </Box>
-        </MotionBox>
+        </Box>
 
         {/* Right Card */}
-        <MotionBox
-          variants={fadeUpVariant}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
-          bg={useColorModeValue("white", "gray.700")}
+        <Box
+          bg={cardBgRight}
           borderRadius="xl"
           boxShadow="md"
           p={{ base: 4, md: 6 }}
           w={{ base: "full", md: "sm" }}
-          transition={{ duration: 0.5 }}
+          transition="all 0.3s ease"
+          _hover={{ transform: "translateY(-4px)", boxShadow: "lg" }}
         >
           <Text color="blue.400" fontSize="sm" fontWeight="semibold">
             Weekly Blog
@@ -142,31 +92,18 @@ export default function Page() {
             The Nabo Capital Insider
           </Heading>
           <Text fontSize="sm" color="gray.600" mb={4}>
-            Welcome to The Nabo Capital Insider, your go-to source for financial
-            literacy tips, industry insights and expert advice.
+            Welcome to The Nabo Capital Insider, your go-to source for financial literacy tips, industry insights and expert advice.
           </Text>
-          <Link
-            color="blue.500"
-            fontWeight="medium"
-            display="flex"
-            alignItems="center"
-            _hover={{ textDecoration: "underline" }}
-          >
+          <Link color="blue.500" fontWeight="medium" display="flex" alignItems="center" _hover={{ textDecoration: "underline" }}>
             Subscribe to weekly updates <IoArrowForwardCircleOutline style={{ marginLeft: "0.25rem" }} />
           </Link>
-        </MotionBox>
+        </Box>
       </Flex>
 
       {/* Featured Blogs */}
-      <MotionBox
-        variants={fadeUpVariant}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
-        mt={{ base: 8, md: 10 }}
-      >
+      <Box mt={{ base: 8, md: 10 }}>
         <FeaturedBlogs />
-      </MotionBox>
+      </Box>
     </Box>
   );
 }

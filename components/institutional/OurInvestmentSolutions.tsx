@@ -11,31 +11,13 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { MdFiberManualRecord } from "react-icons/md";
-import { motion, Variants } from "framer-motion";
 import React from "react";
 
-// Motion components
-const MotionBox = motion(Box);
-const MotionHeading = motion(Heading);
-const MotionText = motion(Text);
-
 const InvestmentSolutions = () => {
-  // Variants for heading and subtitle
-  const headerVariants: Variants = {
-    hidden: { opacity: 0, y: -50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
-  };
-
-  // Variants for accordion items
-  const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
-  };
-
   return (
     <Box marginX={marginX} mt={20}>
       {/* Main Title */}
-      <MotionHeading
+      <Heading
         as="h1"
         fontSize={{ base: "3xl", md: "6xl" }}
         fontFamily="poppins"
@@ -43,140 +25,144 @@ const InvestmentSolutions = () => {
         my={6}
         color="gray.800"
         textAlign="center"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
-        variants={headerVariants}
       >
         What We Offer
-      </MotionHeading>
+      </Heading>
 
       {/* Intro Text */}
-      <MotionText
+      <Text
         fontSize={{ base: "lg", md: "2xl" }}
         color="gray.600"
         textAlign="center"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
-        variants={headerVariants}
-        transition={{ delay: 0.2 }}
       >
         We offer comprehensive solutions designed to optimize your financial
         position while maintaining the flexibility and security your
         organization demands
-      </MotionText>
+      </Text>
 
       {/* Accordion */}
       <Box py={6} bg="gray.50" borderRadius="md" mt={6}>
         <Accordion.Root collapsible gap={2}>
           {StrategyContent.map((item, index) => (
-            <MotionBox
+            <Accordion.Item
               key={index}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: false, amount: 0.3 }}
-              variants={itemVariants}
+              value={item.value}
+              border="1px solid #00caff"
+              borderRadius="md"
+              p={2}
+              my={4}
             >
-              <Accordion.Item
-                value={item.value}
-                border="1px solid #00caff"
-                borderRadius="md"
-                p={2}
-                my={4}
-              >
-                {/* Accordion Trigger */}
-                <Accordion.ItemTrigger>
-                  <Stack gap={4} px={4} py={4} flex={1}>
-                    <Text fontSize={{ base: "3xl", md: "4xl" }} fontWeight="semibold">
-                      {item.title}
-                    </Text>
-                    <Text fontSize={{ base: "md", md: "xl" }} color="gray.600">
-                      {item.text}
-                    </Text>
-                  </Stack>
-                  <Accordion.ItemIndicator pr={2} fontSize="2xl" />
-                </Accordion.ItemTrigger>
+              {/* Accordion Trigger */}
+              <Accordion.ItemTrigger>
+                <Stack gap={4} px={4} py={4} flex={1}>
+                  <Text fontSize={{ base: "3xl", md: "4xl" }} fontWeight="semibold">
+                    {item.title}
+                  </Text>
+                  <Text fontSize={{ base: "md", md: "xl" }} color="gray.600">
+                    {item.text}
+                  </Text>
+                </Stack>
+                <Accordion.ItemIndicator pr={2} fontSize="2xl" />
+              </Accordion.ItemTrigger>
 
-                {/* Accordion Content */}
-                <Accordion.ItemContent>
-                  <Accordion.ItemBody>
-                    <Box px={{ base: 4, md: 16 }} bg="white">
-                      {/* Main Body Text */}
-                      <Text fontSize={{ base: "lg", md: "2xl" }} mb={6}>
-                        {item.body}
-                      </Text>
-                      <Grid
-                        templateColumns={{ base: "1fr", md: "2fr 1fr" }}
-                        gap={8}
-                        px={{ base: 4, md: 8 }}
-                        py={6}
-                        alignItems="start"
-                      >
-                        <GridItem>
-                          <Heading fontSize={{ base: "2xl", md: "3xl" }} mb={4}>
-                            Differentiators
-                          </Heading>
+              {/* Accordion Content */}
+              <Accordion.ItemContent>
+                <Accordion.ItemBody>
+                  <Box px={{ base: 4, md: 16 }} bg="white">
+                    {/* Main Body Text */}
+                    <Text fontSize={{ base: "lg", md: "2xl" }} mb={6}>
+                      {item.body}
+                    </Text>
+                    <Grid
+                      templateColumns={{ base: "1fr", md: "2fr 1fr" }}
+                      gap={8}
+                      px={{ base: 4, md: 8 }}
+                      py={6}
+                      alignItems="start"
+                    >
+                      <GridItem>
+                        <Heading fontSize={{ base: "2xl", md: "3xl" }} mb={4}>
+                          Differentiators
+                        </Heading>
 
-                          <Box
-                            as="ul"
-                            display="flex"
-                            flexDirection="column"
-                            listStyleType="none"
-                            gap={4}
-                            paddingLeft={0}
-                            maxW="6xl"
-                          >
-                            {item.differentiators.map((diff, idx) => (
-                              <Box key={idx} display="flex" alignItems="flex-start" gap={4}>
-                                <Box mt={1}>
-                                  <MdFiberManualRecord color="blue.700" size={16} />
-                                </Box>
-                                <Box>
-                                  {diff.title && (
-                                    <Text fontWeight="bold" fontSize={{ base: "lg", md: "xl" }} mb={1}>
-                                      {diff.title}
-                                    </Text>
-                                  )}
-                                  <Text fontSize={{ base: "lg", md: "xl" }} color="gray.700" lineHeight="tall">
-                                    {diff.description}
-                                  </Text>
-                                </Box>
+                        <Box
+                          as="ul"
+                          display="flex"
+                          flexDirection="column"
+                          listStyleType="none"
+                          gap={4}
+                          paddingLeft={0}
+                          maxW="6xl"
+                        >
+                          {item.differentiators.map((diff, idx) => (
+                            <Box key={idx} display="flex" alignItems="flex-start" gap={4}>
+                              <Box mt={1}>
+                                <MdFiberManualRecord color="blue.700" size={16} />
                               </Box>
-                            ))}
-                          </Box>
-                        </GridItem>
-
-                        {/* Right Column: Media */}
-                        <GridItem>
-                          <Box position="relative" borderRadius="md" overflow="hidden" width="100%" height={{ base: "250px", md: "600px" }}>
-                            <Image src={item.media.image} alt={item.media.alt} fill />
-                          </Box>
-
-                          {item.quote && (
-                            <Text mt={4} fontStyle="italic" fontSize={{ base: "md", md: "lg" }} color="gray.700" textAlign="center">
-                              {item.quote}
-                            </Text>
-                          )}
-                        </GridItem>
-                      </Grid>
-
-                      {/* Featured Deal */}
-                      {item.featuredDeal && (
-                        <Box bg="blue.900" color="white" p={6} mt={8} borderRadius="md">
-                          <Text fontWeight="bold" fontSize={{ base: "md", md: "xl" }}>
-                            {item.featuredDeal.title}
-                          </Text>
-                          <Text fontSize={{ base: "md", md: "xl" }} mt={2}>
-                            {item.featuredDeal.description}
-                          </Text>
+                              <Box>
+                                {diff.title && (
+                                  <Text
+                                    fontWeight="bold"
+                                    fontSize={{ base: "lg", md: "xl" }}
+                                    mb={1}
+                                  >
+                                    {diff.title}
+                                  </Text>
+                                )}
+                                <Text
+                                  fontSize={{ base: "lg", md: "xl" }}
+                                  color="gray.700"
+                                  lineHeight="tall"
+                                >
+                                  {diff.description}
+                                </Text>
+                              </Box>
+                            </Box>
+                          ))}
                         </Box>
-                      )}
-                    </Box>
-                  </Accordion.ItemBody>
-                </Accordion.ItemContent>
-              </Accordion.Item>
-            </MotionBox>
+                      </GridItem>
+
+                      {/* Right Column: Media */}
+                      <GridItem>
+                        <Box
+                          position="relative"
+                          borderRadius="md"
+                          overflow="hidden"
+                          width="100%"
+                          height={{ base: "250px", md: "600px" }}
+                        >
+                          <Image src={item.media.image} alt={item.media.alt} fill />
+                        </Box>
+
+                        {item.quote && (
+                          <Text
+                            mt={4}
+                            fontStyle="italic"
+                            fontSize={{ base: "md", md: "lg" }}
+                            color="gray.700"
+                            textAlign="center"
+                          >
+                            {item.quote}
+                          </Text>
+                        )}
+                      </GridItem>
+                    </Grid>
+
+                    {/* Featured Deal */}
+                    {item.featuredDeal && (
+                      <Box bg="blue.900" color="white" p={6} mt={8} borderRadius="md">
+                        <Text fontWeight="bold" fontSize={{ base: "md", md: "xl" }}>
+                          {item.featuredDeal.title}
+                        </Text>
+                        <Text fontSize={{ base: "md", md: "xl" }} mt={2}>
+                          {item.featuredDeal.description}
+                        </Text>
+                      </Box>
+                    )}
+                  </Box>
+                </Accordion.ItemBody>
+              </Accordion.ItemContent>
+            </Accordion.Item>
           ))}
         </Accordion.Root>
       </Box>
