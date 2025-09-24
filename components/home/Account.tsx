@@ -16,18 +16,18 @@ const centerReveal = {
 
 const Account = () => {
   return (
-    <MotionBox
-      bg="#0a2234"
-      py={{ base: 12, md: 20 }}
-      px={4}
-      textAlign="center"
-      fontFamily="Poppins"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: false, amount: 0.3 }}
-      variants={centerReveal}
-    >
-      {/* Button as link */}
+    // <MotionBox
+    //   bg="#0a2234"
+    //   py={{ base: 12, md: 20 }}
+    //   px={4}
+    //   textAlign="center"
+    //   fontFamily="Poppins"
+    //   initial="hidden"
+    //   whileInView="visible"
+    //   viewport={{ once: false, amount: 0.3 }}
+    //   variants={centerReveal}
+    // >
+    <Box>
       <Link
         href="https://invest.nabocapital.com"
         target="_blank"
@@ -70,7 +70,7 @@ const Account = () => {
         Whether you are saving for smaller moments or the big ones... <br />
         we are here for you
       </Text>
-    </MotionBox>
+    </Box>
   );
 };
 
