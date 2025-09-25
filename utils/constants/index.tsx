@@ -91,21 +91,21 @@ export const TestimonialData = [
   {
     name: "Coach Dexter",
     role: "Long Term Investor",
-    image: "/images/Dee.png",
+    image: "/images/Dee.jpg",
     testimonial:
       "The reason why I feel like I have stayed at Nabo Capital this long is because of safety. It's because I feel safe. And I feel at home.",
   },
   {
     name: "Coach Eileen",
     role: "Long-term Investor",
-    image: "/images/e-c.png",
+    image: "/images/e-c.jpg",
     testimonial:
       "The thing I love about Nabo is that you are not just interested in my money you are interested in my mind, and my purpose.",
   },
   {
     name: "Joyce Njoro",
     role: "Long-term Investor",
-    image: "/images/cee.png",
+    image: "/images/cee.jpg",
     testimonial:
       "What I love about Nabo is that they actually take their time to explain to you where your money is going.",
   },
@@ -631,19 +631,19 @@ export const teamMembers = [
 
 export const institutionalMembers = [
   {
-    image: "/mwongela.jpeg",
+    image: "/images/mwongela.jpg",
     name: "Dr. Mercy Mwongela",
     title: "Head of Asset Management, CX & IT",
     linkedin: "https://www.linkedin.com/in/mercymwongela/",
   },
   {
-    image: "/images/fredd.png",
+    image: "/images/fredo.jpg",
     name: "Fredrick Okudo",
     title: "Snr. Associate Product Structuring and CX & UX",
     linkedin: "https://www.linkedin.com/in/fredrick-okudo-960567135/",
   },
   {
-    image: "/images/tedy.jpg",
+    image: "/images/tee.jpg",
     name: "Teddey Muthoka",
     title: "Asset Management & Products Analyst",
     linkedin: "https://www.linkedin.com/in/teddey-muthoka/",

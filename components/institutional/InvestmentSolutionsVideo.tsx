@@ -40,7 +40,7 @@ const InvestmentSolutionsVideo: React.FC = () => {
           cursor="pointer"
         >
           <Image
-            src="/mwongela.jpeg"
+            src="/images/mwongela.jpg"
             alt="Dr. Mercy Njoroge Mwongela"
             borderRadius="md"
             objectFit="cover"
