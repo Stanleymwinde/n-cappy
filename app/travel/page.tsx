@@ -20,7 +20,7 @@ export const metadata = {
 
 const travelSlides = [
   {
-    image: "/images/travelling.jpeg",
+    image: "/images/travelling.jpg",
     title: "Because Life is About Living Fully",
     text: "Say Yes to life’s big, beautiful moments without guilt, without worry",
     primaryButton: "Unlock My Plan",
@@ -29,7 +29,7 @@ const travelSlides = [
     secondaryLink: "/individual",
   },
   {
-    image: "/images/b-t.jpeg",
+    image: "/images/b-t.jpg",
     title: "Because Life is About Living Fully",
     text: "Invest in possibility. Safe, accessible, and ready the Money Market Fund\nmakes your next adventure always within reach.",
     primaryButton: "Unlock My Plan",
