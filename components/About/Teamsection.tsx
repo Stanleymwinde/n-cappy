@@ -36,25 +36,25 @@ const TeamSection: React.FC = () => {
             <TeamMemberCard
               name="Robert Bunyi"
               title="Chairman & Non-Executive Director"
-              image="/Robert-Bunyi.jpg"
+              image="/Robert-Bunyi1.jpg"
               linkedin="#"
             />
             <TeamMemberCard
               name="Pius Muchiri"
               title="Managing Director & CEO"
-              image="/images/Piusss.png"
+              image="/Piusss.jpg"
               linkedin="https://www.linkedin.com/in/pius-muchiri-cfa-0619392a/"
             />
             <TeamMemberCard
               name="Thapelo Muribame"
               title="Non-Executive Director"
-              image="/Thapelo-Tebogo.jpg"
+              image="/Thapelo-Tebogo1.jpg"
               linkedin="#"
             />
             <TeamMemberCard
               name="Edwin Macharia"
               title="Non-Executive Director"
-              image="/Edwin-Macharia.jpg"
+              image="/Edwin-Macharia1.jpg"
               linkedin="https://www.linkedin.com/in/edwin-macharia-0aa5a63/"
             />
             <TeamMemberCard
@@ -66,19 +66,19 @@ const TeamSection: React.FC = () => {
             <TeamMemberCard
               name="David Awuah"
               title="Non-Executive Director"
-              image="/images/David.jpg"
+              image="/David-BOD1.jpg"
               linkedin="https://www.linkedin.com/company/icgroupafrica/people/"
             />
             <TeamMemberCard
               name="Ally Angula"
               title="Non-Executive Director"
-              image="/images/Ally.jpg"
+              image="/Ally-Angula1.jpg"
               linkedin=" https://www.linkedin.com/in/angula-ally-37492511/"
             />
             <TeamMemberCard
               name="Fred Murimi"
               title="Non-Executive Director"
-              image="/images/Freddy.jpg"
+              image="/Freddy1.jpg"
               linkedin=" https://www.linkedin.com/in/fred-murimi-ngari-28a72836/ "
             />
           </SimpleGrid>
@@ -93,7 +93,7 @@ const TeamSection: React.FC = () => {
             <TeamMemberCard
               name="Pius Muchiri"
               title="Managing Director & CEO"
-              image="/images/Piusss.png"
+              image="/Piusss.jpg"
               linkedin="https://www.linkedin.com/in/pius-muchiri-cfa-0619392a/"
             />
             <TeamMemberCard
@@ -105,31 +105,31 @@ const TeamSection: React.FC = () => {
             <TeamMemberCard
               name="Damitha Pathmala"
               title="Chief Investment Officer"
-              image="/Damitha-Pathmalal.jpg"
+              image="/Damitha-Pathmalal1.jpg"
               linkedin="https://www.linkedin.com/in/damitha-pathmalal/"
             />
             <TeamMemberCard
               name="Abby Mungai"
               title="General Wealth Manager"
-              image="/abby-Mungai.jpg"
+              image="/abby-Mungai1.jpg"
               linkedin="https://www.linkedin.com/in/abby-mungai-wealth-strategist-27a541109/"
             />
             <TeamMemberCard
               name="Kezzy Omoni"
               title="Digital Creative Director"
-              image="/images/kezzy2.png"
+              image="/kezzyyy.jpg"
               linkedin="https://www.linkedin.com/in/kezzy-omoni/"
             />
             <TeamMemberCard
               name="Lilian Mungai"
               title="Finance & Operations Manager"
-              image="images/lilian.png"
+              image="/lilian.jpg"
               linkedin="https://www.linkedin.com/in/lilian-muthoni-7b2170b8/"
             />
             <TeamMemberCard
               name="Irene Okoth"
               title="HR Officer"
-              image="/images/irene2.png"
+              image="/irene2.jpg"
               linkedin="https://www.linkedin.com/in/chrp-k-pm-ihrm-akoth-irene-051430179/"
             />
           </SimpleGrid>

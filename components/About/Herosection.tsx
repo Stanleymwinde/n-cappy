@@ -12,7 +12,7 @@ const HeroSection: React.FC = () => {
         left={0}
         w="100%"
         h="100%"
-        bgImage="url('images/IMG_0610.jpg')" 
+        bgImage="url('images/IMG_06100.webp')" 
         bgSize="cover"
         bgPos="center"
         zIndex={0}
