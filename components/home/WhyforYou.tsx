@@ -8,15 +8,11 @@ import {
   Grid,
   Heading,
   Text,
-  Icon
+  Icon,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import React, { useState, useRef } from "react";
 import { FaTimes } from "react-icons/fa";
-import { motion } from "framer-motion";
-
-const MotionFlex = motion(Flex);
-const MotionBox = motion(Box);
 
 const WhyforYou = () => {
   const [showVideo, setShowVideo] = useState(false);
@@ -44,16 +40,12 @@ const WhyforYou = () => {
         alignItems="center"
       >
         {/* Left Text Section */}
-        <MotionFlex
+        <Flex
           direction="column"
           justifyContent="center"
           alignItems={{ base: "center", md: "flex-start" }}
           textAlign={{ base: "center", md: "left" }}
           gap={{ base: 6, md: 8 }}
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.2 }}
-          transition={{ duration: 0.8, type: "tween" }}
         >
           <Heading
             as="h2"
@@ -87,17 +79,13 @@ const WhyforYou = () => {
           >
             Watch A Video
           </Button>
-        </MotionFlex>
+        </Flex>
 
         {/* Right Image Section */}
-        <MotionBox
+        <Box
           justifyContent="center"
           alignItems="center"
           display="flex"
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.2 }}
-          transition={{ duration: 0.8, delay: 0.2, type: "tween" }}
         >
           <Box
             position="relative"
@@ -117,7 +105,7 @@ const WhyforYou = () => {
               }}
             />
           </Box>
-        </MotionBox>
+        </Box>
       </Grid>
 
       {/* Video Overlay */}

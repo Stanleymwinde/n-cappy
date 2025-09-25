@@ -1,3 +1,4 @@
+
 "use client";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
@@ -72,3 +73,4 @@ const rates = async () => {
 };
 
 export default rates;
+

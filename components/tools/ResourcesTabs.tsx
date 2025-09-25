@@ -12,19 +12,6 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import * as Icons from "react-icons/lu";
-import { motion, easeInOut } from "framer-motion";
-
-const MotionBox = motion(Box);
-
-const fadeUpVariant = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: easeInOut } },
-};
-
-const slideLeftVariant = {
-  hidden: { opacity: 0, x: -50 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: easeInOut } },
-};
 
 const ResourcesTabs = () => {
   const [playingId, setPlayingId] = useState<number | null>(null);
@@ -38,13 +25,7 @@ const ResourcesTabs = () => {
       {/* Tabs Root */}
       <Tabs.Root defaultValue="goal-0" orientation="horizontal">
         {/* Tabs List */}
-        <MotionBox
-          variants={slideLeftVariant}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
-          transition={{ delay: 0.3 }}
-        >
+        <Box>
           <Flex
             justify="center"
             align="center"
@@ -88,18 +69,12 @@ const ResourcesTabs = () => {
               })}
             </Tabs.List>
           </Flex>
-        </MotionBox>
+        </Box>
 
         {/* Tabs Content */}
         {ResourcesData.map((goal, index) => (
           <Tabs.Content key={index} value={`goal-${index}`}>
-            <MotionBox
-              variants={fadeUpVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: false, amount: 0.3 }}
-              transition={{ delay: 0.4 }}
-            >
+            <Box>
               <Grid
                 templateColumns={{
                   base: "1fr",
@@ -177,7 +152,7 @@ const ResourcesTabs = () => {
                   </GridItem>
                 ))}
               </Grid>
-            </MotionBox>
+            </Box>
           </Tabs.Content>
         ))}
       </Tabs.Root>

@@ -12,30 +12,12 @@ import {
 import React from "react";
 import * as Icons from "react-icons/lu";
 import Link from "next/link";
-import { motion, easeInOut } from "framer-motion";
-
-const MotionBox = motion(Box);
-
-const fadeUpVariant = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: easeInOut } },
-};
-
-const slideLeftVariant = {
-  hidden: { opacity: 0, x: -50 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: easeInOut } },
-};
 
 const WhatAreYourGoals = () => {
   return (
     <Box marginX={{ base: 4, sm: 6, md: marginX }} py={{ base: 4, md: 8 }} mt={20}>
       {/* Main Heading */}
-      <MotionBox
-        variants={fadeUpVariant}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
-      >
+      <Box>
         <Heading
           as="h1"
           fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
@@ -48,16 +30,10 @@ const WhatAreYourGoals = () => {
         >
           What Are Your Financial Goals?
         </Heading>
-      </MotionBox>
+      </Box>
 
       {/* Subheading */}
-      <MotionBox
-        variants={fadeUpVariant}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
-        transition={{ delay: 0.2 }}
-      >
+      <Box>
         <Text
           marginX={{ base: 2, md: marginX }}
           fontSize={{ base: "sm", sm: "md", md: "3xl" }}
@@ -66,18 +42,12 @@ const WhatAreYourGoals = () => {
         >
           I want to ...
         </Text>
-      </MotionBox>
+      </Box>
 
       {/* Tabs Root */}
       <Tabs.Root defaultValue="goal-0" orientation="horizontal">
         {/* Tabs List */}
-        <MotionBox
-          variants={slideLeftVariant}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
-          transition={{ delay: 0.3 }}
-        >
+        <Box>
           <Flex
             justify="center"
             align="center"
@@ -105,11 +75,11 @@ const WhatAreYourGoals = () => {
                     fontSize={{ base: "sm", sm: "md", md: "lg", lg: "xl" }}
                     px={{ base: 2, sm: 3, md: 4 }}
                     py={{ base: 1, sm: 2 }}
-                     _selected={{
-                    bg: "#0A2233",
-                    color: "white",
-                    rounded: "md",
-                    fontWeight: "medium",
+                    _selected={{
+                      bg: "#0A2233",
+                      color: "white",
+                      rounded: "md",
+                      fontWeight: "medium",
                     }}
                   >
                     {Icon && <Icon style={{ marginRight: "0.5rem" }} />}
@@ -119,18 +89,12 @@ const WhatAreYourGoals = () => {
               })}
             </Tabs.List>
           </Flex>
-        </MotionBox>
+        </Box>
 
         {/* Tabs Content */}
         {WhatAreYourGoalsData.map((goal, index) => (
           <Tabs.Content key={index} value={`goal-${index}`}>
-            <MotionBox
-              variants={fadeUpVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: false, amount: 0.3 }}
-              transition={{ delay: 0.4 }}
-            >
+            <Box>
               <Box
                 bgColor="#00caff"
                 py={{ base: 4, md: 6 }}
@@ -189,7 +153,7 @@ const WhatAreYourGoals = () => {
                   </Flex>
                 </Flex>
               </Box>
-            </MotionBox>
+            </Box>
           </Tabs.Content>
         ))}
       </Tabs.Root>

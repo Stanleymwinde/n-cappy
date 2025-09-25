@@ -10,9 +10,6 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
-import { motion } from "framer-motion";
-
-const MotionBox = motion(Box);
 
 const Investing = () => {
   return (
@@ -60,68 +57,61 @@ const Investing = () => {
         gap={{ base: 4, md: 6 }}
         p={{ base: 2, md: 4 }}
       >
-        {cardData.map((card, index) => {
-          const fromLeft = index % 2 === 0; // even = left, odd = right
-          return (
-            <MotionBox
-              key={index}
-              bg="white"
-              borderRadius="lg"
-              overflow="hidden"
-              boxShadow="md"
-              _hover={{ boxShadow: "lg", transform: "translateY(-4px)" }}
+        {cardData.map((card, index) => (
+          <Box
+            key={index}
+            bg="white"
+            borderRadius="lg"
+            overflow="hidden"
+            boxShadow="md"
+            _hover={{ boxShadow: "lg", transform: "translateY(-4px)" }}
+            display="flex"
+            flexDirection="column"
+            minHeight={{ base: "300px", md: "350px" }}
+          >
+            <Image
+              src={card.image}
+              alt={card.title}
+              objectFit="cover"
+              width="100%"
+              height={{ base: "150px", md: "200px" }}
+              flexShrink={0}
+            />
+            <Box
+              p={{ base: 3, md: 4 }}
               display="flex"
               flexDirection="column"
-              minHeight={{ base: "300px", md: "350px" }}
-              initial={{ opacity: 0, x: fromLeft ? -80 : 80 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: false, amount: 0.2 }}
-              transition={{ duration: 0.7, delay: index * 0.1, type: "tween" }}
+              flexGrow={1}
             >
-              <Image
-                src={card.image}
-                alt={card.title}
-                objectFit="cover"
-                width="100%"
-                height={{ base: "150px", md: "200px" }}
-                flexShrink={0}
-              />
-              <Box
-                p={{ base: 3, md: 4 }}
-                display="flex"
-                flexDirection="column"
+              <Heading fontSize={{ base: "md", md: "lg" }} mb={2}>
+                {card.title}
+              </Heading>
+              <Text
+                fontSize={{ base: "xs", sm: "sm", md: "sm" }}
+                color="gray.600"
+                mb={4}
                 flexGrow={1}
               >
-                <Heading fontSize={{ base: "md", md: "lg" }} mb={2}>
-                  {card.title}
-                </Heading>
-                <Text
-                  fontSize={{ base: "xs", sm: "sm", md: "sm" }}
-                  color="gray.600"
-                  mb={4}
-                  flexGrow={1}
+                {card.description}
+              </Text>
+              <Link href={card.link} passHref>
+                <Button
+                  borderColor="rgba(0, 0, 0, 0.6)"
+                  variant="outline"
+                  colorScheme="blackAlpha"
+                  borderRadius="full"
+                  fontWeight="bold"
+                  w="100%"
+                  mt="auto"
+                  fontSize={{ base: "sm", md: "md" }}
+                  py={{ base: 2, md: 3 }}
                 >
-                  {card.description}
-                </Text>
-                <Link href={card.link} passHref>
-                  <Button
-                    borderColor="rgba(0, 0, 0, 0.6)"
-                    variant="outline"
-                    colorScheme="blackAlpha"
-                    borderRadius="full"
-                    fontWeight="bold"
-                    w="100%"
-                    mt="auto"
-                    fontSize={{ base: "sm", md: "md" }}
-                    py={{ base: 2, md: 3 }}
-                  >
-                    Explore More
-                  </Button>
-                </Link>
-              </Box>
-            </MotionBox>
-          );
-        })}
+                  Explore More
+                </Button>
+              </Link>
+            </Box>
+          </Box>
+        ))}
       </SimpleGrid>
     </Box>
   );

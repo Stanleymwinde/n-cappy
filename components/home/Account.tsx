@@ -1,33 +1,19 @@
 "use client";
 import { Box, Button, Heading, Text, Link } from "@chakra-ui/react";
 import React from "react";
-import { motion, easeOut } from "framer-motion";
-
-const MotionBox = motion(Box);
-
-const centerReveal = {
-  hidden: { opacity: 0, scale: 0.6 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: { duration: 0.8, ease: easeOut },
-  },
-};
 
 const Account = () => {
   return (
-    // <MotionBox
-    //   bg="#0a2234"
-    //   py={{ base: 12, md: 20 }}
-    //   px={4}
-    //   textAlign="center"
-    //   fontFamily="Poppins"
-    //   initial="hidden"
-    //   whileInView="visible"
-    //   viewport={{ once: false, amount: 0.3 }}
-    //   variants={centerReveal}
-    // >
-    <Box>
+
+    <Box
+      bg="#0a2234"
+      py={{ base: 12, md: 20 }}
+      px={4}
+      textAlign="center"
+      fontFamily="Poppins"
+    >
+      {/* Button as link */}
+
       <Link
         href="https://invest.nabocapital.com"
         target="_blank"
