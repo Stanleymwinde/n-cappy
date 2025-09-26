@@ -167,7 +167,7 @@ const slider_images = [
     link: "/travel",
   },
   {
-    image: "/images/slide-4.png",
+    image: "/images/slide-4.jpg",
     title: "Make Money While doing what you love",
     text: "Settle down. Now it’s your money’s turn to clock in.",
     link: "/lifestyle-goal",
@@ -180,14 +180,14 @@ const slider_images = [
     link: "/individual/MMF&FIF",
   },
   {
-    image: "/images/globaly.jpeg",
+    image: "/images/globall.jpg",
     title: "Invest Beyond Borders. Build Wealth Without Limits.",
     text:
       "Unlock global markets, diversify your portfolio, and invest in opportunities that grow your wealth today—and protect your legacy tomorrow.",
     link: "/global-investing",
   },
   {
-    image: "/images/father.son.jpeg",
+    image: "/images/fs.jpeg",
     title: "Make Money While doing what you love",
     text: "Say yes to life’s big and beautiful moments",
     link: "/education",

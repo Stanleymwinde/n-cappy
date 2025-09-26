@@ -41,7 +41,7 @@ const page = () => {
       <Rates />
       <Hero
         title="Your Vision. Our Discipline. One Enduring Partnership"
-        imageUrl="/images/sll.jpeg"
+        imageUrl="/images/sll.jpg"
         subtitle="We don't just manage Institutional Capital, We Guard its purpose"
         button="Start A Strategic Conversation"
         buttonLink="https://forms.office.com/Pages/ResponsePage.aspx?id=1I3gDCgn-kmOcay0o8PRRR6Lv0VsgzBFmSkSbPkBGwNUQVpWSFNZU0JWSDJNUFU1OTNYTEZDVVNHVi4u" 

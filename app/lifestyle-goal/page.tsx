@@ -19,7 +19,7 @@ export const metadata = {
 
 const lifestyleSlides = [
   {
-    image: "/images/life-style.jpeg",
+    image: "/images/life-style.jpg",
     title: "Live Purposefully. Save Deliberately.",
     text: "Secure the day-to-day, and create room to breathe, plan, and enjoy life.",
     primaryButton: "Unlock My Plan",
@@ -28,7 +28,7 @@ const lifestyleSlides = [
     secondaryLink: "/lifestyle-goal",
   },
   {
-    image: "/images/clothing-utilities.jpeg",
+    image: "/images/clothing-utilities.jpg",
     title: "Live Purposefully. Save Deliberately.",
     text: "Invest in freedom.\nThe Money Market Fund keeps you liquid, ready \nand covered for life’s daily moves.",
     primaryButton: "Unlock My Plan",

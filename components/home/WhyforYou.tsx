@@ -93,7 +93,7 @@ const WhyforYou = () => {
             maxW="500px"
           >
             <Image
-              src="/pius-m.png"
+              src="/pius-m1.jpg"
               alt="Commitment Image"
               width={500}
               height={500}
