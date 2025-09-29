@@ -43,8 +43,8 @@ const Team = () => {
           >
             <Image
               src={member.image}
-              width="90%"
-              height={{ base: "300px", sm: "360px", md: "420px" }}
+              width="100%"
+              height={{ base: "400px", sm: "460px", md: "520px" }}
               objectFit="cover"
               alt={`${member.name} profile picture`}
               borderRadius="md"
