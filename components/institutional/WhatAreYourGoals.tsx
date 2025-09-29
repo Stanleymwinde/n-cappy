@@ -44,7 +44,7 @@ const WhatAreYourGoals = () => {
         </Text>
       </Box>
 
-      {/* Tabs Root */}
+      {/* Tabs Root (Chakra v3 syntax) */}
       <Tabs.Root defaultValue="goal-0" orientation="horizontal">
         {/* Tabs List */}
         <Box>
@@ -94,65 +94,63 @@ const WhatAreYourGoals = () => {
         {/* Tabs Content */}
         {WhatAreYourGoalsData.map((goal, index) => (
           <Tabs.Content key={index} value={`goal-${index}`}>
-            <Box>
-              <Box
-                bgColor="#00caff"
-                py={{ base: 4, md: 6 }}
-                px={{ base: 3, sm: 4, md: 8 }}
-                rounded={{ base: "lg", md: "2xl" }}
+            <Box
+              bgColor="#00caff"
+              py={{ base: 4, md: 6 }}
+              px={{ base: 3, sm: 4, md: 8 }}
+              rounded={{ base: "lg", md: "2xl" }}
+            >
+              <Flex
+                marginX={{ base: 2, md: marginX }}
+                direction="column"
+                justifyContent="center"
+                alignItems={{ base: "center", md: "flex-start" }}
+                textAlign={{ base: "center", md: "left" }}
+                gap={4}
               >
-                <Flex
-                  marginX={{ base: 2, md: marginX }}
-                  direction="column"
-                  justifyContent="center"
-                  alignItems={{ base: "center", md: "flex-start" }}
-                  textAlign={{ base: "center", md: "left" }}
-                  gap={4}
+                <Heading
+                  as="h2"
+                  fontSize={{ base: "lg", sm: "2xl", md: "4xl" }}
+                  fontFamily="poppins"
+                  lineHeight="1.2"
                 >
-                  <Heading
-                    as="h2"
-                    fontSize={{ base: "lg", sm: "2xl", md: "4xl" }}
-                    fontFamily="poppins"
-                    lineHeight="1.2"
-                  >
-                    {goal.title}
-                  </Heading>
-                  <Text
-                    fontSize={{ base: "sm", sm: "md", md: "2xl" }}
-                    lineHeight="1.6"
-                  >
-                    {goal.description}
-                  </Text>
-                  <Box
-                    as="ul"
-                    fontSize={{ base: "sm", sm: "md", md: "lg" }}
-                    lineHeight="1.8"
-                  >
-                    {goal.points.map((point, i) => (
-                      <li key={i}>• {point}</li>
-                    ))}
-                  </Box>
+                  {goal.title}
+                </Heading>
+                <Text
+                  fontSize={{ base: "sm", sm: "md", md: "2xl" }}
+                  lineHeight="1.6"
+                >
+                  {goal.description}
+                </Text>
+                <Box
+                  as="ul"
+                  fontSize={{ base: "sm", sm: "md", md: "lg" }}
+                  lineHeight="1.8"
+                >
+                  {goal.points.map((point, i) => (
+                    <li key={i}>• {point}</li>
+                  ))}
+                </Box>
 
-                  <Flex
-                    width="100%"
-                    justify={{ base: "center", md: "flex-end" }}
-                    mt={4}
-                  >
-                    <Link href="/institutional/treasury" passHref>
-                      <Button
-                        bg="#0a2234"
-                        _hover={{ bg: "cyan.700" }}
-                        px={{ base: 3, sm: 4, md: 6 }}
-                        py={{ base: 2, md: 4 }}
-                        fontSize={{ base: "sm", md: "md" }}
-                        rounded="lg"
-                      >
-                        {goal.button}
-                      </Button>
-                    </Link>
-                  </Flex>
+                <Flex
+                  width="100%"
+                  justify={{ base: "center", md: "flex-end" }}
+                  mt={4}
+                >
+                  <Link href="/institutional/treasury" passHref>
+                    <Button
+                      bg="#0a2234"
+                      _hover={{ bg: "cyan.700" }}
+                      px={{ base: 3, sm: 4, md: 6 }}
+                      py={{ base: 2, md: 4 }}
+                      fontSize={{ base: "sm", md: "md" }}
+                      rounded="lg"
+                    >
+                      {goal.button}
+                    </Button>
+                  </Link>
                 </Flex>
-              </Box>
+              </Flex>
             </Box>
           </Tabs.Content>
         ))}
