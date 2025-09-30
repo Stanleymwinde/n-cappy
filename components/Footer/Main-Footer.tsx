@@ -176,6 +176,7 @@ const HelpfulLinks = [
   { label: "Support", link: "mailto:clientservice@nabocapital.com" },
   { label: "Privacy Policy", link: "/Privacy-policy" },
   { label: "Sign In", link: "https://invest.nabocapital.com" },
+  { label: "FAQs", link: "/faqs" },
 ];
 
 const OurServices = [
