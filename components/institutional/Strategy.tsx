@@ -66,8 +66,16 @@ const Strategy = () => {
                 >
                   <Link href={item.link} passHref legacyBehavior>
                     <a
-                      download={item.title === "Download Brochure" ? true : undefined}
-                      target={item.title === "Book a Strategy Call" ? "_blank" : "_self"}
+                      target={
+                        item.title === "Book a Strategy Call"
+                          ? "_blank"
+                          : "_self"
+                      }
+                      rel={
+                        item.title === "Book a Strategy Call"
+                          ? "noopener noreferrer"
+                          : undefined
+                      }
                       style={{ color: "inherit", textDecoration: "none" }}
                     >
                       {item.title === "Book a Strategy Call"

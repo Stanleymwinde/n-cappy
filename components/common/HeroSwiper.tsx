@@ -35,7 +35,10 @@ const HeroSwiper: React.FC<HeroSwiperProps> = ({ slides }) => {
     time: number,
     progress: number
   ) => {
-    progressCircle.current?.style.setProperty("--progress", String(1 - progress));
+    progressCircle.current?.style.setProperty(
+      "--progress",
+      String(1 - progress)
+    );
     if (progressContent.current) {
       progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
     }
@@ -60,7 +63,6 @@ const HeroSwiper: React.FC<HeroSwiperProps> = ({ slides }) => {
             width="100%"
             objectFit={"fill"}
             backgroundImage={`url(${slide.image})`}
-        
             backgroundPosition="center"
             display="flex"
             alignItems={{ base: "flex-start", md: "center" }}

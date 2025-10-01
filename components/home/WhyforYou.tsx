@@ -1,36 +1,10 @@
-"use client";
-
 import { marginX } from "@/utils/constants";
-import {
-  Box,
-  Button,
-  Flex,
-  Grid,
-  Heading,
-  Text,
-  Icon,
-} from "@chakra-ui/react";
+import { Box, Button, Flex, Grid, Heading, Text, Icon } from "@chakra-ui/react";
+
 import Image from "next/image";
-import React, { useState, useRef } from "react";
-import { FaTimes } from "react-icons/fa";
+import Link from "next/link";
 
 const WhyforYou = () => {
-  const [showVideo, setShowVideo] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  const handleOpenVideo = () => {
-    setShowVideo(true);
-    videoRef.current?.play();
-  };
-
-  const handleCloseVideo = () => {
-    if (videoRef.current) {
-      videoRef.current.pause();
-      videoRef.current.currentTime = 0;
-    }
-    setShowVideo(false);
-  };
-
   return (
     <Box bg="#0a2234" py={{ base: 8, md: 12 }}>
       <Grid
@@ -67,26 +41,26 @@ const WhyforYou = () => {
             meet your unique goals, whether you are an individual or an
             institution.
           </Text>
-          <Button
-            bg="#00caff"
-            _hover={{ bg: "#00b5e0" }}
-            mt={2}
-            px={{ base: 6, md: 8 }}
-            py={{ base: 4, md: 6 }}
-            fontSize={{ base: "sm", md: "md" }}
-            borderRadius="full"
-            onClick={handleOpenVideo}
+          <Link
+            href="https://www.youtube.com/watch?v=Zx1e3b0n8pY"
+            target="_blank"
           >
-            Watch A Video
-          </Button>
+            <Button
+              bg="#00caff"
+              _hover={{ bg: "#00b5e0" }}
+              mt={2}
+              px={{ base: 6, md: 8 }}
+              py={{ base: 4, md: 6 }}
+              fontSize={{ base: "sm", md: "md" }}
+              borderRadius="full"
+            >
+              Watch A Video
+            </Button>
+          </Link>
         </Flex>
 
         {/* Right Image Section */}
-        <Box
-          justifyContent="center"
-          alignItems="center"
-          display="flex"
-        >
+        <Box justifyContent="center" alignItems="center" display="flex">
           <Box
             position="relative"
             w={{ base: "90%", sm: "80%", md: "500px" }}
@@ -107,53 +81,6 @@ const WhyforYou = () => {
           </Box>
         </Box>
       </Grid>
-
-      {/* Video Overlay */}
-      {showVideo && (
-        <Box
-          position="fixed"
-          top={0}
-          left={0}
-          w="100vw"
-          h="100vh"
-          bg="rgba(0,0,0,0.8)"
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
-          zIndex={1000}
-          p={{ base: 4, md: 8 }}
-        >
-          <Box position="relative" w={{ base: "100%", md: "80%" }} maxW="900px">
-            <Icon
-              as={FaTimes}
-              color="white"
-              w={{ base: 6, md: 8 }}
-              h={{ base: 6, md: 8 }}
-              position="absolute"
-              top={2}
-              right={2}
-              cursor="pointer"
-              onClick={handleCloseVideo}
-            />
-            <video
-              ref={videoRef}
-              width="100%"
-              controls
-              autoPlay
-              style={{
-                borderRadius: "12px",
-                border: "2px solid white",
-              }}
-            >
-              <source
-                src="https://res.cloudinary.com/demvcea4r/video/upload/v1756299923/Pius_-_Website_1_1_1_1_ibcwxh.mp4"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
-          </Box>
-        </Box>
-      )}
     </Box>
   );
 };

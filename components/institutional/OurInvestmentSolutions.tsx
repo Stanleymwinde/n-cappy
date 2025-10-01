@@ -1,4 +1,3 @@
-"use client";
 import { marginX, StrategyContent } from "@/utils/constants";
 import {
   Accordion,
@@ -55,7 +54,10 @@ const InvestmentSolutions = () => {
               {/* Accordion Trigger */}
               <Accordion.ItemTrigger>
                 <Stack gap={4} px={4} py={4} flex={1}>
-                  <Text fontSize={{ base: "3xl", md: "4xl" }} fontWeight="semibold">
+                  <Text
+                    fontSize={{ base: "3xl", md: "4xl" }}
+                    fontWeight="semibold"
+                  >
                     {item.title}
                   </Text>
                   <Text fontSize={{ base: "md", md: "xl" }} color="gray.600">
@@ -95,9 +97,17 @@ const InvestmentSolutions = () => {
                           maxW="6xl"
                         >
                           {item.differentiators.map((diff, idx) => (
-                            <Box key={idx} display="flex" alignItems="flex-start" gap={4}>
+                            <Box
+                              key={idx}
+                              display="flex"
+                              alignItems="flex-start"
+                              gap={4}
+                            >
                               <Box mt={1}>
-                                <MdFiberManualRecord color="blue.700" size={16} />
+                                <MdFiberManualRecord
+                                  color="blue.700"
+                                  size={16}
+                                />
                               </Box>
                               <Box>
                                 {diff.title && (
@@ -131,7 +141,11 @@ const InvestmentSolutions = () => {
                           width="100%"
                           height={{ base: "250px", md: "600px" }}
                         >
-                          <Image src={item.media.image} alt={item.media.alt} fill />
+                          <Image
+                            src={item.media.image}
+                            alt={item.media.alt}
+                            fill
+                          />
                         </Box>
 
                         {item.quote && (
@@ -150,8 +164,17 @@ const InvestmentSolutions = () => {
 
                     {/* Featured Deal */}
                     {item.featuredDeal && (
-                      <Box bg="blue.900" color="white" p={6} mt={8} borderRadius="md">
-                        <Text fontWeight="bold" fontSize={{ base: "md", md: "xl" }}>
+                      <Box
+                        bg="blue.900"
+                        color="white"
+                        p={6}
+                        mt={8}
+                        borderRadius="md"
+                      >
+                        <Text
+                          fontWeight="bold"
+                          fontSize={{ base: "md", md: "xl" }}
+                        >
                           {item.featuredDeal.title}
                         </Text>
                         <Text fontSize={{ base: "md", md: "xl" }} mt={2}>

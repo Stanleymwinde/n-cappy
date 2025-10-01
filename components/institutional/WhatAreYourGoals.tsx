@@ -1,21 +1,18 @@
 "use client";
 
 import { WhatAreYourGoalsData, marginX } from "@/utils/constants";
-import {
-  Box,
-  Button,
-  Flex,
-  Heading,
-  Text,
-  Tabs,
-} from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Text, Tabs } from "@chakra-ui/react";
 import React from "react";
 import * as Icons from "react-icons/lu";
 import Link from "next/link";
 
 const WhatAreYourGoals = () => {
   return (
-    <Box marginX={{ base: 4, sm: 6, md: marginX }} py={{ base: 4, md: 8 }} mt={20}>
+    <Box
+      marginX={{ base: 4, sm: 6, md: marginX }}
+      py={{ base: 4, md: 8 }}
+      mt={20}
+    >
       {/* Main Heading */}
       <Box>
         <Heading

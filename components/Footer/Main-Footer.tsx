@@ -26,6 +26,11 @@ const Footer = () => {
       mt="2rem"
       py="2rem"
       color="brand.white"
+      textAlign={{ base: "center", md: "left" }}
+      display="flex"
+      justifyContent={{ base: "center", md: "flex-start" }}
+      alignItems={{ base: "center", md: "stretch" }}
+      flexDirection="column"
     >
       <SimpleGrid
         py="2rem"
