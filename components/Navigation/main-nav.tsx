@@ -20,6 +20,7 @@ const MainNav = () => {
     <Flex
       py={3}
       justify="space-between"
+       px={{ base: 4, md: 10 }} 
       align="center"
       bg="white"
       boxShadow="sm"
