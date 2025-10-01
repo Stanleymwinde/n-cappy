@@ -78,7 +78,7 @@ const QuestionPack = () => {
         </Text>
       </VStack>
 
-      <Grid templateColumns={{ base: "1fr", md: "repeat(5, 1fr)" }} gap={6}>
+      <Grid templateColumns={{ base: "1fr", md: "repeat(4, 1fr)" }} gap={6}>
         {LifestylePlans.map((block, idx) => (
           <GridItem
             key={idx}
