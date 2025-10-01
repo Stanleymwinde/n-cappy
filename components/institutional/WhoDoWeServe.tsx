@@ -1,3 +1,5 @@
+"use client";
+
 import { whoweserve } from "@/utils/constants";
 import { Box, Heading, Text, Grid, VStack } from "@chakra-ui/react";
 

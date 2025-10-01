@@ -1,3 +1,5 @@
+"use client";
+
 import { WhatAreYourGoalsData, marginX } from "@/utils/constants";
 import { Box, Button, Flex, Heading, Text, Tabs } from "@chakra-ui/react";
 import React from "react";
