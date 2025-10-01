@@ -1,4 +1,4 @@
-import { Rates } from "@/components/common"; 
+import { Rates } from "@/components/common";
 import Hero from "@/components/common/Hero";
 import { CallToAction } from "@/components/home";
 import {
@@ -10,7 +10,7 @@ import {
   InvestmentSolutionsVideo,
   WhatAreYourGoals,
   OurInvestmentSolutions,
-  Faqs2
+  Faqs2,
 } from "@/components/institutional";
 import React from "react";
 
@@ -30,7 +30,7 @@ export const metadata = {
     "long-term growth investment Kenya",
     "corporate financial planning Kenya",
     "institutional fixed income investments",
-    "unit trusts for institutions Kenya"
+    "unit trusts for institutions Kenya",
   ],
 };
 
@@ -40,11 +40,10 @@ const page = () => {
       <Rates />
       <Hero
         title="Your Vision. Our Discipline. One Enduring Partnership"
-        imageUrl="/images/sll.jpeg"
+        imageUrl="/images/sll.jpg"
         subtitle="We don't just manage Institutional Capital, We Guard its purpose"
         button="Start A Strategic Conversation"
-        buttonLink="https://forms.office.com/Pages/ResponsePage.aspx?id=1I3gDCgn-kmOcay0o8PRRR6Lv0VsgzBFmSkSbPkBGwNUQVpWSFNZU0JWSDJNUFU1OTNYTEZDVVNHVi4u" 
-       
+        buttonLink="https://forms.office.com/Pages/ResponsePage.aspx?id=1I3gDCgn-kmOcay0o8PRRR6Lv0VsgzBFmSkSbPkBGwNUQVpWSFNZU0JWSDJNUFU1OTNYTEZDVVNHVi4u"
       />
       <WhatAreYourGoals />
       <WhoDoWeServe />

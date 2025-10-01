@@ -12,10 +12,8 @@ import {
   Input,
   Text,
   VStack,
-  
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { Results } from "@/components/i-want-tos";
 import { useColorModeValue } from "../ui/color-mode";
 
 const EduQuestionsComponent = () => {
@@ -24,10 +22,18 @@ const EduQuestionsComponent = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [showResults, setShowResults] = useState(false);
 
+  // ✅ Store answers by question ID
+  const [answers, setAnswers] = useState<Record<number, string>>({});
+
   const handleCardClick = (index: number) => {
     setActivePlanIndex(index);
     setQuestionIndex(0);
     setShowResults(false);
+    setAnswers({}); // reset answers when new plan is picked
+  };
+
+  const handleAnswerChange = (id: number, value: string) => {
+    setAnswers((prev) => ({ ...prev, [id]: value }));
   };
 
   const activePlan =
@@ -41,7 +47,11 @@ const EduQuestionsComponent = () => {
     <Box id="questions3" marginX={marginX} py={10} bg={cardBg}>
       {/* Header Section */}
       <VStack gap={6} textAlign="center" mb={8}>
-        <Heading fontSize={{ base: "4xl", md: "5xl" }} fontWeight="bold" color="blue.900">
+        <Heading
+          fontSize={{ base: "4xl", md: "5xl" }}
+          fontWeight="bold"
+          color="blue.900"
+        >
           Building Blocks of Your Legacy
         </Heading>
         <Text maxW="2xl" fontSize="md" color="gray.600">
@@ -115,7 +125,7 @@ const EduQuestionsComponent = () => {
 
       {/* Active Question Section */}
       <VStack gap={6} p={6}>
-        {activePlan && activeQuestion && (
+        {activePlan && activeQuestion && !showResults && (
           <Box
             width="100%"
             bg="#00CAFF"
@@ -150,7 +160,14 @@ const EduQuestionsComponent = () => {
                   <Text fontSize="xl" fontWeight="bold">
                     {activeQuestion.question}
                   </Text>
-                  <Input placeholder={activeQuestion.placeholder} mt={3} />
+                  <Input
+                    placeholder={activeQuestion.placeholder}
+                    mt={3}
+                    value={answers[activeQuestion.id] || ""} // ✅ separate input value
+                    onChange={(e) =>
+                      handleAnswerChange(activeQuestion.id, e.target.value)
+                    }
+                  />
                   <Text fontSize="sm" color="gray.600" mt={2}>
                     {activeQuestion.hint}
                   </Text>
@@ -193,6 +210,158 @@ const EduQuestionsComponent = () => {
                 </HStack>
               </VStack>
             </HStack>
+          </Box>
+        )}
+
+        {/* Results Section (after Finish) */}
+        {showResults && activePlan && (
+          <Box
+            width="100%"
+            bg="white"
+            p={8}
+            rounded="2xl"
+            mt={8}
+            boxShadow="lg"
+            textAlign="center"
+          >
+            <Heading fontSize="2xl" mb={6} color="blue.900">
+              Your Lifestyle Plan
+            </Heading>
+
+            {/* Extract dynamic values from answers */}
+            {(() => {
+              const targetYear = answers[6] || "Not provided"; // Q6: When do you want to own your home?
+              const targetAmount = answers[4] || "Not provided"; // Q4: How much have you saved?
+              const monthlySavings = answers[5] || "Not provided"; // Q5: Monthly housing budget
+              const goal = answers[1] || "Home Ownership"; // Q1 as the main goal description
+              const selectedFund = "Money Market Fund"; // Static for now, but can come from another question
+
+              return (
+                <>
+                  {/* Top Grid with 4 summary boxes */}
+                  <Grid
+                    templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
+                    gap={6}
+                    mb={8}
+                  >
+                    <Box
+                      p={4}
+                      rounded="lg"
+                      bg="orange.50"
+                      border="1px solid"
+                      borderColor="orange.200"
+                      textAlign="left"
+                    >
+                      <Text fontWeight="bold" color="orange.600">
+                        Your Goal
+                      </Text>
+                      <Text fontSize="sm" color="gray.600">
+                        {goal}
+                      </Text>
+                    </Box>
+
+                    <Box
+                      p={4}
+                      rounded="lg"
+                      bg="orange.100"
+                      border="1px solid"
+                      borderColor="orange.200"
+                      textAlign="left"
+                    >
+                      <Text fontWeight="bold" color="orange.700">
+                        Target Year
+                      </Text>
+                      <Text fontSize="sm" color="gray.600">
+                        {targetYear}
+                      </Text>
+                    </Box>
+
+                    <Box
+                      p={4}
+                      rounded="lg"
+                      bg="gray.50"
+                      border="1px solid"
+                      borderColor="gray.200"
+                      textAlign="left"
+                    >
+                      <Text fontWeight="bold" color="orange.700">
+                        Selected Fund
+                      </Text>
+                      <Text fontSize="sm" color="gray.600">
+                        {selectedFund}
+                      </Text>
+                    </Box>
+
+                    <Box
+                      p={4}
+                      rounded="lg"
+                      bg="red.50"
+                      border="1px solid"
+                      borderColor="red.200"
+                      textAlign="left"
+                    >
+                      <Text fontWeight="bold" color="red.700">
+                        Target
+                      </Text>
+                      <Text fontSize="sm" color="gray.600">
+                        {targetAmount}
+                      </Text>
+                    </Box>
+                  </Grid>
+
+                  {/* Savings Journey */}
+                  <Box
+                    p={6}
+                    rounded="lg"
+                    bg="blue.900"
+                    color="white"
+                    textAlign="left"
+                    mb={6}
+                  >
+                    <Heading fontSize="xl" mb={4}>
+                      Your Savings Journey
+                    </Heading>
+
+                    <VStack gap={2} align="start">
+                      <Text>
+                        Time period: <b>45 months</b>
+                      </Text>
+                      <Text>
+                        Monthly Savings: <b>{monthlySavings}</b>
+                      </Text>
+                      <Text>
+                        MMF Projection: <b>{targetAmount}</b>
+                      </Text>
+                      <Text>
+                        FIF Projection: <b>KES 615,000</b>
+                      </Text>
+                    </VStack>
+                  </Box>
+
+                  {/* Buttons */}
+                  <HStack mt={6} justify="center" gap={4}>
+                    <Button
+                      bg="blue.500"
+                      color="white"
+                      rounded="full"
+                      px={6}
+                      _hover={{ bg: "blue.600" }}
+                    >
+                      Explore Funds
+                    </Button>
+                    <Button
+                      bg="cyan.500"
+                      color="white"
+                      rounded="full"
+                      px={6}
+                      _hover={{ bg: "cyan.600" }}
+                    >
+                      Download Your Lifestyle Plan
+                    </Button>
+                  </HStack>
+                </>
+              );
+            })()}
           </Box>
         )}
       </VStack>

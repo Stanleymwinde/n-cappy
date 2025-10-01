@@ -1,3 +1,4 @@
+"use client";
 import {
   Box,
   Flex,
@@ -25,6 +26,11 @@ const Footer = () => {
       mt="2rem"
       py="2rem"
       color="brand.white"
+      textAlign={{ base: "center", md: "left" }}
+      display="flex"
+      justifyContent={{ base: "center", md: "flex-start" }}
+      alignItems={{ base: "center", md: "stretch" }}
+      flexDirection="column"
     >
       <SimpleGrid
         py="2rem"
@@ -75,8 +81,16 @@ const Footer = () => {
               href={item.link}
               _hover={{ textDecoration: "underline" }}
               textAlign="left"
-              target={item.link.startsWith("http") || item.link.startsWith("mailto:") ? "_blank" : undefined}
-              rel={item.link.startsWith("http") || item.link.startsWith("mailto:") ? "noopener noreferrer" : undefined}
+              target={
+                item.link.startsWith("http") || item.link.startsWith("mailto:")
+                  ? "_blank"
+                  : undefined
+              }
+              rel={
+                item.link.startsWith("http") || item.link.startsWith("mailto:")
+                  ? "noopener noreferrer"
+                  : undefined
+              }
             >
               <Flex align="center" gap={1} lineHeight="1.5">
                 <Box as={item.icon} color="primary" boxSize={5} />
@@ -170,7 +184,7 @@ const HelpfulLinks = [
 ];
 
 const OurServices = [
-  { label: "Unit Trust Funds", link: "#" },
-  { label: "Private Wealth Management", link: "#" },
-  { label: "Institutional Investment Solutions", link: "#" },
+  { label: "Unit Trust Funds", link: "/individual/MMF&FIF" },
+  { label: "Private Wealth Management", link: "/institutional/treasury" },
+  { label: "Institutional Investment Solutions", link: "/institutional" },
 ];

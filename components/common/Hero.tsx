@@ -4,8 +4,6 @@ import {
   Button,
   Text,
   Flex,
-  Skeleton,
-  SkeletonText,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -35,9 +33,9 @@ const Hero = ({
   return (
     <Box
       position="relative"
-      height={{ base: "70vh", sm: "75vh", md: "90vh" }}
-      minHeight="300px"
-      maxHeight="900px"
+      height={{ base: "90vh", sm: "105vh", md: "120vh" }} // 🔹 Increased height
+      minHeight="500px" // 🔹 Raised minimum height a bit
+      maxHeight="1000px" // 🔹 Increased maximum height
       width="100%"
       overflow="hidden"
       pt={{ base: 2, md: 4 }}
@@ -65,41 +63,47 @@ const Hero = ({
         left={0}
         right={0}
         bottom={0}
-        bg="rgba(0, 0, 0, 0.4)"
+        bg="rgba(0, 0, 0, 0.35)"
         zIndex={1}
       />
 
       {/* Hero Content */}
       <Box
         color="white"
-        p={{ base: 4, md: 6 }}
+        p={{ base: 4, sm: 6, md: 8 }}
         position="relative"
         zIndex={2}
-        width={{ base: "90%", sm: "85%", md: "45%" }}
-        ml={{ base: "auto", md: 16 }}
-        mr={{ base: "auto", md: 0 }}
+        width={{ base: "100%", sm: "90%", md: "50%" }}
+        mx={{ base: "auto", md: 16 }}
         fontFamily="Poppins"
         display="flex"
         flexDirection="column"
         justifyContent="center"
-        height="80%"
+        height="100%"
         textAlign={{ base: "center", md: "left" }}
       >
+        {/* Title */}
         <Text
-          fontSize={{ base: "2xl", sm: "3xl", md: "5xl" }}
+          fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
           fontWeight="bold"
           lineHeight="short"
         >
           {title || "Begin The Journey. We'll Walk With You."}
         </Text>
 
-        <Text fontSize={{ base: "sm", sm: "md", md: "xl" }} mt={4}>
+        {/* Subtitle */}
+        <Text
+          fontSize={{ base: "sm", sm: "md", md: "xl" }}
+          mt={4}
+          px={{ base: 2, sm: 0 }}
+        >
           {subtitle || "That's the Nabo Promise. Your Growth, Our Focus."}
         </Text>
 
+        {/* Buttons */}
         <Flex
           gap={4}
-          mt={5}
+          mt={6}
           flexWrap="wrap"
           justifyContent={{ base: "center", md: "flex-start" }}
         >
@@ -109,10 +113,11 @@ const Hero = ({
               <Button
                 bg="cyan.900"
                 color="white"
-                px={{ base: 4, md: 6 }}
-                py={{ base: 4, md: 6 }}
+                px={{ base: 4, sm: 6, md: 8 }}
+                py={{ base: 3, md: 5 }}
                 rounded="full"
-                fontWeight="bold"
+                fontWeight="medium"
+                fontSize={{ base: "sm", sm: "md", md: "lg" }}
                 _hover={{ bg: "#00CAFF" }}
               >
                 {button || "Get Started"}
@@ -123,10 +128,11 @@ const Hero = ({
               <Button
                 bg="cyan.900"
                 color="white"
-                px={{ base: 4, md: 6 }}
-                py={{ base: 4, md: 6 }}
+                px={{ base: 4, sm: 6, md: 8 }}
+                py={{ base: 3, md: 5 }}
                 rounded="full"
-                fontWeight="bold"
+                fontWeight="medium"
+                fontSize={{ base: "sm", sm: "md", md: "lg" }}
                 _hover={{ bg: "#00CAFF" }}
               >
                 {button || "Get Started"}
@@ -136,10 +142,11 @@ const Hero = ({
             <Button
               bg="cyan.900"
               color="white"
-              px={{ base: 4, md: 6 }}
-              py={{ base: 4, md: 6 }}
+              px={{ base: 4, sm: 6, md: 8 }}
+              py={{ base: 3, md: 5 }}
               rounded="full"
-              fontWeight="bold"
+              fontWeight="medium"
+              fontSize={{ base: "sm", sm: "md", md: "lg" }}
               _hover={{ bg: "#00CAFF" }}
             >
               {button || "Get Started"}
@@ -154,10 +161,11 @@ const Hero = ({
                   flex="1"
                   bg="#0A2233"
                   color="white"
-                  px={{ base: 4, md: 6 }}
-                  py={{ base: 4, md: 6 }}
+                  px={{ base: 4, sm: 6, md: 8 }}
+                  py={{ base: 3, md: 5 }}
                   rounded="full"
-                  fontWeight="bold"
+                  fontWeight="medium"
+                  fontSize={{ base: "sm", sm: "md", md: "lg" }}
                   _hover={{ bg: "#00CAFF" }}
                 >
                   {button1}
@@ -169,10 +177,11 @@ const Hero = ({
                   flex="1"
                   bg="#0A2233"
                   color="white"
-                  px={{ base: 4, md: 6 }}
-                  py={{ base: 4, md: 6 }}
+                  px={{ base: 4, sm: 6, md: 8 }}
+                  py={{ base: 3, md: 5 }}
                   rounded="full"
                   fontWeight="bold"
+                  fontSize={{ base: "sm", sm: "md", md: "lg" }}
                   _hover={{ bg: "#00CAFF" }}
                 >
                   {button1}

@@ -8,45 +8,40 @@ import {
   Image,
   Stack,
   Link,
-  Card,
-  Button,
 } from "@chakra-ui/react";
-import { useColorModeValue } from "../ui/color-mode";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import { marginX } from "@/utils/constants";
 import FeaturedBlogs from "./FeaturedBlogs";
 
-export default function page() {
+export default function Page() {
+  // Static colors instead of useColorModeValue
+  const bgColor = "white";
+  const cardBgRight = "white";
+
   return (
-    <Box
-      py={12}
-      marginX={marginX}
-      bg={useColorModeValue("white", "gray.800")}
-      mt={20}
-    >
-      <Stack gap={8} textAlign="center" mb={10}>
-        <Heading fontSize={{ base: "3xl", md: "6xl" }} fontWeight="bold">
+    <Box py={{ base: 8, md: 12 }} marginX={{ base: 4, sm: 6, md: marginX }} bg={bgColor} mt={20}>
+      {/* Heading & Subtext */}
+      <Stack gap={6} textAlign="center" mb={{ base: 8, md: 10 }}>
+        <Heading fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }} fontWeight="bold">
           Fresh Take on Finance Every Week
         </Heading>
         <Text fontSize={{ base: "md", md: "lg" }} color="gray.600">
-          Stay informed with our latest financial articles, market analysis, and
-          expert insights.
+          Stay informed with our latest financial articles, market analysis, and expert insights.
         </Text>
       </Stack>
 
-      <Flex
-        direction={{ base: "column", md: "row" }}
-        gap={6}
-        justify="center"
-        align="start"
-      >
-        {/* Left card */}
+      {/* Cards */}
+      <Flex direction={{ base: "column", md: "row" }} gap={{ base: 6, md: 8 }} justify="center" align={{ base: "center", md: "start" }}>
+        {/* Left Card */}
         <Box
           bg="white"
           borderRadius="xl"
           boxShadow="md"
           maxW={{ base: "full", md: "lg" }}
           overflow="hidden"
+          cursor="pointer"
+          transition="all 0.3s ease"
+          _hover={{ transform: "translateY(-4px)", boxShadow: "lg" }}
         >
           <Box position="relative">
             <Image
@@ -54,55 +49,41 @@ export default function page() {
               alt="When Was the Last Time You Truly Stepped Out?"
               objectFit="cover"
               w="full"
-              h={{ base: "200px", md: "250px" }}
+              h={{ base: "200px", md: "250px", lg: "300px" }}
             />
-            <Box
-              position="absolute"
-              bottom={2}
-              left={2}
-              bg="blue.900"
-              px={3}
-              py={1}
-              borderRadius="md"
-            >
+            <Box position="absolute" bottom={2} left={2} bg="blue.900" px={3} py={1} borderRadius="md">
               <Text fontSize="sm" fontWeight="bold" color="white">
                 EDITION TWO
               </Text>
             </Box>
           </Box>
-          <Box px={4} py={5}>
+          <Box px={{ base: 3, sm: 4 }} py={{ base: 4, md: 5 }}>
             <Flex justify="space-between" color="gray.500" fontSize="sm" mb={2}>
               <Text>August 4, 2025</Text>
               <Text>8 min read</Text>
             </Flex>
-            <Heading fontSize="lg" mb={2}>
+            <Heading fontSize={{ base: "md", sm: "lg", md: "xl" }} mb={2}>
               The Campaign That Dares You to See More
             </Heading>
-            <Text fontSize="sm" color="gray.600" mb={4}>
-              At first glance, Dubai Is Calling may look like a travel offer.
-              But look closer, and you will see something deeper. This isn’t
-              about ticking destinations off a bucket list. It’s about
-              rethinking what it means to invest in yourself.
+
+            <Text fontSize={{ base: "sm", md: "md" }} color="gray.600" mb={4}>
+              At first glance, Dubai Is Calling may look like a travel offer. But look closer, and you will see something deeper. This isn’t about ticking destinations off a bucket list. It’s about rethinking what it means to invest in yourself.
             </Text>
-            <Link
-              color="blue.500"
-              fontWeight="medium"
-              display="flex"
-              alignItems="center"
-              href="/tools_and_resources/dubai-calling"
-            >
-              Read More <IoArrowForwardCircleOutline />
+            <Link color="blue.500" fontWeight="medium" display="flex" alignItems="center" _hover={{ textDecoration: "underline" }}>
+              Read More <IoArrowForwardCircleOutline style={{ marginLeft: "0.25rem" }} />
             </Link>
           </Box>
         </Box>
 
-        {/* Right card */}
+        {/* Right Card */}
         <Box
-          bg={useColorModeValue("white", "gray.700")}
+          bg={cardBgRight}
           borderRadius="xl"
           boxShadow="md"
-          p={6}
+          p={{ base: 4, md: 6 }}
           w={{ base: "full", md: "sm" }}
+          transition="all 0.3s ease"
+          _hover={{ transform: "translateY(-4px)", boxShadow: "lg" }}
         >
           <Text color="blue.400" fontSize="sm" fontWeight="semibold">
             Weekly Blog
@@ -111,20 +92,18 @@ export default function page() {
             The Nabo Capital Insider
           </Heading>
           <Text fontSize="sm" color="gray.600" mb={4}>
-            Welcome to The Nabo Capital Insider, your go-to source for financial
-            literacy tips, industry insights and expert advice.
+            Welcome to The Nabo Capital Insider, your go-to source for financial literacy tips, industry insights and expert advice.
           </Text>
-          <Link
-            color="blue.500"
-            fontWeight="medium"
-            display="flex"
-            alignItems="center"
-          >
-            Subscribe to weekly updates <IoArrowForwardCircleOutline />
+          <Link color="blue.500" fontWeight="medium" display="flex" alignItems="center" _hover={{ textDecoration: "underline" }}>
+            Subscribe to weekly updates <IoArrowForwardCircleOutline style={{ marginLeft: "0.25rem" }} />
           </Link>
         </Box>
       </Flex>
-      <FeaturedBlogs />
+
+      {/* Featured Blogs */}
+      <Box mt={{ base: 8, md: 10 }}>
+        <FeaturedBlogs />
+      </Box>
     </Box>
   );
 }

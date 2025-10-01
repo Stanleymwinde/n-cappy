@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "generational wealth building",
     "investment calculator Kenya",
     "investment tutorial Kenya",
-    "investment tracker Kenya"
+    "investment tracker Kenya",
   ],
   openGraph: {
     title: "N-Cappy",

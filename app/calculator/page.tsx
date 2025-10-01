@@ -1,5 +1,6 @@
 import { Calculator, Rates, StartBuilding } from "@/components/common";
 import Hero from "@/components/common/Hero";
+import { CallToAction } from "@/components/home";
 import React from "react";
 
 const page = () => {
@@ -14,6 +15,7 @@ const page = () => {
       />
       <Calculator />
       <StartBuilding />
+      <CallToAction />
     </>
   );
 };

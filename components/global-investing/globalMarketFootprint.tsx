@@ -101,16 +101,6 @@ const GlobalMarketFootprint = () => {
       </Flex>
 
       <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" gap={4}>
-        <Button
-          colorScheme="blue"
-          size="lg"
-          width="100%"
-          maxWidth="300px"
-          mt={4}
-          _hover={{ bg: "#00CAFF" }}
-        >
-          Download Whitepapers
-        </Button>
       </Box>
     </Box>
   );

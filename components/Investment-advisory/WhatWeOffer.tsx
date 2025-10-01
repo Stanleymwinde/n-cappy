@@ -1,4 +1,3 @@
-
 "use client";
 import { marginX, whatweoffer } from "@/utils/constants";
 
@@ -17,29 +16,30 @@ import React from "react";
 
 const InvestmentSolutions = () => {
   return (
-
     <Box marginX={marginX} mt={20}>
-
       <Heading
         as="h1"
-        fontSize={{ base: "2xl", md: "5xl" }}
         fontFamily="poppins"
         fontWeight="bold"
         my={6}
         color="gray.800"
         textAlign="center"
+        fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
+        lineHeight="short"
       >
         What We Offer
       </Heading>
 
-      {/* Intro Text */}
-      <Text fontSize={{ base: "lg", md: "2xl" }} color="gray.600" textAlign="center">
+      <Text
+        fontSize={{ base: "lg", md: "2xl" }}
+        color="gray.600"
+        textAlign="center"
+      >
         We offer tailored investment advisory services for institutional and
         corporate clients, combining deep market insight with strategic analysis
         to drive long-term value.
       </Text>
 
-      {/* Accordion */}
       <Box py={6} bg="gray.50" borderRadius="md" mt={6}>
         <Accordion.Root collapsible gap={2}>
           {whatweoffer.map((item, index) => (
@@ -51,10 +51,12 @@ const InvestmentSolutions = () => {
               p={2}
               my={4}
             >
-              {/* Accordion Trigger */}
               <Accordion.ItemTrigger>
                 <Stack gap={4} px={4} py={4} flex={1}>
-                  <Text fontSize={{ base: "3xl", md: "4xl" }} fontWeight="semibold">
+                  <Text
+                    fontSize={{ base: "3xl", md: "4xl" }}
+                    fontWeight="semibold"
+                  >
                     {item.title}
                   </Text>
                   <Text fontSize={{ base: "md", md: "xl" }} color="gray.600">
@@ -64,16 +66,13 @@ const InvestmentSolutions = () => {
                 <Accordion.ItemIndicator pr={2} fontSize="2xl" />
               </Accordion.ItemTrigger>
 
-              {/* Accordion Content */}
               <Accordion.ItemContent>
                 <Accordion.ItemBody>
                   <Box px={{ base: 4, md: 16 }} bg="white">
-                    {/* Main Body Text */}
                     <Text fontSize={{ base: "lg", md: "2xl" }} mb={6}>
                       {item.body}
                     </Text>
 
-                    {/* Grid: Services and Media */}
                     <Grid
                       templateColumns={{ base: "1fr", md: "2fr 1fr" }}
                       gap={8}
@@ -81,14 +80,11 @@ const InvestmentSolutions = () => {
                       py={6}
                       alignItems="start"
                     >
-                      {/* Left Column: Services */}
                       <GridItem>
-                        {/* Services Heading */}
-                        <Heading fontSize={{ base: "2xl", md: "3xl" }} mb={4} >
+                        <Heading fontSize={{ base: "2xl", md: "3xl" }} mb={4}>
                           Our Services
                         </Heading>
 
-                        {/* Services List */}
                         <Box
                           as="ul"
                           display="flex"
@@ -107,14 +103,26 @@ const InvestmentSolutions = () => {
                                 gap: "16px",
                               }}
                             >
-                              <MdFiberManualRecord color="blue.700" size={24} style={{ marginTop: 6 }} />
+                              <MdFiberManualRecord
+                                color="blue.700"
+                                size={24}
+                                style={{ marginTop: 6 }}
+                              />
                               <Box>
                                 {service.title && (
-                                  <Text fontWeight="bold" fontSize={{ base: "lg", md: "xl" }} mb={1}>
+                                  <Text
+                                    fontWeight="bold"
+                                    fontSize={{ base: "lg", md: "xl" }}
+                                    mb={1}
+                                  >
                                     {service.title}
                                   </Text>
                                 )}
-                                <Text fontSize={{ base: "lg", md: "xl" }} color="gray.700" lineHeight="tall">
+                                <Text
+                                  fontSize={{ base: "lg", md: "xl" }}
+                                  color="gray.700"
+                                  lineHeight="tall"
+                                >
                                   {service.description}
                                 </Text>
                               </Box>
@@ -123,7 +131,6 @@ const InvestmentSolutions = () => {
                         </Box>
                       </GridItem>
 
-                      {/* Right Column: Media */}
                       <GridItem>
                         <Box
                           position="relative"
@@ -142,14 +149,24 @@ const InvestmentSolutions = () => {
                             top="50%"
                             left="50%"
                             transform="translate(-50%, -50%)"
-                          >
-                            <MdPlayCircleFilled size={64} color="white" />
-                          </Box>
+                          ></Box>
                         </Box>
+
+                        {/* ✅ Quote under the image */}
+                        {item.quote && (
+                          <Text
+                            mt={4}
+                            fontSize={{ base: "md", md: "lg" }}
+                            color="gray.600"
+                            fontStyle="italic"
+                            textAlign="center"
+                          >
+                            “{item.quote}”
+                          </Text>
+                        )}
                       </GridItem>
                     </Grid>
 
-                    {/* Extra Text */}
                     {item.extraText && (
                       <Text
                         mt={10}
@@ -161,7 +178,6 @@ const InvestmentSolutions = () => {
                       </Text>
                     )}
 
-                    {/* Featured Deal */}
                     {item.featuredDeal && (
                       <Box
                         bg="blue.900"
@@ -169,9 +185,11 @@ const InvestmentSolutions = () => {
                         p={6}
                         mt={8}
                         borderRadius="md"
-                        
                       >
-                        <Text fontWeight="bold" fontSize={{ base: "md", md: "xl" }}>
+                        <Text
+                          fontWeight="bold"
+                          fontSize={{ base: "md", md: "xl" }}
+                        >
                           {item.featuredDeal.title}
                         </Text>
                         <Text fontSize={{ base: "md", md: "xl" }} mt={2}>

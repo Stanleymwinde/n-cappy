@@ -11,14 +11,14 @@ const BottomFooter = () => {
             &copy; {new Date().getFullYear()} Nabo Capital. All rights reserved.
           </Text>
         </Box>
-        <Flex as="nav" gap={4} ml={4} _hover={{ color: "gray.700" }}>
+        {/* <Flex as="nav" gap={4} ml={4} _hover={{ color: "gray.700" }}>
           <Link as="a" href="/faqs" _hover={{ textDecoration: "underline" }}>
             FAQ&apos;s
           </Link>
           <Link as="a" href="/privacy" _hover={{ textDecoration: "underline" }}>
             Privacy Policy
           </Link>
-        </Flex>
+        </Flex> */}
       </Flex>{" "}
       <Text textAlign={"left"} mt={5}>
         <strong>

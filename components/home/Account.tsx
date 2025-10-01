@@ -1,8 +1,10 @@
-import { Box, Button, Heading, Text } from "@chakra-ui/react";
+"use client";
+import { Box, Button, Heading, Text, Link } from "@chakra-ui/react";
 import React from "react";
 
 const Account = () => {
   return (
+
     <Box
       bg="#0a2234"
       py={{ base: 12, md: 20 }}
@@ -10,21 +12,28 @@ const Account = () => {
       textAlign="center"
       fontFamily="Poppins"
     >
-      {/* Button */}
-      <Button
-        bg="#00caff"
-        color="white"
-        fontWeight="bold"
-        fontSize={{ base: "md", md: "xl" }}
-        px={10}
-        py={8}
-        borderRadius="xl"
-        mb={8}
-        _hover={{ bg: "#00b3e6" }}
-        fontFamily="Poppins"
+      {/* Button as link */}
+
+      <Link
+        href="https://invest.nabocapital.com"
+        target="_blank"
+        _hover={{ textDecoration: "none" }}
       >
-        Start Investing With Purpose
-      </Button>
+        <Button
+          bg="#00caff"
+          color="white"
+          fontWeight="bold"
+          fontSize={{ base: "md", md: "xl" }}
+          px={10}
+          py={8}
+          borderRadius="xl"
+          mb={8}
+          _hover={{ bg: "#00b3e6" }}
+          fontFamily="Poppins"
+        >
+          Start Investing With Purpose
+        </Button>
+      </Link>
 
       {/* Heading */}
       <Heading
@@ -52,5 +61,3 @@ const Account = () => {
 };
 
 export default Account;
-
-

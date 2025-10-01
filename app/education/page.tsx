@@ -1,9 +1,9 @@
-import Hero from "@/components/common/Hero";
 import { CallToAction } from "@/components/home";
 import { PlanForJoy } from "@/components/i-want-tos";
 import React from "react";
 import { EduQuestions } from "../../components/Education";
 import { Rates } from "@/components/common";
+import HeroSwiper from "@/components/common/HeroSwiper"; // ✅ import swiper
 
 // SEO metadata for Security Portfolio page
 export const metadata = {
@@ -19,23 +19,37 @@ export const metadata = {
   ],
 };
 
-const page = () => {
+const securitySlides = [
+  {
+    image: "/grad1.jpg",
+    title: "For Life’s Big Moments and the Unexpected",
+    text: "True peace of mind is being financially ready.",
+    primaryButton: "Unlock My Plan",
+    primaryLink: "/security-goal",
+    secondaryButton: "Learn More",
+    secondaryLink: "/individual",
+  },
+  {
+    image: "/iestate-plan.jpg", 
+    title: "For Life’s Big Moments and the Unexpected",
+    text: "Invest in certainty. The Fixed income Fund anchors your capital when life hits hardest.",
+    primaryButton: "Unlock My Plan",
+    primaryLink: "/security-goal",
+    secondaryButton: "Learn More",
+    secondaryLink: "/individual",
+  },
+];
+
+const Page: React.FC = () => {
   return (
     <>
       <Rates />
-      <Hero
-        button="Unlock My Plan"
-        button1="Learn More"
-        imageUrl="/images/grad1.jpeg"
-        title="For life’s big moments and the unexpected"
-        subtitle="True peace of mind is being financially ready."
-        scrollTarget="#questions3"
-      />
+      <HeroSwiper slides={securitySlides} /> 
       <PlanForJoy
         title="Do You Want to Be Ready for Anything?"
         subtitle="Think of this as your personal financial safety shield—built for those who plan for life’s milestones and prepare for the unexpected."
         subtext="Whether it’s a future home, school fees, or an unforeseen medical bill, this plan keeps you in control. It’s stability without slowdown—flexible, reliable, and always ready when you need it most."
-        imageUrl="/images/old-coup1.jpeg"
+        imageUrl="/images/old-coup1.jpg"
       />
       <EduQuestions />
       <CallToAction />
@@ -43,4 +57,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

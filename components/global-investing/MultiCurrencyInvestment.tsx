@@ -63,18 +63,20 @@ const MultiCurrencyInvestment = () => {
               </Box>
 
               <Flex justify="flex-end">
-                <Button
-                  bg="#0a2234"
-                  color="white"
-                  size="sm"
-                  _hover={{
-                    bg: "#00CAFF",
-                    transform: "scale(1.05)",
-                  }}
-                >
-                  <FaDownload style={{ marginRight: "6px" }} />
-                  {fund.cta}
-                </Button>
+                <a href={fund.file} download>
+                  <Button
+                    bg="#0a2234"
+                    color="white"
+                    size="sm"
+                    _hover={{
+                      bg: "#00CAFF",
+                      transform: "scale(1.05)",
+                    }}
+                  >
+                    <FaDownload style={{ marginRight: "6px" }} />
+                    {fund.cta}
+                  </Button>
+                </a>
               </Flex>
             </Box>
           </Box>

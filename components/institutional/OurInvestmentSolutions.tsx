@@ -1,6 +1,4 @@
-"use client";
 import { marginX, StrategyContent } from "@/utils/constants";
-
 import {
   Accordion,
   Box,
@@ -11,7 +9,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import { MdPlayCircleFilled, MdFiberManualRecord } from "react-icons/md";
+import { MdFiberManualRecord } from "react-icons/md";
 import React from "react";
 
 const InvestmentSolutions = () => {
@@ -105,15 +103,12 @@ const InvestmentSolutions = () => {
                               alignItems="flex-start"
                               gap={4}
                             >
-                              {/* Bullet */}
                               <Box mt={1}>
                                 <MdFiberManualRecord
                                   color="blue.700"
                                   size={16}
                                 />
                               </Box>
-
-                              {/* Text */}
                               <Box>
                                 {diff.title && (
                                   <Text
@@ -152,6 +147,18 @@ const InvestmentSolutions = () => {
                             fill
                           />
                         </Box>
+
+                        {item.quote && (
+                          <Text
+                            mt={4}
+                            fontStyle="italic"
+                            fontSize={{ base: "md", md: "lg" }}
+                            color="gray.700"
+                            textAlign="center"
+                          >
+                            {item.quote}
+                          </Text>
+                        )}
                       </GridItem>
                     </Grid>
 

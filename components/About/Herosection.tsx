@@ -12,7 +12,7 @@ const HeroSection: React.FC = () => {
         left={0}
         w="100%"
         h="100%"
-        bgImage="url('images/IMG_0610.jpg')" 
+        bgImage="url('images/IMG_06100.webp')" 
         bgSize="cover"
         bgPos="center"
         zIndex={0}
@@ -43,9 +43,11 @@ const HeroSection: React.FC = () => {
         fontFamily="Poppins"
       >
         <Heading
-          fontSize={{ base: "3xl", md: "5xl" }}
-          fontWeight="bold"
-          lineHeight="short"
+          fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
+          fontWeight={"bold"}
+          fontFamily="poppins"
+          textAlign="center"
+          color="#FFFFFF"
         >
           Who We Are
         </Heading>

@@ -1,4 +1,4 @@
-// components/MoneyMarketFund.tsx
+// components/FixedIncomeFund.tsx
 "use client";
 
 import {
@@ -9,7 +9,6 @@ import {
   GridItem,
   Heading,
   Icon,
-  Link,
   Text,
   VStack,
 } from "@chakra-ui/react";
@@ -58,13 +57,13 @@ const FIFfeatures = [
 
 const FixedIncomeFund = () => {
   return (
-    <Box py={16} px={{ base: 4, md: 16 }} marginX={marginX} >
+    <Box py={16} px={{ base: 4, md: 16 }} marginX={marginX}>
       <VStack gap={4} textAlign="center" mb={7}>
         <Heading
           as="h1"
           fontSize={{ base: "3xl", md: "6xl" }}
           fontFamily="poppins"
-          fontWeight={"bold"}
+          fontWeight="bold"
           textAlign="center"
           my={6}
           color="gray.800"
@@ -105,8 +104,9 @@ const FixedIncomeFund = () => {
         ))}
       </Grid>
 
+      {/* Download Fact Sheet Button */}
       <Flex justify={{ base: "center", md: "flex-end" }}>
-        <Link href="/pdfs/mmf-factsheet.pdf" _hover={{ textDecor: "none" }}>
+        <a href="/images/fixedincomesheet.jpeg" download>
           <Button
             bg="blue.900"
             color="white"
@@ -114,13 +114,11 @@ const FixedIncomeFund = () => {
             rounded="lg"
             px={6}
             py={5}
-           
           >
-            {" "}
-            <MdDownload />
+            <MdDownload style={{ marginRight: "8px" }} />
             Fixed Income Fund (KES) Fact Sheet
           </Button>
-        </Link>
+        </a>
       </Flex>
     </Box>
   );

@@ -1,8 +1,8 @@
-import Hero from "@/components/common/Hero";
 import { CallToAction } from "@/components/home";
 import { PlanForJoy } from "@/components/i-want-tos";
 import QuestionPack from "@/components/i-want-tos/QuestionPack";
 import { Rates } from "@/components/common";
+import HeroSwiper from "@/components/common/HeroSwiper"; 
 import React from "react";
 
 export const metadata = {
@@ -17,20 +17,33 @@ export const metadata = {
   ],
 };
 
+
+const travelSlides = [
+  {
+    image: "/images/travelling.jpg",
+    title: "Because Life is About Living Fully",
+    text: "Say Yes to life’s big, beautiful moments without guilt, without worry",
+    primaryButton: "Unlock My Plan",
+    primaryLink: "/travel-goal",
+    secondaryButton: "Learn More",
+    secondaryLink: "/individual",
+  },
+  {
+    image: "/images/b-t.jpg",
+    title: "Because Life is About Living Fully",
+    text: "Invest in possibility. Safe, accessible, and ready the Money Market Fund\nmakes your next adventure always within reach.",
+    primaryButton: "Unlock My Plan",
+    primaryLink: "/travel-goal",
+    secondaryButton: "Learn More",
+    secondaryLink: "/individual",
+  },
+];
+
 const Page: React.FC = () => {
   return (
     <> 
       <Rates />
-
-      <Hero
-        button="Unlock My Plan"
-        button1="Learn More"
-        imageUrl="/images/travelling.jpeg"
-        title="Because Life is About Living Fully"
-        subtitle="Say yes to Life's Big, Beautiful moments without guilt, without worry"
-        scrollTarget="#questions1"
-      />
-
+      <HeroSwiper slides={travelSlides} /> 
       <PlanForJoy />
       <QuestionPack />
       <CallToAction />

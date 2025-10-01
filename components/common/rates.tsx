@@ -13,7 +13,7 @@ const rates = async () => {
   if (!securities) {
     return (
       <Box p={4}>
-        <Text color="red.500">
+        <Text color="red.600">
           Failed to fetch rates. Please try again later.
         </Text>
       </Box>
@@ -55,8 +55,10 @@ const rates = async () => {
 
   async function fetchRates(): Promise<Security[] | null> {
     try {
+      // Use Next.js fetch cache with revalidation every 2 minutes
       const response = await fetch(
-        process.env.NEXT_PUBLIC_SECURITIES_API_URL as string
+        process.env.NEXT_PUBLIC_SECURITIES_API_URL as string,
+        { next: { revalidate: 120 } }
       );
       if (!response.ok) {
         throw new Error("Network response was not ok");

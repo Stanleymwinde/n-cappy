@@ -32,10 +32,15 @@ const InvestmentSolutionsVideo: React.FC = () => {
         justify="center"
         gap={{ base: 6, md: 10 }}
       >
-        {/* Left side - Image with play button */}
-        <Box position="relative" flexShrink={0} onClick={handleOpenVideo} cursor="pointer">
+        {/* Left side - Image */}
+        <Box
+          position="relative"
+          flexShrink={0}
+          onClick={handleOpenVideo}
+          cursor="pointer"
+        >
           <Image
-            src="/mwongela.jpeg"
+            src="/images/mwongela.jpg"
             alt="Dr. Mercy Njoroge Mwongela"
             borderRadius="md"
             objectFit="cover"
@@ -61,18 +66,34 @@ const InvestmentSolutionsVideo: React.FC = () => {
 
         {/* Right side - Text content */}
         <Box color="white">
-          <Heading as="h3" fontSize={{ base: "lg", md: "2xl" }} mb={4} color="#00C8FF">
+          <Heading
+            as="h3"
+            fontSize={{ base: "lg", md: "2xl" }}
+            mb={4}
+            color="#00C8FF"
+          >
             Hear from Dr. Mercy Njoroge Mwongela on how we tailor <br />
             Investment solutions to your need
           </Heading>
 
-          <Text fontSize={{ base: "md", md: "lg" }} color="gray.200" mb={6} lineHeight="tall">
+          <Text
+            fontSize={{ base: "md", md: "lg" }}
+            color="gray.200"
+            mb={6}
+            lineHeight="tall"
+          >
             “Every client’s financial situation is unique. Our approach to asset
             management reflects that reality, ensuring your capital works as
             hard as you do”
           </Text>
 
-          <Text fontSize="sm" color="gray.300" borderTop="1px solid" borderColor="gray.500" pt={2}>
+          <Text
+            fontSize="sm"
+            color="gray.300"
+            borderTop="1px solid"
+            borderColor="gray.500"
+            pt={2}
+          >
             Dr. Mercy Njoroge Mwongela, Chief Customer Experience Officer
           </Text>
         </Box>
