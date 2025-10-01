@@ -81,12 +81,7 @@ export default function Page() {
             </Box>
           </Box>
           <Box px={{ base: 3, sm: 4 }} py={{ base: 4, md: 5 }}>
-            <Flex
-              justify="space-between"
-              color="gray.500"
-              fontSize="sm"
-              mb={2}
-            >
+            <Flex justify="space-between" color="gray.500" fontSize="sm" mb={2}>
               <Text>August 4, 2025</Text>
               <Text>8 min read</Text>
             </Flex>
@@ -94,15 +89,11 @@ export default function Page() {
               The Campaign That Dares You to See More
             </Heading>
 
-            <Text
-              fontSize={{ base: "sm", md: "md" }}
-              color="gray.600"
-              mb={4}
-            >
-              At first glance, Dubai Is Calling may look like a travel offer. But
-              look closer, and you will see something deeper. This isn’t about
-              ticking destinations off a bucket list. It’s about rethinking what
-              it means to invest in yourself.
+            <Text fontSize={{ base: "sm", md: "md" }} color="gray.600" mb={4}>
+              At first glance, Dubai Is Calling may look like a travel offer.
+              But look closer, and you will see something deeper. This isn’t
+              about ticking destinations off a bucket list. It’s about
+              rethinking what it means to invest in yourself.
             </Text>
             {/* ✅ Fixed Read More Link */}
             <Link

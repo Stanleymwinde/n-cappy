@@ -25,7 +25,7 @@ const lifestyleSlides = [
     primaryButton: "Unlock My Plan",
     primaryLink: "/lifestyle-goal",
     secondaryButton: "Learn More",
-    secondaryLink: "/lifestyle-goal",
+    secondaryLink: "/individual",
   },
   {
     image: "/images/clothing-utilities.jpg",

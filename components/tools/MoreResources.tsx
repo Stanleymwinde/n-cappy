@@ -8,7 +8,7 @@ import ResourcesTabs from "./ResourcesTabs";
 const MoreResources = () => {
   return (
     <Box>
-      <Box marginX={marginX} py={8}>
+      <Box id="section3" marginX={marginX} py={8}>
         <Heading
           as="h2"
           fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
