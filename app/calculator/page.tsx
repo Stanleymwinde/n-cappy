@@ -12,6 +12,7 @@ const page = () => {
         subtitle="Choose your goal, plan your path, and let your money work for you"
         button="Explore"
         imageUrl="/images/calc-bg.jpg"
+        scrollTarget="#section5"
       />
       <Calculator />
       <StartBuilding />

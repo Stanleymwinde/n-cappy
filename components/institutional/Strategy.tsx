@@ -101,7 +101,7 @@ const strategyData = [
     title: "Book a Strategy Call",
     description:
       "We generate original insights through rigorous macroeconomic, sectoral, and security-level analysis.",
-    link: "https://forms.office.com/Pages/ResponsePage.aspx?id=1I3gDCgn-kmOcay0o8PRRR6Lv0VsgzBFmSkSbPkBGwNUMDFGTVU2RlQ0SkY3TFI5MTVSRFVESEc2Wi4us",
+    link: "https://forms.office.com/Pages/ResponsePage.aspx?id=1I3gDCgn-kmOcay0o8PRRR6Lv0VsgzBFmSkSbPkBGwNUQVpWSFNZU0JWSDJNUFU1OTNYTEZDVVNHVi4u  ",
   },
   {
     icon: <RiFileDownloadFill />,

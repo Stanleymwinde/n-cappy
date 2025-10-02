@@ -91,7 +91,7 @@ export const TestimonialData = [
   {
     name: "Coach Dexter",
     role: "Long Term Investor",
-    image: "/images/Dee.jpg",
+    image: "/images/Dee_edited.jpg",
     testimonial:
       "The reason why I feel like I have stayed at Nabo Capital this long is because of safety. It's because I feel safe. And I feel at home.",
   },
@@ -1143,54 +1143,7 @@ export const LifestylePlans = [
       },
     ],
   },
-  {
-    title: "Continuing Education",
-    description:
-      "Learning is a lifelong investment. Use your savings to pursue new skills, go back to school, or support a loved one’s academic journey.",
-    icon: FaHandsHelping,
-    questions: [
-      {
-        id: 1,
-        key: "studyField",
-        question: "What do you want to study?",
-        placeholder: "e.g. Data Science",
-        hint: "Let us know your field of interest.",
-        image: "/images/ed-q-4.png",
-      },
-      {
-        id: 2,
-        key: "institution",
-        question: "Which institution?",
-        placeholder: "e.g. MIT, Udemy",
-        hint: "Helps tailor your savings goals.",
-        image: "/images/ed-q-2.png",
-      },
-      {
-        id: 3,
-        key: "tuitionCost",
-        question: "Expected tuition cost?",
-        placeholder: "e.g. $10,000",
-        hint: "This helps us prepare your plan.",
-        image: "/images/ed-q-1.png",
-      },
-      {
-        id: 4,
-        key: "duration",
-        question: "How long will the course/program take?",
-        placeholder: "e.g. 6 months, 4 years",
-        hint: "Gives a better picture of your time and savings requirements.",
-        image: "/images/ed-q-5.png",
-      },
-      {
-        id: 5,
-        key: "fundingSource",
-        question: "How will you fund it?",
-        placeholder: "e.g. Savings, Scholarship",
-        hint: "Helps us understand your financial plan for education.",
-        image: "/images/ed-q-6.png",
-      },
-    ],
-  },
+  
   {
     title: "Building Your Dream Home",
     description:

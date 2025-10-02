@@ -11,7 +11,7 @@ import TeamMemberCard from "@/components/About/TeamMemberCard";
 
 const TeamSection: React.FC = () => {
   return (
-    <Box bg="gray.50" pt={10} pb={16}>
+    <Box id="section2" bg="gray.50" pt={10} pb={16}>
       <Container maxW="8xl" textAlign="center">
         {/* Section Heading */}
         <Heading fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }} fontWeight="bold" mb={4} fontFamily="poppins">

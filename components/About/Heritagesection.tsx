@@ -17,7 +17,7 @@ const HeritageSection: React.FC = () => {
   const circleSize = useBreakpointValue({ base: "20px", md: "24px" });
 
   return (
-    <Box fontFamily="'Poppins', sans-serif" py={6} bg="white" w="100%" mt={20}>
+    <Box id="section3"  fontFamily="'Poppins', sans-serif" py={6} bg="white" w="100%" mt={20}>
       {/* Section Heading */}
       <Box px={{ base: 4, md: 12 }} mb={4}>
         <Heading

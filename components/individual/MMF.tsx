@@ -58,7 +58,7 @@ const features = [
 
 const MoneyMarketFund = () => {
   return (
-    <Box marginX={marginX} px={{ base: 4, md: 16 }} mt={20}>
+    <Box id="section6" marginX={marginX} px={{ base: 4, md: 16 }} mt={20}>
       <VStack gap={4} textAlign="center" mb={10}>
         <Heading
           as="h1"

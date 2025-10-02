@@ -42,6 +42,7 @@ const page = () => {
         imageUrl="/images/hm1.jpeg"
         subtitle="Choose the investment fund that aligns with your financial goals."
         button="Explore Funds"
+        scrollTarget="#section6"
       />
 
       <MMF />
