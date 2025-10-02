@@ -59,7 +59,7 @@ const HeroSwiper: React.FC<HeroSwiperProps> = ({ slides }) => {
         <SwiperSlide key={index}>
           <Box
             position="relative"
-            height={{ base: "50vh", md: "99vh" }}
+            height={{ base: "60vh", md: "99vh" }}
             width="100%"
             objectFit={"fill"}
             backgroundImage={`url(${slide.image})`}

@@ -35,8 +35,7 @@ export default function Testimonials() {
         mx="auto"
         px={{ base: 4, md: 0 }}
       >
-        Hear from investors who have trusted us with their global investment
-        journey.
+        Hear from investors who have trusted us with their global investment journey.
       </Text>
 
       {/* Carousel */}
