@@ -12,7 +12,7 @@ const HeroSection: React.FC = () => {
         left={0}
         w="100%"
         h="100%"
-        bgImage="url('images/IMG_06100.webp')" 
+        bgImage="url('images/IMG_06100.webp')"
         bgSize="cover"
         bgPos="center"
         zIndex={0}
@@ -25,7 +25,7 @@ const HeroSection: React.FC = () => {
         left={0}
         w="100%"
         h="100%"
-        bg="rgba(0,0,0,0.3)"  // adjust opacity here (0.3 lighter, 0.8 darker)
+        bg="rgba(0,0,0,0.3)" // adjust opacity here (0.3 lighter, 0.8 darker)
         zIndex={1}
       />
 
@@ -55,10 +55,30 @@ const HeroSection: React.FC = () => {
           A Trusted Partner in Institutional and Retail Investment Solutions.
         </Text>
         <HStack gap={4} mt={6}>
-          <Button color="white" _hover={{ bg: "#00CAFF" }} size="lg">
+          <Button
+            color="white"
+            _hover={{ bg: "#00CAFF" }}
+            size="lg"
+            onClick={() => {
+              const section = document.getElementById("section2");
+              if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          >
             Meet Our Team
           </Button>
-          <Button color="white" _hover={{ bg: "#00CAFF" }} size="lg">
+          <Button
+            color="white"
+            _hover={{ bg: "#00CAFF" }}
+            size="lg"
+            onClick={() => {
+              const section = document.getElementById("section3");
+              if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          >
             Learn More
           </Button>
         </HStack>

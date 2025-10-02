@@ -19,7 +19,7 @@ export default function Page() {
   const cardBgRight = "white";
 
   return (
-    <Box py={{ base: 8, md: 12 }} marginX={{ base: 4, sm: 6, md: marginX }} bg={bgColor} mt={20}>
+    <Box id="section4" py={{ base: 8, md: 12 }} marginX={{ base: 4, sm: 6, md: marginX }} bg={bgColor} mt={20}>
       {/* Heading & Subtext */}
       <Stack gap={6} textAlign="center" mb={{ base: 8, md: 10 }}>
         <Heading fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }} fontWeight="bold">

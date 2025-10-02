@@ -33,6 +33,7 @@ const page = () => {
         subtitle="Everything You Need to make Informed Investment Decisions"
         button="Explore"
         imageUrl="/images/rc.jpeg"
+        scrollTarget="#section4"
       />
 
       <Blog />

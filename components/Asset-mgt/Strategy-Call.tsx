@@ -5,7 +5,7 @@ import React from "react";
 import { FaCalendarAlt } from "react-icons/fa";
 import { RiFileDownloadFill } from "react-icons/ri";
 
-const StrategyCall = () => {
+const Strategy = () => {
   return (
     <Box py={4}>
       <Box bg={"#0a2234"} marginX={marginX} p={6} borderRadius="md">
@@ -54,6 +54,8 @@ const StrategyCall = () => {
                     {item.description}
                   </Card.Description>
                 </Card.Body>
+
+                {/* Card Footer */}
                 <Card.Footer
                   bg={"black"}
                   color="white"
@@ -62,15 +64,25 @@ const StrategyCall = () => {
                   borderRadius="md"
                   _hover={{ bg: "gray.700", transform: "scale(1.04)" }}
                 >
-                  {item.link ? (
-                    <Link href={item.link} passHref target="_blank">
-                      Book a Consultation
-                    </Link>
-                  ) : (
-                    <Link href="#" passHref>
-                      Download Whitepapers
-                    </Link>
-                  )}
+                  <Link href={item.link} passHref legacyBehavior>
+                    <a
+                      target={
+                        item.title === "Book a Strategy Call"
+                          ? "_blank"
+                          : "_self"
+                      }
+                      rel={
+                        item.title === "Book a Strategy Call"
+                          ? "noopener noreferrer"
+                          : undefined
+                      }
+                      style={{ color: "inherit", textDecoration: "none" }}
+                    >
+                      {item.title === "Book a Strategy Call"
+                        ? "Book a Consultation"
+                        : "Download Monthly Notes"}
+                    </a>
+                  </Link>
                 </Card.Footer>
               </Flex>
             </Card.Root>
@@ -81,7 +93,7 @@ const StrategyCall = () => {
   );
 };
 
-export default StrategyCall;
+export default Strategy;
 
 const strategyData = [
   {
@@ -89,12 +101,13 @@ const strategyData = [
     title: "Book a Strategy Call",
     description:
       "We generate original insights through rigorous macroeconomic, sectoral, and security-level analysis.",
-    link: "https://forms.office.com/Pages/ResponsePage.aspx?id=1I3gDCgn-kmOcay0o8PRRR6Lv0VsgzBFmSkSbPkBGwNUMDFGTVU2RlQ0SkY3TFI5MTVSRFVESEc2Wi4u",
+    link: "https://forms.office.com/Pages/ResponsePage.aspx?id=1I3gDCgn-kmOcay0o8PRRR6Lv0VsgzBFmSkSbPkBGwNUMDFGTVU2RlQ0SkY3TFI5MTVSRFVESEc2Wi4u  ",
   },
   {
     icon: <RiFileDownloadFill />,
     title: "Download Brochure",
     description:
       "Institutional-grade reporting, compliance oversight, and real-time risk analytics ensure full visibility and trust.",
+    link: "/notes/monthly-notes.zip", // <-- your zipped .docx file
   },
 ];

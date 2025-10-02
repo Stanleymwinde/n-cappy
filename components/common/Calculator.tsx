@@ -212,7 +212,7 @@ export default function Page() {
   };
 
   return (
-    <Box p={6} bg="#0A2233" minH="70vh">
+    <Box id="section5" p={6} bg="#0A2233" minH="70vh">
       <Container maxW="14xl">
         <Box py={8} px={4} borderRadius="lg" textAlign="center">
           <Text fontSize="xl" fontWeight="bold" color="blue.300" mb={4}>

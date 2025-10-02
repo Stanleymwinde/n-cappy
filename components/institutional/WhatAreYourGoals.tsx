@@ -1,3 +1,5 @@
+"use client";
+
 import { WhatAreYourGoalsData, marginX } from "@/utils/constants";
 import { Box, Button, Flex, Heading, Text, Tabs } from "@chakra-ui/react";
 import React from "react";
@@ -67,14 +69,14 @@ const WhatAreYourGoals = () => {
                   <Tabs.Trigger
                     key={index}
                     value={`goal-${index}`}
-                    fontSize={{ base: "sm", sm: "md", md: "lg", lg: "xl" }}
+                    fontSize={{ base: "xs", sm: "sm", md: "sm", lg: "md" }}
                     px={{ base: 2, sm: 3, md: 4 }}
                     py={{ base: 1, sm: 2 }}
                     _selected={{
                       bg: "#0A2233",
                       color: "white",
                       rounded: "md",
-                      fontWeight: "medium",
+                      fontWeight: "small",
                     }}
                   >
                     {Icon && <Icon style={{ marginRight: "0.5rem" }} />}
@@ -105,21 +107,21 @@ const WhatAreYourGoals = () => {
               >
                 <Heading
                   as="h2"
-                  fontSize={{ base: "lg", sm: "2xl", md: "4xl" }}
+                  fontSize={{ base: "lg", sm: "2xl", md: "3xl" }} 
                   fontFamily="poppins"
                   lineHeight="1.2"
                 >
                   {goal.title}
                 </Heading>
                 <Text
-                  fontSize={{ base: "sm", sm: "md", md: "2xl" }}
+                   fontSize={{ base: "sm", sm: "md", md: "lg" }} 
                   lineHeight="1.6"
                 >
                   {goal.description}
                 </Text>
                 <Box
                   as="ul"
-                  fontSize={{ base: "sm", sm: "md", md: "lg" }}
+                   fontSize={{ base: "sm", sm: "sm", md: "md" }}
                   lineHeight="1.8"
                 >
                   {goal.points.map((point, i) => (
@@ -138,7 +140,7 @@ const WhatAreYourGoals = () => {
                       _hover={{ bg: "cyan.700" }}
                       px={{ base: 3, sm: 4, md: 6 }}
                       py={{ base: 2, md: 4 }}
-                      fontSize={{ base: "sm", md: "md" }}
+                     fontSize={{ base: "sm", md: "md" }}
                       rounded="lg"
                     >
                       {goal.button}

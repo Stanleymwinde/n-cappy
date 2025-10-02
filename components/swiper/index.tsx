@@ -160,7 +160,7 @@ export default SwiperPage;
 
 const slider_images = [
   {
-    image: "/images/travel_dubai.png",
+    image: "/images/travel1.jpeg",
     title: "Invest in Experiences. Invest in Dubai.",
     text:
       "Step into a city where luxury, thrill, and wonder collide. Every moment you invest here becomes a memory that never fades.",
