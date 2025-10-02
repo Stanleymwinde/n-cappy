@@ -12,10 +12,7 @@ import SwiperPage from "@/components/swiper";
 export default function Home() {
   return (
     <>
-      <div id="1">
-        <Rates />
-      </div>
-
+      <Rates />
       <SwiperPage />
       <Account />
       <Investing />
