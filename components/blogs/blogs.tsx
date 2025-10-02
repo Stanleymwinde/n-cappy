@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Box,
   Text,
@@ -12,6 +10,7 @@ import {
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import { marginX } from "@/utils/constants";
 import FeaturedBlogs from "./FeaturedBlogs";
+import NextLink from "next/link";
 
 export default function Page() {
   // Static colors instead of useColorModeValue
@@ -22,16 +21,25 @@ export default function Page() {
     <Box id="section4" py={{ base: 8, md: 12 }} marginX={{ base: 4, sm: 6, md: marginX }} bg={bgColor} mt={20}>
       {/* Heading & Subtext */}
       <Stack gap={6} textAlign="center" mb={{ base: 8, md: 10 }}>
-        <Heading fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }} fontWeight="bold">
+        <Heading
+          fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
+          fontWeight="bold"
+        >
           Fresh Take on Finance Every Week
         </Heading>
         <Text fontSize={{ base: "md", md: "lg" }} color="gray.600">
-          Stay informed with our latest financial articles, market analysis, and expert insights.
+          Stay informed with our latest financial articles, market analysis, and
+          expert insights.
         </Text>
       </Stack>
 
       {/* Cards */}
-      <Flex direction={{ base: "column", md: "row" }} gap={{ base: 6, md: 8 }} justify="center" align={{ base: "center", md: "start" }}>
+      <Flex
+        direction={{ base: "column", md: "row" }}
+        gap={{ base: 6, md: 8 }}
+        justify="center"
+        align={{ base: "center", md: "start" }}
+      >
         {/* Left Card */}
         <Box
           bg="white"
@@ -51,7 +59,15 @@ export default function Page() {
               w="full"
               h={{ base: "200px", md: "250px", lg: "300px" }}
             />
-            <Box position="absolute" bottom={2} left={2} bg="blue.900" px={3} py={1} borderRadius="md">
+            <Box
+              position="absolute"
+              bottom={2}
+              left={2}
+              bg="blue.900"
+              px={3}
+              py={1}
+              borderRadius="md"
+            >
               <Text fontSize="sm" fontWeight="bold" color="white">
                 EDITION TWO
               </Text>
@@ -67,10 +83,23 @@ export default function Page() {
             </Heading>
 
             <Text fontSize={{ base: "sm", md: "md" }} color="gray.600" mb={4}>
-              At first glance, Dubai Is Calling may look like a travel offer. But look closer, and you will see something deeper. This isn’t about ticking destinations off a bucket list. It’s about rethinking what it means to invest in yourself.
+              At first glance, Dubai Is Calling may look like a travel offer.
+              But look closer, and you will see something deeper. This isn’t
+              about ticking destinations off a bucket list. It’s about
+              rethinking what it means to invest in yourself.
             </Text>
-            <Link color="blue.500" fontWeight="medium" display="flex" alignItems="center" _hover={{ textDecoration: "underline" }}>
-              Read More <IoArrowForwardCircleOutline style={{ marginLeft: "0.25rem" }} />
+            {/* ✅ Fixed Read More Link */}
+            <Link
+              as={NextLink}
+              href="/tools_and_resources/dubai-calling"
+              color="blue.500"
+              fontWeight="medium"
+              display="flex"
+              alignItems="center"
+              _hover={{ textDecoration: "underline" }}
+            >
+              Read More{" "}
+              <IoArrowForwardCircleOutline style={{ marginLeft: "0.25rem" }} />
             </Link>
           </Box>
         </Box>
@@ -92,10 +121,18 @@ export default function Page() {
             The Nabo Capital Insider
           </Heading>
           <Text fontSize="sm" color="gray.600" mb={4}>
-            Welcome to The Nabo Capital Insider, your go-to source for financial literacy tips, industry insights and expert advice.
+            Welcome to The Nabo Capital Insider, your go-to source for financial
+            literacy tips, industry insights and expert advice.
           </Text>
-          <Link color="blue.500" fontWeight="medium" display="flex" alignItems="center" _hover={{ textDecoration: "underline" }}>
-            Subscribe to weekly updates <IoArrowForwardCircleOutline style={{ marginLeft: "0.25rem" }} />
+          <Link
+            color="blue.500"
+            fontWeight="medium"
+            display="flex"
+            alignItems="center"
+            _hover={{ textDecoration: "underline" }}
+          >
+            Subscribe to weekly updates{" "}
+            <IoArrowForwardCircleOutline style={{ marginLeft: "0.25rem" }} />
           </Link>
         </Box>
       </Flex>

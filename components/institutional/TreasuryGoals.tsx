@@ -16,7 +16,7 @@ const TreasuryGoals = () => {
       {/* Main Heading */}
       <Heading
         as="h1"
-        fontSize={{ base: "3xl", md: "6xl" }}
+        fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
         fontFamily="poppins"
         fontWeight="bold"
         textAlign="center"
@@ -27,7 +27,7 @@ const TreasuryGoals = () => {
       </Heading>
 
       {/* Subheading */}
-      <Text marginX={marginX} fontSize={{ base: "md", md: "3xl" }} mb={6}>
+      <Text marginX={marginX} fontSize={{ base: "sm", md: "3xl" }} mb={6}>
         I want to ...
       </Text>
 
@@ -49,7 +49,8 @@ const TreasuryGoals = () => {
                 <Tabs.Trigger
                   key={index}
                   value={`goal-${index}`}
-                  fontSize={{ base: "xs", sm: "sm", md: "sm", lg: "md" }}
+                  fontSize={{ base: "xs", md: "sm" }}
+
                   px={4}
                   py={2}
                   _selected={{
