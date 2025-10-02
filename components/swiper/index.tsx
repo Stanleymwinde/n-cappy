@@ -99,7 +99,7 @@ const SwiperPage = () => {
             >
               <Box
                 as="p"
-                fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
+                fontSize={{ base: "xl", sm: "2xl", md: "4xl", lg: "5xl" }}
                 fontWeight="bold"
                 lineHeight="short"
               >

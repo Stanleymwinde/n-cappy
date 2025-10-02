@@ -6,7 +6,7 @@ import { IoCheckmarkDone } from "react-icons/io5";
 
 const MultiCurrencyInvestment = () => {
   return (
-    <Box py={10} bg="gray.50" marginX={marginX} mt={20}>
+    <Box id="section7" py={10} bg="gray.50" marginX={marginX} mt={20}>
       <Box textAlign="center" mb={8}>
         <Heading
           as="h1"

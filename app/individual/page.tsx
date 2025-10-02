@@ -14,8 +14,8 @@ const page = () => {
     <>
     <Rates />
       <Hero
-        title="Grow Your Wealth with Nabo Capital"
-        subtitle="choose the investment fund that aligns with your financial goals"
+        title="Begin The Journey. We’ll Walk With You"
+        subtitle="That’s the Nabo Promise. Your Growth Our Focus"
         imageUrl="/images/individual-hero.png"
         scrollTarget="#consultation"
       />

@@ -47,7 +47,7 @@ const Hero = ({
         quality={90}
         fill
         style={{
-          objectFit: "cover",
+          objectFit: "fill",
           position: "absolute",
           top: 0,
           left: 0,
@@ -84,7 +84,7 @@ const Hero = ({
       >
         {/* Title */}
         <Text
-          fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
+          fontSize={{ base: "xl", sm: "2xl", md: "4xl", lg: "5xl" }}
           fontWeight="bold"
           lineHeight="short"
         >
