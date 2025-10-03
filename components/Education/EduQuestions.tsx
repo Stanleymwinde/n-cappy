@@ -48,16 +48,14 @@ const EduQuestionsComponent = () => {
       {/* Header Section */}
       <VStack gap={6} textAlign="center" mb={8}>
         <Heading
-          fontSize={{ base: "4xl", md: "5xl" }}
+          fontSize={{ base: "3xl", md: "4xl" }}
           fontWeight="bold"
           color="blue.900"
         >
-          Building Blocks of Your Legacy
+          Because Your  Dreams Deserve a Plan
         </Heading>
         <Text maxW="2xl" fontSize="md" color="gray.600">
-          Each aspect of your financial legacy requires thoughtful planning.
-          Explore the key areas below or jump straight to your personalized
-          calculation.
+          This plan is here to help you cover more than costs. It helps you provide stability, open doors, and keep dreams on track, even when life shifts.
         </Text>
       </VStack>
 

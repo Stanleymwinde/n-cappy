@@ -98,7 +98,7 @@ const TeamSection: React.FC = () => {
             />
             <TeamMemberCard
               name="Dr. Mercy Njoroge Mwongela"
-              title="Chief Customer Experience Officer"
+              title="Head of Asset Management, CX & IT"
               image="/images/Mwongela2.png"
               linkedin="https://www.linkedin.com/in/mercymwongela/"
             />
@@ -106,7 +106,7 @@ const TeamSection: React.FC = () => {
               name="Damitha Pathmala"
               title="Chief Investment Officer"
               image="/Damitha-Pathmalal1.jpg"
-              linkedin="https://www.linkedin.com/in/damitha-pathmalal/"
+              linkedin="/"
             />
             <TeamMemberCard
               name="Abby Mungai"
@@ -116,7 +116,7 @@ const TeamSection: React.FC = () => {
             />
             <TeamMemberCard
               name="Kezzy Omoni"
-              title="Digital Creative Director"
+              title="Digital Creative Architect"
               image="/kezzyyy.jpg"
               linkedin="https://www.linkedin.com/in/kezzy-omoni/"
             />

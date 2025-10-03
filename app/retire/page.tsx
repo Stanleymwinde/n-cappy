@@ -2,7 +2,7 @@ import { CallToAction } from "@/components/home";
 import { PlanForJoy } from "@/components/i-want-tos";
 import { RetireQuestions } from "@/components/retire";
 import { Rates } from "@/components/common";
-import HeroSwiper from "@/components/common/HeroSwiper"; // new reusable swiper component
+import HeroSwiper from "@/components/common/HeroSwiper"; 
 
 export const metadata = {
   title: "Retirement Portfolio | Build Wealth for the Future",

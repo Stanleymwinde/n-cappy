@@ -8,7 +8,7 @@ const ClientOnboarding = () => {
     <Box marginX={marginX}>
       <Heading
         as="h1"
-        fontSize={{ base: "3xl", md: "6xl" }}
+        fontSize={{ base: "2xl", md: "5xl" }}
         fontFamily="poppins"
         fontWeight={"bold"}
         textAlign="center"
@@ -45,18 +45,24 @@ const ClientOnboarding = () => {
       </Accordion.Root>
 
       <Box display="flex" justifyContent="flex-end" alignItems="center" mt={6}>
-        <Button
-          bg={"#0a2234"}
-          size="lg"
-          justifyContent={"center"}
-          display={"flex"}
-          alignItems={"center"}
-          alignContent={"center"}
-          color="white"
-           _hover={{ bg: "#00CAFF" }}
+        <a
+          href="https://invest.nabocapital.com/"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Let&apos;s Onboard Without Borders <FaArrowRight />
-        </Button>
+          <Button
+            bg={"#0a2234"}
+            size="lg"
+            justifyContent={"center"}
+            display={"flex"}
+            alignItems={"center"}
+            alignContent={"center"}
+            color="white"
+            _hover={{ bg: "#00CAFF" }}
+          >
+            Let&apos;s Onboard Without Borders <FaArrowRight />
+          </Button>
+        </a>
       </Box>
     </Box>
   );

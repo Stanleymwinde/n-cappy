@@ -17,6 +17,7 @@ import React, { useState } from "react";
 import { useColorModeValue } from "../ui/color-mode";
 import { Results } from "@/components/i-want-tos";
 
+
 const LifestyleQuestions = () => {
   const cardBg = useColorModeValue("white", "gray.800");
   const [activePlanIndex, setActivePlanIndex] = useState<number | null>(null);
@@ -40,13 +41,11 @@ const LifestyleQuestions = () => {
   return (
     <Box id="questions" marginX={marginX} py={10} bg="white" mt={15}>
       <VStack gap={6} textAlign="center" mb={8}>
-        <Heading fontSize={{ base: "4xl", md: "5xl" }} color="blue.900">
-          Building Blocks of Your Legacy
+        <Heading fontSize={{ base: "3xl", md: "4xl" }} fontWeight="bold" color="blue.900">
+          True Wealth isn’t Just Grown it’s Guided
         </Heading>
         <Text maxW="6xl" fontSize="xl" color="gray.600">
-          Each aspect of your financial legacy requires thoughtful planning.
-          Explore the key areas below or jump straight to your personalized
-          calculation.
+          Affording the life you want starts with clarity. Financial freedom means having a plan for the things that matter most and the discipline to follow through. 
         </Text>
       </VStack>
 

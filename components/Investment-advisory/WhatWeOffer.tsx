@@ -54,12 +54,12 @@ const InvestmentSolutions = () => {
               <Accordion.ItemTrigger>
                 <Stack gap={4} px={4} py={4} flex={1}>
                   <Text
-                    fontSize={{ base: "3xl", md: "4xl" }}
+                    fontSize={{ base: "2xl", md: "3xl" }}
                     fontWeight="semibold"
                   >
                     {item.title}
                   </Text>
-                  <Text fontSize={{ base: "md", md: "xl" }} color="gray.600">
+                  <Text fontSize={{ base: "sd", md: "md" }} color="gray.600">
                     {item.text}
                   </Text>
                 </Stack>
@@ -69,7 +69,7 @@ const InvestmentSolutions = () => {
               <Accordion.ItemContent>
                 <Accordion.ItemBody>
                   <Box px={{ base: 4, md: 16 }} bg="white">
-                    <Text fontSize={{ base: "lg", md: "2xl" }} mb={6}>
+                    <Text fontSize={{ base: "md", md: "xl" }} mb={6}>
                       {item.body}
                     </Text>
 
@@ -119,7 +119,7 @@ const InvestmentSolutions = () => {
                                   </Text>
                                 )}
                                 <Text
-                                  fontSize={{ base: "lg", md: "xl" }}
+                                  fontSize={{ base: "md", md: "lg" }}
                                   color="gray.700"
                                   lineHeight="tall"
                                 >
@@ -170,7 +170,7 @@ const InvestmentSolutions = () => {
                     {item.extraText && (
                       <Text
                         mt={10}
-                        fontSize={{ base: "lg", md: "xl" }}
+                        fontSize={{ base: "md", md: "lg" }}
                         maxW="6xl"
                         textAlign="justify"
                       >
@@ -192,7 +192,7 @@ const InvestmentSolutions = () => {
                         >
                           {item.featuredDeal.title}
                         </Text>
-                        <Text fontSize={{ base: "md", md: "xl" }} mt={2}>
+                        <Text fontSize={{ base: "sm", md: "lg" }} mt={2}>
                           {item.featuredDeal.description}
                         </Text>
                       </Box>

@@ -1,10 +1,17 @@
 import { FacebookIcon, InstagramIcon, LinkedInIcon, XIcon, YoutubeIcon } from "../icons";
 import TiktokIcon from "../icons/TikTokIcon";
 import { MdOutlineRealEstateAgent } from "react-icons/md";
-import { FaHandsHelping, FaShieldAlt, FaUniversity } from "react-icons/fa";
+import { FaHandsHelping, FaShieldAlt, FaUniversity, FaSmile, FaCar } from "react-icons/fa";
 
 import { BsCashCoin } from "react-icons/bs";
 import { FaBuilding, FaGlobe, FaHeart, FaPiggyBank } from "react-icons/fa6";
+import { FiShoppingCart } from "react-icons/fi";
+import { FaHome, FaCarSide, FaTshirt } from "react-icons/fa";
+import { FaHouseUser, FaHospital, FaGraduationCap, FaFileContract } from "react-icons/fa";
+import { FaFileInvoice, FaBalanceScale, FaUsers, FaHandHoldingUsd, FaHeartbeat, FaUserNurse,  FaGift, FaUmbrellaBeach } from "react-icons/fa";
+
+
+
 
 export const marginX = { base: "3%", sm: "2%", md: "4%", lg: "6%" };
 
@@ -307,7 +314,7 @@ export const ResourcesData = [
         id: 1,
         title: "Investment Types and Strategies",
         subtitle: "Financial freedom isn’t found in chasing returns. ",
-        text: "We explore a diverse mix of investment vehicles, including equity, debt, and hybrid instruments.",
+        text: "You don’t just need to invest, you need to invest with purpose. This is the real game. I’ll show you exactly how to turn your portfolio into the most powerful asset you own.",
         image: "/images/w3.jpeg",
         pdf: "/pdfs/Investment-Strategies-1.pdf",
         video: "https://youtu.be/fmW4ZwDaHS4?si=_fe0b_Ao-rGTakMt",
@@ -316,7 +323,7 @@ export const ResourcesData = [
         id: 2,
         title: "Investment Types and Strategies",
         subtitle: "A Raise Won't Fix What You Do Not Know About Money",
-        text: "We explore a diverse mix of investment vehicles, including equity, debt, and hybrid instruments.",
+        text: "Owning a big house can make you look rich. But without cash flow, you are just one crisis away from losing everything. If your home owns your money, it also owns your freedom.",
         image: "/images/w2.jpeg",
         pdf: "/pdfs/Investment-Strategies-1.pdf",
         video: "https://youtu.be/IjDo69fZrPA?si=wJfvYuCk5vgZY3wf",
@@ -325,7 +332,7 @@ export const ResourcesData = [
         id: 3,
         title: "Investment Types and Strategies",
         subtitle: "You Will Never Be Free, If You Count On Your Salary!",
-        text: "We explore a diverse mix of investment vehicles, including equity, debt, and hybrid instruments.",
+        text: "You show up. You grind. You sacrifice. So why does it still feel like your money isn’t working as hard as you are? Most people aren’t broke because they don’t earn; they don’t plan!",
         image: "/images/w1.jpeg",
         pdf: "/pdfs/Investment-Strategies-1.pdf",
         video: "https://youtu.be/NDCFSkCDJv4?si=rVP4_eu6x3MKfcKw",
@@ -334,7 +341,7 @@ export const ResourcesData = [
         id: 4,
         title: "Investment Types and Strategies",
         subtitle: "Never Go Broke Again, This Investment Plan Works!",
-        text: "We explore a diverse mix of investment vehicles, including equity, debt, and hybrid instruments.",
+        text: "Picture this: You're working hard, chasing financial goals, but somehow, you still feel like you're not getting any closer to real financial security. You're not alone.",
         image: "/images/Vid-1.jpeg",
         pdf: "/pdfs/Investment-Strategies-1.pdf",
         video: "https://youtu.be/hTRb832NqOs?si=6-EpzM47u14VSWCS",
@@ -343,7 +350,7 @@ export const ResourcesData = [
         id: 5,
         title: "Investment Types and Strategies",
         subtitle: "The Strategies You Need To Invest With Purpose",
-        text: "We explore a diverse mix of investment vehicles, including equity, debt, and hybrid instruments.",
+        text: " You work. You earn. But the moment you stop showing up… everything stops. That’s not freedom. That’s financial slavery in a suit.",
         image: "/images/w4.jpeg",
         pdf: "/pdfs/Investment-Strategies-1.pdf",
         video: "https://youtu.be/FFOGreNBrmg?si=woETNjuo58xyu02L",
@@ -591,17 +598,17 @@ export const teamMembers = [
     title: "Private Wealth Manager",
     link: "  https://www.linkedin.com/in/zachary-mwangi-acsi-76431bba/ ",
   },
+   {
+    image: "/Alex.png",
+    name: "Alex Muchoki",
+    title: "Senior Private Wealth Consultant/ IFA Coordinator",
+    link: "  https://www.linkedin.com/in/alex-muchoki-ab28a643/  ",
+  },
   {
     image: "/Wycliffe.png",
     name: "Wycliffe Simiyu",
     title: "Senior Private Wealth Consultant",
     link: "  https://www.linkedin.com/in/wycliffe-simiyu-acsi-2834b29a/ ",
-  },
-  {
-    image: "/Alex.png",
-    name: "Alex Muchoki",
-    title: "Senior Private Wealth Consultant/ IFA Coordinator",
-    link: "  https://www.linkedin.com/in/alex-muchoki-ab28a643/  ",
   },
   {
     image: "/images/joyce-m.png",
@@ -1082,7 +1089,7 @@ export const LifestylePlans = [
     title: "Dream Vacations",
     description:
       "You’ve earned the right to explore. Take that beach escape, or adventure abroad — this plan helps you travel confidently, without financial pressure.",
-    icon: MdOutlineRealEstateAgent,
+    icon: FaUmbrellaBeach,
     questions: [
       {
         id: 1,
@@ -1145,10 +1152,10 @@ export const LifestylePlans = [
   },
   
   {
-    title: "Building Your Dream Home",
+    title: "Dream Car",
     description:
-      "Turn your vision into reality. From buying land to finishing touches, your plan helps you create a home that truly reflects your goals and lifestyle.",
-    icon: FaHeart,
+      "The best moments are shared. Plan ahead for birthdays, holidays, or surprise gifts and enjoy giving without the financial strain",
+    icon: FaCar,
     questions: [
       {
         id: 1,
@@ -1196,7 +1203,7 @@ export const LifestylePlans = [
     title: "Treating Your Family",
     description:
       "The best moments are shared. Plan ahead for birthdays, holidays, or surprise gifts — and enjoy giving without the financial strain.",
-    icon: FaHandsHelping,
+    icon: FaGift,
     questions: [
       {
         id: 1,
@@ -1237,54 +1244,6 @@ export const LifestylePlans = [
         placeholder: "e.g. Parents, Children",
         hint: "Gives more clarity on your gifting plans.",
         image: "/images/giving-5.jpg",
-      },
-    ],
-  },
-  {
-    title: "Enjoying the Life You Want",
-    description:
-      "You’ve earned more than a paycheck — you’ve earned peace of mind. This plan lets you relax, celebrate milestones, and focus on what matters most.",
-    icon: BsCashCoin,
-    questions: [
-      {
-        id: 1,
-        key: "destination",
-        question: "Where do you want to go?",
-        placeholder: "e.g. Mombasa, Paris, Bali",
-        hint: "Tell us your dream destination.",
-        image: "/images/vacation-1.jpg",
-      },
-      {
-        id: 2,
-        key: "budget",
-        question: "What’s your travel budget?",
-        placeholder: "e.g. $5,000",
-        hint: "This helps us plan accordingly.",
-        image: "/images/vacation-2.jpg",
-      },
-      {
-        id: 3,
-        key: "frequency",
-        question: "How often do you travel?",
-        placeholder: "e.g. Twice a year",
-        hint: "This will guide your yearly budget.",
-        image: "/images/vacation-3.jpg",
-      },
-      {
-        id: 4,
-        key: "preferredActivities",
-        question: "What activities do you enjoy?",
-        placeholder: "e.g. Hiking, Spa, Sightseeing",
-        hint: "Helps tailor your experiences.",
-        image: "/images/vacation-4.jpg",
-      },
-      {
-        id: 5,
-        key: "travelCompanions",
-        question: "Who do you usually travel with?",
-        placeholder: "e.g. Friends, Family, Alone",
-        hint: "Gives more context for your travel planning.",
-        image: "/images/vacation-5.jpg",
       },
     ],
   },
@@ -1380,7 +1339,7 @@ export const RetirePlans = [
     title: "Estate Planning",
     description:
       "Ensure your assets are protected and distributed according to your wishes, minimizing taxes and complications for your heirs.",
-    icon: MdOutlineRealEstateAgent,
+    icon: FaFileInvoice,
     exploreMoreUrl: "/estate-planning",
     questions: [
       {
@@ -1431,7 +1390,7 @@ export const RetirePlans = [
     title: "Generational Wealth Transfer",
     description:
       "Create a structured approach to passing financial assets, knowledge, and values to future generations.",
-    icon: MdOutlineRealEstateAgent,
+    icon: FaUsers,
     questions: [
       {
         id: 1,
@@ -1478,7 +1437,7 @@ export const RetirePlans = [
     description:
       "Prepare for potential health needs without compromising the financial legacy you intend to leave behind.",
 
-    icon: FaHandsHelping,
+    icon: FaHeartbeat,
     questions: [
       {
         id: 1,
@@ -1531,7 +1490,7 @@ export const RetirePlans = [
     title: "Giving with Intention",
     description:
       "Align your charitable contributions with your values and maximize their impact on causes you care about.",
-    icon: BsCashCoin,
+    icon: FaHandsHelping,
     questions: [
       {
         id: 1,
@@ -1582,7 +1541,7 @@ export const RetirePlans = [
     title: "Retirement income",
     description:
       "Prepare today for a comfortable and fulfilling tomorrow. This plan helps you estimate your retirement needs, set realistic savings goals, and envision the lifestyle you want once you stop working.",
-    icon: MdOutlineRealEstateAgent,
+    icon: FaPiggyBank,
     exploreMoreUrl: "/estate-planning",
     questions: [
       {
@@ -1630,13 +1589,12 @@ export const RetirePlans = [
     ],
   },
 ];
-
 export const EducationPlans = [
   {
     title: "Home Ownership Goals",
     description:
       "From your first home to your forever home, we help you plan and save for every stage of your home ownership journey",
-    icon: MdOutlineRealEstateAgent,
+    icon: FaHouseUser, 
     exploreMoreUrl: "/home-ownership",
     questions: [
       {
@@ -1689,7 +1647,7 @@ export const EducationPlans = [
     title: "Medical Emergencies",
     description:
       "Hospital bills, medication, specialist visits, and other unexpected medical expenses are all covered in your financial plan",
-    icon: MdOutlineRealEstateAgent,
+    icon: FaHospital, 
     questions: [
       {
         id: 1,
@@ -1740,8 +1698,7 @@ export const EducationPlans = [
     title: "Education Planning",
     description:
       "Education is a lifelong journey, and we help you plan ahead, so you are financially prepared at every stage.",
-
-    icon: FaHandsHelping,
+    icon: FaGraduationCap, 
     questions: [
       {
         id: 1,
@@ -1793,7 +1750,7 @@ export const EducationPlans = [
     title: "Insurance Premiums",
     description:
       "We help you plan for insurance premiums; so you are covered when it matters most, without compromising your financial stability.",
-    icon: MdOutlineRealEstateAgent,
+    icon: FaShieldAlt, 
     exploreMoreUrl: "/insurance-premiums",
     questions: [
       {
@@ -1843,6 +1800,7 @@ export const EducationPlans = [
     ],
   },
 ];
+
 
 export const StrategyContent = [
   {
@@ -1918,11 +1876,11 @@ export const StrategyContent = [
     ],
 
     media: {
-      image: "/images/Charles.png",
+      image: "/mwongela.jpeg",
       alt: "Private Credit Team",
     },
 
-    quote: "“A balanced portfolio is wealth in harmony; where endurance beats extremes.” – Charles Miano",
+    quote: "A balanced portfolio is wealth in harmony; where endurance beats extremes.” – Mercy Mwongela",
 
     featuredDeal: {
       title: "Institutional Application:",
@@ -2008,7 +1966,7 @@ export const whatweoffer = [
       image: "/images/Pius-new.png",
       alt: "Advisory Team",
     },
-    quote: "“We don’t just raise capital, we raise the belief that tomorrow can be bigger than today.” – Pius Muchiri",
+    quote: "We don’t just raise capital, we raise the belief that tomorrow can be bigger than today.” – Pius Muchiri",
     featuredDeal: {
       title: "Featured Deal:",
       description:
@@ -2046,10 +2004,10 @@ export const whatweoffer = [
       },
     ],
     media: {
-      image: "/images/Pius-new.png",
+      image: "/images/abie.jpeg",
       alt: "Private Credit Team",
     },
-    quote: "“True value is not only in today’s numbers, but in tomorrow’s potential.” – Pius Muchiri",
+    quote: "True value is not only in today’s numbers, but in tomorrow’s potential.” – Abby Mungai",
     featuredDeal: {
       title: "Featured Deal:",
       description:
@@ -2089,7 +2047,7 @@ export const whatweoffer = [
       image: "/images/Pius-new.png",
       alt: "Infrastructure Projects",
     },
-    quote: "“The best investor isn’t defined by pockets, but by vision aligned with yours.” – Pius Muchiri",
+    quote: "The best investor isn’t defined by pockets, but by vision aligned with yours.” – Pius Muchiri",
     featuredDeal: {
       title: "Featured Deal:",
       description:
@@ -2127,10 +2085,10 @@ export const whatweoffer = [
       },
     ],
     media: {
-      image: "/images/Pius-new.png",
+      image: "/images/abie.jpeg",
       alt: "Private Credit Team",
     },
-    quote: "“In every deal, the rarest and most valuable currency is trust.” – Pius Muchiri",
+    quote: "In every deal, the rarest and most valuable currency is trust.” – Abby Mungai",
     featuredDeal: {
       title: "Featured Deal:",
       description:
@@ -2165,10 +2123,10 @@ export const whatweoffertreasury = [
       },
     ],
     media: {
-      image: "/images/Pius-new.png",
+      image: "/images/mwongela.jpg",
       alt: "Advisory Team",
     },
-     quote: "“Liquidity should serve strategy, not limit it; bespoke portfolios make every shilling count.” – Pius Muchiri",
+     quote: "“Liquidity should serve strategy, not limit it; bespoke portfolios make every shilling count.” – Mercy Mwongela",
     featuredDeal: {
       title: "Featured Deal:",
       description:
@@ -2234,10 +2192,10 @@ export const whatweoffertreasury = [
       },
     ],
     media: {
-      image: "/images/Pius-new.png",
+      image: "/images/mwongela.jpg",
       alt: "Infrastructure Projects",
     },
-     quote: "“True strength is never caught off guard; planned liquidity keeps opportunity within reach.”” – Pius Muchiri",
+     quote: "True strength is never caught off guard; planned liquidity keeps opportunity within reach.” – Mercy Mwongela",
     featuredDeal: {
       title: "Featured Deal:",
       description:
@@ -2267,10 +2225,10 @@ export const whatweoffertreasury = [
       },
     ],
     media: {
-      image: "/images/Pius-new.png",
+      image: "/images/Fredo.png",
       alt: "Private Credit Team",
     },
-     quote: "“Markets move fast—daily oversight keeps your liquidity a step ahead” – Pius Muchiri",
+     quote: "Markets move fast—daily oversight keeps your liquidity a step ahead” – Fredrick Okudo",
     featuredDeal: {
       title: "Featured Deal:",
       description:
@@ -2312,7 +2270,7 @@ export const Lifestyle = [
     title: "Food & Household essentials",
     description:
       "Everyday essentials may seem small, but they form the foundation of a dignified life. Plan for them, and protect your peace.",
-    icon: MdOutlineRealEstateAgent,
+    icon: FiShoppingCart, 
     questions: [
       {
         id: 1,
@@ -2362,7 +2320,7 @@ export const Lifestyle = [
     title: "Rent Payments",
     description:
       "A roof over your head is more than a shelter, it’s stability. Whether you’re renting or building a legacy, secure it wisely.",
-    icon: FaHandsHelping,
+    icon: FaHome, 
     questions: [
       {
         id: 1,
@@ -2391,7 +2349,7 @@ export const Lifestyle = [
     title: " Transport",
     description:
       "Mobility gives you access to opportunity. Budget for it, because how you move determines where you go.",
-    icon: FaHeart,
+    icon: FaCarSide, 
     questions: [
       {
         id: 1,
@@ -2420,7 +2378,7 @@ export const Lifestyle = [
     title: " Clothing & Utilities",
     description:
       "Dignity is in the details; Clean clothes, running water and power when you need it. Plan for them, to preserve your comfort and confidence",
-    icon: FaHandsHelping,
+    icon: FaTshirt, 
     questions: [
       {
         id: 1,
@@ -2444,5 +2402,148 @@ export const Lifestyle = [
         image: "/images/giving-3.jpg",
       },
     ],
+  },
+];
+
+export const commonfaqs = [
+  {
+    value: "a",
+    title: "What is a Unit Trust?",
+    text: "A Unit Trust, also known as a mutual fund, is a pooled investment vehicle where investors' money is collectively managed by a professional fund manager.​",
+  },
+  {
+    value: "b",
+    title: "What are the differences between the various funds?",
+    text: "Nabo Money Market Fund(KES & USD), seeks to maximize current income by investing primarily in a diversified portfolio of short-term debt securities and instruments whilst aiming to preserve capital and maintain a high degree of liquidity.​ Nabo Fixed Income Fund(KES & USD), The fund generates stable capital growth over the medium to long term. Under this fund, we invest in a diversified range of Fixed Income Securities across Africa. ",
+  },
+  {
+    value: "c",
+    title: "Is my money safe?",
+    text: "Yes, your money and assets that are purchased are safely secured in a bank custody account and will not be affected by failure of any service provider.​",
+  },
+  {
+    value: "d",
+    title: "Can I top up my account?",
+    text: "Yes, a client can top up their account as many times as they wish.​",
+  },
+  {
+    value: "e",
+    title: "How do I withdraw my funds?",
+    text: "Send us a redemption request via email to clientservice@nabocapital.com  quoting the amount to be redeemed.​",
+  },
+  {
+    value: "f",
+    title: "How long does it take for funds to be transferred into my account when I redeem?​",
+    text: "It takes 2 to 3 working days from the date of request. This is a requirement of the regulation governing unit trusts.​",
+  },
+  {
+    value: "g",
+    title: "What is the minimum investment amount for the various funds?​",
+    text: "Currently, the minimum investment amount for all funds is KES 100,000. But clients who have below KES 100,000 can channel the funds through Chumz App.​",
+  },
+  {
+    value: "h",
+    title: "What is the minimum top-up amount for the various funds?​",
+    text: "The minimum top-up amount for all funds is KES 10,000​",
+  },
+  {
+    value: "i",
+    title: "What hidden charges are there?",
+    text: "There are none",
+  },
+  {
+    value: "j",
+    title: "Can I top up my account?",
+    text: "You can contact our customer support team via email at",
+  },
+  {
+    value: "k",
+    title: "Is there any locking period?​",
+    text: "Only for Nabo KES Fixed Income Fund for a period of 6 months on the initial investment, subsequent top-ups are not locked.",
+  },
+  {
+    value: "l",
+    title: "Are the returns guaranteed?​",
+    text: "No, we are not required to guarantee returns as per the CMA regulations as the assets we invest in don’t guarantee returns.​",
+  },
+  {
+    value: "m",
+    title: "What is a Portfolio?​",
+    text: "A portfolio is a collection of investments, including stocks, bonds, and other assets i.e. real estate, and commodities, owned by an individual or entity, aimed at diversifying risk and achieving financial objectives such as capital growth or stable, consistent income. ​",
+  },
+  {
+    value: "n",
+    title: "How do I monitor my Investment?​",
+    text: "We shall be providing you with monthly statements that you can use to track your investments, and factsheets that indicate the performance of all the funds monthly. ​",
+  },
+  {
+    value: "o",
+    title: "Do you have Sharia-compliant investment solutions? ​",
+    text: "We are in the process of providing this solution to our clients in the next coming quarters of the year.​",
+  },
+  {
+    value: "p",
+    title: "Who are the key players to secure my investment?​",
+    text: "On top of CMA being the regulator, these are the key service providers to make sure clients’ investment is secure and does not mix with Fund Manager’s money​",
+  },
+  {
+    value: "q",
+    title: "Why is the dollar rate lower than the KES rate​",
+    text: "Investment return rates in USD may appear lower than KES due to factors such as;​ Demand for Currency(strengthen of USD against KES).​Inflation(US has lower inflation rate than Kenya).​This will mean the FX gain will be high in the range of 12% - 15% and when added back to the USD rate, it will be higher than the KES rate.​",
+  },
+  {
+    value: "r",
+    title: "Why is your MMF KES giving greater returns than the FIF KES ",
+    text: "The money market fund has a weighted average tenor of 13 months, which allows us to identify higher-yielding assets in the short term. The Fixed Income Fund is invested in longer-term assets such as Govt. Bonds whose returns may, from time to time, be weighed down by older dated securities.​",
+  },
+  {
+    value: "s",
+    title: "Where do we invest? ​",
+    text: "We invest primarily across Africa excluding South Africa.​",
+  },
+  {
+    value: "t",
+    title: "Is Chumz legitimate and what is the relationship between Nabo Capital and Chumz? ​",
+    text: "Chumz is a legitimate mobile application that allows you to invest in Nabo Capital’s funds. It is a product of Nabo Capital and is regulated by the Capital Markets Authority (CMA).​",
+  },
+  {
+    value: "u",
+    title: "How long has Nabo been in existence?",
+    text: "Nabo Capital is a 3rd generation investment firm, leveraging over 50 years of experience under Centum Investments PLC and 11 years as a stand-alone fund manager.​",
+  },
+  {
+    value: "v",
+    title: "Can I create a family trust with NABO? ​",
+    text: "Yes, we will be launching our family trust solution by the end of Q3, 2024.​",
+  },
+  {
+    value: "w",
+    title: "How do I schedule a consultation?",
+    text: "You can schedule a consultation by reaching out through this link (insert link), or contacting our team directly through f.okudo@nabocapital.com or m.njoroge@nabocapital.com. We will be happy to guide you through the process.",
+  },
+  {
+    value: "x",
+    title: "What documentation is needed for onboarding?",
+    text: "Typically, onboarding requires: A valid national ID or passport, KRA PIN (for Kenyan clients), Proof of bank, Company registration documents (for institutional clients). Our team will provide a checklist tailored to your investor profile.",
+  },
+  {
+    value: "y",
+    title: "Are solutions customized for each institution?",
+    text: "Yes. We take a highly personalized approach to all our investment solutions. We assess each client’s objectives, risk appetite, and constraints to design a strategy aligned with their long-term goals.",
+  },
+  {
+    value: "z",
+    title: "What are the minimum asset requirements?",
+    text: "Minimum requirements vary depending on the investment solution and mandate. Kindly speak with our team to understand the threshold that best matches your investment goals.",
+  },
+  {
+    value: "aa",
+    title: "What are the fees associated with investing?",
+    text: "We offer complimentary consultations to help you understand your options before committing. If any management or administrative fees apply, these will be clearly communicated during the onboarding process; with full transparency and no hidden charges.",
+  },
+  {
+    value: "ab",
+    title: "How do you report on performance and activity?",
+    text: "We provide periodic reports (monthly) detailing portfolio performance, market commentary, and transaction activity. In addition, you will have access to your relationship manager for deeper insights and regular strategy reviews.",
   },
 ];

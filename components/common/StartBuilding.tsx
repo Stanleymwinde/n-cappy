@@ -32,27 +32,35 @@ export default function CallToActionSection() {
         </Heading>
         <Text fontSize="md" color="gray.600">
           Join thousands of investors who are already on their path to financial
-          freedom. Your future self will thank you for starting today
+          freedom. Your future self will thank you for starting today.
         </Text>
       </Box>
 
-      <Button
-        size="lg"
-        fontWeight="bold"
-        bgGradient="to-r"
-        gradientFrom="orange.400"
-        gradientTo="yellow.400"
-        color="black"
-        _hover={{
-          bgGradient: "to-r",
-          gradientFrom: "orange.500",
-          gradientTo: "yellow.500",
-          transform: "scale(1.05)",
-          boxShadow: "lg",
-        }}
+      {/* TypeScript-safe external link */}
+      <a
+        href="https://invest.nabocapital.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ textDecoration: "none" }}
       >
-        Start Now <BsArrowRight />
-      </Button>
+        <Button
+          size="lg"
+          fontWeight="bold"
+          bgGradient="to-r"
+          gradientFrom="orange.400"
+          gradientTo="yellow.400"
+          color="black"
+          _hover={{
+            bgGradient: "to-r",
+            gradientFrom: "orange.500",
+            gradientTo: "yellow.500",
+            transform: "scale(1.05)",
+            boxShadow: "lg",
+          }}
+        >
+          Start Now <BsArrowRight />
+        </Button>
+      </a>
     </Flex>
   );
 }

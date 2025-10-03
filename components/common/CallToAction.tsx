@@ -28,7 +28,7 @@ const CallToActionCommon = () => {
       >
         {/* Heading */}
         <Box
-          fontSize={{ base: "xl", sm: "2xl", md: "4xl" }}
+          fontSize={{ base: "2xl", md: "5xl" }}
           fontWeight="bold"
           color="white"
           mb={{ base: 4, md: 6 }}

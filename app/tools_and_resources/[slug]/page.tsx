@@ -12,6 +12,7 @@ import {
   Image,
   Stack,
   Separator,
+  Button,
 } from "@chakra-ui/react";
 import { useColorModeValue } from "@/components/ui/color-mode";
 import { marginX } from "@/utils/constants";
@@ -233,6 +234,20 @@ export default function ArticleFeatureCard() {
             wealth must come with perspective, and that sometimes, the most
             strategic thing you can do is step away and come back with clarity.
           </Text>
+
+          {/* Read More Button */}
+          <Box textAlign="center" mt={8}>
+            <Button
+              as="a"
+              href="https://www.linkedin.com/pulse/when-last-time-you-truly-stepped-out-nabo-capital-tnqmf"
+              target="_blank"
+              rel="noopener noreferrer"
+              colorScheme="blue"
+              size="lg"
+            >
+              Read More
+            </Button>
+          </Box>
 
           {/* Footer */}
           <Text color={muted} fontSize="sm" textAlign="center" mt={10}>

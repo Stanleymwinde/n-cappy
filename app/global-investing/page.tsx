@@ -33,8 +33,9 @@ const page = () => {
       <Rates />
       <Hero
         title="Proudly Kenyan.Globally Connected"
-        subtitle="Build Resilience, Expand Regionally and grow with confidence"
+        subtitle="Build resilience, expand regionally and grow with confidence"
         imageUrl="/images/Global-pagehero.png"
+        scrollTarget="#section7"
       />
 
       <MultiCurrencyInvestment />

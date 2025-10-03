@@ -8,7 +8,7 @@ const GlobalThoughtLeadership = () => {
     <Box marginX={marginX} py={8} bg="white">
       <Heading
         as="h1"
-        fontSize={{ base: "3xl", md: "6xl" }}
+         fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl", xl: "7xl" }}
         fontFamily="poppins"
         fontWeight={"bold"}
         textAlign="center"
@@ -34,7 +34,7 @@ const GlobalThoughtLeadership = () => {
         <Box
           position="relative"
           width="40%"
-          height={{ base: "300px", md: "600px" }}
+          height={{ base: "400px", md: "700px" }}
           borderRadius={"lg"}
           overflow="hidden"
           px={{ base: 4, md: 16 }}
@@ -74,20 +74,22 @@ const GlobalThoughtLeadership = () => {
           display="flex"
           alignItems="center"
           flexDirection="column"
-          textAlign="center"
+          textAlign="left"
           color="gray.600"
           mt={6}
           fontSize={{ base: "md", md: "lg" }}
           maxWidth={"800px"}
           fontWeight={"semibold"}
         >
-          With over 20 years of experience in global financial markets, Charles
-          leads our investment strategy across multiple geographies and asset
-          classes. His deep understanding of both developed and emerging markets
-          provides our clients with valuable insights and opportunities. Charles
-          regularly contributes to international financial publications and
-          speaks at global investment conferences, sharing his perspective on
-          market trends and investment strategies.
+          When you invest globally with us, you invest more than capital; you
+          invest your dreams, your future, your legacy. That trust is our
+          highest responsibility. At Nabo Capital, global investing isn’t about
+          chasing short-term wins; it’s about building long-term value where
+          your wealth can compound securely across borders. Whether you are a
+          Kenyan abroad, a global investor looking toward Africa, or a local
+          investor reaching outward, your capital is protected, nurtured, and
+          given every opportunity to thrive. Invest beyond borders—because your
+          wealth deserves a world stage.
         </Text>
       </Box>
     </Box>

@@ -15,7 +15,7 @@ export default function Testimonials() {
       {/* Heading */}
       <Heading
         as="h2"
-        fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
+        fontSize={{ base: "2xl", md: "5xl" }}
         fontFamily="Poppins"
         fontWeight="bold"
         textAlign="center"

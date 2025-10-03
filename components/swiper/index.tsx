@@ -42,10 +42,10 @@ const SwiperPage = () => {
     }
   };
 
-  // calculate clamp lines safely
+  
   const clampLines =
     windowWidth === null
-      ? 3 // default for SSR
+      ? 3
       : windowWidth < 480
       ? 3
       : windowWidth < 768
@@ -134,7 +134,7 @@ const SwiperPage = () => {
                   fontSize={{ base: "sm", sm: "md", md: "lg" }}
                   _hover={{ bg: "#00CAFF" }}
                 >
-                  Start Investing
+                  {index === 2 ? "Explore Funds" : "Start Investing"}
                 </Button>
               </Link>
             </Box>

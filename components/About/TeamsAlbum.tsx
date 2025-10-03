@@ -4,19 +4,20 @@ import { Box, Image, Heading, Text, VStack } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
 const images = [
-  "/images/IMG_6245.jpg",
-  "/images/IMG_6199.jpg",
+  
+  "/images/IMG_6598.jpg",
   "/images/IMG_6205.jpg",
-  "/images/IMG_6208.jpg",
   "/images/IMG_6221.jpg",
   "/images/IMG_6222.jpg",
   "/images/IMG_6236.jpg",
+  "/images/IMG_6596.jpg",
   "/images/IMG_6242.jpg",
   "/images/IMG_0610.jpg",
   "/images/IMG_6257.jpg",
   "/images/IMG_6277.jpg",
   "/images/IMG_6283.jpg",
   "/images/IMG_6285.jpg",
+  "/images/Nabo12.jpg",
   "/images/IMG_6288.jpg",
   "/images/IMG_6294.jpg",
 ];
@@ -44,7 +45,7 @@ const TeamsAlbum: React.FC = () => {
           Our Team in Living Colour
         </Heading>
         <Text fontSize={{ base: "md", md: "lg" }} color="gray.700">
-          Moments and unspoken values that define who we are
+          Moments and unspoken values that define who we are.
         </Text>
       </VStack>
 

@@ -32,7 +32,7 @@ const GlobalMarketFootprint = () => {
       <Box textAlign="center" mb={8}>
         <Heading
           as="h1"
-          fontSize={{ base: "3xl", md: "6xl" }}
+          fontSize={{ base: "2xl", md: "5xl" }}
           fontFamily="poppins"
           fontWeight="bold"
           textAlign="center"
