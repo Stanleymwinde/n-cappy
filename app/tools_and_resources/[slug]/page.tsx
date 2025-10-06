@@ -16,6 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { useColorModeValue } from "@/components/ui/color-mode";
 import { marginX } from "@/utils/constants";
+import { Link } from "@chakra-ui/react";
 
 export default function ArticleFeatureCard() {
   const bg = useColorModeValue("white", "gray.800");
@@ -237,16 +238,23 @@ export default function ArticleFeatureCard() {
 
           {/* Read More Button */}
           <Box textAlign="center" mt={8}>
-            <Button
-              as="a"
-              href="https://www.linkedin.com/pulse/when-last-time-you-truly-stepped-out-nabo-capital-tnqmf"
-              target="_blank"
-              rel="noopener noreferrer"
-              colorScheme="blue"
-              size="lg"
-            >
-              Read More
-            </Button>
+           <Link
+  href="https://www.linkedin.com/pulse/when-last-time-you-truly-stepped-out-nabo-capital-tnqmf"
+  target="_blank"
+  rel="noopener noreferrer"
+  display="inline-block"
+  px={6}
+  py={3}
+  fontSize="lg"
+  fontWeight="bold"
+  bg="blue.500"
+  color="white"
+  borderRadius="md"
+  textAlign="center"
+  _hover={{ bg: "blue.600" }}
+>
+  Read More
+</Link>
           </Box>
 
           {/* Footer */}
