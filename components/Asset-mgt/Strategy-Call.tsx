@@ -7,7 +7,7 @@ import { RiFileDownloadFill } from "react-icons/ri";
 
 const Strategy = () => {
   return (
-    <Box py={4}>
+    <Box py={4} mb={16}>
       <Box bg={"#0a2234"} marginX={marginX} p={6} borderRadius="md">
         <Grid
           templateColumns={{ base: "1fr", md: "1fr 1fr" }}

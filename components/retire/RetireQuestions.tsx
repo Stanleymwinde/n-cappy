@@ -40,7 +40,7 @@ const RetireQuestions = () => {
       {/* Header Section */}
       <VStack gap={6} textAlign="center" mb={8}>
         <Heading
-          fontSize={{ base: "4xl", md: "5xl" }}
+          fontSize={{ base: "3xl", md: "4xl" }}
           fontWeight="bold"
           color="blue.900"
         >

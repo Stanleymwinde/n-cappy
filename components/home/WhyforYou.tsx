@@ -42,7 +42,7 @@ const WhyforYou = () => {
             institution.
           </Text>
           <Link
-            href="https://www.youtube.com/watch?v=Zx1e3b0n8pY"
+            href="https://player.cloudinary.com/embed/?cloud_name=demvcea4r&public_id=Pius_-_Website_1_1_1_1_ibcwxh&profile=cld-default"
             target="_blank"
           >
             <Button
@@ -67,7 +67,7 @@ const WhyforYou = () => {
             maxW="500px"
           >
             <Image
-              src="/pius-m1.jpg"
+              src="/Pius-m1.jpg"
               alt="Commitment Image"
               width={500}
               height={500}

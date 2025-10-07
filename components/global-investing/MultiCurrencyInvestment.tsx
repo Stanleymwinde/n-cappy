@@ -10,7 +10,7 @@ const MultiCurrencyInvestment = () => {
       <Box textAlign="center" mb={8}>
         <Heading
           as="h1"
-          fontSize={{ base: "3xl", md: "6xl" }}
+          fontSize={{ base: "2xl", md: "5xl" }}
           fontFamily="poppins"
           fontWeight={"bold"}
           textAlign="center"
@@ -84,17 +84,23 @@ const MultiCurrencyInvestment = () => {
       </Box>
 
       <Flex justifyContent="flex-end">
-        <Button
-          mt={6}
-          bg="#0a2234"
-          color="white"
-          _hover={{
-            bg: "#00CAFF",
-            transform: "scale(1.05)",
-          }}
+        <a
+          href="https://invest.nabocapital.com/"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Invest Globally
-        </Button>
+          <Button
+            mt={6}
+            bg="#0a2234"
+            color="white"
+            _hover={{
+              bg: "#00CAFF",
+              transform: "scale(1.05)",
+            }}
+          >
+            Invest Globally
+          </Button>
+        </a>
       </Flex>
     </Box>
   );

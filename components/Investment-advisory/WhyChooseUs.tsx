@@ -34,7 +34,7 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <Box bg="cyan.950" color="white" py={16} px={6} textAlign="center">
+    <Box bg="cyan.950" color="white" py={16} px={6} mb={16} textAlign="center">
       <VStack gap={8}>
         <Heading
           fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
@@ -79,8 +79,6 @@ export default function WhyChooseUs() {
         color="c.400"
       >
         <Text>CMA Licensed</Text>
-        <Text>|</Text>
-        <Text>ISO Certified</Text>
         <Text>|</Text>
         <Text>African Markets Expert</Text>
       </HStack>

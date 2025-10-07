@@ -68,17 +68,15 @@ const QuestionPack = () => {
   return (
     <Box id="questions1" marginX={marginX} py={10} bg="white">
       <VStack gap={3} textAlign="center" mb={8}>
-        <Heading fontSize={{ base: "2xl", md: "3xl" }} color="blue.900">
-          Building Blocks of Your Legacy
+        <Heading fontSize={{ base: "3xl", md: "4xl" }}   fontWeight={"bold"}    color="blue.900">
+          Invest in the Life You Envision
         </Heading>
         <Text maxW="2xl" fontSize="md" color="gray.600">
-          Each aspect of your financial legacy requires thoughtful planning.
-          Explore the key areas below or jump straight to your personalized
-          calculation.
+          Plan every part of your lifestyle with intention. Explore your options below or jump right into your personalized plan.
         </Text>
       </VStack>
 
-      <Grid templateColumns={{ base: "1fr", md: "repeat(4, 1fr)" }} gap={6}>
+      <Grid templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }} gap={6}>
         {LifestylePlans.map((block, idx) => (
           <GridItem
             key={idx}

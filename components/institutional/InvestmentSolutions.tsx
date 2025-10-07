@@ -57,12 +57,12 @@ const InvestmentSolutions = () => {
               <Accordion.ItemTrigger>
                 <Stack gap={4} px={4} py={4} flex={1}>
                   <Text
-                    fontSize={{ base: "xl", md: "2xl" }}
+                    fontSize={{ base: "2xl", md: "3xl" }}
                     fontWeight="semibold"
                   >
                     {item.title}
                   </Text>
-                  <Text fontSize={{ base: "md", md: "xl" }} color="gray.600">
+                  <Text fontSize={{ base: "sm", md: "md" }} color="gray.600">
                     {item.text}
                   </Text>
                 </Stack>
@@ -75,7 +75,7 @@ const InvestmentSolutions = () => {
                   <Box px={{ base: 4, md: 8 }} bg="white">
                     {/* Main Body Text */}
                     <Text
-                      fontSize={{ base: "lg", md: "2xl" }}
+                      fontSize={{ base: "md", md: "xl" }}
                       mb={4}
                       textAlign="left"
                     >
@@ -126,6 +126,7 @@ const InvestmentSolutions = () => {
                                     fontWeight="bold"
                                     fontSize={{ base: "lg", md: "xl" }}
                                     mb={1}
+                                    
                                   >
                                     {service.title}
                                   </Text>
@@ -149,7 +150,7 @@ const InvestmentSolutions = () => {
                           position="relative"
                           borderRadius="md"
                           overflow="hidden"
-                          width="90%"
+                          width="80%"
                           height={{ base: "250px", md: "500px" }}
                         >
                           <Image
@@ -173,6 +174,7 @@ const InvestmentSolutions = () => {
                             color="gray.700"
                             textAlign="center"
                             px={2}
+                            maxW={"400px"}
                           >
                             {item.quote}
                           </Text>
@@ -197,7 +199,7 @@ const InvestmentSolutions = () => {
                               key={idt}
                             >
                               <Text fontWeight="bold">{deal.title}</Text>
-                              <Text fontSize="sm" mt={2}>
+                              <Text   fontSize={{ base: "sm", md: "lg" }} mt={2}>
                                 {deal.description}
                               </Text>
                             </Box>
@@ -214,7 +216,7 @@ const InvestmentSolutions = () => {
                             <Text fontWeight="bold">
                               {item.featuredDeal.title}
                             </Text>
-                            <Text fontSize="2xl" mt={2}>
+                            <Text fontSize={{ base: "md", md: "xl" }}  mt={2}>
                               {item.featuredDeal.description}
                             </Text>
                           </Box>

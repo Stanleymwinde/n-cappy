@@ -28,6 +28,7 @@ export default function WhyChooseUs() {
       px={6}
       textAlign="center"
       mt={20}
+      mb={16}
     >
       <VStack gap={8}>
         <Heading
@@ -71,8 +72,6 @@ export default function WhyChooseUs() {
 
       <HStack gap={6} justifyContent="center" mt={10} fontSize="sm" color="c.400">
         <Text>CMA Licensed</Text>
-        <Text>|</Text>
-        <Text>ISO Certified</Text>
         <Text>|</Text>
         <Text>African Markets Expert</Text>
       </HStack>

@@ -5,7 +5,7 @@ import { Box, Heading, Text, Grid, VStack } from "@chakra-ui/react";
 
 export default function WhoWeServe() {
   return (
-    <Box py={10} px={6} mt={8}>
+    <Box py={10} px={{ base: 4, md: 10 }} mt={8} mb={16} bg="gray.50" w="100%">
       {/* Text Section */}
       <VStack gap={3} textAlign="center">
         <Heading
@@ -26,11 +26,13 @@ export default function WhoWeServe() {
 
       {/* Cards */}
       <Grid
-        templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
+        templateColumns={{
+          base: "1fr",
+          md: "repeat(2, 1fr)",
+          lg: "repeat(3, 1fr)",
+        }}
         gap={6}
         mt={10}
-        maxW="4xl"
-        mx="auto"
       >
         {whoweserve.map(({ label, icon }) => (
           <Box

@@ -33,7 +33,7 @@ export const metadata = {
   ],
 };
 
-const page = () => {
+const Page = () => {
   return (
     <>
       <Rates />
@@ -41,8 +41,8 @@ const page = () => {
         title="Grow Your Wealth With Nabo Capital"
         imageUrl="/images/hm1.jpeg"
         subtitle="Choose the investment fund that aligns with your financial goals."
-        button="Explore Funds"
-        scrollTarget="#section6"
+        button="Start Investing"
+        buttonLink="https://invest.nabocapital.com/" 
       />
 
       <MMF />
@@ -54,4 +54,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
