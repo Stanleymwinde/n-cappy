@@ -5,21 +5,21 @@ import { useEffect, useState } from "react";
 
 const images = [
   
-  "/images/IMG_6598.jpg",
-  "/images/IMG_6205.jpg",
-  "/images/IMG_6221.jpg",
-  "/images/IMG_6222.jpg",
-  "/images/IMG_6236.jpg",
-  "/images/IMG_6596.jpg",
-  "/images/IMG_6242.jpg",
-  "/images/IMG_0610.jpg",
-  "/images/IMG_6257.jpg",
-  "/images/IMG_6277.jpg",
-  "/images/IMG_6283.jpg",
-  "/images/IMG_6285.jpg",
+  "/images/IMG_65981.jpg",
+  "/images/IMG_62051.jpg",
+  "/images/IMG_62211.jpg",
+  "/images/IMG_62221.jpg",
+  "/images/IMG_62361.jpg",
+  "/images/IMG_65961.jpg",
+  "/images/IMG_62421.jpg",
+  "/images/IMG_061001.jpg",
+  "/images/IMG_62571.jpg",
+  "/images/IMG_62771.jpg",
+  "/images/IMG_62831.jpg",
+  "/images/IMG_62851.jpg",
   "/images/Nabo12.jpg",
-  "/images/IMG_6288.jpg",
-  "/images/IMG_6294.jpg",
+  "/images/IMG_62881.jpg",
+  "/images/IMG_62941.jpg",
 ];
 
 const TeamsAlbum: React.FC = () => {

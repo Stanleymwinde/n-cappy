@@ -18,7 +18,13 @@ export default function Page() {
   const cardBgRight = "white";
 
   return (
-    <Box id="section4" py={{ base: 8, md: 12 }} marginX={{ base: 4, sm: 6, md: marginX }} bg={bgColor} mt={20}>
+    <Box
+      id="section4"
+      py={{ base: 8, md: 12 }}
+      marginX={{ base: 4, sm: 6, md: marginX }}
+      bg={bgColor}
+      mt={20}
+    >
       {/* Heading & Subtext */}
       <Stack gap={6} textAlign="center" mb={{ base: 8, md: 10 }}>
         <Heading
@@ -125,6 +131,9 @@ export default function Page() {
             literacy tips, industry insights and expert advice.
           </Text>
           <Link
+            href="https://www.linkedin.com/newsletters/the-nabo-capital-insider-7269258709552275456/"
+            target="_blank"
+            rel="noopener noreferrer"
             color="blue.500"
             fontWeight="medium"
             display="flex"

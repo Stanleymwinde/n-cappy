@@ -151,7 +151,7 @@ const InvestmentSolutions = () => {
                           borderRadius="md"
                           overflow="hidden"
                           width="80%"
-                          height={{ base: "250px", md: "500px" }}
+                          height={{ base: "300px", md: "550px" }}
                         >
                           <Image
                             src={item.media.image}

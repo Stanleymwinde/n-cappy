@@ -111,7 +111,7 @@ const TeamSection: React.FC = () => {
             <TeamMemberCard
               name="Abby Mungai"
               title="General Wealth Manager"
-              image="/abby-Mungai1.jpg"
+              image="/Abby-Mungai1.jpg"
               linkedin="https://www.linkedin.com/in/abby-mungai-wealth-strategist-27a541109/"
             />
             <TeamMemberCard
@@ -129,7 +129,7 @@ const TeamSection: React.FC = () => {
             <TeamMemberCard
               name="Irene Okoth"
               title="HR Officer"
-              image="/irene2.jpg"
+              image="/Irene2.jpg"
               linkedin="https://www.linkedin.com/in/chrp-k-pm-ihrm-akoth-irene-051430179/"
             />
           </SimpleGrid>
