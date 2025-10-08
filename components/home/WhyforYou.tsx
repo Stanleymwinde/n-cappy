@@ -1,10 +1,16 @@
-import { marginX } from "@/utils/constants";
-import { Box, Button, Flex, Grid, Heading, Text, Icon } from "@chakra-ui/react";
+"use client";
 
+import React, { useState } from "react";
+import { marginX } from "@/utils/constants";
+import { Box, Button, Flex, Grid, Heading, Text } from "@chakra-ui/react";
 import Image from "next/image";
-import Link from "next/link";
 
 const WhyforYou = () => {
+  const [showVideo, setShowVideo] = useState(false);
+
+  const handleOpenVideo = () => setShowVideo(true);
+  const handleCloseVideo = () => setShowVideo(false);
+
   return (
     <Box bg="#0a2234" py={{ base: 8, md: 12 }}>
       <Grid
@@ -30,6 +36,7 @@ const WhyforYou = () => {
           >
             Why This Is For You
           </Heading>
+
           <Text
             fontSize={{ base: "sm", sm: "md", md: "xl" }}
             maxW="600px"
@@ -41,22 +48,20 @@ const WhyforYou = () => {
             meet your unique goals, whether you are an individual or an
             institution.
           </Text>
-          <Link
-            href="https://player.cloudinary.com/embed/?cloud_name=demvcea4r&public_id=Pius_-_Website_1_1_1_1_ibcwxh&profile=cld-default"
-            target="_blank"
+
+          {/* Watch Video Button */}
+          <Button
+            bg="#00caff"
+            _hover={{ bg: "#00b5e0" }}
+            mt={2}
+            px={{ base: 6, md: 8 }}
+            py={{ base: 4, md: 6 }}
+            fontSize={{ base: "sm", md: "md" }}
+            borderRadius="full"
+            onClick={handleOpenVideo}
           >
-            <Button
-              bg="#00caff"
-              _hover={{ bg: "#00b5e0" }}
-              mt={2}
-              px={{ base: 6, md: 8 }}
-              py={{ base: 4, md: 6 }}
-              fontSize={{ base: "sm", md: "md" }}
-              borderRadius="full"
-            >
-              Watch A Video
-            </Button>
-          </Link>
+            Watch A Video
+          </Button>
         </Flex>
 
         {/* Right Image Section */}
@@ -81,6 +86,32 @@ const WhyforYou = () => {
           </Box>
         </Box>
       </Grid>
+
+      {/* Video Overlay using iframe */}
+      {showVideo && (
+        <Box
+          position="fixed"
+          top={0}
+          left={0}
+          w="100vw"
+          h="100vh"
+          bg="rgba(0,0,0,0.8)"
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          zIndex={1000}
+          onClick={handleCloseVideo}
+        >
+          <iframe
+            src="https://player.cloudinary.com/embed/?cloud_name=demvcea4r&public_id=Pius_-_Website_1_1_1_1_ibcwxh&profile=cld-default"
+            width="80%"
+            height="500"
+            allow="autoplay; fullscreen"
+            style={{ borderRadius: "12px" }}
+            onClick={(e) => e.stopPropagation()}
+          />
+        </Box>
+      )}
     </Box>
   );
 };
