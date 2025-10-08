@@ -644,7 +644,7 @@ export const institutionalMembers = [
     linkedin: "https://www.linkedin.com/in/mercymwongela/",
   },
   {
-    image: "/images/fredo.jpg",
+    image: "/images/Fredo.jpg",
     name: "Fredrick Okudo",
     title: "Snr. Associate Product Structuring and CX & UX",
     linkedin: "https://www.linkedin.com/in/fredrick-okudo-960567135/",

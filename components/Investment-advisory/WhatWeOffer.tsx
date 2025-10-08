@@ -136,8 +136,8 @@ const InvestmentSolutions = () => {
                           position="relative"
                           borderRadius="md"
                           overflow="hidden"
-                          width="100%"
-                          height={{ base: "250px", md: "600px" }}
+                          width="90%"
+                          height={{ base: "130px", md: "480px" }}
                         >
                           <Image
                             src={item.media.image}
@@ -160,6 +160,7 @@ const InvestmentSolutions = () => {
                             color="gray.600"
                             fontStyle="italic"
                             textAlign="center"
+                            maxW={'400px'}
                           >
                             “{item.quote}”
                           </Text>
