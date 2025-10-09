@@ -8,7 +8,8 @@ import { FaBuilding, FaGlobe, FaHeart, FaPiggyBank } from "react-icons/fa6";
 import { FiShoppingCart } from "react-icons/fi";
 import { FaHome, FaCarSide, FaTshirt } from "react-icons/fa";
 import { FaHouseUser, FaHospital, FaGraduationCap, FaFileContract } from "react-icons/fa";
-import { FaFileInvoice, FaBalanceScale, FaUsers, FaHandHoldingUsd, FaHeartbeat, FaUserNurse,  FaGift, FaUmbrellaBeach } from "react-icons/fa";
+import { FaFileInvoice, FaBalanceScale, FaUsers, FaHandHoldingUsd, FaHeartbeat, FaUserNurse,  FaGift, FaUmbrellaBeach, FaHandshake } from "react-icons/fa";
+
 
 
 
@@ -98,7 +99,7 @@ export const TestimonialData = [
   {
     name: "Coach Dexter",
     role: "Long Term Investor",
-    image: "/images/Dee_edited.jpg",
+    image: "/images/Dexter3.jpg",
     testimonial:
       "The reason why I feel like I have stayed at Nabo Capital this long is because of safety. It's because I feel safe. And I feel at home.",
   },
@@ -638,7 +639,7 @@ export const teamMembers = [
 
 export const institutionalMembers = [
   {
-    image: "/images/mwongela.jpg",
+    image: "/images/mwongelam.jpg",
     name: "Dr. Mercy Mwongela",
     title: "Head of Asset Management, CX & IT",
     linkedin: "https://www.linkedin.com/in/mercymwongela/",
@@ -650,9 +651,9 @@ export const institutionalMembers = [
     linkedin: "https://www.linkedin.com/in/fredrick-okudo-960567135/",
   },
   {
-    image: "/images/tee.jpg",
-    name: "Teddey Muthoka",
-    title: "Asset Management & Products Analyst",
+    image: "/images/jackie.jpg",
+    name: "Jacklyne Waithira",
+    title: "Asset Management Analyst",
     linkedin: "https://www.linkedin.com/in/teddey-muthoka/",
   },
 ];
@@ -1324,13 +1325,18 @@ export const whoweserve = [
     icon: <FaShieldAlt size={26} />,
   },
   {
-    label: "Government Investment Funds",
+    label: "NGOs and FBOs",
     icon: <FaBuilding size={26} />,
   },
   { label: "Local and International Businesses", icon: <FaGlobe size={26} /> },
   {
     label: "SMEs, Large Corporates",
     icon: <FaUniversity size={26} />,
+  },
+
+   {
+    label: "Associations/ Endowment",
+    icon: <FaHandshake size={26} />,
   },
 ];
 
@@ -1833,7 +1839,7 @@ export const StrategyContent = [
     ],
 
     media: {
-      image: "/images/Charles.png",
+      image: "/images/Charlie.jpg",
       alt: "Advisory Team",
     },
 
@@ -1876,7 +1882,7 @@ export const StrategyContent = [
     ],
 
     media: {
-      image: "/mwongela.jpeg",
+      image: "/images/mwongelam.jpg",
       alt: "Private Credit Team",
     },
 
@@ -1919,7 +1925,7 @@ export const StrategyContent = [
     ],
 
     media: {
-      image: "/images/Charles.png",
+      image: "/images/Charlie.jpg",
       alt: "Infrastructure Projects",
     },
     quote: "“In uncertain markets, fixed income delivers the rarest asset of all: predictable cash flow.” – Charles Miano",
@@ -1963,7 +1969,7 @@ export const whatweoffer = [
       },
     ],
     media: {
-      image: "/images/Pius-new.png",
+      image: "/Pius-m1.jpg",
       alt: "Advisory Team",
     },
     quote: "We don’t just raise capital, we raise the belief that tomorrow can be bigger than today.” – Pius Muchiri",
@@ -2044,7 +2050,7 @@ export const whatweoffer = [
       },
     ],
     media: {
-      image: "/images/Pius-new.png",
+      image: "/Pius-m1.jpg",
       alt: "Infrastructure Projects",
     },
     quote: "The best investor isn’t defined by pockets, but by vision aligned with yours.” – Pius Muchiri",
@@ -2123,7 +2129,7 @@ export const whatweoffertreasury = [
       },
     ],
     media: {
-      image: "/images/mwongela.jpg",
+      image: "/images/mwongelam.jpg",
       alt: "Advisory Team",
     },
      quote: "“Liquidity should serve strategy, not limit it; bespoke portfolios make every shilling count.” – Mercy Mwongela",
@@ -2157,7 +2163,7 @@ export const whatweoffertreasury = [
       },
     ],
     media: {
-      image: "/images/Pius-new.png",
+      image: "/Pius-m1.jpg",
       alt: "Private Credit Team",
     },
      quote: "“Short-term doesn’t mean short-sighted; discipline turns idle cash into steady gains.” – Pius Muchiri",
@@ -2192,7 +2198,7 @@ export const whatweoffertreasury = [
       },
     ],
     media: {
-      image: "/images/mwongela.jpg",
+      image: "/images/mwongelam.jpg",
       alt: "Infrastructure Projects",
     },
      quote: "True strength is never caught off guard; planned liquidity keeps opportunity within reach.” – Mercy Mwongela",

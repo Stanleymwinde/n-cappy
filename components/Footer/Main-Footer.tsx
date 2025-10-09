@@ -186,6 +186,8 @@ const HelpfulLinks = [
 
 const OurServices = [
   { label: "Unit Trust Funds", link: "/individual/MMF&FIF" },
-  { label: "Private Wealth Management", link: "/institutional/treasury" },
+  { label: "Private Wealth Management", link: "/Institutional" },
   { label: "Institutional Investment Solutions", link: "/institutional" },
+  { label: "Balanced Fund", link: "/individual/MMF&FIF" },
+  { label: "Equity Fund", link: "/individual/MMF&FIF" },
 ];

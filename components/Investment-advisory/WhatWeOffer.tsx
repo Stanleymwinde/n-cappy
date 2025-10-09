@@ -136,8 +136,8 @@ const InvestmentSolutions = () => {
                           position="relative"
                           borderRadius="md"
                           overflow="hidden"
-                          width="90%"
-                          height={{ base: "130px", md: "480px" }}
+                          width="80%"
+                          height={{ base: "100px", md: "450px" }}
                         >
                           <Image
                             src={item.media.image}

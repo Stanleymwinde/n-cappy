@@ -33,9 +33,9 @@ const Hero = ({
   return (
     <Box
       position="relative"
-      height={{ base: "90vh", sm: "105vh", md: "120vh" }} // 🔹 Increased height
-      minHeight="500px" // 🔹 Raised minimum height a bit
-      maxHeight="1000px" // 🔹 Increased maximum height
+      height={{ base: "50vh", sm: "105vh", md: "120vh" }} 
+      minHeight="500px" 
+      maxHeight="1000px" 
       width="100%"
       overflow="hidden"
       pt={{ base: 2, md: 4 }}

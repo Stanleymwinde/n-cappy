@@ -2,7 +2,8 @@ import { Box } from "@chakra-ui/react";
 import Herosection from "@/components/About/Herosection";
 import Heritagesection from "@/components/About/Heritagesection";
 import Teamsection from "@/components/About/Teamsection";
-import { Connect } from "@/components/individual";
+import ConnectwithOurTeam from "@/components/About/ConnectwithOurTeam";
+
 import { TeamsAlbum } from "@/components/About";
 import CallToActionCommon from "@/components/common/CallToAction";
 import Contactinfo from "@/components/About/Contactinfo";
@@ -14,7 +15,7 @@ const AboutPage: React.FC = () => {
       <Heritagesection />
       <Teamsection />
       <TeamsAlbum />
-      <Connect />
+      <ConnectwithOurTeam />
       <Contactinfo />
       <CallToActionCommon />
     </>
