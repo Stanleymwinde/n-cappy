@@ -52,10 +52,12 @@ const EduQuestionsComponent = () => {
           fontWeight="bold"
           color="blue.900"
         >
-          Because Your  Dreams Deserve a Plan
+          Because Your Dreams Deserve a Plan
         </Heading>
         <Text maxW="2xl" fontSize="md" color="gray.600">
-          This plan is here to help you cover more than costs. It helps you provide stability, open doors, and keep dreams on track, even when life shifts.
+          This plan is here to help you cover more than costs. It helps you
+          provide stability, open doors, and keep dreams on track, even when
+          life shifts.
         </Text>
       </VStack>
 
@@ -211,7 +213,6 @@ const EduQuestionsComponent = () => {
           </Box>
         )}
 
-        {/* Results Section (after Finish) */}
         {showResults && activePlan && (
           <Box
             width="100%"
@@ -226,17 +227,29 @@ const EduQuestionsComponent = () => {
               Your Lifestyle Plan
             </Heading>
 
-            {/* Extract dynamic values from answers */}
             {(() => {
-              const targetYear = answers[6] || "Not provided"; // Q6: When do you want to own your home?
-              const targetAmount = answers[4] || "Not provided"; // Q4: How much have you saved?
-              const monthlySavings = answers[5] || "Not provided"; // Q5: Monthly housing budget
-              const goal = answers[1] || "Home Ownership"; // Q1 as the main goal description
-              const selectedFund = "Money Market Fund"; // Static for now, but can come from another question
+              const goal = answers[1] || "Goal not provided";
+              const targetAmount = parseFloat(answers[4]) || 0;
+              const monthlySavings = parseFloat(answers[5]) || 0;
+              const targetYear =
+                parseInt(answers[6]) || new Date().getFullYear();
+
+              const currentYear = new Date().getFullYear();
+              const monthsRemaining = Math.max(
+                (targetYear - currentYear) * 12,
+                0
+              );
+              const totalSavingsProjection = monthlySavings * monthsRemaining;
+
+              // Recommend fund based on time horizon
+              let selectedFund = "Money Market Fund";
+              if (monthsRemaining > 36 && monthsRemaining <= 60)
+                selectedFund = "Balanced Fund";
+              else if (monthsRemaining > 60) selectedFund = "Growth Fund";
 
               return (
                 <>
-                  {/* Top Grid with 4 summary boxes */}
+                  {/* Summary Grid */}
                   <Grid
                     templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
                     gap={6}
@@ -302,12 +315,14 @@ const EduQuestionsComponent = () => {
                         Target
                       </Text>
                       <Text fontSize="sm" color="gray.600">
-                        {targetAmount}
+                        {targetAmount
+                          ? `KES ${targetAmount.toLocaleString()}`
+                          : "Not provided"}
                       </Text>
                     </Box>
                   </Grid>
 
-                  {/* Savings Journey */}
+                  {/* Savings Projection */}
                   <Box
                     p={6}
                     rounded="lg"
@@ -322,41 +337,40 @@ const EduQuestionsComponent = () => {
 
                     <VStack gap={2} align="start">
                       <Text>
-                        Time period: <b>45 months</b>
+                        Time period: <b>{monthsRemaining} months</b>
                       </Text>
                       <Text>
-                        Monthly Savings: <b>{monthlySavings}</b>
+                        Monthly Savings:{" "}
+                        <b>
+                          {monthlySavings
+                            ? `KES ${monthlySavings.toLocaleString()}`
+                            : "Not provided"}
+                        </b>
                       </Text>
                       <Text>
-                        MMF Projection: <b>{targetAmount}</b>
+                        Estimated Savings by {targetYear}:{" "}
+                        <b>KES {totalSavingsProjection.toLocaleString()}</b>
                       </Text>
                       <Text>
-                        FIF Projection: <b>KES 615,000</b>
+                        Target Goal:{" "}
+                        <b>
+                          {targetAmount
+                            ? `KES ${targetAmount.toLocaleString()}`
+                            : "Not provided"}
+                        </b>
+                      </Text>
+                      <Text>
+                        Gap to Reach Target:{" "}
+                        <b>
+                          KES{" "}
+                          {(targetAmount - totalSavingsProjection > 0
+                            ? targetAmount - totalSavingsProjection
+                            : 0
+                          ).toLocaleString()}
+                        </b>
                       </Text>
                     </VStack>
                   </Box>
-
-                  {/* Buttons */}
-                  <HStack mt={6} justify="center" gap={4}>
-                    <Button
-                      bg="blue.500"
-                      color="white"
-                      rounded="full"
-                      px={6}
-                      _hover={{ bg: "blue.600" }}
-                    >
-                      Explore Funds
-                    </Button>
-                    <Button
-                      bg="cyan.500"
-                      color="white"
-                      rounded="full"
-                      px={6}
-                      _hover={{ bg: "cyan.600" }}
-                    >
-                      Download Your Lifestyle Plan
-                    </Button>
-                  </HStack>
                 </>
               );
             })()}
