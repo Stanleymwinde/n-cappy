@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -65,7 +67,7 @@ const SwiperPage = () => {
         <SwiperSlide key={index}>
           <Box
             position="relative"
-            height={{ base: "70vh", sm: "80vh", md: "90vh", lg: "100vh" }}
+            height={{ base: "90vh", sm: "80vh", md: "90vh", lg: "100vh" }}
             width="100%"
             backgroundImage={`url(${image.image})`}
             backgroundSize="cover"

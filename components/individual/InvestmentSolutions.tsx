@@ -64,7 +64,7 @@ const InvestmentSolutions = () => {
               color={"white"}
             >
               <Text fontWeight="bold">Return Rate</Text>
-              <Text fontSize="lg">8% p.a.</Text>
+              <Text fontSize="lg">8-13% p.a.</Text>
             </Box>
             <Box
               bgColor="#21add4"
@@ -76,7 +76,7 @@ const InvestmentSolutions = () => {
             >
               <Text fontWeight="medium">Risk Level</Text>
               <Text fontSize="lg" fontWeight={"bold"}>
-                Low
+                Very Low-Low
               </Text>
             </Box>
           </Box>
@@ -147,7 +147,7 @@ const InvestmentSolutions = () => {
             >
               <Text fontWeight="medium">Risk Level</Text>
               <Text fontSize="lg" fontWeight={"bold"}>
-                Medium
+                Low-Medium
               </Text>
             </Box>
           </Box>

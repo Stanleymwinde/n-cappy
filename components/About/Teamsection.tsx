@@ -103,9 +103,9 @@ const TeamSection: React.FC = () => {
               linkedin="https://www.linkedin.com/in/mercymwongela/"
             />
             <TeamMemberCard
-              name="Damitha Pathmala"
+              name="Charles Miano"
               title="Chief Investment Officer"
-              image="/Damitha-Pathmalal1.jpg"
+              image="/images/Back.jpg"
               linkedin="/"
             />
             <TeamMemberCard

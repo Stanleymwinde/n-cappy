@@ -17,7 +17,14 @@ const HeritageSection: React.FC = () => {
   const circleSize = useBreakpointValue({ base: "20px", md: "24px" });
 
   return (
-    <Box id="section3"  fontFamily="'Poppins', sans-serif" py={6} bg="white" w="100%" mt={20}>
+    <Box
+      id="section3"
+      fontFamily="'Poppins', sans-serif"
+      py={6}
+      bg="white"
+      w="100%"
+      mt={20}
+    >
       {/* Section Heading */}
       <Box px={{ base: 4, md: 12 }} mb={4}>
         <Heading
@@ -55,7 +62,13 @@ const HeritageSection: React.FC = () => {
 
           {/* Timeline Years */}
           <Box position="relative" mb={10}>
-            <HStack justify="space-between" w="100%" px={{ base: 2, md: 6 }} position="relative" zIndex={2}>
+            <HStack
+              justify="space-between"
+              w="100%"
+              px={{ base: 2, md: 6 }}
+              position="relative"
+              zIndex={2}
+            >
               {heritageData.map((item) => (
                 <VStack
                   key={item.year}
@@ -68,6 +81,11 @@ const HeritageSection: React.FC = () => {
                     bg={activeYear.year === item.year ? "#00C8FF" : "white"}
                     border="2px solid white"
                     transition="all 0.3s ease"
+                    _hover={{
+                      transform: "scale(1.3)",
+                      bg: activeYear.year === item.year ? "#00E0FF" : "#00C8FF",
+                      boxShadow: "0 0 10px rgba(0, 200, 255, 0.7)",
+                    }}
                   />
                   <Text fontWeight="bold" fontSize="16px" color="white">
                     {item.year}
@@ -86,8 +104,12 @@ const HeritageSection: React.FC = () => {
             />
           </Box>
 
-         
-          <Box display="flex" flexDirection="column" justifyContent="flex-start" px={{ base: 2, md: 6 }}>
+          <Box
+            display="flex"
+            flexDirection="column"
+            justifyContent="flex-start"
+            px={{ base: 2, md: 6 }}
+          >
             <Text
               fontSize={{ base: "18px", md: "20px" }}
               color="#00C8FF"
@@ -98,7 +120,6 @@ const HeritageSection: React.FC = () => {
               {activeYear.title}
             </Text>
 
-            
             <Box
               fontSize={{ base: "15px", md: "16px" }}
               color="whiteAlpha.900"
@@ -109,7 +130,10 @@ const HeritageSection: React.FC = () => {
             >
               {Array.isArray(activeYear.description)
                 ? activeYear.description.map((para, idx) => (
-                    <Text key={idx} mb={idx < activeYear.description.length - 1 ? 4 : 0}>
+                    <Text
+                      key={idx}
+                      mb={idx < activeYear.description.length - 1 ? 4 : 0}
+                    >
                       {para}
                     </Text>
                   ))
