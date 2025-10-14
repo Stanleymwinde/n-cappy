@@ -1,3 +1,5 @@
+"use client"; 
+
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -57,7 +59,7 @@ const HeroSwiper: React.FC<HeroSwiperProps> = ({ slides }) => {
         <SwiperSlide key={index}>
           <Box
             position="relative"
-            height={{ base: "50vh", md: "109vh" }}
+            height={{ base: "40vh", md: "99vh" }}
             width={{ base: "50%", md: "100%" }}
             objectFit={"fill"}
             backgroundImage={`url(${slide.image})`}
