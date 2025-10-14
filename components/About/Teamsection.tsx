@@ -104,9 +104,9 @@ const TeamSection: React.FC = () => {
             />
             <TeamMemberCard
               name="Charles Miano"
-              title="Chief Investment Officer"
+              title="Portfolio Manager"
               image="/images/Back.jpg"
-              linkedin="/"
+              linkedin="https://www.linkedin.com/in/charlesmiano/"
             />
             <TeamMemberCard
               name="Abby Mungai"

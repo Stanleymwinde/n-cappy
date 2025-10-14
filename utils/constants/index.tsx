@@ -470,8 +470,8 @@ export const ResourcesData = [
       {
         id: 1,
         title: "Investor Mindset and Education",
-        subtitle: " First, Get Your Money Mindset Right",
-        text: "If your idea of money is wrong, you'll never get the game of money right.Get ready to be inspired and change your life! ",
+        subtitle: "Developing a Growth Mindset",
+        text: "Financial Freedom will begin when you set your mind free! The triumph over the trauma of poverty, is to achieve profound financial success.",
         image: "/images/v1.jpeg",
         pdf: "/pdfs/Investor-Education-1.pdf",
         video: "https://youtu.be/-Ilk82l9uW4?si=oqC-sn_KS4W6fa37",
@@ -507,7 +507,7 @@ export const ResourcesData = [
         id: 5,
         title: "Investor Mindset and Education",
         subtitle: "Developing a Growth Mindset",
-        text: "Financial Freedom will begin when you set your mind free! The triumph over the trauma of poverty, is to achieve profound financial success.",
+        text: "If your idea of money is wrong, you'll never get the game of money right.Get ready to be inspired and change your life!",
         image: "/images/v5.jpeg",
         pdf: "/pdfs/Investor-Education-1.pdf",
         video: "https://youtu.be/HC6xJ8qKd9w",
@@ -1153,101 +1153,103 @@ export const LifestylePlans = [
   },
   
   {
-    title: "Dream Car",
-    description:
-      "The best moments are shared. Plan ahead for birthdays, holidays, or surprise gifts and enjoy giving without the financial strain",
-    icon: FaCar,
-    questions: [
-      {
-        id: 1,
-        key: "retirementAge",
-        question: "What’s your ideal retirement age?",
-        placeholder: "e.g. 60",
-        hint: "This helps us plan your retirement savings.",
-        image: "/images/r-1.png",
-      },
-      {
-        id: 2,
-        key: "lifestyle",
-        question: "What lifestyle do you envision?",
-        placeholder: "e.g. Travel, hobbies",
-        hint: "Share your retirement dreams.",
-        image: "/images/r-2.png",
-      },
-      {
-        id: 3,
-        key: "monthlyExpenses",
-        question: "Expected monthly expenses?",
-        placeholder: "e.g. $2,000",
-        hint: "Helps us calculate your retirement needs.",
-        image: "/images/life-3.png",
-      },
-      {
-        id: 4,
-        key: "homeSize",
-        question: "How big is your dream home?",
-        placeholder: "e.g. 3 bedrooms, 2 bathrooms",
-        hint: "Gives a sense of your future space requirements.",
-        image: "/images/home-4.png",
-      },
-      {
-        id: 5,
-        key: "location",
-        question: "Where do you want to build it?",
-        placeholder: "e.g. Nairobi, Mombasa",
-        hint: "Helps plan for land costs and location preferences.",
-        image: "/images/home-5.png",
-      },
-    ],
-  },
-  {
-    title: "Treating Your Family",
-    description:
-      "The best moments are shared. Plan ahead for birthdays, holidays, or surprise gifts — and enjoy giving without the financial strain.",
-    icon: FaGift,
-    questions: [
-      {
-        id: 1,
-        key: "cause",
-        question: "What causes are you passionate about?",
-        placeholder: "e.g. Education, Health",
-        hint: "This helps us align your giving goals.",
-        image: "/images/giving-1.jpg",
-      },
-      {
-        id: 2,
-        key: "annualAmount",
-        question: "How much do you want to give annually?",
-        placeholder: "e.g. $1,000",
-        hint: "This sets your giving budget.",
-        image: "/images/giving-2.jpg",
-      },
-      {
-        id: 3,
-        key: "impact",
-        question: "Do you prefer local or global impact?",
-        placeholder: "e.g. Local",
-        hint: "Helps us find the right charities for you.",
-        image: "/images/giving-3.jpg",
-      },
-      {
-        id: 4,
-        key: "specialOccasions",
-        question: "Which occasions do you want to focus on?",
-        placeholder: "e.g. Birthdays, Holidays",
-        hint: "Helps prioritize your giving plan.",
-        image: "/images/giving-4.jpg",
-      },
-      {
-        id: 5,
-        key: "familyMembers",
-        question: "Who in your family do you want to treat?",
-        placeholder: "e.g. Parents, Children",
-        hint: "Gives more clarity on your gifting plans.",
-        image: "/images/giving-5.jpg",
-      },
-    ],
-  },
+  title: "Dream Car",
+  description:
+    "Owning your dream car isn’t just about luxury — it’s about freedom, comfort, and achievement. Plan for it early, and drive into your future with confidence.",
+  icon: FaCar,
+  questions: [
+    {
+      id: 1,
+      key: "carType",
+      question: "What’s your dream car?",
+      placeholder: "e.g. Toyota Prado, BMW X3",
+      hint: "Tell us the make or model you have your eyes on.",
+      image: "/images/dc.jpg",
+    },
+    {
+      id: 2,
+      key: "purchasePlan",
+      question: "Do you plan to buy new or used?",
+      placeholder: "e.g. New, Used, Not sure yet",
+      hint: "Your choice affects your savings goal and timeline.",
+      image: "/images/dc2.jpg",
+    },
+    {
+      id: 3,
+      key: "estimatedCost",
+      question: "What’s the estimated cost of your dream car?",
+      placeholder: "e.g. KES 2,500,000",
+      hint: "Include taxes, registration, and insurance if possible.",
+      image: "/images/te1.jpeg",
+    },
+    {
+      id: 4,
+      key: "savingsProgress",
+      question: "How much have you already saved toward it?",
+      placeholder: "e.g. KES 500,000",
+      hint: "This helps track your progress toward owning your car.",
+      image: "/images/rs.avif",
+    },
+    {
+      id: 5,
+      key: "monthlySavings",
+      question: "How much can you save monthly toward your car?",
+      placeholder: "e.g. KES 20,000",
+      hint: "Setting a consistent monthly goal brings you closer to the driver’s seat.",
+      image: "/images/cs1.jpeg",
+    },
+  ],
+}
+,
+ {
+  title: "Treating Your Family",
+  description:
+    "The best moments are shared. Plan ahead for birthdays, holidays, or surprise gifts — and enjoy giving without the financial strain.",
+  icon: FaGift,
+  questions: [
+    {
+      id: 1,
+      key: "familyMembers",
+      question: "Who in your family do you want to treat?",
+      placeholder: "e.g. Parents, Children, Siblings",
+      hint: "This helps you prioritize your gifting plans.",
+      image: "/images/tfe.jpg",
+    },
+    {
+      id: 2,
+      key: "specialOccasions",
+      question: "Which occasions are you planning for?",
+      placeholder: "e.g. Birthdays, Holidays, Anniversaries",
+      hint: "Knowing the occasion helps estimate costs and timing.",
+      image: "/images/wif.jpg",
+    },
+    {
+      id: 3,
+      key: "giftTypes",
+      question: "What types of gifts are you thinking of?",
+      placeholder: "e.g. Toys, Clothes, Experiences",
+      hint: "This gives clarity on budgeting and preparation.",
+      image: "/images/bg1.avif",
+    },
+    {
+      id: 4,
+      key: "estimatedCost",
+      question: "What’s your estimated total budget?",
+      placeholder: "e.g. KES 20,000",
+      hint: "Include all gifts and related costs to plan effectively.",
+      image: "/images/te1.jpeg",
+    },
+    {
+      id: 5,
+      key: "monthlySavings",
+      question: "How much can you save monthly for these gifts?",
+      placeholder: "e.g. KES 3,000",
+      hint: "A monthly saving plan ensures you’re ready for each occasion.",
+      image: "/images/rs.avif",
+    },
+  ],
+}
+
 ];
 
 
@@ -1335,7 +1337,7 @@ export const whoweserve = [
   },
 
    {
-    label: "Associations/ Endowment",
+    label: "Associations/ Endowments",
     icon: <FaHandshake size={26} />,
   },
 ];
@@ -1974,7 +1976,7 @@ export const whatweoffer = [
     },
     quote: "We don’t just raise capital, we raise the belief that tomorrow can be bigger than today.” – Pius Muchiri",
     featuredDeal: {
-      title: "Featured Deal:",
+      title: "Advisory Application:",
       description:
         "Structured a $12M convertible note for a rapidly growing health-tech platform, balancing immediate growth capital needs with long-term equity upside for investors and founders alike",
     },
@@ -2015,7 +2017,7 @@ export const whatweoffer = [
     },
     quote: "True value is not only in today’s numbers, but in tomorrow’s potential.” – Abby Mungai",
     featuredDeal: {
-      title: "Featured Deal:",
+      title: "Advisory Application:",
       description:
         "Structured a $12M convertible note for a rapidly growing health-tech platform, balancing immediate growth capital needs with long-term equity upside for investors and founders alike",
     },
@@ -2055,7 +2057,7 @@ export const whatweoffer = [
     },
     quote: "The best investor isn’t defined by pockets, but by vision aligned with yours.” – Pius Muchiri",
     featuredDeal: {
-      title: "Featured Deal:",
+      title: "Advisory Application:",
       description:
         "Structured a $12M convertible note for a rapidly growing health-tech platform, balancing immediate growth capital needs with long-term equity upside for investors and founders alike",
     },
@@ -2096,7 +2098,7 @@ export const whatweoffer = [
     },
     quote: "In every deal, the rarest and most valuable currency is trust.” – Abby Mungai",
     featuredDeal: {
-      title: "Featured Deal:",
+      title: "Advisory Application:",
       description:
         "Structured a $12M convertible note for a rapidly growing health-tech platform, balancing immediate growth capital needs with long-term equity upside for investors and founders alike",
     },
@@ -2134,7 +2136,7 @@ export const whatweoffertreasury = [
     },
      quote: "“Liquidity should serve strategy, not limit it; bespoke portfolios make every shilling count.” – Mercy Mwongela",
     featuredDeal: {
-      title: "Featured Deal:",
+      title: "Treasury Application:",
       description:
         "Structured a $12M convertible note for a rapidly growing health-tech platform, balancing immediate growth capital needs with long-term equity upside for investors and founders alike",
     },
@@ -2168,7 +2170,7 @@ export const whatweoffertreasury = [
     },
      quote: "“Short-term doesn’t mean short-sighted; discipline turns idle cash into steady gains.” – Pius Muchiri",
     featuredDeal: {
-      title: "Featured Deal:",
+      title: "Treasury Application:",
       description:
         "Structured a $12M convertible note for a rapidly growing health-tech platform, balancing immediate growth capital needs with long-term equity upside for investors and founders alike",
     },
@@ -2203,7 +2205,7 @@ export const whatweoffertreasury = [
     },
      quote: "True strength is never caught off guard; planned liquidity keeps opportunity within reach.” – Mercy Mwongela",
     featuredDeal: {
-      title: "Featured Deal:",
+      title: "Treasury Application:",
       description:
         "Structured a $12M convertible note for a rapidly growing health-tech platform, balancing immediate growth capital needs with long-term equity upside for investors and founders alike",
     },
@@ -2236,7 +2238,7 @@ export const whatweoffertreasury = [
     },
      quote: "Markets move fast—daily oversight keeps your liquidity a step ahead” – Fredrick Okudo",
     featuredDeal: {
-      title: "Featured Deal:",
+      title: "Treasury Application:",
       description:
         "Structured a $12M convertible note for a rapidly growing health-tech platform, balancing immediate growth capital needs with long-term equity upside for investors and founders alike",
     },
@@ -2272,143 +2274,187 @@ export const teamAlbumMembers = [
 ];
 
 export const Lifestyle = [
+ {
+  title: "Food & Household essentials",
+  description:
+    "Everyday essentials may seem small, but they form the foundation of a dignified life. Plan for them, and protect your peace.",
+  icon: FiShoppingCart,
+  questions: [
+    {
+      id: 1,
+      question: "What are your monthly food and grocery needs?",
+      placeholder: "e.g. fruits, grains, cleaning items",
+      hint: "Think about your typical household shopping list—what do you usually buy every month?",
+      image: "/images/Fng1.jpeg",
+    },
+    {
+      id: 2,
+      question: "How often do you shop for groceries?",
+      placeholder: "e.g. weekly, bi-weekly, monthly",
+      hint: "Your shopping frequency helps you plan your budget better.",
+      image: "/images/fng.jpeg",
+    },
+    {
+      id: 3,
+      question: "How many people are in your household?",
+      placeholder: "e.g. 1 person, family of 4",
+      hint: "The number of people determines how much you spend on essentials.",
+      image: "/images/fng2.jpeg",
+    },
+    {
+      id: 4,
+      question: "What is your estimated monthly cost for essentials?",
+      placeholder: "e.g. KES 15,000",
+      hint: "Give your best estimate — include both food and household items.",
+      image: "/images/fngg3.jpeg",
+    },
+    {
+      id: 5,
+      question: "How much have you already budgeted or saved?",
+      placeholder: "e.g. KES 5,000",
+      hint: "Enter how much you currently have set aside for these expenses.",
+      image: "/images/fng44.jpeg",
+    },
+    {
+      id: 6,
+      question: "How much can you set aside monthly?",
+      placeholder: "e.g. KES 3,000",
+      hint: "This helps create a realistic savings plan for your essential needs.",
+      image: "/images/fng45.avif",
+    },
+  ],
+}
+,
   {
-    title: "Food & Household essentials",
-    description:
-      "Everyday essentials may seem small, but they form the foundation of a dignified life. Plan for them, and protect your peace.",
-    icon: FiShoppingCart, 
-    questions: [
-      {
-        id: 1,
-        question: "Where do you want to go?",
-        placeholder: "e.g. Mombasa, Paris, Bali",
-        hint: "Whether it’s a beach, city or the desert , you only need 230 USD per month",
-        image: "/images/Travelone.png",
-      },
-      {
-        id: 2,
-        question: "When do you want to travel?",
-        placeholder: "eg.   December 2025",
-        hint: "When are you planning to take this trip? Even an approximate time is fine.",
-        image: "/images/Travetwo.png",
-      },
-      {
-        id: 3,
-        question: "How long will you stay?",
-        placeholder: "eg.   7 days",
-        hint: "How many days or weeks would you like to spend there?",
-        image: "/images/Travelthree.png",
-      },
-      {
-        id: 4,
-        question: "What Is your estimated cost?",
-        placeholder: "eg.   KES 5000",
-        hint: "Your best estimate of the total cost. Don’t worry if you are not sure.",
-        image: "/Travelfour.png",
-      },
-      {
-        id: 5,
-        question: "How much have you saved ?",
-        placeholder: "eg.   KES 10,000",
-        hint: "How much have you already put aside for this trip?",
-        image: "/Travelfive.png",
-      },
-      {
-        id: 5,
-        question: "How much can you save monthly?",
-        placeholder: "eg.   KES 10,000",
-        hint: "How much have you already put aside for this trip?",
-        image: "/Travelsix.png",
-      },
-    ],
-  },
-  {
-    title: "Rent Payments",
-    description:
-      "A roof over your head is more than a shelter, it’s stability. Whether you’re renting or building a legacy, secure it wisely.",
-    icon: FaHome, 
-    questions: [
-      {
-        id: 1,
-        question: "What do you want to study?",
-        placeholder: "e.g. Data Science",
-        hint: "Let us know your field of interest.",
-        image: "/images/ed-q-4.png",
-      },
-      {
-        id: 2,
-        question: "Which institution?",
-        placeholder: "e.g. MIT, Udemy",
-        hint: "Helps tailor your savings goals.",
-        image: "/images/ed-q-2.png",
-      },
-      {
-        id: 3,
-        question: "Expected tuition cost?",
-        placeholder: "e.g. $10,000",
-        hint: "This helps us prepare your plan.",
-        image: "/images/ed-q-1.png",
-      },
-    ],
-  },
-  {
-    title: " Transport",
-    description:
-      "Mobility gives you access to opportunity. Budget for it, because how you move determines where you go.",
-    icon: FaCarSide, 
-    questions: [
-      {
-        id: 1,
-        question: "What’s your ideal retirement age?",
-        placeholder: "e.g. 60",
-        hint: "This helps us plan your retirement savings.",
-        image: "/images/r-1.png",
-      },
-      {
-        id: 2,
-        question: "What lifestyle do you envision?",
-        placeholder: "e.g. Travel, hobbies",
-        hint: "Share your retirement dreams.",
-        image: "/images/r-2.png",
-      },
-      {
-        id: 3,
-        question: "Expected monthly expenses?",
-        placeholder: "e.g. $2,000",
-        hint: "Helps us calculate your retirement needs.",
-        image: "/images/life-3.png",
-      },
-    ],
-  },
-  {
-    title: " Clothing & Utilities",
-    description:
-      "Dignity is in the details; Clean clothes, running water and power when you need it. Plan for them, to preserve your comfort and confidence",
-    icon: FaTshirt, 
-    questions: [
-      {
-        id: 1,
-        question: "What causes are you passionate about?",
-        placeholder: "e.g. Education, Health",
-        hint: "This helps us align your giving goals.",
-        image: "/images/giving-1.jpg",
-      },
-      {
-        id: 2,
-        question: "How much do you want to give annually?",
-        placeholder: "e.g. $1,000",
-        hint: "This sets your giving budget.",
-        image: "/images/giving-2.jpg",
-      },
-      {
-        id: 3,
-        question: "Do you prefer local or global impact?",
-        placeholder: "e.g. Local",
-        hint: "Helps us find the right charities for you.",
-        image: "/images/giving-3.jpg",
-      },
-    ],
-  },
+  title: "Rent Payments",
+  description:
+    "A roof over your head is more than a shelter, it’s stability. Whether you’re renting or building a legacy, secure it wisely.",
+  icon: FaHome,
+  questions: [
+    {
+      id: 1,
+      question: "How much is your monthly rent?",
+      placeholder: "e.g. KES 25,000",
+      hint: "Include any service charges or utilities that come with your rent.",
+      image: "/images/mr1.jpeg",
+    },
+    {
+      id: 2,
+      question: "When is your next rent due?",
+      placeholder: "e.g. 1st of every month",
+      hint: "Knowing your payment date helps you plan ahead.",
+      image: "/images/rd1.jpeg",
+    },
+    {
+      id: 3,
+      question: "How much have you already saved for rent?",
+      placeholder: "e.g. KES 10,000",
+      hint: "Track your current progress toward your next payment.",
+      image: "/images/rs.avif",
+    },
+    {
+      id: 4,
+      question: "How much can you set aside monthly?",
+      placeholder: "e.g. KES 5,000",
+      hint: "Small, consistent amounts make rent less stressful.",
+      image: "/images/rs1.avif",
+    },
+    {
+      id: 5,
+      question: "Do you plan to move or renew your lease soon?",
+      placeholder: "e.g. Move next year",
+      hint: "This helps plan for deposits, moving costs, or rent adjustments.",
+      image: "/images/rs5.jpg",
+    },
+  ],
+},
+{
+  title: "Transport",
+  description:
+    "Mobility gives you access to opportunity. Budget for it, because how you move determines where you go.",
+  icon: FaCarSide,
+  questions: [
+    {
+      id: 1,
+      question: "What’s your main mode of transport?",
+      placeholder: "e.g. Matatu, personal car, bike",
+      hint: "Knowing this helps estimate your travel expenses.",
+      image: "/images/ree.jpg",
+    },
+    {
+      id: 2,
+      question: "How much do you spend on transport monthly?",
+      placeholder: "e.g. KES 6,000",
+      hint: "Include daily commutes, fuel, and occasional trips.",
+      image: "/images/te1.jpeg",
+    },
+    {
+      id: 3,
+      question: "Do you have any upcoming trips or travel plans?",
+      placeholder: "e.g. Upcountry visit in December",
+      hint: "Plan for one-off journeys in your transport budget.",
+      image: "/images/ut1.jpeg",
+    },
+    {
+      id: 4,
+      question: "Would you like to start saving for a vehicle or upgrade?",
+      placeholder: "e.g. Yes, saving for a car",
+      hint: "Helps you map out long-term mobility goals.",
+      image: "/images/bl.jpg",
+    },
+    {
+      id: 5,
+      question: "How much can you save toward transport each month?",
+      placeholder: "e.g. KES 2,000",
+      hint: "A little saved monthly goes a long way over time.",
+      image: "/images/te2.jpeg",
+    },
+  ],
+},
+{
+  title: "Clothing & Utilities",
+  description:
+    "Dignity is in the details; clean clothes, running water and power when you need it. Plan for them, to preserve your comfort and confidence.",
+  icon: FaTshirt,
+  questions: [
+    {
+      id: 1,
+      question: "How much do you spend on clothing and laundry monthly?",
+      placeholder: "e.g. KES 3,000",
+      hint: "Include purchases, repairs, or dry cleaning.",
+      image: "/images/brj.jpg",
+    },
+    {
+      id: 2,
+      question: "What are your average monthly utility bills?",
+      placeholder: "e.g. Electricity KES 2,000, Water KES 1,000",
+      hint: "Estimate your total household bills per month.",
+      image: "/images/mub1.jpeg",
+    },
+    {
+      id: 3,
+      question: "Do your utility costs fluctuate seasonally?",
+      placeholder: "e.g. Higher in December",
+      hint: "Helps anticipate and plan for high-usage months.",
+      image: "/images/mub22.jpeg",
+    },
+    {
+      id: 4,
+      question: "Do you have any pending bills or arrears?",
+      placeholder: "e.g. Electricity bill pending KES 800",
+      hint: "Helps prioritize urgent payments first.",
+      image: "/images/sm.jpg",
+    },
+    {
+      id: 5,
+      question: "How much can you allocate monthly for these needs?",
+      placeholder: "e.g. KES 5,000",
+      hint: "Set a comfortable budget for consistent peace of mind.",
+      image: "/images/nm.avif",
+    },
+  ],
+}
+
 ];
 
 export const commonfaqs = [

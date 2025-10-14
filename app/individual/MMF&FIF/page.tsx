@@ -1,7 +1,7 @@
 import { Rates } from "@/components/common";
 import Hero from "@/components/common/Hero";
 import { CallToAction } from "@/components/home";
-import { CompareFunds, FIF, MMF, GettingStarted } from "@/components/individual";
+import { CompareFunds, FIF, MMF, BalancedFund, EquityFund, GettingStarted } from "@/components/individual";
 import React from "react";
 
 export const metadata = {
@@ -47,6 +47,8 @@ const Page = () => {
 
       <MMF />
       <FIF />
+      <BalancedFund />
+      <EquityFund />
       <CompareFunds />
       <GettingStarted />
       <CallToAction />

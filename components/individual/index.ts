@@ -8,3 +8,5 @@ export { default as MMF } from "./MMF";
 export { default as FIF } from "./FIF";
 export { default as CompareFunds } from "./CompareFunds";
 export { default as GettingStarted } from "./GettingStarted";
+export { default as BalancedFund } from "./BalancedFund";
+export { default as EquityFund } from "./EquityFund";

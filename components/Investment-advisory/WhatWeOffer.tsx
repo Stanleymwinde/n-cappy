@@ -160,7 +160,7 @@ const InvestmentSolutions = () => {
                             color="gray.600"
                             fontStyle="italic"
                             textAlign="center"
-                            maxW={'400px'}
+                            maxW={'300px'}
                           >
                             “{item.quote}”
                           </Text>
