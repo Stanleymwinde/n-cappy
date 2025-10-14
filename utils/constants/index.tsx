@@ -1,18 +1,41 @@
-import { FacebookIcon, InstagramIcon, LinkedInIcon, XIcon, YoutubeIcon } from "../icons";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  XIcon,
+  YoutubeIcon,
+} from "../icons";
 import TiktokIcon from "../icons/TikTokIcon";
 import { MdOutlineRealEstateAgent } from "react-icons/md";
-import { FaHandsHelping, FaShieldAlt, FaUniversity, FaSmile, FaCar } from "react-icons/fa";
+import {
+  FaHandsHelping,
+  FaShieldAlt,
+  FaUniversity,
+  FaSmile,
+  FaCar,
+} from "react-icons/fa";
 
 import { BsCashCoin } from "react-icons/bs";
 import { FaBuilding, FaGlobe, FaHeart, FaPiggyBank } from "react-icons/fa6";
 import { FiShoppingCart } from "react-icons/fi";
 import { FaHome, FaCarSide, FaTshirt } from "react-icons/fa";
-import { FaHouseUser, FaHospital, FaGraduationCap, FaFileContract } from "react-icons/fa";
-import { FaFileInvoice, FaBalanceScale, FaUsers, FaHandHoldingUsd, FaHeartbeat, FaUserNurse,  FaGift, FaUmbrellaBeach, FaHandshake } from "react-icons/fa";
-
-
-
-
+import {
+  FaHouseUser,
+  FaHospital,
+  FaGraduationCap,
+  FaFileContract,
+} from "react-icons/fa";
+import {
+  FaFileInvoice,
+  FaBalanceScale,
+  FaUsers,
+  FaHandHoldingUsd,
+  FaHeartbeat,
+  FaUserNurse,
+  FaGift,
+  FaUmbrellaBeach,
+  FaHandshake,
+} from "react-icons/fa";
 
 export const marginX = { base: "3%", sm: "2%", md: "4%", lg: "6%" };
 
@@ -402,7 +425,8 @@ export const ResourcesData = [
       {
         id: 5,
         title: "Private Wealth Management",
-        subtitle: "The Heart Behind Billions | Ft. Pius Muchiri and Moses Njuguna",
+        subtitle:
+          "The Heart Behind Billions | Ft. Pius Muchiri and Moses Njuguna",
         text: "Let’s face it, when it comes to money, we all need that one person. Not someone to borrow from. But someone who gets it.",
         image: "/images/Y4.png",
         pdf: "/pdfs/Private-Wealth-1.pdf",
@@ -516,7 +540,6 @@ export const ResourcesData = [
   },
 ];
 
-
 export const investmentData = [
   {
     title: "Money Market Fund (USD)",
@@ -530,7 +553,7 @@ export const investmentData = [
       "1-12 month timeframe",
     ],
     cta: "Money Market Fund (USD) Fact Sheet",
-    file: "/images/m-usd.jpeg" 
+    file: "/images/m-usd.jpeg",
   },
   {
     title: "Fixed Income Fund (USD)",
@@ -544,7 +567,7 @@ export const investmentData = [
       "1-3 year timeframe",
     ],
     cta: "Fixed Income Fund (USD) Fact Sheet",
-    file: "/images/f-usd.jpeg" 
+    file: "/images/f-usd.jpeg",
   },
   {
     title: "Balanced Fund (USD)",
@@ -558,10 +581,9 @@ export const investmentData = [
       "3+ year timeframe",
     ],
     cta: "Balanced Fund (USD) Fact Sheet",
-    file: "/images/b-f.jpeg" 
+    file: "/images/b-f.jpeg",
   },
 ];
-
 
 export const itemss = [
   {
@@ -599,7 +621,7 @@ export const teamMembers = [
     title: "Private Wealth Manager",
     link: "  https://www.linkedin.com/in/zachary-mwangi-acsi-76431bba/ ",
   },
-   {
+  {
     image: "/Alex.png",
     name: "Alex Muchoki",
     title: "Senior Private Wealth Consultant/ IFA Coordinator",
@@ -1133,9 +1155,9 @@ export const LifestylePlans = [
         image: "/images/Travelfive.png",
       },
 
-       {
+      {
         id: 6,
-         key: "companions",
+        key: "companions",
         question: "How much have you saved ?",
         placeholder: "eg.   KES 10,000",
         hint: "How much have you already put aside for this trip?",
@@ -1143,7 +1165,7 @@ export const LifestylePlans = [
       },
       {
         id: 7,
-         key: "companions",
+        key: "companions",
         question: "How much can you save monthly?",
         placeholder: "eg.   KES 10,000",
         hint: "How much have you already put aside for this trip?",
@@ -1151,7 +1173,7 @@ export const LifestylePlans = [
       },
     ],
   },
-  
+
   {
   title: "Dream Car",
   description:
@@ -1251,7 +1273,6 @@ export const LifestylePlans = [
 }
 
 ];
-
 
 export const HelpMeChoosePlans = [
   {
@@ -1602,7 +1623,7 @@ export const EducationPlans = [
     title: "Home Ownership Goals",
     description:
       "From your first home to your forever home, we help you plan and save for every stage of your home ownership journey",
-    icon: FaHouseUser, 
+    icon: FaHouseUser,
     exploreMoreUrl: "/home-ownership",
     questions: [
       {
@@ -1655,7 +1676,7 @@ export const EducationPlans = [
     title: "Medical Emergencies",
     description:
       "Hospital bills, medication, specialist visits, and other unexpected medical expenses are all covered in your financial plan",
-    icon: FaHospital, 
+    icon: FaHospital,
     questions: [
       {
         id: 1,
@@ -1706,7 +1727,7 @@ export const EducationPlans = [
     title: "Education Planning",
     description:
       "Education is a lifelong journey, and we help you plan ahead, so you are financially prepared at every stage.",
-    icon: FaGraduationCap, 
+    icon: FaGraduationCap,
     questions: [
       {
         id: 1,
@@ -1758,7 +1779,7 @@ export const EducationPlans = [
     title: "Insurance Premiums",
     description:
       "We help you plan for insurance premiums; so you are covered when it matters most, without compromising your financial stability.",
-    icon: FaShieldAlt, 
+    icon: FaShieldAlt,
     exploreMoreUrl: "/insurance-premiums",
     questions: [
       {
@@ -1809,7 +1830,6 @@ export const EducationPlans = [
   },
 ];
 
-
 export const StrategyContent = [
   {
     value: "equity-strategy",
@@ -1845,7 +1865,8 @@ export const StrategyContent = [
       alt: "Advisory Team",
     },
 
-     quote: "“Equity is the art of patience; time turns great companies into lasting wealth.” – Charles Miano",
+    quote:
+      "“Equity is the art of patience; time turns great companies into lasting wealth.” – Charles Miano",
 
     featuredDeal: {
       title: "Institutional Application:",
@@ -1888,7 +1909,8 @@ export const StrategyContent = [
       alt: "Private Credit Team",
     },
 
-    quote: "A balanced portfolio is wealth in harmony; where endurance beats extremes.” – Mercy Mwongela",
+    quote:
+      "A balanced portfolio is wealth in harmony; where endurance beats extremes.” – Mercy Mwongela",
 
     featuredDeal: {
       title: "Institutional Application:",
@@ -1930,7 +1952,8 @@ export const StrategyContent = [
       image: "/images/Charlie.jpg",
       alt: "Infrastructure Projects",
     },
-    quote: "“In uncertain markets, fixed income delivers the rarest asset of all: predictable cash flow.” – Charles Miano",
+    quote:
+      "“In uncertain markets, fixed income delivers the rarest asset of all: predictable cash flow.” – Charles Miano",
 
     featuredDeal: {
       title: "Institutional Application:",
@@ -1974,7 +1997,8 @@ export const whatweoffer = [
       image: "/Pius-m1.jpg",
       alt: "Advisory Team",
     },
-    quote: "We don’t just raise capital, we raise the belief that tomorrow can be bigger than today.” – Pius Muchiri",
+    quote:
+      "We don’t just raise capital, we raise the belief that tomorrow can be bigger than today.” – Pius Muchiri",
     featuredDeal: {
       title: "Advisory Application:",
       description:
@@ -2015,7 +2039,8 @@ export const whatweoffer = [
       image: "/images/abie.jpeg",
       alt: "Private Credit Team",
     },
-    quote: "True value is not only in today’s numbers, but in tomorrow’s potential.” – Abby Mungai",
+    quote:
+      "True value is not only in today’s numbers, but in tomorrow’s potential.” – Abby Mungai",
     featuredDeal: {
       title: "Advisory Application:",
       description:
@@ -2055,7 +2080,8 @@ export const whatweoffer = [
       image: "/Pius-m1.jpg",
       alt: "Infrastructure Projects",
     },
-    quote: "The best investor isn’t defined by pockets, but by vision aligned with yours.” – Pius Muchiri",
+    quote:
+      "The best investor isn’t defined by pockets, but by vision aligned with yours.” – Pius Muchiri",
     featuredDeal: {
       title: "Advisory Application:",
       description:
@@ -2096,7 +2122,8 @@ export const whatweoffer = [
       image: "/images/abie.jpeg",
       alt: "Private Credit Team",
     },
-    quote: "In every deal, the rarest and most valuable currency is trust.” – Abby Mungai",
+    quote:
+      "In every deal, the rarest and most valuable currency is trust.” – Abby Mungai",
     featuredDeal: {
       title: "Advisory Application:",
       description:
@@ -2134,7 +2161,8 @@ export const whatweoffertreasury = [
       image: "/images/mwongelam.jpg",
       alt: "Advisory Team",
     },
-     quote: "“Liquidity should serve strategy, not limit it; bespoke portfolios make every shilling count.” – Mercy Mwongela",
+    quote:
+      "“Liquidity should serve strategy, not limit it; bespoke portfolios make every shilling count.” – Mercy Mwongela",
     featuredDeal: {
       title: "Treasury Application:",
       description:
@@ -2168,7 +2196,8 @@ export const whatweoffertreasury = [
       image: "/Pius-m1.jpg",
       alt: "Private Credit Team",
     },
-     quote: "“Short-term doesn’t mean short-sighted; discipline turns idle cash into steady gains.” – Pius Muchiri",
+    quote:
+      "“Short-term doesn’t mean short-sighted; discipline turns idle cash into steady gains.” – Pius Muchiri",
     featuredDeal: {
       title: "Treasury Application:",
       description:
@@ -2203,7 +2232,8 @@ export const whatweoffertreasury = [
       image: "/images/mwongelam.jpg",
       alt: "Infrastructure Projects",
     },
-     quote: "True strength is never caught off guard; planned liquidity keeps opportunity within reach.” – Mercy Mwongela",
+    quote:
+      "True strength is never caught off guard; planned liquidity keeps opportunity within reach.” – Mercy Mwongela",
     featuredDeal: {
       title: "Treasury Application:",
       description:
@@ -2236,7 +2266,8 @@ export const whatweoffertreasury = [
       image: "/images/Fredo.png",
       alt: "Private Credit Team",
     },
-     quote: "Markets move fast—daily oversight keeps your liquidity a step ahead” – Fredrick Okudo",
+    quote:
+      "Markets move fast—daily oversight keeps your liquidity a step ahead” – Fredrick Okudo",
     featuredDeal: {
       title: "Treasury Application:",
       description:
@@ -2485,7 +2516,8 @@ export const commonfaqs = [
   },
   {
     value: "f",
-    title: "How long does it take for funds to be transferred into my account when I redeem?​",
+    title:
+      "How long does it take for funds to be transferred into my account when I redeem?​",
     text: "It takes 2 to 3 working days from the date of request. This is a requirement of the regulation governing unit trusts.​",
   },
   {
@@ -2555,7 +2587,8 @@ export const commonfaqs = [
   },
   {
     value: "t",
-    title: "Is Chumz legitimate and what is the relationship between Nabo Capital and Chumz? ​",
+    title:
+      "Is Chumz legitimate and what is the relationship between Nabo Capital and Chumz? ​",
     text: "Chumz is a legitimate mobile application that allows you to invest in Nabo Capital’s funds. It is a product of Nabo Capital and is regulated by the Capital Markets Authority (CMA).​",
   },
   {
