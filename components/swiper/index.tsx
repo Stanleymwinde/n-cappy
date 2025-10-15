@@ -37,13 +37,15 @@ const SwiperPage = () => {
     time: number,
     progress: number
   ): void => {
-    progressCircle.current?.style.setProperty("--progress", String(1 - progress));
+    progressCircle.current?.style.setProperty(
+      "--progress",
+      String(1 - progress)
+    );
     if (progressContent.current) {
       progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
     }
   };
 
-  
   const clampLines =
     windowWidth === null
       ? 3
@@ -163,39 +165,36 @@ const slider_images = [
   {
     image: "/images/travel1.jpeg",
     title: "Invest in Experiences. Invest in Dubai.",
-    text:
-      "Step into a city where luxury, thrill, and wonder collide. Every moment you invest here becomes a memory that never fades.",
+    text: "Step into a city where luxury, thrill, and wonder collide. Every moment you invest here becomes a memory that never fades.",
     link: "/travel",
   },
   {
     image: "/images/slide-4.jpg",
-    title: "Make Money While doing what you love",
+    title: "Make Money While Doing What You Love",
     text: "Settle down. Now it’s your money’s turn to clock in.",
     link: "/lifestyle-goal",
   },
   {
     image: "/images/smiling.jpeg",
     title: "Invest Where Performance Leads. Unlock Up to 13% p.a.",
-    text:
-      "The Nabo Money Market Fund delivers trusted, market-leading growth. Invest smart, stay liquid, and watch your wealth work harder for you.",
+    text: "The Nabo Money Market Fund delivers trusted, market-leading growth. Invest smart, stay liquid, and watch your wealth work harder for you.",
     link: "/individual/MMF&FIF",
   },
   {
     image: "/images/globall.jpg",
     title: "Invest Beyond Borders. Build Wealth Without Limits.",
-    text:
-      "Unlock global markets, diversify your portfolio, and invest in opportunities that grow your wealth today—and protect your legacy tomorrow.",
+    text: "Unlock global markets, diversify your portfolio, and invest in opportunities that grow your wealth today—and protect your legacy tomorrow.",
     link: "/global-investing",
   },
   {
     image: "/images/fs.jpeg",
-    title: "Make Money While doing what you love",
+    title: "Make Money While Doing What You Love",
     text: "Say yes to life’s big and beautiful moments",
     link: "/education",
   },
   {
     image: "/images/oldcouple.jpeg",
-    title: "Make Money While doing what you love",
+    title: "Make Money While Doing What You Love",
     text: "Make your mark. Then make it last",
     link: "/retire",
   },

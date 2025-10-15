@@ -1,6 +1,5 @@
 "use client";
 
-import { marginX } from "@/utils/constants";
 import {
   Box,
   Button,
@@ -63,7 +62,7 @@ export default function Page() {
 
   // new raw input states (to make typing smooth)
   const [targetAmountInput, setTargetAmountInput] = useState(
-   targetAmount != null ? String(targetAmount) : ""
+    targetAmount != null ? String(targetAmount) : ""
   );
   const [monthlyContributionInput, setMonthlyContributionInput] = useState(
     monthlyContribution != null ? String(monthlyContribution) : ""
@@ -72,11 +71,13 @@ export default function Page() {
   const exportRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-   setTargetAmountInput(targetAmount != null ? String(targetAmount) : "");
+    setTargetAmountInput(targetAmount != null ? String(targetAmount) : "");
   }, [targetAmount]);
 
   useEffect(() => {
-    setMonthlyContributionInput(monthlyContribution != null ? String(monthlyContribution) : "");
+    setMonthlyContributionInput(
+      monthlyContribution != null ? String(monthlyContribution) : ""
+    );
   }, [monthlyContribution]);
 
   const handleCurrencyToggle = (selected: "KES" | "USD") => {
