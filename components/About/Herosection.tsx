@@ -4,7 +4,13 @@ import { Box, VStack, Heading, Text, HStack, Button } from "@chakra-ui/react";
 
 const HeroSection: React.FC = () => {
   return (
-    <Box position="relative" w="100%" h="100vh" overflow="hidden">
+    <Box
+      position="relative"
+      w="100%"
+      h={{ base: "50vh", sm: "70vh", md: "90vh" }}
+      overflow="hidden"
+      bg={"red"}
+    >
       {/* Background Image */}
       <Box
         position="absolute"
@@ -17,7 +23,6 @@ const HeroSection: React.FC = () => {
         bgPos="center"
         zIndex={0}
       />
-
       {/* Black Overlay (adjust opacity here) */}
       <Box
         position="absolute"
@@ -28,7 +33,6 @@ const HeroSection: React.FC = () => {
         bg="rgba(0,0,0,0.3)" // adjust opacity here (0.3 lighter, 0.8 darker)
         zIndex={1}
       />
-
       {/* Hero Content */}
       <VStack
         position="relative"

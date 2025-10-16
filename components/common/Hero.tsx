@@ -1,10 +1,5 @@
 "use client";
-import {
-  Box,
-  Button,
-  Text,
-  Flex,
-} from "@chakra-ui/react";
+import { Box, Button, Text, Flex } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -33,9 +28,8 @@ const Hero = ({
   return (
     <Box
       position="relative"
-      height={{ base: "50vh", sm: "105vh", md: "120vh" }} 
-      minHeight="500px" 
-      maxHeight="1000px" 
+      height={{ base: "50vh", sm: "105vh", md: "120vh" }}
+      maxHeight="1000px"
       width="100%"
       overflow="hidden"
       pt={{ base: 2, md: 4 }}

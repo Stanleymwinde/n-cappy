@@ -4,7 +4,6 @@ import { Box, Image, Heading, Text, VStack } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
 const images = [
-  
   "/images/IMG_65981.jpg",
   "/images/IMG_62051.jpg",
   "/images/IMG_62211.jpg",
@@ -50,7 +49,12 @@ const TeamsAlbum: React.FC = () => {
       </VStack>
 
       {/* Image carousel */}
-      <Box position="relative" width="100%" height="1000px" overflow="hidden">
+      <Box
+        position="relative"
+        width="100%"
+        height={{ base: "50vh", md: "90vh", lg: "100vh" }}
+        overflow="hidden"
+      >
         {images.map((src, index) => (
           <Image
             key={index}
@@ -60,7 +64,7 @@ const TeamsAlbum: React.FC = () => {
             top={0}
             left={0}
             width="100%"
-            height="950px"
+            height="100%"
             objectFit="cover"
             transition="opacity 1s ease-in-out"
             opacity={index === currentIndex ? 1 : 0}

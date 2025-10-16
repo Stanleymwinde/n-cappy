@@ -35,7 +35,8 @@ export default function Testimonials() {
         mx="auto"
         px={{ base: 4, md: 0 }}
       >
-        Hear from investors who have trusted us with their global investment journey.
+        Hear from investors who have trusted us with their global investment
+        journey.
       </Text>
 
       {/* Carousel */}
@@ -73,7 +74,7 @@ export default function Testimonials() {
                 <Box
                   position="relative"
                   w={{ base: "90%", sm: "80%", md: "400px", lg: "500px" }}
-                  h={{ base: "400px", sm: "500px", md: "600px" }}
+                  h={{ base: "300px", sm: "500px", md: "600px" }}
                   borderRadius="md"
                   overflow="hidden"
                   boxShadow="md"

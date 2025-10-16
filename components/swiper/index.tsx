@@ -61,7 +61,7 @@ const SwiperPage = () => {
       centeredSlides={true}
       autoplay={{ delay: 5500, disableOnInteraction: false }}
       pagination={{ clickable: true }}
-      navigation={true}
+      navigation={windowWidth !== null ? windowWidth >= 768 : true}
       modules={[Autoplay, Pagination, Navigation]}
       onAutoplayTimeLeft={onAutoplayTimeLeft}
       className="mySwiper"
@@ -70,8 +70,10 @@ const SwiperPage = () => {
         <SwiperSlide key={index}>
           <Box
             position="relative"
-            height={{ base: "90vh", sm: "80vh", md: "90vh", lg: "100vh" }}
-            width="100%"
+            height={{ base: "46vh", sm: "80vh", md: "90vh", lg: "100vh" }}
+            w="100%"
+            maxW="100vw"
+            overflowX="hidden"
             backgroundImage={`url(${image.image})`}
             backgroundSize="cover"
             backgroundPosition="center"

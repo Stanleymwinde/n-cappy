@@ -14,7 +14,7 @@ import React from "react";
 
 const Team = () => {
   return (
-    <Box marginX={marginX} py={5} textAlign="center" mt={20}>
+    <Box marginX={marginX} py={5} textAlign="center">
       <Heading
         as="h1"
         fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
@@ -37,8 +37,8 @@ const Team = () => {
         {institutionalMembers.map((member, i) => (
           <Card.Root
             key={i}
-            minW={{ base: "50%", sm: "15rem", md: "14rem" }}
-            maxW={{ base: "50%", sm: "18rem", md: "20rem" }}
+            // width={{ base: "50%", sm: "15rem", md: "14rem" }}
+            width={{ base: "100%", sm: "18rem", md: "20rem" }}
             overflow="hidden"
           >
             <Image
