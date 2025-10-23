@@ -9,7 +9,7 @@ const CallToActionCommon = () => {
       bgPos="center"
       bgRepeat="no-repeat"
       width="100%"
-      height={{ base: "370px", sm: "450px", md: "550px" }}
+      height={{ base: "400px", sm: "450px", md: "550px" }} // slightly taller on small screens
       position="relative"
     >
       <Box
@@ -28,7 +28,7 @@ const CallToActionCommon = () => {
       >
         {/* Heading */}
         <Box
-          fontSize={{ base: "2xl", md: "5xl" }}
+          fontSize={{ base: "1.75rem", sm: "2.5rem", md: "5xl" }}
           fontWeight="bold"
           color="white"
           mb={{ base: 4, md: 6 }}
@@ -53,7 +53,7 @@ const CallToActionCommon = () => {
             <Image
               src="/images/App_store.svg"
               alt="App Store"
-              height="70px"
+              height={{ base: "50px", sm: "60px", md: "70px" }} // responsive height
               objectFit="contain"
             />
           </Link>
@@ -67,8 +67,8 @@ const CallToActionCommon = () => {
             <Image
               src="/images/gg.webp"
               alt="Google Play"
-              height="160px"
-              objectFit="fill"
+              height={{ base: "100px", sm: "130px", md: "160px" }} // responsive height
+              objectFit="contain"
             />
           </Link>
         </Flex>
@@ -80,7 +80,7 @@ const CallToActionCommon = () => {
             fontWeight="bold"
             bgColor="white"
             px={{ base: 4, sm: 6, md: 8 }}
-            py={{ base: 2, sm: 3, md: 4 }}
+            py={{ base: 3, sm: 3, md: 4 }}
             borderRadius="8px"
             _hover={{ bgColor: "#00b5e0", color: "white" }}
             cursor="pointer"

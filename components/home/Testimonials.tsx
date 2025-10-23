@@ -11,11 +11,11 @@ import Image from "next/image";
 
 export default function Testimonials() {
   return (
-    <Box marginX={marginX} mt={20}>
+    <Box marginX={marginX} mt={20} px={{ base: 2, md: 0 }}>
       {/* Heading */}
       <Heading
         as="h2"
-        fontSize={{ base: "2xl", md: "5xl" }}
+        fontSize={{ base: "1.75rem", md: "4rem" }}
         fontFamily="Poppins"
         fontWeight="bold"
         textAlign="center"
@@ -27,13 +27,12 @@ export default function Testimonials() {
 
       {/* Subheading */}
       <Text
-        fontSize={{ base: "md", sm: "lg", md: "xl" }}
+        fontSize={{ base: "0.9rem", sm: "1.2rem", md: "1.5rem" }}
         textAlign="center"
         mb={8}
         fontFamily="Poppins"
         maxW="700px"
         mx="auto"
-        px={{ base: 4, md: 0 }}
       >
         Hear from investors who have trusted us with their global investment journey.
       </Text>
@@ -72,19 +71,20 @@ export default function Testimonials() {
                 {/* Image */}
                 <Box
                   position="relative"
-                  w={{ base: "90%", sm: "80%", md: "400px", lg: "500px" }}
-                  h={{ base: "400px", sm: "500px", md: "600px" }}
+                  w={{ base: "100%", sm: "90%", md: "400px", lg: "500px" }}
+                  h={{ base: "300px", sm: "400px", md: "500px", lg: "600px" }} // taller on mobile
                   borderRadius="md"
                   overflow="hidden"
                   boxShadow="md"
                   flexShrink={0}
+                  mx={{ base: "auto", md: 0 }}
                 >
                   <Image
                     src={testimonial.image}
                     alt={testimonial.name}
                     fill
                     style={{
-                      objectFit: "cover",
+                      objectFit: "cover", // keeps image fully visible
                       objectPosition: "top",
                     }}
                   />
@@ -97,10 +97,11 @@ export default function Testimonials() {
                   justifyContent="center"
                   height="100%"
                   fontFamily="Poppins"
-                  maxW={{ base: "90%", md: "500px" }}
+                  maxW={{ base: "95%", md: "500px" }}
+                  mx={{ base: "auto", md: 0 }}
                 >
                   <Text
-                    fontSize={{ base: "md", sm: "lg", md: "xl" }}
+                    fontSize={{ base: "sm", sm: "md", md: "xl" }}
                     fontStyle="italic"
                     mb={2}
                     color="white"
@@ -114,7 +115,7 @@ export default function Testimonials() {
                   >
                     - {testimonial.name}
                   </Text>
-                  <Text fontSize={{ base: "sm", md: "md" }} color="white">
+                  <Text fontSize={{ base: "xs", md: "md" }} color="white">
                     {testimonial.role}
                   </Text>
                 </Stack>

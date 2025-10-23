@@ -1,85 +1,85 @@
 import { marginX } from "@/utils/constants";
-import { Box, Heading, Stack, Text } from "@chakra-ui/react";
+import { Box, Heading, Text, Flex } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
 
 const GlobalThoughtLeadership = () => {
   return (
-    <Box marginX={marginX} py={8} bg="white">
+    <Box marginX={marginX} py={{ base: 8, md: 16 }} bg="white">
       <Heading
         as="h1"
-         fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl", xl: "7xl" }}
+        fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl", xl: "7xl" }}
         fontFamily="poppins"
-        fontWeight={"bold"}
+        fontWeight="bold"
         textAlign="center"
-        my={6}
+        mb={{ base: 4, md: 8 }}
         color="gray.800"
       >
         Global Thought Leadership
       </Heading>
-      <Box textAlign="center" color="gray.600" mb={6}>
+
+      <Text
+        textAlign="center"
+        color="gray.600"
+        maxW="3xl"
+        mx="auto"
+        fontSize={{ base: "sm", md: "md" }}
+        mb={{ base: 6, md: 10 }}
+        px={{ base: 4, md: 0 }}
+      >
         Our commitment to thought leadership is reflected in our global presence
         and expertise. We provide insights and strategies that empower you to
         navigate the complexities of international markets with confidence.
-      </Box>
-      <Box
-        p={{ base: 4, md: 8 }}
-        textAlign="center"
-        boxShadow={"lg"}
-        borderRadius="md"
-        justifyContent={"center"}
-        display="flex"
-        // flexDirection={{ base: "column", md: "row" }}
+      </Text>
+
+      <Flex
+        direction={{ base: "column", md: "row" }}
+        align="center"
+        justify="center"
+        gap={{ base: 6, md: 12 }}
+        px={{ base: 4, md: 8 }}
       >
+        {/* Image section */}
         <Box
           position="relative"
-          width="40%"
-          height={{ base: "400px", md: "700px" }}
-          borderRadius={"lg"}
+          width={{ base: "100%", md: "45%" }}
+          height={{ base: "400px", md: "600px" }}
+          borderRadius="lg"
           overflow="hidden"
-          px={{ base: 4, md: 16 }}
-          mx="auto"
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
-          p={{ base: 4, md: 8 }}
+          boxShadow="lg"
         >
-          {/* Background image */}
           <Image
             src="/images/Charles.png"
             alt="Global Thought Leadership"
-            objectFit="cover"
             fill
+            style={{ objectFit: "cover" }}
           />
-          {/* Text overlay bottom-left */}
           <Box
             position="absolute"
             bottom="0"
             left="0"
-            p={4}
+            p={{ base: 3, md: 4 }}
             bg="whiteAlpha.800"
             borderTopRightRadius="md"
-            boxShadow="lg"
+            boxShadow="md"
           >
-            <Text color="black" fontSize="xl" fontWeight="bold">
+            <Text color="black" fontSize={{ base: "md", md: "xl" }} fontWeight="bold">
               Charles Miano
             </Text>
-            <Text color="black" fontSize="sm">
+            <Text color="black" fontSize={{ base: "xs", md: "sm" }}>
               Portfolio Manager
             </Text>
-          </Box>{" "}
+          </Box>
         </Box>
+
+        {/* Text section */}
         <Text
-          justifyContent={"center"}
-          display="flex"
-          alignItems="center"
-          flexDirection="column"
-          textAlign="left"
-          color="gray.600"
-          mt={6}
-          fontSize={{ base: "md", md: "lg" }}
-          maxWidth={"800px"}
-          fontWeight={"semibold"}
+          textAlign={{ base: "center", md: "left" }}
+          color="gray.700"
+          fontSize={{ base: "sm", sm: "md", md: "lg" }}
+          maxW={{ base: "full", md: "600px" }}
+          lineHeight="tall"
+          px={{ base: 2, md: 0 }}
         >
           When you invest globally with us, you invest more than capital; you
           invest your dreams, your future, your legacy. That trust is our
@@ -91,7 +91,7 @@ const GlobalThoughtLeadership = () => {
           given every opportunity to thrive. Invest beyond borders—because your
           wealth deserves a world stage.
         </Text>
-      </Box>
+      </Flex>
     </Box>
   );
 };

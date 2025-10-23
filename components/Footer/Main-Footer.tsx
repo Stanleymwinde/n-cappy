@@ -28,20 +28,21 @@ const Footer = () => {
       color="brand.white"
       textAlign={{ base: "center", md: "left" }}
       display="flex"
-      justifyContent={{ base: "center", md: "flex-start" }}
-      alignItems={{ base: "center", md: "stretch" }}
+      justifyContent="center"
+      alignItems="center"
       flexDirection="column"
     >
       <SimpleGrid
         py="2rem"
         columns={{ base: 1, md: 2, lg: 5 }}
         mx={marginX}
-        gap={8}
+        gap={{ base: 6, md: 8 }}
       >
         {/* Logo */}
         <Stack>
           <Image
-            boxSize="150px"
+            boxSize={{ base: "120px", md: "150px" }} // smaller on mobile
+            mx={{ base: "auto", md: 0 }}
             src="/images/Logo.svg"
             alt="N-Cappy Logo"
             objectFit="contain"
@@ -92,13 +93,13 @@ const Footer = () => {
                   : undefined
               }
             >
-              <Flex align="center" gap={1} lineHeight="1.5">
-                <Box as={item.icon} color="primary" boxSize={5} />
-                <Text fontSize="md">{item.label}</Text>
+              <Flex align="center" gap={{ base: 1, md: 2 }} lineHeight="1.5">
+                <Box as={item.icon} color="primary" boxSize={{ base: 4, md: 5 }} />
+                <Text fontSize={{ base: "sm", md: "md" }}>{item.label}</Text>
               </Flex>
             </Link>
           ))}
-          <Flex pt={3} align="center" gap={2}>
+          <Flex pt={3} align="center" justify={{ base: "center", md: "flex-start" }} gap={2}>
             <Socials />
           </Flex>
         </Stack>
@@ -133,19 +134,19 @@ const FooterCard = ({
       rel={isExternal ? "noopener noreferrer" : undefined}
     >
       <Flex align="center" gap={1} lineHeight="1.5">
-        <Text fontSize="md">{label}</Text>
+        <Text fontSize={{ base: "sm", md: "md" }}>{label}</Text>
       </Flex>
     </Link>
   ) : (
     <Flex align="center" gap={1} _hover={{ textDecoration: "underline" }}>
       {icon && <Box as={icon} color="primary" boxSize={5} />}
-      <Text fontSize="md">{label}</Text>
+      <Text fontSize={{ base: "sm", md: "md" }}>{label}</Text>
     </Flex>
   );
 };
 
 const CHeading = ({ children, ...rest }: CHeadingProps) => (
-  <Heading {...rest} fontSize="2xl" color="primary">
+  <Heading {...rest} fontSize={{ base: "lg", md: "2xl" }} color="primary">
     {children}
   </Heading>
 );

@@ -4,7 +4,6 @@ import { Box, Image, Heading, Text, VStack } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
 const images = [
-  
   "/images/IMG_65981.jpg",
   "/images/IMG_62051.jpg",
   "/images/IMG_62211.jpg",
@@ -38,19 +37,24 @@ const TeamsAlbum: React.FC = () => {
       <VStack gap={6} textAlign="center" mb={10} mt={20}>
         <Heading
           color="#0A2233"
-          fontSize={{ base: "3xl", md: "6xl" }}
+          fontSize={{ base: "2xl", sm: "3xl", md: "6xl" }}
           fontFamily="poppins"
           fontWeight="bold"
         >
           Our Team in Living Colour
         </Heading>
-        <Text fontSize={{ base: "md", md: "lg" }} color="gray.700">
+        <Text fontSize={{ base: "sm", sm: "md", md: "lg" }} color="gray.700">
           Moments and unspoken values that define who we are.
         </Text>
       </VStack>
 
       {/* Image carousel */}
-      <Box position="relative" width="100%" height="1000px" overflow="hidden">
+      <Box
+        position="relative"
+        width="100%"
+        height={{ base: "400px", sm: "600px", md: "1000px" }}
+        overflow="hidden"
+      >
         {images.map((src, index) => (
           <Image
             key={index}
@@ -60,7 +64,7 @@ const TeamsAlbum: React.FC = () => {
             top={0}
             left={0}
             width="100%"
-            height="950px"
+            height={{ base: "400px", sm: "600px", md: "950px" }}
             objectFit="cover"
             transition="opacity 1s ease-in-out"
             opacity={index === currentIndex ? 1 : 0}

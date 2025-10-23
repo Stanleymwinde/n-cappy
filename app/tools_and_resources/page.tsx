@@ -2,7 +2,7 @@ import { Blog } from "@/components/blogs";
 import { Calculator, Rates } from "@/components/common";
 import Hero from "@/components/common/Hero";
 import { CallToAction } from "@/components/home";
-import { MoreResources, ResourcesTabs } from "@/components/tools";
+import { MoreResources, ResourcesTabs, FactSheetsSection } from "@/components/tools";
 import React from "react";
 
 // SEO metadata for Blog / Insights page
@@ -39,6 +39,7 @@ const page = () => {
       <Blog />
       <MoreResources />
       <ResourcesTabs />
+      <FactSheetsSection />
       <CallToAction />
     </>
   );

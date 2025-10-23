@@ -9,24 +9,25 @@ import {
   HStack,
   Circle,
   useBreakpointValue,
+  Stack,
 } from "@chakra-ui/react";
 import { heritageData } from "@/utils/constants";
 
 const HeritageSection: React.FC = () => {
   const [activeYear, setActiveYear] = useState(heritageData[0]);
-  const circleSize = useBreakpointValue({ base: "20px", md: "24px" });
+  const circleSize = useBreakpointValue({ base: "16px", sm: "20px", md: "24px" });
 
   return (
     <Box
       id="section3"
       fontFamily="'Poppins', sans-serif"
-      py={6}
+      py={{ base: 6, md: 12 }}
       bg="white"
       w="100%"
       mt={20}
     >
       {/* Section Heading */}
-      <Box px={{ base: 4, md: 12 }} mb={4}>
+      <Box px={{ base: 4, md: 12 }} mb={{ base: 4, md: 8 }}>
         <Heading
           fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
           fontWeight="bold"
@@ -39,7 +40,7 @@ const HeritageSection: React.FC = () => {
       </Box>
 
       {/* Timeline Container */}
-      <Box bg="#FFFFFF" color="white" py={{ base: 12, md: 16 }} w="100%">
+      <Box bg="#FFFFFF" color="white" py={{ base: 8, md: 16 }} w="100%">
         <Box
           bg="#1e2d3d"
           p={{ base: 4, md: 8 }}
@@ -48,7 +49,7 @@ const HeritageSection: React.FC = () => {
           w="100%"
           maxW="100%"
           mx="auto"
-          minHeight="500px"
+          minHeight={{ base: "auto", md: "500px" }}
         >
           <Text
             fontWeight="semibold"
@@ -61,13 +62,13 @@ const HeritageSection: React.FC = () => {
           </Text>
 
           {/* Timeline Years */}
-          <Box position="relative" mb={10}>
+          <Box position="relative" mb={{ base: 6, md: 10 }}>
             <HStack
-              justify="space-between"
-              w="100%"
+              justify={{ base: "flex-start", md: "space-between" }}
+              gap={{ base: 6, md: 0 }}
               px={{ base: 2, md: 6 }}
-              position="relative"
-              zIndex={2}
+              overflowX={{ base: "auto", md: "visible" }}
+              css={{ "&::-webkit-scrollbar": { display: "none" } }}
             >
               {heritageData.map((item) => (
                 <VStack
@@ -75,6 +76,7 @@ const HeritageSection: React.FC = () => {
                   gap={2}
                   cursor="pointer"
                   onClick={() => setActiveYear(item)}
+                  minW={{ base: "60px", md: "auto" }}
                 >
                   <Circle
                     size={circleSize}
@@ -87,7 +89,7 @@ const HeritageSection: React.FC = () => {
                       boxShadow: "0 0 10px rgba(0, 200, 255, 0.7)",
                     }}
                   />
-                  <Text fontWeight="bold" fontSize="16px" color="white">
+                  <Text fontWeight="bold" fontSize={{ base: "14px", md: "16px" }} color="white">
                     {item.year}
                   </Text>
                 </VStack>
@@ -95,7 +97,7 @@ const HeritageSection: React.FC = () => {
             </HStack>
             <Box
               position="absolute"
-              top="12px"
+              top={{ base: "10px", md: "12px" }}
               left="0"
               right="0"
               h="2px"
@@ -104,6 +106,7 @@ const HeritageSection: React.FC = () => {
             />
           </Box>
 
+          {/* Active Year Description */}
           <Box
             display="flex"
             flexDirection="column"
@@ -111,7 +114,7 @@ const HeritageSection: React.FC = () => {
             px={{ base: 2, md: 6 }}
           >
             <Text
-              fontSize={{ base: "18px", md: "20px" }}
+              fontSize={{ base: "md", md: "20px" }}
               color="#00C8FF"
               fontWeight="bold"
               mb={3}
@@ -121,7 +124,7 @@ const HeritageSection: React.FC = () => {
             </Text>
 
             <Box
-              fontSize={{ base: "15px", md: "16px" }}
+              fontSize={{ base: "14px", md: "16px" }}
               color="whiteAlpha.900"
               lineHeight="1.8"
               whiteSpace="normal"

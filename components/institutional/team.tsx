@@ -1,15 +1,7 @@
 "use client";
 import { institutionalMembers, marginX } from "@/utils/constants";
 import { LinkedInIcon } from "@/utils/icons";
-import {
-  Box,
-  Button,
-  Card,
-  Flex,
-  Heading,
-  Image,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Button, Card, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import React from "react";
 
 const Team = () => {
@@ -37,15 +29,16 @@ const Team = () => {
         {institutionalMembers.map((member, i) => (
           <Card.Root
             key={i}
-            minW={{ base: "50%", sm: "15rem", md: "14rem" }}
-            maxW={{ base: "50%", sm: "18rem", md: "20rem" }}
+            minW={{ base: "full", sm: "45%", md: "14rem" }}
+            maxW={{ base: "full", sm: "48%", md: "20rem" }}
             overflow="hidden"
           >
             <Image
               src={member.image}
               width="100%"
-              height={{ base: "400px", sm: "460px", md: "520px" }}
+              height={{ base: "500px", sm: "460px", md: "520px" }}
               objectFit="cover"
+              objectPosition="top"
               alt={`${member.name} profile picture`}
               borderRadius="md"
               boxShadow="md"

@@ -1,6 +1,12 @@
-import { Tabs } from "@chakra-ui/react";
-import { LuFolder, LuSquareCheck, LuUser } from "react-icons/lu";
-import { Box, Text, Flex, Table } from "@chakra-ui/react";
+"use client";
+
+import {
+  Box,
+  Text,
+  Flex,
+  Tabs,
+  Table,
+} from "@chakra-ui/react";
 import { marginX } from "@/utils/constants";
 
 const data = [
@@ -16,13 +22,13 @@ const data = [
   },
   {
     feature: "Investment Horizon",
-    mmf: "Minimum 3 monTable.ColumnHeaders",
+    mmf: "Minimum 3 months",
     fixed: "Minimum 1 year",
   },
   {
     feature: "Ideal For",
     mmf: "Short-term savings & emergency funds",
-    fixed: "Medium to long-term growTable.ColumnHeader",
+    fixed: "Medium to long-term growth",
   },
   {
     feature: "Interest Accrual",
@@ -33,25 +39,38 @@ const data = [
 
 const CompareFunds = () => {
   return (
-    <Box marginX={marginX} py={8}>
-      <Text  textAlign="center" fontSize={{ base: "3xl", md: "6xl" }}fontWeight="bold">
+    <Box px={{ base: 4, md: marginX }} py={8}>
+      <Text
+        textAlign="center"
+        fontSize={{ base: "3xl", md: "5xl" }}
+        fontWeight="bold"
+        mb={3}
+      >
         Compare Our Funds
       </Text>
-      <Text fontSize="xl" mb={6} color="gray.600" textAlign="center">
-        See how our investment funds stack up against each other to find the perfect match for your financial goals.
+
+      <Text
+        fontSize={{ base: "md", md: "xl" }}
+        mb={6}
+        color="gray.600"
+        textAlign="center"
+        px={{ base: 4, md: 0 }}
+      >
+        See how our investment funds stack up against each other to find the
+        perfect match for your financial goals.
       </Text>
 
-      <Tabs.Root defaultValue="all-features" activationMode="manual" fontSize="lg">
+      <Tabs.Root defaultValue="all-features" activationMode="manual">
         <Flex
-          flexWrap="wrap"
+          wrap="wrap"
           gap={2}
           bg="gray.100"
           p={2}
           rounded="lg"
-          mb={4}
+          justify={{ base: "center", md: "flex-start" }}
           as={Tabs.List}
         >
-          <Tabs.Trigger value="all-features" color={"#fc8500"} fontSize="lg">
+          <Tabs.Trigger value="all-features" color="#fc8500">
             All Features
           </Tabs.Trigger>
           <Tabs.Trigger value="risk-returns">Risk & Returns</Tabs.Trigger>
@@ -72,7 +91,9 @@ const CompareFunds = () => {
         </Tabs.Content>
 
         <Tabs.Content value="suitability">
-          <FundComparisonTable showOnly={["Investment Horizon", "Ideal For"]} />
+          <FundComparisonTable
+            showOnly={["Investment Horizon", "Ideal For"]}
+          />
         </Tabs.Content>
       </Tabs.Root>
     </Box>
@@ -81,33 +102,40 @@ const CompareFunds = () => {
 
 export default CompareFunds;
 
-export const FundComparisonTable = ({ showOnly }: { showOnly?: string[] }) => {
+export const FundComparisonTable = ({
+  showOnly,
+}: {
+  showOnly?: string[];
+}) => {
   const filteredData = showOnly
     ? data.filter((row) => showOnly.includes(row.feature))
     : data;
 
   return (
-    <Table.Root variant="outline" size="md">
-      <Table.Header>
-        <Table.Row>
-          <Table.ColumnHeader>Feature</Table.ColumnHeader>
-          <Table.ColumnHeader color="#00caff">
-            Money Market Fund (KES)
-          </Table.ColumnHeader>
-          <Table.ColumnHeader color="#00caff">
-            Fixed Income Fund
-          </Table.ColumnHeader>
-        </Table.Row>
-      </Table.Header>
-      <Table.Body>
-        {filteredData.map((row) => (
-          <Table.Row key={row.feature}>
-            <Table.Cell fontWeight="medium">{row.feature}</Table.Cell>
-            <Table.Cell>{row.mmf}</Table.Cell>
-            <Table.Cell>{row.fixed}</Table.Cell>
+    <Box overflowX="auto" mt={6}>
+      <Table.Root variant="outline" size={{ base: "sm", md: "md" }}>
+        <Table.Header>
+          <Table.Row>
+            <Table.ColumnHeader>Feature</Table.ColumnHeader>
+            <Table.ColumnHeader color="#00caff">
+              Money Market Fund (KES)
+            </Table.ColumnHeader>
+            <Table.ColumnHeader color="#00caff">
+              Fixed Income Fund
+            </Table.ColumnHeader>
           </Table.Row>
-        ))}
-      </Table.Body>
-    </Table.Root>
+        </Table.Header>
+
+        <Table.Body>
+          {filteredData.map((row) => (
+            <Table.Row key={row.feature}>
+              <Table.Cell fontWeight="medium">{row.feature}</Table.Cell>
+              <Table.Cell>{row.mmf}</Table.Cell>
+              <Table.Cell>{row.fixed}</Table.Cell>
+            </Table.Row>
+          ))}
+        </Table.Body>
+      </Table.Root>
+    </Box>
   );
 };
