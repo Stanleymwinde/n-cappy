@@ -1171,7 +1171,7 @@ export const LifestylePlans = [
         question: "What is your estimated cost?",
         placeholder: "eg. KES 5000",
         hint: "Your best estimate of the total cost. Don’t worry if you are not sure.",
-        image: "/images/Travelfour.png",
+        image: "/images/Travelfour.jpg",
       },
       {
         id: 5,
@@ -1179,7 +1179,7 @@ export const LifestylePlans = [
         question: "Who are you going with?",
         placeholder: "eg. Alone, With my family",
         hint: "Who are you travelling to your dream destination with",
-        image: "/images/Travelfive.png",
+        image: "/Travelfive.jpg",
       },
 
        {
