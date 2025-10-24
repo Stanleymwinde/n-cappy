@@ -5,6 +5,7 @@ import { Provider } from "@/components/ui/provider";
 import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
 import NextTopLoader from "nextjs-toploader";
+import ScrollToTopButton from "@/components/common/ScrollToTopButton";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -62,6 +63,7 @@ export default function RootLayout({
           <NextTopLoader />
           <Navigation />
           <main>{children}</main>
+          <ScrollToTopButton />
           <Footer />
         </Provider>
       </body>

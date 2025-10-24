@@ -28,7 +28,6 @@ const HeroSection: React.FC = () => {
         bg="rgba(0,0,0,0.35)"
         zIndex={1}
       />
-
       {/* Hero Content */}
       <VStack
         position="relative"

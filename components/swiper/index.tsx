@@ -78,7 +78,10 @@ const SwiperPage = () => {
     time: number,
     progress: number
   ): void => {
-    progressCircle.current?.style.setProperty("--progress", String(1 - progress));
+    progressCircle.current?.style.setProperty(
+      "--progress",
+      String(1 - progress)
+    );
     if (progressContent.current) {
       progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
     }
@@ -99,7 +102,7 @@ const SwiperPage = () => {
       centeredSlides={true}
       autoplay={{ delay: 5500, disableOnInteraction: false }}
       pagination={{ clickable: true }}
-      navigation={true}
+      navigation={windowWidth !== null ? windowWidth >= 768 : true}
       modules={[Autoplay, Pagination, Navigation]}
       onAutoplayTimeLeft={onAutoplayTimeLeft}
       className="mySwiper"
