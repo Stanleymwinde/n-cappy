@@ -79,13 +79,62 @@ export const socials = [
 ];
 
 export const navItems = [
-  { label: "Individual", href: "/" },
-  { label: "Institutional", href: "/institutional" },
-  { label: "Advisory", href: "/advisory" },
-  { label: "About Us", href: "/about-us" },
-  { label: "Investor's Companion", href: "/tools_and_resources" },
-  { label: "Calculator", href: "/calculator" },
+  {
+    label: "Individual",
+    href: "/",
+    children: [
+      { label: "Overview", href: "/individual/overview" },
+      { label: "Investment Options", href: "/individual/options" },
+      { label: "Resources", href: "/individual/resources" },
+    ],
+  },
+  {
+    label: "Institutional",
+    href: "/institutional",
+    children: [
+      { label: "Our Approach", href: "/institutional/approach" },
+      { label: "Solutions", href: "/institutional/solutions" },
+      { label: "Insights", href: "/institutional/insights" },
+    ],
+  },
+  {
+    label: "Advisory",
+    href: "/advisory",
+    children: [
+      { label: "Financial Planning", href: "/advisory/planning" },
+      { label: "Wealth Management", href: "/advisory/wealth" },
+      { label: "Consulting", href: "/advisory/consulting" },
+    ],
+  },
+  {
+    label: "About Us",
+    href: "/about-us",
+    children: [
+      { label: "Our Story", href: "/about-us/our-story" },
+      { label: "Team", href: "/about-us/team" },
+      { label: "Careers", href: "/about-us/careers" },
+    ],
+  },
+  {
+    label: "Investor's Companion",
+    href: "/tools_and_resources",
+    children: [
+      { label: "Guides", href: "/tools_and_resources/guides" },
+      { label: "Reports", href: "/tools_and_resources/reports" },
+      { label: "Tutorials", href: "/tools_and_resources/tutorials" },
+    ],
+  },
+  {
+    label: "Calculator",
+    href: "/calculator",
+    children: [
+      { label: "Retirement Calculator", href: "/calculator/retirement" },
+      { label: "Investment Calculator", href: "/calculator/investment" },
+      { label: "Loan Calculator", href: "/calculator/loan" },
+    ],
+  },
 ];
+
 
 export const cardData = [
   {

@@ -11,28 +11,36 @@ import TeamMemberCard from "@/components/About/TeamMemberCard";
 
 const TeamSection: React.FC = () => {
   return (
-    <Box id="section2" bg="gray.50" pt={10} pb={16}>
+    <Box id="section2" bg="gray.50" pt={{ base: 6, md: 10 }} pb={{ base: 10, md: 16 }}>
       <Container maxW="8xl" textAlign="center">
         {/* Section Heading */}
-        <Heading fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }} fontWeight="bold" mb={4} fontFamily="poppins">
+        <Heading
+          fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
+          fontWeight="bold"
+          mb={{ base: 2, md: 4 }}
+          fontFamily="poppins"
+        >
           Real People. Big Vision. Deep Experiences
         </Heading>
         <Text
-          fontSize={{ base: "xl", md: "5xl" }}
+          fontSize={{ base: "lg", md: "5xl" }}
           color="#00caff"
-          mb={12}
-          fontWeight="Regular"
+          mb={{ base: 8, md: 12 }}
+          fontWeight="medium"
           lineHeight="tall"
         >
           Board & Management
         </Text>
 
         {/* Board Section */}
-        <Box mb={16}>
-          <Heading fontSize="4xl" mb={8} fontWeight="Medium">
+        <Box mb={{ base: 8, md: 16 }}>
+          <Heading fontSize={{ base: "2xl", md: "4xl" }} mb={{ base: 4, md: 8 }} fontWeight="medium">
             Our Leadership (Board)
           </Heading>
-          <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 4 }} gap={10}>
+          <SimpleGrid
+            columns={{ base: 1, sm: 2, md: 3, lg: 4 }}
+            gap={{ base: 6, md: 10 }}
+          >
             <TeamMemberCard
               name="Robert Bunyi"
               title="Chairman & Non-Executive Director"
@@ -86,10 +94,13 @@ const TeamSection: React.FC = () => {
 
         {/* Management Section */}
         <Box>
-          <Heading fontSize="4xl" mb={8} fontWeight="Medium">
+          <Heading fontSize={{ base: "2xl", md: "4xl" }} mb={{ base: 4, md: 8 }} fontWeight="medium">
             Our Leadership (Management)
           </Heading>
-          <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 4 }} gap={10}>
+          <SimpleGrid
+            columns={{ base: 1, sm: 2, md: 3, lg: 4 }}
+            gap={{ base: 6, md: 10 }}
+          >
             <TeamMemberCard
               name="Pius Muchiri"
               title="Managing Director & CEO"

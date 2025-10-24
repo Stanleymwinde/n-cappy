@@ -11,7 +11,7 @@ export default function WhoWeServe() {
         <Heading
           as="h1"
           fontSize={{ base: "3xl", md: "6xl" }}
-          fontWeight={"bold"}
+          fontWeight="bold"
           fontFamily="poppins"
           my={5}
           color="gray.800"
@@ -39,30 +39,34 @@ export default function WhoWeServe() {
             key={label}
             borderWidth="1px"
             borderRadius="md"
-            p={6}
+            p={{ base: 6, md: 8 }}
             textAlign="center"
-            borderColor={"gray.200"}
-            boxShadow={"md"}
+            borderColor="gray.200"
+            boxShadow="md"
             _hover={{
-              boxShadow: "md",
+              boxShadow: "lg",
               borderColor: "blue.300",
               transition: "all 0.2s",
             }}
           >
+            {/* Icon Circle */}
             <Box
               bg="cyan.500"
-              w={16}
-              h={16}
+              w={{ base: 24, md: 16 }}  // width larger on mobile
+              h={{ base: 24, md: 16 }}  // height larger on mobile
               rounded="full"
               display="flex"
               alignItems="center"
               justifyContent="center"
               mx="auto"
-              mb={4}
+              mb={{ base: 6, md: 4 }}  // more spacing below on mobile
             >
               {icon}
             </Box>
-            <Text fontWeight="semibold">{label}</Text>
+
+            <Text fontWeight="semibold" fontSize={{ base: "md", md: "lg" }}>
+              {label}
+            </Text>
           </Box>
         ))}
       </Grid>

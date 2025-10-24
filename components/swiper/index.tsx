@@ -3,14 +3,13 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-
-import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Box, Button } from "@chakra-ui/react";
+import Image from "next/image";
 import Link from "next/link";
 
 interface AutoplayTimeLeftParams {
@@ -18,6 +17,48 @@ interface AutoplayTimeLeftParams {
   time: number;
   progress: number;
 }
+
+const slider_images = [
+  {
+    image: "/images/travel1.jpeg",
+    title: "Invest in Experiences. Invest in Dubai.",
+    text:
+      "Step into a city where luxury, thrill, and wonder collide. Every moment you invest here becomes a memory that never fades.",
+    link: "/travel",
+  },
+  {
+    image: "/images/slide-4.jpg",
+    title: "Make Money While Doing What You Love",
+    text: "Settle down. Now it’s your money’s turn to clock in.",
+    link: "/lifestyle-goal",
+  },
+  {
+    image: "/images/smiling.jpeg",
+    title: "Invest Where Performance Leads. Unlock Up to 13% p.a.",
+    text:
+      "The Nabo Money Market Fund delivers trusted, market-leading growth. Invest smart, stay liquid, and watch your wealth work harder for you.",
+    link: "/individual/MMF&FIF",
+  },
+  {
+    image: "/images/globall.jpg",
+    title: "Invest Beyond Borders. Build Wealth Without Limits.",
+    text:
+      "Unlock global markets, diversify your portfolio, and invest in opportunities that grow your wealth today—and protect your legacy tomorrow.",
+    link: "/global-investing",
+  },
+  {
+    image: "/images/fs.jpeg",
+    title: "Make Money While Doing What You Love",
+    text: "Say yes to life’s big and beautiful moments",
+    link: "/education",
+  },
+  {
+    image: "/images/oldcouple.jpeg",
+    title: "Make Money While Doing What You Love",
+    text: "Make your mark. Then make it last",
+    link: "/retire",
+  },
+];
 
 const SwiperPage = () => {
   const progressCircle = useRef<SVGSVGElement | null>(null);
@@ -57,7 +98,7 @@ const SwiperPage = () => {
 
   return (
     <Swiper
-      spaceBetween={30}
+      spaceBetween={windowWidth && windowWidth < 480 ? 10 : 30}
       centeredSlides={true}
       autoplay={{ delay: 5500, disableOnInteraction: false }}
       pagination={{ clickable: true }}
@@ -70,37 +111,47 @@ const SwiperPage = () => {
         <SwiperSlide key={index}>
           <Box
             position="relative"
-            height={{ base: "46vh", sm: "80vh", md: "90vh", lg: "100vh" }}
-            w="100%"
-            maxW="100vw"
-            overflowX="hidden"
-            backgroundImage={`url(${image.image})`}
-            backgroundSize="cover"
-            backgroundPosition="center"
+            width="100%"
+            height={{ base: "40vh", sm: "70vh", md: "90vh", lg: "100vh" }}
             display="flex"
-            alignItems={{ base: "flex-start", md: "center" }}
-            justifyContent="flex-start"
+            alignItems={{ base: "center", md: "center" }}
+            justifyContent={{ base: "center", md: "flex-start" }}
             px={{ base: 4, sm: 8, md: 20, lg: 32 }}
-            py={{ base: 20, sm: 24, md: 0 }}
+            py={{ base: 8, sm: 16, md: 0 }}
           >
-            {/* Black overlay */}
+            {/* Image */}
             <Box
               position="absolute"
               top={0}
               left={0}
               width="100%"
               height="100%"
-              bg="rgba(0, 0, 0, 0.45)"
               zIndex={0}
-            />
+            >
+              <Image
+                src={image.image}
+                alt={image.title}
+                fill
+                style={{ objectFit: "cover" }}
+                priority
+              />
+              <Box
+                position="absolute"
+                top={0}
+                left={0}
+                width="100%"
+                height="100%"
+                bg="rgba(0,0,0,0.45)"
+              />
+            </Box>
 
             {/* Slide content */}
             <Box
               color="white"
               position="relative"
               zIndex={1}
-              maxW={{ base: "95%", sm: "80%", md: "55%", lg: "40%" }}
-              textAlign="left"
+              maxW={{ base: "90%", sm: "80%", md: "55%", lg: "40%" }}
+              textAlign={{ base: "center", md: "left" }}
             >
               <Box
                 as="p"
@@ -129,10 +180,11 @@ const SwiperPage = () => {
               <Link href={image.link} passHref>
                 <Button
                   mt={6}
+                  w={{ base: "auto", sm: "auto" }}
+                  px={{ base: 6, sm: 8, md: 10 }}
                   colorScheme="blackAlpha"
                   bg="#0A2233"
                   color="white"
-                  px={{ base: 6, sm: 8, md: 10 }}
                   py={{ base: 3, sm: 4, md: 6 }}
                   rounded="full"
                   fontWeight="bold"
@@ -162,42 +214,3 @@ const SwiperPage = () => {
 };
 
 export default SwiperPage;
-
-const slider_images = [
-  {
-    image: "/images/travel1.jpeg",
-    title: "Invest in Experiences. Invest in Dubai.",
-    text: "Step into a city where luxury, thrill, and wonder collide. Every moment you invest here becomes a memory that never fades.",
-    link: "/travel",
-  },
-  {
-    image: "/images/slide-4.jpg",
-    title: "Make Money While Doing What You Love",
-    text: "Settle down. Now it’s your money’s turn to clock in.",
-    link: "/lifestyle-goal",
-  },
-  {
-    image: "/images/smiling.jpeg",
-    title: "Invest Where Performance Leads. Unlock Up to 13% p.a.",
-    text: "The Nabo Money Market Fund delivers trusted, market-leading growth. Invest smart, stay liquid, and watch your wealth work harder for you.",
-    link: "/individual/MMF&FIF",
-  },
-  {
-    image: "/images/globall.jpg",
-    title: "Invest Beyond Borders. Build Wealth Without Limits.",
-    text: "Unlock global markets, diversify your portfolio, and invest in opportunities that grow your wealth today—and protect your legacy tomorrow.",
-    link: "/global-investing",
-  },
-  {
-    image: "/images/fs.jpeg",
-    title: "Make Money While Doing What You Love",
-    text: "Say yes to life’s big and beautiful moments",
-    link: "/education",
-  },
-  {
-    image: "/images/oldcouple.jpeg",
-    title: "Make Money While Doing What You Love",
-    text: "Make your mark. Then make it last",
-    link: "/retire",
-  },
-];

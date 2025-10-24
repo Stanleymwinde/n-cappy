@@ -28,97 +28,72 @@ const Hero = ({
   return (
     <Box
       position="relative"
-      height={{ base: "50vh", sm: "105vh", md: "120vh" }}
-      maxHeight="1000px"
       width="100%"
+      height={{ base: "45vh", sm: "65vh", md: "90vh", lg: "100vh" }} // reduced height for mobile
+      minHeight={{ base: "350px", md: "600px" }} // changed mobile min height
       overflow="hidden"
-      pt={{ base: 2, md: 4 }}
     >
       {/* Background Image */}
-      <Image
-        src={imageUrl || "/images/gtr-2.jpg"}
-        alt="Hero"
-        quality={90}
-        fill
-        style={{
-          objectFit: "fill",
-          position: "absolute",
-          top: 0,
-          left: 0,
-          zIndex: 0,
-        }}
-        priority
-      />
-
-      {/* Black Overlay */}
-      <Box
-        position="absolute"
-        top={0}
-        left={0}
-        right={0}
-        bottom={0}
-        bg="rgba(0, 0, 0, 0.35)"
-        zIndex={1}
-      />
+      <Box position="absolute" top={0} left={0} width="100%" height="100%" zIndex={0}>
+        <Image
+          src={imageUrl || "/images/gtr-2.jpg"}
+          alt="Hero"
+          fill
+          style={{ objectFit: "cover", objectPosition: "center top" }}
+          priority
+        />
+        <Box
+          position="absolute"
+          top={0}
+          left={0}
+          width="100%"
+          height="100%"
+          bg="rgba(0,0,0,0.35)"
+        />
+      </Box>
 
       {/* Hero Content */}
       <Box
-        color="white"
-        p={{ base: 4, sm: 6, md: 8 }}
         position="relative"
-        zIndex={2}
-        width={{ base: "100%", sm: "90%", md: "50%" }}
-        mx={{ base: "auto", md: 16 }}
-        fontFamily="Poppins"
+        zIndex={1}
+        color="white"
+        height="100%"
         display="flex"
         flexDirection="column"
         justifyContent="center"
-        height="100%"
-        textAlign={{ base: "center", md: "left" }}
+        px={{ base: 6, sm: 8, md: 20, lg: 32 }}
+        textAlign={{ base: "left", md: "left" }} // Changed: left-align on mobile
+        maxW={{ base: "90%", sm: "80%", md: "65%", lg: "50%" }}
+        mx={{ base: 0, md: 0 }} // Changed: remove horizontal centering on mobile
       >
         {/* Title */}
         <Text
           fontSize={{ base: "xl", sm: "2xl", md: "4xl", lg: "5xl" }}
           fontWeight="bold"
-          lineHeight="short"
+          lineHeight={{ base: "shorter", md: "short" }} // Adjusted for mobile spacing
         >
           {title || "Begin The Journey. We'll Walk With You."}
         </Text>
 
         {/* Subtitle */}
         <Text
-          fontSize={{ base: "sm", sm: "md", md: "xl" }}
-          mt={4}
-          px={{ base: 2, sm: 0 }}
+          fontSize={{ base: "sm", sm: "md", md: "lg", lg: "xl" }}
+          mt={3} // Slightly reduced margin for mobile
+          lineHeight={{ base: "tall", md: "short" }}
         >
           {subtitle || "That's the Nabo Promise. Your Growth, Our Focus."}
         </Text>
 
         {/* Buttons */}
         <Flex
+          mt={4} // reduced margin top for mobile
           gap={4}
-          mt={6}
           flexWrap="wrap"
-          justifyContent={{ base: "center", md: "flex-start" }}
+          justifyContent={{ base: "flex-start", md: "flex-start" }} // Changed: left-align buttons
         >
           {/* Primary Button */}
-          {scrollTarget ? (
-            <a href={scrollTarget}>
-              <Button
-                bg="cyan.900"
-                color="white"
-                px={{ base: 4, sm: 6, md: 8 }}
-                py={{ base: 3, md: 5 }}
-                rounded="full"
-                fontWeight="medium"
-                fontSize={{ base: "sm", sm: "md", md: "lg" }}
-                _hover={{ bg: "#00CAFF" }}
-              >
-                {button || "Get Started"}
-              </Button>
-            </a>
-          ) : buttonLink ? (
-            <a href={buttonLink} target="_blank" rel="noopener noreferrer">
+          {scrollTarget || buttonLink ? (
+            <a href={scrollTarget || buttonLink} target="_blank" rel="noopener noreferrer">
               <Button
                 bg="cyan.900"
                 color="white"
@@ -148,11 +123,11 @@ const Hero = ({
           )}
 
           {/* Secondary Button */}
-          {button1 &&
-            (button1Link?.startsWith("http") ? (
+          {button1 && (
+            button1Link?.startsWith("http") ? (
               <a href={button1Link} target="_blank" rel="noopener noreferrer">
                 <Button
-                  flex="1"
+                  flex={{ base: "100%", md: "auto" }}
                   bg="#0A2233"
                   color="white"
                   px={{ base: 4, sm: 6, md: 8 }}
@@ -168,7 +143,7 @@ const Hero = ({
             ) : (
               <Link href={button1Link || "/individual"} passHref>
                 <Button
-                  flex="1"
+                  flex={{ base: "100%", md: "auto" }}
                   bg="#0A2233"
                   color="white"
                   px={{ base: 4, sm: 6, md: 8 }}
@@ -181,7 +156,8 @@ const Hero = ({
                   {button1}
                 </Button>
               </Link>
-            ))}
+            )
+          )}
         </Flex>
       </Box>
     </Box>

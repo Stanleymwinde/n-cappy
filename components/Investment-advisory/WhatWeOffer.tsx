@@ -11,7 +11,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import { MdPlayCircleFilled, MdFiberManualRecord } from "react-icons/md";
+import { MdFiberManualRecord } from "react-icons/md";
 import React from "react";
 
 const InvestmentSolutions = () => {
@@ -59,7 +59,7 @@ const InvestmentSolutions = () => {
                   >
                     {item.title}
                   </Text>
-                  <Text fontSize={{ base: "sd", md: "md" }} color="gray.600">
+                  <Text fontSize={{ base: "sm", md: "md" }} color="gray.600">
                     {item.text}
                   </Text>
                 </Stack>
@@ -136,31 +136,27 @@ const InvestmentSolutions = () => {
                           position="relative"
                           borderRadius="md"
                           overflow="hidden"
-                          width="80%"
-                          height={{ base: "100px", md: "450px" }}
+                          width={{ base: "100%", md: "80%" }}
+                          height={{ base: "350px", md: "450px" }} // increased for mobile
+                          mx={{ base: "auto", md: "0" }}
                         >
                           <Image
                             src={item.media.image}
                             alt={item.media.alt}
                             fill
+                            style={{ objectFit: "cover" }}
                           />
-                          <Box
-                            position="absolute"
-                            top="50%"
-                            left="50%"
-                            transform="translate(-50%, -50%)"
-                          ></Box>
                         </Box>
 
-                        {/* ✅ Quote under the image */}
                         {item.quote && (
                           <Text
                             mt={4}
-                            fontSize={{ base: "md", md: "lg" }}
+                            fontSize={{ base: "sm", md: "lg" }}
                             color="gray.600"
                             fontStyle="italic"
                             textAlign="center"
-                            maxW={'300px'}
+                            maxW={{ base: "90%", md: "300px" }}
+                            mx="auto"
                           >
                             “{item.quote}”
                           </Text>

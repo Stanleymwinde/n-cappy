@@ -14,12 +14,12 @@ import React from "react";
 const Investing = () => {
   return (
     <Box marginX={marginX} py={{ base: 8, md: 12 }}>
-      {/* First sentence */}
+      {/* First sentence - Heading */}
       <Heading
         textAlign="center"
-        fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
-        mb={{ base: 6, md: 8 }}
-        mt={{ base: 4, md: 8 }}
+        fontSize={{ base: "1.75rem", sm: "2.5rem", md: "4rem", lg: "5rem" }}
+        mb={{ base: 4, md: 8 }}
+        mt={{ base: 2, md: 8 }}
         fontFamily={"Poppins"}
         fontWeight={"bold"}
         lineHeight="short"
@@ -33,9 +33,9 @@ const Investing = () => {
       {/* Second sentence */}
       <Box
         textAlign="center"
-        fontSize={{ base: "lg", sm: "xl", md: "3xl", lg: "5xl" }}
-        mt={{ base: 4, md: 8 }}
-        mb={{ base: 6, md: 8 }}
+        fontSize={{ base: "1rem", sm: "1.5rem", md: "2.5rem", lg: "3rem" }}
+        mt={{ base: 2, md: 6 }}
+        mb={{ base: 4, md: 8 }}
         fontFamily={"Poppins"}
         lineHeight="short"
         px={{ base: 4, md: 0 }}
@@ -43,6 +43,7 @@ const Investing = () => {
         What do you want your money to do for you?
       </Box>
 
+      {/* Intro text */}
       <Text
         fontSize={{ base: "sm", sm: "md", md: "xl", lg: "3xl" }}
         color="gray.600"
@@ -52,6 +53,7 @@ const Investing = () => {
         I want to ...
       </Text>
 
+      {/* Cards */}
       <SimpleGrid
         columns={{ base: 1, sm: 2, md: 2, lg: 4 }}
         gap={{ base: 4, md: 6 }}
@@ -67,14 +69,14 @@ const Investing = () => {
             _hover={{ boxShadow: "lg", transform: "translateY(-4px)" }}
             display="flex"
             flexDirection="column"
-            minHeight={{ base: "300px", md: "350px" }}
+            minHeight={{ base: "350px", md: "400px" }}
           >
             <Image
               src={card.image}
               alt={card.title}
               objectFit="cover"
               width="100%"
-              height={{ base: "150px", md: "200px" }}
+              height={{ base: "200px", sm: "220px", md: "250px" }}
               flexShrink={0}
             />
             <Box
@@ -83,7 +85,7 @@ const Investing = () => {
               flexDirection="column"
               flexGrow={1}
             >
-              <Heading fontSize={{ base: "md", md: "lg" }} mb={2}>
+              <Heading fontSize={{ base: "md", md: "lg" }} mb={2} textAlign={{ base: "center", md: "left" }}>
                 {card.title}
               </Heading>
               <Text
@@ -91,6 +93,7 @@ const Investing = () => {
                 color="gray.600"
                 mb={4}
                 flexGrow={1}
+                textAlign={{ base: "center", md: "left" }}
               >
                 {card.description}
               </Text>
@@ -101,10 +104,10 @@ const Investing = () => {
                   colorScheme="blackAlpha"
                   borderRadius="full"
                   fontWeight="bold"
-                  w="100%"
+                  w={{ base: "100%", md: "auto" }}
                   mt="auto"
                   fontSize={{ base: "sm", md: "md" }}
-                  py={{ base: 2, md: 3 }}
+                  py={{ base: 3, md: 3 }}
                 >
                   Explore More
                 </Button>
