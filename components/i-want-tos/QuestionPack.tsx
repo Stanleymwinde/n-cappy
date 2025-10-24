@@ -15,8 +15,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useColorModeValue } from "../ui/color-mode";
-import Results from "@/components/i-want-tos/Results"; 
-
+import Results from "@/components/i-want-tos/Results";
 
 type GoalType = "Travel" | "Retire" | "Lifestyle" | "Education";
 
@@ -42,7 +41,6 @@ const QuestionPack = () => {
       ? activePlan.questions[questionIndex]
       : null;
 
-
   const buildSummary = () => {
     return {
       destination: answers["destination"] || "",
@@ -57,22 +55,27 @@ const QuestionPack = () => {
     };
   };
 
- 
   const getGoalType = (title: string): GoalType => {
     if (title.includes("Travel") || title.includes("Vacation")) return "Travel";
     if (title.includes("Retire") || title.includes("Home")) return "Retire";
-    if (title.includes("Education") || title.includes("Study")) return "Education";
+    if (title.includes("Education") || title.includes("Study"))
+      return "Education";
     return "Lifestyle";
   };
 
   return (
     <Box id="questions1" marginX={marginX} py={10} bg="white">
       <VStack gap={3} textAlign="center" mb={8}>
-        <Heading fontSize={{ base: "3xl", md: "4xl" }}   fontWeight={"bold"}    color="blue.900">
+        <Heading
+          fontSize={{ base: "3xl", md: "4xl" }}
+          fontWeight={"bold"}
+          color="blue.900"
+        >
           Invest in the Life You Envision
         </Heading>
         <Text maxW="2xl" fontSize="md" color="gray.600">
-          Plan every part of your lifestyle with intention. Explore your options below or jump right into your personalized plan.
+          Plan every part of your lifestyle with intention. Explore your options
+          below or jump right into your personalized plan.
         </Text>
       </VStack>
 
@@ -137,108 +140,123 @@ const QuestionPack = () => {
       </Grid>
 
       <VStack gap={6} p={6}>
-        {showResults ? (
-          activePlan && (
-            <Results
-              goalType={getGoalType(activePlan.title)}
-              summary={buildSummary()}
-            />
-          )
-        ) : (
-          activePlan &&
-          activeQuestion && (
-            <Box
-              width="100%"
-              bg="#00CAFF"
-              p={6}
-              rounded="lg"
-              mt={8}
-              position="relative"
-              minH="500px"
-            >
-              <Text mb={2} fontSize="sm">
-                Question {questionIndex + 1} of {activePlan.questions.length}
-              </Text>
-
-              <HStack
-                align="stretch"
-                gap={6}
-                flexDir={{ base: "column", md: "row" }}
-                minH="350px"
+        {showResults
+          ? activePlan && (
+              <Results
+                goalType={getGoalType(activePlan.title)}
+                summary={buildSummary()}
+              />
+            )
+          : activePlan &&
+            activeQuestion && (
+              <Box
+                width="100%"
+                bg="#00CAFF"
+                p={6}
+                rounded="lg"
+                mt={8}
+                position="relative"
+                minH="500px"
               >
-                <Box flex={1}>
-                  <Image
-                    src={activeQuestion.image}
-                    alt="question visual"
-                    borderRadius="lg"
-                    objectFit="cover"
-                    width="100%"
-                    height="500px"
-                  />
-                </Box>
+                <Text mb={2} fontSize="sm">
+                  Question {questionIndex + 1} of {activePlan.questions.length}
+                </Text>
 
-                <VStack align="start" gap={4} flex={2} h="100%">
-                  <Box>
-                    <Text fontSize="xl" fontWeight="bold">
-                      {activeQuestion.question}
-                    </Text>
-                    <Input
-                      placeholder={activeQuestion.placeholder}
-                      mt={3}
-                      value={answers[activeQuestion.key] || ""}
-                      onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                        setAnswers({
-                          ...answers,
-                          [activeQuestion.key]: e.target.value,
-                        })
-                      }
+                <HStack
+                  align="stretch"
+                  gap={6}
+                  flexDir={{ base: "column", md: "row" }}
+                  minH="350px"
+                >
+                  <Box flex={1}>
+                    <Image
+                      src={activeQuestion.image}
+                      alt="question visual"
+                      borderRadius="lg"
+                      objectFit="cover"
+                      width="100%"
+                      height="500px"
                     />
-                    <Text fontSize="sm" color="gray.600" mt={2}>
-                      {activeQuestion.hint}
-                    </Text>
                   </Box>
 
-                  <HStack w="100%" justify="space-between" mt="auto">
-                    {questionIndex > 0 ? (
+                  <VStack align="start" gap={4} flex={2} h="100%">
+                    <Box>
+                      <Text fontSize="xl" fontWeight="bold">
+                        {activeQuestion.question}
+                      </Text>
+                      <Input
+                        placeholder={activeQuestion.placeholder}
+                        mt={3}
+                        value={answers[activeQuestion.key] || ""}
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                          setAnswers({
+                            ...answers,
+                            [activeQuestion.key]: e.target.value,
+                          })
+                        }
+                      />
+                      <Text fontSize="sm" color="gray.600" mt={2}>
+                        {activeQuestion.hint}
+                      </Text>
+                    </Box>
+
+                    <HStack w="100%" justify="space-between" mt="auto">
+                      {questionIndex > 0 ? (
+                        <Button
+                          onClick={() => setQuestionIndex(questionIndex - 1)}
+                          bg="#0A2233"
+                          color="white"
+                          rounded="full"
+                          fontWeight="bold"
+                        >
+                          ← Previous
+                        </Button>
+                      ) : (
+                        <Box />
+                      )}
+
                       <Button
-                        onClick={() => setQuestionIndex(questionIndex - 1)}
+                        onClick={() => {
+                          const currentKey = activeQuestion?.key;
+                          if (currentKey && !answers[currentKey]) {
+                            setAnswers((prev) => ({
+                              ...prev,
+                              [currentKey]: "",
+                            }));
+                          }
+
+                          const next = questionIndex + 1;
+
+                          if (
+                            activePlan &&
+                            next < activePlan.questions.length
+                          ) {
+                            setQuestionIndex(next);
+                          } else {
+                            setTimeout(() => {
+                              setShowResults(true);
+                              console.log(
+                                "Summary passed to Results:",
+                                buildSummary()
+                              );
+                            }, 100);
+                          }
+                        }}
                         bg="#0A2233"
                         color="white"
                         rounded="full"
                         fontWeight="bold"
                       >
-                        ← Previous
+                        {activePlan &&
+                        questionIndex < activePlan.questions.length - 1
+                          ? "Next ➔"
+                          : "Finish"}
                       </Button>
-                    ) : (
-                      <Box />
-                    )}
-
-                    <Button
-                      onClick={() => {
-                        const next = questionIndex + 1;
-                        if (activePlan && next < activePlan.questions.length) {
-                          setQuestionIndex(next);
-                        } else {
-                          setShowResults(true);
-                          console.log("Summary passed to Results:", buildSummary()); 
-                        }
-                      }}
-                      bg="#0A2233"
-                      color="white"
-                      rounded="full"
-                      fontWeight="bold"
-                    >
-                      {activePlan &&
-                      questionIndex < activePlan.questions.length - 1
-                        ? "Next ➔"
-                        : "Finish"}
-                    </Button>
-                  </HStack>
-                </VStack>
-              </HStack>
-            </Box>
-          )
-        )}
+                    </HStack>
+                  </VStack>
+                </HStack>
+              </Box>
+            )}
       </VStack>
     </Box>
   );
