@@ -34,7 +34,8 @@ export default function Testimonials() {
         maxW="700px"
         mx="auto"
       >
-        Hear from investors who have trusted us with their global investment journey.
+        Hear from investors who have trusted us with their global investment
+        journey.
       </Text>
 
       {/* Carousel */}

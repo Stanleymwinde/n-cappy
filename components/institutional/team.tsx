@@ -6,7 +6,7 @@ import React from "react";
 
 const Team = () => {
   return (
-    <Box marginX={marginX} py={5} textAlign="center" mt={20}>
+    <Box marginX={marginX} py={5} textAlign="center">
       <Heading
         as="h1"
         fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
