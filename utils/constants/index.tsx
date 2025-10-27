@@ -697,7 +697,7 @@ export const institutionalMembers = [
     linkedin: "https://www.linkedin.com/in/fredrick-okudo-960567135/",
   },
   {
-    image: "/images/jackie1.jpg",
+    image: "/images/Jackie1.jpg",
     name: "Jacklyne Waithira",
     title: "Asset Management Analyst",
     linkedin: "https://www.linkedin.com/in/teddey-muthoka/",
