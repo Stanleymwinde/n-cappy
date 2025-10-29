@@ -23,7 +23,7 @@ const securitySlides = [
   {
     image: "/grad1.jpg",
     title: "For Life’s Big Moments and the Unexpected",
-    text: "True peace of mind is being financially ready.",
+    text: " Be ready for anything. Our Security Portfolio gives you true financial peace of mind.",
     primaryButton: "Unlock My Plan",
     primaryLink: "/calculator",
     secondaryButton: "Learn More",

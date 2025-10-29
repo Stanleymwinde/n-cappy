@@ -21,7 +21,7 @@ const retireSlides = [
   {
     image: "/images/oldyy1.jpg",
     title: "Build Something that Outlives You",
-    text: "Make your mark. Then make it last",
+    text: "Our Legacy Portfolio helps you make your mark and make it last.",
     primaryButton: "Unlock My Plan",
     primaryLink: "/calculator",
     secondaryButton: "Learn More",

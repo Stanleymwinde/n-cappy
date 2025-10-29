@@ -5,14 +5,14 @@ import {
   Button,
   Flex,
   HStack,
-  Link,
+  Link as ChakraLink,
   Menu,
   Portal,
-  Text,
 } from "@chakra-ui/react";
 import Image from "next/image";
+import NextLink from "next/link";
 import MobileNav from "./mobile-nav";
-import { LuChevronDown, LuChevronRight } from "react-icons/lu";
+import { LuChevronDown } from "react-icons/lu";
 import { useState } from "react";
 
 const MainNav = () => {
@@ -29,7 +29,7 @@ const MainNav = () => {
       wrap="wrap"
     >
       {/* Logo */}
-      <Link href="/">
+      <ChakraLink as={NextLink} href="/">
         <Image
           priority
           src="/images/logo.png"
@@ -38,12 +38,12 @@ const MainNav = () => {
           height={65}
           style={{ cursor: "pointer" }}
         />
-      </Link>
+      </ChakraLink>
 
       {/* Desktop Nav Links */}
       <HStack
         as="nav"
-        gap={6}
+        gap={3}
         align="center"
         display={{ base: "none", md: "flex" }}
       >
@@ -57,17 +57,21 @@ const MainNav = () => {
               open={isOpen}
               onOpenChange={(open) => setOpenIndex(open ? i : null)}
             >
-              <div
+              <Box
+                position="relative"
                 onMouseEnter={() => hasChildren && setOpenIndex(i)}
                 onMouseLeave={() => hasChildren && setOpenIndex(null)}
               >
                 <Menu.Trigger asChild>
-                  <Link href={item.href} cursor={"pointer"}>
+                  <ChakraLink
+                    as={NextLink}
+                    href={item.href || "#"}
+                    _hover={{ textDecoration: "none" }}
+                  >
                     <Button
                       variant="ghost"
                       fontWeight="semibold"
                       fontSize={{ base: "sm", md: "md" }}
-                      // _hover={{ color: "primary" }}
                       transition="color 0.15s"
                     >
                       {item.label}
@@ -77,37 +81,61 @@ const MainNav = () => {
                         </Box>
                       )}
                     </Button>
-                  </Link>
+                  </ChakraLink>
                 </Menu.Trigger>
 
                 {hasChildren && (
                   <Portal>
                     <Menu.Positioner>
-                      <Menu.Content rounded="md" py={2} minW="200px">
+                      <Menu.Content
+                        rounded="md"
+                        py={2}
+                        minW="200px"
+                        bg="white"
+                        shadow="md"
+                      >
                         {item.children.map((child, j) => (
                           <Menu.Item
                             asChild
                             key={j}
-                            value="Bold"
-                            cursor={"pointer"}
+                            value={child.label}
+                            cursor="pointer"
+                            _hover={{ bg: "gray.100" }}
                           >
-                            <Link
+                            {/* ✅ Updated link below */}
+                            <ChakraLink
+                              as={NextLink}
                               href={child.href}
                               px={4}
                               py={2}
                               display="block"
                               fontSize="sm"
                               fontWeight="medium"
+                              onClick={(e) => {
+                                if (typeof window !== "undefined") {
+                                  const currentPath = window.location.pathname;
+                                  const [targetPath, hash] = (child.href || "").split("#");
+
+                                  // If we're already on the same page, just scroll smoothly
+                                  if (currentPath === targetPath && hash) {
+                                    e.preventDefault();
+                                    const el = document.getElementById(hash);
+                                    if (el) {
+                                      el.scrollIntoView({ behavior: "smooth", block: "start" });
+                                    }
+                                  }
+                                }
+                              }}
                             >
                               {child.label}
-                            </Link>
+                            </ChakraLink>
                           </Menu.Item>
                         ))}
                       </Menu.Content>
                     </Menu.Positioner>
                   </Portal>
                 )}
-              </div>
+              </Box>
             </Menu.Root>
           );
         })}
@@ -115,7 +143,11 @@ const MainNav = () => {
 
       {/* Desktop Buttons */}
       <HStack gap={3} display={{ base: "none", md: "flex" }}>
-        <Link href="https://invest.nabocapital.com" target="_blank">
+        <ChakraLink
+          as={NextLink}
+          href="https://invest.nabocapital.com"
+          target="_blank"
+        >
           <Button
             variant="outline"
             borderColor="brand"
@@ -125,8 +157,12 @@ const MainNav = () => {
           >
             Log In
           </Button>
-        </Link>
-        <Link href="https://invest.nabocapital.com" target="_blank">
+        </ChakraLink>
+        <ChakraLink
+          as={NextLink}
+          href="https://invest.nabocapital.com"
+          target="_blank"
+        >
           <Button
             bg="primary"
             color="white"
@@ -137,7 +173,7 @@ const MainNav = () => {
           >
             INVEST NOW
           </Button>
-        </Link>
+        </ChakraLink>
       </HStack>
 
       {/* Mobile Nav */}

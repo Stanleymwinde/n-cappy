@@ -22,7 +22,7 @@ const travelSlides = [
   {
     image: "/images/travelling.jpg",
     title: "Because Life is About Living Fully",
-    text: "Say Yes to life’s big, beautiful moments without guilt, without worry",
+    text: "Say yes to life’s big, beautiful moments; without guilt, without worry, with our Aspirational Portfolio",
     primaryButton: "Unlock My Plan",
     primaryLink: "/calculator",
     secondaryButton: "Learn More",

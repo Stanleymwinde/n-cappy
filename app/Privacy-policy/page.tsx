@@ -1,124 +1,138 @@
 import React from "react";
-import { Box, Heading, Text, VStack, Link } from "@chakra-ui/react";
+import { Box, Heading, Text, VStack, Link, Center } from "@chakra-ui/react";
 import { Divider } from "@chakra-ui/layout";
 
 const PrivacyPolicy = () => {
   return (
-    <Box as="main" maxW="container.lg" mx="auto" py={10} px={6}>
-      <Heading as="h1" size="xl" mb={4}>
-        Nabo Capital Limited
-      </Heading>
-      <Heading as="h2" size="lg" mb={8}>
-        Data Protection Policy
-      </Heading>
+    <Center bg="gray.50" py={12} px={4}>
+      {/* Centered container */}
+      <Box maxW="800px" w="100%" bg="white" p={10} borderRadius="md" boxShadow="md">
+        {/* Main Headings */}
+        <Heading as="h1" size="2xl" mb={4} textAlign="center">
+          Nabo Capital Limited
+        </Heading>
+        <Heading as="h2" size="xl" mb={10} textAlign="center" color="gray.600">
+          Data Protection Policy
+        </Heading>
 
-      <VStack align="start" gap={6}>
-        <Box>
-          <Heading as="h3" size="md" mb={2}>
-            Introduction
-          </Heading>
-          <Text>
-            Nabo Capital Limited (“Nabo”) is committed to promoting good
-            corporate governance by adhering to all national and international
-            laws that are applicable to it. Nabo’s Data Protection Policy
-            (“Policy”) is intended to facilitate the protection of personal data
-            by complying with the Data Protection Act 2019 (“DPA”) and its
-            Regulations.
-          </Text>
-          <Text mt={2}>
-            The DPA seeks to protect the privacy of individuals by ensuring the
-            responsible processing of personal data. It was enacted to give
-            effect to Article 31(c) and (d) of the Constitution. It establishes
-            the Office of the Data Protection Commissioner (“ODPC”), provides
-            for the rights of data subjects and stipulates the obligations of
-            both data controllers and processors.
-          </Text>
-          <Text mt={2}>
-            Nabo reiterates its commitment to protecting the rights and freedoms
-            of data subjects and to the secure processing of their data.
-          </Text>
-        </Box>
+        <VStack align="stretch" gap={10}>
+          {/* Section: Introduction */}
+          <Box py={4}>
+            <Heading as="h3" size="lg" mb={4}>
+              Introduction
+            </Heading>
+            <VStack align="start" gap={3} maxW="700px" mx="auto">
+              <Text lineHeight="tall">
+                Nabo Capital Limited (“Nabo”) is committed to promoting good
+                corporate governance by adhering to all national and international
+                laws that are applicable to it. Nabo’s Data Protection Policy
+                (“Policy”) is intended to facilitate the protection of personal data
+                by complying with the Data Protection Act 2019 (“DPA”) and its
+                Regulations.
+              </Text>
+              <Text lineHeight="tall">
+                The DPA seeks to protect the privacy of individuals by ensuring the
+                responsible processing of personal data. It was enacted to give
+                effect to Article 31(c) and (d) of the Constitution. It establishes
+                the Office of the Data Protection Commissioner (“ODPC”), provides
+                for the rights of data subjects and stipulates the obligations of
+                both data controllers and processors.
+              </Text>
+              <Text lineHeight="tall">
+                Nabo reiterates its commitment to protecting the rights and freedoms
+                of data subjects and to the secure processing of their data.
+              </Text>
+            </VStack>
+          </Box>
 
-        <Box>
-          <Heading as="h3" size="md" mb={2}>
-            Purpose
-          </Heading>
-          <Text>
-            This Policy provides guidance on how Nabo shall handle the data it
-            collects. It is designed to aid Nabo in complying with not just the
-            DPA but also relevant international laws such as the General Data
-            Protection Regulations (“GDPR”) of the European Union.
-          </Text>
-        </Box>
+          {/* Section: Purpose */}
+          <Box py={4}>
+            <Heading as="h3" size="lg" mb={4}>
+              Purpose
+            </Heading>
+            <Text lineHeight="tall" maxW="700px" mx="auto">
+              This Policy provides guidance on how Nabo shall handle the data it
+              collects. It is designed to aid Nabo in complying with not just the
+              DPA but also relevant international laws such as the General Data
+              Protection Regulations (“GDPR”) of the European Union.
+            </Text>
+          </Box>
 
-        <Box>
-          <Heading as="h3" size="md" mb={2}>
-            Scope
-          </Heading>
-          <Text>
-            This Policy applies to all prospective, current and former
-            employees, partners, vendors, contractors, board members, interns,
-            and any third parties who handle and use Nabo’s information.
-          </Text>
-          <Text mt={2}>
-            It also applies to all formats (printed, digital, text, images,
-            documents, audio, etc.). Nabo processes personal data for financial,
-            HR, payroll, regulatory, customer service, and other purposes such
-            as providing investment products, processing applications, customer
-            surveys, research, investigations, and meeting contractual
-            obligations.
-          </Text>
-        </Box>
+          {/* Section: Scope */}
+          <Box py={4}>
+            <Heading as="h3" size="lg" mb={4}>
+              Scope
+            </Heading>
+            <VStack align="start" gap={3} maxW="700px" mx="auto">
+              <Text lineHeight="tall">
+                This Policy applies to all prospective, current and former
+                employees, partners, vendors, contractors, board members, interns,
+                and any third parties who handle and use Nabo’s information.
+              </Text>
+              <Text lineHeight="tall">
+                It also applies to all formats (printed, digital, text, images,
+                documents, audio, etc.). Nabo processes personal data for financial,
+                HR, payroll, regulatory, customer service, and other purposes such
+                as providing investment products, processing applications, customer
+                surveys, research, investigations, and meeting contractual
+                obligations.
+              </Text>
+            </VStack>
+          </Box>
 
-        {/* --- You can keep going with same structure --- */}
-        {/* For example: Key Definitions, Principles, Data Protection Officer, etc. */}
+          {/* Section: Data Protection Officer */}
+          <Box py={4}>
+            <Heading as="h3" size="lg" mb={4}>
+              Data Protection Officer
+            </Heading>
+            <VStack align="start" gap={3} maxW="700px" mx="auto">
+              <Text lineHeight="tall">
+                Nabo has designated its Legal and Compliance Officer as the Data
+                Protection Officer (DPO). The DPO will advise on data processing
+                requirements, ensure compliance with laws, provide training, advise
+                on impact assessments, and liaise with the ODPC.
+              </Text>
+              <Text lineHeight="tall">
+                Contact:{" "}
+                <Link href="mailto:b.otieno@nabocapital.com" color="blue.500">
+                  b.otieno@nabocapital.com
+                </Link>
+              </Text>
+            </VStack>
+          </Box>
 
-        <Box>
-          <Heading as="h3" size="md" mb={2}>
-            Data Protection Officer
-          </Heading>
-          <Text>
-            Nabo has designated its Legal and Compliance Officer as the Data
-            Protection Officer (DPO). The DPO will advise on data processing
-            requirements, ensure compliance with laws, provide training, advise
-            on impact assessments, and liaise with the ODPC.
-          </Text>
-          <Text mt={2}>
-            Contact:{" "}
-            <Link href="mailto:b.otieno@nabocapital.com" color="blue.500">
-              b.otieno@nabocapital.com
-            </Link>
-          </Text>
-        </Box>
+          {/* Section: Privacy Complaints */}
+          <Box py={4}>
+            <Heading as="h3" size="lg" mb={4}>
+              Privacy Complaints or Breaches
+            </Heading>
+            <VStack align="start" gap={3} maxW="700px" mx="auto">
+              <Text lineHeight="tall">
+                If you wish to lodge a complaint about a possible breach of privacy
+                or have any query on how personal data is collected or handled,
+                please contact:
+              </Text>
+              <Text lineHeight="tall">
+                Data Protection Officer <br />
+                Nabo Capital Limited <br />
+                P.O. Box 10518 – 00100 <br />
+                Nairobi <br />
+                Email:{" "}
+                <Link href="mailto:b.otieno@nabocapital.com" color="blue.500">
+                  b.otieno@nabocapital.com
+                </Link>
+              </Text>
+            </VStack>
+          </Box>
+        </VStack>
 
-        <Box>
-          <Heading as="h3" size="md" mb={2}>
-            Privacy Complaints or Breaches
-          </Heading>
-          <Text>
-            If you wish to lodge a complaint about a possible breach of privacy
-            or have any query on how personal data is collected or handled,
-            please contact:
-          </Text>
-          <Text mt={2}>
-            Data Protection Officer <br />
-            Nabo Capital Limited <br />
-            P.O. Box 10518 – 00100 <br />
-            Nairobi <br />
-            Email:{" "}
-            <Link href="mailto:b.otieno@nabocapital.com" color="blue.500">
-              b.otieno@nabocapital.com
-            </Link>
-          </Text>
-        </Box>
-      </VStack>
+        <Divider my={12} />
 
-      <Divider my={10} />
-
-      <Text fontSize="sm" color="gray.400" textAlign="center">
-        © {new Date().getFullYear()} Nabo Capital Limited. All rights reserved.
-      </Text>
-    </Box>
+        <Text fontSize="sm" color="gray.500" textAlign="center">
+          © {new Date().getFullYear()} Nabo Capital Limited. All rights reserved.
+        </Text>
+      </Box>
+    </Center>
   );
 };
 

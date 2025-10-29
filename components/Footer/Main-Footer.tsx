@@ -175,6 +175,7 @@ const ExploreData = {
     { label: "Individual Investment", link: "/individual" },
     { label: "Institutional Investment", link: "/institutional" },
     { label: "Investor's Companion", link: "/tools_and_resources" },
+    { label: "Key Investor Information Documents", link: "/KIID" },
   ],
 };
 
@@ -183,12 +184,13 @@ const HelpfulLinks = [
   { label: "Privacy Policy", link: "/Privacy-policy" },
   { label: "Sign In", link: "https://invest.nabocapital.com" },
   { label: "FAQs", link: "/FAQs" },
+  { label: "Information Memorandum", link: "/Memo" },
 ];
 
 const OurServices = [
   { label: "Unit Trust Funds", link: "/individual/MMF&FIF" },
   { label: "Private Wealth Management", link: "/institutional" },
   { label: "Institutional Investment Solutions", link: "/institutional" },
-  { label: "Balanced Fund", link: "/individual/MMF&FIF" },
-  { label: "Equity Fund", link: "/individual/MMF&FIF" },
+ 
+  
 ];

@@ -19,13 +19,7 @@ interface AutoplayTimeLeftParams {
 }
 
 const slider_images = [
-  {
-    image: "/images/travel1.jpeg",
-    title: "Invest in Experiences. Invest in Dubai.",
-    text:
-      "Step into a city where luxury, thrill, and wonder collide. Every moment you invest here becomes a memory that never fades.",
-    link: "/travel",
-  },
+ 
   {
     image: "/images/slide-4.jpg",
     title: "Make Money While Doing What You Love",
@@ -33,17 +27,10 @@ const slider_images = [
     link: "/lifestyle-goal",
   },
   {
-    image: "/images/smiling.jpeg",
-    title: "Invest Where Performance Leads. Unlock Up to 13% p.a.",
-    text:
-      "The Nabo Money Market Fund delivers trusted, market-leading growth. Invest smart, stay liquid, and watch your wealth work harder for you.",
-    link: "/individual/MMF&FIF",
-  },
-  {
     image: "/images/globall.jpg",
-    title: "Invest Beyond Borders. Build Wealth Without Limits.",
+    title: "Make Money While Doing What You Love",
     text:
-      "Unlock global markets, diversify your portfolio, and invest in opportunities that grow your wealth today—and protect your legacy tomorrow.",
+      " Invest beyond borders. Build wealth without limits.",
     link: "/global-investing",
   },
   {
@@ -57,6 +44,20 @@ const slider_images = [
     title: "Make Money While Doing What You Love",
     text: "Make your mark. Then make it last",
     link: "/retire",
+  },
+  {
+    image: "/images/travel1.jpeg",
+    title: "Invest in Experiences. Invest in Dubai.",
+    text:
+      "Step into a city where luxury, thrill, and wonder collide. Every moment you invest here becomes a memory that never fades.",
+    link: "/travel",
+  },
+   {
+    image: "/images/smiling.jpeg",
+    title: "Invest Where Performance Leads. Unlock Up to 13% p.a.",
+    text:
+      "Invest smart, stay liquid, and watch your wealth work harder for you.",
+    link: "/individual/MMF&FIF",
   },
 ];
 
