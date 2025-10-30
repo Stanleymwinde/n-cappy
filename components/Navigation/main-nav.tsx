@@ -91,32 +91,26 @@ const MainNav = () => {
                         rounded="md"
                         py={2}
                         minW="200px"
-                        bg="white"
+                        bg="gray.50" // connected grey background
                         shadow="md"
                       >
                         {item.children.map((child, j) => (
-                          <Menu.Item
-                            asChild
-                            key={j}
-                            value={child.label}
-                            cursor="pointer"
-                            _hover={{ bg: "gray.100" }}
-                          >
-                            {/* ✅ Updated link below */}
+                          <Menu.Item asChild key={j} value={child.label} cursor="pointer">
                             <ChakraLink
                               as={NextLink}
                               href={child.href}
-                              px={4}
-                              py={2}
+                              px={4}          // horizontal padding
+                              py={2}          // vertical padding
                               display="block"
                               fontSize="sm"
                               fontWeight="medium"
+                              mb={1}          // spacing between links
+                              _hover={{ bg: "gray.100" }} // hover effect
                               onClick={(e) => {
                                 if (typeof window !== "undefined") {
                                   const currentPath = window.location.pathname;
                                   const [targetPath, hash] = (child.href || "").split("#");
 
-                                  // If we're already on the same page, just scroll smoothly
                                   if (currentPath === targetPath && hash) {
                                     e.preventDefault();
                                     const el = document.getElementById(hash);
