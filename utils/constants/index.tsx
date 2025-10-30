@@ -82,15 +82,17 @@ export const navItems = [
   {
     label: "Individual",
     href: "/",
-    children: [{ label: "MMF", href: "/individual/MMF&FIF" }],
+    children: [
+      { label: "Our Funds", href: "/individual/MMF&FIF" },
+      { label: "Our Portfolios", href: "/individual/MMF&FIF" },
+      { label: "Go Global", href: "/global-investing" }],
   },
   {
     label: "Institutional",
     href: "/institutional",
     children: [
-      { label: "Treasury", href: "/institutional/treasury" },
-      { label: "Asset Management", href: "/institutional/Asset-Management" },
-      { label: "Resources", href: "/institutional/Investment-Advisory" },
+      { label: "Our approach", href: "/institutional/treasury" },
+      { label: "Resources", href: "/tools_and_resources" },
     ],
   },
   {
@@ -113,16 +115,16 @@ export const navItems = [
 
 export const cardData = [
   {
-    title: "Afford the Life I Want",
+    title: "Secure the Basics ",
     description:
-      "Whether you're building wealth, securing your future or planning for a milestone, intentional saving sets the foundation for financial freedom.",
+      "Because Freedom is having your basics covered no matter what",
     image: "/images/lifestylegoal-landing.jpeg",
     link: "/lifestyle-goal",
   },
   {
-    title: "Afford School for my Kids",
+    title: "Be ready for the big disruptors ",
     description:
-      "We’ll help you build a smart savings plan for education; designed around your goals to give your children the best possible future.",
+      "Get yourself a portfolio that is built for the real stuff, bills, bad days and the dignity of knowing you are covered.",
     image: "/images/Education-goal.jpeg",
     link: "/education",
   },
@@ -134,7 +136,7 @@ export const cardData = [
     link: "/travel",
   },
   {
-    title: "Retire Comfortably",
+    title: "Build Your Legacy",
     description:
       "Retire on your terms. Build a financial cushion that lets you enjoy life’s golden years with peace and pride.",
     image: "/images/retiring-goal.jpeg",
