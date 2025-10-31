@@ -19,7 +19,7 @@ export const metadata = {
 
 const lifestyleSlides = [
   {
-    image: "/images/lsg.jpg",
+    image: "/images/ken.jpeg",
     title: "Live Purposefully. Save Deliberately.",
     text: "Secure the day-to-day with the Lifestyle Portfolio, and create room to breathe, plan and enjoy life.",
     primaryButton: "Unlock My Plan",

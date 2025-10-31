@@ -81,11 +81,12 @@ export const socials = [
 export const navItems = [
   {
     label: "Individual",
-    href: "/",
+    href: "/individual",
     children: [
-      { label: "Our Funds", href: "/individual/MMF&FIF" },
-      { label: "Our Portfolios", href: "/individual/MMF&FIF" },
-      { label: "Go Global", href: "/global-investing" }],
+      { label: "Our Funds", href: "/tools_and_resources/#factsheets" },
+      { label: "Our Portfolios", href: "/#investing" },
+      { label: "Go Global", href: "/global-investing" },
+    ],
   },
   {
     label: "Institutional",
@@ -116,8 +117,7 @@ export const navItems = [
 export const cardData = [
   {
     title: "Secure the Basics ",
-    description:
-      "Because Freedom is having your basics covered no matter what",
+    description: "Because Freedom is having your basics covered no matter what",
     image: "/images/lifestylegoal-landing.jpeg",
     link: "/lifestyle-goal",
   },
@@ -2018,7 +2018,7 @@ export const whatweoffer = [
       },
     ],
     media: {
-      image: "/Pius-m1.jpg",
+      image: "/Pius-ad.png",
       alt: "Advisory Team",
     },
     quote:

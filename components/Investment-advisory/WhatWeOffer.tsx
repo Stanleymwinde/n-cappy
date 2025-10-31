@@ -134,17 +134,29 @@ const InvestmentSolutions = () => {
                       <GridItem>
                         <Box
                           position="relative"
-                          borderRadius="md"
+                          borderRadius="xl"
                           overflow="hidden"
-                          width={{ base: "100%", md: "80%" }}
-                          height={{ base: "350px", md: "450px" }} // increased for mobile
-                          mx={{ base: "auto", md: "0" }}
+                          width={{ base: "100%", sm: "90%", md: "80%" }}
+                          height={{
+                            base: "280px",
+                            sm: "350px",
+                            md: "500px",
+                            lg: "600px",
+                          }}
+                          mx="auto"
+                          boxShadow="lg"
                         >
                           <Image
                             src={item.media.image}
-                            alt={item.media.alt}
+                            alt={item.media.alt || "Image"}
                             fill
-                            style={{ objectFit: "cover" }}
+                            sizes="(max-width: 768px) 100vw,
+           (max-width: 1200px) 80vw,
+           70vw"
+                            style={{
+                              objectFit: "cover",
+                              objectPosition: "center",
+                            }}
                           />
                         </Box>
 

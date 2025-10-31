@@ -1,3 +1,4 @@
+import { Rates } from "@/components/common";
 import Hero from "@/components/common/Hero";
 import { CallToAction } from "@/components/home";
 import {
@@ -5,22 +6,19 @@ import {
   ConsultationTeam,
   Faqs,
   InvestmentSolutions,
-  Rates,
 } from "@/components/individual";
 import React from "react";
 
 const page = () => {
   return (
     <>
-    <Rates />
+      <Rates />
       <Hero
         title="Begin The Journey. We’ll Walk With You"
-        subtitle="That’s the Nabo Promise. Your Growth Our Focus"
+        subtitle="That’s the Nabo Promise. Your Growth Our Focus."
         imageUrl="/images/individual-hero.png"
         scrollTarget="#consultation"
       />
-      
-      
       <InvestmentSolutions />
       <ConsultationTeam />
       <Connect />

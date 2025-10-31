@@ -1,5 +1,3 @@
-"use client";
-
 import { marginX } from "@/utils/constants";
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import Link from "next/link";
@@ -101,7 +99,7 @@ const InvestmentSolutions = () => {
                 border="2px solid white"
                 color="white"
                 borderRadius="md"
-                _hover={{ bgColor: "blue.200" }}
+                _hover={{ bgColor: "blue.200", cursor: "pointer" }}
               >
                 LEARN MORE
               </Box>
@@ -122,7 +120,8 @@ const InvestmentSolutions = () => {
             Fixed Income Funds
           </Heading>
           <Text py={6}>
-            A balanced option providing steady returns through government & corporate bonds.
+            A balanced option providing steady returns through government &
+            corporate bonds.
           </Text>
           <Box display="flex" gap={4} mt={4}>
             <Box
@@ -172,7 +171,7 @@ const InvestmentSolutions = () => {
                 border="2px solid white"
                 color="white"
                 borderRadius="md"
-                _hover={{ bgColor: "blue.200" }}
+                _hover={{ bgColor: "blue.200", cursor: "pointer" }}
               >
                 LEARN MORE
               </Box>

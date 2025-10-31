@@ -2,7 +2,11 @@ import { Blog } from "@/components/blogs";
 import { Calculator, Rates } from "@/components/common";
 import Hero from "@/components/common/Hero";
 import { CallToAction } from "@/components/home";
-import { MoreResources, ResourcesTabs, FactSheetsSection } from "@/components/tools";
+import {
+  MoreResources,
+  ResourcesTabs,
+  FactSheetsSection,
+} from "@/components/tools";
 import React from "react";
 
 // SEO metadata for Blog / Insights page
@@ -20,7 +24,7 @@ export const metadata = {
     "how to start investing in Kenya",
     "steps to start investing Kenya",
     "how much money to start investing",
-    "investment tutorial Kenya"
+    "investment tutorial Kenya",
   ],
 };
 
@@ -39,7 +43,10 @@ const page = () => {
       <Blog />
       <MoreResources />
       <ResourcesTabs />
-      <FactSheetsSection />
+      <div id="factsheets">
+        <FactSheetsSection />
+      </div>
+
       <CallToAction />
     </>
   );
