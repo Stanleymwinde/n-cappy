@@ -18,7 +18,7 @@ export const metadata = {
     "new year investment goals 2025",
     "mid-year investment review",
     "bonus investment ideas",
-    "year-end investment planning",
+    "end-year investment planning",
     "13th month investment Kenya",
     "investment tax planning",
     "how to start investing in Kenya",
