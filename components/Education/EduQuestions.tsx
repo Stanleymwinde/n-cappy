@@ -228,7 +228,7 @@ const EduQuestionsComponent = () => {
             </Heading>
 
             {(() => {
-              const goal = answers[1] || "Goal not provided";
+              const goal = answers[1] || "Goal not provided!";
               const targetAmount = parseFloat(answers[4]) || 0;
               const monthlySavings = parseFloat(answers[5]) || 0;
               const targetYear =
