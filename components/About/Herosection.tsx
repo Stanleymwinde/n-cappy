@@ -4,7 +4,12 @@ import { Box, VStack, Heading, Text, HStack, Button } from "@chakra-ui/react";
 
 const HeroSection: React.FC = () => {
   return (
-    <Box position="relative" w="100%" h={{ base: "60vh", sm: "75vh", md: "100vh" }} overflow="hidden">
+    <Box
+      position="relative"
+      w="100%"
+      h={{ base: "60vh", sm: "75vh", md: "100vh" }}
+      overflow="hidden"
+    >
       {/* Background Image */}
       <Box
         position="absolute"
@@ -55,7 +60,7 @@ const HeroSection: React.FC = () => {
           fontSize={{ base: "sm", sm: "md", md: "xl" }}
           maxW={{ base: "90%", md: "600px" }}
         >
-          A Trusted Partner in Institutional and Retail Investment Solutions.
+          A Trusted Partner In Institutional and Retail Investment Solutions.
         </Text>
 
         {/* Buttons: stacked on mobile */}
