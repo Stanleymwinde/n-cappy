@@ -81,9 +81,9 @@ export const socials = [
 export const navItems = [
   {
     label: "Individual",
-    href: "/individual",
+    href: "/",
     children: [
-      { label: "Our Funds", href: "/tools_and_resources/#factsheets" },
+      { label: "Our Funds", href: "/individual/MMF&FIF" },
       { label: "Our Portfolios", href: "/#investing" },
       { label: "Go Global", href: "/global-investing" },
     ],
@@ -92,7 +92,7 @@ export const navItems = [
     label: "Institutional",
     href: "/institutional",
     children: [
-      { label: "Our approach", href: "/institutional/treasury" },
+      { label: "Our Approach", href: "/institutional/treasury" },
       { label: "Resources", href: "/tools_and_resources" },
     ],
   },

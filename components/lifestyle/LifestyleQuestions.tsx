@@ -17,17 +17,20 @@ import React, { useState } from "react";
 import { useColorModeValue } from "../ui/color-mode";
 import { Results } from "@/components/i-want-tos";
 
-
 const LifestyleQuestions = () => {
   const cardBg = useColorModeValue("white", "gray.800");
   const [activePlanIndex, setActivePlanIndex] = useState<number | null>(null);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [showResults, setShowResults] = useState(false);
+  const [responses, setResponses] = useState<{ [key: number]: string }>({});
+  const [summaryData, setSummaryData] = useState<any>(null);
 
   const handleCardClick = (index: number) => {
     setActivePlanIndex(index);
     setQuestionIndex(0);
     setShowResults(false);
+    setResponses({});
+    setSummaryData(null);
   };
 
   const activePlan =
@@ -38,17 +41,56 @@ const LifestyleQuestions = () => {
       ? activePlan.questions[questionIndex]
       : null;
 
+  const handleInputChange = (value: string) => {
+    setResponses((prev) => ({
+      ...prev,
+      [questionIndex]: value,
+    }));
+  };
+
+  const handleNext = () => {
+    const next = questionIndex + 1;
+    if (activePlan && next < activePlan.questions.length) {
+      setQuestionIndex(next);
+    } else {
+      // Construct dynamic summary based on responses
+      const summary = {
+        destination: responses[0] || "—",
+        when: responses[1] || "—",
+        who: responses[2] || "—",
+        budget: responses[3] ? `KES ${responses[3]}` : "—",
+        totalCost: responses[3] ? `KES ${responses[3]}` : "—",
+        alreadySaved: responses[4] ? `KES ${responses[4]}` : "—",
+        remaining:
+          responses[3] && responses[4]
+            ? `KES ${Number(responses[3]) - Number(responses[4])}`
+            : "—",
+        monthly: "—",
+        duration: "—",
+      };
+      setSummaryData(summary);
+      setShowResults(true);
+    }
+  };
+
   return (
     <Box id="questions" marginX={marginX} py={10} bg="white" mt={15}>
       <VStack gap={6} textAlign="center" mb={8}>
-        <Heading fontSize={{ base: "3xl", md: "4xl" }} fontWeight="bold" color="blue.900">
+        <Heading
+          fontSize={{ base: "3xl", md: "4xl" }}
+          fontWeight="bold"
+          color="blue.900"
+        >
           True Wealth isn’t Just Grown it’s Guided
         </Heading>
         <Text maxW="6xl" fontSize="xl" color="gray.600">
-          Affording the life you want starts with clarity. Financial freedom means having a plan for the things that matter most and the discipline to follow through. 
+          Affording the life you want starts with clarity. Financial freedom
+          means having a plan for the things that matter most and the discipline
+          to follow through.
         </Text>
       </VStack>
 
+      {/* Lifestyle Cards */}
       <Grid templateColumns={{ base: "1fr", md: "repeat(4, 1fr)" }} gap={6}>
         {Lifestyle.map((block, idx) => (
           <GridItem
@@ -109,21 +151,10 @@ const LifestyleQuestions = () => {
         ))}
       </Grid>
 
+      {/* Question or Results Section */}
       <VStack gap={6} p={6}>
-        {showResults ? (
-          <Results
-            summary={{
-              destination: "Dubai",
-              when: "December 2026, 3 weeks",
-              who: "Alone",
-              budget: "KES 90,000",
-              totalCost: "KES 90,000",
-              alreadySaved: "KES 30,000",
-              remaining: "KES 60,000",
-              monthly: "KES 5000",
-              duration: "12 months",
-            }}
-          />
+        {showResults && summaryData ? (
+          <Results summary={summaryData} />
         ) : (
           activePlan &&
           activeQuestion && (
@@ -162,7 +193,12 @@ const LifestyleQuestions = () => {
                     <Text fontSize="xl" fontWeight="bold">
                       {activeQuestion.question}
                     </Text>
-                    <Input placeholder={activeQuestion.placeholder} mt={3} />
+                    <Input
+                      placeholder={activeQuestion.placeholder}
+                      mt={3}
+                      value={responses[questionIndex] || ""}
+                      onChange={(e) => handleInputChange(e.target.value)}
+                    />
                     <Text fontSize="sm" color="gray.600" mt={2}>
                       {activeQuestion.hint}
                     </Text>
@@ -184,14 +220,7 @@ const LifestyleQuestions = () => {
                     )}
 
                     <Button
-                      onClick={() => {
-                        const next = questionIndex + 1;
-                        if (activePlan && next < activePlan.questions.length) {
-                          setQuestionIndex(next);
-                        } else {
-                          setShowResults(true);
-                        }
-                      }}
+                      onClick={handleNext}
                       bg="#0A2233"
                       color="white"
                       rounded="full"
