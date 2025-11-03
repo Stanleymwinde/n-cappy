@@ -99,10 +99,6 @@ const Results: React.FC<ResultsProps> = ({ summary }) => {
   const pathParts: string[] = [];
   if (destination) pathParts.push(`to ${destination}`);
   if (summary.when) pathParts.push(`in ${summary.when}`);
-  const baseLine =
-    pathParts.length > 0
-      ? `You want to ${destination ? "travel " : ""}${pathParts.join(" ")}.`
-      : "";
 
   const monthlyPart =
     monthlyNum && computedMonths
@@ -113,8 +109,6 @@ const Results: React.FC<ResultsProps> = ({ summary }) => {
           computedMonths === 1 ? "" : "s"
         }.`
       : "";
-
-  const pathToJoy = `${baseLine}${monthlyPart}`.trim();
 
   const handleDownload = () => {
     const doc = new jsPDF();
@@ -269,18 +263,6 @@ const Results: React.FC<ResultsProps> = ({ summary }) => {
               </HStack>
             )}
           </VStack>
-
-          {/* Path to Joy */}
-          {pathToJoy && (
-            <>
-              <Text color="cyan.300" fontWeight="bold" mb={2}>
-                Here is your path to joy
-              </Text>
-              <Text fontSize="sm" mb={6}>
-                {pathToJoy}
-              </Text>
-            </>
-          )}
 
           <HStack gap={4}>
             <Button
