@@ -1497,21 +1497,21 @@ export const RetirePlans = [
         question: "What type of long-term care do you anticipate?",
         placeholder: "e.g. Assisted living, home care, nursing home",
         hint: "Understanding your care preference helps tailor your plan.",
-        image: "/images/long-term-care-1.png",
+        image: "/images/legc.jpeg",
       },
       {
         id: 2,
         question: "When do you expect to start needing care?",
         placeholder: "e.g. 5 years from now, immediately",
         hint: "An approximate timeline helps us estimate costs.",
-        image: "/images/long-term-care-2.png",
+        image: "/images/legc-mon1.jpeg",
       },
       {
         id: 3,
         question: "What is your estimated monthly care cost?",
         placeholder: "e.g. $2,500",
         hint: "This helps us prepare a realistic savings plan.",
-        image: "/images/long-term-care-3.png",
+        image: "/images/legc-plan.jpg",
       },
 
       {
@@ -1519,7 +1519,7 @@ export const RetirePlans = [
         question: "How much have you already saved for long-term care?",
         placeholder: "e.g. $20,000",
         hint: "Let us know what you’ve set aside so far.",
-        image: "/images/long-term-care-4.png",
+        image: "/images/legc-plan.jpg",
       },
 
       {
@@ -1527,7 +1527,7 @@ export const RetirePlans = [
         question: "How much can you save monthly toward this plan?",
         placeholder: "e.g. $500",
         hint: "Your monthly savings capacity helps us create your timeline.",
-        image: "/images/long-term-care-5.png",
+        image: "/images/legc-savings.jpeg",
       },
 
       {
@@ -1535,7 +1535,7 @@ export const RetirePlans = [
         question: "Do you have family or insurance support?",
         placeholder: "e.g. Yes, family help or LTC insurance",
         hint: "This affects your overall care plan and budget.",
-        image: "/images/long-term-care-6.png",
+        image: "/images/legc-mon1.jpeg",
       },
     ],
   },
@@ -1550,7 +1550,7 @@ export const RetirePlans = [
         question: "What causes matter most to you?",
         placeholder: "e.g. Education, Environment, Health",
         hint: "Identifying your passions helps focus your giving.",
-        image: "/images/giving-intent-1.jpg",
+        image: "/images/legc-savings.jpeg",
       },
       {
         id: 2,
@@ -1571,7 +1571,7 @@ export const RetirePlans = [
         question: "Would you like to support local or global organizations?",
         placeholder: "e.g. Local",
         hint: "Helps us align your giving to your preferred communities.",
-        image: "/images/giving-intent-4.jpg",
+        image: "/images/legc-plan.jpg",
       },
 
       {
