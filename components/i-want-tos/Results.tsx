@@ -90,12 +90,6 @@ const Results: React.FC<ResultsProps> = ({ summary }) => {
       ? Math.ceil((computedRemaining as number) / monthlyNum)
       : null;
 
-  const monthsToGoalDisplay =
-    summary.monthsToGoal ??
-    (computedMonths != null
-      ? `${computedMonths} month${computedMonths === 1 ? "" : "s"}`
-      : "");
-
   const pathParts: string[] = [];
   if (destination) pathParts.push(`to ${destination}`);
   if (summary.when) pathParts.push(`in ${summary.when}`);
