@@ -20,7 +20,7 @@ export const metadata = {
   description:
     "Nabo Capital partners with pension funds, corporates, and other institutions to provide tailored investment solutions in Kenya and beyond. Discover institutional investment opportunities that drive long-term growth.",
   keywords: [
-    "institutional investment Kenya",
+    "institutional investment Kenya.",
     "corporate investment solutions",
     "pension fund investment Kenya",
     "institutional asset management Kenya",
