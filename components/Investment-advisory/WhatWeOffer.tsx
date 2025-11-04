@@ -137,26 +137,26 @@ const InvestmentSolutions = () => {
                           borderRadius="md"
                           overflow="hidden"
                           width="100%"
+                          maxW={{ base: "100%", md: "420px", lg: "520px" }}
                           height={{
-                            base: "250px", // Mobile
-                            sm: "300px", // Small tablets
-                            md: "400px", // Medium screens
-                            lg: "500px", // Large screens
-                            xl: "550px", // Extra large
+                            base: "410px",
+                            sm: "300px",
+                            md: "460px",
+                            lg: "460px",
+                            xl: "520px",
                           }}
                           mx="auto"
                           shadow="md"
                         >
                           <Image
-                            src={item.media.image}
-                            alt={item.media.alt}
+                            src={item.media?.image ?? "/placeholder.jpg"}
+                            alt={item.media?.alt ?? item.title ?? "media"}
                             fill
                             style={{
                               objectFit: "cover",
-                              objectPosition: "center",
                             }}
-                            sizes="(max-width: 768px) 100vw, 50vw"
-                            priority
+                            sizes="(max-width: 480px) 100vw, (max-width: 768px) 60vw, 40vw"
+                            priority={!!(item.media as any)?.priority}
                           />
                         </Box>
 
