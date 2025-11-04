@@ -1186,7 +1186,7 @@ export const LifestylePlans = [
         question: "How much have you saved so far?",
         placeholder: "e.g. KES 10,000",
         hint: "How much have you already put aside for this trip?",
-        image: "/images/Travelfive.png",
+        image: "/images/Traveltwo.png",
       },
       {
         id: 7,
@@ -1194,7 +1194,7 @@ export const LifestylePlans = [
         question: "How much can you save monthly?",
         placeholder: "e.g. KES 10,000",
         hint: "This helps calculate how long it will take you to reach your goal.",
-        image: "/images/Travelsix.png",
+        image: "/images/Travelthree.png",
       },
     ],
   },
