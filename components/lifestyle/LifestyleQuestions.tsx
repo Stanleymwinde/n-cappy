@@ -15,82 +15,50 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useColorModeValue } from "../ui/color-mode";
-import { Results } from "@/components/i-want-tos";
 
-const LifestyleQuestions = () => {
+const LifestyleQuestionsComponent = () => {
   const cardBg = useColorModeValue("white", "gray.800");
   const [activePlanIndex, setActivePlanIndex] = useState<number | null>(null);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [showResults, setShowResults] = useState(false);
-  const [responses, setResponses] = useState<{ [key: number]: string }>({});
-  const [summaryData, setSummaryData] = useState<any>(null);
+  const [answers, setAnswers] = useState<Record<number, string>>({});
 
   const handleCardClick = (index: number) => {
     setActivePlanIndex(index);
     setQuestionIndex(0);
     setShowResults(false);
-    setResponses({});
-    setSummaryData(null);
+    setAnswers({});
+  };
+
+  const handleAnswerChange = (id: number, value: string) => {
+    setAnswers((prev) => ({ ...prev, [id]: value }));
   };
 
   const activePlan =
     activePlanIndex !== null ? Lifestyle[activePlanIndex] : null;
-
   const activeQuestion =
     activePlan && questionIndex < activePlan.questions.length
       ? activePlan.questions[questionIndex]
       : null;
 
-  const handleInputChange = (value: string) => {
-    setResponses((prev) => ({
-      ...prev,
-      [questionIndex]: value,
-    }));
-  };
-
-  const handleNext = () => {
-    const next = questionIndex + 1;
-    if (activePlan && next < activePlan.questions.length) {
-      setQuestionIndex(next);
-    } else {
-      // Construct dynamic summary based on responses
-      const summary = {
-        destination: responses[0] || "—",
-        when: responses[1] || "—",
-        who: responses[2] || "—",
-        budget: responses[3] ? `KES ${responses[3]}` : "—",
-        totalCost: responses[3] ? `KES ${responses[3]}` : "—",
-        alreadySaved: responses[4] ? `KES ${responses[4]}` : "—",
-        remaining:
-          responses[3] && responses[4]
-            ? `KES ${Number(responses[3]) - Number(responses[4])}`
-            : "—",
-        monthly: "—",
-        duration: "—",
-      };
-      setSummaryData(summary);
-      setShowResults(true);
-    }
-  };
-
   return (
-    <Box id="questions" marginX={marginX} py={10} bg="white" mt={15}>
+    <Box id="questions-lifestyle" marginX={marginX} py={10} bg={cardBg}>
+      {/* Header */}
       <VStack gap={6} textAlign="center" mb={8}>
         <Heading
           fontSize={{ base: "3xl", md: "4xl" }}
           fontWeight="bold"
           color="blue.900"
         >
-          True Wealth isn’t Just Grown it’s Guided
+          Because Everyday Life Deserves a Plan
         </Heading>
-        <Text maxW="6xl" fontSize="xl" color="gray.600">
-          Affording the life you want starts with clarity. Financial freedom
-          means having a plan for the things that matter most and the discipline
-          to follow through.
+        <Text maxW="2xl" fontSize="md" color="gray.600">
+          Plan for the essentials that keep your life running smoothly — from
+          groceries and rent to transport and utilities.
         </Text>
       </VStack>
 
-      {/* Lifestyle Cards */}
+      {/* Categories Grid */}
       <Grid templateColumns={{ base: "1fr", md: "repeat(4, 1fr)" }} gap={6}>
         {Lifestyle.map((block, idx) => (
           <GridItem
@@ -151,95 +119,301 @@ const LifestyleQuestions = () => {
         ))}
       </Grid>
 
-      {/* Question or Results Section */}
+      {/* Active Question Section */}
       <VStack gap={6} p={6}>
-        {showResults && summaryData ? (
-          <Results summary={summaryData} />
-        ) : (
-          activePlan &&
-          activeQuestion && (
-            <Box
-              width="100%"
-              bg="#00CAFF"
-              p={6}
-              rounded="lg"
-              mt={8}
-              position="relative"
-              minH="500px"
-            >
-              <Text mb={2} fontSize="sm">
-                Question {questionIndex + 1} of {activePlan.questions.length}
-              </Text>
+        {activePlan && activeQuestion && !showResults && (
+          <Box width="100%" bg="#00CAFF" p={6} rounded="lg" mt={8}>
+            <Text mb={2} fontSize="sm">
+              Question {questionIndex + 1} of {activePlan.questions.length}
+            </Text>
 
-              <HStack
-                align="stretch"
-                gap={6}
-                flexDir={{ base: "column", md: "row" }}
-                minH="350px"
-              >
-                <Box flex={1}>
-                  <Image
-                    src={activeQuestion.image}
-                    alt="question visual"
-                    borderRadius="lg"
-                    objectFit="cover"
-                    width="100%"
-                    height="500px"
+            <HStack
+              align="start"
+              gap={6}
+              flexDir={{ base: "column", md: "row" }}
+            >
+              {/* Question Image */}
+              <Box flex={1}>
+                <Image
+                  src={activeQuestion.image}
+                  alt="question visual"
+                  borderRadius="lg"
+                  objectFit="cover"
+                  width="100%"
+                  height="500px"
+                />
+              </Box>
+
+              {/* Question Text and Input */}
+              <VStack align="start" gap={4} flex={2}>
+                <Box>
+                  <Text fontSize="xl" fontWeight="bold">
+                    {activeQuestion.question}
+                  </Text>
+                  <Input
+                    placeholder={activeQuestion.placeholder}
+                    mt={3}
+                    value={answers[activeQuestion.id] || ""}
+                    onChange={(e) =>
+                      handleAnswerChange(activeQuestion.id, e.target.value)
+                    }
                   />
+                  <Text fontSize="sm" color="gray.600" mt={2}>
+                    {activeQuestion.hint}
+                  </Text>
                 </Box>
 
-                <VStack align="start" gap={4} flex={2} h="100%">
-                  <Box>
-                    <Text fontSize="xl" fontWeight="bold">
-                      {activeQuestion.question}
-                    </Text>
-                    <Input
-                      placeholder={activeQuestion.placeholder}
-                      mt={3}
-                      value={responses[questionIndex] || ""}
-                      onChange={(e) => handleInputChange(e.target.value)}
-                    />
-                    <Text fontSize="sm" color="gray.600" mt={2}>
-                      {activeQuestion.hint}
-                    </Text>
-                  </Box>
-
-                  <HStack w="100%" justify="space-between" mt="auto">
-                    {questionIndex > 0 ? (
-                      <Button
-                        onClick={() => setQuestionIndex(questionIndex - 1)}
-                        bg="#0A2233"
-                        color="white"
-                        rounded="full"
-                        fontWeight="bold"
-                      >
-                        ← Previous
-                      </Button>
-                    ) : (
-                      <Box />
-                    )}
-
+                <HStack w="100%" justify="space-between" mt="auto">
+                  {questionIndex > 0 ? (
                     <Button
-                      onClick={handleNext}
+                      onClick={() => setQuestionIndex(questionIndex - 1)}
                       bg="#0A2233"
                       color="white"
                       rounded="full"
                       fontWeight="bold"
                     >
-                      {activePlan &&
-                      questionIndex < activePlan.questions.length - 1
-                        ? "Next ➔"
-                        : "Finish"}
+                      ← Previous
                     </Button>
-                  </HStack>
-                </VStack>
-              </HStack>
+                  ) : (
+                    <Box />
+                  )}
+
+                  <Button
+                    onClick={() => {
+                      const next = questionIndex + 1;
+                      if (activePlan && next < activePlan.questions.length) {
+                        setQuestionIndex(next);
+                      } else {
+                        setShowResults(true);
+                      }
+                    }}
+                    bg="#0A2233"
+                    color="white"
+                    rounded="full"
+                    fontWeight="bold"
+                  >
+                    {activePlan &&
+                    questionIndex < activePlan.questions.length - 1
+                      ? "Next ➔"
+                      : "Finish"}
+                  </Button>
+                </HStack>
+              </VStack>
+            </HStack>
+          </Box>
+        )}
+
+        {/* Results Section */}
+        {showResults && activePlan && (
+          <Box
+            width="100%"
+            bg="white"
+            p={8}
+            rounded="2xl"
+            mt={8}
+            boxShadow="lg"
+            textAlign="center"
+          >
+            <Heading fontSize="2xl" mb={6} color="blue.900">
+              {activePlan.title} Summary
+            </Heading>
+
+            <VStack align="stretch" gap={4} mb={8}>
+              {activePlan.questions.map((q) => (
+                <Box
+                  key={q.id}
+                  p={4}
+                  rounded="lg"
+                  bg="gray.50"
+                  border="1px solid"
+                  borderColor="gray.200"
+                  textAlign="left"
+                >
+                  <Text fontWeight="bold" color="blue.900">
+                    {q.question}
+                  </Text>
+                  <Text fontSize="sm" color="gray.700" mt={1}>
+                    {answers[q.id] && answers[q.id].trim() !== ""
+                      ? answers[q.id]
+                      : "Not provided"}
+                  </Text>
+                </Box>
+              ))}
+            </VStack>
+
+            {/* Insights per lifestyle plan */}
+            <Box
+              mt={4}
+              bg="blue.900"
+              color="white"
+              p={6}
+              rounded="lg"
+              textAlign="left"
+            >
+              <Heading fontSize="xl" mb={4}>
+                Your Lifestyle Insights
+              </Heading>
+
+              {(() => {
+                const parseAmount = (val: string | undefined) =>
+                  val ? parseFloat(val.replace(/[^\d.]/g, "")) || 0 : 0;
+                const currentYear = new Date().getFullYear();
+
+                /** -------- Food & Household Essentials -------- **/
+                if (activePlan.title === "Food & Household essentials") {
+                  const cost = parseAmount(answers[4]);
+                  const saved = parseAmount(answers[5]);
+                  const monthly = parseAmount(answers[6]);
+                  const total = saved + monthly;
+
+                  return (
+                    <VStack align="start" gap={2}>
+                      <Text>
+                        <b>Estimated monthly essentials:</b>{" "}
+                        {cost ? `KES ${cost.toLocaleString()}` : "Not provided"}
+                      </Text>
+                      <Text>
+                        <b>Already saved:</b>{" "}
+                        {saved
+                          ? `KES ${saved.toLocaleString()}`
+                          : "Not provided"}
+                      </Text>
+                      <Text>
+                        <b>Monthly set-aside:</b>{" "}
+                        {monthly
+                          ? `KES ${monthly.toLocaleString()}`
+                          : "Not provided"}
+                      </Text>
+                      {monthly > 0 && (
+                        <Text>
+                          <b>Next month readiness projection:</b> KES{" "}
+                          {total.toLocaleString()}
+                        </Text>
+                      )}
+                    </VStack>
+                  );
+                }
+
+                /** -------- Rent Payments -------- **/
+                if (activePlan.title === "Rent Payments") {
+                  const rent = parseAmount(answers[1]);
+                  const saved = parseAmount(answers[3]);
+                  const monthly = parseAmount(answers[4]);
+                  const balance = rent - saved;
+                  return (
+                    <VStack align="start" gap={2}>
+                      <Text>
+                        <b>Monthly rent:</b>{" "}
+                        {rent ? `KES ${rent.toLocaleString()}` : "Not provided"}
+                      </Text>
+                      <Text>
+                        <b>Already saved:</b>{" "}
+                        {saved
+                          ? `KES ${saved.toLocaleString()}`
+                          : "Not provided"}
+                      </Text>
+                      <Text>
+                        <b>Planned monthly savings:</b>{" "}
+                        {monthly
+                          ? `KES ${monthly.toLocaleString()}`
+                          : "Not provided"}
+                      </Text>
+                      {balance > 0 && (
+                        <Text>
+                          <b>Remaining to cover rent:</b> KES{" "}
+                          {balance.toLocaleString()}
+                        </Text>
+                      )}
+                    </VStack>
+                  );
+                }
+
+                /** -------- Transport -------- **/
+                if (activePlan.title === "Transport") {
+                  const cost = parseAmount(answers[2]);
+                  const save = parseAmount(answers[5]);
+                  const yearly = (cost + save) * 12;
+                  return (
+                    <VStack align="start" gap={2}>
+                      <Text>
+                        <b>Monthly transport spend:</b>{" "}
+                        {cost ? `KES ${cost.toLocaleString()}` : "Not provided"}
+                      </Text>
+                      <Text>
+                        <b>Monthly savings goal:</b>{" "}
+                        {save ? `KES ${save.toLocaleString()}` : "Not provided"}
+                      </Text>
+                      {cost > 0 && (
+                        <Text>
+                          <b>Projected annual mobility budget:</b> KES{" "}
+                          {yearly.toLocaleString()}
+                        </Text>
+                      )}
+                    </VStack>
+                  );
+                }
+
+                /** -------- Clothing & Utilities -------- **/
+                if (activePlan.title === "Clothing & Utilities") {
+                  const clothes = parseAmount(answers[1]);
+                  const utilities = parseAmount(answers[2]);
+                  const monthly = parseAmount(answers[5]);
+                  const total = clothes + utilities + monthly;
+
+                  return (
+                    <VStack align="start" gap={2}>
+                      <Text>
+                        <b>Clothing & laundry spend:</b>{" "}
+                        {clothes
+                          ? `KES ${clothes.toLocaleString()}`
+                          : "Not provided"}
+                      </Text>
+                      <Text>
+                        <b>Monthly utility bills:</b>{" "}
+                        {utilities
+                          ? `KES ${utilities.toLocaleString()}`
+                          : "Not provided"}
+                      </Text>
+                      <Text>
+                        <b>Planned monthly allocation:</b>{" "}
+                        {monthly
+                          ? `KES ${monthly.toLocaleString()}`
+                          : "Not provided"}
+                      </Text>
+                      {monthly > 0 && (
+                        <Text>
+                          <b>Projected total monthly cost:</b> KES{" "}
+                          {total.toLocaleString()}
+                        </Text>
+                      )}
+                    </VStack>
+                  );
+                }
+
+                return <Text>No insights available for this category.</Text>;
+              })()}
             </Box>
-          )
+
+            <Button
+              mt={6}
+              bg="#0A2233"
+              color="white"
+              rounded="full"
+              fontWeight="bold"
+              onClick={() => {
+                setActivePlanIndex(null);
+                setAnswers({});
+                setQuestionIndex(0);
+                setShowResults(false);
+              }}
+            >
+              Back to Plans
+            </Button>
+          </Box>
         )}
       </VStack>
     </Box>
   );
 };
 
-export default LifestyleQuestions;
+export default LifestyleQuestionsComponent;

@@ -416,9 +416,9 @@ const RetireQuestions = () => {
       </Grid>
 
       {/* Questions */}
-      <VStack gap={6} p={6}>
+      <VStack gap={6} p={6} textAlign={"center"} align="stretch">
         {!showResults && activePlan && activeQuestion && (
-          <Box bg="#00CAFF" p={6} rounded="lg" mt={8}>
+          <Box bg="#00CAFF" p={6} rounded="lg" mt={8} w="100%">
             <Text mb={2} fontSize="sm">
               Question {questionIndex + 1} of {activePlan.questions.length}
             </Text>
@@ -434,7 +434,7 @@ const RetireQuestions = () => {
                   borderRadius="lg"
                   objectFit="cover"
                   width="100%"
-                  height="400px"
+                  height={{ base: "200px", md: "400px" }}
                 />
               </Box>
               <VStack align="start" gap={4} flex={2}>
@@ -489,7 +489,7 @@ const RetireQuestions = () => {
 
         {/* Results */}
         {showResults && (
-          <Box bg="white" p={8} rounded="xl" boxShadow="md" mt={8}>
+          <Box bg="white" p={8} rounded="xl" boxShadow="md" mt={8} w="100%">
             {renderSummary()}
 
             <HStack mt={8} justify="center" gap={4}>
