@@ -135,7 +135,7 @@ const TeamSection: React.FC = () => {
             <TeamMemberCard
               name="Kezzy Omoni"
               title="Digital Creative Architect"
-              image="/kezzy.jpg"
+              image="/Kezzy.jpg"
               linkedin="https://www.linkedin.com/in/kezzy-omoni/"
             />
             <TeamMemberCard

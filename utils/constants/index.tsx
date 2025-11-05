@@ -759,7 +759,7 @@ export const FaqsData1 = [
   {
     value: "d",
     title: "Can I top up my account?",
-    text: "You can contact our customer support team via email at",
+    text: "You can contact our customer support team via whatsapp at +254709902700",
   },
   {
     value: "e",
@@ -2558,7 +2558,7 @@ export const commonfaqs = [
   {
     value: "j",
     title: "Can I top up my account?",
-    text: "You can contact our customer support team via email at",
+    text: "You can contact our customer support team via whatsapp at +254709902700",
   },
   {
     value: "k",
