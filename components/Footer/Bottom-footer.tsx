@@ -8,7 +8,8 @@ const BottomFooter = () => {
       <Flex as="footer" justify={"space-between"}>
         <Box>
           <Text>
-            &copy; {new Date().getFullYear()} Nabo Capital. All rights reserved.
+            &copy; {new Date().getFullYear()} Nabo Capital Limited. All rights
+            reserved.
           </Text>
         </Box>
         {/* <Flex as="nav" gap={4} ml={4} _hover={{ color: "gray.700" }}>
@@ -22,13 +23,13 @@ const BottomFooter = () => {
       </Flex>{" "}
       <Text textAlign={"left"} mt={5}>
         <strong>
-          Nabo Capital Limited is regulated by the Capital Markets Authorty.
+          Nabo Capital Limited is regulated by the Capital Markets Authority.
         </strong>{" "}
-        CMA does not take responsibility For the financial soundness of the
+        CMA does not take responsibility for the financial soundness of the
         scheme or for the correctness of any statements made or opinions
-        expresssed. Income from investments may increaseor decrease. The
-        effective annual yield is net of fees and gross ofwithholding tax. Past
-        performance dos not guarantee future results. In certain circumstances,
+        expressed. Income from investments may increase or decrease. The
+        effective annual yield is net of fees and gross of withholding tax. Past
+        performance does not guarantee future results. In certain circumstances,
         investors right to redeem investments may be suspended.
       </Text>
     </Box>

@@ -831,7 +831,7 @@ export const FaqsData3 = [
   {
     value: "e",
     title: "Can I create a family trust with NABO? ​",
-    text: "Yes, we will be launching our family trust solution by the end of Q3, 2024.​",
+    text: "Yes, we will be launching our family trust solution by the end of Q3, 2025.​",
   },
 ];
 
@@ -2619,12 +2619,12 @@ export const commonfaqs = [
   {
     value: "v",
     title: "Can I create a family trust with NABO? ​",
-    text: "Yes, we will be launching our family trust solution by the end of Q3, 2024.​",
+    text: "Yes, we will be launching our family trust solution by the end of Q3, 2025.​",
   },
   {
     value: "w",
     title: "How do I schedule a consultation?",
-    text: "You can schedule a consultation by reaching out through this link (insert link), or contacting our team directly through f.okudo@nabocapital.com or m.njoroge@nabocapital.com. We will be happy to guide you through the process.",
+    text: "You can schedule a consultation by reaching out to our team directly through f.okudo@nabocapital.com or m.njoroge@nabocapital.com. We will be happy to guide you through the process.",
   },
   {
     value: "x",

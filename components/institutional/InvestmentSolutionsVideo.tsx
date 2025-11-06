@@ -94,6 +94,7 @@ const InvestmentSolutionsVideo: React.FC = () => {
             borderColor="gray.500"
             pt={2}
           >
+            {/* Dr. Mercy Njoroge Mwongela, Chief Customer Experience Officer */}
             Dr. Mercy Njoroge Mwongela, Chief Customer Experience Officer
           </Text>
         </Box>
