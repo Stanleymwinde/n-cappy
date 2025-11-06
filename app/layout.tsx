@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
 import NextTopLoader from "nextjs-toploader";
 import ScrollToTopButton from "@/components/common/ScrollToTopButton";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -58,6 +59,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <GoogleTagManager gtmId="G-4HFEYD2VS0" />
       <body className={poppins.className}>
         <Provider>
           <NextTopLoader />
