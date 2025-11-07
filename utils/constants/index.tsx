@@ -958,7 +958,7 @@ export const boardMembers = [
   },
   {
     name: "Mercy Njoroge",
-    title: "Chief Customer Experience Officer",
+    title: "Head of Asset Management, CX & IT",
     image: "/mercy.jpg",
     linkedin: "#",
   },
@@ -2301,7 +2301,7 @@ export const whatweoffertreasury = [
 export const teamAlbumMembers = [
   {
     name: "Mercy Njoroge",
-    role: "Chief Customer Experience Officer",
+    role: "Head of Asset Management, CX & IT",
     photoUrl: "/images/IMG_6199.jpg",
   },
   {

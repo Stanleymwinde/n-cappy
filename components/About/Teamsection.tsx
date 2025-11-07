@@ -116,7 +116,7 @@ const TeamSection: React.FC = () => {
             />
             <TeamMemberCard
               name="Dr. Mercy Njoroge Mwongela"
-              title="Chief Customer Experience Officer"
+              title="Head of Asset Management, CX & IT"
               image="/images/Mwongela2.png"
               linkedin="https://www.linkedin.com/in/mercymwongela/"
             />
