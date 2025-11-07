@@ -95,7 +95,7 @@ const InvestmentSolutionsVideo: React.FC = () => {
             pt={2}
           >
             {/* Dr. Mercy Njoroge Mwongela, Chief Customer Experience Officer */}
-            Dr. Mercy Njoroge Mwongela, Chief Customer Experience Officer
+            Dr. Mercy Njoroge Mwongela, Head of Asset Management, CX & IT
           </Text>
         </Box>
       </Flex>
