@@ -231,7 +231,7 @@ export const WhatAreYourGoalsData = [
   {
     title: "Deliver sustainable returns",
     description:
-      "Whether you're building wealth, securing your future or planning for a milestone, intentional saving sets the foundation for financial freedom.",
+      "Whether you're seeking to grow your wealth, preserve what you’ve built, or create a legacy that outlives you, intentional investment delivers returns that remain resilient across cycles.",
     points: [
       "Competitive returns above inflation",
       "Professional Fund Management",
@@ -245,7 +245,7 @@ export const WhatAreYourGoalsData = [
   {
     title: "Match assets to liabilities",
     description:
-      "We’ll help you build a smart savings plan for education. Without the stress",
+      "By aligning assets with upcoming responsibilities, you create a portfolio that is responsive, resilient, and designed to meet life’s defining moments with confidence.",
     points: [
       "Competitive returns above inflation",
       "Proffesional Fund Management",
@@ -259,7 +259,7 @@ export const WhatAreYourGoalsData = [
   {
     title: "Diversify and maximize portfolio efficiency",
     description:
-      "Explore the world without financial worries. Save intentionally for unforgettable memories.",
+      "Diversification strengthens your portfolio, spreading risk across quality opportunities and ensuring every asset contributes meaningfully to long-term efficiency.",
     points: [
       "Competitive returns above inflation",
       "Proffesional Fund Management",
@@ -273,7 +273,7 @@ export const WhatAreYourGoalsData = [
   {
     title: "Grow surplus capital",
     description:
-      "Retire on your terms. Build a financial cushion that lets you enjoy life’s golden years with peace and pride.",
+      "Surplus capital is a catalyst for progress—when invested intentionally, it transforms into enduring growth and future strength.",
     points: [
       "Competitive returns above inflation",
       "Proffesional Fund Management",
