@@ -41,7 +41,7 @@ const InvestmentSolutionsVideo: React.FC = () => {
         >
           <Image
             src="/images/mwongelam.jpg"
-            alt="Dr. Mercy Njoroge Mwongela"
+            alt="Dr. Mercy Mwongela"
             borderRadius="md"
             objectFit="cover"
             height={{ base: "300px", md: "360px" }}
@@ -72,7 +72,7 @@ const InvestmentSolutionsVideo: React.FC = () => {
             mb={4}
             color="#00C8FF"
           >
-            Hear from Dr. Mercy Njoroge Mwongela on how we tailor <br />
+            Hear from Dr. Mercy Mwongela on how we tailor <br />
             Investment solutions to your need
           </Heading>
 
@@ -94,8 +94,8 @@ const InvestmentSolutionsVideo: React.FC = () => {
             borderColor="gray.500"
             pt={2}
           >
-            {/* Dr. Mercy Njoroge Mwongela, Chief Customer Experience Officer */}
-            Dr. Mercy Njoroge Mwongela, Head of Asset Management, CX & IT.
+            {/* Dr. Mercy Mwongela, Chief Customer Experience Officer */}
+            Dr. Mercy Mwongela, Head of Asset Management, CX & IT.
           </Text>
         </Box>
       </Flex>
