@@ -33,10 +33,12 @@ const InvestmentSolutions = () => {
         fontSize={{ base: "lg", md: "2xl" }}
         color="gray.600"
         textAlign="center"
+        maxW="4xl"
+        mx="auto"
       >
         We offer comprehensive solutions designed to optimize your financial
         position while maintaining the flexibility and security your
-        organization demands
+        organization demands.
       </Text>
 
       {/* Accordion */}
@@ -70,18 +72,20 @@ const InvestmentSolutions = () => {
               {/* Accordion Content */}
               <Accordion.ItemContent>
                 <Accordion.ItemBody>
-                  <Box px={{ base: 4, md: 16 }} bg="white">
+                  <Box px={{ base: 4, md: 10 }} bg="white">
                     {/* Main Body Text */}
                     <Text fontSize={{ base: "md", md: "xl" }} mb={6}>
                       {item.body}
                     </Text>
+
+                    {/* Responsive Grid Layout */}
                     <Grid
                       templateColumns={{ base: "1fr", md: "2fr 1fr" }}
-                      gap={8}
-                      px={{ base: 4, md: 8 }}
+                      gap={{ base: 10, md: 8 }}
                       py={6}
                       alignItems="start"
                     >
+                      {/* Left Column: Differentiators */}
                       <GridItem>
                         <Heading fontSize={{ base: "2xl", md: "3xl" }} mb={4}>
                           Differentiators
@@ -138,13 +142,27 @@ const InvestmentSolutions = () => {
                           position="relative"
                           borderRadius="md"
                           overflow="hidden"
-                          width="90%"
-                          height={{ base: "200px", md: "550px" }}
+                          width="100%"
+                          height={{
+                            base: "380px", // Mobile
+                            sm: "300px", // Small tablets
+                            md: "400px", // Medium screens
+                            lg: "500px", // Large screens
+                            xl: "650px", // Extra large
+                          }}
+                          mx="auto"
+                          shadow="md"
                         >
                           <Image
                             src={item.media.image}
                             alt={item.media.alt}
                             fill
+                            style={{
+                              objectFit: "cover",
+                              objectPosition: "center",
+                            }}
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            priority
                           />
                         </Box>
 
@@ -155,7 +173,8 @@ const InvestmentSolutions = () => {
                             fontSize={{ base: "md", md: "lg" }}
                             color="gray.700"
                             textAlign="center"
-                            maxW={"400px"}
+                            maxW="400px"
+                            mx="auto"
                           >
                             {item.quote}
                           </Text>
@@ -168,13 +187,13 @@ const InvestmentSolutions = () => {
                       <Box
                         bg="blue.900"
                         color="white"
-                        p={6}
+                        p={{ base: 4, md: 6 }}
                         mt={8}
                         borderRadius="md"
                       >
                         <Text
                           fontWeight="bold"
-                          fontSize={{ base: "sm", md: "lg" }}
+                          fontSize={{ base: "md", md: "lg" }}
                         >
                           {item.featuredDeal.title}
                         </Text>

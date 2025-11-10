@@ -11,7 +11,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import { MdPlayCircleFilled, MdFiberManualRecord } from "react-icons/md";
+import { MdFiberManualRecord } from "react-icons/md";
 import React from "react";
 
 const InvestmentSolutions = () => {
@@ -126,7 +126,6 @@ const InvestmentSolutions = () => {
                                     fontWeight="bold"
                                     fontSize={{ base: "lg", md: "xl" }}
                                     mb={1}
-                                    
                                   >
                                     {service.title}
                                   </Text>
@@ -150,20 +149,28 @@ const InvestmentSolutions = () => {
                           position="relative"
                           borderRadius="md"
                           overflow="hidden"
-                          width="80%"
-                          height={{ base: "300px", md: "550px" }}
+                          width="100%"
+                          maxW={{ base: "100%", md: "420px", lg: "520px" }}
+                          height={{
+                            base: "450px",
+                            sm: "600px",
+                            md: "460px",
+                            lg: "560px",
+                            xl: "520px",
+                          }}
+                          mx="auto"
+                          shadow="md"
                         >
                           <Image
-                            src={item.media.image}
-                            alt={item.media.alt}
+                            src={item.media?.image ?? "/placeholder.jpg"}
+                            alt={item.media?.alt ?? item.title ?? "media"}
                             fill
+                            style={{
+                              objectFit: "cover",
+                            }}
+                            sizes="(max-width: 480px) 100vw, (max-width: 768px) 60vw, 40vw"
+                            priority={!!(item.media as any)?.priority}
                           />
-                          <Box
-                            position="absolute"
-                            top="50%"
-                            left="50%"
-                            transform="translate(-50%, -50%)"
-                          ></Box>
                         </Box>
 
                         {item.quote && (
@@ -199,7 +206,7 @@ const InvestmentSolutions = () => {
                               key={idt}
                             >
                               <Text fontWeight="bold">{deal.title}</Text>
-                              <Text   fontSize={{ base: "sm", md: "lg" }} mt={2}>
+                              <Text fontSize={{ base: "sm", md: "lg" }} mt={2}>
                                 {deal.description}
                               </Text>
                             </Box>
@@ -216,7 +223,7 @@ const InvestmentSolutions = () => {
                             <Text fontWeight="bold">
                               {item.featuredDeal.title}
                             </Text>
-                            <Text fontSize={{ base: "md", md: "xl" }}  mt={2}>
+                            <Text fontSize={{ base: "md", md: "xl" }} mt={2}>
                               {item.featuredDeal.description}
                             </Text>
                           </Box>
@@ -233,4 +240,3 @@ const InvestmentSolutions = () => {
 };
 
 export default InvestmentSolutions;
-

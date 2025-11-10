@@ -1,17 +1,16 @@
 "use client";
 
-import {
-  Box,
-  Container,
-  Heading,
-  Text,
-  SimpleGrid,
-} from "@chakra-ui/react";
+import { Box, Container, Heading, Text, SimpleGrid } from "@chakra-ui/react";
 import TeamMemberCard from "@/components/About/TeamMemberCard";
 
 const TeamSection: React.FC = () => {
   return (
-    <Box id="section2" bg="gray.50" pt={{ base: 6, md: 10 }} pb={{ base: 10, md: 16 }}>
+    <Box
+      id="section2"
+      bg="gray.50"
+      pt={{ base: 6, md: 10 }}
+      pb={{ base: 10, md: 16 }}
+    >
       <Container maxW="8xl" textAlign="center">
         {/* Section Heading */}
         <Heading
@@ -34,7 +33,11 @@ const TeamSection: React.FC = () => {
 
         {/* Board Section */}
         <Box mb={{ base: 8, md: 16 }}>
-          <Heading fontSize={{ base: "2xl", md: "4xl" }} mb={{ base: 4, md: 8 }} fontWeight="medium">
+          <Heading
+            fontSize={{ base: "2xl", md: "4xl" }}
+            mb={{ base: 4, md: 8 }}
+            fontWeight="medium"
+          >
             Our Leadership (Board)
           </Heading>
           <SimpleGrid
@@ -94,7 +97,11 @@ const TeamSection: React.FC = () => {
 
         {/* Management Section */}
         <Box>
-          <Heading fontSize={{ base: "2xl", md: "4xl" }} mb={{ base: 4, md: 8 }} fontWeight="medium">
+          <Heading
+            fontSize={{ base: "2xl", md: "4xl" }}
+            mb={{ base: 4, md: 8 }}
+            fontWeight="medium"
+          >
             Our Leadership (Management)
           </Heading>
           <SimpleGrid
@@ -128,7 +135,7 @@ const TeamSection: React.FC = () => {
             <TeamMemberCard
               name="Kezzy Omoni"
               title="Digital Creative Architect"
-              image="/kezzyyy.jpg"
+              image="/Kezzy.jpg"
               linkedin="https://www.linkedin.com/in/kezzy-omoni/"
             />
             <TeamMemberCard

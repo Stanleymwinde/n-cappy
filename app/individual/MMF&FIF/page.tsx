@@ -1,7 +1,14 @@
 import { Rates } from "@/components/common";
 import Hero from "@/components/common/Hero";
 import { CallToAction } from "@/components/home";
-import { CompareFunds, FIF, MMF, BalancedFund, EquityFund, GettingStarted } from "@/components/individual";
+import {
+  CompareFunds,
+  FIF,
+  MMF,
+  BalancedFund,
+  EquityFund,
+  GettingStarted,
+} from "@/components/individual";
 import React from "react";
 
 export const metadata = {
@@ -39,10 +46,10 @@ const Page = () => {
       <Rates />
       <Hero
         title="Grow Your Wealth With Nabo Capital"
-        imageUrl="/images/hm1.jpeg"
+        imageUrl="/images/MMF.jpg"
         subtitle="Choose the investment fund that aligns with your financial goals."
         button="Start Investing"
-        buttonLink="https://invest.nabocapital.com/" 
+        buttonLink="https://invest.nabocapital.com/"
       />
 
       <MMF />

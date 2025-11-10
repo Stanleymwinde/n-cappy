@@ -2,7 +2,7 @@ import { CallToAction } from "@/components/home";
 import { PlanForJoy } from "@/components/i-want-tos";
 import QuestionPack from "@/components/i-want-tos/QuestionPack";
 import { Rates } from "@/components/common";
-import HeroSwiper from "@/components/common/HeroSwiper"; 
+import HeroSwiper from "@/components/common/HeroSwiper";
 import React from "react";
 
 export const metadata = {
@@ -17,12 +17,11 @@ export const metadata = {
   ],
 };
 
-
 const travelSlides = [
   {
     image: "/images/travelling.jpg",
     title: "Because Life is About Living Fully",
-    text: "Say yes to life’s big, beautiful moments; without guilt, without worry, with our Aspirational Portfolio",
+    text: "Say yes to life’s big, beautiful moments; without guilt, without worry, with our Aspirational Portfolio.",
     primaryButton: "Unlock My Plan",
     primaryLink: "/calculator",
     secondaryButton: "Learn More",
@@ -41,9 +40,9 @@ const travelSlides = [
 
 const Page: React.FC = () => {
   return (
-    <> 
+    <>
       <Rates />
-      <HeroSwiper slides={travelSlides} /> 
+      <HeroSwiper slides={travelSlides} />
       <PlanForJoy />
       <QuestionPack />
       <CallToAction />

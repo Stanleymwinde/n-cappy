@@ -29,12 +29,19 @@ const Hero = ({
     <Box
       position="relative"
       width="100%"
-      height={{ base: "45vh", sm: "65vh", md: "90vh", lg: "100vh" }} // reduced height for mobile
+      height={{ base: "45vh", sm: "65vh", md: "80vh", lg: "100vh" }} // reduced height for mobile
       minHeight={{ base: "350px", md: "600px" }} // changed mobile min height
       overflow="hidden"
     >
       {/* Background Image */}
-      <Box position="absolute" top={0} left={0} width="100%" height="100%" zIndex={0}>
+      <Box
+        position="absolute"
+        top={0}
+        left={0}
+        width="100%"
+        height="100%"
+        zIndex={0}
+      >
         <Image
           src={imageUrl || "/images/gtr-2.jpg"}
           alt="Hero"
@@ -93,7 +100,11 @@ const Hero = ({
         >
           {/* Primary Button */}
           {scrollTarget || buttonLink ? (
-            <a href={scrollTarget || buttonLink} target="_blank" rel="noopener noreferrer">
+            <a
+              href={scrollTarget || buttonLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 bg="cyan.900"
                 color="white"
@@ -123,8 +134,8 @@ const Hero = ({
           )}
 
           {/* Secondary Button */}
-          {button1 && (
-            button1Link?.startsWith("http") ? (
+          {button1 &&
+            (button1Link?.startsWith("http") ? (
               <a href={button1Link} target="_blank" rel="noopener noreferrer">
                 <Button
                   flex={{ base: "100%", md: "auto" }}
@@ -156,8 +167,7 @@ const Hero = ({
                   {button1}
                 </Button>
               </Link>
-            )
-          )}
+            ))}
         </Flex>
       </Box>
     </Box>

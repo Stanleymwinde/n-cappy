@@ -37,15 +37,15 @@ const CallToActionCommon = () => {
         </Box>
 
         {/* Store Buttons */}
-        <Flex
+        {/* <Flex
           mb={{ base: 4, md: 6 }}
           align="center"
           justify="center"
           flexDirection={{ base: "column", sm: "row" }}
           gap={{ base: 3, md: 6 }}
-        >
-          {/* App Store Badge */}
-          <Link
+        > */}
+        {/* App Store Badge */}
+        {/* <Link
             href="https://apps.apple.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -56,10 +56,10 @@ const CallToActionCommon = () => {
               height={{ base: "50px", sm: "60px", md: "70px" }} // responsive height
               objectFit="contain"
             />
-          </Link>
+          </Link> */}
 
-          {/* Google Play Badge */}
-          <Link
+        {/* Google Play Badge */}
+        {/* <Link
             href="https://play.google.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -71,7 +71,7 @@ const CallToActionCommon = () => {
               objectFit="contain"
             />
           </Link>
-        </Flex>
+        </Flex> */}
 
         {/* INVEST NOW Button */}
         <Link href="https://invest.nabocapital.com" target="_blank">

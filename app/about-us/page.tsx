@@ -1,4 +1,3 @@
-import { Box } from "@chakra-ui/react";
 import Herosection from "@/components/About/Herosection";
 import Heritagesection from "@/components/About/Heritagesection";
 import Teamsection from "@/components/About/Teamsection";

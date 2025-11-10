@@ -14,33 +14,32 @@ import {
 import { FaMapMarkerAlt, FaUsers } from "react-icons/fa";
 import { MdEvent, MdAttachMoney } from "react-icons/md";
 import * as React from "react";
+import jsPDF from "jspdf";
+import autoTable from "jspdf-autotable";
 
 type GoalType = "Travel" | "Retire" | "Lifestyle" | "Education";
 
 export interface ResultsSummary {
-
-  destination?: string;   
-  when?: string;           
-  duration?: string;      
-  who?: string;         
-  budget?: string;        
+  destination?: string;
+  when?: string;
+  duration?: string;
+  who?: string;
+  budget?: string;
 
   // Savings journey
-  totalCost?: string;      
-  alreadySaved?: string;  
-  remaining?: string;     
-  monthly?: string;      
-  monthsToGoal?: string;   
+  totalCost?: string;
+  alreadySaved?: string;
+  remaining?: string;
+  monthly?: string;
+  monthsToGoal?: string;
 
-  
   [key: string]: string | undefined;
 }
 
 interface ResultsProps {
-  goalType?: GoalType;     
-  summary: ResultsSummary; 
+  goalType?: GoalType;
+  summary: ResultsSummary;
 }
-
 
 function parseAmount(value?: string): number | null {
   if (!value) return null;
@@ -49,15 +48,16 @@ function parseAmount(value?: string): number | null {
   return Number.isFinite(num) ? num : null;
 }
 
-
-function formatAmount(rawInput: string | undefined, fallbackNumber: number | null): string {
-  if (rawInput && rawInput.trim()) return rawInput; 
+function formatAmount(
+  rawInput: string | undefined,
+  fallbackNumber: number | null
+): string {
+  if (rawInput && rawInput.trim()) return rawInput;
   if (fallbackNumber == null) return "";
-  return fallbackNumber.toLocaleString(); 
+  return fallbackNumber.toLocaleString();
 }
 
 const Results: React.FC<ResultsProps> = ({ summary }) => {
-  
   const destination = summary.destination;
   const whenText = [summary.when, summary.duration].filter(Boolean).join(", ");
   const who = summary.who;
@@ -66,12 +66,13 @@ const Results: React.FC<ResultsProps> = ({ summary }) => {
   const totalCostNum = parseAmount(summary.totalCost);
   const budgetDisplay = formatAmount(summary.budget, budgetNum ?? totalCostNum);
 
-
-  const totalDisplay = formatAmount(summary.totalCost, totalCostNum ?? budgetNum);
+  const totalDisplay = formatAmount(
+    summary.totalCost,
+    totalCostNum ?? budgetNum
+  );
 
   const savedNum = parseAmount(summary.alreadySaved);
   const remainingNumFromProp = parseAmount(summary.remaining);
-
 
   const computedRemaining =
     remainingNumFromProp != null
@@ -89,22 +90,41 @@ const Results: React.FC<ResultsProps> = ({ summary }) => {
       ? Math.ceil((computedRemaining as number) / monthlyNum)
       : null;
 
-  const monthsToGoalDisplay =
-    summary.monthsToGoal ??
-    (computedMonths != null ? `${computedMonths} month${computedMonths === 1 ? "" : "s"}` : "");
-
   const pathParts: string[] = [];
   if (destination) pathParts.push(`to ${destination}`);
   if (summary.when) pathParts.push(`in ${summary.when}`);
-  const baseLine =
-    pathParts.length > 0 ? `You want to ${destination ? "travel " : ""}${pathParts.join(" ")}.` : "";
 
   const monthlyPart =
     monthlyNum && computedMonths
-      ? ` If you save ${formatAmount(summary.monthly, monthlyNum)} per month, you’ll reach your goal in ${computedMonths} month${computedMonths === 1 ? "" : "s"}.`
+      ? ` If you save ${formatAmount(
+          summary.monthly,
+          monthlyNum
+        )} per month, you’ll reach your goal in ${computedMonths} month${
+          computedMonths === 1 ? "" : "s"
+        }.`
       : "";
 
-  const pathToJoy = `${baseLine}${monthlyPart}`.trim();
+  const handleDownload = () => {
+    const doc = new jsPDF();
+
+    doc.setFontSize(16);
+    doc.text("Monthly Essentials Summary", 14, 20);
+
+    const tableData = [
+      ["Estimated Monthly Cost", totalDisplay || "-"],
+      ["Already Budgeted or Saved", summary.alreadySaved || "-"],
+      ["Remaining Budget Needed", remainingDisplay || "-"],
+      ["Amount You Can Set Aside Monthly", summary.monthly || "-"],
+    ];
+
+    autoTable(doc, {
+      startY: 30,
+      head: [["Item", "Amount"]],
+      body: tableData,
+    });
+
+    doc.save("monthly-essentials-summary.pdf");
+  };
 
   return (
     <Box marginX={{ base: 4, md: 20 }} py={10}>
@@ -137,7 +157,7 @@ const Results: React.FC<ResultsProps> = ({ summary }) => {
           >
             <Icon as={FaMapMarkerAlt} color="orange.400" boxSize={5} />
             <VStack align="start" gap={0}>
-              <Text fontWeight="bold">Destination</Text>
+              <Text fontWeight="bold">Main Focus</Text>
               <Text>{destination}</Text>
             </VStack>
           </GridItem>
@@ -175,7 +195,7 @@ const Results: React.FC<ResultsProps> = ({ summary }) => {
           >
             <Icon as={FaUsers} color="orange.700" boxSize={5} />
             <VStack align="start" gap={0}>
-              <Text fontWeight="bold">Who’s Going</Text>
+              <Text fontWeight="bold">Estimated Size</Text>
               <Text>{who}</Text>
             </VStack>
           </GridItem>
@@ -202,7 +222,10 @@ const Results: React.FC<ResultsProps> = ({ summary }) => {
       </Grid>
 
       {/* Savings Journey */}
-      {(totalDisplay || summary.alreadySaved || remainingDisplay || summary.monthly) && (
+      {(totalDisplay ||
+        summary.alreadySaved ||
+        remainingDisplay ||
+        summary.monthly) && (
         <Box bg="blue.900" color="white" p={8} rounded="xl">
           <Heading fontSize="xl" mb={4}>
             Your Savings Journey
@@ -235,24 +258,22 @@ const Results: React.FC<ResultsProps> = ({ summary }) => {
             )}
           </VStack>
 
-          {/* Path to Joy */}
-          {pathToJoy && (
-            <>
-              <Text color="cyan.300" fontWeight="bold" mb={2}>
-                Here is your path to joy
-              </Text>
-              <Text fontSize="sm" mb={6}>
-                {pathToJoy}
-              </Text>
-            </>
-          )}
-
-    
           <HStack gap={4}>
-            <Button bg="cyan.400" color="white" rounded="full" _hover={{ bg: "cyan.500" }}>
+            <Button
+              bg="cyan.400"
+              color="white"
+              rounded="full"
+              _hover={{ bg: "cyan.500" }}
+            >
               Explore Fixed Income Fund
             </Button>
-            <Button bg="cyan.400" color="white" rounded="full" _hover={{ bg: "cyan.500" }}>
+            <Button
+              bg="cyan.400"
+              color="white"
+              rounded="full"
+              _hover={{ bg: "cyan.500" }}
+              onClick={handleDownload}
+            >
               Download Your Plan
             </Button>
           </HStack>

@@ -42,8 +42,14 @@ const GlobalThoughtLeadership = () => {
         {/* Image section */}
         <Box
           position="relative"
-          width={{ base: "100%", md: "45%" }}
-          height={{ base: "400px", md: "600px" }}
+          width={{ base: "100%", md: "45%", lg: "40%" }}
+          height={{
+            base: "300px",
+            sm: "690px",
+            md: "400px",
+            lg: "460px",
+            xl: "680px",
+          }}
           borderRadius="lg"
           overflow="hidden"
           boxShadow="lg"
@@ -54,6 +60,7 @@ const GlobalThoughtLeadership = () => {
             fill
             style={{ objectFit: "cover" }}
           />
+
           <Box
             position="absolute"
             bottom="0"
@@ -63,7 +70,11 @@ const GlobalThoughtLeadership = () => {
             borderTopRightRadius="md"
             boxShadow="md"
           >
-            <Text color="black" fontSize={{ base: "md", md: "xl" }} fontWeight="bold">
+            <Text
+              color="black"
+              fontSize={{ base: "md", md: "xl" }}
+              fontWeight="bold"
+            >
               Charles Miano
             </Text>
             <Text color="black" fontSize={{ base: "xs", md: "sm" }}>

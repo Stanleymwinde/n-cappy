@@ -84,14 +84,15 @@ export const navItems = [
     href: "/",
     children: [
       { label: "Our Funds", href: "/individual/MMF&FIF" },
-      { label: "Our Portfolios", href: "/individual/MMF&FIF" },
-      { label: "Go Global", href: "/global-investing" }],
+      { label: "Our Portfolios", href: "/#investing" },
+      { label: "Go Global", href: "/global-investing" },
+    ],
   },
   {
     label: "Institutional",
     href: "/institutional",
     children: [
-      { label: "Our approach", href: "/institutional/treasury" },
+      { label: "Our Approach", href: "/institutional/treasury" },
       { label: "Resources", href: "/tools_and_resources" },
     ],
   },
@@ -116,8 +117,7 @@ export const navItems = [
 export const cardData = [
   {
     title: "Secure the Basics ",
-    description:
-      "Because Freedom is having your basics covered no matter what",
+    description: "Because Freedom is having your basics covered no matter what",
     image: "/images/lifestylegoal-landing.jpeg",
     link: "/lifestyle-goal",
   },
@@ -759,7 +759,7 @@ export const FaqsData1 = [
   {
     value: "d",
     title: "Can I top up my account?",
-    text: "You can contact our customer support team via email at",
+    text: "You can contact our customer support team via whatsapp at +254709902700",
   },
   {
     value: "e",
@@ -831,7 +831,7 @@ export const FaqsData3 = [
   {
     value: "e",
     title: "Can I create a family trust with NABO? ​",
-    text: "Yes, we will be launching our family trust solution by the end of Q3, 2024.​",
+    text: "Yes, we will be launching our family trust solution by the end of Q3, 2025.​",
   },
 ];
 
@@ -957,6 +957,7 @@ export const boardMembers = [
     linkedin: "#",
   },
   {
+
     name: "Dr. Mercy Njoroge Mwongela",
     title: "Head of Asset Management, CX & IT",
     image: "/mercy.jpg",
@@ -1152,54 +1153,52 @@ export const LifestylePlans = [
         id: 2,
         key: "when",
         question: "When do you want to travel?",
-        placeholder: "eg. December 2025",
-        hint: "When are you planning to take this trip? Even an approximate time is fine.",
+        placeholder: "e.g. December 2025",
+        hint: "When are you planning to take this trip?",
         image: "/images/Travetwo.png",
       },
       {
         id: 3,
         key: "duration",
         question: "How long will you stay?",
-        placeholder: "eg. 7 days",
+        placeholder: "e.g. 7 days",
         hint: "How many days or weeks would you like to spend there?",
         image: "/images/Travelthree.png",
       },
       {
         id: 4,
         key: "budget",
-        question: "What is your estimated cost?",
-        placeholder: "eg. KES 5000",
-        hint: "Your best estimate of the total cost. Don’t worry if you are not sure.",
-        image: "/images/Travelfour.png",
+        question: "What is your estimated total cost?",
+        placeholder: "e.g. KES 500,000",
+        hint: "Your best estimate of the total cost.",
+        image: "/images/travelling.jpg",
       },
       {
         id: 5,
         key: "companions",
         question: "Who are you going with?",
-        placeholder: "eg. Alone, With my family",
-        hint: "Who are you travelling to your dream destination with",
-        image: "/images/Travelfive.png",
+        placeholder: "e.g. Alone, With my family",
+        hint: "Who are you travelling with?",
+        image: "/images/Travelone.png",
       },
-
       {
         id: 6,
-        key: "companions",
-        question: "How much have you saved ?",
-        placeholder: "eg.   KES 10,000",
+        key: "alreadySaved",
+        question: "How much have you saved so far?",
+        placeholder: "e.g. KES 10,000",
         hint: "How much have you already put aside for this trip?",
-        image: "/Travelfive.png",
+        image: "/images/Traveltwo.png",
       },
       {
         id: 7,
-        key: "companions",
+        key: "monthlySavings",
         question: "How much can you save monthly?",
-        placeholder: "eg.   KES 10,000",
-        hint: "How much have you already put aside for this trip?",
-        image: "/Travelsix.png",
+        placeholder: "e.g. KES 10,000",
+        hint: "This helps calculate how long it will take you to reach your goal.",
+        image: "/images/Travelthree.png",
       },
     ],
   },
-
   {
     title: "Dream Car",
     description:
@@ -1428,7 +1427,7 @@ export const RetirePlans = [
         question: "How much have are you willing to put aside every month?",
         placeholder: "eg.   KES 50,000",
         hint: "Regular contributions are key to building your legacy",
-        image: "/images/legc-savings.jpeg",
+        image: "/images/legc-savings1.jpeg",
       },
       {
         id: 6,
@@ -1481,7 +1480,7 @@ export const RetirePlans = [
           "How do you plan to educate your heirs about managing the inheritance?",
         placeholder: "e.g. Financial literacy programs, family meetings",
         hint: "Preparing heirs helps ensure the legacy is sustained responsibly.",
-        image: "/images/legc-savings.jpeg",
+        image: "/images/legc-savings1.jpeg",
       },
     ],
   },
@@ -1497,21 +1496,21 @@ export const RetirePlans = [
         question: "What type of long-term care do you anticipate?",
         placeholder: "e.g. Assisted living, home care, nursing home",
         hint: "Understanding your care preference helps tailor your plan.",
-        image: "/images/long-term-care-1.png",
+        image: "/images/legc.jpeg",
       },
       {
         id: 2,
         question: "When do you expect to start needing care?",
         placeholder: "e.g. 5 years from now, immediately",
         hint: "An approximate timeline helps us estimate costs.",
-        image: "/images/long-term-care-2.png",
+        image: "/images/legc-mon1.jpeg",
       },
       {
         id: 3,
         question: "What is your estimated monthly care cost?",
         placeholder: "e.g. $2,500",
         hint: "This helps us prepare a realistic savings plan.",
-        image: "/images/long-term-care-3.png",
+        image: "/images/legc-plan.jpg",
       },
 
       {
@@ -1519,7 +1518,7 @@ export const RetirePlans = [
         question: "How much have you already saved for long-term care?",
         placeholder: "e.g. $20,000",
         hint: "Let us know what you’ve set aside so far.",
-        image: "/images/long-term-care-4.png",
+        image: "/images/legc-plan.jpg",
       },
 
       {
@@ -1527,7 +1526,7 @@ export const RetirePlans = [
         question: "How much can you save monthly toward this plan?",
         placeholder: "e.g. $500",
         hint: "Your monthly savings capacity helps us create your timeline.",
-        image: "/images/long-term-care-5.png",
+        image: "/images/legc-savings1.jpeg",
       },
 
       {
@@ -1535,7 +1534,7 @@ export const RetirePlans = [
         question: "Do you have family or insurance support?",
         placeholder: "e.g. Yes, family help or LTC insurance",
         hint: "This affects your overall care plan and budget.",
-        image: "/images/long-term-care-6.png",
+        image: "/images/legc-mon1.jpeg",
       },
     ],
   },
@@ -1550,7 +1549,7 @@ export const RetirePlans = [
         question: "What causes matter most to you?",
         placeholder: "e.g. Education, Environment, Health",
         hint: "Identifying your passions helps focus your giving.",
-        image: "/images/giving-intent-1.jpg",
+        image: "/images/legc-savings1.jpeg",
       },
       {
         id: 2,
@@ -1571,7 +1570,7 @@ export const RetirePlans = [
         question: "Would you like to support local or global organizations?",
         placeholder: "e.g. Local",
         hint: "Helps us align your giving to your preferred communities.",
-        image: "/images/giving-intent-4.jpg",
+        image: "/images/legc-plan.jpg",
       },
 
       {
@@ -2018,7 +2017,7 @@ export const whatweoffer = [
       },
     ],
     media: {
-      image: "/Pius-m1.jpg",
+      image: "/Pius-ad.png",
       alt: "Advisory Team",
     },
     quote:
@@ -2303,7 +2302,7 @@ export const whatweoffertreasury = [
 export const teamAlbumMembers = [
   {
     name: "Mercy Njoroge",
-    role: "Chief Customer Experience Officer",
+    role: "Head of Asset Management, CX & IT",
     photoUrl: "/images/IMG_6199.jpg",
   },
   {
@@ -2560,7 +2559,7 @@ export const commonfaqs = [
   {
     value: "j",
     title: "Can I top up my account?",
-    text: "You can contact our customer support team via email at",
+    text: "You can contact our customer support team via whatsapp at +254709902700",
   },
   {
     value: "k",
@@ -2621,12 +2620,12 @@ export const commonfaqs = [
   {
     value: "v",
     title: "Can I create a family trust with NABO? ​",
-    text: "Yes, we will be launching our family trust solution by the end of Q3, 2024.​",
+    text: "Yes, we will be launching our family trust solution by the end of Q3, 2025.​",
   },
   {
     value: "w",
     title: "How do I schedule a consultation?",
-    text: "You can schedule a consultation by reaching out through this link (insert link), or contacting our team directly through f.okudo@nabocapital.com or m.njoroge@nabocapital.com. We will be happy to guide you through the process.",
+    text: "You can schedule a consultation by reaching out to our team directly through f.okudo@nabocapital.com or m.njoroge@nabocapital.com. We will be happy to guide you through the process.",
   },
   {
     value: "x",

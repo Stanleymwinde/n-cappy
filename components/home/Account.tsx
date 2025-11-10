@@ -1,10 +1,8 @@
-"use client";
 import { Box, Button, Heading, Text, Link } from "@chakra-ui/react";
 import React from "react";
 
 const Account = () => {
   return (
-
     <Box
       bg="#0a2234"
       py={{ base: 12, md: 20 }}

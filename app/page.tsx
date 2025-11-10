@@ -15,7 +15,9 @@ export default function Home() {
       <Rates />
       <SwiperPage />
       <Account />
-      <Investing />
+      <div id="investing">
+        <Investing />
+      </div>
       <WhyforYou />
       <Testimonials />
       <CallToAction />

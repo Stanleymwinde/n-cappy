@@ -94,12 +94,21 @@ const Footer = () => {
               }
             >
               <Flex align="center" gap={{ base: 1, md: 2 }} lineHeight="1.5">
-                <Box as={item.icon} color="primary" boxSize={{ base: 4, md: 5 }} />
+                <Box
+                  as={item.icon}
+                  color="primary"
+                  boxSize={{ base: 4, md: 5 }}
+                />
                 <Text fontSize={{ base: "sm", md: "md" }}>{item.label}</Text>
               </Flex>
             </Link>
           ))}
-          <Flex pt={3} align="center" justify={{ base: "center", md: "flex-start" }} gap={2}>
+          <Flex
+            pt={3}
+            align="center"
+            justify={{ base: "center", md: "flex-start" }}
+            gap={2}
+          >
             <Socials />
           </Flex>
         </Stack>
@@ -129,18 +138,28 @@ const FooterCard = ({
     <Link
       href={link}
       _hover={{ textDecoration: "underline" }}
-      textAlign="left"
+      textAlign={{ base: "center", md: "left" }}
       target={isExternal ? "_blank" : undefined}
       rel={isExternal ? "noopener noreferrer" : undefined}
     >
       <Flex align="center" gap={1} lineHeight="1.5">
-        <Text fontSize={{ base: "sm", md: "md" }}>{label}</Text>
+        <Text
+          fontSize={{ base: "sm", md: "md" }}
+          textAlign={{ base: "center", md: "left" }}
+        >
+          {label}
+        </Text>
       </Flex>
     </Link>
   ) : (
     <Flex align="center" gap={1} _hover={{ textDecoration: "underline" }}>
       {icon && <Box as={icon} color="primary" boxSize={5} />}
-      <Text fontSize={{ base: "sm", md: "md" }}>{label}</Text>
+      <Text
+        textAlign={{ base: "center", md: "left" }}
+        fontSize={{ base: "sm", md: "md" }}
+      >
+        {label}
+      </Text>
     </Flex>
   );
 };
@@ -189,8 +208,6 @@ const HelpfulLinks = [
 
 const OurServices = [
   { label: "Unit Trust Funds", link: "/individual/MMF&FIF" },
-  { label: "Private Wealth Management", link: "/institutional" },
+  { label: "Private Wealth Management", link: "/individual" },
   { label: "Institutional Investment Solutions", link: "/institutional" },
- 
-  
 ];
