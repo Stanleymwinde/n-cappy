@@ -69,7 +69,7 @@ const TeamSection: React.FC = () => {
               linkedin="https://www.linkedin.com/in/edwin-macharia-0aa5a63/"
             />
             <TeamMemberCard
-              name="Dr. Mercy Njoroge Mwongela"
+              name="Dr. Mercy Mwongela"
               title="Company Secretary"
               image="/images/Mwongela2.png"
               linkedin=" https://www.linkedin.com/in/mercymwongela/"
@@ -115,7 +115,7 @@ const TeamSection: React.FC = () => {
               linkedin="https://www.linkedin.com/in/pius-muchiri-cfa-0619392a/"
             />
             <TeamMemberCard
-              name="Dr. Mercy Njoroge Mwongela"
+              name="Dr. Mercy Mwongela"
               title="Head of Asset Management, CX & IT"
               image="/images/Mwongela2.png"
               linkedin="https://www.linkedin.com/in/mercymwongela/"
