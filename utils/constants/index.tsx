@@ -231,7 +231,7 @@ export const WhatAreYourGoalsData = [
   {
     title: "Deliver sustainable returns",
     description:
-      "Whether you're seeking to grow your wealth, preserve what you’ve built, or create a legacy that outlives you, intentional investment delivers returns that remain resilient across cycles.",
+      "Whether you're seeking to grow your wealth, preserve what you’ve built, or create a legacy that outlives you, intentional investment delivers returns that remain resilient across cycles.g",
     points: [
       "Competitive returns above inflation",
       "Professional Fund Management",
@@ -688,7 +688,7 @@ export const teamMembers = [
 export const institutionalMembers = [
   {
     image: "/images/mwongelam.jpg",
-    name: "Dr. Mercy Mwongela",
+    name: "Dr. Mercy Njoroge Mwongela",
     title: "Head of Asset Management, CX & IT",
     linkedin: "https://www.linkedin.com/in/mercymwongela/",
   },
@@ -957,8 +957,8 @@ export const boardMembers = [
     linkedin: "#",
   },
   {
-    name: "Mercy Njoroge",
-    title: "Chief Customer Experience Officer",
+    name: "Dr. Mercy Njoroge Mwongela",
+    title: "Head of Asset Management, CX & IT",
     image: "/mercy.jpg",
     linkedin: "#",
   },
@@ -2257,7 +2257,7 @@ export const whatweoffertreasury = [
       alt: "Infrastructure Projects",
     },
     quote:
-      "True strength is never caught off guard; planned liquidity keeps opportunity within reach.” – Mercy Mwongela",
+      "True strength is never caught off guard; planned liquidity keeps opportunity within reach.” Dr. Mercy Njoroge Mwongela",
     featuredDeal: {
       title: "Treasury Application:",
       description:
