@@ -688,7 +688,7 @@ export const teamMembers = [
 export const institutionalMembers = [
   {
     image: "/images/mwongelam.jpg",
-    name: "Dr. Mercy Njoroge Mwongela",
+    name: "Dr. Mercy Mwongela",
     title: "Head of Asset Management, CX & IT",
     linkedin: "https://www.linkedin.com/in/mercymwongela/",
   },
@@ -958,7 +958,7 @@ export const boardMembers = [
   },
   {
 
-    name: "Dr. Mercy Njoroge Mwongela",
+    name: "Dr. Mercy Mwongela",
     title: "Head of Asset Management, CX & IT",
     image: "/mercy.jpg",
     linkedin: ".",
@@ -1933,7 +1933,7 @@ export const StrategyContent = [
     },
 
     quote:
-      "A balanced portfolio is wealth in harmony; where endurance beats extremes.” – Mercy Mwongela",
+      "A balanced portfolio is wealth in harmony; where endurance beats extremes.” – Dr. Mercy Mwongela",
 
     featuredDeal: {
       title: "Institutional Application:",
@@ -2017,7 +2017,7 @@ export const whatweoffer = [
       },
     ],
     media: {
-      image: "/Pius-ad.png",
+      image: "/Pius-m1.jpg",
       alt: "Advisory Team",
     },
     quote:
@@ -2185,7 +2185,7 @@ export const whatweoffertreasury = [
       alt: "Advisory Team",
     },
     quote:
-      "“Liquidity should serve strategy, not limit it; bespoke portfolios make every shilling count.” – Mercy Mwongela",
+      "“Liquidity should serve strategy, not limit it; bespoke portfolios make every shilling count.” – Dr. Mercy Mwongela",
     featuredDeal: {
       title: "Treasury Application:",
       description:
@@ -2256,7 +2256,7 @@ export const whatweoffertreasury = [
       alt: "Infrastructure Projects",
     },
     quote:
-      "True strength is never caught off guard; planned liquidity keeps opportunity within reach.” Dr. Mercy Njoroge Mwongela",
+      "True strength is never caught off guard; planned liquidity keeps opportunity within reach.” Dr. Mercy Mwongela",
     featuredDeal: {
       title: "Treasury Application:",
       description:
