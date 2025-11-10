@@ -961,7 +961,7 @@ export const boardMembers = [
     name: "Dr. Mercy Njoroge Mwongela",
     title: "Head of Asset Management, CX & IT",
     image: "/mercy.jpg",
-    linkedin: "#",
+    linkedin: ".",
   },
 ];
 
