@@ -144,11 +144,11 @@ const InvestmentSolutions = () => {
                           overflow="hidden"
                           width="100%"
                           height={{
-                            base: "250px", // Mobile
+                            base: "380px", // Mobile
                             sm: "300px", // Small tablets
                             md: "400px", // Medium screens
                             lg: "500px", // Large screens
-                            xl: "550px", // Extra large
+                            xl: "650px", // Extra large
                           }}
                           mx="auto"
                           shadow="md"
