@@ -235,7 +235,7 @@ export const WhatAreYourGoalsData = [
   {
     title: "Deliver sustainable returns",
     description:
-      "Whether you're seeking to grow your wealth, preserve what you’ve built, or create a legacy that outlives you, intentional investment delivers returns that remain resilient across cycles.",
+      "Whether you're seeking to grow your wealth, preserve what you’ve built, or create a legacy that outlives you, intentional investment delivers returns that remain resilient across cycles.g",
     points: [
       "Competitive returns above inflation",
       "Professional Fund Management",
@@ -961,10 +961,11 @@ export const boardMembers = [
     linkedin: "#",
   },
   {
-    name: "Mercy Njoroge",
+
+    name: "Dr. Mercy Mwongela",
     title: "Head of Asset Management, CX & IT",
     image: "/mercy.jpg",
-    linkedin: "#",
+    linkedin: ".",
   },
 ];
 
@@ -1936,7 +1937,7 @@ export const StrategyContent = [
     },
 
     quote:
-      "A balanced portfolio is wealth in harmony; where endurance beats extremes.” – Mercy Mwongela",
+      "A balanced portfolio is wealth in harmony; where endurance beats extremes.” – Dr. Mercy Mwongela",
 
     featuredDeal: {
       title: "Institutional Application:",
@@ -2020,7 +2021,7 @@ export const whatweoffer = [
       },
     ],
     media: {
-      image: "/Pius-ad.png",
+      image: "/Pius-m1.jpg",
       alt: "Advisory Team",
     },
     quote:
@@ -2188,7 +2189,7 @@ export const whatweoffertreasury = [
       alt: "Advisory Team",
     },
     quote:
-      "“Liquidity should serve strategy, not limit it; bespoke portfolios make every shilling count.” – Mercy Mwongela",
+      "“Liquidity should serve strategy, not limit it; bespoke portfolios make every shilling count.” – Dr. Mercy Mwongela",
     featuredDeal: {
       title: "Treasury Application:",
       description:
@@ -2259,7 +2260,7 @@ export const whatweoffertreasury = [
       alt: "Infrastructure Projects",
     },
     quote:
-      "True strength is never caught off guard; planned liquidity keeps opportunity within reach.” – Mercy Mwongela",
+      "True strength is never caught off guard; planned liquidity keeps opportunity within reach.” Dr. Mercy Mwongela",
     featuredDeal: {
       title: "Treasury Application:",
       description:
