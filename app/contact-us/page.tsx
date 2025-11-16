@@ -108,7 +108,7 @@ const ContactUs = () => {
           mb={10}
           textAlign={"center"}
         >
-          Contact Us
+          Get in Touch
         </Heading>
 
         {/* Contact Information Section */}
@@ -120,7 +120,7 @@ const ContactUs = () => {
             textAlign={"center"}
             color="#0a2234"
           >
-            Get In Touch
+            Contact Information
           </Heading>
 
           <SimpleGrid columns={{ base: 1, md: 3 }} gap={6} mb={8}>
