@@ -112,6 +112,10 @@ export const navItems = [
     label: "Calculator",
     href: "/calculator",
   },
+  {
+    label: "Contact Us",
+    href: "/contact-us",
+  },
 ];
 
 export const cardData = [
