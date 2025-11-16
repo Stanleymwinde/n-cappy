@@ -204,6 +204,7 @@ const HelpfulLinks = [
   { label: "Sign In", link: "https://invest.nabocapital.com" },
   { label: "FAQs", link: "/FAQs" },
   { label: "Information Memorandum", link: "/Memo" },
+  { label: "Contact Us", link: "/contact-us" },
 ];
 
 const OurServices = [

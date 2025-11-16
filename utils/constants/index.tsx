@@ -112,16 +112,13 @@ export const navItems = [
     label: "Calculator",
     href: "/calculator",
   },
-  {
-    label: "Contact Us",
-    href: "/contact-us",
-  },
 ];
 
 export const cardData = [
   {
     title: "Secure the Basics ",
-    description: "Because Freedom is having your basics covered no matter what",
+    description:
+      "Because Freedom is having your basics covered no matter what.",
     image: "/images/lifestylegoal-landing.jpeg",
     link: "/lifestyle-goal",
   },
@@ -961,7 +958,6 @@ export const boardMembers = [
     linkedin: "#",
   },
   {
-
     name: "Dr. Mercy Mwongela",
     title: "Head of Asset Management, CX & IT",
     image: "/mercy.jpg",
