@@ -4,17 +4,17 @@ import { Box, Image, Heading, Text, VStack } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
 const images = [
-  "/images/IMG_65981.jpg",
+  "/images/IMG_9912.jpg",
   "/images/IMG_62051.jpg",
   "/images/IMG_62211.jpg",
   "/images/IMG_62221.jpg",
   "/images/IMG_62361.jpg",
-  "/images/IMG_65961.jpg",
+  "/images/IMG_9869.jpg",
   "/images/IMG_62421.jpg",
   "/images/IMG_061001.jpg",
   "/images/IMG_62571.jpg",
-  "/images/IMG_62771.jpg",
-  "/images/IMG_62831.jpg",
+  "/images/IMG_9833.jpg",
+  "/images/IMG_9861.jpg",
   "/images/IMG_62851.jpg",
   "/images/Nabo12.jpg",
   "/images/IMG_62881.jpg",
