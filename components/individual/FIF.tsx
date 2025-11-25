@@ -45,7 +45,7 @@ const FIFfeatures = [
     icon: FaMoneyBillWave,
     title: "Liquidity",
     description:
-      "As of late 2023, the fund offered an annualized return of 16.0%, outperforming the 3-month Treasury Bill benchmark. Returns may vary over time based on market conditions.",
+      "As of late 2025, returns of up to 13%, outperforming the 3-month Treasury Bill benchmark. Returns may vary over time based on market conditions.",
   },
   {
     icon: BsDropletHalf,

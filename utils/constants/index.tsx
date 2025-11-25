@@ -703,7 +703,7 @@ export const institutionalMembers = [
     image: "/images/Jackie1.jpg",
     name: "Jacklyne Waithira",
     title: "Asset Management Analyst",
-    linkedin: "https://www.linkedin.com/in/teddey-muthoka/",
+    linkedin: "https://www.linkedin.com/in/jackline-waithira/",
   },
 ];
 

@@ -46,7 +46,7 @@ const features = [
     icon: FaChartLine,
     title: "Competitive Returns",
     description:
-      "As of late 2023, the fund offered an annualized return of 16.0%, outperforming the 3-month Treasury Bill benchmark. Returns may vary over time based on market conditions.",
+      "As of late 2025, returns of up to 12%, outperforming the 3-month Treasury Bill benchmark. Returns may vary over time based on market conditions.",
   },
   {
     icon: BsDropletHalf,
